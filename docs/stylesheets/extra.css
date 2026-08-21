@@ -197,11 +197,16 @@ body {
   overscroll-behavior: none;
 }
 
-/* The sidebars and the table of contents scroll independently; keep a
-   flick inside them from continuing into the document scroller. */
-.md-sidebar__scrollwrap,
-.md-nav--primary .md-nav__list,
-.md-search__scrollwrap {
+/* The sidebars scroll independently; keep a flick inside them from
+   continuing into the document scroller.
+ *
+ * Only real scroll containers may carry this. Chrome treats any element
+ * with overscroll-behavior other than `auto` as a scroll-chaining
+ * boundary even when it cannot scroll (`.md-nav__list` is
+ * `overflow: visible`), so listing the nav list here swallowed every
+ * wheel event over the navigation: neither the sidebar nor the page
+ * moved. */
+.md-sidebar__scrollwrap {
   overscroll-behavior: contain;
 }
 

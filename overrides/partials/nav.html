@@ -1,0 +1,61 @@
+{#-
+  Copy of the theme's partials/nav.html with ONE addition: on the home page,
+  a "Products" list is rendered above the normal navigation. Re-diff against
+  the theme partial after a Zensical upgrade.
+
+  Why: with `navigation.tabs`, the left sidebar shows the active tab's
+  children, and the Home tab has none — so the home page had an empty left
+  column. The list mirrors the page's own sections, but each entry links to
+  that product's landing page rather than to an anchor.
+
+  The theme navigation is kept below it, not replaced: on a phone the drawer
+  is the only way into the full tree.
+
+  The home page is detected by comparing page.url with nav.homepage.url:
+  Zensical does not populate `page.is_homepage` (its own base.html tests it and
+  the test is always false), so that flag cannot be used here.
+-#}
+{% if nav.homepage and page.url == nav.homepage.url %}
+  <nav class="md-nav md-nav--secondary jsd-products" aria-label="Products">
+    <label class="md-nav__title">Products</label>
+    <ul class="md-nav__list">
+      {% for item in nav.items %}
+        {% if item.children %}
+          {% set landing = item.children | first %}
+          <li class="md-nav__item">
+            <a href="{{ landing.url | url }}" class="md-nav__link">
+              <span class="md-ellipsis">{{ item.title }}</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}
+{% import "partials/nav-item.html" as item with context %}
+{% set class = "md-nav md-nav--primary" %}
+{% if "navigation.tabs" in features %}
+  {% set class = class ~ " md-nav--lifted" %}
+{% endif %}
+{% if "toc.integrate" in features %}
+  {% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+<nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.site_name }}
+  </label>
+  {% if config.repo_url %}
+    <div class="md-nav__source">
+      {% include "partials/source.html" %}
+    </div>
+  {% endif %}
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for nav_item in nav.items %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+  </ul>
+</nav>

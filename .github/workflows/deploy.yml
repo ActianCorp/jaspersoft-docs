@@ -1,0 +1,63 @@
+# Build the documentation with Zensical and publish it to GitHub Pages.
+#
+# Runs on every push to main (and on demand). The rendered site is uploaded as
+# a Pages artifact rather than committed to a branch, so nothing generated is
+# ever tracked in git.
+name: Deploy docs
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never let two deployments race; queue instead of cancelling, so a run that is
+# already publishing finishes.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Zensical
+        run: pip install -r requirements.txt
+
+      - name: Build site
+        run: zensical build
+
+      - name: Fail on broken internal links
+        run: python3 tools/flare2md/check_site.py
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,337 @@
+/* ------------------------------------------------------------------ *
+ * Jaspersoft documentation portal — small additions on top of the
+ * Zensical/Material stylesheet. Kept deliberately short: everything that
+ * the theme already styles (admonitions, card grids, code blocks) is left
+ * to the theme so light and dark palettes stay consistent.
+ * ------------------------------------------------------------------ */
+
+/* Figure captions. The converter emits the Flare autonum label in italics
+   on the paragraph directly after the image; centre it and tone it down. */
+.md-typeset p > img + em,
+.md-typeset p > em:only-child {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85em;
+}
+
+/* Screenshots: keep a visible edge so light-background UI captures don't
+   bleed into the page, and never let one overflow its column. */
+.md-typeset img {
+  max-width: 100%;
+  border-radius: 0.1rem;
+}
+
+/* Reference tables in the REST API and admin guides are wide; let them
+   scroll inside the content column instead of stretching the page. */
+.md-typeset .md-typeset__table {
+  overflow-x: auto;
+}
+
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+}
+
+/* Landing-page cards: a touch more room than the theme default, since our
+   cards carry a title plus a full sentence of description. */
+.md-typeset .grid {
+  grid-gap: 0.8rem;
+}
+
+.md-typeset .grid > .card > p:first-child {
+  align-items: center;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.md-typeset .grid > .card .twemoji {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+/* ------------------------------------------------------------------ *
+ * Announcement bar (overrides/main.html): version statement.
+ * ------------------------------------------------------------------ */
+.jsd-announce {
+  font-size: 0.7rem;
+}
+
+/* ------------------------------------------------------------------ *
+ * Previous/next page links.
+ *
+ * The theme puts these in the site footer, spanning the full window
+ * width. They belong with the content they navigate, so main.html
+ * renders them at the end of the article and they are styled here to
+ * sit inside the content column.
+ *
+ * Borderless on purpose: a rule above the pair separates them from the
+ * page, and the link text alone carries them — no cards.
+ * ------------------------------------------------------------------ */
+.md-typeset .jsd-pagenav__link,
+.md-typeset .jsd-pagenav__link:hover,
+.md-typeset .jsd-pagenav__link:focus {
+  text-decoration: none;
+}
+
+.jsd-pagenav {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  display: flex;
+  gap: 0.8rem;
+  justify-content: space-between;
+  margin: 2.4rem 0 0;
+  padding-top: 1rem;
+}
+
+.jsd-pagenav__link {
+  color: var(--md-default-fg-color);
+  display: flex;
+  flex: 0 1 48%;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-decoration: none;
+}
+
+/* Only the page title reacts to hover; the label above it stays quiet. */
+.jsd-pagenav__link:hover .jsd-pagenav__title {
+  color: var(--md-accent-fg-color);
+}
+
+.jsd-pagenav__link--next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.jsd-pagenav__direction {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+}
+
+.jsd-pagenav__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.jsd-pagenav__spacer {
+  flex: 0 1 48%;
+}
+
+@media screen and (max-width: 44.9844em) {
+  .jsd-pagenav {
+    flex-direction: column;
+  }
+
+  .jsd-pagenav__link,
+  .jsd-pagenav__link--next {
+    flex: 1 1 auto;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .jsd-pagenav__spacer {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Header logo (overrides/partials/logo.html).
+ *
+ * Both brand variants ship in the markup and the palette picks one: the
+ * dark lockup on the light header, the white lockup on the dark header
+ * (the theme sets data-md-color-scheme on <body>).
+ *
+ * These selectors must out-specify the theme's own
+ * `.md-header__button.md-logo img { display: block }` (0,2,1) — a bare
+ * `.jsd-logo--on-dark { display: none }` loses to it and both variants
+ * render, one of them invisible-on-white and only its gradient showing.
+ *
+ * The lockup is 4.3:1, so the theme's 1.2rem default leaves it small next
+ * to the site name; a little more height keeps it readable without
+ * changing the header's own height.
+ * ------------------------------------------------------------------ */
+.md-header__button.md-logo img.jsd-logo,
+.md-nav__button.md-logo img.jsd-logo {
+  height: 1.5rem;
+  width: auto;
+}
+
+.md-header__button.md-logo img.jsd-logo--on-dark,
+.md-nav__button.md-logo img.jsd-logo--on-dark {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo img.jsd-logo--on-light,
+[data-md-color-scheme="slate"] .md-nav__button.md-logo img.jsd-logo--on-light {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo img.jsd-logo--on-dark,
+[data-md-color-scheme="slate"] .md-nav__button.md-logo img.jsd-logo--on-dark {
+  display: block;
+}
+
+@media screen and (max-width: 59.9844em) {
+  .md-header__button.md-logo img.jsd-logo,
+  .md-nav__button.md-logo img.jsd-logo {
+    height: 1.2rem;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Scrolling.
+ *
+ * The theme leaves the document scroller at the browser default, so on
+ * macOS and iOS hitting the top or bottom rubber-bands the whole page —
+ * and because the header is sticky with a backdrop blur, the bounce
+ * reads as the page jumping. Pinning the viewport's overscroll stops
+ * the bounce (and scroll chaining out of the page).
+ *
+ * Trade-off: this also disables pull-to-refresh on Android Chrome, which
+ * is the accepted cost on a documentation site.
+ * ------------------------------------------------------------------ */
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* The sidebars and the table of contents scroll independently; keep a
+   flick inside them from continuing into the document scroller. */
+.md-sidebar__scrollwrap,
+.md-nav--primary .md-nav__list,
+.md-search__scrollwrap {
+  overscroll-behavior: contain;
+}
+
+/* ------------------------------------------------------------------ *
+ * Page feedback — the free-text follow-up shown after a rating.
+ * Copied from ActianCorp/zeenea-platform-docs (docs/stylesheets/
+ * dx_style.css) to match that portal; the rating buttons themselves
+ * are styled by the theme.
+ * ------------------------------------------------------------------ */
+.feedback-text-form {
+  margin-top: 0.75rem;
+}
+
+.feedback-text-prompt {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color);
+}
+
+.feedback-optional {
+  color: var(--md-default-fg-color--light);
+}
+
+.feedback-textarea {
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  padding: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  font-size: 0.72rem;
+  resize: vertical;
+}
+
+.feedback-textarea:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  border-color: transparent;
+}
+
+.feedback-text-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.feedback-submit {
+  font-size: 0.7rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+}
+
+.feedback-skip {
+  background: none;
+  border: none;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.feedback-skip:hover {
+  color: var(--md-default-fg-color);
+}
+
+.feedback-thanks {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ------------------------------------------------------------------ *
+ * Version selector alignment.
+ *
+ * The theme gives `.md-version` a fixed 2.4rem height with its button
+ * sitting at the top of that box. Material's own header is 2.4rem tall,
+ * so it lines up there; Zensical's modern header is taller, which left
+ * the version floating above the palette toggle and the search field.
+ * Centring the box's content puts it on their baseline.
+ *
+ * `position: relative` also re-anchors the dropdown: the theme's list is
+ * absolutely positioned against the header (the nearest positioned
+ * ancestor), so in a taller header it opened level with the header top
+ * instead of under the button.
+ * ------------------------------------------------------------------ */
+.md-header__inner .md-version {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.md-header__inner .md-version__current {
+  margin-left: 0.8rem;
+  top: 0;
+}
+
+.md-header__inner .md-version__list {
+  margin: 0.2rem 0;
+  min-width: 7rem;
+  top: 100%;
+}
+
+/* ------------------------------------------------------------------ *
+ * Home page "Products" list (overrides/partials/nav.html).
+ *
+ * With navigation.tabs the left sidebar shows the active tab's children,
+ * and Home has none — so the column was empty. This list fills it and is
+ * styled like the table of contents on the right for symmetry.
+ * ------------------------------------------------------------------ */
+.jsd-products {
+  margin-bottom: 1rem;
+}
+
+.jsd-products .md-nav__title {
+  display: flex;
+}
+
+.jsd-products .md-nav__link {
+  margin-top: 0.3rem;
+}
+
+/* On a phone the drawer shows this list followed by the full tree; a rule
+   keeps the two apart. */
+@media screen and (max-width: 76.234375em) {
+  .jsd-products {
+    border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.6rem;
+  }
+}

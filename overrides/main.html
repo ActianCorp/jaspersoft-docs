@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+<!--
+  Theme overrides for the Jaspersoft documentation portal.
+
+  1. Announcement bar naming the documented product version. The Flare sources
+     carry several release numbers and only the latest is published here.
+  2. Previous/next page links rendered at the end of the article instead of in
+     the site footer, so they sit inside the content column and are absent from
+     the landing pages (which set `hide: [footer]`). The theme's own
+     `navigation.footer` feature is therefore left switched off.
+-->
+
+{% block announce %}
+  <span class="jsd-announce">
+    Documentation for <strong>Jaspersoft {{ config.extra.product_version }}</strong>
+    &mdash; the latest release.
+  </span>
+{% endblock %}
+
+{% block content %}
+  {% include "partials/content.html" %}
+
+  {% set hidden = page.meta and page.meta.hide and "footer" in page.meta.hide %}
+  {% if not hidden and (page.previous_page or page.next_page) %}
+    <nav class="jsd-pagenav" aria-label="Page navigation">
+      {% if page.previous_page %}
+        <a href="{{ page.previous_page.url | url }}" class="jsd-pagenav__link jsd-pagenav__link--prev">
+          <span class="jsd-pagenav__direction">Previous</span>
+          <span class="jsd-pagenav__title">{{ page.previous_page.title }}</span>
+        </a>
+      {% else %}
+        <span class="jsd-pagenav__spacer"></span>
+      {% endif %}
+      {% if page.next_page %}
+        <a href="{{ page.next_page.url | url }}" class="jsd-pagenav__link jsd-pagenav__link--next">
+          <span class="jsd-pagenav__direction">Next</span>
+          <span class="jsd-pagenav__title">{{ page.next_page.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}

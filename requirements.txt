@@ -1,0 +1,2 @@
+# Pinned to the version the site is built and validated against locally.
+zensical==0.0.43

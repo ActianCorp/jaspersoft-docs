@@ -1,0 +1,26 @@
+{#-
+  GA4 tag, copied from ActianCorp/zeenea-platform-docs
+  (theme_overrides/partials/integrations/analytics.html) so both portals report
+  into the same property.
+
+  The theme's built-in `google` provider would also load gtag, but its bundled
+  script binds the feedback form itself; this portal uses the richer feedback
+  handler from the same repo (docs/javascripts/feedback.js), so the tag is
+  loaded here and left to that script. Only the GA4 block was copied — the
+  SmartCat translator and the (commented-out) OneTrust consent notice in the
+  source file are unrelated to analytics.
+-#}
+{% if config.extra.analytics %}
+  {% set property = config.extra.analytics.property | d("", true) %}
+{% endif %}
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ property }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ property }}');
+</script>
+<!--  Global site tag (gtag.js) - Google Analytics end -->

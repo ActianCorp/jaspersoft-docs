@@ -1,0 +1,8 @@
+# Rendered output — rebuilt by CI on every push, never committed.
+site/
+.zensical/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/

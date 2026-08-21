@@ -63,11 +63,15 @@ def main() -> int:
             checked += 1
             resolved = _resolve(rel.parent, unquote(target))
             if resolved is None:
-                broken[rel.parent.as_posix()].append(raw)
+                broken[rel.parent.as_posix()].append("%s (escapes the site root)" % raw)
                 continue
             candidates = [resolved, resolved + "index.html" if resolved.endswith("/") else resolved + "/index.html"]
             if not any(c in files for c in candidates):
-                broken[rel.parent.as_posix()].append(raw)
+                # Report what it resolved to as well: a bad relative depth and a
+                # missing page look identical otherwise.
+                broken[rel.parent.as_posix()].append(
+                    "%s -> %s" % (raw, " | ".join(candidates))
+                )
 
     print("pages: %d   in-page references checked: %d" % (len(pages), checked))
     print("broken references: %d across %d pages" %
@@ -75,7 +79,7 @@ def main() -> int:
     for page, refs in sorted(broken.items())[:25]:
         print("  %s" % page)
         for ref in sorted(set(refs))[:5]:
-            print("      -> %s" % ref)
+            print("      %s" % ref)
     print("pages with almost no content: %d" % len(thin))
     for page in thin[:15]:
         print("  %s" % page)

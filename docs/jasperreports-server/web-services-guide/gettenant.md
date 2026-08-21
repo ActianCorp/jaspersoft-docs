@@ -1,0 +1,41 @@
+---
+title: getTenant
+description: "In getTenant, the parameter tenantId has the type String and returns type WSTenant."
+---
+
+# 1.0.1 getTenant
+
+In `getTenant`, the parameter `tenantId` has the type `String` and returns type `WSTenant`.
+
+To call `getTenant`:
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><pre class="text"><code>String tenantId = “organization_1”;</code></pre></td>
+</tr>
+</tbody>
+</table>
+
+The return is:
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><pre class="text"><code>String getTenantId()
+String getTenantName()
+String getTenantAlias()
+String getTenantDesc()
+String getTenantNote()
+String getTenantUri()
+String getTenantFolderUri()
+String getParentId()</code></pre></td>
+</tr>
+</tbody>
+</table>

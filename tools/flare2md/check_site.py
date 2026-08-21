@@ -55,22 +55,26 @@ def main() -> int:
         body = html.split('<article', 1)[-1].split("</article>", 1)[0]
         if len(re.sub(r"<[^>]+>", "", body).strip()) < 80:
             thin.append(rel.parent.as_posix() or ".")
-        for raw in HREF_RE.findall(body):
-            raw = html_mod.unescape(raw)
+        for match in HREF_RE.finditer(body):
+            raw = html_mod.unescape(match.group(1))
             target, _frag = urldefrag(raw)
             if not target or target.startswith(("http://", "https://", "mailto:", "data:", "#", "//")):
                 continue
             checked += 1
             resolved = _resolve(rel.parent, unquote(target))
             if resolved is None:
-                broken[rel.parent.as_posix()].append("%s (escapes the site root)" % raw)
+                broken[rel.parent.as_posix()].append(
+                    "%s (escapes the site root) in: %s"
+                    % (raw, _context(body, match.start()))
+                )
                 continue
             candidates = [resolved, resolved + "index.html" if resolved.endswith("/") else resolved + "/index.html"]
             if not any(c in files for c in candidates):
                 # Report what it resolved to as well: a bad relative depth and a
                 # missing page look identical otherwise.
                 broken[rel.parent.as_posix()].append(
-                    "%s -> %s" % (raw, " | ".join(candidates))
+                    "%s -> %s in: %s"
+                    % (raw, candidates[-1], _context(body, match.start()))
                 )
 
     print("pages: %d   in-page references checked: %d" % (len(pages), checked))
@@ -84,6 +88,12 @@ def main() -> int:
     for page in thin[:15]:
         print("  %s" % page)
     return 1 if broken else 0
+
+
+def _context(body: str, index: int, width: int = 110) -> str:
+    """The markup around a reference, so a bad link can be placed on the page."""
+    start = max(0, index - width // 2)
+    return re.sub(r"\s+", " ", body[start:index + width]).strip()
 
 
 def _resolve(base: Path, target: str):

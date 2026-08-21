@@ -37,6 +37,13 @@ SITE = _find_site()
 
 HREF_RE = re.compile(r'(?:href|src)="([^"]+)"')
 
+# Code samples contain markup as text (`&lt;a href="../"&gt;`), and only `<`
+# and `>` come back escaped — so `href="..."` survives verbatim and reads as a
+# link. Highlighted output also splits that text into spans differently across
+# Pygments versions, which made this a CI-only false positive. Drop code before
+# looking for references.
+CODE_RE = re.compile(r"(?is)<pre\b.*?</pre>|<code\b.*?</code>")
+
 
 def main() -> int:
     if not SITE.is_dir():
@@ -53,6 +60,7 @@ def main() -> int:
         rel = page.relative_to(SITE)
         html = page.read_text(encoding="utf-8", errors="replace")
         body = html.split('<article', 1)[-1].split("</article>", 1)[0]
+        body = CODE_RE.sub(" ", body)
         if len(re.sub(r"<[^>]+>", "", body).strip()) < 80:
             thin.append(rel.parent.as_posix() or ".")
         for match in HREF_RE.finditer(body):

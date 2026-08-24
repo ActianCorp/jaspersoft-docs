@@ -2009,8 +2009,8 @@ nav = [
       { "Legal and Third-Party Notices" = "jasperreports-io/professional-release-notes/_templates/legal-and-third-party-notices.md" },
     ] },
   ] },
-  { "Jaspersoft in the Cloud" = [
-    { "Jaspersoft in the Cloud" = "cloud/index.md" },
+  { "Cloud Deployments" = [
+    { "Cloud Deployments" = "cloud/index.md" },
     { "Jaspersoft for AWS User Guide" = [
       { "Jaspersoft for AWS User Guide" = "cloud/aws-user-guide/index.md" },
       { "Introduction" = "cloud/aws-user-guide/introduction.md" },

@@ -130,7 +130,7 @@ Complete product documentation for **Jaspersoft 10.1.0**.
   </div>
 </div>
 
-## Jaspersoft in the Cloud
+## Cloud Deployments
 
 <div class="grid">
   <div class="card">

@@ -41,7 +41,9 @@ FAMILIES = [
     ("jaspersoft-studio", "Jaspersoft Studio"),
     ("jasperreports-web-studio", "JasperReports Web Studio"),
     ("jasperreports-io", "JasperReports IO"),
-    ("cloud", "Jaspersoft in the Cloud"),
+    # AWS and Azure deployment guides. Named for what they cover rather than
+    # "Cloud Support", which would read as a support offering.
+    ("cloud", "Cloud Deployments"),
 ]
 
 # --------------------------------------------------------------------------- #

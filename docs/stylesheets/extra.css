@@ -50,8 +50,25 @@
 /* ------------------------------------------------------------------ *
  * Announcement bar (overrides/main.html): version statement.
  * ------------------------------------------------------------------ */
+/* The theme's banner is sized for a sentence or two of announcement; this one
+ * is a single line, so the vertical margin comes down and the text is centred
+ * across the bar. The dismiss button stays where the theme puts it, so the
+ * centred line is padded clear of it. */
+.md-banner__inner {
+  margin: 0.3rem auto;
+}
+
 .jsd-announce {
-  font-size: 0.7rem;
+  display: block;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  padding-right: 1.2rem;
+  text-align: center;
+}
+
+.jsd-announce a {
+  color: var(--md-accent-fg-color);
+  text-decoration: underline;
 }
 
 /* ------------------------------------------------------------------ *

@@ -1,11 +1,11 @@
 ---
-title: Jaspersoft in the Cloud
-description: Jaspersoft in the Cloud documentation set.
+title: Cloud Deployments
+description: Cloud Deployments documentation set.
 hide:
   - footer
 ---
 
-# Jaspersoft in the Cloud
+# Cloud Deployments
 
 <div class="grid">
   <div class="card">

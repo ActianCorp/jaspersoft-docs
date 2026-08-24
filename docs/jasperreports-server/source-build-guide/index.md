@@ -20,7 +20,6 @@ Applies to Jaspersoft **10.1.0**.
 - [Source Build Setup for Other Databases](setup_for_other_databases.md)
 - [Additional Buildomatic Information](additional_buildomatic_information.md)
 - [Jaspersoft Internal Developers and Advanced Developers](internal_and-advanced_developers.md)
-- [Building Other Source Code Packages](building_other_source_code_packages.md)
 - [Java Options and JasperServer License Details](java_options_and_jrs_license.md)
 - [Troubleshooting](troubleshooting.md)
 - [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)

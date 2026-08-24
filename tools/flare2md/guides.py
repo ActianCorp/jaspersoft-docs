@@ -34,9 +34,10 @@ BRAND_REPLACEMENTS = {
 }
 
 # Product families, in the order they should appear in the site navigation.
+# The published portal groups the OLAP guides under JasperReports Server rather
+# than giving them a family of their own; this mirrors that.
 FAMILIES = [
     ("jasperreports-server", "JasperReports Server"),
-    ("jaspersoft-olap", "Jaspersoft OLAP"),
     ("jaspersoft-studio", "Jaspersoft Studio"),
     ("jasperreports-web-studio", "JasperReports Web Studio"),
     ("jasperreports-io", "JasperReports IO"),
@@ -196,25 +197,19 @@ GUIDES = [
         summary="New features, resolved issues, known issues and end-of-support notices per release.",
         icon="material/note-text",
     ),
+    # One guide, as the portal publishes it. The Flare project splits platform
+    # support across a commercial and a community TOC; the portal ships the
+    # commercial one, and the community-only variants of the matrices are picked
+    # up as additional topics rather than being dropped.
     dict(
-        key="platform-support-commercial",
-        title="Platform Support (Commercial Edition)",
+        key="platform-support-guide",
+        title="Platform Support Guide",
         family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="Jaspersoft-platform-support-commercial-edition.fltoc",
         guide_condition="jrs-platform-support-commercial",
         summary="Certified operating systems, application servers, databases and browsers.",
         icon="material/check-decagram",
-    ),
-    dict(
-        key="platform-support-community",
-        title="Platform Support (Community Edition)",
-        family="jasperreports-server",
-        project="js-jrs-JasperReportsServer",
-        toc="Jaspersoft-platform-support-community-edition.fltoc",
-        guide_condition="jrs-platform-support-community",
-        summary="Certified platforms for the Community Project distribution.",
-        icon="material/check-decagram-outline",
     ),
     dict(
         key="telemetry-program",
@@ -226,11 +221,11 @@ GUIDES = [
         summary="What the telemetry program collects, how it is transmitted, and how to opt out.",
         icon="material/chart-timeline-variant",
     ),
-    # ----------------------------- Jaspersoft OLAP --------------------------
+    # Jaspersoft OLAP — filed under JasperReports Server, as the portal does.
     dict(
         key="olap-user-guide",
         title="Jaspersoft OLAP User Guide",
-        family="jaspersoft-olap",
+        family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="jrs-olap-user/Jaspersoft-OLAP-User-Guide.fltoc",
         guide_condition="jrs-olap-user",
@@ -240,7 +235,7 @@ GUIDES = [
     dict(
         key="olap-ultimate-guide",
         title="Jaspersoft OLAP Ultimate Guide",
-        family="jaspersoft-olap",
+        family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="jrs-olap-ultimate/Jaspersoft-OLAP-Ultimate-Guide.fltoc",
         guide_condition="jrs-olap-ultimate",
@@ -257,6 +252,16 @@ GUIDES = [
         target="Jaspersoft-Studio-User-Guide-HTML5.fltar",
         summary="Design reports in the Eclipse-based studio: datasets, bands, charts and publishing.",
         icon="material/pencil-ruler",
+    ),
+    dict(
+        key="source-build-guide",
+        title="Jaspersoft Studio Source Build Guide",
+        family="jaspersoft-studio",
+        project="Standalone/jss-source-guide",
+        toc="svn-source.fltoc",
+        target="Jaspersoft-Studio-Source-Build-Guide-HTML5.fltar",
+        summary="Check out and build Jaspersoft Studio from source.",
+        icon="material/source-branch",
     ),
     # ----------------------- JasperReports Web Studio -----------------------
     dict(
@@ -353,7 +358,8 @@ EXCLUDED = {
     "jrs-rest": "no content topics, only BookMatter/Resources",
     "jrs-help-master": "context-sensitive help shell; links into the other projects",
     "js-shared": "shared snippets/variables only, no standalone guide",
-    "Standalone": "one-off historical hotfix docs (Spring upgrade 6.0.1, dashboard parameters 2015)",
+    "Standalone/spring_upgrade_601": "one-off historical hotfix doc (Spring upgrade 6.0.1)",
+    "Standalone/dashboard-parameters-2015-02": "one-off historical hotfix doc (2015)",
     "ServicePacks": "archived per-version release-note snapshots (7.1.x-9.0.x)",
     "Templates": "Flare project templates, not product documentation",
 }

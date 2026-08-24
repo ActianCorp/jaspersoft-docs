@@ -1,11 +1,11 @@
 ---
-title: Platform Support (Commercial Edition)
+title: Platform Support Guide
 description: Certified operating systems, application servers, databases and browsers.
 hide:
   - footer
 ---
 
-# Platform Support (Commercial Edition)
+# Platform Support Guide
 
 Certified operating systems, application servers, databases and browsers.
 
@@ -26,3 +26,4 @@ Applies to Jaspersoft **10.1.0**.
 - [Language Support](language-support.md)
 - [TIBCO Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
 - [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
+- [Additional Topics](applicationservers-community.md)

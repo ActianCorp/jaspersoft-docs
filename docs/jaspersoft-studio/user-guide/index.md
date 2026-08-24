@@ -25,7 +25,6 @@ Applies to Jaspersoft **10.1.0**.
 - [Data Adapters](data-adapters/data-adapters-intro.md)
 - [Creating Queries](query-builder-intro.md)
 - [Accessing JasperReports Server from Jaspersoft Studio](jrs-server/jss2jrs.md)
-- [jrio-intro](jrio/jrio-intro.md)
 - [Datasets and Subdatasets](datasets/datasets.md)
 - [Report Bursting and Report Splitting](report-bursting.md)
 - [Working with Tables](tables-intro.md)

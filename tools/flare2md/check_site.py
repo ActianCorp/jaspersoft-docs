@@ -61,7 +61,7 @@ def main() -> int:
         html = page.read_text(encoding="utf-8", errors="replace")
         body = html.split('<article', 1)[-1].split("</article>", 1)[0]
         body = CODE_RE.sub(" ", body)
-        if len(re.sub(r"<[^>]+>", "", body).strip()) < 80:
+        if len(prose_only(body)) < 80:
             thin.append(rel.parent.as_posix() or ".")
         for match in HREF_RE.finditer(body):
             raw = html_mod.unescape(match.group(1))
@@ -96,6 +96,22 @@ def main() -> int:
     for page in thin[:15]:
         print("  %s" % page)
     return 1 if broken else 0
+
+
+# Everything the templates add inside <article>: the heading permalink, the
+# feedback form and the previous/next links. They are the same on every page,
+# so counting them hid pages that had no content of their own.
+CHROME_RE = re.compile(
+    r"(?is)<h1[^>]*>.*?</h1>"
+    r"|<form[^>]*class=\"md-feedback\".*?</form>"
+    r"|<nav[^>]*class=\"jsd-pagenav\".*?</nav>"
+    r"|<a[^>]*class=\"headerlink\".*?</a>"
+)
+
+
+def prose_only(body: str) -> str:
+    """Article text with the per-page chrome removed."""
+    return re.sub(r"<[^>]+>", "", CHROME_RE.sub(" ", body)).strip()
 
 
 def _context(body: str, index: int, width: int = 110) -> str:

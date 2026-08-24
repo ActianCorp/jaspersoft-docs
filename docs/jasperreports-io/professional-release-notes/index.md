@@ -13,8 +13,7 @@ Applies to Jaspersoft **10.1.0**.
 
 ## Contents
 
-- [Overview](jasperreports-io-professional-edition-release-notes/overview.md)
-- [New Features and Changes](jasperreports-io-professional-edition-release-notes/new-features-and-changes.md)
-- [TIBCO Documentation and Support Services](tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](legal-and-third-party-notices.md)
-- [Additional Topics](whats-new.md)
+- [Overview](overview.md)
+- [New Features and Changes](new-features-and-changes.md)
+- [TIBCO Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
+- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)

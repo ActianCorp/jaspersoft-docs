@@ -157,9 +157,16 @@ def link_closure(seeds, content_root: Path, warn):
 
 
 def main_content_dir(seeds):
-    """The guide's own content directory, as named by its TOC."""
+    """The guide's own content directory, as named by its TOC.
+
+    Ties break on the directory name, not on iteration order: a small guide can
+    have as many TOC entries in `_templates` as in its own directory, and page
+    URLs must not depend on which one a set happened to yield first.
+    """
     tops = Counter(rel.parts[0] for rel in seeds if len(rel.parts) > 1)
-    return tops.most_common(1)[0][0] if tops else None
+    if not tops:
+        return None
+    return min(tops.items(), key=lambda item: (-item[1], item[0]))[0]
 
 
 def output_layout(kept, seeds, warn):
@@ -268,6 +275,56 @@ def project_topics(content_root: Path):
     return out
 
 
+def surviving_content(rel, plan, warn):
+    """(text, image count) a topic still has after the source's own filtering.
+
+    Only the cheap front half of the pipeline runs — snippets, conditions,
+    variables, draft removal — which is enough to tell whether anything is left
+    to publish. Headings are excluded from the text: a topic reduced to its
+    title has no content, and that is exactly what a body wrapped in
+    `MadCap:conditions="DoNotPublish"` leaves behind.
+    """
+    topic = plan["content_root"] / rel
+    root = f2.parse_flare(topic, warn)
+    body = f2.body_of(root)
+    f2.inline_snippets(body, topic.parent, warn, fallbacks=plan["snippet_roots"])
+    f2.apply_conditions(body, plan["target"])
+    f2.resolve_variables(body, plan["variables"], plan["target"].overrides, warn)
+    f2.drop_draft_content(body)
+    for node in list(body.iter()):
+        if isinstance(node.tag, str) and re.fullmatch(r"h[1-6]", node.tag):
+            f2._drop_keeping_tail(node)
+    text = re.sub(r"\s+", "", "".join(body.itertext()))
+    return text, len(body.findall(".//img"))
+
+
+def prune_empty_topics(plans, warn):
+    """Drop topics the source itself empties out.
+
+    A handful of topics are wholly wrapped in `DoNotPublish` /
+    `ExcludeFromHelp` / `ExcludeFromBuilds`, so nothing survives conversion and
+    the page would be published as a bare title. Pruning here rather than after
+    conversion means the link resolver and the navigation never point at them.
+    """
+    for plan in plans:
+        empty = set()
+        for rel in sorted(plan["kept"]):
+            try:
+                text, images = surviving_content(rel, plan, warn)
+            except Exception as exc:  # noqa: BLE001
+                warn("could not check %s for content: %s" % (rel, exc))
+                continue
+            if not text and not images:
+                empty.add(rel)
+        if not empty:
+            continue
+        plan["kept"] -= empty
+        plan["layout"] = output_layout(plan["kept"], plan["seeds"], warn)
+        plan["empty"] = sorted(rel.as_posix() for rel in empty)
+        for rel in plan["empty"]:
+            warn("not published, no content survives the source's conditions: %s" % rel)
+
+
 def absorb_unreferenced(plans, warn):
     """Publish topics that exist in a project but appear in no TOC.
 
@@ -289,8 +346,10 @@ def absorb_unreferenced(plans, warn):
         if not leftovers:
             continue
         # Fall back to the project's largest guide for shared directories
-        # (BookMatter, _templates) that belong to no single guide.
-        primary = max(project_plans, key=lambda p: len(p["kept"]))
+        # (BookMatter, _templates) that belong to no single guide. "Largest" is
+        # measured by TOC size, which is stable: measuring converted pages would
+        # move these shared pages between guides whenever anything else changed.
+        primary = max(project_plans, key=lambda p: (len(p["seeds"]), p["prefix"]))
         extras = defaultdict(list)
         for rel in leftovers:
             owner = next(
@@ -724,6 +783,11 @@ def main(argv):
 
     link_notes = []
     absorb_unreferenced(plans, lambda m: link_notes.append(m))
+    # Prune after absorbing, so a topic pulled in by neither TOC nor link is
+    # still checked, and before the resolver is built from the page maps.
+    for plan in plans:
+        prefix = plan["prefix"]
+        prune_empty_topics([plan], warn_by_guide[prefix].append)
     resolver = LinkResolver(plans, link_notes.append)
 
     for plan in plans:

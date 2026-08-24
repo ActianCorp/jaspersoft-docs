@@ -1,5 +1,0 @@
----
-title: data-adapters-gbq
----
-
-

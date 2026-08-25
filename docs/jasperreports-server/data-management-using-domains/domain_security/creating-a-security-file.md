@@ -24,13 +24,14 @@ This section describes the access grant syntax and illustrates both kinds of acc
 To begin writing your security file, download the template provided on the **Security** tab.
 
 1.  Open your Domain in the Domain Designer and navigate to the **Security** tab.
+
 2.  Click ![js DomainDesigner icon Code](../assets/images/js-DomainDesigner-icon-Code.png) to display the generic template in the editor.
 
-![js DomainDesigner SecurityTabTemplate](../assets/images/js-DomainDesigner-SecurityTabTemplate.png)
+    ![js DomainDesigner SecurityTabTemplate](../assets/images/js-DomainDesigner-SecurityTabTemplate.png)
 
-*Figure 1: Security Tab with the Generic Template*
+    *Figure 1: Security Tab with the Generic Template*
 
-1.  Click ![js DomainDesigner icon download resource](../assets/images/js-DomainDesigner-icon-download-resource.png) to download the template and save it as an XML file on your computer.
+3.  Click ![js DomainDesigner icon download resource](../assets/images/js-DomainDesigner-icon-download-resource.png) to download the template and save it as an XML file on your computer.
 
 Modify the template as shown in the code samples in the following sections. The samples do not strictly follow the template, but the template gives you the structure of the file.
 
@@ -52,7 +53,7 @@ The following service is only used in a `filterExpression` to filter rows:
 
 To retrieve information about roles, you must access Spring's currently authenticated principal object. You do this using `authentication.getPrincipal().getRoles()` to get a list of all roles defined for the user. Your expression must process this list to compare it to the desired role names. For example, the following principal expression checks whether the user has the ROLE_ADMINISTRATOR or ROLE_SALES_MANAGER role.
 
-```
+``` xml
 <principalExpression>
   authentication.getPrincipal().getRoles().any{ it.getRoleName()
     in ['ROLE_ADMINISTRATOR','ROLE_SALES_MANAGER'] }
@@ -85,7 +86,7 @@ where:
 
 For example, the following expression tests whether the user has `myValue` set for `myAttribute` anywhere in the hierarchy.
 
-```
+``` xml
 <principalExpression>
   attributesService.getAttribute('myAttribute',null,true)?.getAttrValue().equals('myValue')
 </principalExpression>
@@ -115,7 +116,7 @@ You can also use `attributesService` in a filter expression. The following filte
 
 Filter expression using `attributesService`
 
-```
+``` xml
 <filterExpression>
   store1.store_country ==(groovy('attributesService.getAttribute("country", null).attrValue'))
 </filterExpression>
@@ -143,7 +144,7 @@ To implement row security, CZS uses `attributesService` to check for attributes.
 
 For example, CZS used the following XML to define a principal expression and filter expression that grant access to users based on their `Cities` profile attribute:
 
-```
+``` xml
 <resourceAccessGrant id="Jointree_1_row_access_grant_20">
   <principalExpression>attributesService.getAttribute('Cities', null, true) != null
   </principalExpression>
@@ -162,7 +163,7 @@ CZS uses the access grant above to determine data access based on a user’s `Ci
 
 The resulting security file included these two resource access grants.
 
-```
+``` text
   <!-- Row level security -->
   <!-- What access do roles/users have to the rows in the resource? -->
   <resourceAccessGrantList id="JoinTree_1_List" label="ListLabel"
@@ -195,7 +196,7 @@ Column-level access determines which columns in the data source can be displayed
 
 Consider a table that includes employee contact and salary information. You could define item group access grants that check the user’s role and grant access to the salary field only if the user has the Human Resources role. For example, the following code sample modifies access for the ROLE_SALESREP role, first by revoking the default access for that role and then granting access to sales information only. The principle expression determines which users the item group access grant applies to (users with the ROLE_SALES_REP role). The item access grants determine the specific access of the users. All role-specific access is revoked then access to the `StoreSales` and `StoreCost` item is granted:
 
-```
+``` xml
 <itemGroupAccessGrant id="Jointree_1_item_group_access_grant_2" access="granted">
   <principalExpression>authentication.getPrincipal().getRoles().any
     { it.getRoleName() in ['ROLE_SALES_REP'] }</principalExpression>
@@ -216,7 +217,7 @@ Consider a table that includes employee contact and salary information. You coul
 
 To ensure that sales representatives don’t have access to cost information, CZS adds item group access grants; the first grants full access to managers and the administrator:
 
-```
+``` text
 <!-- Column-level access for Sales Manager and Admins-->
 <itemGroupAccessGrant id="Jointree1_item_group_access_grant_MNG" access="granted">
   <principalExpression>authentication.getPrincipal().getRoles().any
@@ -227,7 +228,7 @@ To ensure that sales representatives don’t have access to cost information, CZ
 
 CZS then adds an item group access grant that grants limited access to sales representatives; the following XML grants access to the Store Sales and Sales Units fields while revoking access to the Store Cost field:
 
-```
+``` text
 <!-- Column-level access for Sales Reps-->
 <itemGroupAccessGrant id="Jointree_1_item_group_access_grant_REP"
   access="granted">
@@ -252,17 +253,18 @@ CZS uploads the security file each time they add a new access grant. You can upl
 You can also store the security file in the repository as a file resource, and then add it to your Domain. When stored in the repository, the security file can be shared with several Domains, as long as they have the same structure and IDs. This can be useful when the only differences between the Domains are managed with attributes, so a Domain can be copied to several similar organizations.
 
 1.  Open your Domain in the Domain Designer and navigate to the **Security** tab.
+
 2.  Click ![js DomainDesigner icon import](../assets/images/js-DomainDesigner-icon-import.png) to add the security file, then select the **Repository** or **Local File** tab at the top of the dialog.
 
-![js DomainDesigner addSecurityFromRepo](../assets/images/js-DomainDesigner-addSecurityFromRepo.png)      ![js DomainDesigner AddSecurityFromFile](../assets/images/js-DomainDesigner-AddSecurityFromFile.png)
+    ![js DomainDesigner addSecurityFromRepo](../assets/images/js-DomainDesigner-addSecurityFromRepo.png)      ![js DomainDesigner AddSecurityFromFile](../assets/images/js-DomainDesigner-AddSecurityFromFile.png)
 
-*Figure 2: Add Security File Dialogs*
+    *Figure 2: Add Security File Dialogs*
 
-1.  If you stored the security file in the repository, use the controls to navigate the tree or search for your file, then click **Add**.
+3.  If you stored the security file in the repository, use the controls to navigate the tree or search for your file, then click **Add**.
 
-If the file is on your computer, browse to select it, then click **Import**.
+    If the file is on your computer, browse to select it, then click **Import**.
 
-1.  The server uploads the file and validates it. If there was any XML in the **Security** tab editor, you are prompted to replace it.
+4.  The server uploads the file and validates it. If there was any XML in the **Security** tab editor, you are prompted to replace it.
 
 The editor checks the XML syntax and Domain IDs of your file and lets you fix any errors. Upon saving the Domain, the contents of the editor are validated for join references and principal expressions, then becomes the Domain's security file.
 

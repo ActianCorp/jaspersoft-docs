@@ -72,9 +72,9 @@ To export resources from the repository
 
 4.  Right-click the selected folder or resources and select **Export** from the context menu. The **Export Resources** dialog appears:
 
-![js Repository ExportResources](../assets/images/js-Repository-ExportResources.png)
+    ![js Repository ExportResources](../assets/images/js-Repository-ExportResources.png)
 
-*Figure 1: Export Resources Dialog in the Repository*
+    *Figure 1: Export Resources Dialog in the Repository*
 
 5.  If required, change the default name of the zip file for the exported catalog.
 
@@ -125,9 +125,9 @@ To export resources from the settings page
 
 2.  Select **Manage\>Server Settings**, then click **Export** in the left-hand panel.
 
-![js Settings Export](../assets/images/js-Settings-Export.png)
+    ![js Settings Export](../assets/images/js-Settings-Export.png)
 
-*Figure 2: User Interface for Export*
+    *Figure 2: User Interface for Export*
 
 3.  If required, change the default name of the zip file for the exported catalog.
 
@@ -189,9 +189,9 @@ To export organizations
 
 3.  In the left-hand panel, right-click the organization you want to export and select **Export** from the context menu.
 
-![js ManageOrgs Export](../assets/images/js-ManageOrgs-Export.png)
+    ![js ManageOrgs Export](../assets/images/js-ManageOrgs-Export.png)
 
-*Figure 3: User Interface for Organization Export*
+    *Figure 3: User Interface for Organization Export*
 
 4.  If required, change the default name of the zip file for the exported catalog.
 
@@ -209,6 +209,7 @@ To export organizations
     Select **Export Everything** (default) to export the entire organization, including all resources, report jobs, users, and roles.
 
 7.  Clear **Export Everything** to select users and roles or resource types to export.
+
     1.  To export roles and users, choose one of the following radio buttons to select individual users and roles from the lists:
 
         - **Selected roles and users** - Only the roles and users you select explicitly are exported.
@@ -218,6 +219,7 @@ To export organizations
         - **Roles with selected users** - Select one or more users, and all roles assigned to those users are exported, along with the selected users.
 
     2.  In **Resources to Export**, perform either one of the following:
+
         - If you only want users and roles, clear all checkboxes.
 
         - If you only want resources, do not select any users and roles, then select the resource types you want to export.
@@ -248,9 +250,9 @@ To import organizations
 
 3.  In the left-hand panel, right-click the organization you want to import into and select **Import** from the context menu.
 
-![js ManageOrgs Import](../assets/images/js-ManageOrgs-Import.png)
+    ![js ManageOrgs Import](../assets/images/js-ManageOrgs-Import.png)
 
-*Figure 4: User Interface for Organization Import*
+    *Figure 4: User Interface for Organization Import*
 
 4.  Click **Browse** to choose the catalog zip file to import. The catalog file must be created by the export of an organization.
 
@@ -306,9 +308,9 @@ To import data from the Settings page
 
 2.  Select **Manage\>Server Settings** and choose **Import** in the left-hand panel.
 
-![js Settings Import](../assets/images/js-Settings-Import.png)
+    ![js Settings Import](../assets/images/js-Settings-Import.png)
 
-*Figure 5: User Interface for Import*
+    *Figure 5: User Interface for Import*
 
 3.  Click **Browse** to choose the catalog zip file to import. This dialog cannot import a catalog file that was created from the export of an organization.
 

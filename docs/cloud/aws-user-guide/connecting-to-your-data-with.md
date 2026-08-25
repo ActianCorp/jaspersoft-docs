@@ -34,64 +34,67 @@ JasperReports Server can automatically discover and connect to Amazon Relational
 To connect to Amazon RDS or Redshift
 
 1.  Log into JasperReports Server as an administrator.
+
 2.  Go to **Create** \> **Data Source**.
 
-<img src="assets/images/AWS-DataSource.png" alt="AWS DataSource" />
+    ![AWS DataSource](assets/images/AWS-DataSource.png)
 
-*Figure 1: Create \> Data Source menu*
+    *Figure 1: Create \> Data Source menu*
 
-1.  Select **AWS Data Source** from the **Type** dropdown menu.
-2.  Enter your EC2 instance credentials. If EC2 instance credentials are not available, then see the Additional Connection Possibilities section below.
-3.  Under **AWS Settings**, select **EC2 instance credentials**.
+3.  Select **AWS Data Source** from the **Type** dropdown menu.
 
-<img src="assets/images/aws_datasource.png" alt="aws datasource" />
+4.  Enter your EC2 instance credentials. If EC2 instance credentials are not available, then see the Additional Connection Possibilities section below.
 
-*Figure 2: Add Data Source dialog*
+5.  Under **AWS Settings**, select **EC2 instance credentials**.
 
-1.  Enter your database connection info:
+    ![aws datasource](assets/images/aws_datasource.png)
 
-JasperReports Server is able to detect your RDS and Redshift data sources. This is possible because the IAM Role associated with the EC2 instance is allowed to execute the actions "rds:Describe\*" and "redshift:Describe\*". It pre-populates the Database Name, Driver, and URL.
+    *Figure 2: Add Data Source dialog*
 
-On the New Data Source page, You must enter the database username and password. For security reasons, Amazon does not store these credentials, and Jaspersoft cannot retrieve them.
+6.  Enter your database connection info:
 
-The default database is automatically populated, but you may manually enter another if your RDS or Redshift instance has multiple databases.
+    JasperReports Server is able to detect your RDS and Redshift data sources. This is possible because the IAM Role associated with the EC2 instance is allowed to execute the actions "rds:Describe\*" and "redshift:Describe\*". It pre-populates the Database Name, Driver, and URL.
 
-<img src="assets/images/ec2-data.png" alt="ec2 data" />
+    On the New Data Source page, You must enter the database username and password. For security reasons, Amazon does not store these credentials, and Jaspersoft cannot retrieve them.
 
-*Figure 3: New Data Source dialog*
+    The default database is automatically populated, but you may manually enter another if your RDS or Redshift instance has multiple databases.
 
-1.  Test your connection:
+    ![ec2 data](assets/images/ec2-data.png)
 
-You should always test your connection. This button does much more than just testing:
+    *Figure 3: New Data Source dialog*
 
-- It creates a DB Security Group.
-- It adds the internal IP of the EC2 instance to the security group to authorize ingress to RDS.
+7.  Test your connection:
 
-This is possible because the IAM Role provides the instance with credentials like "rds:CreateDBSecurityGroup" and "redshift:AuthorizeClusterSecurityGroupIngress".
+    You should always test your connection. This button does much more than just testing:
 
-- If you want to control details of the security group name or specify the IP address manually because you have a complex VPC Topology, then navigate to the menu **Manage \> Server Settings \> AWS Settings**.
+    - It creates a DB Security Group.
+    - It adds the internal IP of the EC2 instance to the security group to authorize ingress to RDS.
 
-<img src="assets/images/test_connect.png" alt="test connect" />
+    This is possible because the IAM Role provides the instance with credentials like "rds:CreateDBSecurityGroup" and "redshift:AuthorizeClusterSecurityGroupIngress".
 
-*Figure 4: Test Connection dialog*
+    - If you want to control details of the security group name or specify the IP address manually because you have a complex VPC Topology, then navigate to the menu **Manage \> Server Settings \> AWS Settings**.
 
-1.  Create a Domain:
+    ![test connect](assets/images/test_connect.png)
 
-Jaspersoft's metadata layer is called "Data Domains". Choose **Create \> Domain** from the main menu and follow the wizard to build a domain.
+    *Figure 4: Test Connection dialog*
 
-<img src="assets/images/AWS-Domain.png" alt="AWS Domain" />
+8.  Create a Domain:
 
-*Figure 5: Create \> Domain menu*
+    Jaspersoft's metadata layer is called "Data Domains". Choose **Create \> Domain** from the main menu and follow the wizard to build a domain.
 
-1.  Analyze your data:
+    ![AWS Domain](assets/images/AWS-Domain.png)
 
-Choose **Create \> Ad Hoc View**. Find your newly created domain and use the ad hoc environment to begin analyzing your data.
+    *Figure 5: Create \> Domain menu*
 
-<img src="assets/images/AWS-AdHoicView.png" alt="AWS AdHoicView" />
+9.  Analyze your data:
 
-*Figure 6: Create \> Ad Hoc View menu*
+    Choose **Create \> Ad Hoc View**. Find your newly created domain and use the ad hoc environment to begin analyzing your data.
 
-1.  Next steps:
+    ![AWS AdHoicView](assets/images/AWS-AdHoicView.png)
+
+    *Figure 6: Create \> Ad Hoc View menu*
+
+10. Next steps:
 
 Refer to the [Online Learning Portal](https://www.jaspersoft.com/bi-training-center) for details on creating domains, performing ad hoc analysis, and creating reports.
 
@@ -103,7 +106,7 @@ We recommend launching Jaspersoft BI on an EC2 instance with an associated IAM R
 
 If this option is not available, you can use AWS credentials instead. If you already have AWS Credentials, you can enter the Access Key and Secret Key.
 
-<img src="assets/images/aws_credentials.png" alt="aws credentials" />
+![aws credentials](assets/images/aws_credentials.png)
 
 *Figure 7: Entering AWS credentials*
 
@@ -113,7 +116,7 @@ If this option is not available, you can use AWS credentials instead. If you alr
 
     When using JDBC for data source connections, you are responsible for managing the security groups to allow access from the Jaspersoft server to the data source.
 
-<img src="assets/images/jdbc_datasource.png" alt="jdbc datasource" />
+![jdbc datasource](assets/images/jdbc_datasource.png)
 
 *Figure 8: Using JDBC / JNDI connections*
 

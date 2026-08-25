@@ -93,70 +93,70 @@ The following table describes the properties you can specify in the `ReportExecu
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>reportUnitUri</code></pre></td>
+<td><div class="language-text highlight"><pre><code>reportUnitUri</code></pre></div></td>
 <td><p>Required</p></td>
 <td><p>Repository path (URI) of the report to run. For commercial editions with organizations, the URI is relative the the logged-in user’s organization.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>outputFormat</code></pre></td>
+<td><div class="language-text highlight"><pre><code>outputFormat</code></pre></div></td>
 <td><p>Required</p></td>
 <td><p>Specifies the desired output format: pdf, html, xls, xlsx, rtf, csv, xml, docx, odt, ods, jrprint.</p>
 <p>As of JasperReports® Server 6.0, it is also possible to specify json if your reports are designed for data export. For more information, see the JasperReports® Library samples documentation.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>freshData</code></pre></td>
+<td><div class="language-text highlight"><pre><code>freshData</code></pre></div></td>
 <td><p>false</p></td>
 <td><p>When data snapshots are enabled, specifies whether the report should get fresh data by querying the data source or if false, use a previously saved data snapshot (if any). By default, if a saved data snapshot exists for the report it will be used when running the report.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>saveDataSnapshot</code></pre></td>
+<td><div class="language-text highlight"><pre><code>saveDataSnapshot</code></pre></div></td>
 <td><p>false</p></td>
 <td><p>When data snapshots are enabled, specifies whether the data snapshot for the report should be written or overwritten with the new data from this execution of the report.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>interactive</code></pre></td>
+<td><div class="language-text highlight"><pre><code>interactive</code></pre></div></td>
 <td><p>true</p></td>
 <td><p>In a commercial editions of the server where HighCharts are used in the report, this property determines whether the JavaScript necessary for interaction is generated and returned as an attachment when exporting to HTML. If false, the chart is generated as a non-interactive image file (also as an attachment).</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>allowInlineScripts</code></pre></td>
+<td><div class="language-text highlight"><pre><code>allowInlineScripts</code></pre></div></td>
 <td>true</td>
 <td>Affects HTML export only. If true, then inline scripts are allowed, otherwise no inline script is included in the HTML output.</td>
 </tr>
 <tr>
-<td><pre class="text"><code>ignorePagination</code></pre></td>
+<td><div class="language-text highlight"><pre><code>ignorePagination</code></pre></div></td>
 <td><p>Optional</p></td>
 <td><p>When set to true, the report is generated as a single long page. This can be used with HTML output to avoid pagination. When omitted, the ignorePagination property on the JRXML, if any, is used.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>pages</code></pre></td>
+<td><div class="language-text highlight"><pre><code>pages</code></pre></div></td>
 <td><p>Optional</p></td>
 <td><p>Specify a page range to generate a partial report. The format is &lt;startPageNumber&gt;-&lt;endPageNumber&gt;</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>async</code></pre></td>
+<td><div class="language-text highlight"><pre><code>async</code></pre></div></td>
 <td><p>false</p></td>
 <td><p>Determines whether reportExecution is synchronous or asynchronous. When set to true, the response is sent immediately and the client must poll the report status and later download the result when ready. By default, this property is false and the operation will wait until the report execution is complete, forcing the client to wait as well, but allowing the client to download the report immediately after the response.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>transformerKey</code></pre></td>
+<td><div class="language-text highlight"><pre><code>transformerKey</code></pre></div></td>
 <td><p>Optional</p></td>
 <td><p>Advanced property used when requesting a report as a JasperPrint object. This property can specify a JasperReports Library generic print element transformers of class net.sf.jasperreports.engine.export. GenericElementTransformer. These transformers are pluggable as JasperReports. extensions</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>attachmentsPrefix</code></pre></td>
+<td><div class="language-text highlight"><pre><code>attachmentsPrefix</code></pre></div></td>
 <td><p>attachments</p></td>
 <td><p>For HTML output, this property specifies the URL path to use fo downloading the attachment files (JavaScript and images). The full path of the default value is:</p>
 <p>{contextPath}/rest_v2/reportExecutions/{reportExecutionId}/exports/{exportExecutionId}/attachments/</p>
 <p>You can specify a different URL path using the placeholders {contextPath}, {reportExecutionId} and {exportExecutionId}.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>baseURL</code></pre></td>
+<td><div class="language-text highlight"><pre><code>baseURL</code></pre></div></td>
 <td>String</td>
 <td>Specifies the base URL that the report will use to load static resources such as JavaScript files. You can also set the deploy.base.url property in the WEB-INF/js.config.properties file to set this value permanently. If both are set, the baseUrl parameter in this request takes precedence.</td>
 </tr>
 <tr>
-<td><pre class="text"><code>parameters</code></pre></td>
+<td><div class="language-text highlight"><pre><code>parameters</code></pre></div></td>
 <td></td>
 <td><p>A list of input control parameters and their values.</p></td>
 </tr>

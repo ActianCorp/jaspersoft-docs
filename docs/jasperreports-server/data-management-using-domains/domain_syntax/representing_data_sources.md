@@ -32,7 +32,7 @@ For Topics, use jrQueryDataset. There can only be one `jrQueryDataset` or `jdbcD
 
 The following hierarchy is used to represent JDBC data sources and their database schemas. This hierarchy is under the `schema` element.
 
-```
+``` xml
   <dataSources> (1)
     <jdbcDataSource> (1)
       <schemaMap> (1...n)
@@ -120,7 +120,7 @@ The following example shows a declaration of a data source and two schemas. Note
 
     Note that in the `key` attribute, an underscore (\_) has been substituted for unsupported characters. Periods (.) are not supported in schema key attributes; numbers are supported, but not in the first character.
 
-```
+``` xml
   <dataSources>
     <jdbcDataSource id="myDataSource">
       <schemaMap>
@@ -137,7 +137,7 @@ The following example shows a declaration of a data source and two schemas. Note
 
 The following example shows a file that uses an attribute for the database schema name, and sets a default schema name to use when the attribute is null.
 
-```
+``` xml
   <dataSources>
     <jdbcDataSource id="dsFoodMart">
       <schemaMap>
@@ -166,7 +166,7 @@ The `jrQueryDataset` element declares the data source for a Topic. `jrQueryDatas
 
 The following hierarchy is used to represent JDBC data sources and their database schemas. This hierarchy is under the `schema` element.
 
-```
+``` xml
   <dataSources> (1)
     <jrQueryDataset> (1)
 ```

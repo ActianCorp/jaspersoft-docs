@@ -35,12 +35,14 @@ Ad Hoc views use cached data for better performance, so the recommendation is to
 We have two levels of data for the completed scheduled reports:
 
 - Level 1:
+
   - Successful Reports Ad Hoc View: Table showing successful scheduled report executions with data like Job ID, Schedule ID, Execution ID, User, Start Time, End Time, Run Time, and more.
   - Failed Reports Ad Hoc View: Table showing failed scheduled report executions with data like Job ID, Schedule ID, Execution ID, User, Start Time, End Time, Run Time, Execution Error Category, Error Messages, and more.
 
 You can add scheduled report executions to a dashboard to view the latest data every time the dashboard runs.
 
 - Level 2:
+
   - Output Formats Ad Hoc View: Lists the output formats of a specific scheduled report execution.
   - Query Details Ad Hoc View: Lists the query details of a specific scheduled report execution.
 
@@ -78,19 +80,24 @@ To view the real-time Ad Hoc View data using reports
 To view the real-time Ad Hoc View data using dashboards
 
 1.  Create a dashboard.
+
 2.  Add Successful Reports Ad Hoc View/Failed Reports Ad Hoc View to the dashboard.
+
 3.  Add Output Formats Ad Hoc View and Query Details Ad Hoc View to the dashboard.
+
 4.  For the Successful Reports Ad Hoc View/Failed Reports Ad Hoc View dashlet, in the Dashlet Settings, turn **Enable hyperlinks** on.
+
 5.  In the **Dashlet Settings**, click **Map Parameters** to open the **Parameter Mapping** dialog box. Map the **Execution ID** parameter of Successful Reports Ad Hoc View/Failed Reports Ad Hoc View dashlet with Output Formats Ad Hoc View and Query Details Ad Hoc View dashlets. For the Filter/Parameter Affected field, select **Schedule ID** for both the dashlets.
 
-![js Successful Reports Ad Hoc View parameter mapping](../assets/images/js-Successful-Reports-Ad-Hoc-View-parameter-mapping.png)
+    ![js Successful Reports Ad Hoc View parameter mapping](../assets/images/js-Successful-Reports-Ad-Hoc-View-parameter-mapping.png)
 
-*Figure 3: Parameter Mapping Dialog Box*
+    *Figure 3: Parameter Mapping Dialog Box*
 
-For more information on parameter mapping, see the JasperReports Server User Guide.
+    For more information on parameter mapping, see the JasperReports Server User Guide.
 
 6.  For all dashlets, in **Dashlet Settings**, enable **Auto-refresh**.<br>
     Successful Reports Ad Hoc View/Failed Reports Ad Hoc View Dashlet shows the updated data.
+
 7.  Click on the Execution ID of any scheduled report in the Successful Reports Ad Hoc View/Failed Reports Ad Hoc View dashlet, to view updated data of that report in the Query Details Ad Hoc View and Output Formats Ad Hoc View dashlets.
 
 ![js Successful Scheduled Reports Dashboard](../assets/images/js-Successful-Scheduled-Reports-Dashboard.png)

@@ -47,7 +47,9 @@ To navigate the published report
 To export the report
 
 1.  To view and save the report in other formats, click the **Export** button.
+
 2.  Select an export format from the drop-down. The export options are listed in Table 3‑6.
+
     <table>
     <caption><p>Export File Types</p></caption>
     <colgroup>
@@ -109,6 +111,7 @@ To export the report
     </tr>
     </tbody>
     </table>
+
 3.  Save the report in the export file format, for example PDF, or open the report in the application.<br>
     If you click the close![js Close icon](../assets/images/js-Close-icon.png) while export process is running, you are prompted to confirm if you want to stop the export process.
 

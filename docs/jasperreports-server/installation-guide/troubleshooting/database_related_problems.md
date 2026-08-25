@@ -97,7 +97,7 @@ Run the `sqlcmd` and try logging into MSSQL Server directly. For example:
 
 If you are using the SQL Server driver and have configured default_master.properties as described in [SQL Server Example](../additional/jdbc-driver.md), you'll see connection errors if you uncommented the following line:
 
-```
+``` bash
 # admin.jdbcUrl=jdbc:sqlserver://${dbHostOrInstance};SelectMethod=cursor
 ```
 
@@ -107,7 +107,7 @@ Make sure that this line is commented.
 
 Microsoft SQL Server does not support standalone case-sensitive collation. When collation is case-sensitive SQL Server also treats column and table names as case-sensitive. This can happen when setting a locale that includes case‑sensitive collation. In this case you may see an error such as the following.
 
-```
+``` text
 [sql] Failed to execute:
 INSERT INTO JIUserRole (userId,roleId) select u.id, r.id
 from JIUser u, JIRole r
@@ -142,7 +142,7 @@ After changing this value, restart the MySQL server. Then perform the upgrade or
 
 If you are using the MariaDB JDBC driver to connect to the MySQL database and get an error such as the following:
 
-```
+``` text
 Could not send query:
 Connection reset by peer: socket write error
 ```
@@ -167,7 +167,7 @@ If the Quartz settings in the PostgreSQL database are not updated to specify the
 
 The errors look like this:
 
-```
+``` text
 Error while fetching Quartz runtime information
 org.quartz.JobPersistenceException: Couldn't obtain triggers: Bad value for type int
 org.postgresql.util.PSQLException: Bad value for type int
@@ -211,7 +211,7 @@ When you are using an Oracle service name, make sure that you do not set the SID
 
 If you run a scheduled report and save it as HTML or RTF, the resulting report may be quite large. If you are running MySQL and get the error shown here, the problem may be the default size of the MySQL blob datatype.
 
-```
+``` text
 JDBC exception on Hibernate data access
 org.hibernate.exception.GenericJDBCException: could not insert
 ```
@@ -242,7 +242,7 @@ One common problem with an individual report is the data source. To validate a d
 
 When the DB2 database is your repository database, you may get errors when saving longer strings (over 50 characters) to data entry fields in the UI. For example, saving a resource with a name over 50 characters may cause an error like this:
 
-```
+``` text
 Expected status code is 200, but was 400. Response body contained:
 An unexpected exception has occurred
 ```
@@ -253,7 +253,7 @@ The problem here is that DB2 handles UTF-8 characters differently than other Jas
 
 When using the DB2 driver, you need to add properties manually todefault_master.properties, or you get an error like the following.
 
-```
+``` text
 [java] Resource name: applicationContext-virtual-data-source.xml
      [java] org.springframework.beans.factory.BeanDefinitionStoreException:
 Invalid bean definition with name 'dataSource' defined in file
@@ -263,7 +263,7 @@ Could not resolve placeholder 'dbPort' in string value
 
 Add the following properties to your `default_master.properties`, setting the correct values for your installation:
 
-```
+``` properties
 db2.driverType=4
 db2.fullyMaterializeLobData=true
 db2.fullyMaterializeInputStreams=true
@@ -279,7 +279,7 @@ foodmart.dbName=FOODMART
 
 If you are using WebLogic or WebSphere and want to run import/export from the command line, you need to manually copy the JDBC driver to the same location as the import/export scripts. If you have not copied these files, you may encounter the following error:
 
-```
+``` text
 Cannot load JDBC driver class <database class>
 ```
 

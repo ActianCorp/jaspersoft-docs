@@ -15,7 +15,7 @@ To call `getSubTenantList`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String tenantId = &quot;organization_1&quot;;</code></pre></td>
+<td><div class="language-text highlight"><pre><code>String tenantId = &quot;organization_1&quot;;</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -28,14 +28,14 @@ The return is:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String getTenantId()
+<td><div class="language-text highlight"><pre><code>String getTenantId()
 String getTenantName()
 String getTenantAlias()
 String getTenantDesc()
 String getTenantNote()
 String getTenantUri()
 String getTenantFolderUri()
-String getParentId()</code></pre></td>
+String getParentId()</code></pre></div></td>
 </tr>
 </tbody>
 </table>

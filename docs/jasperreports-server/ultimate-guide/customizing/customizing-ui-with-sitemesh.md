@@ -25,7 +25,7 @@ Essentially, the XML files specify how UI pages should be generated, and the JSP
 
 The `<js-webapp>/WEB-INF/web.xml` configuration file contains the configuration information that enables SiteMesh. You can see that SiteMesh’s `PageFilter` class is applied to all targeted URLs (that is, `<url-pattern>/*</url-pattern>`):
 
-```
+``` xml
 <filter>
   <filter-name>sitemesh</filter-name>
   <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
@@ -42,7 +42,7 @@ The `<js-webapp>/WEB-INF/web.xml` configuration file contains the configuration 
 
 The SiteMesh page filter assumes that the `<js-webapp>/WEB-INF/sitemesh.xml` file specifies further configurations. You can see that the main decorator’s definition points to `decorators.xm`l. You'll also see the SiteMesh mapping that handles the default locale (U.S. English):
 
-```
+``` xml
 <property name="decorators-file" value="/WEB-INF/decorators.xml"/>
 <!-- Mapper for localization -->
 <mapper class="com.opensymphony.module.sitemesh.mapper.LanguageDecoratorMapper">
@@ -53,7 +53,7 @@ The SiteMesh page filter assumes that the `<js-webapp>/WEB-INF/sitemesh.xml` fil
 
 Next, look at the `<js-webapp>/WEB-INF/decorators.xml` file. First it defines URL patterns that SiteMesh should skip. Then it defines the main decorator JSP page that is used by JasperReports Server:
 
-```
+``` xml
 <excludes>
   <pattern>*adhoc/crosstab*</pattern>
   <pattern>*adhoc/table*</pattern>
@@ -81,7 +81,7 @@ In particular, `decorator.jsp` specifies all the display elements that appear as
 
 In `decorator.jsp`, you can see the structure of every JasperReports Server HTML page, with the main frame, the banner, the body content, and the footer:
 
-```
+``` html
 <html>
 <head>
 <title>Jaspersoft: <decorator:title /></title>
@@ -132,44 +132,46 @@ Now that you know how `decorator.jsp` defines the main page of the server UI, yo
 To edit the page title
 
 1.  Edit the file `<js-webapp>/WEB-INF/decorators/decorator.jsp`.
+
 2.  Change the title text, for example:
 
-```
-<html>
-  <head>
-    <title>My Company: <decorator:title /></title>
-    ...
-    <decorator:head />
-  </head>
-  ...
-```
+    ``` html
+    <html>
+      <head>
+        <title>My Company: <decorator:title /></title>
+        ...
+        <decorator:head />
+      </head>
+      ...
+    ```
 
-1.  After saving your changes to the JSP file, restart your application server or reload the JasperReports Server web app.
+3.  After saving your changes to the JSP file, restart your application server or reload the JasperReports Server web app.
 
 To change the footer text
 
 1.  Edit the file `<js-webapp>/WEB-INF/decorators/decorator.jsp`.
+
 2.  Change the footer text, for example to comment out the about and copyright lines:
 
-```
-...
-<div id="frameFooter">
-<!-- <p id="about">
-  <a href="#"><spring:message code="decorator.aboutLink"/></a>
-  <c:if test="${isDevelopmentEnvironmentType}">
-    <span id="license">
-      (<spring:message code="LIC_023_license.envtype.development.label"/>)
-    </span>
-  </c:if>
-  </p>
-  <p  id="copyright"><spring:message code="decorators.main.copyright"/></p>
--->
-</div>
+    ``` text
+    ...
+    <div id="frameFooter">
+    <!-- <p id="about">
+      <a href="#"><spring:message code="decorator.aboutLink"/></a>
+      <c:if test="${isDevelopmentEnvironmentType}">
+        <span id="license">
+          (<spring:message code="LIC_023_license.envtype.development.label"/>)
+        </span>
+      </c:if>
+      </p>
+      <p  id="copyright"><spring:message code="decorators.main.copyright"/></p>
+    -->
+    </div>
 
-...
-```
+    ...
+    ```
 
-1.  After saving your changes to the JSP file, restart your application server or reload the JasperReports Server web app.
+3.  After saving your changes to the JSP file, restart your application server or reload the JasperReports Server web app.
 
 !!! warning
 

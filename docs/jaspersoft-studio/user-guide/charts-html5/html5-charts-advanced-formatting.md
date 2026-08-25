@@ -26,12 +26,12 @@ Not all properties are displayed in the **Advanced** view. To set a property tha
 
 1.  Click **Add** in the advanced view of the **Chart Formatting** tab in the **HTML Chart Edit Dialog**.
 
-|  |
-|----|
-| ![jss html5 charts add user property](../assets/images/jss-html5-charts-add-user-property.png) |
-| *Figure 2: Chart Property dialog* |
+    |  |
+    |----|
+    | ![jss html5 charts add user property](../assets/images/jss-html5-charts-add-user-property.png) |
+    | *Figure 2: Chart Property dialog* |
 
-1.  Enter the following values:
+2.  Enter the following values:
 
 - **Name**: The name of the property you want to set.
 - **Use an expression**: Enable this flag to enter an expression for the property value.
@@ -57,12 +57,9 @@ Stops property
 This setting requires an array of arrays and is expressed through the nested use of `java.util.Arrays`.
 
 - **Use an expression**: true
-
-<!-- -->
-
 - **Property value**:
 
-```
+``` text
 java.util.Arrays.asList
  (
      java.util.Arrays.asList(0, "#b5bdc8"),

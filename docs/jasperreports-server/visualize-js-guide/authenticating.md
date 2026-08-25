@@ -24,7 +24,7 @@ This chapter contains the following sections:
 
 The properties argument to the visualize function has all the fields for specifying various authentication methods.
 
-```
+``` json
 {
     "allOf": [
         {
@@ -89,7 +89,7 @@ The properties argument to the visualize function has all the fields for specify
 
 The Authentication module has functions for logging in and logging out.
 
-```
+``` javascript
 define(function () {
     /**
      * @param {Object} properties - authentication properties
@@ -133,7 +133,7 @@ There are several ways to set the user credentials, based on your environment.
 
 Use the methods of the Authentication module to set the credentials and perform login and logout operations.
 
-```
+``` javascript
 var authentication = new Authentication({
     name:"JoeUser",
     password:"supersecret",
@@ -148,7 +148,7 @@ authentication.logout();
 
 Alternatively, you can specify the username, password, organization (if required), and optional parameters in the `auth` property of the visualize object itself.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "JoeUser",
@@ -167,7 +167,7 @@ visualize({
 
 If you have single-sign-on (SSO) implemented and have configured JasperReports Server to use it, you can specify the SSO token in the Authentication module or Visualize.js. This example shows a token from a Central Authentication Service (CAS) server.
 
-```
+``` javascript
 var authentication = new Authentication({
 token: "ST-40-CZeUUnGPxEqgScNbxh9l-sso-cas.prod.jaspersoft.com",
 });
@@ -176,7 +176,7 @@ authentication.run();
 
 Or:
 
-```
+``` javascript
 visualize({
     auth : { token : "ST-40-CZeUUnGPxEqgScNbxh9l-sso-cas.prod.jaspersoft.com"}
 }, function (v){
@@ -189,7 +189,7 @@ visualize({
 
 Some SSO implementations require encoding, additional parameters, or both. For example, if your server is configured for pre-authentication, you could use the following example to authenticate from Visualize.js. Note that the encoded fields depend on the specifics of your pre-authentication configuration:
 
-```
+``` javascript
 var t = encodeURIComponent("u=John|r=Ext_User|o=organization_1|pa1=USA|pa2=1");
 visualize({
     auth: {
@@ -204,7 +204,7 @@ visualize({
 
 If you have configured token-based pre-authentication with WebLogic Server, there is one additional setting needed for authentication to work properly with Visualize.js. Edit the file `applicationContext-externalAuth-preAuth-mt.xml` in the JasperReports Server web app, and remove the comments (`<!-- -->`) on the following line:
 
-```
+``` text
 <!-- <property name="welcomePage" value="/index.htm"/> -->
 ```
 
@@ -212,7 +212,7 @@ If you have configured token-based pre-authentication with WebLogic Server, ther
 
 To log out and destroy the current user session, call the logout function and optionally specify any action to take when done.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -240,7 +240,7 @@ The functions you define for login and logout must return a deferred object and 
 - `properties`: An object that contains all the required authentication properties.
 - `request`: A request function your function can use to perform authentication from a website.
 
-```
+``` javascript
 var authentication = new Authentication({
     name:"JoeUser",
     password:"supersecret",
@@ -258,7 +258,7 @@ authentication.logout();
 
 Or:
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -289,7 +289,7 @@ visualize({
 
 You can define IDs (`#name`) with listeners that perform login and logout functions. In your HTML, you can then assign these IDs to the appropriate buttons or links.
 
-```
+``` javascript
 visualize(
     function(v){
         $("#selected_resource").change(function () {
@@ -338,7 +338,7 @@ function getAuthData(){
 
 The code is slightly different if you have a login/logout UI and use SSO tokens. Note that the logout uses the `.always` event instead of `.done`.
 
-```
+``` javascript
 visualize(
     function(v){
         $("#selected_resource").change(function () {
@@ -382,7 +382,7 @@ function getAuthData(){
 
 Use the `visualize.config` function to define and store authentication credentials. It uses the same `auth` structure as the `visualize` function. You can then create several containers with separate calls to `visualize`, using the common credentials.
 
-```
+``` javascript
 visualize.config({
     auth: {
         name: "jasperadmin",
@@ -416,7 +416,7 @@ Internally, Visualize.js uses the REST API to authenticate and interact with the
 
 If your visualize.js solution includes other browser windows or other authenticated REST calls, then you can simplify your visualize.js and remove the authentication:
 
-```
+``` javascript
 // This assumes that authentification was made somehow prior
 visualize(function (v) {
 

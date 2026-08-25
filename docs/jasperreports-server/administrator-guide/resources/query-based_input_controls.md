@@ -12,12 +12,14 @@ Query-based input controls display a dynamic set of values for the user to choos
 In this first example, we create a query-based input control that returns a list of all cities the user can choose from.
 
 1.  Log in as an administrator.
+
 2.  Browse the repository and select the folder for the query-based input control.
+
 3.  Right click the folder's name and select **Add Resource \> Input Control**. The **Add Input Control** dialog appears.
 
-![js AddInputControl Create](../assets/images/js-AddInputControl-Create.png)
+    ![js AddInputControl Create](../assets/images/js-AddInputControl-Create.png)
 
-*Figure 1: Adding an Input Control - Naming*
+    *Figure 1: Adding an Input Control - Naming*
 
 4.  Select the type of query-based input control from the type drop-down list. This determines how the input control appears to users, either as a drop-down list, a set of radio buttons, a multi-select list, or a set of check boxes. In this example, we choose a single-select query-based input control type.
 
@@ -226,7 +228,7 @@ For reports that use a Domain as the data source, a query-based input control mu
 
 Domain queries have their own special syntax, the same one that's used in the Domain design. A Domain-based query references fields, called items, by their item IDs, along with any set IDs that determine the path of the item within the Domain. For example, if you want your query input control to return a list of store cities, where the field with ID `ej_store_store_city` is nested in the set with ID `expense_join_store`, you would use the following Domain query:
 
-```
+``` xml
 <query>
   <queryFields>
     <queryField id="expense_join_store.ej_store_store_city" />
@@ -238,7 +240,7 @@ The list contained inside the `<queryFields>` tag in a Domain query is equivalen
 
 Sometimes, you may want the input control to display more information than the actual value returned. As with standard query-based input controls, you can select more fields, and then display those fields in your input control. For example, to make the list of cities unambiguous, you could include the state and country in your display. In that case, the Domain-based query must also retrieve those items:
 
-```
+``` xml
 <query>
   <queryFields>
     <queryField id="expense_join_store.ej_store_store_city" />
@@ -250,7 +252,7 @@ Sometimes, you may want the input control to display more information than the a
 
 Then, when specifying your visible query columns, as shown in [Query for the Country Input Control](cascading_input_controls.md), you would add the 3 fields to the list in the order you want them to appear. When specifying fields in the list of visible query columns, use the full ID of the field, including any set IDs. For example, the following list of fields:
 
-```
+``` text
 expense_join_store.ej_store_store_countryexpense_join_store.ej_store_store_stateexpense_join_store.ej_store_store_city
 ```
 
@@ -266,7 +268,7 @@ USA \| WA \| Redmond
 
 The Domain-based query also has the option to filter the query results, as shown in the following example:
 
-```
+``` xml
 <query>
   <queryFields>
     <queryField id="expense_join_store.ej_store_store_city" />
@@ -283,7 +285,7 @@ The `<queryFilterString>` tag contains a DomEL (Domain Expression Language) expr
 
 The filter string of the Domain-based query may also reference hierarchical attributes. In the following example, the query will return the products with the brand name matching the value of the `brand` attribute:
 
-```
+``` xml
 <query>
   <queryFields>
     <queryField id="sales_fact_ALL.sales__product.sales__product__brand_name"/>
@@ -295,7 +297,7 @@ The filter string of the Domain-based query may also reference hierarchical attr
 
 Finally, you can specify sort columns to arrange your query results using the `sortList` element, as shown in this example:
 
-```
+``` xml
 <queryFields>
   <queryField id="ShipRegion" />
     <queryField id="RequiredDate" />
@@ -322,7 +324,7 @@ The **JasperQL** is a JSON-based Query Language for defining a query to access d
 
 JasperQL Query Language supports advanced features such as aggregation, filtering, aliasing, and DomEL function to create calculated fields. In the following example, the JasperQL input query will return a table with two fields **store_sales_98** and **product_name**. You can use `distinctFields` to eliminate the duplicate information. Also, you can filter the information you want to display, rearrange the information in a group using `groupBy`, sort the records using `orderBy`.
 
-```
+``` json
 {
   "select" : {
     "fields" : [ {

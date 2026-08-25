@@ -55,7 +55,7 @@ Only the authorized user who sends the alert details in the request becomes the 
 
 The following is an example of the request body for creating an alert in JSON:
 
-```
+``` json
 {
     "label": "Alert PM Excel TestNew4",
     "trigger": {
@@ -136,7 +136,7 @@ The following is an example of the request body for creating an alert in JSON:
 
 The following is an example of the response body for creating an alert in JSON:
 
-```
+``` json
 {
     "id": 2582,
     "version": 0,
@@ -273,7 +273,7 @@ Contrary to REST conventions, the alert service uses the PUT method to create an
 
 The following is an example of the request body for updating an alert in JSON:
 
-```
+``` json
 {
     "id": null,
     "version": null,
@@ -371,7 +371,7 @@ The following is an example of the request body for updating an alert in JSON:
 
 The following is an example of the response body for updating an alert in JSON:
 
-```
+``` text
 {
     “alertsId”: [
         4263

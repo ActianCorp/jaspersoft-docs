@@ -22,30 +22,31 @@ To add a new locale
 
 1.  Edit the `applicationContext-security.xml` file and locate the bean named `userLocalesList`. For example:
 
-```
-<bean id="userLocalesList"
-        class="com.jaspersoft.jasperserver.war.common.LocalesListImpl">
-    <property name="locales">
-        <list>
-            <value type="java.util.Locale">en</value>
-            <value type="java.util.Locale">fr</value>
-            <value type="java.util.Locale">it</value>
-            <value type="java.util.Locale">de</value>
-            <value type="java.util.Locale">ro</value>
-            <value type="java.util.Locale">ja</value>
-            <value type="java.util.Locale">zh_TW</value>
-        </list>
-    </property>
-</bean>
-```
+    ``` xml
+    <bean id="userLocalesList"
+            class="com.jaspersoft.jasperserver.war.common.LocalesListImpl">
+        <property name="locales">
+            <list>
+                <value type="java.util.Locale">en</value>
+                <value type="java.util.Locale">fr</value>
+                <value type="java.util.Locale">it</value>
+                <value type="java.util.Locale">de</value>
+                <value type="java.util.Locale">ro</value>
+                <value type="java.util.Locale">ja</value>
+                <value type="java.util.Locale">zh_TW</value>
+            </list>
+        </property>
+    </bean>
+    ```
 
 2.  Add the new locale to the end of the list. For example, add the following line for Dutch (Java's nl_NL locale):
 
-```
-            <value type="java.util.Locale">nl_NL/value>
-```
+    ``` xml
+                <value type="java.util.Locale">nl_NL/value>
+    ```
 
 3.  Save the file.
+
 4.  Restart JasperReports Server, and log into the web application to test your translation. Reviewing the translated strings in context can help you improve your word choices.
 
 For a list of Java-compliant locales, please refer to the Java documentation.
@@ -58,30 +59,31 @@ To add a time zone
 
 1.  Open the `applicationContext.xml` file and locate the `userTimeZonesList` bean. For example:
 
-```
-<bean id="userTimeZonesList"
-        class="com.jaspersoft.jasperserver.war.common.JdkTimeZonesList">
-    <property name="timeZonesIds">
-        <list>
-            <value>America/Los_Angeles</value>
-            <value>America/Denver</value>
-            <value>America/Chicago</value>
-            <value>America/New_York</value>
-            <value>Europe/London</value>
-            <value>Europe/Berlin</value>
-            <value>Europe/Bucharest</value>
-        </list>
-    </property>
-</bean>
-```
+    ``` xml
+    <bean id="userTimeZonesList"
+            class="com.jaspersoft.jasperserver.war.common.JdkTimeZonesList">
+        <property name="timeZonesIds">
+            <list>
+                <value>America/Los_Angeles</value>
+                <value>America/Denver</value>
+                <value>America/Chicago</value>
+                <value>America/New_York</value>
+                <value>Europe/London</value>
+                <value>Europe/Berlin</value>
+                <value>Europe/Bucharest</value>
+            </list>
+        </property>
+    </bean>
+    ```
 
 2.  Add the new time zone to the bottom of the list. Specify each time zone as the standard Java time zone values so that JasperReports Server adjusts for daylight savings time when appropriate. For example, add the following line for Tokyo:
 
-```
-<value>Asia/Tokyo</value>
-```
+    ``` xml
+    <value>Asia/Tokyo</value>
+    ```
 
 3.  Save the file.
+
 4.  Restart JasperReports Server.
 
 For more information about Java-complaint time zones, please refer to the Java documentation.

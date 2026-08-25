@@ -7,11 +7,11 @@ description: "1. To log in, go to this URL:"
 
 1.  To log in, go to this URL:
 
-`http://<hostname>:7001/jasperserver-pro`
+    `http://<hostname>:7001/jasperserver-pro`
 
-Where `<hostname>` can be localhost, a machine name, or an IP address. The login page appears when the necessary JSP files are compiled.
+    Where `<hostname>` can be localhost, a machine name, or an IP address. The login page appears when the necessary JSP files are compiled.
 
-1.  Enter the following credentials:
+2.  Enter the following credentials:
 
 | User ID       | Password      | Description                                |
 |---------------|---------------|--------------------------------------------|

@@ -17,32 +17,33 @@ Create a report
 
 1.  Go to **File \> New \> Jasper Report** or click ![jss icon new report](assets/images/jss-icon-new-report.png) on the main toolbar.
 
-The **New Report Wizard** window displays the **Report Templates** page.
+    The **New Report Wizard** window displays the **Report Templates** page.
 
-1.  Select the Coffee Landscape template and click **Next**.
+2.  Select the Coffee Landscape template and click **Next**.
 
-The **New Report Wizard** displays the **Report file** page.
+    The **New Report Wizard** displays the **Report file** page.
 
-1.  Navigate to the folder that you want the report in and name the report, then click **Next**.
+3.  Navigate to the folder that you want the report in and name the report, then click **Next**.
 
-The **New Report Wizard** displays the **Data Source** page.
+    The **New Report Wizard** displays the **Data Source** page.
 
-1.  Choose **Sample DB - Database JDBC Connection**.
-2.  Enter the query `SELECT * FROM ORDERS` and click **Next**.
+4.  Choose **Sample DB - Database JDBC Connection**.
 
-The **Fields** window is displayed.
+5.  Enter the query `SELECT * FROM ORDERS` and click **Next**.
 
-1.  Select the following fields and click the right arrow to add them to your report.
+    The **Fields** window is displayed.
 
-- ORDERID
-- EMPLOYEEID
-- SHIPNAME
-- SHIPADDRESS
-- SHIPCITY
-- SHIPREGION
-- SHIPCOUNTRY
+6.  Select the following fields and click the right arrow to add them to your report.
 
-1.  Click **Finish**.
+    - ORDERID
+    - EMPLOYEEID
+    - SHIPNAME
+    - SHIPADDRESS
+    - SHIPCITY
+    - SHIPREGION
+    - SHIPCOUNTRY
+
+7.  Click **Finish**.
 
 Jaspersoft Studio builds the report layout with the selected fields.
 
@@ -50,9 +51,9 @@ Enable spreadsheet layout
 
 1.  Right-click on any column heading and select **Arrange in Container \> Spreadsheet Layout** from the context menu.
 
-All elements in the band display a **COL** annotation at the right of the element.
+    All elements in the band display a **COL** annotation at the right of the element.
 
-1.  Right-click on any field and select **Arrange in Container \> Spreadsheet Layout** from the context menu again.
+2.  Right-click on any field and select **Arrange in Container \> Spreadsheet Layout** from the context menu again.
 
 Again, all elements in the band display the **COL** annotation. Spreadsheet layout is now enabled.
 

@@ -11,7 +11,7 @@ The buildomatic scripts depend on both Java and Apache Ant. Two common configura
 
 If you have the Java JRE (Java Runtime Environment) instead of the JDK, you will not have all the required utilities. In particular, you may see an error referring to the tools.jar, as in the following message:
 
-```
+``` text
 [exec] [ERROR] BUILD FAILURE
 [exec] [INFO] ----------------------------------------------------
 [exec] [INFO] Compilation failure
@@ -29,7 +29,7 @@ The solution is to download and install the Sun Java JDK, labeled as the Java SE
 
 If you are using your own version of Ant and your Ant instance does not have the ant-contrib.jar in the lib directory, you will get an error similar to the following:
 
-```
+``` text
 BUILD FAILED
 c:\js-builds\jasperserver\buildomatic\install.xml:6:
 ```
@@ -48,7 +48,7 @@ We recommend Apache Ant version 1.10. The earliest compatible version is Ant 1.9
 
 Older versions of Ant cause an error similar to the following:
 
-```
+``` text
 BUILD FAILED
 c:\js-builds\jasperserver\buildomatic\install.xml:37:
 Problem: failed to create task or type componentdef

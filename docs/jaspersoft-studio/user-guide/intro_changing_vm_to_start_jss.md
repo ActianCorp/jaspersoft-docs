@@ -19,27 +19,27 @@ To change the JVM
 
 3.  Navigate to the `Execution Environments` page.
 
-As Jaspersoft Studio is run using a JRE, an error is displayed and the page is not opened.
+    As Jaspersoft Studio is run using a JRE, an error is displayed and the page is not opened.
 
-Hence, for proper Java development you must use a Java Development Kit (JDK). To start the application, use a required version of JDK. As far as possible, the JDK version must be in sync with the JRE bundled.
+    Hence, for proper Java development you must use a Java Development Kit (JDK). To start the application, use a required version of JDK. As far as possible, the JDK version must be in sync with the JRE bundled.
 
-For example, for Jaspersoft Studio Professional 8.2.0 that contains Adoptium Temurin OpenJDK 11.0.18, download the latest available JDK 11 LTS from the [Adoptium website](https://adoptium.net/download/).
+    For example, for Jaspersoft Studio Professional 8.2.0 that contains Adoptium Temurin OpenJDK 11.0.18, download the latest available JDK 11 LTS from the [Adoptium website](https://adoptium.net/download/).
 
-After selecting the proper version (that is Windows x64), you can compress the files to a directory of your choice of the package (.zip or .tar.gz).
+    After selecting the proper version (that is Windows x64), you can compress the files to a directory of your choice of the package (.zip or .tar.gz).
 
 4.  Edit the `.ini` file to modify the configuration for the `-vm` flag.
 
-For example, for Windows, change
+    For example, for Windows, change
 
-`-vm`
+    `-vm`
 
-`features/jre.win32.win32.x86_64.feature_11.0.18/adoptopenjdk_jre/bin`
+    `features/jre.win32.win32.x86_64.feature_11.0.18/adoptopenjdk_jre/bin`
 
-to:
+    to:
 
-`-vm`
+    `-vm`
 
-`C:/jdk-11.0.21+9/bin`
+    `C:/jdk-11.0.21+9/bin`
 
 5.  View the correct preference pages.
 

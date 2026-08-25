@@ -23,7 +23,7 @@ The `deploy-webapp-``pro`` ` target performs the following actions in your appli
 
 Ant can be run with a -v (verbose) or a -d (debug) option to help with troubleshooting, for example:
 
-```
+``` bash
 js-ant -v build-pro
 ```
 

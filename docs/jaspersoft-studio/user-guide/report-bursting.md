@@ -36,83 +36,92 @@ The following example shows how to burst a report and send data of a country rel
 To burst a report
 
 1.  Create a CSV file with two columns Country and Email, and create a data adapter that points to this CSV file.
+
 2.  Create a report containing two fields country `$F(Country)` and Email address of recipient `$F(Email)`. This report is a bursting report used for bursting operation.
+
 3.  A bursting scriptlet is required for the bursting report. To create a scriptlet, in the **Outline** view, right-click the **Scriptlets**, and select **Create Bursting Scriptlet**. It creates a bursting scriptlet.
+
     |                                                           |
     |-----------------------------------------------------------|
     | ![create scriptlet](assets/images/create%20scriptlet.PNG) |
     | *Figure 1: Creating a Scriptlet*                          |
+
 4.  To edit the properties of the bursting scriptlet, right-click the bursting scriptlet and select **Edit Bursting Properties**. Bursting scriptlet edit dialog appears.
+
     |                                                       |
     |-------------------------------------------------------|
     | ![edit scriptlet](assets/images/edit%20scriptlet.PNG) |
     | *Figure 2: Editing a Scriptlet*                       |
+
 5.  On the **Parameters** tab, click **Add** to add the parameter. Report Bursting Parameter dialog appears. Enter the Parameter name and Parameter value that you want to pass to the burst reports. For example:<br>
     **Parameter name**: ShipCountry_1<br>
     **Parameter value**: \$F{Country}
 
-|                                                               |
-|---------------------------------------------------------------|
-| ![bursting parameter](assets/images/bursting%20parameter.PNG) |
-| *Figure 3: Parameter and its Value*                           |
+    |                                                               |
+    |---------------------------------------------------------------|
+    | ![bursting parameter](assets/images/bursting%20parameter.PNG) |
+    | *Figure 3: Parameter and its Value*                           |
 
-1.  On the **Options Configuration** tab, select the **Essential Options** from the left panel and set the following fields:<br>
+6.  On the **Options Configuration** tab, select the **Essential Options** from the left panel and set the following fields:<br>
     **Server profile**: select the server connection from the dropdown for the bursting report. For example, JasperReports Server Pro.<br>
     **Enabled**: true<br>
     **Job Label**: Sales By Country<br>
     **Report URI**: browse the repository and select the report you want to burst.
 
-!!! note
+    !!! note
 
-    The path to the burst report in a bursting report is interpreted as relative to the user that runs the report. So if the burst report is part of an organization, you cannot have a bursting report that works for both superuser and users from that organization (jasperadmin and joeuser). superuser needs the absolute path and users from the organization needs a relative path. It is recommended to run bursting reports that belong to the same organization as the user.
+        The path to the burst report in a bursting report is interpreted as relative to the user that runs the report. So if the burst report is part of an organization, you cannot have a bursting report that works for both superuser and users from that organization (jasperadmin and joeuser). superuser needs the absolute path and users from the organization needs a relative path. It is recommended to run bursting reports that belong to the same organization as the user.
 
-<br>
+    <br>
 
-**Server data adapter**: `JasperReportsServerDataAdapater.jrdax`. This data adapter makes the connection to the JasperReports Server and lets you publish the reports to the server.
+    **Server data adapter**: `JasperReportsServerDataAdapater.jrdax`. This data adapter makes the connection to the JasperReports Server and lets you publish the reports to the server.
 
-|  |
-|----|
-| ![bursting essential opts](assets/images/bursting%20essential%20opts.png) |
-| *Figure 4: Adding Essential Options* |
+    |  |
+    |----|
+    | ![bursting essential opts](assets/images/bursting%20essential%20opts.png) |
+    | *Figure 4: Adding Essential Options* |
 
-1.  Select Output File Options and set the following options:<br>
+7.  Select Output File Options and set the following options:<br>
     **File name**: “Sales-” + \$F{Country}<br>
     **Formats**: select the output format for the burst report, for example, PDF or Excel.<br>
     **Sequential File Names by Timestamp**: true<br>
     **Repository Folder URI**: specify the location for the report exports to be generated in the repository, for example, /public/bursting/output. You can choose the output folder using the JasperReports Server picker (browse icon) or the expression editor. Before selecting the output folder, ensure that the output folder exists in the JasperReports Server repository.
 
-|                                                                     |
-|---------------------------------------------------------------------|
-| ![bursting output opts](assets/images/bursting%20output%20opts.PNG) |
-| *Figure 5: Adding Output File Options*                              |
+    |                                                                     |
+    |---------------------------------------------------------------------|
+    | ![bursting output opts](assets/images/bursting%20output%20opts.PNG) |
+    | *Figure 5: Adding Output File Options*                              |
 
-1.  Select **Job Run Notifications** and enter the following information:
+8.  Select **Job Run Notifications** and enter the following information:
 
-<!-- -->
+    1.  In the **To** field, enter the email id of the recipients, to do so:
 
-1.  In the **To** field, enter the email id of the recipients, to do so:
-    1.  Click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png) to enter the expression, **Edit property value** dialog appears.
+        1.  Click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png) to enter the expression, **Edit property value** dialog appears.
 
-    2.  Select **Use Expression** and click the expression editor.
+        2.  Select **Use Expression** and click the expression editor.
 
-        |                                                 |
-        |-------------------------------------------------|
-        | ![burst email](assets/images/burst%20email.PNG) |
-        | *Figure 6: Edit Property Value Dialog*          |
+            |                                                 |
+            |-------------------------------------------------|
+            | ![burst email](assets/images/burst%20email.PNG) |
+            | *Figure 6: Edit Property Value Dialog*          |
 
-    3.  Select **Email Field String**.
+        3.  Select **Email Field String**.
 
-        |                                                               |
-        |---------------------------------------------------------------|
-        | ![burst email field](assets/images/burst%20email%20field.PNG) |
-        | *Figure 7: Expression Editor*                                 |
+            |                                                               |
+            |---------------------------------------------------------------|
+            | ![burst email field](assets/images/burst%20email%20field.PNG) |
+            | *Figure 7: Expression Editor*                                 |
 
-    4.  Click **Finish**.
+        4.  Click **Finish**.
 
-    5.  Click **OK**.
-2.  In the **Subject** field, enter the subject for the mail to be sent to recipients.
-3.  In the **Message** field, type the message you want to send to recipients.
-4.  Click **OK**.
-5.  Run a bursting report.
+        5.  Click **OK**.
+
+    2.  In the **Subject** field, enter the subject for the mail to be sent to recipients.
+
+    3.  In the **Message** field, type the message you want to send to recipients.
+
+    4.  Click **OK**.
+
+9.  Run a bursting report.
 
 Burst reports are created in the output folder for different countries in both formats PDF and Excel.

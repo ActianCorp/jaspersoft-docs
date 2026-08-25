@@ -31,7 +31,7 @@ Edit the values-production.yaml file as follows:
 
 Deploy the Bitnami Redis cluster with the additional values-production.yaml file using the following command:
 
-```
+``` text
 helm install redis bitnami/redis-cluster --values values-production.yaml
 ```
 
@@ -39,13 +39,13 @@ The cluster name is right after the word install in the helm command. In this ex
 
 If you need to delete the Redis cluster, use the following command where `redis` is the `<cluster-name>`:
 
-```
+``` text
 helm delete redis
 ```
 
 However, Helm does not delete redis volumes, so before you create a new Redis cluster, check the persistent volume claims (pvc) and delete them individually as shown in the following example. There is one volume for each node, so 6 in our example:
 
-```
+``` text
 redis_ha> kubectl get pvc | grep redis
 redis-data-redis-redis-cluster-0 Bound pvc-e715109e-e0df-4a80-a38b-3449a2bd142a 8Gi RWO gp2 2d17h
 redis-data-redis-redis-cluster-1 Bound pvc-0f9a9fda-b3d0-46c0-b2c1-13f202637212 8Gi RWO gp2 2d17h
@@ -76,7 +76,7 @@ jrio-rest-docker/jrio/WEB-INF/redis-config.yaml
 
 Change the configuration as follows, using the Redis service name and password set in the previous examples:
 
-```
+``` yaml
 clusterServersConfig:
  password: "mypassword"
  nodeAddresses:
@@ -106,7 +106,7 @@ jasperreports-io-at-scale-10.1.0/helm/templates/jrio-rest-deployment.yaml
 
 In each of them, replace the Redis connection and initialization script with the following:
 
-```
+``` yaml
 initContainers:
  - name: redis-connection
    image: alpine:3.11.6

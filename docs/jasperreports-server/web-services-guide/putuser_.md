@@ -21,7 +21,7 @@ To call `putUser`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSUser user = new WSUser();
+<td><div class="language-text highlight"><pre><code>WSUser user = new WSUser();
 user.setUsername(&quot;john&quot;);
 user.setTenantId(&quot;organization_1&quot;);
 user.setEnabled(true);
@@ -30,7 +30,7 @@ WSRole role = new WSRole();
 role.setRoleName(&quot;ROLE_ANONYMOUS&quot;);
 role.setTenantId(null);
 user.setRoles(new WSRole[] {role});
-WSUser value = binding.putUser(user);</code></pre></td>
+WSUser value = binding.putUser(user);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -43,7 +43,7 @@ The return is:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String getUsername()
+<td><div class="language-text highlight"><pre><code>String getUsername()
 String getFullName()
 String getPassword()
 String getEmailAddress()
@@ -54,7 +54,7 @@ String getTenantId()
 WSRole[] getRoles()
 String getRoleName()
 String getTenantId()
-WSUser[] getUsers()</code></pre></td>
+WSUser[] getUsers()</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -11,7 +11,7 @@ description: "The features in this section may be restricted by your JasperRepor
 
 A Jaspersoft dashboard displays several reports in a single, integrated view. A dashboard can include input controls for choosing the data displayed in one or more dashlets, and custom dashlets that point to URLs for other content. By combining different types of related content, you can create appealing, data-rich dashboards that quickly convey trends.
 
-<img src="../assets/images/js-Dashboard-Example-PerformanceSummaryWithGauges.png" alt="js Dashboard Example PerformanceSummaryWithGauges" />
+![js Dashboard Example PerformanceSummaryWithGauges](../assets/images/js-Dashboard-Example-PerformanceSummaryWithGauges.png)
 
 *Figure 1: Sample dashboard*
 

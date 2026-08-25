@@ -42,7 +42,7 @@ Unsupported datatypes may occur when editing Topics manually, and sometimes with
 
 If your Topic or Domain fields do not appear in the Ad Hoc Editor, you can enable logging on the following class to see details of fields with unsupported datatypes:
 
-```
+``` text
 com.jaspersoft.ji.adhoc.metadata.AdhocTopicMetadata
 ```
 

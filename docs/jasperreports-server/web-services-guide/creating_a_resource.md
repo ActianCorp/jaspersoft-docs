@@ -63,7 +63,7 @@ In the following sample request, the URI is the location where we want to create
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>PUT /jasperserver/rest/resource/ HTTP/1.1
+<td><div class="language-text highlight"><pre><code>PUT /jasperserver/rest/resource/ HTTP/1.1
 Content-Length: 473
 Content-Type: multipart/form-data; boundary=1afdzzMUQLfSOmu0Pgb2F-nmEnTwWuPf3
 Host: localhost:8080
@@ -81,7 +81,7 @@ Content-Transfer-Encoding: 8bit
     &lt;value&gt;/&lt;/value&gt;
   &lt;/resourceProperty&gt;
 &lt;/resourceDescriptor&gt;
---1afdzzMUQLfSOmu0Pgb2F-nmEnTwWuPf3--</code></pre></td>
+--1afdzzMUQLfSOmu0Pgb2F-nmEnTwWuPf3--</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@ The response to the PUT request is the complete resource descriptor for the new 
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>HTTP/1.1 201 Created
+<td><div class="language-text highlight"><pre><code>HTTP/1.1 201 Created
 Server: Apache-Coyote/1.1
 Cache-Control: no-cache
 Content-Length: 648
@@ -121,7 +121,7 @@ Date: Mon, 01 Aug 2011 14:44:05 GMT
   &lt;resourceProperty name=&quot;PROP_HAS_DATA&quot;&gt;
     &lt;value&gt;false&lt;/value&gt;
   &lt;/resourceProperty&gt;
-&lt;/resourceDescriptor&gt;</code></pre></td>
+&lt;/resourceDescriptor&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -9,13 +9,13 @@ If your connection is failing, for example, with an “Invalid credentials suppl
 
 To enable logging, add the corresponding line to the \<js‑webapp\>/WEB‑INF/log4j.properties file, in the form:
 
-```
+``` text
   log4j.logger.<logger-classname> = <log-level>, <output-type>
 ```
 
 For example:
 
-```
+``` properties
   log4j.logger.org.springframework.security=DEBUG, stdout, fileout
 ```
 

@@ -28,31 +28,32 @@ For more information on attributes, see [Using Attributes in the Domain Designer
 To define a pre-filter
 
 1.  Go to the **Pre-filters** tab in your Domain.
+
 2.  Drag a column from the **Data Structure** panel to the **Pre-filters** panel.
 
-The column appears in the **Field** column of the **Pre-filters** design panel with a list of comparison operators you can apply to that column.
+    The column appears in the **Field** column of the **Pre-filters** design panel with a list of comparison operators you can apply to that column.
 
-1.  Choose the comparison operator from the drop-down in the **Operator** column.
+3.  Choose the comparison operator from the drop-down in the **Operator** column.
 
-In the **Pre-filters** panel, the choice of comparison operators depends on the column's datatype. For example, strings offer a choice of search operators and dates offer time-comparison operators.
+    In the **Pre-filters** panel, the choice of comparison operators depends on the column's datatype. For example, strings offer a choice of search operators and dates offer time-comparison operators.
 
-1.  Select **Field to Value Comparison** or **Field to Field Comparison** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu.
+4.  Select **Field to Value Comparison** or **Field to Field Comparison** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu.
 
-If you select **Field to Field Comparison**, the **Value** column displays a box labeled **Drag a field here**.
+    If you select **Field to Field Comparison**, the **Value** column displays a box labeled **Drag a field here**.
 
-1.  Select or enter a value for your filter. For a filter that compares fields, drag field(s) of the same type to the **Drag a field here** box.
+5.  Select or enter a value for your filter. For a filter that compares fields, drag field(s) of the same type to the **Drag a field here** box.
 
-The format of the filter value changes depending on your previous selections. For example, if you select a date column with the `is between` operator, the **Filters** panel displays two calendar widgets for specifying a date range:
+    The format of the filter value changes depending on your previous selections. For example, if you select a date column with the `is between` operator, the **Filters** panel displays two calendar widgets for specifying a date range:
 
-![js DomainDesigner pre filter date range](../assets/images/js-DomainDesigner-pre-filter-date-range.png)
+    ![js DomainDesigner pre filter date range](../assets/images/js-DomainDesigner-pre-filter-date-range.png)
 
-*Figure 1: Filters Panel of the Domain Designer*
+    *Figure 1: Filters Panel of the Domain Designer*
 
-Text columns have both substring comparison operators such as `starts with` or `contains` and whole string matching such as `equals` or `is one of`. When you select a whole string matching operator, the panel displays a list of all existing values for the chosen column, retrieved in real-time from the database. If more than 50 values are available, use search ![js Repository icon Search](../assets/images/js-Repository-icon-Search.png) to narrow the list. For multiple value matching, double-click the available values to select them. You may perform multiple searches and select values from each list of results.
+    Text columns have both substring comparison operators such as `starts with` or `contains` and whole string matching such as `equals` or `is one of`. When you select a whole string matching operator, the panel displays a list of all existing values for the chosen column, retrieved in real-time from the database. If more than 50 values are available, use search ![js Repository icon Search](../assets/images/js-Repository-icon-Search.png) to narrow the list. For multiple value matching, double-click the available values to select them. You may perform multiple searches and select values from each list of results.
 
-If you want to use an attribute for a parameter, enter the attribute in the field using the syntax `attribute('<attrName>')`. For example, if you want to use an attribute called Cities in the filter, enter `attribute('Cities')` into the field. If you want to specify that this is a user attribute, and not an organizational or server one, enter `attribute('Cities', 'user')`.
+    If you want to use an attribute for a parameter, enter the attribute in the field using the syntax `attribute('<attrName>')`. For example, if you want to use an attribute called Cities in the filter, enter `attribute('Cities')` into the field. If you want to specify that this is a user attribute, and not an organizational or server one, enter `attribute('Cities', 'user')`.
 
-1.  Click **OK** to define the filter.
+6.  Click **OK** to define the filter.
 
 The **Pre-filters** panel shows all the filters you have defined. The overall filter applied to the data is the logical AND of all conditions you defined.
 

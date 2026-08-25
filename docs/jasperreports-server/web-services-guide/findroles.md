@@ -21,12 +21,12 @@ To call `findRoles`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSRoleSearchCriteria searchCriteria = new WSRoleSearchCriteria();
+<td><div class="language-text highlight"><pre><code>WSRoleSearchCriteria searchCriteria = new WSRoleSearchCriteria();
   searchCriteria.setRoleName(“ROLE_USER”);
   searchCriteria.setTenantId(“organization_1”);
   searchCriteria.setMaxRecords(5);
   searchCriteria.setIncludeSubOrgs(false);
-WSRole[] list = binding.findRoles(searchCriteria);</code></pre></td>
+WSRole[] list = binding.findRoles(searchCriteria);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -39,7 +39,7 @@ The return is:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String getUsername()
+<td><div class="language-text highlight"><pre><code>String getUsername()
 String getFullName()
 String getPassword()
 String getEmailAddress()
@@ -50,7 +50,7 @@ String getTenantId()
 WSRole[] getRoles()
 String getRoleName()
 String getTenantId()
-WSUser[] getUsers()</code></pre></td>
+WSUser[] getUsers()</code></pre></div></td>
 </tr>
 </tbody>
 </table>

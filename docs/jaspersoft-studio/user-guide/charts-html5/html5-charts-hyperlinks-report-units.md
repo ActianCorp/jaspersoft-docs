@@ -17,18 +17,12 @@ When run, this report can be filtered by country, anyway, since this report unit
 
 1.  Create a report, following the steps described at the beginning of [Creating Hyperlinks in HTML5 Charts.](html5-charts-creating-hyperlinks.md)
 
-<!-- -->
+2.  Modify the \# of orders measure by adding the following properties in the advanced properties tab:
 
-1.  Modify the \# of orders measure by adding the following properties in the advanced properties tab:
+    1.  hyperlinkType (contributor: SeriesItemHyperlink, Static value: ReportExecution)
+    2.  hyperlinkTarget (contributor: SeriesItemHyperlink, Static value: Blank)
+    3.  3_report (contributor: SeriesItemHyperlink, Static value: /public/Samples/Reports/4_Product_Results_by_Store_Type_Report)
 
-<!-- -->
-
-1.  hyperlinkType (contributor: SeriesItemHyperlink, Static value: ReportExecution)
-
-<!-- -->
-
-1.  hyperlinkTarget (contributor: SeriesItemHyperlink, Static value: Blank)
-2.  3_report (contributor: SeriesItemHyperlink, Static value: /public/Samples/Reports/4_Product_Results_by_Store_Type_Report)
 3.  Publish the report in JasperReports Server and preview it on the Web. Click a bar column to open the report units we defined in the previous step.
 
 Note that there is no special syntax to define a parameter, use the name of the parameter as the property name, and select the value (static, bucket, or measure based).

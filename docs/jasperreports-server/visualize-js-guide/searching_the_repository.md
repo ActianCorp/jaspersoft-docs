@@ -20,7 +20,7 @@ This chapter contains the following sections:
 
 The properties structure passed to the `resourcesSearch` function is defined as follows:
 
-```
+``` json
 {
     "type": "object",
     "properties": {
@@ -106,7 +106,7 @@ The properties structure passed to the `resourcesSearch` function is defined as 
 
 The `resourcesSearch` function exposes the following functions:
 
-```
+``` javascript
 define(function () {
 
     /**
@@ -203,7 +203,7 @@ define(function () {
 
 The following code example shows how to perform a search and store the results in a variable:
 
-```
+``` javascript
 // Populate the repository list
 JRSClient.resourcesSearch({
 // server: serverUrl,
@@ -219,7 +219,7 @@ error:function (err)
 
 The next two examples show different ways of handling results after making a simple repository search in the Public folder.
 
-```
+``` javascript
 new ResourcesSearch({
     server:"http://localhost:8080/jasperserver-pro",
     folderUri: "/public",
@@ -238,7 +238,7 @@ var search = v.resourcesSearch({
 
 You can also specify the `runImmediately:false` parameter so that you can set up the search in the first call, and run it later in a separate call. In the following code sample, the first statement builds a query but makes no request to the server, and the second statement actually sends the request, which executes the query.
 
-```
+``` javascript
 var query = v.resourcesSearch({
     server:"http://localhost:8080/jasperserver-pro",
     folderUri: "/public",
@@ -253,7 +253,7 @@ query.run().done(function(results))
 
 If you make multiple searches, for example in different folders, you can create a function to do that using the `ResourcesSearch` function.
 
-```
+``` javascript
 var folderContentQuery = new ResourcesSearch({
     server:"http://localhost:8080/jasperserver-pro",
     recursive: false
@@ -270,7 +270,7 @@ folderContentQuery.folderUri("/uri2").run(doSomethingWithResultFunction);
 
 Code example:
 
-```
+``` javascript
 var call = new ResourcesSearch({
     server:"http://localhost:8080/jasperserver-pro",
     folderUri: "/public",
@@ -290,7 +290,7 @@ var resourceLookups = call.data();
 
 You can write code to discover and display the types that can be searched and types of sorting that can be specified.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",

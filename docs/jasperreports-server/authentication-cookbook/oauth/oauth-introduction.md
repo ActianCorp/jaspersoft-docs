@@ -22,16 +22,21 @@ The following diagram shows the general steps involved in logging into JasperRep
 The following steps explain the interaction between the user’s browser, JasperReports Server, and an OAuth provider:
 
 1.  A user requests any page in JasperReports Server.
+
 2.  JasperReports Server redirects the user to a special, configurable OAuth endpoint that can verify the user session.
+
 3.  The OAuth provider checks if that user's browser has an existing active session in the OAuth server and:
 
-- If no active session, then a login form on the OAuth Provider side is shown, the user provides credentials, then OAuth redirects the user's browser to JasperReports Server with an authorization code.
-- If there is already an active session, then the user's browser is redirected to JasperReports Server with an authorization code.
+    - If no active session, then a login form on the OAuth Provider side is shown, the user provides credentials, then OAuth redirects the user's browser to JasperReports Server with an authorization code.
+    - If there is already an active session, then the user's browser is redirected to JasperReports Server with an authorization code.
 
-1.  JasperReports Server sends an authorization code to OAuth and requests access token and id token.
-2.  When a JWT token (JSON Web Token) is received from the OAuth provider, JasperReports Server validates and decodes it.
-3.  If the token is valid, then JasperReports Server synchronizes user details in the JasperReports Server repository database.
-4.  After synchronization is done, the user is authenticated in JasperReports Server and is authorized based on defined roles.
+4.  JasperReports Server sends an authorization code to OAuth and requests access token and id token.
+
+5.  When a JWT token (JSON Web Token) is received from the OAuth provider, JasperReports Server validates and decodes it.
+
+6.  If the token is valid, then JasperReports Server synchronizes user details in the JasperReports Server repository database.
+
+7.  After synchronization is done, the user is authenticated in JasperReports Server and is authorized based on defined roles.
 
 ## Configuring OAuth
 

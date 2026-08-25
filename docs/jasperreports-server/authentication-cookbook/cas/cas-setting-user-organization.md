@@ -44,7 +44,7 @@ The following file gives an example of how to assign users to multiple organizat
 
 This sample uses the `detailsQuery` property of the `casJDBCUserDetailsService` bean to extract `tenantId` from an external database using an appropriate SQL query. Note that the `tenantId` column name has to be returned by the SQL query in order for `externalTenantSetupProcessor` to catch and process it correctly. In cases where the external database column has a different name, cast the column name as `tenantId`, as in the following example:
 
-```
+``` sql
 SELECT organizationId AS tenantId from org_table
 ```
 
@@ -56,7 +56,7 @@ When specifying the `defaultOrganization` value, the organization ID must not co
 
 The following example shows how to configure `externalTenantSetupProcessor``ldapExternalTenantProcessor` to assign all users to organization_1:
 
-```
+``` xml
 <bean id="externalTenantSetupProcessorldapExternalTenantProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.
     security.externalAuth.processors.MTExternalTenantSetupProcessorLdapExternalTenantProcessor"     parent="abstractExternalProcessor">
   <property name="multiTenancyService">

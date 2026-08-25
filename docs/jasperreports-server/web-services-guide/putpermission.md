@@ -15,14 +15,14 @@ To call `putPermission`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSObjectPermission objectPermission = new WSObjectPermission();
+<td><div class="language-text highlight"><pre><code>WSObjectPermission objectPermission = new WSObjectPermission();
 objectPermission.setUri(resourceUri);
 objectPermission.setPermissionMask(2);
 WSUser wsUser = new WSUser();
 wsUser.setUsername(&quot;joeuser&quot;);
 wsUser.setTenantId(&quot;organization_1&quot;);
 objectPermission.setPermissionRecipient(wsUser);
-WSObjectPermission value = binding.putPermission(objectPermission);</code></pre></td>
+WSObjectPermission value = binding.putPermission(objectPermission);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -70,7 +70,7 @@ The return is:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String getUri()
+<td><div class="language-text highlight"><pre><code>String getUri()
 Object getPermissionRecipient()
 int getPermissionMask()
 String getRoleName()
@@ -84,7 +84,7 @@ Boolean getExternallyDefined()
 Boolean getEnabled()
 Date getPreviousPasswordChangeTime()
 String getTenantId()
-WSRole[] getRoles()</code></pre></td>
+WSRole[] getRoles()</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -32,8 +32,8 @@ If you have write or administer permission as shown in the figure, you can also 
 !!! note
 
     The path that is displayed is always relative to the logged in user's organization. For example, the following paths are the same resource for different users:<br>
-    `superuser` - <span>/organizations/organization_1/images/JRLogo</span><br>
-    `jasperadmin|organization_1` - <span>/images/JRLogo</span><br>
+    `superuser` - /organizations/organization_1/images/JRLogo<br>
+    `jasperadmin|organization_1` - /images/JRLogo<br>
 
 ## Creating Folders
 
@@ -42,12 +42,14 @@ Any user with write permission on a folder can create new sub-folders.
 To create a folder
 
 1.  Log in as a user who has write permission to the parent folder.
+
 2.  Select **View \> Repository** and locate the parent folder in the Folders panel.
+
 3.  Right-click the parent folder and select **Add Folder** from the context menu. The Add Folder dialog appears.
 
-![js Repository AddFolder](../assets/images/js-Repository-AddFolder.png)
+    ![js Repository AddFolder](../assets/images/js-Repository-AddFolder.png)
 
-*Figure 2: Add Folder Dialog*
+    *Figure 2: Add Folder Dialog*
 
 4.  Enter the folder name and, optionally, a description, then click **Add**.<br>
     The folder is created in the repository. The name appears in the hierarchy of folders. The description is visible only when viewing the properties of the folder, as shown in Resource Properties Dialog for a Writable Resource.<br>
@@ -74,7 +76,7 @@ For every resource you create, you must specify a name and resource ID for refer
 
 !!! note
 
-    New resources inherit the permissions of the folder in which they are created. Administrators can change the permissions on the new resource, as described in the section <a href="permissions.md">Setting Permissions</a>.
+    New resources inherit the permissions of the folder in which they are created. Administrators can change the permissions on the new resource, as described in the section [Setting Permissions](permissions.md).
 
 ## Renaming Folders and Resources
 
@@ -82,19 +84,21 @@ Any user with write permission on a folder or resource can change its name and d
 
 !!! note
 
-    You cannot change the name of an organization's top-level folder in the way described here. The name of the top-level folder defaults to the name of the organization. So to change the name of the folder, you have to change the name of the organization, as described in the section <a href="../management/managing_organizations.md">Editing an Organization</a>.
+    You cannot change the name of an organization's top-level folder in the way described here. The name of the top-level folder defaults to the name of the organization. So to change the name of the folder, you have to change the name of the organization, as described in the section [Editing an Organization](../management/managing_organizations.md).
 
 To rename a folder or resource
 
 1.  Log in as a user who has write permission for the folder or resource.
+
 2.  In the repository, browse or search for the resource. For renaming folders, select **View \> Repository** and locate the folder.
+
 3.  Right-click the object and select **Properties...** from the context menu. The Properties dialog appears.<br>
 
-![js Repository Properties edit](../assets/images/js-Repository-Properties-edit.png)
+    ![js Repository Properties edit](../assets/images/js-Repository-Properties-edit.png)
 
-*Figure 4: Properties Dialog for a Report Resource*
+    *Figure 4: Properties Dialog for a Report Resource*
 
-You can change the folder or resource's name and description, but not the ID. The ID is permanent once the resource is created.
+    You can change the folder or resource's name and description, but not the ID. The ID is permanent once the resource is created.
 
 4.  Click **Submit** to save your changes.
 
@@ -108,15 +112,17 @@ Copying and moving actions are not possible on the search interface, only on the
 
 !!! warning
 
-    The moved objects inherit their permissions from the destination folder. They do <span>not</span> keep the permissions they had before the move. If you want the objects to have other permissions, you can set new permissions after the move (see <a href="permissions.md">Repository Permissions</a>).
+    The moved objects inherit their permissions from the destination folder. They do not keep the permissions they had before the move. If you want the objects to have other permissions, you can set new permissions after the move (see [Repository Permissions](permissions.md)).
 
 To copy or moving folders and resources
 
 1.  Log in as a user who has the required permissions for the folder or resource.
+
 2.  Click **View \> Repository**, and expand the folders to display the object to be copied or moved.
+
 3.  Right-click the resource and select **Copy** or **Cut** (delete permission is required to cut a resource).
 
-You can select multiple resources with Control-click or Shift-click, but only a single folder.
+    You can select multiple resources with Control-click or Shift-click, but only a single folder.
 
 4.  Right-click the destination folder and select **Paste** in the context menu (write permission is required on the destination folder).<br>
     Alternatively, you can drag to move the selected resource or folder to the destination folder. To copy, press and hold the Ctrl key then click and drag. When dragging resources, the destination folder is highlighted in blue if you have write permission to it.

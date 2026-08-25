@@ -14,8 +14,11 @@ The buildomatic scripts can load sample resources and sample databases. Note: In
 Your `default_master.properties` should already be created.
 
 1.  Start your database server.
+
 2.  Stop your application server.
+
 3.  Run the commands shown below:
+
     <table>
     <colgroup>
     <col style="width: 50%" />
@@ -52,9 +55,13 @@ Your `default_master.properties` should have already been created.
 ### Generating Sample Resources for MySQL, PostgreSQL, Oracle, and SQL Server Databases
 
 1.  Make sure that the sample data has been loaded.
+
 2.  Start your database server.
+
 3.  Stop your application server.
+
 4.  Run the commands shown below:
+
     | Commands | Description |
     |----|----|
     | `cd <js-src>/jasperserver/buildomatic` |  |
@@ -68,9 +75,13 @@ The buildomatic scripts cannot automatically connect to a remote DB2 database an
 The DB2 client software, db2 or db2cmd, can be used to interact with DB2.
 
 1.  Start your database server.
+
 2.  Stop your application server.
+
 3.  If the database already exists, remove it before creating a new one.
+
 4.  Run the commands shown below:
+
     | Commands | Description |
     |----|----|
     | `db2 create database jsprsrvr using codeset utf-8 territory us pagesize 16384` | Create and initialize the `jasperserver` database. |

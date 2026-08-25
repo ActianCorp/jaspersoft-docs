@@ -81,15 +81,18 @@ The simplest way to import a catalog with a custom key is to use the Settings UI
 0x1c 0x40 0xb9 0xf6 0xe2 0xd3 0xf9 0xd0 0x5a 0xab 0x84 0xe6 0xd4 0xe8 0x5f 0xed
 
 1.  Log in as system administrator (`superuser` by default).
+
 2.  Select **Manage \> Server Settings**, then click **Import** in the left-hand panel.
+
 3.  In the right-hand panel, browse the file system to enter the catalog file you want to import.
 
-![js Settings Import KeyValue](../assets/images/js-Settings-Import-KeyValue.png)
+    ![js Settings Import KeyValue](../assets/images/js-Settings-Import-KeyValue.png)
 
-*Figure 1: Import UI with Key Value*
+    *Figure 1: Import UI with Key Value*
 
-1.  Choose the **Key Value** radio button and paste the entire key value in the designated field. The characters of the key value are hidden to keep them secret.
-2.  Select your import options and click **Import**.
+4.  Choose the **Key Value** radio button and paste the entire key value in the designated field. The characters of the key value are hidden to keep them secret.
+
+5.  Select your import options and click **Import**.
 
 If the key does not decrypt the catalog file, you get an error message, otherwise the import proceeds.
 
@@ -99,27 +102,33 @@ If you have multiple files to import, you can store the custom key in a secure f
 
 1.  Start by saving your custom key value as a hexadecimal number in a plain text file, for example:
 
-0x1c 0x40 0xb9 0xf6 0xe2 0xd3 0xf9 0xd0 0x5a 0xab 0x84 0xe6 0xd4 0xe8 0x5f 0xed
+    0x1c 0x40 0xb9 0xf6 0xe2 0xd3 0xf9 0xd0 0x5a 0xab 0x84 0xe6 0xd4 0xe8 0x5f 0xed
 
-1.  Log in as system administrator (`superuser` by default).
-2.  Select **View \> Repository**, then browse the repository tree to find an appropriate folder.
-3.  Right-click the folder and select **Add Resource \> File\> Secure File**.
-4.  In the **Add File** dialog, browse the file system to enter your text file with the key.
+2.  Log in as system administrator (`superuser` by default).
 
-<img src="../assets/images/js-Repository-AddSecureFile.png" alt="js Repository AddSecureFile" />
+3.  Select **View \> Repository**, then browse the repository tree to find an appropriate folder.
 
-*Figure 2: Add Secure File Dialog*
+4.  Right-click the folder and select **Add Resource \> File\> Secure File**.
 
-1.  Fill in the other fields and click **Submit**. The File appears in the repository.
-2.  Select **Manage \> Server Settings**, then click **Import** in the left-hand panel.
-3.  In the right-hand panel, browse the file system to enter the catalog file you want to import.
+5.  In the **Add File** dialog, browse the file system to enter your text file with the key.
 
-![js Settings Import StoredKey](../assets/images/js-Settings-Import-StoredKey.png)
+    ![js Repository AddSecureFile](../assets/images/js-Repository-AddSecureFile.png)
 
-*Figure 3: Import UI with Key File*
+    *Figure 2: Add Secure File Dialog*
 
-1.  Choose the **Stored Key** radio button and browse the repository to find your secure file.
-2.  Select your import options and click **Import**.
+6.  Fill in the other fields and click **Submit**. The File appears in the repository.
+
+7.  Select **Manage \> Server Settings**, then click **Import** in the left-hand panel.
+
+8.  In the right-hand panel, browse the file system to enter the catalog file you want to import.
+
+    ![js Settings Import StoredKey](../assets/images/js-Settings-Import-StoredKey.png)
+
+    *Figure 3: Import UI with Key File*
+
+9.  Choose the **Stored Key** radio button and browse the repository to find your secure file.
+
+10. Select your import options and click **Import**.
 
 If the key does not decrypt the catalog file, you will get an error message, otherwise the import proceeds.
 
@@ -166,14 +175,14 @@ Similar to the import UI, the `js-import` command-line utility has new options t
 
 The following example shows how to import a catalog with a custom key.
 
-```
+``` bash
 js-import.sh --secret-key "0x1c 0x40 0xb9 0xf6 0xe2 0xd3 0xf9 0xd0 0x5a 0xab 0x84 0xe6 0xd4
 0xe8 0x5f 0xed" --input-zip myExport.zip
 ```
 
 The following example shows how to import a catalog using a key already saved in the keystore.
 
-```
+``` bash
 js-import.sh --keyalias productionServerKey --input-zip myExport.zip
 ```
 
@@ -241,7 +250,7 @@ If you have many catalogs to import from a server with a custom key, the `js-imp
 
 The following example shows how to add a key to the keystore, so it can be used for other import operations:
 
-```
+``` bash
 js-import.sh --input-key "0x59 0xe3 0xd9 0xce 0x7f 0x34 0xab 0x27 0xb8 0xdf 0xc3 0x7e 0x01 0xab
              0x4d 0x6c" --keyalias productionKey --keyalg AES --keypass productionKeyPass
              --visible --keylabel ProductionServerKey
@@ -249,7 +258,7 @@ js-import.sh --input-key "0x59 0xe3 0xd9 0xce 0x7f 0x34 0xab 0x27 0xb8 0xdf 0xc3
 
 The following example shows how to copy a key from an external keystore file into the default keystore.
 
-```
+``` bash
 js-import.sh --input-key --keystore ./mystore --storepass password --keyalias productionKey2
              --keypass productionKeyPass2 --visible --keylabel ProductionServerKey2
 ```
@@ -259,14 +268,17 @@ js-import.sh --input-key --keystore ./mystore --storepass password --keyalias pr
 After adding custom keys to the keystore from the command line using the `--visible` option, you can also select the keys in the UI during import operations. The keys are identified by their alias or label if given.
 
 1.  Log in as system administrator (`superuser` by default).
+
 2.  Select **Manage \> Server Settings**, then click **Import** in the left-hand panel.
+
 3.  In the right-hand panel, browse the file system to enter the catalog file you want to import.
 
-![js Settings Import CustomKey](../assets/images/js-Settings-Import-CustomKey.png)
+    ![js Settings Import CustomKey](../assets/images/js-Settings-Import-CustomKey.png)
 
-*Figure 4: Import UI with Key Value*
+    *Figure 4: Import UI with Key Value*
 
 4.  When the server's keystore contains custom keys, the list of keys appears as the third bullet. Note that key files in the repository do not appear in this list, only custom keys in the keystore. Each key in the list is identified by its label if it was defined on import, otherwise by its alias. Choose this bullet and select your key from the drop-down list.
+
 5.  Select your import options and click Import.
 
 If the key does not decrypt the catalog file, you get an error message, otherwise the import proceeds.
@@ -327,14 +339,14 @@ As with the export UI, you can specify custom keys when exporting from the comma
 
 The following example shows how to export a catalog with passwords encrypted with a custom key:
 
-```
+``` bash
 js-export.sh --uris /public/samples/AccountList --output-zip myExport.zip
 --secret-key="0x6f 0x00 0xf1 0xbd 0x46 0x1f 0x62 0xa1 0x03 0x56 0x13 0xda 0x07 0x00 0x7c 0x10"
 ```
 
 The following example shows how to export a catalog with passwords encrypted by one of the keys in the keystore:
 
-```
+``` bash
 ./js-export.sh --uris /public/samples/AccountList --output-zip myExport.zip
 --keyalias productionServerKey --keypass "mykeypw2"
 ```
@@ -383,13 +395,13 @@ The js-export utility can also be used to export one of the keys from the server
 
 You may specify both an output zip catalog and list of resources to export, as well as a key alias and keystore filename. In the following example of this, the export creates two output files, the zip catalog and the keystore, and any passwords in the catalog are encrypted with the same key that was exported.
 
-```
+``` bash
 js-export.sh --everything --output-zip myExport.zip --destkeystore mystore --deststorepass storepw --genkey
 ```
 
 The server that generates this key stores a copy of it in its keystore, and if you import the key to another server, they share the key. If you examine the key with the keytool utility, it has a unique alias name:
 
-```
+``` text
 keytool -list -v -keystore ./mystore -storetype jceks
 
 Enter keystore password: *******

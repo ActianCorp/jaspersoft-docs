@@ -15,21 +15,24 @@ To set the version of JasperReports Library to use for compiling reports
 
 1.  Select **Window \> Preferences** from the main menu (**Eclipse \> Preferences** on Mac).
 
-The **Preferences** dialog is displayed.
+    The **Preferences** dialog is displayed.
 
-1.  Select **Jaspersoft Studio \> Compatibility**.
+2.  Select **Jaspersoft Studio \> Compatibility**.
 
-The **Compatibility** window is displayed.
+    The **Compatibility** window is displayed.
 
-|  |
-|----|
-| ![jss preferences compatibility](assets/images/jss-preferences-compatibility.png) |
-| *Figure 1: Setting JasperReports Library Version* |
+    |  |
+    |----|
+    | ![jss preferences compatibility](assets/images/jss-preferences-compatibility.png) |
+    | *Figure 1: Setting JasperReports Library Version* |
 
-1.  To save your reports in an earlier version of JRXML, select the version you want from the **Version** menu in the **Source .jrxml Version** section of the dialog.
-2.  To remove Jaspersoft Studio properties from your compiled reports, select **Do not save Jaspersoft Studio properties**. Properties specific to Jaspersoft Studio include some layout information, dimensions in pixels or millimeters, and the data adapter that was most recently used in Jaspersoft Studio.
-3.  To use an earlier version of JasperReports Library to compile reports, select the version you from the **Version** menu in the **Compiler Settings** section of the dialog. If the version you want is not available, set it up as described in the next step.
-4.  To add a version of JasperReports Library to the **Version** menu in the **Compiler Settings** section of the dialog click **Manage JasperReports Versions** and select the version you want.
+3.  To save your reports in an earlier version of JRXML, select the version you want from the **Version** menu in the **Source .jrxml Version** section of the dialog.
+
+4.  To remove Jaspersoft Studio properties from your compiled reports, select **Do not save Jaspersoft Studio properties**. Properties specific to Jaspersoft Studio include some layout information, dimensions in pixels or millimeters, and the data adapter that was most recently used in Jaspersoft Studio.
+
+5.  To use an earlier version of JasperReports Library to compile reports, select the version you from the **Version** menu in the **Compiler Settings** section of the dialog. If the version you want is not available, set it up as described in the next step.
+
+6.  To add a version of JasperReports Library to the **Version** menu in the **Compiler Settings** section of the dialog click **Manage JasperReports Versions** and select the version you want.
 
 To use a version you already have installed, click **Add From Path**, then select the directory where the JasperReports Library is located.
 

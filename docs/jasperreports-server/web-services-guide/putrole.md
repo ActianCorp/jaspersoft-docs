@@ -19,10 +19,10 @@ To call `putRole`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSRole role = new WSRole();
+<td><div class="language-text highlight"><pre><code>WSRole role = new WSRole();
 role.setRoleName(“ROLE_ANONYMOUS”);
 role.setTenantId(null);
-WSRole value = binding.putRole(role);</code></pre></td>
+WSRole value = binding.putRole(role);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -35,7 +35,7 @@ The return is:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String getRoleName()
+<td><div class="language-text highlight"><pre><code>String getRoleName()
 String getTenantId()
 WSUser[] getUsers()
 String getUserName()
@@ -46,7 +46,7 @@ Boolean getExternallyDefined()
 Boolean getEnabled()
 Date getPreviousPasswordChangeTime()
 String getTenantId()
-WSRole[] getRoles()</code></pre></td>
+WSRole[] getRoles()</code></pre></div></td>
 </tr>
 </tbody>
 </table>

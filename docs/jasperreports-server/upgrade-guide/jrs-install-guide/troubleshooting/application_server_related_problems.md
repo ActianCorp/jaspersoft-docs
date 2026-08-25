@@ -11,9 +11,9 @@ These steps might solve problems related to the release of memory or to containe
 
 1.  Set the following parameter in the global `$CATALINA_BASE/conf/web.xml`:
 
-`enablepooling = false`
+    `enablepooling = false`
 
-1.  Restart Tomcat.
+2.  Restart Tomcat.
 
 ## Java Out of Memory Error
 
@@ -56,7 +56,7 @@ If you are installing JasperReports Server to an instance of Tomcat that was ins
 
 Go to the section of the `default_master.properties` that looks like this:
 
-```
+``` bash
 # Tomcat app server root dir
 appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 # appServerDir = /home/devuser/apache-tomcat-11.0
@@ -67,7 +67,7 @@ appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 
 And change which lines are commented so it looks like this:
 
-```
+``` bash
 # Tomcat app server root dir
 # appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 # appServerDir = /home/devuser/apache-tomcat-11.0
@@ -91,19 +91,21 @@ The installation with JBoss EAP 7.2.0 may fail with the following error: "Detect
 
 1.  Edit the WAR file with the following command on Linux:
 
-`zip -d jasperserver-pro.war WEB-INF/lib/x-pack-sql-jdbc-7.6.0.jar`
+    `zip -d jasperserver-pro.war WEB-INF/lib/x-pack-sql-jdbc-7.6.0.jar`
 
-You can verify that the JAR file has been removed with the following Linux command:
+    You can verify that the JAR file has been removed with the following Linux command:
 
-`jar -tf jasperserver-pro.war | grep x-pack*`
+    `jar -tf jasperserver-pro.war | grep x-pack*`
 
-1.  Stop the JBoss app server.
-2.  Delete the jasperserver-pro.war objects in the \<jboss-eap-7.2\>/standalone/deployments directory.
-3.  Switch to the JRS buildomatic directory and redeploy the JRS war file:
+2.  Stop the JBoss app server.
 
-`./js-ant deploy-webapp-pro`
+3.  Delete the jasperserver-pro.war objects in the \<jboss-eap-7.2\>/standalone/deployments directory.
 
-1.  Restart the JBoss app server.
+4.  Switch to the JRS buildomatic directory and redeploy the JRS war file:
+
+    `./js-ant deploy-webapp-pro`
+
+5.  Restart the JBoss app server.
 
 ### JBoss 7 Startup Timeout Error
 
@@ -115,26 +117,27 @@ To fix this, you need to increase your `deployment-timeout` setting as follows:
 
 1.  Change to the JBoss standalone configuration directory.
 
-`cd <jboss>/standalone/configuration`
+    `cd <jboss>/standalone/configuration`
 
-1.  Open the `standalone.xml` file.
-2.  Look for the `<subsystem xmlns=`"`urn:jboss:domain:deployment-scanner:1.1`"`>` element, for example:
+2.  Open the `standalone.xml` file.
 
-`<subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">`
+3.  Look for the `<subsystem xmlns=`"`urn:jboss:domain:deployment-scanner:1.1`"`>` element, for example:
 
-`<deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000"/>`
+    `<subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">`
 
-`</subsystem>`
+    `<deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000"/>`
 
-1.  Edit this to add or set the attribute `deployment-timeout` to the preferred time in seconds, for example:
+    `</subsystem>`
 
-`<subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">`
+4.  Edit this to add or set the attribute `deployment-timeout` to the preferred time in seconds, for example:
 
-`<deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" `deployment-timeout=`"`600`"/>`
+    `<subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">`
 
-`</subsystem>`
+    `<deployment-scanner path="deployments" relative-to="jboss.server.base.dir" scan-interval="5000" `deployment-timeout=`"`600`"/>`
 
-1.  Save the file.
+    `</subsystem>`
+
+5.  Save the file.
 
 On server restart, your system has the specified time to start up.
 
@@ -154,7 +157,7 @@ If JBoss is your application server and your organization is created with non-La
 1.  Edit `<jboss-home>/standalone/configuration/standalone.xml`
 2.  Add a new `<system-properties>` tag after the `<extensions>` tag, as shown in the following example.<br>
 
-```
+``` xml
 <extensions>
 ......
 </extensions>
@@ -168,7 +171,7 @@ If JBoss is your application server and your organization is created with non-La
 
 If you are upgrading or importing on some versions of Wildfly and your repository or other import file is large, the import may fail and the connection may be reset. In this case, you may need to set `max-post-size`. To do this, open the file `<wildfly-home>standalone/configuration/standalone.xml` and add or change the `max-post-size` attribute of the `http-listener` property, for example:
 
-```
+``` xml
 <http-listener name="default" socket-binding="http" max-header-size="974247881"
      max-post-size="974247881"/>
 ```
@@ -184,15 +187,18 @@ Some WebSphere versions or fix packs have modified code that processes web serve
 To solve the Page Not Found Error on Login
 
 1.  Login into the WebSphere Administrative Console.
+
 2.  Navigate to **Application Servers \> \<server\> \> Web Container Settings \> Web Container \> Custom Properties**.
+
 3.  Create a new property with the following attributes:
 
-`name: com.ibm.ws.webcontainer.invokefilterscompatibility`
+    `name: com.ibm.ws.webcontainer.invokefilterscompatibility`
 
-`value: true`
+    `value: true`
 
-1.  Save the master configuration.
-2.  Restart the WebSphere server.
+4.  Save the master configuration.
+
+5.  Restart the WebSphere server.
 
 ## WebLogic Modifications
 
@@ -216,7 +222,7 @@ The errors appear in the JasperReports Server log when users log in after the ap
 
 Because JasperReports Server user sessions are not persistent, you can configure your application server to disable persistence and avoid the error. For example, in Apache Tomcat, edit the file `<tomcat>/conf/context.xml` and locate the following lines.
 
-```
+``` text
 <!-- Uncomment this to disable session persistence across Tomcat restarts -->
     <!--
     <Manager pathname="" />

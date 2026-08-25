@@ -51,7 +51,7 @@ Use the following method to specify the export options for your export request:
 
 The content to send describes the export options, for example:
 
-```
+``` json
 {
   "roles": ["ROLE_USER","ROLE_MANAGER|organization_1"],
   "users": ["superuser","joeuser|organization_1"],
@@ -136,7 +136,7 @@ The following table describes the export parameters that can be specified in the
 
 The body of the response contains the ID of the export operation needed to check its status and later download the file:
 
-```
+``` json
 {
   "id": "njkhfs8374",
   "phase": "inprogress",
@@ -146,7 +146,7 @@ The body of the response contains the ID of the export operation needed to check
 
 The response may also warn you of any broken dependencies in the export that may affect a future import operation:
 
-```
+``` json
 {
   "id": "njkhfs8374",
   "phase": "inprogress",

@@ -16,14 +16,19 @@ The following properties from `README.md` files can be used to configure Jackrab
 All the properties must be set in the `jrws.properties` file before starting the application.
 
 - For Google:
+
   - `jrws.url.rest.login.jackrabbit.google=[true|false]`
   - `jrws.google.client.id=``[YOUR_CLIENT_ID]`
   - `jrws.google.secret.key=``[YOUR_SECRET_KEY``]`
+
 - For GitHub:
+
   - `jrws.url.rest.login.jackrabbit.github=[true|false]`
   - `jrws.jackrabbit.github.client.id=``[YOUR_CLIENT_ID``]`
   - `jrws.jackrabbit.github.secret.key=[YOUR_SECRET_KEY]`
+
 - For Cognito:
+
   - `jrws.repository.saas.url=https://jaspersoft-saas.auth.us-east-1.amazoncognito.com/oauth2/authorize`
   - `jrws.repository.saas.logout.url=https://jaspersoft-saas.auth.us-east-1.amazoncognito.com/logout`
   - `jrws.repository.saas.clientID=``[the client ID]`

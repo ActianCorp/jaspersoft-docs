@@ -29,20 +29,21 @@ See [Managing JasperReports IO](../managing_jrio/managing_jrio.md) for informati
 To start the JasperReports IO reporting service
 
 1.  Download the standalone package for your machine's operating system.
+
 2.  Extract the standalone package and open the extracted folder.
+
 3.  Run the start script to launch the web server.
-4.  If you are using Windows, run the `start.bat` script.
-5.  If you are using Linux or macOS, run `start.sh`.
 
-The script starts the web server. The JasperReports IO web application is ready for use.
+    1.  If you are using Windows, run the `start.bat` script.
+    2.  If you are using Linux or macOS, run `start.sh`.
 
-1.  To test the demo web application, open a browser and go to the following URL: `http://localhost:8080`.
+    The script starts the web server. The JasperReports IO web application is ready for use.
 
-The browser opens the sample JasperReports IO web application. The sample application displays details about how to work with JasperReports IO.
+4.  To test the demo web application, open a browser and go to the following URL: `http://localhost:8080`.
 
-1.  To shut down the web server, run the stop script.
+    The browser opens the sample JasperReports IO web application. The sample application displays details about how to work with JasperReports IO.
 
-<!-- -->
+5.  To shut down the web server, run the stop script.
 
-1.  If you are using Windows, run the `stop.bat` script.
-2.  If you are using Linux or macOS, run `stop.sh`.
+    1.  If you are using Windows, run the `stop.bat` script.
+    2.  If you are using Linux or macOS, run `stop.sh`.

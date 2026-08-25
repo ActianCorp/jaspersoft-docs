@@ -11,7 +11,7 @@ You create an access grant definition as an XML file with an AGXML file extensio
 
 The elements are arranged hierarchically, as shown below. The grant definitions for a role lie within the following nested grant elements: `SchemaGrant, CubeGrant, HierarchyGrant`, and `MemberGrant`. `SchemaGrant` is the outermost element, and `MemberGrant` is the innermost. In general, grants within an element override grants in containing elements.
 
-```
+``` text
 SchemaGrant
     CubeGrant
         HierarchyGrant

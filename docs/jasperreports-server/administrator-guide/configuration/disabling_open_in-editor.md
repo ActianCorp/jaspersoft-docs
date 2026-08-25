@@ -10,14 +10,16 @@ By default, the Open In Editor property is enabled. It appears on the context me
 To disable the open in editor
 
 1.  Open the file `…/WEB-INF/applicationContext-search.xml` file for editing.
+
 2.  Locate the `searchActionModel` bean.
+
 3.  Set the `openInEditor` property to false and save the file.
 
-``` xml
-<bean id="searchActionModel" class="com.jaspersoft.jasperserver.search.model.SearchActionModelSupport">
-  <propertyname="proVersion"value="${isProVersion}"/>
-  <propertyname="openInEditor"value="false"/>
-</bean>
-```
+    ``` xml
+    <bean id="searchActionModel" class="com.jaspersoft.jasperserver.search.model.SearchActionModelSupport">
+      <propertyname="proVersion"value="${isProVersion}"/>
+      <propertyname="openInEditor"value="false"/>
+    </bean>
+    ```
 
 4.  Restart JasperReports Server.

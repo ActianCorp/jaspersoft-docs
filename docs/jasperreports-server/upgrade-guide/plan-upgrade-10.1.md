@@ -36,8 +36,11 @@ To support this, a new property, `dbVersion`, is added in the `oracle_master.pro
 ## Important Notes about Compact and Split installations
 
 - Users are able to upgrade from 10.0 Compact to 10.1 Compact using `samedb` and `newdb`.
+
 - Users are able to upgrade from 10.0 Split to 10.1 Split using `samedb` and `newdb`.
+
 - Users will not be able to upgrade:
+
   - From 10.0 Compact to 10.1 Split.
   - From 10.0 Split to 10.1 Compact.
 

@@ -16,7 +16,7 @@ This chapter contains the following sections:
 
 This example reads and displays the properties in the scope after `visualize.report` finishes rendering a report (success).
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -56,7 +56,7 @@ visualize({
 
 The ScopeChecker is another JavaScript used in this example. It can either be a separate .js file or included in your HTML file as shown in this example:
 
-```
+``` javascript
 <!-- JavaScript for ScopeChecker -->
 <script>
     function ScopeChecker(scope) {
@@ -141,7 +141,7 @@ The key feature of this tool is the ability to set the `isolateDOM` property on 
 
 Save the Javascript, HTML, and CSS for the CSS Diagnostic Tool to your environment and edit the files to use your server instances, reports, and Visualize.js code.
 
-```
+``` javascript
 // ************ SETTINGS **********
 var serverUrls = [
     "http://test.example.com:8080/jasperserver-pro",
@@ -388,7 +388,7 @@ function fillSheetList() {
 
 The HTML for the CSS diagnostic tool contains a static list of reports to load. Add your own reports to this list.
 
-```
+``` html
 <script type="text/javascript">
     window.addEventListener("load", onLoad);
 </script>
@@ -491,7 +491,7 @@ The HTML for the CSS diagnostic tool contains a static list of reports to load. 
 
 Associated CSS:
 
-```
+``` text
 .qwe {
     height: 100%;
 }

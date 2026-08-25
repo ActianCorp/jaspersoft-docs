@@ -36,7 +36,7 @@ For the API reference of the `visualize.report` JasperReports IO report interfac
 
 First, your script must enable the default JIVE UI to make its components available after running a report:
 
-```
+``` javascript
 var report = v.report({
     resource: "/public/SampleReport",
     defaultJiveUi : {
@@ -49,7 +49,7 @@ var components = report.data().components;
 
 First, your script must enable the default JIVE UI to make its components available after running a report:
 
-```
+``` javascript
 var report = jrioClient.report({
     resource: "/samples/reports/TableReport",
     defaultJiveUi : {
@@ -64,7 +64,7 @@ The components that can be modified are columns and charts. These components of 
 
 Then you can reference the component by this name, for example a column named `sales`, and use the `updateComponent` function to modify it.
 
-```
+``` text
 report.updateComponent("sales", {
     sort : {
         order : "asc"
@@ -74,7 +74,7 @@ report.updateComponent("sales", {
 
 Or:
 
-```
+``` text
 report.updateComponent({
     name: "sales",
     sort : {
@@ -85,7 +85,7 @@ report.updateComponent({
 
 We can also get an object that represents the named component of the JIVE UI:
 
-```
+``` javascript
 var salesColumn = report
                     .data()
                     .components
@@ -95,7 +95,7 @@ var salesColumn = report
 
 The following example shows how to create buttons whose click events modify the report through the JIVE UI. This example assumes you have a report whose components already have names, in this case, columns named `my_accounts` and `my_dept`, and a chart named `revenue`:
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -154,7 +154,7 @@ visualize({
 
 This example assumes you have a report whose components already have names, in this case, columns named `ORDERID `and `SHIPNAME`:
 
-```
+``` javascript
 jrio.config({
 ...
 });
@@ -207,7 +207,7 @@ jrio(function(jrioClient) {
 
 The associated HTML has buttons that will invoke the JavaScript actions on the JIVE UI:
 
-```
+``` text
 <!-- Provide the URL to visualize.js -->
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
 <button id="resetAll">Reset All</button>
@@ -220,7 +220,7 @@ The associated HTML has buttons that will invoke the JavaScript actions on the J
 
 The associated HTML has buttons that will invoke the JavaScript actions on the JIVE UI:
 
-```
+``` text
 <!-- Provide the URL to jrio.js -->
 <script src="http://bi.example.com:8080/jriojsapi/client/jrio.js"></script>
 <button id="resetAll">Reset All</button>
@@ -236,7 +236,7 @@ One feature of the JIVE UI for tables and crosstabs is the floating header. When
 
 To turn on floating headers for your interactive reports, set the following parameters when you enable the JIVE UI:
 
-```
+``` javascript
 var report = v.report({
     resource: "/public/SampleReport",
     defaultJiveUi : {
@@ -248,7 +248,7 @@ var report = v.report({
 
 To turn on floating headers for your interactive reports, set the following parameters when you enable the JIVE UI:
 
-```
+``` javascript
 var report = jrioClient.report({
     resource: "/samples/reports/TableReport",
     defaultJiveUi : {
@@ -262,7 +262,7 @@ var report = jrioClient.report({
 
 If you have the name of a chart component, you can easily set a new chart type and redraw the chart.
 
-```
+``` javascript
 var mySalesChart = report
                     .data()
                     .components
@@ -283,7 +283,7 @@ report
 
 Or:
 
-```
+``` javascript
 report
     .updateComponent("salesChart", {
           chartType: "Bar"
@@ -300,7 +300,7 @@ The following example creates a drop-down menu that lets users change the chart 
 
 This code also relies on the `report.chart.types` interface described in [Discovering Available Charts and Formats](displaying_reports.md).
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -367,7 +367,7 @@ visualize({
 
 This code also relies on the `report.chart.types` interface.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -433,7 +433,7 @@ jrio(function(jrioClient) {
 
 As shown in the following HTML, the control for the chart type is created dynamically by the JavaScript:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to visualize.js -->
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -443,7 +443,7 @@ As shown in the following HTML, the control for the chart type is created dynami
 
 As shown in the following HTML, the control for the chart type is created dynamically by the JavaScript:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to jrio.js -->
 <script src="http://bi.example.com:8080/jriojsapi/client/jrio.js"></script>
@@ -457,7 +457,7 @@ Those chart components that are based on Highcharts have a lot of interactivity 
 
 The following example creates buttons to toggle several chart properties and demonstrates how to control them programmatically. First the HTML to create the buttons:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 
 <button id="disableAnimation">disable animation</button>
@@ -475,7 +475,7 @@ The following example creates buttons to toggle several chart properties and dem
 
 The following example creates buttons to toggle several chart properties and demonstrates how to control them programmatically. First the HTML to create the buttons:
 
-```
+``` html
 <script src="http://bi.example.com:8080/jriojsapi/client/jrio.js"></script>
 
 <button id="disableAnimation">disable animation</button>
@@ -493,7 +493,7 @@ The following example creates buttons to toggle several chart properties and dem
 
 Here are the API calls to set the various chart properties:
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -558,7 +558,7 @@ visualize({
 
 Here are the API calls to set the various chart properties:
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -620,7 +620,7 @@ jrio(function(jrioClient) {
 
 As in JasperReports Server, the JIVE UI supports undo and redo actions that you can access programmatically with Visualize.js. As in many applications, undo and redo actions act like a stack, and the `canUndo` and `canRedo` events notify your page you are at either end of the stack.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -700,7 +700,7 @@ function buildChartTypeSelect(report) {
 
 The JIVE UI supports undo and redo actions that you can access programmatically with the JasperReports IO JavaScript API. As in many applications, undo and redo actions act like a stack, and the `canUndo` and `canRedo` events notify your page you are at either end of the stack.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -777,7 +777,7 @@ function buildChartTypeSelect(report) {
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to visualize.js -->
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -792,7 +792,7 @@ Associated HTML:
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to jrio.js -->
 <script src="http://bi.example.com:8080/jriojsapi/client/jrio.js"></script>
@@ -809,7 +809,7 @@ Associated HTML:
 
 This code example shows how to set the three possible sorting orders on a column in the JIVE UI: ascending, descending, and no sorting.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -852,7 +852,7 @@ visualize({
 
 This code example shows how to set the three possible sorting orders on a column in the JIVE UI: ascending, descending, and no sorting.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -895,7 +895,7 @@ jrio(function(jrioClient) {
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to visualize.js -->
@@ -911,7 +911,7 @@ Associated HTML:
 
 Associated HTML:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to jrio.js -->
@@ -929,7 +929,7 @@ Associated HTML:
 
 This code example shows how to define filters on columns of various data types (dates, strings, numeric) in the JIVE UI. It also shows several filter operator such as `equal`, `greater`, `between`, `contain` (for string matching), and `before (for times and dates)`.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -1024,7 +1024,7 @@ function handleError(err) {
 
 This code example shows how to define filters on columns of various data types (dates, strings, numeric) in the JIVE UI. It also shows several filter operator such as `equal`, `greater`, `between`, `contain` (for string matching), and `before (for times and dates)`.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -1090,7 +1090,7 @@ function handleError(err) {
 
 Associated HTML:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to visualize.js -->
@@ -1122,7 +1122,7 @@ Associated HTML:
 
 Associated HTML:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to jrio.js -->
@@ -1149,7 +1149,7 @@ Associated HTML:
 
 The JIVE UI allows you to format columns by setting the alignment, color, font, size, and background of text in both headings and cells. You can also set the numeric format of cells, such as the precision, negative indicator, and currency. Note that the initial appearance of any numbers also depends on the locale set either by default on JasperReports Server, or specified in your script request, as described in [Requesting the Visualize.js Script](visualize_js_api_reference.md).
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -1295,7 +1295,7 @@ visualize({
 
 The JIVE UI allows you to format columns by setting the alignment, color, font, size, and background of text in both headings and cells. You can also set the numeric format of cells, such as the precision, negative indicator, and currency.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -1411,7 +1411,7 @@ jrio(function(jrioClient) {
 
 The associated HTML has static controls for selecting all the formatting options that the script above can modify in the report.
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to visualize.js -->
@@ -1497,7 +1497,7 @@ The associated HTML has static controls for selecting all the formatting options
 
 The associated HTML has static controls for selecting all the formatting options that the script above can modify in the report.
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to jrio.js -->
@@ -1566,7 +1566,7 @@ The associated HTML has static controls for selecting all the formatting options
 
 The JIVE UI also supports conditional formatting so that you can change the appearance of a cell's contents based on its value. This example highlights cells in a given column that have a certain value by changing their text color and the cell background color. Note that the column name must be known ahead of time, for example by looking at your JRXML.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -1619,7 +1619,7 @@ visualize({
 
 The JIVE UI also supports conditional formatting so that you can change the appearance of a cell's contents based on its value. This example highlights cells in a given column that have a certain value by changing their text color and the cell background color. Note that the column name must be known ahead of time, for example by looking at your JRXML.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -1671,7 +1671,7 @@ jrio(function(jrioClient) {
 
 This example has a single button that allows the user to apply the conditional formatting when the report is loaded:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to visualize.js -->
@@ -1685,7 +1685,7 @@ This example has a single button that allows the user to apply the conditional f
 
 This example has a single button that allows the user to apply the conditional formatting when the report is loaded:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to jrio.js -->
@@ -1701,7 +1701,7 @@ This example has a single button that allows the user to apply the conditional f
 
 Crosstabs are more complex and do not have as many formatting options. This example shows how to sort the values in a given column of a crosstab (the rows are rearranged). Note that the code is slightly different than Sorting Table Columns.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "superuser",
@@ -1761,7 +1761,7 @@ visualize({
 
 Crosstabs are more complex and do not have as many formatting options. This example shows how to sort the values in a given column of a crosstab (the rows are rearranged). Note that the code is slightly different than Sorting Table Columns.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -1819,7 +1819,7 @@ jrio(function(jrioClient) {
 
 The associated HTML has the buttons to trigger the sorting:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to visualize.js -->
@@ -1835,7 +1835,7 @@ The associated HTML has the buttons to trigger the sorting:
 
 The associated HTML has the buttons to trigger the sorting:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to jrio.js -->
@@ -1853,7 +1853,7 @@ The associated HTML has the buttons to trigger the sorting:
 
 This example shows how to sort the values in a given row of a crosstab (the columns are rearranged).
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -1908,7 +1908,7 @@ visualize({
 
 This example shows how to sort the values in a given row of a crosstab (the columns are rearranged).
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -1963,7 +1963,7 @@ jrio(function(jrioClient) {
 
 The associated HTML has the buttons to trigger the sorting:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to visualize.js -->
@@ -1979,7 +1979,7 @@ The associated HTML has the buttons to trigger the sorting:
 
 The associated HTML has the buttons to trigger the sorting:
 
-```
+``` html
 <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <!-- Provide the URL to jrio.js -->
@@ -1997,7 +1997,7 @@ The associated HTML has the buttons to trigger the sorting:
 
 The JIVE UI supports a search capability within the report. The following example relies on a page with a simple search input.
 
-```
+``` xml
 <input id="search-query" type="input" />
 <button id="search-button">Search</button>
 <!--Provide container to render your visualization-->
@@ -2006,7 +2006,7 @@ The JIVE UI supports a search capability within the report. The following exampl
 
 The JIVE UI supports a search capability within the report. The following example relies on a page with a simple search input.
 
-```
+``` xml
 <input id="search-query" type="input" />
 <button id="search-button">Search</button>
 <!--Provide container to render your visualization-->
@@ -2015,7 +2015,7 @@ The JIVE UI supports a search capability within the report. The following exampl
 
 Then you can use the search function to return a list of matches in the report. In this example, the search button triggers the function and passes the search term. It uses the console to display the results, but you can use them to locate the search term in a paginated report.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -2055,7 +2055,7 @@ visualize({
 
 Then you can use the search function to return a list of matches in the report. In this example, the search button triggers the function and passes the search item. It uses the console to display the results, but you can use them to locate the search term in a paginated report.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -2092,7 +2092,7 @@ jrio(function(jrioClient) {
 
 The search function supports several arguments to refine the search:
 
-```
+``` javascript
     $("#search-button").click(function(){
         report
         .search({
@@ -2107,7 +2107,7 @@ The search function supports several arguments to refine the search:
 
 The JIVE UI also supports bookmarks that are embedded within the report. You must create your report with bookmarks, but then Visualize.js can make them available on your page. The following example has a container for the bookmarks and one for the report:
 
-```
+``` html
 <div>
     <h4>Bookmarks</h4>
     <div id="bookmarksContainer"></div>
@@ -2118,7 +2118,7 @@ The JIVE UI also supports bookmarks that are embedded within the report. You mus
 
 The JIVE UI also supports bookmarks that are embedded within the report. You must create your report with bookmarks, but then the JasperReports IO JavaScript API can make them available on your page. The following example has a container for the bookmarks and one for the report:
 
-```
+``` html
 <div>
     <h4>Bookmarks</h4>
     <div id="bookmarksContainer"></div>
@@ -2129,7 +2129,7 @@ The JIVE UI also supports bookmarks that are embedded within the report. You mus
 
 Then you need a function to read the bookmarks in the report and place them in the container. A handler then responds to clicks on the bookmarks.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -2179,7 +2179,7 @@ visualize({
 
 Then you need a function to read the bookmarks in the report and place them in the container. A handler then responds to clicks on the bookmarks.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -2226,7 +2226,7 @@ jrio(function(jrioClient) {
 
 The JIVE UI is enabled by default on all reports that support it. When the JIVE UI is disabled, the report is static and neither users nor your script can interact with the report elements. You can disable it in your `visualize.report` call as shown in the following example:
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -2244,7 +2244,7 @@ visualize({
 
 The JIVE UI is enabled by default on all reports that support it. When the JIVE UI is disabled, the report is static and neither users nor your script can interact with the report elements. You can disable it in your `jrioClient.report` call as shown in the following example:
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -2262,7 +2262,7 @@ jrio(function(jrioClient) {
 
 Associated HTML:
 
-```
+``` html
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
 <p>JIVE UI is disabled on this Visualize.js report:</p>
 <div id="reportContainer">Loading...</div>
@@ -2270,7 +2270,7 @@ Associated HTML:
 
 Associated HTML:
 
-```
+``` html
 <script src="http://bi.example.com:8080/jriojsapi/client/jrio.js"></script>
 <p>JIVE UI is disabled on this report:</p>
 <div id="reportContainer">Loading...</div>

@@ -82,21 +82,21 @@ Before building the Docker images, edit the .env file to specify the following p
 
 The recommended way to build the Docker images for the Scalable Query Engine is to use `docker-compose` command as follows:
 
-```
+``` bash
 cd <js-install>/jaspersoft-containers/Docker/scalableQueryEngine
 docker-compose build
 ```
 
 If there is an error such as "requested access to the resource is denied," then run the following commands:
 
-```
+``` bash
 sudo gpasswd -a $USER docker
 newgrp docker
 ```
 
 Alternatively, you can also build the Docker images with the following commands:
 
-```
+``` bash
 cd <js-install>
 docker build -t scalable-query-engine:<docker-tag>
              -f jaspersoft-containers/Docker/scalableQueryEngine/Dockerfile .

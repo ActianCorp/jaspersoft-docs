@@ -48,38 +48,47 @@ Create a report
 To create the report for the chart
 
 1.  Create a new, blank report using the Sample DB data adapter and the query: `select * from PRODUCT`.
+
 2.  Click **Next**.
+
 3.  Click ![jss icon select all fields](../assets/images/jss-icon-select-all-fields.png) to select all fields, then click **Finish**.
+
 4.  Delete all bands except for **Column Header** and **Details**.
+
 5.  In the **Outline** view, expand the **Fields** node, select all fields, and drag them to the **Detail** band.
 
-The fields are added to the detail band and headers are automatically added to the **Column Header** band.
+    The fields are added to the detail band and headers are automatically added to the **Column Header** band.
 
-1.  Drag to select the fields in the **Detail** band, right-click, and select **Align in Container \> Align to Top Margin**. Then double-click the detail band to resize it to fit the fields.
+6.  Drag to select the fields in the **Detail** band, right-click, and select **Align in Container \> Align to Top Margin**. Then double-click the detail band to resize it to fit the fields.
 
 Set properties on a text field
 
 1.  Select the `$F{COST}` field in the **Detail** band.
+
 2.  Set the `Cost` field to display as currency. In the **Properties** view, select the **Text Field** tab and click **...**
+
 3.  In the **Pattern Property** textbox, enter the following expression:
 
-`$###,###.00`
+    `$###,###.00`
 
-1.  Select the **Appearance** tab in the **Properties** view and click **Edit Properties** at the bottom of the view.
-2.  To see properties related to color, type `color `in the search bar.
+4.  Select the **Appearance** tab in the **Properties** view and click **Edit Properties** at the bottom of the view.
 
-|  |
-|----|
-| ![jss elements properties result](../assets/images/jss-elements-properties-result.png) |
-| *Figure 2: Properties dialog for a report* |
+5.  To see properties related to color, type `color `in the search bar.
 
-1.  Click the expression editor icon next to **net.sf.jasperreports.style.forecolor** to open the expression editor.
-2.  Select **Use Expression** and enter the following expression:
+    |  |
+    |----|
+    | ![jss elements properties result](../assets/images/jss-elements-properties-result.png) |
+    | *Figure 2: Properties dialog for a report* |
 
-`$F{COST}.compareTo(new BigDecimal(10)) > 0 ? "#FF0000" :"#000000"`
+6.  Click the expression editor icon next to **net.sf.jasperreports.style.forecolor** to open the expression editor.
 
-1.  Click **Finish**.
-2.  Click **Preview** to view the report.
+7.  Select **Use Expression** and enter the following expression:
+
+    `$F{COST}.compareTo(new BigDecimal(10)) > 0 ? "#FF0000" :"#000000"`
+
+8.  Click **Finish**.
+
+9.  Click **Preview** to view the report.
 
 ## Variables in Property Names
 
@@ -103,7 +112,7 @@ You can create multiple properties with this prefix and set column names for eac
 
 For instance, in a report you can have:
 
-```
+``` xml
 <property name="net.sf.jasperreports.export.csv.column.names.1" value="id,name,department"/>
 <property name="net.sf.jasperreports.export.csv.column.names.2" value="address"/>
 ```
@@ -126,7 +135,7 @@ The `{arbitrary_name}` suffix can be any name you choose. The following code giv
 
 You can use multiple properties with the same prefix for dynamic properties. For example, you could generate column names from two different parameters:
 
-```
+``` xml
 <propertyExpression name="net.sf.jasperreports.export.csv.column.names.db.columns">
    <![CDATA[$P{columns1}]]>
 </propertyExpression>
@@ -134,7 +143,7 @@ You can use multiple properties with the same prefix for dynamic properties. For
 
 and
 
-```
+``` xml
 <propertyExpression name="net.sf.jasperreports.export.csv.column.names.additional.columns">
     <![CDATA[$P{other_columns}]]>
 </propertyExpression>

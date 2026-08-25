@@ -40,11 +40,16 @@ Prerequisite: Export all the data as described in [Exporting Current Repository 
 To migrate from Compact installation to Split installation (newdb):
 
 1.  Configure the settings in the `default_master.properties` file as described in [Additional Buildomatic Configuration for Split Installation Upgrade](jrs-install-guide/introduction/installation_types.md).
+
 2.  Run the following command to migrate from Compact to Split and import the resources:
+
     - Windows:
+
       - `js-migrate-to-split-newdb.bat js-<ver>-export.zip` (Migrate without the Audit, Access, and Log Monitoring data)
       - `js-migrate-to-split-newdb.bat js-<ver>-export.zip include-access-events include-audit-events include-monitoring-events` (Migrate with the Audit, Access, and Log Monitoring data)
+
     - Linux and Mac OSX:
+
       - `./js-migrate-to-split-newdb.sh js-<ver>-export.zip` (Migrate without the Audit, Access, and Log Monitoring data)
       - `./js-migrate-to-split-newdb.sh js-<ver>-export.zip include-access-events include-audit-events include-monitoring-events` (Migrate with the Audit, Access, and Log Monitoring data)
 

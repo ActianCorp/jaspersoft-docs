@@ -16,36 +16,37 @@ Jaspersoft Studio provides a simple UI for applying chart customizers. This incl
 To apply an existing customizer to a chart:
 
 1.  Select your chart in **Design** view.
+
 2.  On the **Chart** tab of the **Properties** view, click **Add** next to the **Chart Customizers** section.
 
-The **Select the newChart Customizer** dialog is displayed. By default, only chart customizers that support your current chart type are shown.
+    The **Select the newChart Customizer** dialog is displayed. By default, only chart customizers that support your current chart type are shown.
 
-|  |
-|----|
-| ![jss chart customizer select](../assets/images/jss-chart-customizer-select.png) |
-| *Figure 1: Chart customizer selection dialog* |
+    |  |
+    |----|
+    | ![jss chart customizer select](../assets/images/jss-chart-customizer-select.png) |
+    | *Figure 1: Chart customizer selection dialog* |
 
-1.  Select a chart customizer from the list.
+3.  Select a chart customizer from the list.
 
-If the customizer is configurable and has a user interface, the **Next** button is available. Otherwise, the **Finish** button is available.
+    If the customizer is configurable and has a user interface, the **Next** button is available. Otherwise, the **Finish** button is available.
 
-1.  Click **Next** if it is available.
+4.  Click **Next** if it is available.
 
-The user interface for the customizer is displayed. For example, the interface for **Legend Shape** is shown below.
+    The user interface for the customizer is displayed. For example, the interface for **Legend Shape** is shown below.
 
-|  |
-|----|
-| ![jss chart customizer json ui](../assets/images/jss-chart-customizer-json-ui.png) |
-| *Figure 2: User interface for a chart customizer* |
+    |  |
+    |----|
+    | ![jss chart customizer json ui](../assets/images/jss-chart-customizer-json-ui.png) |
+    | *Figure 2: User interface for a chart customizer* |
 
-1.  Fill in the properties as prompted by the user interface. For example, the following values for **Legend Shape** change the legend to a circle:
+5.  Fill in the properties as prompted by the user interface. For example, the following values for **Legend Shape** change the legend to a circle:
 
-- **Apply to**: All Items
-- **Shape Type**: Ellipse
-- **Width**: 10
-- **Height**: 10
+    - **Apply to**: All Items
+    - **Shape Type**: Ellipse
+    - **Width**: 10
+    - **Height**: 10
 
-1.  Click **Finish**.
+6.  Click **Finish**.
 
 The customizer selection dialog is closed and the customizer is applied to your chart. Click **Preview** to view your chart.
 
@@ -59,12 +60,14 @@ The customizer selection dialog is closed and the customizer is applied to your 
 You can add a customizer to a chart in an earlier version of Jaspersoft Studio using advanced properties. You cannot add more than one customizer and the customizer cannot be configurable. For more information about creating a customizer jar, see 1.1.3, “Creating a Chart Customizer,” on page 1:
 
 1.  Add the customizer jar to your classpath.
+
 2.  Select the chart in **Design** view.
+
 3.  In the **Advanced** tab of the **Properties** view, click **…** next to **Common Chart Properties \>Customizer Class**.
 
-The **Open Type** dialog is displayed.
+    The **Open Type** dialog is displayed.
 
-1.  Enter the name of your class in the **Open Type** dialog and click **OK**.
+4.  Enter the name of your class in the **Open Type** dialog and click **OK**.
 
 ## Creating a Chart Customizer
 
@@ -244,9 +247,13 @@ A JSON file for a chart customizer has the following members:
 Chart Codes for supportedPlot in JSON Files
 
 - `sections`: Property that controls the display of the user interface. Has the following attributes:
+
   - `name`: Name for the user interface dialog.
+
   - `expandable`: Boolean; for chart customizers, always set to `false`.
+
   - `properties`: Attribute that contains sections to define each entry box in the user interface. Each entry box has the following attributes:
+
     - `name`: Name of the argument to pass to the customizer class.
     - `label`: Name that appears in the user interface.
     - `description`: Tooltip that appears on hover.
@@ -259,7 +266,7 @@ Chart Codes for supportedPlot in JSON Files
 
     To add a non-configurable customizer, use an empty list for the properties. For example:
 
-    ```
+    ``` text
       "sections": [
             {
                 "name": "Customizer configuration",

@@ -26,14 +26,15 @@ To create a font extension
 This example uses two external Google fonts, Amaranth (a Latin-only font) and Lobster (supports Latin and Cyrillic characters). If you do not have these fonts available, you can work with other fonts. However, you must have the correct license to embed your fonts in a PDF.
 
 1.  Make sure that the font files for the fonts have been downloaded and decompressed. You can also use fonts from a URL.
+
 2.  Click **Add from Path** to open the **Fonts Path** dialog.
 
-|                                                               |
-|---------------------------------------------------------------|
-| ![jss fonts from path](assets/images/jss-fonts-from-path.png) |
-| *Figure 2: Adding fonts from a path*                          |
+    |                                                               |
+    |---------------------------------------------------------------|
+    | ![jss fonts from path](assets/images/jss-fonts-from-path.png) |
+    | *Figure 2: Adding fonts from a path*                          |
 
-1.  Click **...** and browse to the folder that contains the fonts you want, then click **Finish**.
+3.  Click **...** and browse to the folder that contains the fonts you want, then click **Finish**.
 
 Jaspersoft Studio loads all the fonts at that location, extracts the font family name embedded in the font files, and displays all the extracted fonts in the **Preferences** dialog.
 
@@ -47,19 +48,19 @@ To create a font set
 
 1.  In the **Font** section of the **Preferences** dialog, select the fonts you want in your set.
 
-|                                                                         |
-|-------------------------------------------------------------------------|
-| ![jss fonts select for set](assets/images/jss-fonts-select-for-set.png) |
-| *Figure 3: Selecting font extensions*                                   |
+    |                                                                         |
+    |-------------------------------------------------------------------------|
+    | ![jss fonts select for set](assets/images/jss-fonts-select-for-set.png) |
+    | *Figure 3: Selecting font extensions*                                   |
 
-1.  Click **Create Font Set**. The **Font Set** dialog is displayed.
+2.  Click **Create Font Set**. The **Font Set** dialog is displayed.
 
-|                                               |
-|-----------------------------------------------|
-| ![jss fontset](assets/images/jss-fontset.png) |
-| *Figure 4: Font Set dialog*                   |
+    |                                               |
+    |-----------------------------------------------|
+    | ![jss fontset](assets/images/jss-fontset.png) |
+    | *Figure 4: Font Set dialog*                   |
 
-1.  Enter a name for your font set and click **OK**. This example uses **SampleFontSet**.
+3.  Enter a name for your font set and click **OK**. This example uses **SampleFontSet**.
 
 The new font set is displayed in the font list.
 
@@ -69,29 +70,29 @@ Configure fonts in a font set
 
 1.  Expand the font set to display the names of the individual font extensions.
 
-|                                                                   |
-|-------------------------------------------------------------------|
-| ![jss font set expanded](assets/images/jss-font-set-expanded.png) |
-| *Figure 5: Fonts window with expanded font set*                   |
+    |                                                                   |
+    |-------------------------------------------------------------------|
+    | ![jss font set expanded](assets/images/jss-font-set-expanded.png) |
+    | *Figure 5: Fonts window with expanded font set*                   |
 
-1.  Select **Lobster** and click **Edit** or double-click **Lobster**.
+2.  Select **Lobster** and click **Edit** or double-click **Lobster**.
 
-The **Font Set Family** dialog is displayed.
+    The **Font Set Family** dialog is displayed.
 
-|  |
-|----|
-| ![jss font set family exclude](assets/images/jss-font-set-family-exclude.png) |
-| *Figure 6: Font Set Family dialog* |
+    |  |
+    |----|
+    | ![jss font set family exclude](assets/images/jss-font-set-family-exclude.png) |
+    | *Figure 6: Font Set Family dialog* |
 
-1.  To prevent Lobster from being used by Latin characters, click **Add** next to the **Exclude Scripts** list.
+3.  To prevent Lobster from being used by Latin characters, click **Add** next to the **Exclude Scripts** list.
 
-The **Scripts name** dialog is displayed.
+    The **Scripts name** dialog is displayed.
 
-1.  Select **Latin** in the **Scripts Name** dialog and click **OK**.
+4.  Select **Latin** in the **Scripts Name** dialog and click **OK**.
 
-Latin is added to the list of excluded scripts.
+    Latin is added to the list of excluded scripts.
 
-1.  Click **OK** to close the **Scripts Name** dialog; click **OK** again to close the **Font Set Family** dialog and click **OK** a third time to close the **Preference** dialog.
+5.  Click **OK** to close the **Scripts Name** dialog; click **OK** again to close the **Font Set Family** dialog and click **OK** a third time to close the **Preference** dialog.
 
 ## Using Font Extensions in a Report
 
@@ -101,80 +102,77 @@ Create a report with a local data adapter
 
 1.  Export the **One Empty Record** adapter to your project. To do this:
 
-<!-- -->
+    1.  In the **Repository Explorer**, right-click the **One Empty Record** adapter and select **Export to File**.
 
-1.  In the **Repository Explorer**, right-click the **One Empty Record** adapter and select **Export to File**.
+    |                                                                       |
+    |-----------------------------------------------------------------------|
+    | ![jss data adapter export](assets/images/jss-data-adapter-export.png) |
+    | *Figure 7: Exporting a global data adapter*                           |
 
-|                                                                       |
-|-----------------------------------------------------------------------|
-| ![jss data adapter export](assets/images/jss-data-adapter-export.png) |
-| *Figure 7: Exporting a global data adapter*                           |
+2.  Select the project that you want and click **OK**.
 
-1.  Select the project that you want and click **OK**.
+    A data adapter file is created in your project.
 
-A data adapter file is created in your project.
+3.  Go to **File \> New \> Jasper Report** or click ![jss icon new report](assets/images/jss-icon-new-report.png) on the main toolbar.
 
-1.  Go to **File \> New \> Jasper Report** or click ![jss icon new report](assets/images/jss-icon-new-report.png) on the main toolbar.
-2.  In the **New Report Wizard** window, select a blank template, such as the **Blank A4** template, then click **Next**.
-3.  Select the project folder with the data adapter file you just created, give the report a name, and click **Next**.
-4.  On the **Data Source** page, select the **One Empty Record - \[OneEmptyRecord.jrdax\]** adapter. Make sure to select this adapter, which is local, and not the **One Empty Record** adapter that is selected by default.
+4.  In the **New Report Wizard** window, select a blank template, such as the **Blank A4** template, then click **Next**.
 
-|                                                                     |
-|---------------------------------------------------------------------|
-| ![jss data adapter local](assets/images/jss-data-adapter-local.png) |
-| *Figure 8: Selecting the local data adapter*                        |
+5.  Select the project folder with the data adapter file you just created, give the report a name, and click **Next**.
 
-1.  Click **Finish**.
+6.  On the **Data Source** page, select the **One Empty Record - \[OneEmptyRecord.jrdax\]** adapter. Make sure to select this adapter, which is local, and not the **One Empty Record** adapter that is selected by default.
 
-<!-- -->
+    |                                                                     |
+    |---------------------------------------------------------------------|
+    | ![jss data adapter local](assets/images/jss-data-adapter-local.png) |
+    | *Figure 8: Selecting the local data adapter*                        |
 
-1.  Set the default data adapter for the report:
+7.  Click **Finish**.
 
-<!-- -->
+8.  Set the default data adapter for the report:
 
-1.  Select the report node in the **Outline** view.
+    1.  Select the report node in the **Outline** view.
+    2.  In the **Properties** view for the report, on the **Report** tab, scroll down to **Dataset \> Default Data Adapter** and click **...**
+    3.  In the **Open Data Adapter** dialog, select **Custom Value**.
+    4.  Enter **OneEmptyRecord.jrdax** in the **Path** entry box.
 
-<!-- -->
+    |                                                                         |
+    |-------------------------------------------------------------------------|
+    | ![jss data adapter default](assets/images/jss-data-adapter-default.png) |
+    | *Figure 9: Default Data Adapter*                                        |
 
-1.  In the **Properties** view for the report, on the **Report** tab, scroll down to **Dataset \> Default Data Adapter** and click **...**
-2.  In the **Open Data Adapter** dialog, select **Custom Value**.
-3.  Enter **OneEmptyRecord.jrdax** in the **Path** entry box.
-
-|                                                                         |
-|-------------------------------------------------------------------------|
-| ![jss data adapter default](assets/images/jss-data-adapter-default.png) |
-| *Figure 9: Default Data Adapter*                                        |
-
-1.  Click **Finish**.
+9.  Click **Finish**.
 
 Create a report with multi-lingual text
 
 1.  Create a report with a blank template.
+
 2.  Drag the Static Text element ![jss icon static text](assets/images/jss-icon-static-text.png) into the Title band of the report.
+
 3.  Enter English and Cyrillic text in the element you just created:
 
-Report **Отчёт**
+    Report **Отчёт**
 
-1.  Select the element.
-2.  Expand the **Font** menu on the **Static Text** tab of the **Properties** View for the static text element.
+4.  Select the element.
 
-The menu is divided into two sections. Installed font extensions or font sets appear above the line. Fonts below the line are not installed as font extensions. In this example, Amaranth, Lobster, and SampleFontSet are all above the line.
+5.  Expand the **Font** menu on the **Static Text** tab of the **Properties** View for the static text element.
 
-|                                                           |
-|-----------------------------------------------------------|
-| ![jss font set menu](assets/images/jss-font-set-menu.png) |
-| *Figure 10: Font menu with font extensions*               |
+    The menu is divided into two sections. Installed font extensions or font sets appear above the line. Fonts below the line are not installed as font extensions. In this example, Amaranth, Lobster, and SampleFontSet are all above the line.
 
-The default font used for a new static text element is SansSerif. This font does support for extended characters, but because it is a Java logical font that is translated to a physical font by the JVM, you will not know what font is selected when the report is run.
+    |                                                           |
+    |-----------------------------------------------------------|
+    | ![jss font set menu](assets/images/jss-font-set-menu.png) |
+    | *Figure 10: Font menu with font extensions*               |
 
-1.  Select **SampleFontSet** from the **Font** menu and **24** from the size menu next to it. Then resize the static text element so it is large enough to display the text.
+    The default font used for a new static text element is SansSerif. This font does support for extended characters, but because it is a Java logical font that is translated to a physical font by the JVM, you will not know what font is selected when the report is run.
 
-|                                                                         |
-|-------------------------------------------------------------------------|
-| ![jss font set design view](assets/images/jss-font-set-design-view.png) |
-| *Figure 11: Font set in design view*                                    |
+6.  Select **SampleFontSet** from the **Font** menu and **24** from the size menu next to it. Then resize the static text element so it is large enough to display the text.
 
-1.  Save and preview the report. The license for these fonts lets you preview the report as a PDF.
+    |                                                                         |
+    |-------------------------------------------------------------------------|
+    | ![jss font set design view](assets/images/jss-font-set-design-view.png) |
+    | *Figure 11: Font set in design view*                                    |
+
+7.  Save and preview the report. The license for these fonts lets you preview the report as a PDF.
 
 |                                                                 |
 |-----------------------------------------------------------------|
@@ -217,31 +215,36 @@ Add the font set as a jar on your JasperReports Server instance
 
 1.  On the machine hosting your JasperReports Server instance, enable font support by adding the following to your `<js-install>\WEB-INF\classes\jasperreports.properties` file:
 
-`net.sf.jasperreports.web.resource.pattern.fonts=fonts/.*`
+    `net.sf.jasperreports.web.resource.pattern.fonts=fonts/.*`
 
-!!! note
+    !!! note
 
-    You only have to enable font support once.
+        You only have to enable font support once.
 
-1.  Add the exported font set jar to your `<js-install>WEB-INF\lib` directory.
-2.  Stop and restart your JasperReports Server instance. See the JasperReports Server Installation Guide for more information.
+2.  Add the exported font set jar to your `<js-install>WEB-INF\lib` directory.
+
+3.  Stop and restart your JasperReports Server instance. See the JasperReports Server Installation Guide for more information.
 
 Upload the font set as a resource
 
 You can attach the resource directly to the report, or you can upload it to another location, for example the report directory and link the report to it. Uploading a resource to another location makes it easier to reuse the resource.
 
 1.  In the Repository Explorer in Jaspersoft Studio, navigate to the folder on your JasperReports Server instance where you want to add this resource. For this example, it is the **Public \> Samples \> Resources** folder.
+
 2.  Right-click the folder and select **New** from the cascading menu.
 
-|                                                                         |
-|-------------------------------------------------------------------------|
-| ![jss jss2jrs add resource](assets/images/jss-jss2jrs-add-resource.png) |
-| *Figure 13: Adding a resource in the Repository Explorer*               |
+    |                                                                         |
+    |-------------------------------------------------------------------------|
+    | ![jss jss2jrs add resource](assets/images/jss-jss2jrs-add-resource.png) |
+    | *Figure 13: Adding a resource in the Repository Explorer*               |
 
-1.  Select a **Jar** in the **Add Resource** wizard and click **Next**.
-2.  Enter a name and ID for your jar and click **Next**.
-3.  Select **Upload from File System**, select the jar you want, and click **Open**.
-4.  Click **Finish** to upload the selected jar.
+3.  Select a **Jar** in the **Add Resource** wizard and click **Next**.
+
+4.  Enter a name and ID for your jar and click **Next**.
+
+5.  Select **Upload from File System**, select the jar you want, and click **Open**.
+
+6.  Click **Finish** to upload the selected jar.
 
 Add the resource to your report
 

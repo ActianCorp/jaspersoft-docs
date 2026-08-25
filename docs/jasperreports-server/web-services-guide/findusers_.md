@@ -19,7 +19,7 @@ To call `findUsers`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSUserSearchCriteria searchCriteria = new WSUserSearchCriteria();
+<td><div class="language-text highlight"><pre><code>WSUserSearchCriteria searchCriteria = new WSUserSearchCriteria();
   searchCriteria.setName(“demo”);
   searchCriteria.setTenantId(“organization_1”); // Name of orga  nization or null
   searchCriteria.setMaxRecords(5);
@@ -29,7 +29,7 @@ WSRole role = new WSRole();
 role.setRoleName(&quot;ROLE_USER&quot;);
 role.setTenantId(null);
 searchCriteria.setRequiredRoles(new WSRole[] {role});
-WSUser[] list = binding.findUsers(searchCriteria);</code></pre></td>
+WSUser[] list = binding.findUsers(searchCriteria);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -42,7 +42,7 @@ The return is:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String getUsername()
+<td><div class="language-text highlight"><pre><code>String getUsername()
 String getFullName()
 String getPassword()
 String getEmailAddress()
@@ -53,7 +53,7 @@ String getTenantId()
 WSRole[] getRoles()
 String getRoleName()
 String getTenantId()
-WSUser[] getUsers()</code></pre></td>
+WSUser[] getUsers()</code></pre></div></td>
 </tr>
 </tbody>
 </table>

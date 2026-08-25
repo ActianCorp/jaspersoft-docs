@@ -37,28 +37,34 @@ For more information about Cassandra, see <http://cassandra.apache.org/>.
 ## Creating a Cassandra Data Source with the Native Cassandra Driver
 
 1.  Log on as an administrator.
+
 2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The New Data Source page appears.
+
 3.  In the Type field, select **Cassandra Data Source**. The information on the page changes to reflect what's needed to define a Cassandra data source.
 
-You have the option to use attributes in the values of data source parameters. See ["Attributes in Data Source Definitions"](attributes_in_data_source_definitions.md).
+    You have the option to use attributes in the values of data source parameters. See ["Attributes in Data Source Definitions"](attributes_in_data_source_definitions.md).
 
-![js DataSource Cassandra](../assets/images/js-DataSource-Cassandra.png)
+    ![js DataSource Cassandra](../assets/images/js-DataSource-Cassandra.png)
 
-Cassandra Data Source Page
+    Cassandra Data Source Page
 
-1.  Fill in the required fields, along with any optional information you choose.
+4.  Fill in the required fields, along with any optional information you choose.
 
-Use port 9042 with the Cassandra data source. Cassandra's default port of 9160 is for the Thrift client that is commonly used with Cassandra. To use the Cassandra Query Language (CQL) with our Cassandra data source, you may need to configure your Cassandra instance as follows:
+    Use port 9042 with the Cassandra data source. Cassandra's default port of 9160 is for the Thrift client that is commonly used with Cassandra. To use the Cassandra Query Language (CQL) with our Cassandra data source, you may need to configure your Cassandra instance as follows:
 
-`start_native_transport: true`
+    `start_native_transport: true`
 
-`native_transport_port: 9042`
+    `native_transport_port: 9042`
 
-1.  If you have configured your Cassandra source to be password protected, specify a valid username and password. Due to compatibility issues, Cassandra authentication is supported only when you use Cassandra 1.12.18 and above.
-2.  Click **Test Connection** to check the values you entered. Make sure that the port is set to 9042, because the connection test will also work with the wrong port (9160).
-3.  When done, click **Save**. The Save dialog appears.
-4.  Enter a name for the data source and an optional description. The Resource ID is generated from the name you enter. If you haven't already specified a location, expand the folder tree and select the location for your data source.
-5.  Click **Save** in the dialog. The data source appears in the repository.
+5.  If you have configured your Cassandra source to be password protected, specify a valid username and password. Due to compatibility issues, Cassandra authentication is supported only when you use Cassandra 1.12.18 and above.
+
+6.  Click **Test Connection** to check the values you entered. Make sure that the port is set to 9042, because the connection test will also work with the wrong port (9160).
+
+7.  When done, click **Save**. The Save dialog appears.
+
+8.  Enter a name for the data source and an optional description. The Resource ID is generated from the name you enter. If you haven't already specified a location, expand the folder tree and select the location for your data source.
+
+9.  Click **Save** in the dialog. The data source appears in the repository.
 
 ## Increasing File Descriptor Limits for Cassandra
 
@@ -82,7 +88,7 @@ The effects of the commands above will be reset when the computer restarts. To m
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>* soft nofile 32768
+<td><div class="language-text highlight"><pre><code>* soft nofile 32768
 * hard nofile 32768
 root soft nofile 32768
 root hard nofile 32768
@@ -93,7 +99,7 @@ root hard memlock unlimited
 * soft  unlimited
 * hard unlimited
 root soft unlimited
-root hard unlimited</code></pre></td>
+root hard unlimited</code></pre></div></td>
 </tr>
 </tbody>
 </table>

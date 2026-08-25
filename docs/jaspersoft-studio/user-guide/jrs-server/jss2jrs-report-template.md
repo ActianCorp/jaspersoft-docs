@@ -22,41 +22,41 @@ It's easiest to start with a template in JasperReports Server and change its pro
 To create a template
 
 1.  Connect to JasperReports Server as `superuser`.
+
 2.  In the **Repository Explorer**, navigate to the **Public/Templates** directory.
 
-|  |
-|----|
-| ![jss Repository Templates](../assets/images/jss-Repository-Templates.png) |
-| *Figure 1: Accessing the Templates directory from Jaspersoft Studio* |
+    |  |
+    |----|
+    | ![jss Repository Templates](../assets/images/jss-Repository-Templates.png) |
+    | *Figure 1: Accessing the Templates directory from Jaspersoft Studio* |
 
-1.  Right-click **A4 Landscape** and choose **Open in Editor**.
+3.  Right-click **A4 Landscape** and choose **Open in Editor**.
 
-|  |
-|----|
-| ![jss templates a4landscape](../assets/images/jss-templates-a4landscape.png) |
-| *Figure 2: Default A4 landscape template* |
+    |  |
+    |----|
+    | ![jss templates a4landscape](../assets/images/jss-templates-a4landscape.png) |
+    | *Figure 2: Default A4 landscape template* |
 
-The document will look empty, but if you click the **Source** tab, you see that attributes are set at the JRXML level. Note the attributes for ChartTitle:
+    The document will look empty, but if you click the **Source** tab, you see that attributes are set at the JRXML level. Note the attributes for ChartTitle:
 
-`<style name="ChartTitle" forecolor="#000000" fontName="DejaVu Sans" fontSize="12" isBold="true"/>`
+    `<style name="ChartTitle" forecolor="#000000" fontName="DejaVu Sans" fontSize="12" isBold="true"/>`
 
-You can edit styles directly on the **Source** tab if you choose.
+    You can edit styles directly on the **Source** tab if you choose.
 
-1.  Click the **Design** tab and in the **Outline** view, click the arrow next to **Styles**.
-2.  Click **ChartTitle**. The styles open in the **Properties** view.
+4.  Click the **Design** tab and in the **Outline** view, click the arrow next to **Styles**.
 
-|  |
-|----|
-| ![jss templates styles properties](../assets/images/jss-templates-styles-properties.png) |
-| *Figure 3: Style tab in Properties view* |
+5.  Click **ChartTitle**. The styles open in the **Properties** view.
 
-1.  Make these changes:
-2.  Font: Century Gothic, 14 pt, bold, italic.
+    |  |
+    |----|
+    | ![jss templates styles properties](../assets/images/jss-templates-styles-properties.png) |
+    | *Figure 3: Style tab in Properties view* |
 
-<!-- -->
+6.  Make these changes:
 
-1.  Change the forecolor to red (click **Appearance** for that change.)
-2.  Alignment: Center
+    1.  Font: Century Gothic, 14 pt, bold, italic.
+    2.  Change the forecolor to red (click **Appearance** for that change.)
+    3.  Alignment: Center
 
 !!! note
 
@@ -65,16 +65,17 @@ You can edit styles directly on the **Source** tab if you choose.
 To save and publish a template
 
 1.  Save the template with a new name.
+
 2.  Click **Yes** in the pop-up to publish the report to JasperReports Server.
 
-The **Report Publishing Wizard** appears.
+    The **Report Publishing Wizard** appears.
 
-|  |
-|----|
-| ![jss templates publishwizard](../assets/images/jss-templates-publishwizard.png) |
-| *Figure 4: Report Publishing wizard* |
+    |  |
+    |----|
+    | ![jss templates publishwizard](../assets/images/jss-templates-publishwizard.png) |
+    | *Figure 4: Report Publishing wizard* |
 
-1.  Select a folder to store your template, and click **Next**.
+3.  Select a folder to store your template, and click **Next**.
 
 ## Report Template Styles in Jaspersoft Studio
 

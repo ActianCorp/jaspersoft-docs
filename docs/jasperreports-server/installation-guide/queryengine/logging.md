@@ -9,7 +9,7 @@ There are several ways to collect and analyze logs from the Ad Hoc workers runni
 
 Log levels using Log4j2 can be set in values.yaml or using the following command line:
 
-```
+``` text
 helm --set logging.level=DEBUG
 ```
 
@@ -23,7 +23,7 @@ The scalable query engine can use Fluentd to collect logs from all running worke
 
 First you should download the Fluentd package with the following commands:
 
-```
+``` text
 git clone <br>
   --depth 1 <br>
   --filter=blob:none <br>

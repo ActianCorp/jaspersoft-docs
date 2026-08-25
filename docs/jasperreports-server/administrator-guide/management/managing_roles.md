@@ -65,18 +65,21 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 ## Viewing Role Properties
 
 1.  Log in as an administrator (`jasperadmin` in the role's organization or any parent organization, or `superuser`).
+
 2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles. The Manage Roles page displays the roles defined in the server and in each organization and properties for each role.
 
-![js ManageRoles overview](../assets/images/js-ManageRoles-overview.png)
+    ![js ManageRoles overview](../assets/images/js-ManageRoles-overview.png)
 
-*Figure 1: Manage Roles Page*
+    *Figure 1: Manage Roles Page*
 
-> The Roles list includes all roles in the chosen organization and its suborganizations along with the five default system-level roles. The same role name may appear more than once if roles with the same name were created in different organizations. The second column (blank in this figure) gives the organization name of a particular role.
->
-> In this example, the system admin can see all roles in all organizations by selecting the root of the Organization hierarchy.
+    > The Roles list includes all roles in the chosen organization and its suborganizations along with the five default system-level roles. The same role name may appear more than once if roles with the same name were created in different organizations. The second column (blank in this figure) gives the organization name of a particular role.
+    >
+    > In this example, the system admin can see all roles in all organizations by selecting the root of the Organization hierarchy.
 
 3.  To select a role, click its organization in the Organizations panel (Commercial edition users only). The Roles panel displays all the roles.
+
 4.  To filter the list of roles, enter a search string in the search field of the Roles panel. The search results show all of the roles in the selected organization and suborganizations whose names contain the search string. If necessary, scroll through the new list or refine your search.
+
 5.  Select the role in the Roles panel. The role's properties appear in the Properties panel.
 
 > The Properties panel shows the role name, the organization where it's defined, and the users assigned to the role. You can enter a search term to find users in the list. Some user IDs may appear several times because the same ID can exist in different organizations. Hover over a user ID to see a user's full name and organization, as shown in the figure.
@@ -88,13 +91,16 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 ## Creating a Role
 
 1.  Log in as an administrator (`jasperadmin` in the role's intended organization or any parent organization, or `superuser`).
+
 2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles.
+
 3.  In the Organizations panel, select the organization to which the role will belong.
+
 4.  Click **Add Role**. The Add Role dialog appears.
 
-![js ManageRoles AddRole](../assets/images/js-ManageRoles-AddRole.png)
+    ![js ManageRoles AddRole](../assets/images/js-ManageRoles-AddRole.png)
 
-*Figure 2: Adding a Role*
+    *Figure 2: Adding a Role*
 
 5.  Enter the name of the role. The role name is also the role ID and does not accept spaces or special characters.
 
@@ -107,38 +113,45 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 You can assign multiple users to one role. To assign multiple roles to one user, edit the user's properties as described in [Editing a User](managing_users.md).
 
 1.  Log in as an administrator (`jasperadmin` in the role's organization or any parent organization, or `superuser`).
+
 2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles.
+
 3.  In the Organizations panel, select the role's organization.
+
 4.  Select the role in the Roles panel.
 
-!!! note
+    !!! note
 
-    Unless you are logged in as the system admin, you can't edit or delete the five special system-level roles.
+        Unless you are logged in as the system admin, you can't edit or delete the five special system-level roles.
 
 5.  In the Properties panel, click **Edit**. The role's properties become editable.
 
-![js ManageRoles EditRole](../assets/images/js-ManageRoles-EditRole.png)
+    ![js ManageRoles EditRole](../assets/images/js-ManageRoles-EditRole.png)
 
-*Figure 3: Editing the Members of a Role*
+    *Figure 3: Editing the Members of a Role*
 
 6.  Enter a different name to change the role name throughout the server.
 
-!!! warning
+    !!! warning
 
-    Permissions in the repository that use the role name are automatically updated. However, role names in security files for Domains and OLAP are <span>not</span> updated with the new role name and may cause a security risk. If you use security files for Domains or OLAP, do not change role names without verifying the files as well. For more information, see the <span>JasperReports Server User Guide</span>.
+        Permissions in the repository that use the role name are automatically updated. However, role names in security files for Domains and OLAP are not updated with the new role name and may cause a security risk. If you use security files for Domains or OLAP, do not change role names without verifying the files as well. For more information, see the JasperReports Server User Guide.
 
 7.  To assign or remove role users, select the users, and click the arrow buttons between the Users Available and Users Assigned lists. You can enter a search term to find users in the lists. Some user IDs may appear several times because the same ID can exist in different organizations. Hover over a user ID to see a user's full name and organization, as shown in the figure.
+
 8.  Click **Save** to keep your changes, or **Cancel** to quit without saving.
 
 ## Deleting One or More Roles
 
 1.  Log in as an administrator (`jasperadmin` in the role's organization or any parent organization, or `superuser`).
+
 2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles.
+
 3.  In the Organizations panels, select the role's organization. The Roles panel is displayed.
+
 4.  Select the role in the Roles panel. Use Control-click and Shift-click to make multiple selections.
 
-!!! note
+    !!! note
 
-    Unless you're logged in as the system admin, you can't edit or delete the five special system-level roles.
+        Unless you're logged in as the system admin, you can't edit or delete the five special system-level roles.
 
 5.  In the tool bar of the Roles panel, click **Delete** and confirm the action.

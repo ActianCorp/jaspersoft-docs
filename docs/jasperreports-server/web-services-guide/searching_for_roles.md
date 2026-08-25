@@ -33,25 +33,25 @@ The GET method without any role ID searches for and lists role definitions. It h
 <td colspan="2"><p>Description</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>search</code></pre></td>
+<td><div class="language-text highlight"><pre><code>search</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specify a string or substring to match the role ID of any role. The search is not case sensitive.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>user</code></pre></td>
+<td><div class="language-text highlight"><pre><code>user</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specify a username (ID) to list the roles to which this user belongs. Repeat this argument to list all roles of multiple users. In commercial editions with multiple organizations, specify users as &lt;userID&gt;%7C&lt;orgID&gt; (%7C is the | character).</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>hasAllUsers</code></pre></td>
+<td><div class="language-text highlight"><pre><code>hasAllUsers</code></pre></div></td>
 <td><p>Optional<br />
 Boolean</p></td>
 <td colspan="2"><p>When set to true with multiple user arguments, this method returns only the roles to which all specified users belong (intersection of users’ roles). When false or not specified, all roles of all users are found (union of users’ roles).</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>includeSubOrgs</code></pre></td>
+<td><div class="language-text highlight"><pre><code>includeSubOrgs</code></pre></div></td>
 <td><p>Optional<br />
 Boolean</p></td>
 <td colspan="2"><p>Limits the scope of the search or list in commercial editions with multiple tenants. When set to false, the first URL form is limited to the logged-in user’s organization, and the second URL form is limited to the organization specified in the URL. When true or not specified, the scope includes the hierarchy of all child organizations.</p></td>

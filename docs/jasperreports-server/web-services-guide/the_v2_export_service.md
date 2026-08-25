@@ -44,13 +44,13 @@ The content to send describes the export options, for example:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
   roles: [&quot;ROLE_USER&quot;,&quot;ROLE_MANAGER|organization_1&quot;],
   users: [&quot;superuser&quot;,&quot;joeuser|organization_1&quot;],
   uris: [&quot;/public/Samples/Reports/AllAccounts&quot;,
          &quot;/organizations/organization_1/reports/Survey/Survey_Data&quot;]
   parameters: [&quot;role-users&quot;, &quot;repository-permissions&quot;]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -121,11 +121,11 @@ The body of the response contains the ID of the export operation needed to check
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
   id: &quot;njkhfs8374&quot;,
   phase: &quot;inprogress&quot;,
   message: &quot;Progress...&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -138,7 +138,7 @@ The response may also warn you of any broken dependencies in the export that may
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
   id: &quot;njkhfs8374&quot;,
   phase: &quot;inprogress&quot;,
   message: &quot;Progress...&quot;
@@ -150,7 +150,7 @@ The response may also warn you of any broken dependencies in the export that may
         &quot;path_to_broken_resource&quot;]
     }, ...
   ]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>

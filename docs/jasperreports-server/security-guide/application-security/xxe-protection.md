@@ -21,15 +21,18 @@ To enable XXE protection:
 JasperReports Server implements a mechanism to protect against clickjacking attacks. To enable this mechanism, edit the `applicationContext-security-web.xml` configuration file.
 
 1.  Using a text editor, open the `applicationContext-security-web.xml` file (found in `<js-install>\apache-tomcat\webapps\jasperserver-pro\WEB-INF`).
+
 2.  Locate the `antiClickJackingEnabled` property in the `webAppSecurityFilter` bean, and set it to `true`. Setting this property to true instructs JasperReports Server to include an X-Frame-Options header in every response.
+
 3.  You can also set the `antiClickJackingOption` property to control the header value. Valid values are:
 
-- `DENY` - JasperReports Server does not load into any iframe.
-- `SAMEORIGIN` - JasperReports Server only loads into an iframe on a page in the same domain as JasperReports Server.
-- `ALLOW-FROM` - JasperReports Server only loads in a frame on a page specified in the `antiClickJackingUri` property.
+    - `DENY` - JasperReports Server does not load into any iframe.
+    - `SAMEORIGIN` - JasperReports Server only loads into an iframe on a page in the same domain as JasperReports Server.
+    - `ALLOW-FROM` - JasperReports Server only loads in a frame on a page specified in the `antiClickJackingUri` property.
 
-1.  If you set the `antiClickJackingOption` property to `ALLOW-FROM`, also set the `antiClickJackingUri` property to a valid URI.
-2.  Save the file and restart the server.
+4.  If you set the `antiClickJackingOption` property to `ALLOW-FROM`, also set the `antiClickJackingUri` property to a valid URI.
+
+5.  Save the file and restart the server.
 
 !!! note
 

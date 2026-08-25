@@ -98,13 +98,16 @@ You apply conditional formatting much like you do standard column formatting, as
 To create a condition
 
 1.  Run your report, so it opens in the Report Viewer.
+
 2.  Click the header or field of the column that you want to format.
+
 3.  Move your mouse over ![js icon columnOptions](../assets/images/js-icon-columnOptions.png)and click **Formatting**.
+
 4.  Click the **Conditional Formatting** tab. The Conditional Formatting options appear:
 
-![js dialog ConditionalFormatting](../assets/images/js-dialog-ConditionalFormatting.png)
+    ![js dialog ConditionalFormatting](../assets/images/js-dialog-ConditionalFormatting.png)
 
-*Figure 2: Conditional Formatting Tab*
+    *Figure 2: Conditional Formatting Tab*
 
 5.  In the **Apply to** box, select the part of the column you want to apply the formatting to.
 

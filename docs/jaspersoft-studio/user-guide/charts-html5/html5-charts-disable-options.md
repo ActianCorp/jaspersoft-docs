@@ -13,20 +13,20 @@ To disable this option for a chart:
 
 1.  Select the chart element in the **Design or Outline** view.
 
-<!-- -->
+2.  In the **Properties** view for the chart element, click the **Advanced** tab.
 
-1.  In the **Properties** view for the chart element, click the **Advanced** tab.
-2.  Expand the **Misc** section and click **...** next to **Edit Properties**.
+3.  Expand the **Misc** section and click **...** next to **Edit Properties**.
 
-The **Properties** dialog opens.
+    The **Properties** dialog opens.
 
-1.  Click **Add** to add a property.
-2.  Enter the following information:
+4.  Click **Add** to add a property.
 
-- **Name**: `com.jaspersoft.jasperreports.highcharts.interactive`
-- **Value**: `false`
+5.  Enter the following information:
 
-1.  Click **OK** and then click **Finish**.
+    - **Name**: `com.jaspersoft.jasperreports.highcharts.interactive`
+    - **Value**: `false`
+
+6.  Click **OK** and then click **Finish**.
 
 Like many advanced charting options, this option can be set at a higher level. If you set an option at multiple levels, the lowest level is the one that is applied.
 

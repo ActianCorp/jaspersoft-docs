@@ -50,25 +50,33 @@ This section explains how to create an input control in the repository. To refer
 To create an input control:
 
 1.  Log on as an administrator.
+
 2.  Click **View \> Repository** and locate the folder for the input control.
+
 3.  Right-click the folder's name and select **Add Resource \> Input Control** from the context menu. The **Add Input Control** page appears.
 
-![js AddInputControl Create](../assets/images/js-AddInputControl-Create.png)
+    ![js AddInputControl Create](../assets/images/js-AddInputControl-Create.png)
 
 4.  Select the type of input control from the **Type** list. In this example, **Single Value** is selected.
+
 5.  Enter the **Prompt Text** to tell users how to use the control. This example uses the prompt **Select the text for the report title**.
+
 6.  The **Custom Prompt Text** is optional and can be used to explain users how to use the Input Control. It can also be used to provide a customized label for the Input Control instead of **Prompt Text**.<br>
     A tooltip appears when you hover over the question mark icon.
 
-![custom ic custom prompt tooltip](../assets/images/custom-ic-custom-prompt-tooltip.png)
+    ![custom ic custom prompt tooltip](../assets/images/custom-ic-custom-prompt-tooltip.png)
 
 7.  In practice, the **Parameter Text** is often the same as the parameter, so the **Parameter Name** is automatically filled in. If you have used a different prompt, edit the **Parameter Name** field and enter the exact name of the parameter for your control. Remember, the parameter name must be the same here as in the reports that use this input control.<br>
     For this example, the parameter name is **title**.
+
 8.  **Description** is optional.
+
 9.  Select options for the control. Your options are:
+
     - **Mandatory**: Forces the end user to supply a value.
 
     - **Enable/Disable Input Control**: Controls whether you can edit the value of the Input Control. You can choose from the following three options:
+
       - **Enable**: Displays the value of the parameter while allowing you to edit it. By default, **Enable** is selected.
 
       - **Disable**: Displays the value of the parameter while restricting you from editing it.
@@ -96,8 +104,10 @@ To create an input control:
         For information about how to create an input control for custom functions, see [Input Controls for Custom Functions](input_controls_for_custom_functions.md).
 
         The tooltip is also displayed when you hover over the question mark icon next to the **Conditional \>** **Custom Expression** input field.
+
 10. Click **Next**.<br>
       Subsequent pages depend on what type of input control you chose:
+
     - Boolean types do not require any further information.
 
     - Single-value types require a datatype the user can enter.
@@ -105,16 +115,19 @@ To create an input control:
     - Single-select and multi-select types based on static lists require a list of values.
 
     - Single-select and multi-select types based on queries require a query.
+
 11. For information about how to create an input control for custom functions, see [Input Controls for Custom Functions](input_controls_for_custom_functions.md).
+
 12. In this single-value example, the **Locate Datatype** page appears. Choose the option to select a datatype from the repository and click **Browse**. In the **Repository** dialog, select `/datatypes/TextGeneralDatatype`, which is similar to the datatype we created in [Datatypes](datatypes.md).
 
-!!! note
+    !!! note
 
-    If you choose to define a datatype, the wizard takes you through the same procedure as in section [Datatypes](datatypes.md). You can then define any datatype you need, but it is local to the input control and not reusable in other input controls.
+        If you choose to define a datatype, the wizard takes you through the same procedure as in section [Datatypes](datatypes.md). You can then define any datatype you need, but it is local to the input control and not reusable in other input controls.
 
-![js AddInputControl Datatype](../assets/images/js-AddInputControl-Datatype.png)
+    ![js AddInputControl Datatype](../assets/images/js-AddInputControl-Datatype.png)
 
-*Figure 1: Locate a Datatype for an Input Control*
+    *Figure 1: Locate a Datatype for an Input Control*
 
 13. Click **Next**. The input control resource is created in the repository.
+
 14. Locate the input control in the repository manager. Notice that the text of the prompt that you entered in Step 5 is also used as the name for the resource.

@@ -26,14 +26,17 @@ Fusion charts are created in Jaspersoft Studio Professional as JRXML reports and
 To find and run a chart example
 
 1.  In the repository, locate the sample report **14. World Map**.
+
 2.  Click the report name to run the report.
+
 3.  In the **Input Controls** window, select **Food** as the product family that you want to view sales trends for and then click **OK**. The report appears, as shown in “World Map Report with Flash Map”.
 
-![js Report Example WorldMap](../assets/images/js-Report-Example-WorldMap.png)
+    ![js Report Example WorldMap](../assets/images/js-Report-Example-WorldMap.png)
 
-*Figure 1: World Map Report with Flash Map*
+    *Figure 1: World Map Report with Flash Map*
 
 4.  To interact with the map, mouse-over any of the countries to see the full country name and, when it has data, the value for that country.
+
 5.  On the map, click **Canada** to launch the Interactive Sales Report, displaying the information for Canada only. From there, you can modify the underlying report as needed.
 
 To upload JRXML reports, see [Adding Reports Directly to the Repository](../repo-upload-reports/repo-reports-adding.md).

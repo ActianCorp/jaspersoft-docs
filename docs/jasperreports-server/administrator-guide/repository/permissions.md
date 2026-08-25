@@ -125,7 +125,7 @@ As with all other permissions, execute-only permission is either role-based or u
 
 !!! warning
 
-    If you have data or sensitive content in a resource, always set No Access permission for users or roles that must not be able to access it.Hiding a resource with execute-only permission does not protect against access, because malicious users who find the resource ID may be able to create a report<span> or dashboard</span> that extracts the sensitive content.
+    If you have data or sensitive content in a resource, always set No Access permission for users or roles that must not be able to access it.Hiding a resource with execute-only permission does not protect against access, because malicious users who find the resource ID may be able to create a report or dashboard that extracts the sensitive content.
 
 ## Default User Permissions
 
@@ -149,23 +149,25 @@ To set permissions on a folder or resource in the repository
 
     The Permissions dialog opens showing the permissions in effect for the selected object. By default, it first shows the permissions given to roles. Permissions that are inherited from the object's parent are indicated by asterisks (`*`).
 
-![js Permissions byRole](../assets/images/js-Permissions-byRole.png)
+    ![js Permissions byRole](../assets/images/js-Permissions-byRole.png)
 
-*Figure 1: Permissions Dialog Showing Permissions by Role*
+    *Figure 1: Permissions Dialog Showing Permissions by Role*
 
-In systems with multiple organizations, the users and roles displayed include only those within the scope of the user. For example, in the default single organization, the organization admin (`jasperadmin`) can't see the permission for the system admin (`superuser`) or for ROLE_SUPERUSER.
+    In systems with multiple organizations, the users and roles displayed include only those within the scope of the user. For example, in the default single organization, the organization admin (`jasperadmin`) can't see the permission for the system admin (`superuser`) or for ROLE_SUPERUSER.
 
-In the previous figure, you can see the default role-based permissions on the sample Data Source folder as seen by the organization admin (`jasperadmin`). Members of certain roles can see and modify the resources stored in this folder; these roles likely correspond to users such as data analysts. Regular users have execute only permission so they do not see this folder, but the reports they run can access its contents. Administrators are prevented from changing the permission for their administrator role or user name, to prevent them from removing their ability to set permissions.
+    In the previous figure, you can see the default role-based permissions on the sample Data Source folder as seen by the organization admin (`jasperadmin`). Members of certain roles can see and modify the resources stored in this folder; these roles likely correspond to users such as data analysts. Regular users have execute only permission so they do not see this folder, but the reports they run can access its contents. Administrators are prevented from changing the permission for their administrator role or user name, to prevent them from removing their ability to set permissions.
 
 4.  In the dialog, click **User** to view the permissions assigned to specific users. Click **Role** when viewing user permissions to toggle back.
+
 5.  For each user or role, you can select a new permission from the drop-down.<br>
     In the next figure, you can see the default user permissions on this folder. In the default installation, all permissions are defined by role; so, all user permissions are No Access inherited from the root. The figure shows a read-only permission being granted to the sample end user. This enables `joeuser` to see but not modify the Data Sources folder and its contents. For all other end users, the folder is still execute-only due to the settings in Permissions Dialog Showing Permissions by Role.
 
-![js Permissions byUser](../assets/images/js-Permissions-byUser.png)
+    ![js Permissions byUser](../assets/images/js-Permissions-byUser.png)
 
-*Figure 2: Permissions Dialog Showing Permissions by User*
+    *Figure 2: Permissions Dialog Showing Permissions by User*
 
 6.  Click **Apply** to apply your changes. If you toggle between user and role permissions, first apply any changes you made.
+
 7.  Click OK to save your changes and close the permissions dialog when you're finished.<br>
     You can open several permissions dialogs for different resources or folders at the same time while navigating the repository. This helps when trying to set permissions uniformly across several folders or organizations.
 

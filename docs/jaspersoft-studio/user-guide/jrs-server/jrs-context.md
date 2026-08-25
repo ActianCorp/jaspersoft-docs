@@ -14,18 +14,21 @@ When you are developing reports that you plan to publish to JasperReports Server
 To associate a project with a JasperReports Server instance
 
 1.  Go to the Repository Explorer.
+
 2.  Create a server connection by right-clicking **Servers  \> Create JasperReports Server Connection**. Set up your server connection.<br>
     OR<br>
     Edit an existing connection by right-clicking the connection and selecting **Edit JasperReports Server Connection**.
+
 3.  Click to expand the **Advanced Settings** section in the **JasperReports Server Access Configuration**.
 
-|  |
-|----|
-| ![jss jss2jrs workspace folder](../assets/images/jss-jss2jrs-workspace-folder.png) |
-| *Figure 1: Setting a Workspace Folder* |
+    |  |
+    |----|
+    | ![jss jss2jrs workspace folder](../assets/images/jss-jss2jrs-workspace-folder.png) |
+    | *Figure 1: Setting a Workspace Folder* |
 
-1.  In the Workspace Folder section, browse to the project you want to associate with this server instance.
-2.  Click **Finish**.
+4.  In the Workspace Folder section, browse to the project you want to associate with this server instance.
+
+5.  Click **Finish**.
 
 To set the folder context to JasperReports Server
 
@@ -39,16 +42,19 @@ To work with reports from the server
 Once you have associated your server with a project, opening a report from the server copies the folder structure automatically from the server to the project.
 
 1.  Go to your server in the Repository Explorer.
+
 2.  Navigate to the folder that contains your reports. This example uses the **Public \> Samples \> Reports  \> 06. Profit Detail Report**.
+
 3.  Expand the folder for your report. You see the local resources for the report.
 
-|  |
-|----|
-| ![jss jrs2jss profit details 1](../assets/images/jss-jrs2jss-profit-details-1.png) |
-| *Figure 2: A Report and its Main.jrxml on the Server* |
+    |  |
+    |----|
+    | ![jss jrs2jss profit details 1](../assets/images/jss-jrs2jss-profit-details-1.png) |
+    | *Figure 2: A Report and its Main.jrxml on the Server* |
 
-1.  Open the `Main.jrxml` file in the editor. You can do this by double-clicking the file, or by right-clicking the file and selecting **Open in Editor**.
-2.  When you open the Main.jrxml file in the editor, the report and all its resources are copied to the associated project in Jaspersoft Studio. The path for the report in the repository is duplicated in the Jaspersoft Studio project. To see this, open the Project Explorer and navigate to the associated folder.
+4.  Open the `Main.jrxml` file in the editor. You can do this by double-clicking the file, or by right-clicking the file and selecting **Open in Editor**.
+
+5.  When you open the Main.jrxml file in the editor, the report and all its resources are copied to the associated project in Jaspersoft Studio. The path for the report in the repository is duplicated in the Jaspersoft Studio project. To see this, open the Project Explorer and navigate to the associated folder.
 
 |  |
 |----|

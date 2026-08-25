@@ -21,6 +21,7 @@ Like standard crosstabs, the rows and columns of an OLAP crosstab are sorted in 
 To change the sorting of your OLAP crosstab
 
 - Right-click the heading you want to use for sorting and select one of these options:
+
   - **Sort Ascending**
   - **Sort Descending**
   - **Don't Sort**

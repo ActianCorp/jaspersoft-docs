@@ -143,14 +143,16 @@ Now, add the Web Page dashlet with the parameter reference and add it to the fil
 Finally, preview the new dashboard functionality
 
 1.  Click the **Editing** button and select **Viewing** to preview the dashboard.
+
 2.  Click in the **Store Country** text box to display the available countries.
+
 3.  Select **Canada** from the values list in the Store Country input controls, and click **Apply** at the bottom of the dashlet. The data in the Key Performance Metric Trend report is updated to display only information about Canada, and the wiki dashlet displays the Wikipedia page for Canada.
 
-In Figure 1-2 you can see how the dashboard preview looks at this point:
+    In Figure 1-2 you can see how the dashboard preview looks at this point:
 
-<img src="../assets/images/js-DashboardDesigner-Example-Web-Hyperlink.png" alt="js DashboardDesigner Example Web Hyperlink" />
+    ![js DashboardDesigner Example Web Hyperlink](../assets/images/js-DashboardDesigner-Example-Web-Hyperlink.png)
 
-*Figure 2: Dashboard with web page parameters*
+    *Figure 2: Dashboard with web page parameters*
 
 4.  Click the **Viewing** button and select **Editing** to return to the Dashboard Designer.
 

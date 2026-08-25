@@ -13,8 +13,11 @@ AWS Hourly subscription customers with No Support or Free Online Help:
 Annual Standard and Premium subscription customers:
 
 - Web: <http://support.jaspersoft.com/>
+
 - Email <support@jaspersoft.com>
+
 - Phone:
+
   - Toll-free (U.S./Canada): 877-600-5767
   - Ireland: +353 1 443 4830
   - International: +1-415-348-2398

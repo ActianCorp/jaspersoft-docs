@@ -130,7 +130,9 @@ The Ad Hoc views used to create each report are also included. You can open them
 The following views and reports are provided:
 
 - Report Monitoring Resources Report: Gives a list of all reports and shows their average and high-low execution times.
+
 - Report Monitoring Details Report: A crosstab that shows report execution times on one axis and many dimensions on the other axis such as:
+
   - A time hierarchy
   - User and organization
   - Event type

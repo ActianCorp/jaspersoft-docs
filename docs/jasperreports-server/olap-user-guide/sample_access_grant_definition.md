@@ -7,7 +7,7 @@ description: "The following sample access grant definition (called Foodmart Gran
 
 The following sample access grant definition (called Foodmart Grant and found in the repository at `/analysis/schemas`) is used with the Foodmart Mondrian connection, (found in the repository at `/analysis/connections`):
 
-```
+``` xml
 <Roles>
  <Role name="StateManager">
   <SchemaGrant access="none">
@@ -47,14 +47,14 @@ The cube attribute has the value `Sales`, so the definition is for the Sales cub
 
 The member grants in this example use substitution variables like `%{State}` to represent substitutions from the list of attributes. These particularize the grant to the specific user associated with the StateManager role. For example, suppose that user John has StateManager as one of his roles. Also suppose that John's user account defines an attribute called State, which is set to CA,OR,WA. If you create a view for John, the line:
 
-```
+``` xml
 <MemberGrant member="[Customers].[USA].[%{State}]"
 access="all"/>
 ```
 
 in the above example is interpreted to mean:
 
-```
+``` xml
 <MemberGrant member="[Customers].[USA].[CA,OR,WA]"
 access="all"/>
 ```

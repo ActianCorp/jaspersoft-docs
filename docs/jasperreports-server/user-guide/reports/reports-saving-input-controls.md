@@ -16,14 +16,18 @@ Your saved input control values also appear in a dropdown list when you open the
 To save the input control values
 
 1.  In the repository, locate and run the report 1. Geographic Results by Segment Report.
+
 2.  On the tool bar, click ![js AdHoc icon Filter](../assets/images/js-AdHoc-icon-Filter.png).
+
 3.  Select all of the onion products, as described in [Multi-select Input Controls](reports-multiselect-input-controls.md).
+
 4.  Click save at the bottom of the dialog.
+
 5.  Enter "Interactive Sales Report for Onion Products" as a name for the input control values and click **Save**.<br>
     JasperReports Server saves the input control values as an option. A new dropdown box appears at the top of the Filters panel.
 
-![js Report Example SavedOption](../assets/images/js-Report-Example-SavedOption.png)
+    ![js Report Example SavedOption](../assets/images/js-Report-Example-SavedOption.png)
 
-*Figure 2: Saved Input Controls Option*
+    *Figure 2: Saved Input Controls Option*
 
 6.  Select Interactive Sales Report for Onion Products from the list of options and click **OK**. The report shows data for onion-related products only.

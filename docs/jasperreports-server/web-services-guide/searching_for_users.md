@@ -33,25 +33,25 @@ The GET method without any user ID searches for and lists user accounts. It has 
 <td colspan="2"><p>Description</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>search</code></pre></td>
+<td><div class="language-text highlight"><pre><code>search</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specify a string or substring to match the user ID or full name of any user. The search is not case sensitive.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>requiredRole</code></pre></td>
+<td><div class="language-text highlight"><pre><code>requiredRole</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specify a role name to list only users with this role. Repeat this argument to filter with multiple roles. In commercial editions with multiple organizations, specify roles as &lt;roleName&gt;%7C&lt;orgID&gt; (%7C is the | character).</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>hasAllRequiredRoles</code></pre></td>
+<td><div class="language-text highlight"><pre><code>hasAllRequiredRoles</code></pre></div></td>
 <td><p>Optional<br />
 Boolean</p></td>
 <td colspan="2"><p>When set to false with multiple requiredRole arguments, users will match if they have any of the given roles (OR operation). When true or not specified, users must match all of the given roles (AND operation).</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>includeSubOrgs</code></pre></td>
+<td><div class="language-text highlight"><pre><code>includeSubOrgs</code></pre></div></td>
 <td><p>Optional<br />
 Boolean</p></td>
 <td colspan="2"><p>Limits the scope of the search or list in commercial editions with multiple organizations. When set to false, the first URL form is limited to the logged-in user’s organization, and the second URL form is limited to the organization specified in the URL. When true or not specified, the scope includes the hierarchy of all child organizations.</p></td>

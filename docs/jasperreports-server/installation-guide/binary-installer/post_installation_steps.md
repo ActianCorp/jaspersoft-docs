@@ -115,9 +115,9 @@ Follow the steps below to examine and update the license location:
 
     `-Djs.license.directory=<js-install>`
 
-For example:
+    For example:
 
-`-Djs.license.directory=C:\Jaspersoft\10.1.0`
+    `-Djs.license.directory=C:\Jaspersoft\10.1.0`
 
 4.  Stop and restart the application server.
 
@@ -127,13 +127,13 @@ You should now be able to run JasperReports Server.
 
 The export of reports, Ad Hoc views, and dashboards fails when Tomcat is run as root in the JasperReports Server installation on Linux. The Tomcat log file displays an error, for example:
 
-```
+``` text
 2020-06-11T17:32:19,031 ERROR SecureExceptionHandlerImpl,http-nio-8080-exec-8:116 - com.github.kklisura.cdt.launch.exceptions.ChromeProcessTimeoutException: Failed while waiting for chrome to start: Timeout expired! Chrome output: [0611/173218.897370:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
 ```
 
 To resolve this you need to set the following property in the jasperreports.properties file:
 
-```
+``` text
 net.sf.jasperreports.chrome.argument.no-sandbox=true
 ```
 

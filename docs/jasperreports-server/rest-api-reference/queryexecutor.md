@@ -101,7 +101,7 @@ If the query is too large to fit in the argument in the URL, use the POST method
 
 The following example shows the format of a query in XML:
 
-```
+``` xml
 <query>
   <queryFields>
     <queryField id="expense_join_store.ej_store_store_city"/>
@@ -118,7 +118,7 @@ The following example shows the format of a query in XML:
 
 The following sample shows the result of the above query. To optimize the size of the response, rows are presented as sets of values without the column names repeated for each row. The column IDs appear at the top of the result, as shown in the following example. As with the query, the result requires knowledge of the Domain schema to identify the human-readable column names.
 
-```
+``` xml
 <queryResult>
   <names>
     <name>expense_join_account.ej_account_account_description</name>

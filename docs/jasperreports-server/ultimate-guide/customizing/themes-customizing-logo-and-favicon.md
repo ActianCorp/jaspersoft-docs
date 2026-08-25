@@ -24,12 +24,13 @@ One way to replace the logo and/or favicon is to create an image file with the s
 To replace the logo and/or favicon file with your own
 
 1.  Edit a theme or create a new one. Make sure it includes a folder named images.
+
 2.  Do one or both of the following:
 
-- Replace the logo. Convert your logo image to the SVG format, save it with the filename logo_reverse.svg, and copy it to the images folder.
-- Replace the favicon. Convert your favicon to the ICO format, save it with the filename favicon.png, and copy it to the images folder.
+    - Replace the logo. Convert your logo image to the SVG format, save it with the filename logo_reverse.svg, and copy it to the images folder.
+    - Replace the favicon. Convert your favicon to the ICO format, save it with the filename favicon.png, and copy it to the images folder.
 
-1.  Upload and activate the new theme to the chosen location and click your browser’s **Refresh** button. Your logo appears in the top-left corner of every page:
+3.  Upload and activate the new theme to the chosen location and click your browser’s **Refresh** button. Your logo appears in the top-left corner of every page:
 
 ![js Customization MyCompanyLogo](../assets/images/js-Customization-MyCompanyLogo.png)
 
@@ -42,25 +43,27 @@ Another way to replace the logo is to modify the CSS files in the theme to refer
 To modify the CSS file to use your own logo file
 
 1.  Edit a theme or create a new one. In this theme, you can place your image file in any folder structure you want.
+
 2.  If necessary, copy the **overrides_custom.css** file from the default theme to the main folder of your theme.
+
 3.  Edit the **overrides_custom.css** file and add rules like those below. In this example, the logo is a file called MyCompanyLogo.png in a folder called MyImages and is 40px x 230px. Adjust all pixel values based on the dimensions of your image:
 
-```
-#logo { /* new logo image name and size (example is twice the original logo) */
-  background: url("images/MyCompanyLogo.png") 0 0;
-  height: 40px;
-  width: 230px;
-}
-.banner { /* increases height of banner to accommodate bigger logo */
-  height:65 px
-}
-#frame { /* moves the main frame a bit down to accommodate bigger logo */
-  top: 66px;
-}
-```
+    ``` bash
+    #logo { /* new logo image name and size (example is twice the original logo) */
+      background: url("images/MyCompanyLogo.png") 0 0;
+      height: 40px;
+      width: 230px;
+    }
+    .banner { /* increases height of banner to accommodate bigger logo */
+      height:65 px
+    }
+    #frame { /* moves the main frame a bit down to accommodate bigger logo */
+      top: 66px;
+    }
+    ```
 
-!!! note
+    !!! note
 
-    The IDs and classes used in the CSS are dependent on the JSP source code for the server. Look at the JSP files to see which IDs and property values are used. Alternatively, you can inspect the HTML and CSS returned by the server, for example by using the developer tools in Firefox. For more information, see the *JasperReports Server Administrator Guide*.
+        The IDs and classes used in the CSS are dependent on the JSP source code for the server. Look at the JSP files to see which IDs and property values are used. Alternatively, you can inspect the HTML and CSS returned by the server, for example by using the developer tools in Firefox. For more information, see the *JasperReports Server Administrator Guide*.
 
-1.  Upload and activate the new theme with your images and CSS file and click your browser’s **Refresh** button.
+4.  Upload and activate the new theme with your images and CSS file and click your browser’s **Refresh** button.

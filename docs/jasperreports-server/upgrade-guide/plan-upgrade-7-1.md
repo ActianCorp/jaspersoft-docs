@@ -34,6 +34,7 @@ By default, the new release supports the new JDBC drivers, and the old Impala co
 If you wish to continue using the Impala connector that was previously available from the community website, modify the install as described below.
 
 1.  Add the following files to the \<js-install\>/WEB-INF/lib directory:
+
     - hive-service-0.12.0-cdh5.1.3.jar
     - zookeeper-3.4.5-cdh5.1.3.jar
     - avro-1.7.5-cdh5.1.3.jar
@@ -48,6 +49,7 @@ If you wish to continue using the Impala connector that was previously available
     - paranamer-2.3.jar
     - parquet-hadoop-bundle-1.2.5-cdh5.1.3.jar
     - xz-1.0.jar
+
 2.  Delete the file applicationContext-HiveDatasource.xml from the \<js-install\>/WEB-INF directory:
 
 If you do not add the files listed, data sources that use the old Impala connector will cause errors when running reports that rely on them.

@@ -11,7 +11,7 @@ Locate the js.config.properties file in the server instance and set the `scalabl
 
 When done, restart your JasperReports Server instance.
 
-```
+``` bash
 # enables filter
 scalableQueryEngine.enabled = true
 

@@ -18,7 +18,7 @@ This chapter contains the following sections:
 
 The following JSON schema describes all the parameters on links, although not all are present in all cases.
 
-```
+``` text
 "jrLink": {
     "title": "JR Hyperlink",
     "description": "A JSON Schema describing JR hyperlink",
@@ -73,7 +73,7 @@ You can customize the appearance of link elements in a generated report in two w
 - The `linkOptions` exposes the `beforeRender` event to which you can add a listener with access to the links in the document as element pairs.
 - The normal click event lets you add a listener that can access to a link when it's clicked.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -111,7 +111,7 @@ You can customize the appearance of link elements in a generated report in two w
 - The `linkOptions` exposes the `beforeRender` event to which you can add a listener with access to the links in the document as element pairs.
 - The normal click event lets you add a listener that can access to a link when it's clicked.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -145,7 +145,7 @@ jrio(function(jrioClient) {
 
 By using the method of listing for clicks on hyperlinks, you can write a JasperReports IO JavaScript API script that sets the destination of drill-down report links to another container. This way, you can create display layouts or overlays for viewing drill-down links embedded in your reports. This sample code also changes the cursor for the embedded links, so they are more visible to users.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -186,7 +186,7 @@ jrio(function(jrioClient) {
 
 By using the method of listing for clicks on hyperlinks, you can write a visualize.js script that sets the destination of drill-down report links to another container. This way, you can create display layouts or overlays for viewing drill-down links embedded in your reports. This sample code also changes the cursor for the embedded links, so they are more visible to users.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -233,7 +233,7 @@ visualize({
 
 Associated HTML:
 
-```
+``` html
 <script src="http://underscorejs.org/underscore.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to visualize.js -->
@@ -247,7 +247,7 @@ Associated HTML:
 
 Associated HTML:
 
-```
+``` html
 <script src="http://underscorejs.org/underscore.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
@@ -262,7 +262,7 @@ Associated HTML:
 
 Associated CSS:
 
-```
+``` bash
 #main{
    float: left;
 }
@@ -278,7 +278,7 @@ In this example, we access the hyperlinks through the `data.links` structure aft
 
 By using link tooltips, your JRXML can create reports that pass runtime information to the display logic in your JavaScripts.
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -330,7 +330,7 @@ visualize({
 
 By using link tooltips, your JRXML can create reports that pass runtime information to the display logic in your JavaScripts.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -381,7 +381,7 @@ jrio(function(jrioClient) {
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to visualize.js -->
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -397,7 +397,7 @@ Associated HTML:
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to jrio.js -->
 <script src="http://bi.example.com:8080/jriojsapi/client/jrio.js"></script>
@@ -413,7 +413,7 @@ Associated HTML:
 
 Associated CSS:
 
-```
+``` bash
 #main{
    float: left;
 }

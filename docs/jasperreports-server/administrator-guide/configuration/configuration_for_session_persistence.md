@@ -57,11 +57,12 @@ To configure JasperReports Server and Apache Tomcat for session persistence
 
 1.  Edit the file `.../META-INF/context.xml` to comment out the Manager property as follows:
 
-``` text
-<!-- Manager pathname="" /-->
-```
+    ``` text
+    <!-- Manager pathname="" /-->
+    ```
 
 2.  Edit the file `.../WEB-INF/web.xml` to make the following changes.
+
     1.   Locate the `ClusterFilter` given in the comments and uncomment it as follows:
 
     2.   Locate the corresponding mapping for the `ClusterFilter` and uncomment that, too. Also uncomment the `<distributable>` element below it as follows:
@@ -80,10 +81,11 @@ To configure JasperReports Server and Apache Tomcat for session persistence
             </filter-mapping>
             <distributable/>
         ```
+
 3.  Add the following property to your JVM environment:
 
-``` text
- -Dorg.apache.catalina.session.StandardSession.ACTIVITY_CHECK=true
-```
+    ``` text
+     -Dorg.apache.catalina.session.StandardSession.ACTIVITY_CHECK=true
+    ```
 
 4.  Restart your Apache Tomcat application server.

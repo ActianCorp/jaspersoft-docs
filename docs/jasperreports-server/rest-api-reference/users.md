@@ -100,7 +100,7 @@ GET http://localhost:8080/jasperserver/rest_v2/users?search=j
 
 The response is a set of summary descriptors for all users containing the string "j":
 
-```
+``` xml
 <users>
   <user>
     <externallyDefined>false</externallyDefined>
@@ -121,7 +121,7 @@ GET http://localhost:8080/jasperserver/rest_v2/organizations/Finance/users
 
 On servers with multiple organizations, the summary user descriptors include the organization (tenant) ID. As shown in the following example, the same username may exist in different organizations:
 
-```
+``` xml
 <users>
   <user>
     <externallyDefined>false</externallyDefined>
@@ -200,7 +200,7 @@ The full user descriptor includes detailed information about the user account, i
 
 GET http://localhost:8080/jasperserver/rest_v2/users/joeuser
 
-```
+``` xml
 <user>
   <enabled>true</enabled>
   <externallyDefined>false</externallyDefined>
@@ -221,7 +221,7 @@ In servers with multiple organizations, the full descriptor includes the organiz
 
 GET http://localhost:8080/jasperserver/rest_v2/organizations/Finance/users/joeuser
 
-```
+``` json
 {
   "fullName":"joeuser",
   "emailAddress":"",
@@ -297,7 +297,7 @@ The user descriptor includes the following properties when being sent for creati
 
 The following example shows the user descriptor in JSON format:
 
-```
+``` json
 {
   "fullName":"Joe User",
   "emailAddress":"juser@example.com",
@@ -357,7 +357,7 @@ To modify a user, the user ID in the URL must exist on the server or in the orga
 
 To add a role to the user, specify the entire list of roles with the desired role added. To remove a role from a user, specify the entire list of roles with the desired role removed. The following example shows the descriptor in JSON format:
 
-```
+``` json
 {
   "enabled":true,
   "password":"newPassword",

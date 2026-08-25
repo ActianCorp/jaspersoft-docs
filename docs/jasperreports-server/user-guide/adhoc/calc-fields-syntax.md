@@ -10,11 +10,15 @@ This section describes the syntax required when creating calculated fields in Ad
 Use the following syntax for inputs:
 
 - To reference a text string, use single quotes (') - `'Text String'`.
+
 - To reference a field label, use double quotes (") - `"``Ad Hoc Label``"`.
+
 - To reference date constants, indicate the date type as part of the syntax, as listed below:
+
   - To reference a date without time data (for example: yyyy-dd-mm), use `d` followed by single quotes (') - `d'2014-06-10'`.
   - To reference a date with day and time data (for example: yyyy-dd-mm hh:mm:ss) use `ts `followed by single quotes (') - `ts'2014-06-10 01:30:00'`. If you use `ts `and enter the date information only, the time is automatically set to `00:00:00`.
   - To reference a date with time data only (hh:mm:ss), use `t` followed by single quotes (') - `t'01:30:00'`.
+
 - To reference a date field label, use double quotes (") - `"``Ad Hoc Date Field Label``"`.
 
 !!! note

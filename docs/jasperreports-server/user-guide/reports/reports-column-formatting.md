@@ -34,9 +34,13 @@ Column formatting options include:
 To customize your column formatting
 
 1.  Run your report, so it opens in the Report Viewer.
+
 2.  Click the column that you want to format.
+
 3.  Hover over ![js icon columnOptions](../assets/images/js-icon-columnOptions.png)and click **Formatting**.
+
 4.  Click the **Basic Formatting** tab, and change the following options if needed:
+
     - **Apply to** - Select the part of the column you want to apply the formatting to.
     - **Heading text** - Type a new heading text to replace the current text.
     - **Font** – Scroll through the menu to select a font.
@@ -45,5 +49,7 @@ To customize your column formatting
     - **Background Color** - Click to open the background color picker, then click to select the background color.
     - **Font Color** - Click to open the font color picker, then click to select the text color.
     - **Alignment** - Click to select the Left, Center, or Right alignment.
+
 5.  If needed, click **Previous Column** or **Next Column** to change the formatting for an adjacent column.
+
 6.  Click **OK**.

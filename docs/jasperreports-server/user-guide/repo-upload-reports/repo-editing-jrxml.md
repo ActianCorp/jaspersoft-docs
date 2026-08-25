@@ -22,6 +22,7 @@ To edit the complex report example
 4.  Navigate to the page of the wizard for making the change; in this example, click **Controls & Resources**.
 
 5.  Make changes to an input control prompt and the display mode of the input controls, for example:
+
     1.  Click the name of the **TextInput** control. The Locate Input Control page shows that this input control is locally defined.
     2.  Click **Next**. The Create Input Control page appears.
     3.  Change the contents of the Prompt Text field to `Enter a number`. Click **Next**. The Locate Datatypes page appears. You can select a different datatype from the repository. For this example, accept the existing datatype setting.
@@ -29,6 +30,7 @@ To edit the complex report example
     5.  In Set the Datatype Kind and Properties, click **Save** to accept the datatype property settings.
 
 6.  On the Controls & Resources page:
+
     1.  Change the Display Mode to **In Page**.
     2.  Clear the **Always prompt** check box.
     3.  Click **Submit**.

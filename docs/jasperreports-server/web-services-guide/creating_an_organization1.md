@@ -29,7 +29,7 @@ To create an organization, put all information in an organization descriptor, an
 <td colspan="2"><p>Description</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>createDefaultUsers</code></pre></td>
+<td><div class="language-text highlight"><pre><code>createDefaultUsers</code></pre></div></td>
 <td><p>Optional<br />
 Boolean</p></td>
 <td colspan="2"><p>Set this argument to false to suppress the creation of default users (joeuser, jasperadmin) in the new organization. When not specified, the default behavior is true and organizations are created with the standard default users.</p></td>

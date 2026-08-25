@@ -120,7 +120,7 @@ The following sample shows the structure of these two possible validation rules.
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>  &quot;validationRules&quot;: [{
+<td><div class="language-text highlight"><pre><code>  &quot;validationRules&quot;: [{
     &quot;mandatoryValidationRule&quot; : {
       &quot;errorMessage&quot; : &quot;This field is mandatory so you must enter data.&quot;
     },
@@ -128,7 +128,7 @@ The following sample shows the structure of these two possible validation rules.
       &quot;errorMessage&quot; : &quot;Specify a valid date value.&quot;,
       &quot;format&quot; : &quot;yyyy-MM-dd&quot;
     }
-  }]</code></pre></td>
+  }]</code></pre></div></td>
 </tr>
 </tbody>
 </table>

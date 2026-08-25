@@ -20,21 +20,27 @@ Data adapters can be created locally in projects or globally in the Repository E
 When you create a data adapter in a project, it is saved as an jrdax file in that project. Saving the jrdax file in the same project as your reports makes it easier to deploy the data adapter to JasperReports Server, and is required if you have set the project type to something other than JasperReports Library.
 
 1.  Click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) on the main toolbar OR right-click a project in the Project Explorer and select **New \> Data Adapter**.
+
 2.  In the **DataAdapter File** window, choose the project where you want to save the data adapter file. This should be the project that contains the reports you want to use with your data adapter.
+
 3.  Enter a name for your adapter and click **Next**.
 
-The **Data Adapters Wizard** opens.
+    The **Data Adapters Wizard** opens.
 
-|                                                                      |
-|----------------------------------------------------------------------|
-| ![Data Adapter Wizard](../assets/images/Data%20Adapter%20Wizard.png) |
-| *Figure 1: Data Adapter Wizard*                                      |
+    |                                                                      |
+    |----------------------------------------------------------------------|
+    | ![Data Adapter Wizard](../assets/images/Data%20Adapter%20Wizard.png) |
+    | *Figure 1: Data Adapter Wizard*                                      |
 
-1.  Select the data adapter type that you want and click **Next**.
-2.  Enter a name for your adapter. This name is used when you select an adapter for a report.
-3.  Enter the properties needed by the adapter type that you selected. For example, for a database JDBC connection you need to select a JDBC driver and set the URL and database username and password. For a CSV file, you need to enter a filename, column names, and the column separator.
-4.  (Optional) If you want to test the connection, click the **Test** button if available.
-5.  Click **Finish** to create the adapter.
+4.  Select the data adapter type that you want and click **Next**.
+
+5.  Enter a name for your adapter. This name is used when you select an adapter for a report.
+
+6.  Enter the properties needed by the adapter type that you selected. For example, for a database JDBC connection you need to select a JDBC driver and set the URL and database username and password. For a CSV file, you need to enter a filename, column names, and the column separator.
+
+7.  (Optional) If you want to test the connection, click the **Test** button if available.
+
+8.  Click **Finish** to create the adapter.
 
 The adapter is saved as an jrdax file in the project location that you selected.
 
@@ -44,11 +50,13 @@ Global data adapters are saved as Eclipse settings and are visible to reports in
 
 1.  Click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) in the Repository Explorer OR right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
 
-The **Data Adapters Wizard** opens.
+    The **Data Adapters Wizard** opens.
 
-1.  Select the data adapter type that you want and click **Next**.
-2.  Enter a name for your adapter and the properties needed by the adapter type that you selected. (Optional) To test the adapter, click the **Test** button.
-3.  Click **Finish** to create the adapter.
+2.  Select the data adapter type that you want and click **Next**.
+
+3.  Enter a name for your adapter and the properties needed by the adapter type that you selected. (Optional) To test the adapter, click the **Test** button.
+
+4.  Click **Finish** to create the adapter.
 
 ## Importing and Exporting Data Adapters
 
@@ -58,14 +66,14 @@ To export a global data adapter as an jrdax file
 
 1.  In the Repository Explorer, right-click your data adapter and select **Export to File**.
 
-Jaspersoft Studio prompts you to name the file and select the destination for the exported information.
+    Jaspersoft Studio prompts you to name the file and select the destination for the exported information.
 
-|                                                                  |
-|------------------------------------------------------------------|
-| ![export data adapter](../assets/images/export-data-adapter.png) |
-| *Figure 2: Export to File Dialog*                                |
+    |                                                                  |
+    |------------------------------------------------------------------|
+    | ![export data adapter](../assets/images/export-data-adapter.png) |
+    | *Figure 2: Export to File Dialog*                                |
 
-1.  Select a location in the same project as the report that is using this adapter, enter a name for the file, and click **OK**.
+2.  Select a location in the same project as the report that is using this adapter, enter a name for the file, and click **OK**.
 
 A simple jrdax file is created in the location that you chose. The data adapter must be in the same project as your report. To use the same adapter in more than one project, see Copying a Data Adapter.
 

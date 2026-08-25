@@ -16,26 +16,34 @@ For our walkthrough, you create a report, then add it to your report book.
 To create a report
 
 1.  Click ![jss icon new](../assets/images/jss-icon-new.png) and select **Other...** to open the Wizard selection window.
+
 2.  Expand the Jaspersoft Studio folder and select **Jasper Report**. Click **Next**.
+
 3.  In the Report Templates window, scroll to and select the **Leaf Green** template. Click **Next**.
+
 4.  In the Report file window, select the **MyReports** folder and change the Leaf_Green.file name to `Content_Page_One.jrxml`. Click **Next**.
+
 5.  In the Data Source window, select **Sample DB – Database JDBC Connection**, and enter the following query:
 
-`Select * from orders order by shipcity`
+    `Select * from orders order by shipcity`
 
-1.  Click **Next**.
-2.  In the Fields window, move the following Dataset fields to the Fields panel on the right to include them in your subreport:
+6.  Click **Next**.
 
-- **ORDERID**
-- **CUSTOMERID**
-- **FREIGHT**
-- **SHIPCITY**
-- **SHIPCOUNTRY**
+7.  In the Fields window, move the following Dataset fields to the Fields panel on the right to include them in your subreport:
 
-1.  Click **Next**.
-2.  In the Group By window, move the **SHIPCITY** dataset field into the Fields pane.
-3.  Click **Finish**. The **Content_Page_One.jrxml** appears in the Design tab.
-4.  In the Project Explorer, right-click **Content_Page_One.jrxml** and select **Compile Report**. The resulting file, Content_Page_One.jasper, appears in the Project Explorer.
+    - **ORDERID**
+    - **CUSTOMERID**
+    - **FREIGHT**
+    - **SHIPCITY**
+    - **SHIPCOUNTRY**
+
+8.  Click **Next**.
+
+9.  In the Group By window, move the **SHIPCITY** dataset field into the Fields pane.
+
+10. Click **Finish**. The **Content_Page_One.jrxml** appears in the Design tab.
+
+11. In the Project Explorer, right-click **Content_Page_One.jrxml** and select **Compile Report**. The resulting file, Content_Page_One.jasper, appears in the Project Explorer.
 
 ## Adding a Report to the Report Book
 

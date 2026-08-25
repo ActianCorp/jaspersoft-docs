@@ -59,7 +59,7 @@ The following is an example of a sample payload.
 
 Sample Request Payload:
 
-```
+``` json
 {
     "favorites":[
      {
@@ -74,7 +74,7 @@ Sample Request Payload:
 
 Sample Response Payload:
 
-```
+``` json
 {
     "favorites":[
      {

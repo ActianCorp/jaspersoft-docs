@@ -11,57 +11,59 @@ To create an OLAP view with an XML/A connection:
 
 1.  Click **View \> Repository**.
 
-The repository appears.
+    The repository appears.
 
-1.  In the Folder panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Views**.
-2.  Right-click the **Analysis Views** folder and select **Add Resource \> OLAP View** from the context menu.
+2.  In the Folder panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Views**.
 
-The **Name the View** page appears and prompts you to enter the basic details about the new view.
+3.  Right-click the **Analysis Views** folder and select **Add Resource \> OLAP View** from the context menu.
 
-![ja add view NameTheView](assets/images/ja-add-view-NameTheView.png)
+    The **Name the View** page appears and prompts you to enter the basic details about the new view.
 
-*Figure 1: Name the View Page*
+    ![ja add view NameTheView](assets/images/ja-add-view-NameTheView.png)
 
-1.  Enter a name and a description of the view and click **Next**.
+    *Figure 1: Name the View Page*
 
-The **Locate Mondrian Connection** page appears.
+4.  Enter a name and a description of the view and click **Next**.
 
-1.  In the **Connection Type** dropdown, select XML/A Connection.
-2.  Click either:
+    The **Locate Mondrian Connection** page appears.
 
-- **Define a XML/A Client Connection in the next step** to add a new connection.
-- **Select a XML/A Client Connection from the Repository** to select a data source from the repository.
+5.  In the **Connection Type** dropdown, select XML/A Connection.
 
-Click **Browse**, navigate to the location where you want to add the file, and click **Select**. Click **Next** and skip to step 9.
+6.  Click either:
 
-1.  If you chose to create a client connection, the **Set Connection Type and Properties** page appears and prompts you to define the connection, Enter the requested information. For details, refer to [Working with XML/A Connections](working_with_xml_a_connections.md).
+    - **Define a XML/A Client Connection in the next step** to add a new connection.
+    - **Select a XML/A Client Connection from the Repository** to select a data source from the repository.
 
-![ja add view setconnectiontypeandpropertiesxmla](assets/images/ja-add-view-setconnectiontypeandpropertiesxmla.png)
+    Click **Browse**, navigate to the location where you want to add the file, and click **Select**. Click **Next** and skip to step 9.
 
-*Figure 2: Set Connection Type and Properties - XML/A Page*
+7.  If you chose to create a client connection, the **Set Connection Type and Properties** page appears and prompts you to define the connection, Enter the requested information. For details, refer to [Working with XML/A Connections](working_with_xml_a_connections.md).
 
-!!! note
+    ![ja add view setconnectiontypeandpropertiesxmla](assets/images/ja-add-view-setconnectiontypeandpropertiesxmla.png)
 
-    Your XML/A provider may be another JasperReports Server instance hosting Mondrian connections. For more information, refer to sections [Working with XML/A Connections](working_with_xml_a_connections.md) and [Working with XML/A Sources](working_with_xml_a_sources.md).
+    *Figure 2: Set Connection Type and Properties - XML/A Page*
 
-1.  Click **Next**.
+    !!! note
 
-The **Define the Query** page appears and prompts you for a query string.
+        Your XML/A provider may be another JasperReports Server instance hosting Mondrian connections. For more information, refer to sections [Working with XML/A Connections](working_with_xml_a_connections.md) and [Working with XML/A Sources](working_with_xml_a_sources.md).
 
-![ja add view MDXquery](assets/images/ja-add-view-MDXquery.png)
+8.  Click **Next**.
 
-*Figure 3: Define the Query Page*
+    The **Define the Query** page appears and prompts you for a query string.
 
-1.  In the **Query String** field, enter the MDX query. For example, type:
+    ![ja add view MDXquery](assets/images/ja-add-view-MDXquery.png)
 
-`select {[Measures].[Unit Sales], [Measures].[Store Cost], [Measures].[Store Sales]} on columns, {([Promotion Media].[All Media], [Product].[All Products])} ON rows from Sales where ([Time].[2012].[Q4].[12])`
+    *Figure 3: Define the Query Page*
 
-To learn more about writing MDX queries, refer to the reference material listed in [External Information Resources](external_information_resources.md).
+9.  In the **Query String** field, enter the MDX query. For example, type:
 
-1.  Click **Submit**.
+    `select {[Measures].[Unit Sales], [Measures].[Store Cost], [Measures].[Store Sales]} on columns, {([Promotion Media].[All Media], [Product].[All Products])} ON rows from Sales where ([Time].[2012].[Q4].[12])`
 
-If the view passes validation, it is added to the repository. If you receive an error, it is likely that the problem is a typo in your query. Carefully review the query to ensure that it is valid.
+    To learn more about writing MDX queries, refer to the reference material listed in [External Information Resources](external_information_resources.md).
 
-1.  When you have ca valid OLAP view, clicking **Submit** adds it to the repository.
+10. Click **Submit**.
+
+    If the view passes validation, it is added to the repository. If you receive an error, it is likely that the problem is a typo in your query. Carefully review the query to ensure that it is valid.
+
+11. When you have ca valid OLAP view, clicking **Submit** adds it to the repository.
 
 If the view passes validation, it is added to the repository.

@@ -50,7 +50,7 @@ Error messages contain three parts: an ID, the stack trace, and a message. You c
 
 For example, for regular users not to see stack traces, but to see error messages, remove `ROLE_USER` from the `ERROR_UID` list and add it into `MESSAGE` list, resulting in the following configuration:
 
-```
+``` xml
 <bean name="exceptionOutputManager" class="com.jaspersoft.jasperserver.api.common.error.handling.ExceptionOutputManagerImpl">
             <property name="outputControlMap">
                 <map>
@@ -98,7 +98,7 @@ For example, for regular users not to see stack traces, but to see error message
 
 Access to the error messages shown in Domain Designer when executing SQL Queries can be configured separately from error messages that user can get in other places. As another example removing `ROLE_ADMINISTRATOR` from `MESSAGE` list and adding into `ERROR_UID` list will hide error messages returned by SQL in Domains, resulting in the following configuration:
 
-```
+``` xml
 <beans profile="engine">
         <util:map id="outputControlMapForContexts">
             <entry key="ERROR_UID">

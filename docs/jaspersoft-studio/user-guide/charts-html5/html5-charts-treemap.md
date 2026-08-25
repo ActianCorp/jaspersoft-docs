@@ -23,38 +23,43 @@ To create the chart
 
 1.  Click ![jss icon html5 chart](../assets/images/jss-icon-html5-chart.png) **HTML5 Charts** in the **Components Pro** section of the **Palette**. The cursor changes ![jss icon loaded palette element](../assets/images/jss-icon-loaded-palette-element.png) to show that an element is selected. Click and drag in the **Summary** band to size and place the chart.
 
-The **HTML5 Chart Edit Dialog** is displayed.
+    The **HTML5 Chart Edit Dialog** is displayed.
 
-1.  Select your chart type. For this example, select **TreeMap**.
-2.  Click the **Data Configuration** tab.
+2.  Select your chart type. For this example, select **TreeMap**.
 
-The **HTML5 Chart Edit Dialog** is displayed.
+3.  Click the **Data Configuration** tab.
 
-1.  Click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png) next to **Levels**.
+    The **HTML5 Chart Edit Dialog** is displayed.
 
-The **Categories** dialog opens.
+4.  Click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png) next to **Levels**.
 
-|  |
-|----|
-| ![jss html5 charts treemap categories](../assets/images/jss-html5-charts-treemap-categories.png) |
-| *Figure 1: Defining Multiple Categories in a Chart* |
+    The **Categories** dialog opens.
 
-1.  Select **Category 1** and click **Modify**.
+    |  |
+    |----|
+    | ![jss html5 charts treemap categories](../assets/images/jss-html5-charts-treemap-categories.png) |
+    | *Figure 1: Defining Multiple Categories in a Chart* |
 
-The **Expression Editor** is displayed.
+5.  Select **Category 1** and click **Modify**.
 
-1.  Enter your highest level of data for **Category 1** then click **Finish**. For this example, enter:<br>
+    The **Expression Editor** is displayed.
+
+6.  Enter your highest level of data for **Category 1** then click **Finish**. For this example, enter:<br>
     `$F{SHIPCOUNTRY}`.
-2.  Click **Add** in the **Categories** dialog, enter `$F{SHIPREGION}`, and click **Finish**.
-3.  Click **Add** in the **Categories** dialog, enter `$F{SHIPCITY}`, and click **Finish**.
-4.  When you have created all your levels, click **OK** to return to the **HTML5 Chart Edit Dialog**.
-5.  Enter the following to create the measure:
 
-- **Value Expression**: `$F{FREIGHT}.doubleValue()`
-- **Aggregation Function**: Sum
-- **Tooltip Expression**: "Total Freight"
+7.  Click **Add** in the **Categories** dialog, enter `$F{SHIPREGION}`, and click **Finish**.
 
-1.  Click **OK**, and save and preview the chart as HTML.
+8.  Click **Add** in the **Categories** dialog, enter `$F{SHIPCITY}`, and click **Finish**.
+
+9.  When you have created all your levels, click **OK** to return to the **HTML5 Chart Edit Dialog**.
+
+10. Enter the following to create the measure:
+
+    - **Value Expression**: `$F{FREIGHT}.doubleValue()`
+    - **Aggregation Function**: Sum
+    - **Tooltip Expression**: "Total Freight"
+
+11. Click **OK**, and save and preview the chart as HTML.
 
 ## Using Advanced Formatting Properties
 
@@ -74,32 +79,34 @@ You can use advanced formatting to set these properties. For more information ab
 To set advanced properties for the chart
 
 1.  Return to **Design** view and double-click the chart to open the **HTML5 Chart Edit Dialog**.
+
 2.  Click the **Chart Formatting** tab and click **Show Advanced Properties**.
 
-|  |
-|----|
-| ![jss html5 treemap advanced formatting](../assets/images/jss-html5-treemap-advanced-formatting.png) |
-| *Figure 3: Advanced Formatting Properties* |
+    |  |
+    |----|
+    | ![jss html5 treemap advanced formatting](../assets/images/jss-html5-treemap-advanced-formatting.png) |
+    | *Figure 3: Advanced Formatting Properties* |
 
-1.  Click **Add**.
-2.  The **Chart Property** dialog is displayed.
+3.  Click **Add**.
 
-|  |
-|----|
-| ![jss html5 charts treemap chart property](../assets/images/jss-html5-charts-treemap-chart-property.png) |
-| *Figure 4: Setting Advanced Chart Formatting* |
+4.  The **Chart Property** dialog is displayed.
 
-1.  To prevent the names of other countries from showing on the border of the charts, enter the following, then click **OK**:
+    |  |
+    |----|
+    | ![jss html5 charts treemap chart property](../assets/images/jss-html5-charts-treemap-chart-property.png) |
+    | *Figure 4: Setting Advanced Chart Formatting* |
 
-- **Property name**: `plotOptions.treemap.dataLabels.overflow`
-- **Property value**: `none`
+5.  To prevent the names of other countries from showing on the border of the charts, enter the following, then click **OK**:
 
-1.  To change the text of the button, click **Add**, enter the following, then click **OK**:
+    - **Property name**: `plotOptions.treemap.dataLabels.overflow`
+    - **Property value**: `none`
 
-- **Property name**: `plotOptions.treemap.drillUpButton.text`
-- **Property value**: `Back`
+6.  To change the text of the button, click **Add**, enter the following, then click **OK**:
 
-1.  Click **OK** to apply your properties and return to **Design** view.
+    - **Property name**: `plotOptions.treemap.drillUpButton.text`
+    - **Property value**: `Back`
+
+7.  Click **OK** to apply your properties and return to **Design** view.
 
 Preview the chart in HTML to drill through and see your changes.
 
@@ -112,7 +119,7 @@ Preview the chart in HTML to drill through and see your changes.
 
     Static Highcharts properties are always recognized as `String`. If you have problems setting a static Boolean or numeric property, set it as an expression. For example, to set `plotOptions.series.dataLabels.enabled` to `false`, use the following JRXML:
 
-    ```
+    ``` xml
     <hc:chartPropertyname="plotOptions.series.dataLabels.enabled">
        <hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
     </hc:chartProperty>

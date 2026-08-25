@@ -33,7 +33,7 @@ In Ad Hoc Designer, special characters are not allowed in calculated function na
 
 To support REST API, the same validation rule must be duplicated in `WEB-INF/applicationContext-pro-remote-services.xml` as well.
 
-```
+``` xml
 <bean id="functionNameRegex" class="java.lang.String">
         <constructor-arg value="^[^\\s][a-zA-Z0-9\\s_]+$" /> <!-- pattern to allow function name -->
     </bean>

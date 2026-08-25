@@ -69,7 +69,7 @@ The server-level settings determine whether the snapshot feature is available on
 
 You can disable snapshots on a specific report by setting the following property in the report's JRXML:
 
-```
+``` properties
 net.sf.jasperreports.data.cache.persistable=false
 ```
 

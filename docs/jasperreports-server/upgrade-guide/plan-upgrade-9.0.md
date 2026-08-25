@@ -43,7 +43,7 @@ Let us review some patterns of the problems identified during this migration and
 
 1.  Update your resources to reflect data type changes:
 
-One approach to resolve such issues is to update your resources to align with the changes in data types. Progress JDBC drivers may read certain data types differently than native vendors, leading to discrepancies in resource behavior. After identifying such cases in reports, domains and adhoc views, modify affected resources to reflect the new data type conventions.
+    One approach to resolve such issues is to update your resources to align with the changes in data types. Progress JDBC drivers may read certain data types differently than native vendors, leading to discrepancies in resource behavior. After identifying such cases in reports, domains and adhoc views, modify affected resources to reflect the new data type conventions.
 
 2.  Override the default data type mapping
 
@@ -108,13 +108,13 @@ There are two methods to align behavior with that of the Progress driver:
 
 1.  The initial approach relies on editing the report query. By utilizing the SQL TRUNCATE function for the date field, the Oracle driver will return the date along with zeroed hours, minutes, seconds, and milliseconds. For instance:
 
-Original Query:
+    Original Query:
 
-`SELECT id, date_entered FROM my_table`
+    `SELECT id, date_entered FROM my_table`
 
-Modified Query:
+    Modified Query:
 
-`SELECT id, TRUNC(date_entered) FROM my_table`
+    `SELECT id, TRUNC(date_entered) FROM my_table`
 
 2.  The alternative method is to edit the JRXML file and modifying the required field type to Timestamp.
 
@@ -124,7 +124,7 @@ After migrating to Oracle native driver, some domains may produce issues with co
 
 Consider the following example:
 
-```
+``` sql
 SELECT *
 FROM (
     SELECT
@@ -225,8 +225,11 @@ JasperReports Server allows you to enable the scheduler and headless browser to 
 ## Important Notes about Compact and Split installations
 
 - Users are able to upgrade from 8.2 Compact to 9.0 Compact using samedb and newdb.
+
 - Users are able to upgrade from 8.2 Split to 9.0 Split using samedb and newdb.
+
 - Users will not be able to upgrade:
+
   - From 8.2 Compact to 9.0 Split.
   - From 8.2 Split to 9.0 Compact.
 

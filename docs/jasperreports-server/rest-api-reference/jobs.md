@@ -112,13 +112,13 @@ When used without any arguments, this method returns all scheduled jobs for any 
 
 For example, if your application wants to request all the jobs for a given report, it would send the following URL (%2F is the / character):
 
-```
+``` text
 GET http://example.com:8090/jasperserver-pro/rest_v2/jobs?reportUnitURI=%2Freports%2FAllAccounts
 ```
 
 In the response from the server, the jobs are described in a `jobsummary` element such as the following example. The `jobsummary` contains a small subset of the properties of the job descriptor as well as the complete state descriptor:
 
-```
+``` yaml
 JSON: {
         "jobsummary": [
           {
@@ -160,13 +160,13 @@ The `example` parameter lets you specify a search of any property in the job des
 
 For example, you can search for all jobs that specify an output format of PDF. The JSON `jobModel` to specify this property is:
 
-```
+``` json
 {"outputFormat":"PDF"}
 ```
 
 And the corresponding URI with proper encoding is:
 
-```
+``` text
 http://<host>:<port>/jasperserver[-pro]/rest_v2/jobs?example=%7b%22outputFormat%22%3a%22PDF%22%7d
 ```
 
@@ -212,7 +212,7 @@ The method returns a descriptor that fully describes all the aspects of a schedu
 
 JSON:
 
-```
+``` json
 {
     "id": 1906,
     "version": 0,
@@ -301,7 +301,7 @@ JSON:
 
 XML:
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <clientJob>
     <creationDate>2019-04-21T13:38:09.759+02:00</creationDate>
@@ -732,9 +732,9 @@ The following properties define the recurrence pattern of a calendar trigger:
 <td><p><code>months</code><br />
 (required)</p></td>
 <td><p>A list of <code>month</code> values during which the trigger fires. Can be used in addition to <code>weekDays</code> or <code>monthDays</code> below to suppress the trigger during certain months. The month values are 1 for January and 12 for December. In JSON, it has the following syntax:</p>
-<pre class="text"><code>&quot;months&quot;: {
+<div class="language-text highlight"><pre><code>&quot;months&quot;: {
     &quot;month&quot;: [&quot;3&quot;, &quot;6&quot;, &quot;9&quot;, &quot;12&quot;]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 <tr>
 <td><p><code>daysType</code><br />
@@ -750,9 +750,9 @@ The following properties define the recurrence pattern of a calendar trigger:
 <td><p><code>weekDays</code><br />
 (conditional)</p></td>
 <td><p>Specifies a list of days of the week on which the trigger fires, to be repeated every week. This is required if <code>daysType=WEEK</code>, and ignored otherwise. The day values are 1 for Sunday and 7 for Saturday. On the designated days, the trigger fires at the time or times defined by the <code>hours</code> and <code>minutes</code> properties. In JSON, it has the following syntax:</p>
-<pre class="text"><code>&quot;weekDays&quot;: {
+<div class="language-text highlight"><pre><code>&quot;weekDays&quot;: {
     &quot;day&quot;: [&quot;1&quot;, &quot;4&quot;, &quot;6&quot;]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 <tr>
 <td><p><code>monthDays</code><br />
@@ -775,7 +775,7 @@ The following properties define the recurrence pattern of a calendar trigger:
 
 For example, the following calendar trigger should run at 3:30 AM every Monday in every month.
 
-```
+``` text
 "trigger": {
     "calendarTrigger": {
         "timezone": "America/Denver",
@@ -978,7 +978,7 @@ Specify the FTP server, authentication, remote path, and other FTP settings in t
 
 The following example shows a simple use of `outputFTPInfo` in XML:
 
-```
+``` xml
 <job>
     <reportUnitURI>/reports/samples/AllAccounts</reportUnitURI>
     <label>MyJob</label>
@@ -1201,7 +1201,7 @@ The user who is authenticated when making this request become the owner of the j
 
 The following example shows a basic job descriptor in JSON:
 
-```
+``` json
 {
     "label": "Sample Job Name",
     "description": "Sample description",
@@ -1241,7 +1241,7 @@ The following example shows a basic job descriptor in JSON:
 
 The following example shows a basic job descriptor in XML. As of release 7.5, input values must use the special type syntax below to pass strings, integers, and dates. The collection element is required even for a single value, and the item element is always of type string, as shown below:
 
-```
+``` xml
 <job>
     <label>Sample Job Name</label>
     <description>Sample description</description>
@@ -1327,7 +1327,7 @@ The following method returns the current state of a job:
 
 The following example shows a typical response in XML:
 
-```
+``` xml
 <state>
     <nextFireTime>2022-03-29T18:01:00-07:00</nextFireTime>
     <previousFireTime>2022-03-28T18:01:00-07:00</previousFireTime>
@@ -1450,7 +1450,7 @@ IgnoreType</span></p></td>
 
 In this usage, the POST method allows you to send a partial job description, called a `jobModel` that contains any subset of the job descriptor's properties. This update applies to one or more jobs whose ID is specified by the `id` argument. For example, the following simple request updates the job description in several jobs:
 
-```
+``` text
 POST http://localhost:8080/jasperserver-pro/rest_v2/jobs?id=3798&id=3802&id=3806
 
 <jobModel>
@@ -1467,7 +1467,7 @@ In the following example, the description is removed from the target jobs, the t
 
 JSON:
 
-```
+``` json
  {
           "label":"Modified label",
           "isDescriptionModified":true,
@@ -1482,7 +1482,7 @@ JSON:
 
 XML:
 
-```
+``` xml
 <jobModel>
           <label>Modified label</label>
           <isDescriptionModified>true</isDescriptionModified>
@@ -1497,13 +1497,13 @@ The response has an array or list of `jobId` elements that were updated:
 
 JSON:
 
-```
+``` json
  {"jobId":[8322,8326]}
 ```
 
 XML:
 
-```
+``` xml
 <jobIdList>
           <jobId>8322</jobId>
           <jobId>8326</jobId>
@@ -1628,13 +1628,13 @@ The request and the response have the same format, an array, or list of `jobId` 
 
 JSON:
 
-```
+``` json
 {"jobId":[1236,1240]}
 ```
 
 XML:
 
-```
+``` xml
  <jobIdList>
           <jobId>1236</jobId>
           <jobId>1240</jobId>
@@ -1701,7 +1701,7 @@ The following example shows the response in JSON and XML:
 
 JSON:
 
-```
+``` json
 {
 "historicalData": [     {          "executionTime": 492,         "status": "FAILED",         "startTime": "2026-03-29T21:26:00.011+05:30",
          "endTime": "2026-03-29T21:26:00.503+05:30",
@@ -1710,7 +1710,7 @@ JSON:
 
 !!! note
 
-    The historical data is available only when the Jobs Historical Data and auditing properties are enabled on the server. For more information see the **Configuring the Scheduler Dashboard** section in the <a href="https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-administration-guide/v1000/jasperreports-server-admin-guide-_-overview-_-overview_intro/">JasperReports® Server Administrator Guide.</a>
+    The historical data is available only when the Jobs Historical Data and auditing properties are enabled on the server. For more information see the **Configuring the Scheduler Dashboard** section in the [JasperReports® Server Administrator Guide.](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-administration-guide/v1000/jasperreports-server-admin-guide-_-overview-_-overview_intro/)
 
 ## Restarting Failed Jobs
 
@@ -1763,13 +1763,13 @@ The request and the response have the same array or list of `jobId` elements:
 
 JSON:
 
-```
+``` json
  {"jobId":[8320,8324]}
 ```
 
 XML:
 
-```
+``` xml
 <jobIdList>
           <jobId>8320</jobId>
           <jobId>8324</jobId>
@@ -1852,13 +1852,13 @@ The list of deleted jobs in the response has an array or list of `jobId` element
 
 JSON:
 
-```
+``` json
 {"jobId":[5594,5640,5762]}
 ```
 
 XML:
 
-```
+``` xml
  <jobIdList>
           <jobId>5594</jobId>
           <jobId>5640</jobId>

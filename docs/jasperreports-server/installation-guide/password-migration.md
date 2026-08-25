@@ -49,7 +49,7 @@ The password migration process includes:
 
 With the bulk migration method, you can upgrade all passwords at once during a scheduled maintenance window. The migration utility `./js-ant migrate-passwords` reads its configuration from the `WEB-INF/js.password-storage-config.properties` file located in the deployed webapp.
 
-```
+``` bash
 cd jasperserver/buildomatic
 
 # Dry run first (recommended)
@@ -61,7 +61,7 @@ cd jasperserver/buildomatic
 
 Output example:
 
-```
+``` yaml
 migrate-passwords:
      Password migration utility initialized:
       - Database: postgresql
@@ -93,7 +93,7 @@ migrate-passwords:
 
 After running the migration script, you can verify that all user credentials were successfully upgraded by using the `./js-ant detect-password-strategy` command.
 
-```
+``` bash
 # Check migration status
 ./js-ant detect-password-strategy
 
@@ -109,7 +109,7 @@ If the legacy passwords count is one and the modern password count matches the t
 
 After a successful migration, you can use the `./js-ant cleanup-password-migration` command to remove completed records from the `JIPasswordMigration` table to keep the database tidy. This is an optional step and affects only the tracking table. It does not change any user passwords.
 
-```
+``` bash
 cd jasperserver/buildomatic
    # Remove completed migration tracking records
    ./js-ant cleanup-password-migration

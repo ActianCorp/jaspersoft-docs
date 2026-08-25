@@ -17,11 +17,12 @@ First, open the dashboard
 Create an Ad Hoc view hyperlink
 
 1.  Select the 08. Key Performance Metric Trend dashlet to show its settings in the settings panel.
+
 2.  Go to the **Hyperlinks** settings in Dashlet Settings.
 
-![js DashletProperties Hyperlinks](../assets/images/js-DashletProperties-Hyperlinks.png)
+    ![js DashletProperties Hyperlinks](../assets/images/js-DashletProperties-Hyperlinks.png)
 
-*Figure 1: Hyperlinks settings in Dashlet Settings*
+    *Figure 1: Hyperlinks settings in Dashlet Settings*
 
 3.  Click the **Enable hyperlinks** switch to turn it on.
 
@@ -50,6 +51,7 @@ Add a parameter
     The Available parameters section shows the parameters available in the Ad Hoc view.
 
 2.  Modify the URL to add a parameter that provides a value for an input control in the target report:
+
     - You need to know the correct name of the input control in your target report. In this case, it is `sales__store__store_contact__store_country_1` in the 04. Product Results by Store Type Report.
 
     - Create a parameter. If you create a parameter name, it is helpful to use a name that is not used in Parameter Mapping. In this example, use `LinkCountry`. For more information about parameters, see [Specifying Parameters in Dashlets](dashboards-parameters-in-dashlets.md).

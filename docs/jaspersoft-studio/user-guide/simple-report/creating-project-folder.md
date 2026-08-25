@@ -11,14 +11,16 @@ To create a project folder
 
 1.  Choose **File \> New \> Project**. The **Select a wizard** dialog is displayed.
 
-|                                                      |
-|------------------------------------------------------|
-| ![select wizard](../assets/images/select-wizard.png) |
-| *Figure 1: Select a Wizard*                          |
+    |                                                      |
+    |------------------------------------------------------|
+    | ![select wizard](../assets/images/select-wizard.png) |
+    | *Figure 1: Select a Wizard*                          |
 
-1.  Enter **Jasper** in the Wizards bar to filter actions to those related to Jaspersoft Studio.
-2.  Select **JasperReports Project**. Click **Next**. The **New JasperReports Project** wizard appears.
-3.  Enter a name for your project and click **Finish**. The **Project Explorer** displays your project.
+2.  Enter **Jasper** in the Wizards bar to filter actions to those related to Jaspersoft Studio.
+
+3.  Select **JasperReports Project**. Click **Next**. The **New JasperReports Project** wizard appears.
+
+4.  Enter a name for your project and click **Finish**. The **Project Explorer** displays your project.
 
 |                                                  |
 |--------------------------------------------------|

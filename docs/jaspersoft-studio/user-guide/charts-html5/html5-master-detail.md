@@ -32,62 +32,68 @@ To create the report for the chart
 To create the chart
 
 1.  Click ![jss icon html5 chart](../assets/images/jss-icon-html5-chart.png) **HTML5 Charts** on the **Components Pro** section of the **Palette**. The cursor changes to an element that is selected. Drag to fill the **Summary** band of your report. The **HTML5 Chart Edit Dialog** is displayed.
+
 2.  Select an **Area** for your chart type.
 
-|                                    |
-|------------------------------------|
-| ![Area](../assets/images/Area.png) |
-| *Figure 1: Area Chart Type*        |
+    |                                    |
+    |------------------------------------|
+    | ![Area](../assets/images/Area.png) |
+    | *Figure 1: Area Chart Type*        |
 
-1.  Click the **Data Configuration** tab.
-2.  Click **Switch to Advanced Configuration**.
-3.  Under **Categories Levels**, click **Add** to create a category level. For this example, enter the following data:
+3.  Click the **Data Configuration** tab.
 
-- **Category Expression**: `$F{ORDERID}`
+4.  Click **Switch to Advanced Configuration**.
 
-1.  Under **Measures**, click **Add** and define the first measure. For this example, use the following data:
+5.  Under **Categories Levels**, click **Add** to create a category level. For this example, enter the following data:
 
-- **Name**: "Measure1"
-- **Label Expression**: "Series 1"
-- **Value Expression**: `($F{OrderID}-10000)/2.0`
-- **Value Class Name**: `java.lang.Number`
+    - **Category Expression**: `$F{ORDERID}`
 
-Click OK.
+6.  Under **Measures**, click **Add** and define the first measure. For this example, use the following data:
 
-|                                          |
-|------------------------------------------|
-| ![Measure](../assets/images/Measure.png) |
-| *Figure 2: Defining the Measure*         |
+    - **Name**: "Measure1"
+    - **Label Expression**: "Series 1"
+    - **Value Expression**: `($F{OrderID}-10000)/2.0`
+    - **Value Class Name**: `java.lang.Number`
 
-1.  To define an additional measure, click **Add**. For this example, define a second measure using the following data.
+    Click OK.
 
-- **Name**: "Measure2"
-- **Label Expression**: "Series 2"
-- **Value Expression**: `$F{FREIGHT}`
-- **Value Class Name**: `java.lang.Number`
+    |                                          |
+    |------------------------------------------|
+    | ![Measure](../assets/images/Measure.png) |
+    | *Figure 2: Defining the Measure*         |
 
-Click **OK**.
+7.  To define an additional measure, click **Add**. For this example, define a second measure using the following data.
 
-1.  Add a third measure with the following data:
+    - **Name**: "Measure2"
+    - **Label Expression**: "Series 2"
+    - **Value Expression**: `$F{FREIGHT}`
+    - **Value Class Name**: `java.lang.Number`
 
-- **Name**: "Measure3"
-- **Label Expression**: "Series 3"
-- **Value Expression**: `$F{FREIGHT}/3.0 + ($F{OrderID}-10000)/10.0`
-- **Value Class Name**: `java.lang.Number`
+    Click **OK**.
 
-Click **OK**.
+8.  Add a third measure with the following data:
 
-1.  On the **Chart Formatting** tab, select **Colors Palette** and add colors for the three measures. You can set the colors manually or from the existing options.
+    - **Name**: "Measure3"
+    - **Label Expression**: "Series 3"
+    - **Value Expression**: `$F{FREIGHT}/3.0 + ($F{OrderID}-10000)/10.0`
+    - **Value Class Name**: `java.lang.Number`
 
-|                                                        |
-|--------------------------------------------------------|
-| ![Color palette](../assets/images/Color%20palette.png) |
-| *Figure 3: Selecting Color for Measure*                |
+    Click **OK**.
 
-1.  Click **OK** to close the HTML5 Chart Edit dialog.
-2.  In the **Properties** view for the chart element, click the **Advanced** tab.
-3.  Go to **Highcharts** and set **Detail Chart Enabled** to `true`.
-4.  Preview the report.
+9.  On the **Chart Formatting** tab, select **Colors Palette** and add colors for the three measures. You can set the colors manually or from the existing options.
+
+    |                                                        |
+    |--------------------------------------------------------|
+    | ![Color palette](../assets/images/Color%20palette.png) |
+    | *Figure 3: Selecting Color for Measure*                |
+
+10. Click **OK** to close the HTML5 Chart Edit dialog.
+
+11. In the **Properties** view for the chart element, click the **Advanced** tab.
+
+12. Go to **Highcharts** and set **Detail Chart Enabled** to `true`.
+
+13. Preview the report.
 
 |  |
 |----|

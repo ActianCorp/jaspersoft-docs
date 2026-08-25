@@ -64,7 +64,9 @@ To start JasperReports Server from the Windows Services Panel:
 To start JasperReports Server from the CMD Shell:
 
 1.  Open a Windows CMD Shell.
+
 2.  Navigate to the root of the \<js-install\> folder (for example, C:\Jaspersoft\\10.1.0)
+
     1.  To start JasperReports Server, run the following command:
 
         `servicerun START`
@@ -116,7 +118,7 @@ You typically start and stop JasperReports Server at the Linux command line. Run
 
 To start and stop individual components:
 
-```
+``` bash
 cd <js-install>
 ./ctlscript.sh start|stop   postgresql
 ./ctlscript.sh start|stop   tomcat
@@ -124,7 +126,7 @@ cd <js-install>
 
 If you enter just the `./ctlscript.sh` command, then you get the following:
 
-```
+``` bash
 ./ctlscript.sh
 usage: ./ctlscript.sh help
 ./ctlscript.sh (start|stop|restart|status)
@@ -210,21 +212,20 @@ Using Finder, move the following apps into the Mac Dock to start, stop, and log 
 To start and stop JasperReports Server using the Mac terminal shell:
 
 1.  Open a Terminal shell (**Finder \> Go \> Utilities \> Terminal Icon**).
+
 2.  Navigate to the `<js-install>` folder. For instance: `/Applications/`10.1.0
 
-<!-- -->
+3.  To start PostgreSQL, Tomcat, and JasperReports Server, enter:
 
-1.  To start PostgreSQL, Tomcat, and JasperReports Server, enter:
+    `./ctlscript.sh start`
 
-`./ctlscript.sh start`
+4.  To shut down PostgreSQL, Tomcat, and JasperReports Server, enter:
 
-1.  To shut down PostgreSQL, Tomcat, and JasperReports Server, enter:
+    `./ctlscript.sh stop`
 
-`./ctlscript.sh stop`
+5.  To start and stop individual components:
 
-1.  To start and stop individual components:
-
-```
+``` bash
 cd <js-install>
 ./ctlscript.sh start|stop   postgresql
 ./ctlscript.sh start|stop   tomcat
@@ -232,7 +233,7 @@ cd <js-install>
 
 If you enter just the `./ctlscript.sh` command you get the following:
 
-```
+``` bash
 ./ctlscript.sh
 usage: ./ctlscript.sh help
 ./ctlscript.sh (start|stop|restart|status)

@@ -19,7 +19,7 @@ If you have problems configuring external authentication for LDAP, first make su
 
 One common error you will see when trying to log in to JasperReports Server is an invalid credential error, with the following message:
 
-```
+``` text
 Invalid credentials supplied.
 Could not login to JasperReports Server.
 ```
@@ -37,7 +37,7 @@ This error can be misleading, because it can come from a wide range of root caus
 
 If you receive an invalid credentials error, the first thing to check for is errors connecting to the LDAP server. Search the jasperserver.log file for any stack trace containing the following:
 
-```
+``` text
 javax.naming.CommunicationException
 ```
 
@@ -49,7 +49,7 @@ If you see this in the logs, you need to dig a little further to find the cause 
 
 If the URL for the LDAP server is incorrect in applicationContext-externalAuth.xml, you will see an error such as the following:
 
-```
+``` text
 ERROR EncryptionAuthenticationProcessingFilter,http-apr-8630-exec-6:218 - An internal error occurred while trying to authenticate the user.
 org.springframework.security.authentication.InternalAuthenticationServiceException: localhost:10399; nested exception is javax.naming.CommunicationException: localhost:10399 [Root exception is java.net.ConnectException: Connection refused: connect]
 ```
@@ -58,7 +58,7 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 
 To fix this error, locate the following lines in applicationContext-externalAuth.xml and verify that `myLDAPServer` is correct hostname for your LDAP server and that and `port` is your LDAP server port:
 
-```
+``` xml
 <bean id="ldapContextSource"
             class="com.jaspersoft.jasperserver.api.security.externalAuth.ldap.JSLdapContextSource">
     <constructor-arg value="ldap://myLDAPServer:port"/>
@@ -72,7 +72,7 @@ Edit this information to point to the correct server and port.
 
 If the connection is timing out while trying to talk to the LDAP server, you will see a "Connection timed out" error in the log, such as:
 
-```
+``` text
 ERROR EncryptionAuthenticationProcessingFilter,http-apr-8630-exec-3:218 - An internal error occurred while trying to authenticate the user.
 org.springframework.security.authentication.InternalAuthenticationServiceException: 172.17.10.63:10390; nested exception is javax.naming.CommunicationException: 172.17.10.63:10390 [Root exception is java.net.ConnectException: Connection timed out: connect]
 ```
@@ -91,7 +91,7 @@ To fix this error, ensure that the LDAP server is reachable from the server that
 
 If JasperReports Server can’t find the user because you have not configured the server to communicate with an existing branch within LDAP, you may see an "Invalid search base" error in jasperserver.log. For example:
 
-```
+``` yaml
 org.apache.directory.api.ldap.model.exception.LdapNoSuchObjectException: ERR_648 Invalid search base ou=users,dc=example,dc=com
 ```
 
@@ -105,7 +105,7 @@ To resolve this, check with your LDAP admin that the search base you are using e
 
 If JasperReports Server can’t find the user because the search is not configured to look in the correct partition, you may see a "Cannot find a partition" error in jasperserver.log, for example:
 
-```
+``` text
 ERR_268 Cannot find a partition for ou=users,o=mojo55:
 org.apache.directory.api.ldap.model.exception.LdapNoSuchObjectException: ERR_268 Cannot find a partition for ou=users,o=mojo55
 ```
@@ -120,7 +120,7 @@ This error can arise if you are importing your LDIF file. In this case, the part
 
 If the search filter is not constructed correctly in your applicationContext-externalAuth.xml file your connection will fail. This error can be tricky because it does not always give an error code in the log. Instead, the query is valid, but when it searches your LDAP directory, it simply returns nothing:
 
-```
+``` text
 DEBUG FilterBasedLdapUserSearch,http-apr-8630-exec-8:107 - Searching for user 'hwilliams', with user search [ searchFilter: '(sAMAccountName={0})', searchBase: 'ou=users', scope: subtree, searchTimeLimit: 0, derefLinkFlag: false ]
 DEBUG SpringSecurityLdapTemplate,http-apr-8630-exec-8:211 - Searching for entry under DN 'o=mojo', base = 'ou=users', filter = '(sAMAccountName={0})'
 ```
@@ -139,7 +139,7 @@ If you suspect the search filter might be invalid, run the query in a third-part
 
 In some cases, the user is found, but the bind process fails. You might see an error in the logs such as the following:
 
-```
+``` text
 Failed to bind as uid=myUser,OU=Users,OU=MTC-Users: org.springframework.ldap.AuthenticationException: [LDAP: error code 49 - 80090308: LdapErr: DSID-0C09042A, comment: AcceptSecurityContext error, data 52e, v3839
 ```
 
@@ -153,7 +153,7 @@ A common reason for this is because of a mismatch in the DN format between what 
 
 A valid search filter that runs and returns results may not find all intended users. In this case you will see the same failed authentication message in the log as you would for an unauthorized user:
 
-```
+``` text
 FilterBasedLdapUserSearch,http-apr-8630-exec-8:107 - Searching for user 'myUser', with user search [ searchFilter: '(uid={0})', searchBase: 'ou=users, o=org1', scope: subtree, searchTimeLimit: 0, derefLinkFlag: false ]
 DEBUG SpringSecurityLdapTemplate,http-apr-8630-exec-8:211 - Searching for entry under DN '', base = 'ou=users,o=org1', filter = '(uid={0})'
 DEBUG ProviderManager,http-apr-8630-exec-8:152 - Authentication attempt using com.jaspersoft.jasperserver.multipleTenancy.MTDaoAuthenticationProvider
@@ -179,7 +179,7 @@ A blank page is shown instead.
 
 If your application context file, applicationContext-externalAuth.xml, is not a valid XML file, the login page does not load. You may see a stack trace in the logs, specifying the invalid file:
 
-```
+``` text
 Context initialization failed
 org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line <lineNumber> in XML document from ServletContext resource [/WEB-INF/applicationContext-externalAuth-LDAP-mt.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: <lineNumber>; columnNumber: <columnNumber>; The element type "property" must be terminated by the matching end-tag "</property>"
 ```
@@ -196,7 +196,7 @@ In the example above, there is a missing ending tag for `property`. To fix this,
 
 Role names can't contain certain special characters, including the XML reserved characters \<, \>, &, ', ", and \\ If you use a reserved character in a role name in your XML file, JasperReports Server attempts to interpret it as XML, which results in a stack trace. The precise error depends on the special character. For example, if you use an ampersand (&) in a role name, you see an error like this:
 
-```
+``` text
 context initialization failed
 org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line <lineNumber> in XML document from ServletContext resource [/WEB-INF/applicationContext-externalAuth-LDAP-mt.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: <lineNumber>; columnNumber: <columnNumber>; The entity name must immediately follow the '&' in the entity reference.
     at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:397)
@@ -212,7 +212,7 @@ In general, it is safest to restrict role names to alpha-numeric characters. If 
 
 Jasper is trying to read a bean definition that doesn’t exist. In the error message, you see reference to the \<type of bean\>, which typically refers to the actual java class name for that bean definition. The bean name in the applicationContext-externalAuth.xml file may appear later in the error:
 
-```
+``` text
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '<type of bean>' defined in ServletContext resource [/WEB-INF/applicationContext-externalAuth-LDAP-mt.xml]: Cannot resolve reference to bean '<myBean>' while setting bean property 'userSearch'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named '<myBean>' is defined
 ```
 
@@ -229,7 +229,7 @@ Check the following:
 
 JasperReports Server can't find a Java class referenced in the XML file. The stack trace shows the name of the class:
 
-```
+``` text
 Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [className] for bean with name 'ldapAuthenticationProvider' defined in ServletContext resource [/WEB-INF/applicationContext-externalAuth-LDAP-mt.xml]; nested exception is java.lang.ClassNotFoundException: <className>
 ```
 
@@ -252,7 +252,7 @@ JasperReports Server displays the j_spring_security_check page:
 
 In the jasperserver.log, look for `DefaultLdapAuthoritiesPopulator` and problems locating roles:
 
-```
+``` text
 DefaultLdapAuthoritiesPopulator,http-apr-8630-exec-9:211 - Searching for roles for user 'guest01', DN = 'cn=guest 01,cn=Users,dc=test,dc=com', with filter (objectClass=group) in search base 'DC=test,DC=com'
 SpringSecurityLdapTemplate,http-apr-8630-exec-9:150 - Using filter: (objectClass=group)
 HttpSessionSecurityContextRepository,http-apr-8630-exec-9:304 - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.

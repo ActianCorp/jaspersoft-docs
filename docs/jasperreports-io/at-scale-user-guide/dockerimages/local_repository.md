@@ -20,14 +20,14 @@ To build the Docker images
 
 1.  The file format of the file-based repository is described in the *JasperReports IO Repository* section of the *Managing JasperReports IO* chapter in the JasperReports IO Pro User Guide. Once you have all your resource files ready, copy them to the following folders:
 
-- jrio-reporting-docker/jrio-repository/samples
-- jrio-export-docker/jrio-repository/samples
-- jrio-rest-docker/jrio-repository/samples
+    - jrio-reporting-docker/jrio-repository/samples
+    - jrio-export-docker/jrio-repository/samples
+    - jrio-rest-docker/jrio-repository/samples
 
-When building the docker images, files in the above locations are copied to the following locations:
+    When building the docker images, files in the above locations are copied to the following locations:
 
-- jrio-reporting \> /usr/local/jrio
-- jrio-export \> /usr/local/jrio
-- jrio-rest \> /var/lib/jetty/webapps/jrio/repository
+    - jrio-reporting \> /usr/local/jrio
+    - jrio-export \> /usr/local/jrio
+    - jrio-rest \> /var/lib/jetty/webapps/jrio/repository
 
-1.  Finish any other module configuration as described in [Configuring the Modules](configuration.md), then build the Docker images in [Building Docker Images](building_images.md).
+2.  Finish any other module configuration as described in [Configuring the Modules](configuration.md), then build the Docker images in [Building Docker Images](building_images.md).

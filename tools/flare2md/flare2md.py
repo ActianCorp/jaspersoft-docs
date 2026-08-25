@@ -461,6 +461,9 @@ def _list_level(node, pattern):
 
     Flare encodes list depth in the class name (Bullet, Bullet_2, Bullet_3) and
     restarts numbering with a *_First class rather than with real list markup.
+    The `_alpha` variants are the lettered sub-steps of the step above them, so
+    they belong one level down — treating them as top-level would break the
+    outer sequence in two.
     """
     for cls in (node.get("class") or "").split():
         match = pattern.match(cls.lower())
@@ -470,6 +473,8 @@ def _list_level(node, pattern):
         level = 1
         if suffix and suffix[1:].isdigit():
             level = int(suffix[1:])
+        elif "alpha" in suffix:
+            level = 2
         return level, suffix.endswith("first")
     return None
 
@@ -545,27 +550,50 @@ def _listify_once(elem, class_re, list_tag, matches) -> None:
         if not isinstance(parent.tag, str) or parent.tag in ("ul", "ol"):
             continue
         run = []
+        # Flare numbers these paragraphs with a CSS counter that only resets on
+        # a *_First class, so a table or a paragraph between two steps does not
+        # restart the count. Carry it across the interruption and start the next
+        # list where the previous one stopped.
+        carried = 0
+
+        def flush(run, carried):
+            if not run:
+                return carried
+            emitted = _wrap_run_in_list(parent, run, list_tag,
+                                        start=carried + 1 if carried else None)
+            return carried + emitted
+
         for child in list(parent):
             info = None
             if child.tag == "p" and matches(child):
                 info = _list_level(child, class_re)
             if info is not None:
                 level, is_first = info
-                if is_first and run:
-                    _wrap_run_in_list(parent, run, list_tag)
+                # Only a top-level *_First restarts the sequence; a lettered
+                # sub-step's "first" just begins its own nested run.
+                if is_first and level == 1:
+                    carried = flush(run, carried) if run else carried
                     run = []
+                    carried = 0
                 run.append((child, level))
                 continue
-            if run:
-                _wrap_run_in_list(parent, run, list_tag)
+            carried = flush(run, carried)
             run = []
-        if run:
-            _wrap_run_in_list(parent, run, list_tag)
+            # A heading ends the sequence: the next section's steps start at one.
+            if isinstance(child.tag, str) and re.fullmatch(r"h[1-6]", child.tag):
+                carried = 0
+        flush(run, carried)
 
 
-def _wrap_run_in_list(parent, run, list_tag="ul") -> None:
-    """Build a (possibly nested) list from consecutive pseudo-list paragraphs."""
+def _wrap_run_in_list(parent, run, list_tag="ul", start=None) -> int:
+    """Build a (possibly nested) list from consecutive pseudo-list paragraphs.
+
+    Returns the number of top-level items, so a caller can continue the
+    numbering of a sequence that something else interrupted.
+    """
     root = etree.Element(list_tag)
+    if start and list_tag == "ol":
+        root.set("start", str(start))
     idx = list(parent).index(run[0][0])
     # A run that only contains Bullet_2 items has no level-1 parent in the
     # source; shift it up rather than inventing an empty bullet to nest under.
@@ -588,6 +616,144 @@ def _wrap_run_in_list(parent, run, list_tag="ul") -> None:
             li.append(kid)
         parent.remove(node)
     parent.insert(idx, root)
+    return len(root.findall("li"))
+
+
+BLOCK_TAGS = frozenset({
+    "p", "div", "table", "ul", "ol", "pre", "blockquote",
+    "h1", "h2", "h3", "h4", "h5", "h6",
+})
+
+
+def _paragraphize(li) -> None:
+    """Wrap a list item's inline content in a <p>.
+
+    A block appended to an item whose text is bare produces a tight list item,
+    and pandoc then writes the block on the line straight after the text — where
+    a table is read as more sentence, not as a table. Wrapping the text first
+    makes the item loose, so the block keeps its own blank line.
+    """
+    inline = []
+    for child in list(li):
+        if child.tag in BLOCK_TAGS:
+            break
+        inline.append(child)
+    if not (li.text and li.text.strip()) and not inline:
+        return
+    para = etree.Element("p")
+    para.text = li.text
+    li.text = None
+    for child in inline:
+        li.remove(child)
+        para.append(child)
+    li.insert(0, para)
+
+
+def absorb_orphan_sublists(elem) -> None:
+    """Fold an item that holds nothing but a sub-list into the item before it.
+
+    Flare's lettered sub-steps continue after a code sample or a table, and the
+    resumed run has no step of its own to hang from — which renders as a bare
+    "2." whose only content is "1. …". The sub-steps belong to the step that
+    introduced them.
+    """
+    for parent in list(elem.iter("ol")):
+        items = parent.findall("li")
+        for position, li in enumerate(items):
+            if position == 0 or li.text and li.text.strip():
+                continue
+            children = [c for c in li if isinstance(c.tag, str)]
+            if len(children) != 1 or children[0].tag not in ("ol", "ul"):
+                continue
+            sublist = children[0]
+            previous = items[position - 1]
+            host = None
+            for candidate in previous:
+                if candidate.tag == sublist.tag:
+                    host = candidate
+            if host is None:
+                previous.append(sublist)
+            else:
+                for item in list(sublist):
+                    host.append(item)
+            if li.getparent() is not None:
+                parent.remove(li)
+
+
+def loosen_list_items(elem) -> None:
+    """Give every list item that holds a block its own paragraph first.
+
+    Flare puts tables, code and sub-lists straight after the step text inside
+    the same <li>. pandoc then writes a tight item, with the block on the line
+    after the text and no blank line between them — and a pipe table read as a
+    continuation of that sentence renders as literal `| … |` text. Wrapping the
+    text makes the item loose, which keeps the block a block.
+    """
+    for li in elem.iter("li"):
+        if any(isinstance(c.tag, str) and c.tag in BLOCK_TAGS for c in li):
+            _paragraphize(li)
+
+
+def merge_interrupted_lists(elem) -> None:
+    """Rejoin a numbered sequence that content in the middle split in two.
+
+    Flare writes steps as paragraphs numbered by a CSS counter, so a table or a
+    figure belonging to one step sits between it and the next — and the counter
+    keeps going. `start="n"` cannot express that here, because Python-Markdown
+    ignores a list's starting number and always renders 1, 2, 3. So the split is
+    healed instead: the interrupting nodes move inside the step they belong to
+    and the two lists become one, which is both what the source shows and what
+    markdown can represent.
+    """
+    for parent in list(elem.iter()):
+        if not isinstance(parent.tag, str):
+            continue
+        children = list(parent)
+        index = 0
+        while index < len(children):
+            first = children[index]
+            if first.tag not in ("ol", "ul"):
+                index += 1
+                continue
+            # Collect what follows, up to a continuation of the same list type.
+            between, cursor = [], index + 1
+            while cursor < len(children) and children[cursor].tag != first.tag:
+                between.append(children[cursor])
+                cursor += 1
+            if cursor >= len(children):
+                # No matching list after this one; keep looking from the next
+                # child rather than abandoning the rest of this parent.
+                index += 1
+                continue
+            second = children[cursor]
+            continues = second.get("start") or (
+                (second.get("%scontinue" % MC) or "").lower() == "true"
+            )
+            headings = any(
+                isinstance(n.tag, str) and re.fullmatch(r"h[1-6]", n.tag)
+                for n in between
+            )
+            items = first.findall("li")
+            if not continues or headings or not items:
+                # Step forward by one, not to `cursor`: the scan for a matching
+                # list can pass over other list pairs — a bulleted list early in
+                # the page would otherwise hide every numbered sequence after it.
+                index += 1
+                continue
+
+            host = items[-1]
+            _paragraphize(host)
+            for node in between:
+                parent.remove(node)
+                host.append(node)
+            for item in list(second):
+                first.append(item)
+            second_tail = second.tail
+            parent.remove(second)
+            first.attrib.pop("start", None)
+            if second_tail:
+                first.tail = (first.tail or "") + second_tail
+            children = list(parent)
 
 
 def merge_adjacent_lists(elem) -> None:
@@ -1206,6 +1372,9 @@ def _strip_mc_attrs(node) -> None:
 # --------------------------------------------------------------------------- #
 # Serialization + pandoc
 # --------------------------------------------------------------------------- #
+NS_DECL_RE = re.compile(r'\s*xmlns:[a-zA-Z]+="[^"]*"')
+
+
 def inner_html(body) -> str:
     parts = []
     if body.text:
@@ -1216,7 +1385,15 @@ def inner_html(body) -> str:
 
 
 def pandoc(chunks):
-    """Convert several HTML fragments in one pandoc run; returns markdown list."""
+    """Convert several HTML fragments in one pandoc run; returns markdown list.
+
+    Namespace declarations are stripped first. lxml keeps `xmlns:MadCap` on a
+    serialized subtree even after the MadCap attributes are gone, and pandoc
+    then treats `<pre xmlns:…><code class="language-js">` as an element it does
+    not recognize: the fence comes out with no language, so the code is never
+    highlighted. That silently affected most code blocks on the site.
+    """
+    chunks = [NS_DECL_RE.sub("", chunk) for chunk in chunks]
     joined = ("<p>%s</p>" % SPLIT_TOKEN).join(chunks)
     proc = subprocess.run(
         ["pandoc", "-f", "html", "-t", "gfm+pipe_tables", "--wrap=none"],
@@ -1275,6 +1452,21 @@ def collapse_nested_admonitions(elem) -> None:
                     child.set("class", " ".join(classes))
                 else:
                     child.attrib.pop("class", None)
+
+
+def unwrap_plain_divs(elem) -> None:
+    """Unwrap divs that carry no meaning, before the list passes run.
+
+    Flare wraps arbitrary runs of content in divs, and a step sequence can have
+    its first step inside one while the rest are outside it. The paragraphs are
+    then in different parents, so neither the numbering nor the rejoining of an
+    interrupted list can see the whole sequence. Callout divs are left alone —
+    the admonition pass still needs them.
+    """
+    for node in list(elem.iter("div")):
+        if node.getparent() is None or admonition_type(node):
+            continue
+        _unwrap(node)
 
 
 def unwrap_divs(elem) -> None:
@@ -1397,8 +1589,64 @@ def expand_admonitions(md: str, bodies, indent: str = "") -> str:
     return re.sub(r"@@FLARE2MD-ADM-(\d+)@@", inline, md)
 
 
-NS_DECL_RE = re.compile(r'\s*xmlns:[a-zA-Z]+="[^"]*"')
 EMPTY_ATTR_RE = re.compile(r"[ \t]*\{\s*\}")
+
+# Code that ends up inside a table stays raw HTML — markdown fences cannot live
+# in an HTML block — so pandoc leaves it as <pre class="lang"><code>…</code></pre>
+# and the highlighter never sees it. These blocks are common in the install and
+# upgrade guides (property files, SQL, shell), so they are highlighted here with
+# the same Pygments the site uses, wrapped in the markup the theme styles.
+RAW_PRE_RE = re.compile(
+    r'<pre(?:\s+class="(?P<lang>[^"]*)")?[^>]*>\s*<code[^>]*>(?P<code>.*?)</code>\s*</pre>',
+    re.S,
+)
+
+
+# Only these names are handed to Pygments. An unknown name sends it looking
+# through plugin lexers, and a broken plugin in the environment
+# (actian-pygments-lexers points at a `custom_lexers` module that will not
+# import) raises from deep inside that search. Flare's styling classes land in
+# the same attribute as real languages, so the gate matters.
+HIGHLIGHT_LANGS = frozenset({
+    "bash", "html", "ini", "java", "javascript", "json", "properties",
+    "python", "shell", "sql", "text", "xml", "yaml",
+})
+
+
+def highlight_raw_code(md: str) -> str:
+    """Syntax-highlight raw <pre><code> blocks left in the markdown."""
+    try:
+        from pygments import highlight
+        from pygments.formatters import HtmlFormatter
+        from pygments.lexers import get_lexer_by_name
+        from pygments.util import ClassNotFound
+    except ImportError:  # pragma: no cover - Pygments ships with Zensical
+        return md
+
+    def repl(match):
+        lang = (match.group("lang") or "text").strip().lower() or "text"
+        if lang not in HIGHLIGHT_LANGS:
+            return match.group(0)
+        code = html.unescape(match.group("code"))
+        try:
+            lexer = get_lexer_by_name(lang, stripnl=False)
+        except ClassNotFound:
+            return match.group(0)
+        except Exception:
+            # Pygments imports every registered plugin lexer while resolving a
+            # name, so a broken third-party plugin in the environment would
+            # otherwise fail the whole page. Leave the block unhighlighted.
+            return match.group(0)
+        # `nowrap` keeps only the token spans, so the surrounding markup matches
+        # what the theme produces for fenced blocks.
+        formatter = HtmlFormatter(nowrap=True)
+        tokens = highlight(code, lexer, formatter).rstrip("\n")
+        return (
+            '<div class="language-%s highlight"><pre><code>%s</code></pre></div>'
+            % (lang, tokens)
+        )
+
+    return RAW_PRE_RE.sub(repl, md)
 
 
 # pandoc writes a GFM hard line break as a trailing backslash, which
@@ -1407,6 +1655,7 @@ HARD_BREAK_RE = re.compile(r"(?<!\\)\\$", re.M)
 
 
 def clean_markdown(md: str) -> str:
+    md = highlight_raw_code(md)
     md = HARD_BREAK_RE.sub("<br>", md)
     md = NS_DECL_RE.sub("", md)
     md = EMPTY_ATTR_RE.sub("", md)

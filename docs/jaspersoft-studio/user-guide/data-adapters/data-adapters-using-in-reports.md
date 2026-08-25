@@ -35,25 +35,28 @@ You can explicitly set the data adapter for a report or dataset using the `net.s
 Setting the default data adapter
 
 1.  In **Outline** view, to set the data adapter for the report, click the report's root node. To set the data adapter for a dataset, click the dataset.
+
 2.  In the **Properties** view, to set the data adapter for a report, go to the **Report** tab. To set the data adapter for a dataset, go to the **Dataset** tab.
+
 3.  Click **...** at the right of the **Default Data Adapter** property.
 
-The **Open Data Adapter** dialog opens.
+    The **Open Data Adapter** dialog opens.
 
-|  |
-|----|
-| ![jss data adapter open data adapter](../assets/images/jss-data-adapter-open-data-adapter.png) |
-| *Figure 2: Open Data Adapter Dialog* |
+    |  |
+    |----|
+    | ![jss data adapter open data adapter](../assets/images/jss-data-adapter-open-data-adapter.png) |
+    | *Figure 2: Open Data Adapter Dialog* |
 
-1.  Choose the format to use for specifying the data adapter location:
+4.  Choose the format to use for specifying the data adapter location:
 
-- **Workspace resource**: A file in your workspace, for example, ` value="test/sample-adapter.jrdax"/>`. This should be a file in the same project as your report. If you want to use a global adapter, you need to export it to a file first. See [Importing and Exporting Data Adapters](data-adapters-creating.md) for more information.
-- **Absolute Path in the file system**: A file path, for example, `value="file:///C:/Adapters/sample-adapter.jrdax"`
-- **URL**: A remote URL that hosts the data adapter file, for example, `value="http://myserver:8080/sample-adapter.jrdax"`
-- **Custom value**: A free-form string that identifies the location of the data adapter to use. You could use this if you wanted to enter a string in the `repo:` syntax, for example, `value="repo:/reports/interactive/CustomersDataAdapter"` See [Understanding the repo Syntax](../jrs-server/jss2jrs-repo-syntax.md) for more information.
+    - **Workspace resource**: A file in your workspace, for example, ` value="test/sample-adapter.jrdax"/>`. This should be a file in the same project as your report. If you want to use a global adapter, you need to export it to a file first. See [Importing and Exporting Data Adapters](data-adapters-creating.md) for more information.
+    - **Absolute Path in the file system**: A file path, for example, `value="file:///C:/Adapters/sample-adapter.jrdax"`
+    - **URL**: A remote URL that hosts the data adapter file, for example, `value="http://myserver:8080/sample-adapter.jrdax"`
+    - **Custom value**: A free-form string that identifies the location of the data adapter to use. You could use this if you wanted to enter a string in the `repo:` syntax, for example, `value="repo:/reports/interactive/CustomersDataAdapter"` See [Understanding the repo Syntax](../jrs-server/jss2jrs-repo-syntax.md) for more information.
 
-1.  If you selected **Workspace resource** or **Absolute Path**, click **Browse** to locate the file in the workspace or in your file system. Otherwise, enter the URL or free-form string.
-2.  Click **Finish**.
+5.  If you selected **Workspace resource** or **Absolute Path**, click **Browse** to locate the file in the workspace or in your file system. Otherwise, enter the URL or free-form string.
+
+6.  Click **Finish**.
 
 The default data adapter is set for the dataset. It is represented in the JRXML file using the `net.sf.jasperreports.data.adapter` property.
 

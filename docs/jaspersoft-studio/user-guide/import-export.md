@@ -29,19 +29,20 @@ To export configuration resources
 
 1.  Select **File \> Export**.
 
-The **Export** dialog is displayed.
+    The **Export** dialog is displayed.
 
-1.  Select **Jaspersoft Studio \> Jaspersoft Studio Configuration** for the destination and click **Next**.
+2.  Select **Jaspersoft Studio \> Jaspersoft Studio Configuration** for the destination and click **Next**.
 
-The Export wizard shows the resource categories that can be exported, with the number of resources in each category. If there are no resources in a category, the category does not appear on the list.
+    The Export wizard shows the resource categories that can be exported, with the number of resources in each category. If there are no resources in a category, the category does not appear on the list.
 
-|  |
-|----|
-| ![Export Jaspersoft Studio Configuration Wizard](assets/images/Export%20Jaspersoft%20Studio%20Configuration%20Wizard.png) |
-| *Figure 1: Export Jaspersoft Studio Configuration Wizard* |
+    |  |
+    |----|
+    | ![Export Jaspersoft Studio Configuration Wizard](assets/images/Export%20Jaspersoft%20Studio%20Configuration%20Wizard.png) |
+    | *Figure 1: Export Jaspersoft Studio Configuration Wizard* |
 
-1.  Select the categories that you want to export and click **Next**.
-2.  Enter the location and name that you want for the exported file and click **Finish**.
+3.  Select the categories that you want to export and click **Next**.
+
+4.  Enter the location and name that you want for the exported file and click **Finish**.
 
 A zip file is created in the location that you chose.
 
@@ -49,20 +50,22 @@ To import configuration resources
 
 1.  Select **File \> Import**.
 
-The **Import** dialog is displayed.
+    The **Import** dialog is displayed.
 
-1.  Select **Jaspersoft Studio \> Jaspersoft Studio Configuration** and click **Next**.
-2.  Enter the location and file name of the zip file that you wish to import and click **Next**.
+2.  Select **Jaspersoft Studio \> Jaspersoft Studio Configuration** and click **Next**.
 
-If the file is a valid configuration file, the wizard shows the resource categories that can be imported, with the number of resources in each category. If the file is not a valid configuration file, you receive an error message.
+3.  Enter the location and file name of the zip file that you wish to import and click **Next**.
 
-|  |
-|----|
-| ![Selecting Categories to Import](assets/images/Selecting%20Categories%20to%20Import.png) |
-| *Figure 2: Selecting Categories to Import* |
+    If the file is a valid configuration file, the wizard shows the resource categories that can be imported, with the number of resources in each category. If the file is not a valid configuration file, you receive an error message.
 
-1.  Select the resource categories that you want to import and click **Finish**.
-2.  If there is a naming conflict between an imported resource and an existing resource in your Jaspersoft Studio configuration, choose the action in you want in the displayed dialog. For resource categories other than Jaspersoft Studio properties and JasperReports Library properties, you have three choices:
+    |  |
+    |----|
+    | ![Selecting Categories to Import](assets/images/Selecting%20Categories%20to%20Import.png) |
+    | *Figure 2: Selecting Categories to Import* |
+
+4.  Select the resource categories that you want to import and click **Finish**.
+
+5.  If there is a naming conflict between an imported resource and an existing resource in your Jaspersoft Studio configuration, choose the action in you want in the displayed dialog. For resource categories other than Jaspersoft Studio properties and JasperReports Library properties, you have three choices:
 
 - **Overwrite**: Overwrites the existing resources with the imported resources of the same name.
 

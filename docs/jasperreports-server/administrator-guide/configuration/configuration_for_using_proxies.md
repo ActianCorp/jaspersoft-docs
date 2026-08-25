@@ -42,7 +42,7 @@ Change the following setting so that JasperReports Server exposes the proxy URL 
 <td><p><code>report.scheduler.web.deployment.uri</code></p></td>
 <td><p>This is the base URL used by the scheduler to generate links to reports in emails. Set this property to the full URL, including application name, that you expose through your proxy.</p>
 <p>For example:</p>
-<pre class="text"><code>http://bi.example.com/jasperserver</code></pre>
+<div class="language-text highlight"><pre><code>http://bi.example.com/jasperserver</code></pre></div>
 <p>Specify <code>http</code> or <code>https</code> in your URL.</p></td>
 </tr>
 </tbody>

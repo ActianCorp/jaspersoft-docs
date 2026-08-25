@@ -263,7 +263,7 @@ To render Pro Charts using HTML5, edit the following configuration file:
 
 Typically, this property is set at the server level; to override the server-level setting for a specific Pro Chart report, set this property at the report level, and also specify a second property as shown:
 
-```
+``` properties
 net.sf.jasperreports.print.transfer.fusion=com.jaspersoft.jasperreports.fusion
 ```
 

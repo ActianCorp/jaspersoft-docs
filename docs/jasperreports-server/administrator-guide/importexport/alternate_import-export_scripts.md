@@ -44,7 +44,7 @@ The imported file is handled as a ZIP archive if its name ends in .zip, otherwis
 
 The following examples are typical import commands on Windows:
 
-```
+``` bash
 js-ant import-help-pro
 js-ant import -DimportFile=my-reports.zip
 js-ant import -DimportFile=my-datasources -DimportArgs="--update"
@@ -52,7 +52,7 @@ js-ant import -DimportFile=my-datasources -DimportArgs="--update"
 
 The following examples are typical import commands on Linux:
 
-```
+``` bash
 ./js-ant import-help-pro
 ./js-ant import -DimportFile=my-reports.zip
 ./js-ant import -DimportFile=my-datasources.zip -DimportArgs="--update"
@@ -84,7 +84,7 @@ The export file format is a ZIP file or a set of files under a new directory nam
 
 The following examples are typical export commands on Linux and Windows:
 
-```
+``` bash
 js-ant export-help-pro
 js-ant export -DexportFile=my-domains.zip
     -DexportArgs="--uris /organizations/organization_1/datasources"

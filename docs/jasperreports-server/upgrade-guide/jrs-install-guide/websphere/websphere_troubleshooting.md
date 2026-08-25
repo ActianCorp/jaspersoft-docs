@@ -31,7 +31,7 @@ If you encounter errors when creating resources with internationalized names and
 
 In earlier releases of JasperReports Server, it was possible to find the following error in the WebSphere log:
 
-```
+``` yaml
 SRVE0068E: Uncaught exception thrown in one of the service methods of the servlet:
 jasperserver. Exception thrown: org.springframework.web.util.NestedServletException:
 javax.xml.validation.SchemaFactoryFinder$ConfigurationError: Provider

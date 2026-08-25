@@ -17,17 +17,17 @@ The following Java code shows how to access the serialized object and get the Ja
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>FileContent content = null;
+<td><div class="language-text highlight"><pre><code>FileContent content = null;
 if (attachments != null &amp;&amp; !attachments.isEmpty()) {
 content = (FileContent)(attachments.values().toArray()[0]);
 }
 if (content == null) {
 throw new Exception(&quot;No JasperPrint&quot;);
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>InputStream is = new ByteArrayInputStream(content.getData());
-JasperPrint print = (JasperPrint) JRLoader.loadObject(is);</code></pre></td>
+<td><div class="language-text highlight"><pre><code>InputStream is = new ByteArrayInputStream(content.getData());
+JasperPrint print = (JasperPrint) JRLoader.loadObject(is);</code></pre></div></td>
 </tr>
 </tbody>
 </table>

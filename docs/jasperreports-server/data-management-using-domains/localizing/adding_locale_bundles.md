@@ -23,26 +23,28 @@ If you need to modify the bundle, the Locales tab lets you download the bundle, 
 Use the following procedures to add bundles directly to your Domain.
 
 1.  Edit the Domain, and on the **Locales** tab, click **Add Locale Bundles**.
+
 2.  In the **Add Locale Bundle** dialog, select the **Local File** category at the top.
+
 3.  Click **Choose Files to Upload**, and select one or more bundles from your file system.
 
-![js DomainDesigner addLocalFileBundle](../assets/images/js-DomainDesigner-addLocalFileBundle.png)  ![js DomainDesigner addLocalFileBundleList](../assets/images/js-DomainDesigner-addLocalFileBundleList.png)
+    ![js DomainDesigner addLocalFileBundle](../assets/images/js-DomainDesigner-addLocalFileBundle.png)  ![js DomainDesigner addLocalFileBundleList](../assets/images/js-DomainDesigner-addLocalFileBundleList.png)
 
-*Figure 2: Adding Bundles from your File System*
+    *Figure 2: Adding Bundles from your File System*
 
-The dialog displays a list of the files you have selected. You can add or remove items from this list to create a list of bundles to upload.
+    The dialog displays a list of the files you have selected. You can add or remove items from this list to create a list of bundles to upload.
 
-1.  Click **Upload** to add these locale bundles to your Domain.
+4.  Click **Upload** to add these locale bundles to your Domain.
 
-![js DomainDesigner LocalesTab list](../assets/images/js-DomainDesigner-LocalesTab-list.png)
+    ![js DomainDesigner LocalesTab list](../assets/images/js-DomainDesigner-LocalesTab-list.png)
 
-*Figure 3: Locales Tab with Bundles List*
+    *Figure 3: Locales Tab with Bundles List*
 
-The server validates the file to make sure it matches the format of a locale bundle. If the file type is not recognized or there is a syntax error, you must select another file or click **Cancel**.
+    The server validates the file to make sure it matches the format of a locale bundle. If the file type is not recognized or there is a syntax error, you must select another file or click **Cancel**.
 
-When validated, the bundles are added to the Domain and displayed on the **Locales** tab.
+    When validated, the bundles are added to the Domain and displayed on the **Locales** tab.
 
-1.  After adding bundles to a Domain that is in use, you should clear the Ad Hoc cache of all queries based on the Domain. This removes any datasets that did not rely on the locale bundles. For instructions, see the JasperReports Server Administrator Guide.
+5.  After adding bundles to a Domain that is in use, you should clear the Ad Hoc cache of all queries based on the Domain. This removes any datasets that did not rely on the locale bundles. For instructions, see the JasperReports Server Administrator Guide.
 
 Once locale bundles are associated with the Domain, they are active and used to display labels in the given languages. Whenever a user logs in with a locale corresponding to one of the bundles, they will see the labels in the bundle.
 
@@ -51,43 +53,46 @@ Once locale bundles are associated with the Domain, they are active and used to 
 Use the following procedures to add bundles to the repository as shared resources, then use them in your Domain.
 
 1.  As an administrator, select **View \> Repository** and navigate to the folder where you want to store locale bundles.
+
 2.  Right-click the folder, and select **Add Resource \> File \> Resource Bundle**.
 
-![js Repository AddFile ResourceBundle](../assets/images/js-Repository-AddFile-ResourceBundle.png)
+    ![js Repository AddFile ResourceBundle](../assets/images/js-Repository-AddFile-ResourceBundle.png)
 
-*Figure 4: Adding a Locales Bundle to the Repository*
+    *Figure 4: Adding a Locales Bundle to the Repository*
 
-1.  In the **Add File** dialog, click **Browse** under **Path to File**, and select the locale bundle on your computer. The **Name** and **Resource ID** fields are automatically filled in with the file name. You must keep the `.properties` extension on the Name and ID.
-2.  Give the resource a description if desired, and change the save location as needed, then click submit.
+3.  In the **Add File** dialog, click **Browse** under **Path to File**, and select the locale bundle on your computer. The **Name** and **Resource ID** fields are automatically filled in with the file name. You must keep the `.properties` extension on the Name and ID.
 
-The locale bundle is uploaded and stored in the repository.
+4.  Give the resource a description if desired, and change the save location as needed, then click submit.
 
-!!! note
+    The locale bundle is uploaded and stored in the repository.
 
-    A warning is displayed if you attempt to delete a resource bundle file that is referenced by a Domain, but not if you replace the files with a different file. When you store these files in the repository, ensure that any updates to the files are compatible with the Domains that reference them.
+    !!! note
 
-1.  Edit the Domain, and on the **Locales** tab, click **Add Locale Bundles**.
-2.  In the **Add Locale Bundle** dialog, select the **Repository** category at the top.
+        A warning is displayed if you attempt to delete a resource bundle file that is referenced by a Domain, but not if you replace the files with a different file. When you store these files in the repository, ensure that any updates to the files are compatible with the Domains that reference them.
 
-The dialog displays a list of all the items of type Resource Bundle in the repository. You can mouse over a bundle to see its folder location and description, then click to select the bundles you want to use.
+5.  Edit the Domain, and on the **Locales** tab, click **Add Locale Bundles**.
 
-![js DomainDesigner addRepositoryBundle](../assets/images/js-DomainDesigner-addRepositoryBundle.png)
+6.  In the **Add Locale Bundle** dialog, select the **Repository** category at the top.
 
-*Figure 5: Selecting Bundles from the Repository*
+    The dialog displays a list of all the items of type Resource Bundle in the repository. You can mouse over a bundle to see its folder location and description, then click to select the bundles you want to use.
 
-You can also click the hierarchy icon at the top and browse the folder tree of the Repository to find the bundles you want to use. Or enter a name to search the repository.
+    ![js DomainDesigner addRepositoryBundle](../assets/images/js-DomainDesigner-addRepositoryBundle.png)
 
-1.  When you have selected all the bundles you need, click **Add**.
+    *Figure 5: Selecting Bundles from the Repository*
 
-The server validates the resource to make sure it matches the format of a locale bundle. If the file type is not recognized or there is a syntax error, you must select another resource or click **Cancel**.
+    You can also click the hierarchy icon at the top and browse the folder tree of the Repository to find the bundles you want to use. Or enter a name to search the repository.
 
-When validated, the bundles are added to the Domain and displayed on the Locales tab. You can build up a list of bundles by adding more any time. The list shows where the bundle is stored in the repository, or whether it's a local file uploaded directly to the Domain.
+7.  When you have selected all the bundles you need, click **Add**.
 
-![js DomainDesigner LocalesTab list2](../assets/images/js-DomainDesigner-LocalesTab-list2.png)
+    The server validates the resource to make sure it matches the format of a locale bundle. If the file type is not recognized or there is a syntax error, you must select another resource or click **Cancel**.
 
-*Figure 6: Locales Tab with Local and Repository Bundles*
+    When validated, the bundles are added to the Domain and displayed on the Locales tab. You can build up a list of bundles by adding more any time. The list shows where the bundle is stored in the repository, or whether it's a local file uploaded directly to the Domain.
 
-1.  After adding bundles to a Domain that is in use, you should clear the Ad Hoc cache of all queries based on the Domain. This removes any datasets that did not rely on the locale bundles. For instructions, see the JasperReports Server Administrator Guide.
+    ![js DomainDesigner LocalesTab list2](../assets/images/js-DomainDesigner-LocalesTab-list2.png)
+
+    *Figure 6: Locales Tab with Local and Repository Bundles*
+
+8.  After adding bundles to a Domain that is in use, you should clear the Ad Hoc cache of all queries based on the Domain. This removes any datasets that did not rely on the locale bundles. For instructions, see the JasperReports Server Administrator Guide.
 
 ## Modifying and Removing Locale Bundles
 

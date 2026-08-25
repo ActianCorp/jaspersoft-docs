@@ -33,7 +33,7 @@ The `organizationRoleMap` property provides a list of key/value pairs that maps 
 
 For example, if your LDAP user belongs to a group named `jrsadmin` that's mapped to the name `ROLE_ADMIN_EXTERNAL_ORGANIZATION`, the following code example would assign that user the `ROLE_ADMINISTRATOR` system role that makes the user an organization admin. This example shows how to create this system role mapping in a single organization configuration for commercial editions:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
         externalAuth.processors.MTExternalUserSetupProcessor" parent="abstractExternalProcessor">
   <property name="userAuthorityService">
@@ -71,7 +71,7 @@ If you're mapping all your external users to a single organization, you can assi
 
 The following example shows how to use the `mtExternalUserSetupProcessor` bean to define static roles. The configuration for `externalUserSetupProcessor` is similar:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">

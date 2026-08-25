@@ -12,14 +12,17 @@ If you want to create a data source, the application server must be able to find
 To define a data source for the simple report example
 
 1.  In the JasperReports wizard, click **Data Source**. The Link a Data Source to the Report page presents these choices:
+
     - Do not link a data source - Select or define the data source later. You see an error if you run the report in this state.
     - Click here to create a new data source - Define a new data source available only to your report.
     - Select data source from repository - Select an existing data source from the repository.
+
 2.  Choose **Select data source from the Repository** and **Browse** to **Public \> Samples \> Data sources \> JServer JNDI Data Source**.
+
 3.  Click **Select**. The Link a Data Source to the Report page reappears with the path to the data source.
 
-![js AddJasperReport DataSource](../assets/images/js-AddJasperReport-DataSource.png)
+    ![js AddJasperReport DataSource](../assets/images/js-AddJasperReport-DataSource.png)
 
-*Figure 1: Data Source Page*
+    *Figure 1: Data Source Page*
 
 4.  Click **Submit** to add the new report unit to the repository.

@@ -91,7 +91,7 @@ When specifying the option for the JSON format, the server’s response is:
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span> <span class="er">{</span></span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>      &quot;label&quot; : &quot;Mexico&quot;,
+<td><div class="language-text highlight"><pre><code>      &quot;label&quot; : &quot;Mexico&quot;,
       &quot;selected&quot; : &quot;true&quot;,
       &quot;value&quot; : &quot;Mexico&quot;
     }, {
@@ -102,7 +102,7 @@ When specifying the option for the JSON format, the server’s response is:
   },
   ...
   ]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>

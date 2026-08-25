@@ -57,7 +57,9 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
 **Back up your Jasperserver Database**
 
 1.  Create a folder (if you did not do so in the step above) where you can save your `Jasperserver` database, for example `C:\JS_BACKUP` or `/opt/JS_BACKUP`.
+
 2.  Run the following commands for PostgreSQL or MySQL:
+
     - PostgreSQL
 
       ``` bash
@@ -85,11 +87,11 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
       <tbody>
       <tr>
       <td><p>Windows:</p></td>
-      <td><pre class="text"><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></td>
+      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></div></td>
       </tr>
       <tr>
       <td><p>Linux:</p></td>
-      <td><pre class="text"><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></td>
+      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></div></td>
       </tr>
       </tbody>
       </table>
@@ -146,13 +148,15 @@ To configure `default_master.properties` for PostgreSQL:
 
 1.  Locate the `postgresql_master.properties` sample configuration file.
 
-| Database | Master Properties File |
-|----|----|
-| PostgreSQL | `<js-install-10.1>/buildomatic/sample_conf/postgresql_master.properties` |
+    | Database | Master Properties File |
+    |----|----|
+    | PostgreSQL | `<js-install-10.1>/buildomatic/sample_conf/postgresql_master.properties` |
 
-1.  Copy the file to `<js-install-10.1>/buildomatic`.
-2.  Rename the file `default_master.properties`.
-3.  Edit `default_master.properties` for your database and application server.
+2.  Copy the file to `<js-install-10.1>/buildomatic`.
+
+3.  Rename the file `default_master.properties`.
+
+4.  Edit `default_master.properties` for your database and application server.
 
 <table>
 <colgroup>
@@ -168,11 +172,11 @@ To configure `default_master.properties` for PostgreSQL:
 <tbody>
 <tr>
 <td><p>PostgreSQL</p></td>
-<td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
-dbUsername=postgres
-dbPassword=postgres
-dbHost=localhost</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat (or wildfly, etc.)</span>
+<span class="na">appServerDir</span><span class="o">=</span><span class="s">c:</span><span class="se">\\</span><span class="s">Apache Software Foundation</span><span class="se">\\</span><span class="s">Tomcat 11.0.x (for example)</span>
+<span class="na">dbUsername</span><span class="o">=</span><span class="s">postgres</span>
+<span class="na">dbPassword</span><span class="o">=</span><span class="s">postgres</span>
+<span class="na">dbHost</span><span class="o">=</span><span class="s">localhost</span></code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -185,13 +189,15 @@ To configure `default_master.properties` for MySQL:
 
 1.  Locate the `mysql_master.properties` sample configuration file:
 
-| Database | Master Properties File |
-|----|----|
-| MySQL | `<js-install-10.1>/buildomatic/sample_conf/mysql_master.properties` |
+    | Database | Master Properties File |
+    |----|----|
+    | MySQL | `<js-install-10.1>/buildomatic/sample_conf/mysql_master.properties` |
 
-1.  Copy the file to `<js-install-10.1>/buildomatic`.
-2.  Rename the file `default_master.properties`.
-3.  Edit `default_master.properties` for your database and application server.
+2.  Copy the file to `<js-install-10.1>/buildomatic`.
+
+3.  Rename the file `default_master.properties`.
+
+4.  Edit `default_master.properties` for your database and application server.
 
 <table>
 <colgroup>
@@ -207,11 +213,11 @@ To configure `default_master.properties` for MySQL:
 <tbody>
 <tr>
 <td><p>MySQL</p></td>
-<td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
-dbUsername=root
-dbPassword=password
-dbHost=localhost</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat (or wildfly, etc.)</span>
+<span class="na">appServerDir</span><span class="o">=</span><span class="s">c:</span><span class="se">\\</span><span class="s">Apache Software Foundation</span><span class="se">\\</span><span class="s">Tomcat 11.0.x (for example)</span>
+<span class="na">dbUsername</span><span class="o">=</span><span class="s">root</span>
+<span class="na">dbPassword</span><span class="o">=</span><span class="s">password</span>
+<span class="na">dbHost</span><span class="o">=</span><span class="s">localhost</span></code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -224,13 +230,15 @@ To configure `default_master.properties` for Oracle:
 
 1.  Locate the `oracle_master.properties` sample configuration file:
 
-| Database | Master Properties File |
-|----|----|
-| Oracle | `<js-install-10.1>/buildomatic/sample_conf/oracle_master.properties` |
+    | Database | Master Properties File |
+    |----|----|
+    | Oracle | `<js-install-10.1>/buildomatic/sample_conf/oracle_master.properties` |
 
-1.  Copy the file to `<js-install-10.1>/buildomatic`.
-2.  Rename the file to `default_master.properties`.
-3.  Edit `default_master.properties` for your database and application server.
+2.  Copy the file to `<js-install-10.1>/buildomatic`.
+
+3.  Rename the file to `default_master.properties`.
+
+4.  Edit `default_master.properties` for your database and application server.
 
 <table>
 <colgroup>
@@ -246,14 +254,14 @@ To configure `default_master.properties` for Oracle:
 <tbody>
 <tr>
 <td><p>Oracle</p></td>
-<td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
-dbUsername=jasperserver
-dbPassword=password
-sysUsername=system
-sysPassword=password
-dbHost=localhost
-dbVersion=oracleDbVersion (for example, 12, 19c, 21c, 23ai, 26ai and so on)</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat (or wildfly, etc.)</span>
+<span class="na">appServerDir</span><span class="o">=</span><span class="s">c:</span><span class="se">\\</span><span class="s">Apache Software Foundation</span><span class="se">\\</span><span class="s">Tomcat 11.0.x (for example)</span>
+<span class="na">dbUsername</span><span class="o">=</span><span class="s">jasperserver</span>
+<span class="na">dbPassword</span><span class="o">=</span><span class="s">password</span>
+<span class="na">sysUsername</span><span class="o">=</span><span class="s">system</span>
+<span class="na">sysPassword</span><span class="o">=</span><span class="s">password</span>
+<span class="na">dbHost</span><span class="o">=</span><span class="s">localhost</span>
+<span class="na">dbVersion</span><span class="o">=</span><span class="s">oracleDbVersion (for example, 12, 19c, 21c, 23ai, 26ai and so on)</span></code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -388,7 +396,7 @@ In the `Jasperserver` database, compiled JasperReports Library resources are cac
 
 **To clear the repository cache database table manually, run a SQL command similar to the one shown below**:
 
-```
+``` sql
 update JIRepositoryCache set item_reference = null;
 delete from JIRepositoryCache;
 ```

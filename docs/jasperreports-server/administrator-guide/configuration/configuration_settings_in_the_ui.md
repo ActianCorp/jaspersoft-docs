@@ -10,12 +10,14 @@ Configuration settings are persistent through server restart, though this wasn't
 To make persistent configuration changes through the JasperReports Server user interface
 
 1.  Log in as system administrator (`superuser` by default).
+
 2.  Select **Manage \> Server Settings**: ![js Manage menu ServerSettings](../assets/images/js-Manage-menu-ServerSettings.png)
+
 3.  Choose a category of settings or administrator actions from the left-hand **Settings** panel.
 
-![js Settings Logs](../assets/images/js-Settings-Logs.png)
+    ![js Settings Logs](../assets/images/js-Settings-Logs.png)
 
-*Figure 1: The User Interface for Configuration Settings*
+    *Figure 1: The User Interface for Configuration Settings*
 
 4.  Find the configuration setting you want to change and edit its value. In the case of log levels, the new value takes effect immediately. In the case of other settings, click **Change** beside the individual setting.<br>
     The settings and administrator actions are documented in their respective sections:
@@ -64,19 +66,21 @@ If a setting has been modified in the UI, it will remain in persistent storage a
 To restore a default setting
 
 1.  Log in as system administrator (`superuser` by default).
+
 2.  Select **Manage \> Server Settings** and choose **Restore Defaults** from the left-hand panel.
 
-![js Settings RestoreDefaults](../assets/images/js-Settings-RestoreDefaults.png)
+    ![js Settings RestoreDefaults](../assets/images/js-Settings-RestoreDefaults.png)
 
-*Figure 2: The Restore Defaults Page Containing Persistent Configuration Settings*
+    *Figure 2: The Restore Defaults Page Containing Persistent Configuration Settings*
 
-The configuration values on the **Restore Defaults** page represent the settings that have been modified through the UI and are stored in persistent storage.
+    The configuration values on the **Restore Defaults** page represent the settings that have been modified through the UI and are stored in persistent storage.
 
-!!! note
+    !!! note
 
-    The **Restore Defaults** page also includes JDBC drivers configured during the installation or through the data source creation wizard. Do not remove the drivers with `[SYSTEM]` values. For more information, see [Managing JDBC Drivers](../datasources/managing_jdbc_drivers.md).
+        The **Restore Defaults** page also includes JDBC drivers configured during the installation or through the data source creation wizard. Do not remove the drivers with `[SYSTEM]` values. For more information, see [Managing JDBC Drivers](../datasources/managing_jdbc_drivers.md).
 
 3.  To restore a setting to its configuration file default, click the ![js Settings icon Remove](../assets/images/js-Settings-icon-Remove.png) icon beside its current value and confirm.
+
 4.  Click **Save** to make the change permanent.<br>
     The setting is removed from persistent storage and the value of the setting is restored to its default value from the corresponding configuration file. The next time the server restarts, its value will be read from the configuration file.
 

@@ -31,7 +31,7 @@ To download and install Maven, go to:  <http://maven.apache.org/download.html#i
 
 To run `mvn` from the command line, put the maven binary (`mvn` or `mvn.exe`) in your environment `PATH`. To check your Maven version, run this command:
 
-```
+``` bash
 mvn -version
 ```
 

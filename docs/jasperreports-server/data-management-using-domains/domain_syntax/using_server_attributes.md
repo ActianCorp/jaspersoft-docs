@@ -64,7 +64,7 @@ For more information on attributes, see the Managing Attributes section  in the
 
 To use a JasperReports Server attribute as the name of a schema in the data source, use the attribute syntax in the `string` element for the `entry` for that schema. You can use a constant or an attribute for the XML `key` attribute of `entry`.
 
-```
+``` xml
 <jdbcDataSource id="FoodmartDataSourceJNDI">
   <schemaMap>
     <entry key="defaultSchema">
@@ -79,7 +79,7 @@ To use a JasperReports Server attribute as the name of a schema in the data sour
 
 For pre-filters, JasperReports Server attributes can appear in the expression for the `filterString` element in the `jdbcTble` or `jdbcQuery` element:
 
-```
+``` xml
 <jdbcTable id="region" datasourceId="FoodmartDataSourceJNDI" schemaAlias="public" datasourceTableName="region">
   <fieldList>
     <field id="region_id" type="java.lang.Integer" />
@@ -92,13 +92,13 @@ For pre-filters, JasperReports Server attributes can appear in the expression fo
 
 For calculated fields, JasperReports Server attributes can appear in `dataSetExpression` in the `field` element:
 
-```
+``` xml
 <field id="Sample_Calculated_Field" dataSetExpression="salary_paid &gt; attribute('numericAttribute')" type="java.lang.Boolean" />
 ```
 
 For derived tables, JasperReports Server attributes can appear in the `query` element in `jdbcQuery`. For example, if you have defined an attribute with the name of the table you want called `tableAttribute`, a derived table that uses that attribute might look like this:
 
-```
+``` xml
 <jdbcQuery id="inventory_fact_1998_2" datasourceId="dsFoodMart">
       <fieldList>
         <field id="warehouse_cost" type="java.math.BigDecimal" />
@@ -119,7 +119,7 @@ from
 
 You can use attributes in the secondary joins in a complex join `expression`. However, you can't use attributes in the first join in the expression:
 
-```
+``` xml
 <joinInfo alias="account" referenceId="account" />
 <joinList>
     <join expr="account.account_id == expense_fact.account_id and
@@ -155,10 +155,15 @@ Note the following when using attributes:
     If you use an attribute in your data source definition, you must ensure that referenced schemas, tables, and columns will be available. Data source attributes are defined outside the Domain Designer. See the section on defining attributes in the JasperReports Server Administrator Guide for more information.
 
 - If a specified attribute does not exist, any item that uses it will fail. For example, if you specify the attribute `Country` for a schema name, and a `Country` attribute does not exist anywhere on the server, you will be unable to load the schema. This is similar to referring to column that does not exist.
+
 - If an attribute exists but is not defined (empty) for a particular user, the behavior depends on where the attribute is used. An empty attribute can occur, for example, if you have set up a `Country` attribute, but the current user has no value defined for `Country`.
+
 - For pre-filters, an empty attribute is interpreted based on the field's data type, as described below.
+
   - For a field of type String, an empty attribute is interpreted as an empty string: `""`
   - For a Boolean field, and empty attribute is interpreted as `FALSE`.
   - For numeric and date fields, an error will occur.
+
 - For derived table queries and custom joins, the attribute will fail in most cases. However, in some cases, JasperReports Server will consider the resulting expression to be valid, with potentially unexpected results, so be cautious when using attributes in this part of your design.
+
 - For schema names, the default schema is used when the attribute is empty. The default schema must be defined in the XML Domain design file. See [Default Schema](representing_data_sources.md) for more information.

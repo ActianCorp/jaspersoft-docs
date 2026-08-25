@@ -205,7 +205,7 @@ The following table provides the configuration information to contact an email s
 
 The bean for graph API is created only when the graph profile is enabled in `web.xml`. By default, the 'graph' profile in the `web.xml` file is disabled to prevent unnecessary bean creation. To enable the 'graph' profile:
 
-```
+``` xml
 <context-param>
 <param-name>spring.profiles.active</param.name>
 <param-value>default,engine,alerting-ie,jrs,graph</param.value>

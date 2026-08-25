@@ -18,10 +18,14 @@ The mapping for user roles is configured in a bean of the `JSDefaultLdapAuthorit
 To configure the mapping for user roles in sample-applicationContext-externalAuth-LDAP\[-mt\].xml, locate the bean of the `JSDefaultLdapAuthoritiesPopulator` class, the second constructor argument of `ldapAuthenticationProvider`, and specify the following information:
 
 - `constructor-arg index="1"`: An optional branch DN where group entries are located. If not specified, the search covers your entire LDAP directory starting from the base DN.
+
 - `groupRoleAttribute` property: The attribute whose value is mapped to the name of the JasperReports Server role. Often, this is the `cn` attribute that gives the name of the role in the RDN of the group entry. But it can be any attribute, for example a custom attribute named `Jaspersoft Role Name` defined by a custom LDAP schema.
+
 - `groupSearchFilter` property: A group search filter that locates entries representing groups to which the user belongs. For static groups, this filter should detect entries with the `groupofuniquenames` object class and with a `uniqueMember` value that matches the DN found by the user search. You can use the following parameters:
+
   - `{0}` represents the full DN of the user entry.
   - `{1}` represents the username.
+
 - `searchSubtree` property: Whether or not the search should extend to all subtrees beneath the branch DN, or beneath the base DN when no branch DN is specified.
 
 `JSDefaultLdapAuthoritiesPopulator` is a wrapper class of the Spring Security `DefaultLdapAuthoritiesPopulator` class. Spring Security supports additional properties; see the [Spring Security documentation](https://docs.spring.io/spring-security/reference/6.5/index.html) for more information.
@@ -32,7 +36,7 @@ To configure the mapping for user roles in sample-applicationContext-externalAut
 
 The following shows an example syntax of the constructor arguments and properties that uses `groupofuniquenames`:
 
-```
+``` xml
 <bean id="ldapAuthenticationProvider"  class="com.jaspersoft.jasperserver.api.security.
        externalAuth.wrappers.spring.ldap.JSLdapAuthenticationProvider">
   <constructor-arg> ...

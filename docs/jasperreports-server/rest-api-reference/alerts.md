@@ -138,13 +138,13 @@ You can perform a string search in the search criteria to find an alert by name 
 
 For example, if you want to request all the alerts for a report, then use the following GET method URL (%2F is the / character) in the request:
 
-```
+``` text
 GET http://example.com:8090/jasperserver-pro/rest_v2/alerts?reportUnitURI=%2Freports%2FAllAccounts
 ```
 
 In the response from the server, the alerts are described in an `alertsummary` element, such as the following example. The `alertsummary` contains a small subset of the properties of the alert descriptor as well as the complete state descriptor:
 
-```
+``` json
 {
     "alertsummary": [
         {
@@ -170,7 +170,7 @@ The `example` parameter lets you specify a search of any property in the alert d
 
 For example, you can search for all alerts that specify an output format of PDF and XLS. The JSON `alertModel` to specify this property is:
 
-```
+``` text
 "outputFormats": {
 "outputFormat": ["PDF", "XLS"]
 }
@@ -178,7 +178,7 @@ For example, you can search for all alerts that specify an output format of PDF 
 
 Below is the corresponding URI with proper encoding is:
 
-```
+``` text
 http://<host>:<port>/jasperserver[-pro]/rest_v2/alerts?example=%7b%22outputFormat%22%3a%22PDF%22%7d
 ```
 
@@ -215,7 +215,7 @@ Use the GET method to retrieve details of an alert using its unique id. You can 
 
 The GET method returns a descriptor that includes the various parameters of a scheduled alert. All properties are included, many of which may be null, if not set for the chosen alert. For more information, see The alert Descriptor.
 
-```
+``` json
 {
     "id": 4198,
     "version": 1,
@@ -644,9 +644,9 @@ The following properties define the recurrence pattern of a calendar trigger:
 <td><p><code>months</code><br />
 (required)</p></td>
 <td><p>A list of <code>month</code> values during which the trigger fires. It can be used in addition to <code>weekDays</code> or <code>monthDays</code> below to suppress the trigger during certain months. The month values are 1 for January and 12 for December. In JSON, it has the following syntax:</p>
-<pre class="text"><code>&quot;months&quot;: {
+<div class="language-text highlight"><pre><code>&quot;months&quot;: {
     &quot;month&quot;: [&quot;1&quot;, &quot;11&quot;, &quot;6&quot;]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 <tr>
 <td><p><code>daysType</code><br />
@@ -662,9 +662,9 @@ The following properties define the recurrence pattern of a calendar trigger:
 <td><p><code>weekDays</code><br />
 (conditional)</p></td>
 <td><p>Specifies a list of days of the week on which the trigger fires, which has to be repeated every week. This is required if <code>daysType=WEEK</code>, else ignored otherwise. The day values are 1 for Sunday and 7 for Saturday. On the designated days, the trigger fires at the time or times defined by the <code>hours</code> and <code>minutes</code> properties. In JSON, it has the following syntax:</p>
-<pre class="text"><code>&quot;weekDays&quot;: {
+<div class="language-text highlight"><pre><code>&quot;weekDays&quot;: {
     &quot;day&quot;: [&quot;1&quot;, &quot;4&quot;, &quot;6&quot;]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 <tr>
 <td><p><code>monthDays</code><br />

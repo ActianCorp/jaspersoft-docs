@@ -38,14 +38,16 @@ If your mail server requires authentication, edit the a`pplicationContext-report
 
 1.  Extract the file from the WAR archive:
 
-`"%JAVA_HOME%\bin\jar" xf jasperserver-pro.war WEB-INF/applicationContext-report-scheduling.xml`
+    `"%JAVA_HOME%\bin\jar" xf jasperserver-pro.war WEB-INF/applicationContext-report-scheduling.xml`
 
-1.  Open the file for editing and locate the `reportSchedulerMailSender` bean.
-2.  Set the `javaMailProperties key=`"`mail.smtp.auth`" value to `true`.
-3.  Save the file and replace it in the archive:
+2.  Open the file for editing and locate the `reportSchedulerMailSender` bean.
 
-`"%JAVA_HOME%\bin\jar" uf jasperserver-pro.war WEB-INF/applicationContext-report-scheduling.xml`
+3.  Set the `javaMailProperties key=`"`mail.smtp.auth`" value to `true`.
 
-1.  Delete the `WEB-INF` directory that was created, along with the file it contains.
+4.  Save the file and replace it in the archive:
+
+    `"%JAVA_HOME%\bin\jar" uf jasperserver-pro.war WEB-INF/applicationContext-report-scheduling.xml`
+
+5.  Delete the `WEB-INF` directory that was created, along with the file it contains.
 
 For more information about setting up report scheduling, refer to [Configuring Report Scheduling](../../../installation-guide/additional/configuring_report_scheduling.md).

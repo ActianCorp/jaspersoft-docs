@@ -52,39 +52,39 @@ To install
 
 1.  Go to the buildomatic folder, create and edit a default_master.properties file, and run js-install.sh/bat:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>cd &lt;js-install&gt;/buildomatic</p>
-<p>cp sample_conf/&lt;dbType&gt;_master.properties default_master.properties</p></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>cd &lt;js-install&gt;/buildomatic</p>
+    <p>cp sample_conf/&lt;dbType&gt;_master.properties default_master.properties</p></td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  Using a text editor, edit default_master.properties to add your application server and database server properties:
+2.  Using a text editor, edit default_master.properties to add your application server and database server properties:
 
-|                                     |
-|-------------------------------------|
-| ./js-install.sh (or js-install.bat) |
+    |                                     |
+    |-------------------------------------|
+    | ./js-install.sh (or js-install.bat) |
 
-1.  Then change the JAVA_OPT memory options for your application server following instructions from the installation guide. For example, under Linux with Tomcat running on JDK 1.8, add the following to the top of the \<tomcat\>/bin/setclasspath.sh file:
+3.  Then change the JAVA_OPT memory options for your application server following instructions from the installation guide. For example, under Linux with Tomcat running on JDK 1.8, add the following to the top of the \<tomcat\>/bin/setclasspath.sh file:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m"</p>
-<p>export JAVA_OPTS="$JAVA_OPTS -Xss2m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"</p></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>export JAVA_OPTS="$JAVA_OPTS -Xms1024m -Xmx2048m"</p>
+    <p>export JAVA_OPTS="$JAVA_OPTS -Xss2m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled"</p></td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  Next, copy your jasperserver.license to your application server user's home folder:
+4.  Next, copy your jasperserver.license to your application server user's home folder:
 
 |                                                                |
 |----------------------------------------------------------------|

@@ -24,23 +24,29 @@ When you combine data sources into a virtual data source, you select an alias fo
 To create a virtual data source
 
 1.  Log in as an administrator.
+
 2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you have installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
+
 3.  From the **Type** dropdown, select **Virtual Data Source**.
+
 4.  Locate the data sources that you want to use in the **Available Data Sources** pane. Double-click to select each chosen data source. The data source is shown in the **Selected Data Sources** pane.
+
 5.  Change the aliases by editing them directly in the **Alias** column (optional). The alias identifies the selected data source within the virtual data source. It is also added as a prefix to the name of each table in that data source. Spaces are not allowed in aliases.
 
-The following figure shows the values for creating a virtual data source by combining two of the databases included in the sample data: the Foodmart database and the SugarCRM database.
+    The following figure shows the values for creating a virtual data source by combining two of the databases included in the sample data: the Foodmart database and the SugarCRM database.
 
-![js DataSource Virtual](../assets/images/js-DataSource-Virtual.png)
+    ![js DataSource Virtual](../assets/images/js-DataSource-Virtual.png)
 
-*Figure 2: Creating a Virtual Data Source*
+    *Figure 2: Creating a Virtual Data Source*
 
-!!! note
+    !!! note
 
-    Virtual data sources cannot use the Time Zone field that may be set on individual data sources. If used in a virtual data source, a target data source with a time zone will not return the expected date-time values. Therefore, we recommend that you do not use data sources with time zone settings in a virtual data source.
+        Virtual data sources cannot use the Time Zone field that may be set on individual data sources. If used in a virtual data source, a target data source with a time zone will not return the expected date-time values. Therefore, we recommend that you do not use data sources with time zone settings in a virtual data source.
 
 6.  Click **Save**. The **Save** dialog appears.
+
 7.  Enter the **Data source name** and an optional description. The **Resource ID** is generated from the name that you enter. If you have not already specified a location, expand the folder tree and select the location for your data source.
+
 8.  Click **Save** in the dialog. The data source appears in the repository.
 
 You can edit a virtual data source to add or remove the data sources it uses. If the virtual data source is used by a Domain, you can add data sources, but you cannot remove them. Removing a data source from a virtual data source modifies only the virtual data source. The data source that you removed remains in the repository.
@@ -72,15 +78,16 @@ It might take a long time to get a list of virtual data source tables in a domai
 To improve the performance, do the following:
 
 1.  Open the file `.../WEB-INF/applicationContext-virtual-data-source.xml `for editing.
+
 2.  Locate the bean named `abstractTeiidVirtualQueryService` and the following property.
 
-```
-<property name="customSelectedSchemas">
-```
+    ``` xml
+    <property name="customSelectedSchemas">
+    ```
 
 3.  Add new entries to the map.
 
-```
+``` xml
      <entry key="Microsoft SQL Server">
            <map>
               <entry key="schemasToBeIncluded">
@@ -90,7 +97,7 @@ To improve the performance, do the following:
 
 This would look like the following.
 
-```
+``` xml
 <property name="customSelectedSchemas">
      <map>
         <entry key="oracle">
@@ -130,13 +137,13 @@ Another fix that you can do to improve the performance is increasing the time fo
 
 1.  In the same bean, find the following line:
 
-```
- <property name="poolTimeoutInMinute" value="20"/>
-```
+    ``` xml
+     <property name="poolTimeoutInMinute" value="20"/>
+    ```
 
 2.  Change the line as follows to increase the time for cached schemas metadata.
 
-```
+``` xml
  <property name="poolTimeoutInMinute" value="720"/>
 ```
 
@@ -170,7 +177,7 @@ To create a virtual data source that accesses a Cassandra data source
 
 If you have issues with your big data connections through virtual data sources, you can enable logging in the following classes:
 
-```
+``` text
 com.jaspersoft.jasperserver.api.common.virtualdatasourcequery.VirtualDataSourceQueryService
 com.jaspersoft.jasperserver.api.engine.common.virtualdatasourcequery.teiid.TeiidEmbeddedServer
 ```

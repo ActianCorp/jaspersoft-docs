@@ -84,9 +84,9 @@ To choose the chart's colors
 
 1.  In the **Format Visualization** panel, go to the **Appearance** settings.
 
-![js AdHoc AppearanceTab](../assets/images/js-AdHoc-AppearanceTab.png)
+    ![js AdHoc AppearanceTab](../assets/images/js-AdHoc-AppearanceTab.png)
 
-*Figure 2: Appearance Settings*
+    *Figure 2: Appearance Settings*
 
 2.  Under **Series Colors**, click **+ Add color** to add the first color.
 
@@ -104,9 +104,9 @@ To choose the chart's colors
 
         The order of the colors added to the chart is the order they appear in the series.
 
-![js AdHoc AppearanceTab Colors](../assets/images/js-AdHoc-AppearanceTab-Colors.png)
+    ![js AdHoc AppearanceTab Colors](../assets/images/js-AdHoc-AppearanceTab-Colors.png)
 
-*Figure 3: Appearance Settings with Multiple Colors in Series*
+    *Figure 3: Appearance Settings with Multiple Colors in Series*
 
 7.  You can change the colors of the chart background and plot using the color picker buttons under **Background Colors**.
 
@@ -124,9 +124,9 @@ To edit a gauge's display settings
 
 1.  In the **Format Visualization** panel, go to the **Appearance** settings.
 
-![js AdHoc AppearanceTab Gauges](../assets/images/js-AdHoc-AppearanceTab-Gauges.png)
+    ![js AdHoc AppearanceTab Gauges](../assets/images/js-AdHoc-AppearanceTab-Gauges.png)
 
-*Figure 4: Appearance Settings*
+    *Figure 4: Appearance Settings*
 
 2.  From the **Layout** dropdown menu, select the layout for displaying the gauges. By default, the layout is **Best Fit**, which displays all the gauges on the canvas in one or more rows. The gauges can also be displayed in a single vertical column or a single horizontal row.
 
@@ -156,11 +156,12 @@ To create a pie using Old Layout Band
 
 1.  On the **New Ad hoc View** page, select **Pie** from the **Select Visualization Type** pop-up.
 
-![AdhocView piechart](../assets/images/AdhocView-piechart.png)
+    ![AdhocView piechart](../assets/images/AdhocView-piechart.png)
 
-*Figure 5: Select Pie*
+    *Figure 5: Select Pie*
 
 2.  View the following sections on the page:
+
     - **Fields** and **Measures**
     - Chart canvas
     - **Filters**
@@ -180,31 +181,31 @@ To create a pie using Old Layout Band
 
         The Legend is based on **Rows** only.
 
-![AdhocView piechart columns rows](../assets/images/AdhocView-piechart-columns-rows.png)
+    ![AdhocView piechart columns rows](../assets/images/AdhocView-piechart-columns-rows.png)
 
-*Figure 6: Select Columns and Rows*
+    *Figure 6: Select Columns and Rows*
 
-!!! note
+    !!! note
 
-    The number of pies depends on the number of **Measures** in **Columns**. If there are two **Measures** in **Columns**, then two pies are displayed.
+        The number of pies depends on the number of **Measures** in **Columns**. If there are two **Measures** in **Columns**, then two pies are displayed.
 
-    It also depends on the **Fields** added to the **Columns**. There may be one **Measure** but adding **Fields** and setting the **Data Level** slider can increase the number of pies.
+        It also depends on the **Fields** added to the **Columns**. There may be one **Measure** but adding **Fields** and setting the **Data Level** slider can increase the number of pies.
 
 4.  In the **Filters** section, drag the **Row** slider to control the values from the selected fields from **Rows**.
 
-![AdhocView piechart rows slider](../assets/images/AdhocView-piechart-rows-slider.png)
+    ![AdhocView piechart rows slider](../assets/images/AdhocView-piechart-rows-slider.png)
 
-*Figure 7: Row Data Level Slider*
+    *Figure 7: Row Data Level Slider*
 
-!!! note
+    !!! note
 
-    If there is more than one field selected in **Columns**, a **Column** slider is also displayed. Select the field, across all fields, which must be used to generate pies.
+        If there is more than one field selected in **Columns**, a **Column** slider is also displayed. Select the field, across all fields, which must be used to generate pies.
 
 5.  Hover the mouse over the pie and view the tool-tip.
 
-![AdhocView piechart drilldown level1](../assets/images/AdhocView-piechart-drilldown-level1.png)
+    ![AdhocView piechart drilldown level1](../assets/images/AdhocView-piechart-drilldown-level1.png)
 
-*Figure 8: Tool-tip*
+    *Figure 8: Tool-tip*
 
 6.  In the **Format Visualization** panel, provide the information, and enable or disable the toggles in the **Title** and **Labels** sections.
 
@@ -229,6 +230,7 @@ To create a pie using New Layout Band
     *Figure 11: Select Pie*
 
 2.  View the following sections on the page:
+
     - **Fields** and **Measures**
     - Chart canvas
     - **Filters**

@@ -20,19 +20,22 @@ For more information about AWS and Azure data sources, see [â€œAWS Data Sourcesâ
 To change cloud services settings
 
 1.  Log in as a system administrator (superuser by default).
+
 2.  Click **Manage \> Server Settings**.
+
 3.  Click **Cloud Settings** in the left-menu.<br>
     The **Cloud Settings** panel appears.
 
-![js Settings Cloud](../assets/images/js-Settings-Cloud.png)
+    ![js Settings Cloud](../assets/images/js-Settings-Cloud.png)
 
-*Figure 1: Cloud Settings Page*
+    *Figure 1: Cloud Settings Page*
 
-!!! note
+    !!! note
 
-    We set up one AWS DB Security Group (using IP address) in each RDS region, per JasperReports Server instance. The security group allows connections from the specific JasperReports Server instance to the specified AWS database instance.
+        We set up one AWS DB Security Group (using IP address) in each RDS region, per JasperReports Server instance. The security group allows connections from the specific JasperReports Server instance to the specified AWS database instance.
 
 4.  Modify the following settings and click **Change** after each modification. Changes are effective immediately on the server:
+
     - **Automatically Set Up an Access Rule for JasperReports Server**: This checkbox is generally left checked. When checked the JasperReports Server will automatically create and update an access rule that allows connections from JasperReports Server to the database hosted by the cloud service provider. If you want to manage the access rules manually, uncheck this box.
 
     - **Access Rule Name**: When JasperReports Server creates access rules to support cloud-based data sources on this instance, it uses this name as the basis of the access rule name. When the JasperReports Server instance is running on AWS EC2, the EC2 instance ID is appended. When running outside of AWS EC2, you must make sure that the name is unique among JasperReports Server instances (that is, each instance should have its own name), so the IP addresses are properly granted access to the appropriate database instances.
@@ -50,17 +53,18 @@ When adding an AWS data source, JasperReports Server uses the JDBC driver specif
 To change the JDBC driver used with AWS data sources
 
 1.  Open the file `.../WEB-INF/applicationContext-webapp.xml` for editing.
+
 2.  Locate the `jdbcConnectionMap` bean and the key of your AWS database type within it. Modify this key to specify a different JDBC driver. For example, the default driver for MySQL databases is set to the MariaDB driver:
 
-```
-<entry key="mysql">
-<util:map>
-    ...
-    <entry key="jdbcUrl" value="jdbc:mysql://$[dbHost]:$[dbPort]/$[dbName]"/>
-    <entry key="jdbcDriverClass" value="org.mariadb.jdbc.Driver"/>
-    ...
-</util:map>
-```
+    ``` xml
+    <entry key="mysql">
+    <util:map>
+        ...
+        <entry key="jdbcUrl" value="jdbc:mysql://$[dbHost]:$[dbPort]/$[dbName]"/>
+        <entry key="jdbcDriverClass" value="org.mariadb.jdbc.Driver"/>
+        ...
+    </util:map>
+    ```
 
 3.  Save the file and restart JasperReports Server.
 

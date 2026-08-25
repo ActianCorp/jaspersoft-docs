@@ -27,11 +27,11 @@ To search and read traces of the scheduled report in Jaeger UI, do the following
 
 4.  Click `Find Traces`.
 
-![View scheduler job traces](../assets/images/View-scheduler-job-traces.png)
+    ![View scheduler job traces](../assets/images/View-scheduler-job-traces.png)
 
-![Scheduler traces for scheduleJobAPI](../assets/images/Scheduler-traces-for-scheduleJobAPI.png)
+    ![Scheduler traces for scheduleJobAPI](../assets/images/Scheduler-traces-for-scheduleJobAPI.png)
 
-*Figure 2: Viewing Traces of Report Scheduling*
+    *Figure 2: Viewing Traces of Report Scheduling*
 
 5.  Choose from any result items to view traces of `rest_v2/jobs`.
 

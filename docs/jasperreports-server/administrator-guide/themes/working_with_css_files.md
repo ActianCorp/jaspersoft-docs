@@ -88,7 +88,7 @@ For single-organization deployments that don't have a license to create organiza
 
 When your theme is well-tested and nearly complete, you should test it on the production server. Upload your theme to the Themes folder where you intend to deploy it, but do not activate it. Log in as a test user and add the following parameter to any URL, for example the home page URL:
 
-```
+``` text
 &theme=<theme-name>
 ```
 

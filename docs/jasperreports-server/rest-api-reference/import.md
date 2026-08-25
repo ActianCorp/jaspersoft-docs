@@ -153,7 +153,7 @@ Setting?</span></p></td>
 
 The body of the response contains the ID of the import operation needed to check its status:
 
-```
+``` text
 {
     id:"aad78989-dasds32-dasdsd"
     phase: "inprogress",
@@ -190,7 +190,7 @@ To check the status of the import, use its ID in the following method:
 
 As with the initial import request, the body of the response contains the state of the import operation, including its current phase and corresponding message:
 
-```
+``` text
 {
     id:"aad78989-dasds32-dasdsd"
     phase: "inprogress",
@@ -239,7 +239,7 @@ The following table describes the possible phases of the import operation:
 
 In the case of warnings or errors, the GET method returns a JSON structure that includes an error message and code. Some errors also have parameters given as a list of values, for example a list of resource URIs with broken dependencies.
 
-```
+``` text
 {
     id:"aad78989-dasds32-dasdsd"
     phase: "pending",
@@ -400,7 +400,7 @@ When an import is in the pending state, you can try to restart it. To see the im
 
 The response contains a JSON structure that lists all options specified for this import operation:
 
-```
+``` json
 {
    "brokenDependencies": "fail",
    "organization" : "organization_1",
@@ -452,7 +452,7 @@ Once you know which options blocked the import operation, use the PUT method of 
 
 The body of the response shows the import options that were applied:
 
-```
+``` json
 {
    "brokenDependencies": "include",
    "organization" : "organization_1",
@@ -514,10 +514,10 @@ Submitting an import catalog through an HTML form is also an Asynchronous operat
 <tr>
 <td colspan="2"><p><span>multipart/form-data</span></p></td>
 <td colspan="2"><p>The form data is sent by the browser when you submit a page with <code>input</code> tags. For example:</p>
-<pre class="text"><code>form-data; name=&quot;file-name&quot;,
+<div class="language-text highlight"><pre><code>form-data; name=&quot;file-name&quot;,
 form-data; name=&quot;include-access-events&quot;,
 form-data; name=&quot;update&quot;,
-...</code></pre></td>
+...</code></pre></div></td>
 </tr>
 <tr>
 <td colspan="2"><p><span>application/zip</span></p></td>
@@ -558,7 +558,7 @@ The following table describes the options that you can submit in the import requ
 
 The following HTML example shows how the `import` service can be invoked from a web page:
 
-```
+``` xml
 <form method="post"
       action="http://example.com:8090/jasperserver-pro/rest_v2/import"
       enctype="multipart/form-data">

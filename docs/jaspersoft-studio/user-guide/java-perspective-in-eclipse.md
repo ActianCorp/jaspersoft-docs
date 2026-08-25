@@ -28,12 +28,14 @@ To create a Java project
 To add libraries to your Java project
 
 1.  Right-click your project name in the Package Explorer and select **Build Path \> Add Libraries**.
+
 2.  In the **Add Library** dialog, select JasperReports Libraries, then click **Finish**.
 
-The selected library is added to SimpleChartCustomizer.
+    The selected library is added to SimpleChartCustomizer.
 
-1.  Right-click your project name in the Package Explorer and select **Build Path \> Add Libraries**.
-2.  In the **Add Library** dialog, select **JasperReports Library Dependencies**, then click **Finish**.
+3.  Right-click your project name in the Package Explorer and select **Build Path \> Add Libraries**.
+
+4.  In the **Add Library** dialog, select **JasperReports Library Dependencies**, then click **Finish**.
 
 For example, if you are creating a chart customizer, the library dependencies you have added include the JFreeCharts libraries.
 
@@ -60,11 +62,16 @@ To build a Java project and export a JAR file
 To add a JAR to a Jaspersoft Studio project
 
 1.  If you have been using the Java perspective in Eclipse, click ![jss icon report perspective](assets/images/jss-icon-report-perspective.png) to return to the Report Design perspective.
+
 2.  Right-click your project in Project Explorer and select **New \> Folder**. Enter lib as the name of the folder.
+
 3.  Copy your JAR files to this folder. To do this:
-4.  Drag the JAR files from the folder in the file system to the lib folder in the Eclipse user interface.
-5.  In the **File Operation** dialog, select **Copy files** and click **OK**.
-6.  Right-click your project and select **Refresh**.
-7.  Select all the JAR files, then right-click one of them and select **Build Path \> Add to Build Path**.
+
+    1.  Drag the JAR files from the folder in the file system to the lib folder in the Eclipse user interface.
+    2.  In the **File Operation** dialog, select **Copy files** and click **OK**.
+
+4.  Right-click your project and select **Refresh**.
+
+5.  Select all the JAR files, then right-click one of them and select **Build Path \> Add to Build Path**.
 
 The JAR files are added to your project.

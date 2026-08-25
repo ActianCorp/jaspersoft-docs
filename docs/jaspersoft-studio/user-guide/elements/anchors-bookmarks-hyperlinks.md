@@ -50,13 +50,19 @@ WEB-INF\classes\jasperreports.properties file.
 Hyperlinks let you link a location in a report to another destination. The most important property of a hyperlink is its type, which determines the format of the target. Jaspersoft Studio supports the following types of hyperlink: The exact properties of a hyperlink depend on the hyperlink type. The following properties may appear for a hyperlink:
 
 - **Link Target** – Specifies where to open the link target. The Link Target is similar to the target attribute of an HTML link. The dropdown box shows the following options: Self, Blank, Top, Parent. You can also specify a target name, which actually makes sense only when the hyperlink is used in a web environment.
+
 - **Link Type** – The following link types are supported in Jaspersoft Studio: Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, ReportExecution, and dashlet. You can also define your own custom hyperlink types.
+
 - **Target Expressions** – Expressions that determine the location of the link target. May include:
+
   - **Hyperlink Anchor Expression** – Anchor in document to use as a hyperlink target.
   - **Hyperlink Page Expression** – Page in document to use as hyperlink target.
   - **Hyperlink Reference Expression** – Location of remote document. For link of type Reference, use a URL; for a link of type Remote Anchor or Remote Page, use a file reference.
+
 - **Hyperlink When Expression** – Expression that determines when the hyperlink is implemented. A hyperlink is only available if the Hyperlink When expression returns the Boolean value `True` (default).
+
 - **Tooltip Expression** – String to use as a tooltip when a user hovers the cursor over the hyperlink.
+
 - **Parameters** – Parameters that specify information about the target; only available for ReportExecution hyperlinks and custom hyperlink types.
 
 ReportExecution is implemented as a custom hyperlink type in JasperReports Library.
@@ -172,19 +178,21 @@ Image, text field, and chart elements can be used both as anchors into a documen
 To create a hyperlink
 
 1.  Click the **Hyperlink** tab in the Properties view.
+
 2.  In the **Link Target** dropdown, choose one of the following target types:
 
-- **Self**: This is the default setting. It opens the link in the current window.
-- **Blank**: Opens the target in a new window. Used for output formats such as HTML and PDF.
-- **Top**: Opens the target in the current window but outside the frames. Used for output formats such as HTML and PDF.
-- **Parent**: Opens the target in the parent window (if available). Used for output formats such as HTML and PDF.
+    - **Self**: This is the default setting. It opens the link in the current window.
+    - **Blank**: Opens the target in a new window. Used for output formats such as HTML and PDF.
+    - **Top**: Opens the target in the current window but outside the frames. Used for output formats such as HTML and PDF.
+    - **Parent**: Opens the target in the parent window (if available). Used for output formats such as HTML and PDF.
 
-1.  In the **Link Type** dropdown, choose whether the link type is None, Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, or ReportExecution.
+3.  In the **Link Type** dropdown, choose whether the link type is None, Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, or ReportExecution.
 
-See Hyperlink Types for an explanation of the different choices.
+    See Hyperlink Types for an explanation of the different choices.
 
-1.  Click the ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) button next to **Hyperlink Tool Expression** to create a tooltip for your hyperlink.
-2.  Save your report.
+4.  Click the ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) button next to **Hyperlink Tool Expression** to create a tooltip for your hyperlink.
+
+5.  Save your report.
 
 ### Creating a report of dashlet type
 
@@ -193,18 +201,22 @@ Reports created in Jaspersoft Studio can be used as a hyperlink to other resourc
 To create a hyperlink for a Crosstab or Table report:
 
 1.  Click the **Hyperlink** tab in the **Properties** view.
+
 2.  In the **Link Target** dropdown, select the following target type:
 
-**Blank**: Opens the target in a new window.
+    **Blank**: Opens the target in a new window.
 
-1.  In the **Link Type** dropdown, select the **dashlet** option present in the dropdown.
+3.  In the **Link Type** dropdown, select the **dashlet** option present in the dropdown.
 
-(See Hyperlink Types for an explanation of the different choices.)
+    (See Hyperlink Types for an explanation of the different choices.)
 
-1.  Click the **…** next to the Parameters to create **Dataset Parameters**.
-2.  Click **Add.**.
-3.  Enter **Parameter Name** and **Parameter Expression**.
-4.  Click **OK**, then click **Finish**.
+4.  Click the **…** next to the Parameters to create **Dataset Parameters**.
+
+5.  Click **Add.**.
+
+6.  Enter **Parameter Name** and **Parameter Expression**.
+
+7.  Click **OK**, then click **Finish**.
 
 This type of parameter mapping returns an individual cell value, when this report is used to create hyperlinks in JasperReports Server Dashboard.
 

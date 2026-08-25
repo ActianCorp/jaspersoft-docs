@@ -36,7 +36,7 @@ This chapter contains the following sections:
 
 The properties structure passed to the `report` function is defined as follows:
 
-```
+``` json
 {
     "title": "Report Properties",
     "type": "object",
@@ -192,7 +192,7 @@ The properties structure passed to the `report` function is defined as follows:
 
 The `report` function exposes the following functions:
 
-```
+``` javascript
 define(function () {
 
     /**
@@ -382,7 +382,7 @@ The report structure also contains other components described elsewhere:
 - The definitions of hyperlinks and how to work with them is explained in [Customizing Links.](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/hyperlinks.md)
 - Details of the Jaspersoft Interactive Viewer and Editor (JIVE UI) are explained in [Interacting With JIVE UI Components](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/interactive_reports.md).
 
-```
+``` json
 {
     "title": "Report Data",
     "description": "A JSON Schema describing a Report Data",
@@ -454,7 +454,7 @@ The report structure also contains other components described elsewhere:
 
 To run a report on the server and render it in Visualize.js, create a report object and set its properties. The server and resource properties determine which report to run, and the container property determines where it appears on your page.
 
-```
+``` javascript
 var report = v.report({
     server: "http://bi.example.com:8080/jasperserver-pro",
     resource: "/public/Sample/MyReport",
@@ -464,7 +464,7 @@ var report = v.report({
 
 The following code example shows how to display a report that the user selects from a list.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -499,7 +499,7 @@ visualize({
 
 The HTML page that displays the report uses a static list of reports in a drop-down selector, but otherwise needs only a container element.
 
-```
+``` html
 <!--Provide the URL to visualize.js-->
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
 <select id="selected_resource" disabled="true" name="report">
@@ -519,18 +519,21 @@ As of JasperReports Server 7.9, the server can provide the code to embed any rep
 To copy the embed code of a report:
 
 1.  Log into JasperReports Server and browse the repository to find the report you want to embed.
+
 2.  Run the report to view its output in the server's report viewer.
+
 3.  Click the ![js Viewer icon EmbedCode](assets/images/js-Viewer-icon-EmbedCode.png) icon in the menu bar to view the embed code.
+
 4.  The **Report Embed Code** dialog shows you the Visualize.js code and a preview of the report as it is saved. Select **Copy Code** to copy the entire code block to your clipboard. You can also highlight selected parts of the code and use Ctrl-C (Command-C on macOS), for example if you want only the main function.
 
-|                                                                     |
-|---------------------------------------------------------------------|
-| ![js Report GetEmbedCode](assets/images/js-Report-GetEmbedCode.png) |
-| *Figure 1: The Embed Code of a Report*                              |
+    |                                                                     |
+    |---------------------------------------------------------------------|
+    | ![js Report GetEmbedCode](assets/images/js-Report-GetEmbedCode.png) |
+    | *Figure 1: The Embed Code of a Report*                              |
 
-The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
+    The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
 
-1.  Alternatively, select **Open in JSFiddle** to load the same code into a new Fiddle, an online JavaScript viewer and interactive editor. This lets you modify the JavaScript or HTML, and add CSS if desired, then see the results in real time.
+5.  Alternatively, select **Open in JSFiddle** to load the same code into a new Fiddle, an online JavaScript viewer and interactive editor. This lets you modify the JavaScript or HTML, and add CSS if desired, then see the results in real time.
 
 Before or after copying the embed code, you can fine-tune the report within the viewer, for example sorting a table column or changing the chart type. Save your changes to make them available to others. Visualize.js always displays the latest saved version of a report, as determined by the repository URL in the embed code.
 
@@ -540,7 +543,7 @@ When displayed through Visualize.js, a report with a chart includes the ![js Vie
 
 To set or change the parameter values, update the `params` object of the report properties and invoke the `run` function again.
 
-```
+``` text
     // update report with new parameters
     report
         .params({ "Country": ["USA"] })
@@ -555,8 +558,11 @@ The example above is trivial, but the power of Visualize.js comes from this simp
 Here are further guidelines for setting parameters:
 
 - If a report has required parameters, you must set them in the report object of the initial call, otherwise you will get an error. For more information, see [Catching Report Errors](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/handling_errors.md).
+
 - Parameters are always sent as arrays of quoted string values, even if there is only one value, such as `["USA"]` in the example above. This is also the case even for single value input such as numerical, boolean, or date/time inputs. You must also use the array syntax for single-select values as well as multi-select parameters with only one selection. No matter what the type of input, always set its value to an array of quoted strings.
+
 - The following values have special meanings:
+
   - `""`: An empty string, a valid value for a text input and some selectors.
   - `"~NULL~"`: Indicates a NULL value (absence of any value), and matches a field that has a NULL value, for example if it has never been initialized.
   - `"~NOTHING~"`: Indicates the lack of a selection. In multi-select parameters, this is equivalent to indicating that nothing is deselected, thus all are selected. In a single-select non-mandatory parameter, this corresponds to no selection (displayed as `---`). In a single-select mandatory parameter, the lack of selection makes it revert to its default value.
@@ -565,7 +571,7 @@ Here are further guidelines for setting parameters:
 
 Once you change the report parameters, you can save the new report in the repository. You can invoke the `report.save` function without parameters to overwrite the current report. You can also specify a new name or a new folder to save as a different report. The authenticated user must have write permission to the report or to the folder.
 
-```
+``` text
 report.save();
 
 report.save({folderUri:"/public",
@@ -576,7 +582,7 @@ report.save({folderUri:"/public",
 
 The following schema describes the parameters to the `report.save` function:
 
-```
+``` json
 {
     "title": "Report save options",
     "type": "object",
@@ -645,7 +651,7 @@ JavaScript example:
 
 Associated HTML:
 
-```
+``` html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -663,7 +669,7 @@ Associated HTML:
 
 Associated CSS:
 
-```
+``` text
 html, body
 table.sample {
     width: 100%;
@@ -688,7 +694,7 @@ In every case, the entire report is scaled in both directions by the same amount
 
 For example, to initialize the report to half-size (50%), specify the following scale:
 
-```
+``` javascript
 var report = v.report({
     resource: "/public/Sample",
     container: "#reportContainer",
@@ -698,7 +704,7 @@ var report = v.report({
 
 You can also change the scale after rendering, in this case to more than double size (250%):
 
-```
+``` text
 report
     .scale(2.5)
     .run();
@@ -706,7 +712,7 @@ report
 
 Alternatively, you can turn off the container resizing and modify the size of the container explicitly:
 
-```
+``` javascript
 var report = v.report({
     resource: "/public/Sample",
     container: "#reportContainer",
@@ -720,7 +726,7 @@ report.resize();
 
 To make the Report Viewer responsive, an additional property is introduced in Visualize.js that is `reportContainerWidth`. You need to set the value of this property to the width of the report container. Then this value is passed to the report execution process as `REPORT_CONTAINER_WIDTH` built-in parameter value.
 
-```
+``` javascript
 visualize({
     auth: {...
     }
@@ -755,7 +761,7 @@ visualize({
 
 To set or change the pages displayed in the report, update the `pages` object of the report properties and invoke the `run` function again.
 
-```
+``` text
     report
         .pages(5)
         .run(); // re-render report with page 5 into the same container
@@ -777,7 +783,7 @@ To set or change the pages displayed in the report, update the `pages` object of
 
 The `pages` object of the report properties also supports bookmarks by specifying the `anchor` property. You can also specify both pages and bookmarks as shown in the example below. For more information about bookmarks, see [Providing Bookmarks in Reports](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/interactive_reports.md).
 
-```
+``` text
     report
         .pages({    // bookmark inside report to navigate to
             anchor: "summary"
@@ -796,7 +802,7 @@ The `pages` object of the report properties also supports bookmarks by specifyin
 
 Again, the power of Visualize.js comes from these simple controls that you can access programmatically. You can create any sort of mechanism or user interface to select the page. In this example, the HTML has buttons that allow the user to choose the next or previous pages.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -829,7 +835,7 @@ visualize({
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
 
@@ -842,7 +848,7 @@ Associated HTML:
 
 JavaScript example:
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -863,7 +869,7 @@ visualize({
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
 
@@ -880,7 +886,7 @@ To export a report, invoke its `export` function and specify the `outputFormat` 
 
 For CSV and JSON output, see Exporting Data From a Report. Note that the HTML output of a report is not available through Visualize.js.
 
-```
+``` javascript
 report.run(exportToPdf);
 
 function exportToPdf() {
@@ -899,7 +905,7 @@ function exportToPdf() {
 
 The following sample exports 10 pages of the report to a paginated Excel spreadsheet:
 
-```
+``` javascript
 report.run(exportToPaginatedExcel);
 
 function exportToPaginatedExcel() {
@@ -920,7 +926,7 @@ function exportToPaginatedExcel() {
 
 The following sample exports the part of report associated with a named anchor:
 
-```
+``` javascript
 report.run(exportPartialPDF);
 
 function exportPartialPDF() {
@@ -942,7 +948,7 @@ function exportPartialPDF() {
 
 The following example creates a user interface for exporting a report:
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -1004,7 +1010,7 @@ visualize({
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to visualize.js -->
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -1020,7 +1026,7 @@ You can also request the raw data of the report in CSV or JSON format.
 
 The following example shows how to export data in CSV format. CSV output is plain text that you must parse to extract the values that you need:
 
-```
+``` javascript
 report.run(exportToCsv);
 
 function exportToCsv() {
@@ -1045,7 +1051,7 @@ function exportToCsv() {
 
 The following example shows how to export data in JSON format. By its nature, JSON format can be used directly as data within your JavaScript.
 
-```
+``` javascript
 report.run(exportToJson);
 
 function exportToJson() {
@@ -1075,7 +1081,7 @@ function exportToJson() {
 
 JavaScript example:
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -1106,7 +1112,7 @@ visualize({
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
 <button>Refresh</button>
@@ -1117,7 +1123,7 @@ Associated HTML:
 
 To stop a running report, call its `cancel` function:
 
-```
+``` javascript
     ...
     report
     .cancel()
@@ -1131,7 +1137,7 @@ To stop a running report, call its `cancel` function:
 
 The following example is more complete and creates a UI for a spinner and cancel button for a long-running report.
 
-```
+``` javascript
 var spinner = createSpinner();
 
 visualize({
@@ -1178,7 +1184,7 @@ function createSpinner() {
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="http://fgnass.github.io/spin.js/spin.js"></script>
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -1191,7 +1197,7 @@ Associated HTML:
 
 You can write code to discover and display the types of charts and export formats that can be specified. The following example reads the `exportFormats`, `chart.types`, and `table.column.types` of the given report and dynamically creates a selection dialog for each:
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",

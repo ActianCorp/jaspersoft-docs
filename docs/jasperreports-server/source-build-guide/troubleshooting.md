@@ -13,7 +13,7 @@ We recommend Apache Ant version 1.10.*latest*.
 
 If you are not using the version of Apache Ant included with the JasperReports Server source code package, you could get the following error when running the buildomatic scripts:
 
-```
+``` text
 BUILD FAILED
 c:\js-builds\jasperserver\buildomatic\install.xml:6: Problem: failed to create task or type if
 Cause: The name is undefined.
@@ -57,7 +57,7 @@ If Maven is installed on Linux via rpm, apt-get, or yum (or on Mac), the Maven b
 
 When building under Linux or Mac, you may get an error similar to the following:
 
-```
+``` text
 BUILD FAILED
 /home/devuser/js-builds/jasperserver/buildomatic/bin/dev.xml:91:
 /usr/boot does not exist
@@ -91,6 +91,7 @@ To clear existing JasperReports Server artifacts
     ```
 
 2.  Remove the old version by deleting the following directory and its contents:
+
     |               |                                  |
     |---------------|----------------------------------|
     | `jaspersoft`: | Commercial version artifact tree |
@@ -117,7 +118,7 @@ Then when you build JasperServer, all dependencies are re-downloaded.
 
 Maven generates verbose warnings during the artifact validation process. For example, the following warning was generated, even though the required JAR file was downloaded successfully:
 
-```
+``` text
 [WARNING] Unable to get resource from repository jasperServer (file://C:/svn/js-buildlds/jasperserver-repo
 Downloading: http://repo1.maven.org/maven2/commons-logging/commons-logging/1.0/commons-logging-1.0.pom
 163b downloaded
@@ -133,7 +134,7 @@ In general, it is best to use the most current stable version of the Maven tool.
 
 When compiling in the jasperserver-repository-hibernate/build-db directory, you might see an error containing the following message:
 
-```
+``` text
 [ERROR] BUILD ERROR
 [INFO] ------------------------------------------------------------------------
 [INFO] Error executing ant tasks

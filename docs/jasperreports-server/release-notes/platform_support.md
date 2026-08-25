@@ -34,6 +34,7 @@ Jaspersoft is in the process of ending support for these technologies:
 - As of version 10.1 release, JasperReports® Server no longer supports MySQL 8.0.
 
 - As of version 10.1, Jaspersoft® Studio no longer supports:
+
   - OLAP/Mondrian data adapters
 
   - TIBCO Maps plug-in

@@ -36,14 +36,21 @@ Quick Start Cluster CFT changes for JRS for AWS 9.0.0 include:
 AMI changes for JRS for AWS 8.0.1 include:
 
 - Latest Amazon Linux 2 base AMI.
+
 - Tomcat 9.0.54, Java 11, and PostgreSQL 12.
+
 - New approach to fetch Tomcat from Apache archive to remove dependency from Amazon repository:
+
   - An additional upgrade_tomcat.sh script is placed in /etc/jasperserver which can be used to downgrade/upgrade Tomcat to the desired version. The script expects one parameter which should be the tomcat tar file path, for example: `/etc/jasperserver/upgrade_tomcat.sh`<br>
     <https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz><br>
     This script can be called in the cfn-init part of templates as well, to include Tomcat changes at runtime.
+
 - Included *cfn-bootstrap* package while building the AMI and removed install command from the templates.
+
 - Implemented single init systemd service to perform all required boot-time operations and configuration. Previously such operations were run by separate 3 chkconfig services.
+
 - Modified service file for Tomcat to take values from an additional environment file if found. This feature is implemented for cluster templates to set the memory parameters for JasperReports® Server ( *-XX:MinRAMPercentage* and *-XX:MaxRAMPercentage*).
+
 - For Cluster templates, an additional repository database check is added. If a db with the same name as the desired repository database is already present in RDS, then it skips the DB creation and installation, including sample DBs.
 
 ## Marketplace Template Changes
@@ -80,12 +87,17 @@ AMI changes for JasperReports® Server 7.9.x include:
 AMI changes for JasperReports® Server 7.8.1 include:
 
 - Latest Amazon Linux 2 base AMI.
+
 - Tomcat 9.0.54, Java 11, and PostgreSQL 11.
+
 - New approach to fetch Tomcat from Apache archive to remove dependency from Amazon repository:
+
   - An additional upgrade_tomcat.sh script is placed in /etc/jasperserver which can be used to downgrade/upgrade Tomcat to the desired version. The script expects one parameter which should be the tomcat tar file path, for example: `/etc/jasperserver/upgrade_tomcat.sh`<br>
     <https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz><br>
     This script can be called in the *cfn-init* part of templates as well, to include Tomcat changes at runtime.
+
 - Included *cfn-bootstrap* package while building the AMI and removed install command from the templates.
+
 - Implemented single init systemd service to perform all required boot-time operations and configuration. Previously such operations were run by separate 3 chkconfig services.
 
 ## Version 7.5.2
@@ -95,9 +107,14 @@ AMI changes for JasperReports® Server 7.8.1 include:
 AMI changes for JasperReports® Server 7.5.2 include:
 
 - Latest Amazon Linux 2 base AMI (upgraded from Linux 1).
+
 - Apache Tomcat 9.0.54, Java 11, and PostgreSQL 11.
+
 - New approach to fetch Tomcat from Apache archive to remove dependency from Amazon repository:
+
   - An additional upgrade_tomcat.sh script is placed in /etc/jasperserver which can be used to downgrade/upgrade Tomcat to the desired version. The script expects one parameter which should be the tomcat tar file path, for example: `/etc/jasperserver/upgrade_tomcat.sh`<https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz><br>
     This script can be called in the *cfn-init* part of templates as well, to include Tomcat changes at runtime.
+
 - Included *cfn-bootstrap* package while building the AMI and removed install command from the templates.
+
 - Implemented single init systemd service to perform all required boot-time operations and configuration. Previously such operations were run by separate 3 chkconfig services.

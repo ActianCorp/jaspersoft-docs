@@ -154,54 +154,58 @@ When grid layout is selected for a container, such as a band, elements inside th
 To use grid layout
 
 1.  This example uses a vertical image, that is, an image much taller than it is wide. You can use any vertical image, for example, a company logo rotated vertically. To create the exact image used in this example, create a report with the Green Leaf template. This creates a leaf_banner_green.png file in your workspace. In your file system, use a graphics editor to rotate the image 90°. Note that this rotates the image in any report where it is used.
+
 2.  Create a report using the BlankA4 template and the Empty data source. Do not reuse the report created in the previous step.
+
 3.  Add your vertical image to the title band of your report.
+
 4.  Add a chart to the title band of your report, to the right of your image.
+
 5.  Resize the title band to fit a chart.
 
-|  |
-|----|
-| ![jss containers grid 1 before](../assets/images/jss-containers-grid-1-before.png) |
-| Title band before applying grid layout |
+    |  |
+    |----|
+    | ![jss containers grid 1 before](../assets/images/jss-containers-grid-1-before.png) |
+    | Title band before applying grid layout |
 
-1.  Right-click in a blank space in the Title band and select **Arrange in Container \> Grid Layout**, or select the Title band and select **Grid Layout** in the Properties view.
+6.  Right-click in a blank space in the Title band and select **Arrange in Container \> Grid Layout**, or select the Title band and select **Grid Layout** in the Properties view.
 
-The two elements are arranged to fill the band equally.
+    The two elements are arranged to fill the band equally.
 
-|  |
-|----|
-| ![jss containers grid 2 applied](../assets/images/jss-containers-grid-2-applied.png) |
-| Title band with grid layout |
+    |  |
+    |----|
+    | ![jss containers grid 2 applied](../assets/images/jss-containers-grid-2-applied.png) |
+    | Title band with grid layout |
 
-1.  Resize the elements so that the chart takes up most of the space. To do this, select the chart. In the Properties view, in the Layout section of the Appearance tab, set **Column Weight** to 5.
+7.  Resize the elements so that the chart takes up most of the space. To do this, select the chart. In the Properties view, in the Layout section of the Appearance tab, set **Column Weight** to 5.
 
-The elements adjust so that the chart width is five times the image width.
+    The elements adjust so that the chart width is five times the image width.
 
-|  |
-|----|
-| ![jss containers grid 3 column weight](../assets/images/jss-containers-grid-3-column-weight.png) |
-| Grid layout with column weight |
+    |  |
+    |----|
+    | ![jss containers grid 3 column weight](../assets/images/jss-containers-grid-3-column-weight.png) |
+    | Grid layout with column weight |
 
-1.  Now add a static text element to the far right of the title band.
+8.  Now add a static text element to the far right of the title band.
 
-The static text is added at the end of the first row.
+    The static text is added at the end of the first row.
 
-|  |
-|----|
-| ![jss containers grid 4 add element](../assets/images/jss-containers-grid-4-add-element.png) |
-| Adding an element to a grid layout |
+    |  |
+    |----|
+    | ![jss containers grid 4 add element](../assets/images/jss-containers-grid-4-add-element.png) |
+    | Adding an element to a grid layout |
 
-1.  Position the static text. To do this, select the static text. In the Properties view, in the Layout section of the Appearance tab, set the following:
+9.  Position the static text. To do this, select the static text. In the Properties view, in the Layout section of the Appearance tab, set the following:
 
-- Set **Row Number** to 1 to move the element to the second row. You could also have added the static text directly below the first row, but setting the row explicitly gives you more control.
-- Set **Column Span** to 2 to have the element span both columns. You could instead set the Column Number to 2 to move the static text under the chart.
+    - Set **Row Number** to 1 to move the element to the second row. You could also have added the static text directly below the first row, but setting the row explicitly gives you more control.
+    - Set **Column Span** to 2 to have the element span both columns. You could instead set the Column Number to 2 to move the static text under the chart.
 
-|  |
-|----|
-| ![jss containers grid 5 new row](../assets/images/jss-containers-grid-5-new-row.png) |
-| Using two rows in grid layout |
+    |  |
+    |----|
+    | ![jss containers grid 5 new row](../assets/images/jss-containers-grid-5-new-row.png) |
+    | Using two rows in grid layout |
 
-1.  Set the relative heights of the rows. To do this, select the chart and set **Row Weight** to 10 in the Layout section of the Appearance tab of the Properties view. You could actually do this by changing the settings on any of the three elements, but in this case, the chart is the main element and you want other elements to adjust to it.
+10. Set the relative heights of the rows. To do this, select the chart and set **Row Weight** to 10 in the Layout section of the Appearance tab of the Properties view. You could actually do this by changing the settings on any of the three elements, but in this case, the chart is the main element and you want other elements to adjust to it.
 
 |  |
 |----|

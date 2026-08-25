@@ -9,7 +9,7 @@ The JasperReports IO repository is a folder-based structure where all the resour
 
 The type of repository, its location in the JasperReports IO file structure, and other specific repository implementation properties can be specified in the following configuration file:
 
-```
+``` bash
 js-install>/jrio/webapps/jrio/WEB-INF/applicationContext-repository.xml
 ```
 
@@ -67,7 +67,7 @@ There are two different ways to point the web application to a repository on the
 
 To use a relative file path, locate the `WebappRelativeRepositoryFactory` bean in the `applicationContext-repository.xml` file and enter the relative file path as the value for the `root` property:
 
-```
+``` xml
 <bean class="com.jaspersoft.jrio.common.repository.WebappRelativeRepositoryFactory">
     <property name="jasperReportsContext" ref="baseJasperReportsContext"/>
     <property name="root" value="../../../repository"/>
@@ -78,7 +78,7 @@ Since the web application is deployed to the `<jrio-install>jrio/webapp/jrio` di
 
 If you want to use an absolute file path to the repository directory, change the repository bean class from `com.jaspersoft.jrio.common.repository.WebappRelativeRepositoryFactory` to `com.jaspersoft.jrio.common.repository.FileSystemRepository` and edit the value for the second `<constructor-arg>` to add the absolute file path:
 
-```
+``` xml
 <bean class="com.jaspersoft.jrio.common.repository.FileSystemRepository">
     <constructor-arg><ref bean="baseJasperReportsContext"/></constructor-arg>
     <constructor-arg><value>/mnt/jrio-repository</value></constructor-arg>
@@ -93,7 +93,7 @@ If you are using an AWS S3 bucket for the repository, refer to the AWS S3 Bucket
 
 If you use multiple repository directories to store your report templates and resources, JasperReports IO can treat these separate directories as a single repository through absolute file paths. A report works if its JRXML template is in one repository and its resources are in a second. Add a `FileRepositoryService` bean to the `<js-install>/jrio/webapps/WEB-INF/applicationContext-repository.xml` file for each repository that you want to use.
 
-```
+``` xml
 <bean class="com.jaspersoft.jrio.common.repository.FileSystemRepository">
     <constructor-arg><ref bean="baseJasperReportsContext"/></constructor-arg>
     <constructor-arg><value>/mnt/repository1</value></constructor-arg>
@@ -113,7 +113,7 @@ This section describes how to use an AWS S3 bucket for a repository for JasperRe
 
 JasperReports IO comes with a sample configuration setting for connecting your standalone JasperReports IO instance to an AWS S3 bucket as a repository. The S3 bucket can either be public and accessed without credentials or accessed securely using AWS credentials. Locate and the `S3RepositoryService` bean in the `<js-install>/jrio/webapps/WEB-INF/applicationContext-repository.xml` configuration file to implement an AWS S3 bucket for a repository:
 
-```
+``` xml
 <bean class="com.jaspersoft.jrio.common.repository.s3.S3RepositoryService">
     <property name="jasperReportsContext" ref="baseJasperReportsContext"/>
     <property name="s3Service">
@@ -139,7 +139,7 @@ Use the `accessKey` and `secretKey` properties to enter your AWS ID and key. The
 
 If you created your JasperReports IO from the CloudFormation template for AWS, this configuration file appears similar to the following:
 
-```
+``` xml
 <bean class="com.jaspersoft.jrio.common.repository.s3.S3RepositoryService">
     <property name="jasperReportsContext" ref="baseJasperReportsContext"/>
     <property name="s3Service">
@@ -166,7 +166,7 @@ For storing report resources in an AWS S3 bucket, you need to create a folder in
 
 JasperReports IO accesses the reports in the bucket through the REST and JavaScript APIs using relative URIs with `/remoteRepository` as the root directory. For example, if you have a report stored in the repository at `/remoteRepository/reports/myReport.jrxml`, the reference to the API is `/reports/myReport`. When opening the report in the viewer, the URL is:
 
-```
+``` text
  http://<JRIO domain>:<JRIO port>/jrio-docs/viewer/viewer.html?jr_report_uri=/reports/myReport
 ```
 
@@ -187,30 +187,38 @@ If you want to remove the customized file from the instance, you need to copy th
 To upload your customization
 
 1.  On the AWS Management Console homepage, click **S3**.
+
 2.  Find the bucket for your JasperReports IO instance and click the name.
+
 3.  Click **Create Folder** and create a folder called `Customizations`.
+
 4.  Click the name of the `Customizations` folder.
+
 5.  Click **Create Folder** and recreate the paths to your files.
 
-For example, if you want to upload a configuration file that goes in the `<jrio-install>/jrio/webapps/jrio/WEB-INF/classes` directory, you have to create a folder for each directory in that file path.
+    For example, if you want to upload a configuration file that goes in the `<jrio-install>/jrio/webapps/jrio/WEB-INF/classes` directory, you have to create a folder for each directory in that file path.
 
-1.  After creating the folder paths, browse to the folder for your configuration file.
-2.  Click **Upload**.
-3.  Click **Add files** and find the configuration file on your local machine.
-4.  Click **Upload** to upload the configuration file.
+6.  After creating the folder paths, browse to the folder for your configuration file.
 
-AWS uploads the file and stores it in the S3 bucket.
+7.  Click **Upload**.
 
-1.  With the configuration file in place, SSH into your instance using your AWS private key and username.
-2.  Stop the JasperReports IO instance using the following command:
+8.  Click **Add files** and find the configuration file on your local machine.
 
-```
-sudo service jrio stop
-```
+9.  Click **Upload** to upload the configuration file.
 
-1.  Start the JasperReports IO instance:
+    AWS uploads the file and stores it in the S3 bucket.
 
-```
+10. With the configuration file in place, SSH into your instance using your AWS private key and username.
+
+11. Stop the JasperReports IO instance using the following command:
+
+    ``` bash
+    sudo service jrio stop
+    ```
+
+12. Start the JasperReports IO instance:
+
+``` bash
 sudo service jrio start
 ```
 
@@ -224,7 +232,7 @@ This section describes how JasperReports IO can use reports and resources stored
 
 By default, JasperReports IO comes with three preconfigured OAuth2 repositories for Google Drive, GitHub, and Dropbox. Each of these is defined in a separate configuration file as follows:
 
-```
+``` text
 [JRIO_WEB_APP]/WEB-INF/applicationContext-google-drive.xml
 [JRIO_WEB_APP]/WEB-INF/applicationContext-github.xml
 [JRIO_WEB_APP]/WEB-INF/applicationContext-dropbox.xml
@@ -234,7 +242,7 @@ To use these repositories, each repository configuration file needs to be update
 
 The configuration file for the Google Drive repository appears similar to the following:
 
-```
+``` xml
 <bean class="com.jaspersoft.jrio.common.repository.google.GoogleDriveRepositoryService">
    <property name="jasperReportsContext" ref="baseJasperReportsContext"/>
    <property name="googleDriveProvider">

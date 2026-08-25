@@ -322,7 +322,7 @@ The `propertyDefinitions` property is a list of maps, each one describing a prop
 
 The following XML defines a `CustomDataSourceDefinition` bean for the custom bean data source example:
 
-```
+``` xml
 <bean id="myCustomDataSource" class="com.jaspersoft.jasperserver.api.engine.jasperreports.util.CustomDataSourceDefinition">
   <property name="factory" ref="customDataSourceServiceFactory"/>
   <property name="name" value="myCustomDataSource"/>
@@ -355,7 +355,7 @@ You can create a custom data source based on a data adapter in JasperReports Lib
 
 To do this, you must first create an instance of your class in your custom data source definition Java code, implementing any additional properties you want:
 
-```
+``` java
 public class MyCustomDataSourceDefinition extends DataAdapterDefinition {
 ...
 }
@@ -363,7 +363,7 @@ public class MyCustomDataSourceDefinition extends DataAdapterDefinition {
 
 Then you must create a bean for the data source in your XML file, using the class you defined in your Java file. In addition, you must specify the correct data adapter implementation in your `dataAdapterClassName` property. For example, the following XML defines a bean for the Mongo DB Query example:
 
-```
+``` xml
 <bean id="mongoDBQueryDataSource" class="example.cdspro.MongoDbDataSourceDefinition">
   <property name="factory" ref="customDataSourceServiceFactory"/>
   <property name="name" value="mongoDBQueryDataSource"/>
@@ -412,7 +412,7 @@ The message catalog contains labels and messages displayed in the New Data Sourc
 
 For example, the webscraper message catalog contains the following:
 
-```
+``` properties
 webScraperDataSource.name=Web Scraper Data Source
 webScraperDataSource.properties.url=URL
 webScraperDataSource.properties.path=DOM Path
@@ -426,7 +426,7 @@ If you use your JasperReports Server in multiple languages, you can provide mult
 
 To configure your message catalog, add a bean definition such as the following to the Spring definition file that you created in Defining the Custom Data Source in Spring:
 
-```
+``` xml
 <bean class="com.jaspersoft.jasperserver.api.common.util.spring.GenericBeanUpdater">
   <property name="definition" ref="addMessageCatalog"/>
   <property name="value" value="WEB-INF/bundles/cdstest"/>
@@ -441,7 +441,7 @@ If you implemented the optional Query Executer, you must add it to the Spring co
 
 If you are using a commercial edition of JasperReports Server, edit the file `.../WEB-INF/applicationContext-pro-remote-services.xml` and locate the `queryLanguagesPro` bean. Add the name of your query language to the list, for example:
 
-```
+``` xml
     <bean id="queryLanguagesPro" parent="queryLanguagesCe"
           class="org.springframework.beans.factory.config.ListFactoryBean">
         <property name="sourceList">
@@ -455,7 +455,7 @@ If you are using a commercial edition of JasperReports Server, edit the file `..
 
 If you are using the community edition of JasperReports Server, edit the file `.../WEB-INF/applicationContext-remote-services.xml` and locate the `queryLanguagesCe` list. Add the name of your query language to the list, for example:
 
-```
+``` xml
     <util:list id="queryLanguagesCe">
         <value>sql</value>
         <value>hql</value>
@@ -475,13 +475,13 @@ Alternatively, you can add your query executor as a separate bean without modify
 
 - Edit the file `.../WEB-INF/js.spring.properties` and modify the following line:
 
-```
+``` properties
 bean.queryLanguages=queryLanguagesPro
 ```
 
 so that it references the id of your new bean, for example:
 
-```
+``` properties
 bean.queryLanguages=customQueryLanguage
 ```
 

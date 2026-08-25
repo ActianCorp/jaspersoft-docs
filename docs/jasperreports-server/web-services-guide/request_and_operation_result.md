@@ -13,7 +13,7 @@ The repository web services operation takes a single input parameter of type `St
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>&lt;!ELEMENT request (argument*, resourceDescriptor?)&gt;
+<td><div class="language-text highlight"><pre><code>&lt;!ELEMENT request (argument*, resourceDescriptor?)&gt;
 &lt;!ATTLIST request
   operationName (get | list | put | runReport) &quot;list&quot;
   locale #IMPLIED
@@ -21,7 +21,7 @@ The repository web services operation takes a single input parameter of type `St
 &lt;!ELEMENT argument (#PCDATA)&gt;
 &lt;!ATTLIST argument
   name CDATA #REQUIRED
-&gt;</code></pre></td>
+&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -66,12 +66,12 @@ The DTD is very simple:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>&lt;!ELEMENT operationResult (code, message?, resourceDescriptor*)&gt;
+<td><div class="language-text highlight"><pre><code>&lt;!ELEMENT operationResult (code, message?, resourceDescriptor*)&gt;
 &lt;!ATTLIST operationResult
   version NMTOKEN #REQUIRED
 &gt;
 &lt;!ELEMENT code (#PCDATA)&gt;
-&lt;!ELEMENT message (#PCDATA)&gt;</code></pre></td>
+&lt;!ELEMENT message (#PCDATA)&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>

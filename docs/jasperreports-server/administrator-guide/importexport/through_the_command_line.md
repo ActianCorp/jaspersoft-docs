@@ -350,15 +350,11 @@ Examples:
   js-import --input-zip myExport.zip
   ```
 
-<!-- -->
-
 - Import the `myDir` catalog folder, replacing existing resources if their URIs and types match those found in the catalog:
 
   ``` bash
   js-import --input-dir myDir --update
   ```
-
-<!-- -->
 
 - Import the `myExport.zip` catalog archive file but ignore any users found in the catalog:
 
@@ -396,9 +392,9 @@ To configure the import-export utilities
 
 2.  Edit the `default_master.properties` file to set values specific to your installation. For more information about the settings in this file, see the JasperReports Server Installation Guide.
 
-!!! note
+    !!! note
 
-    Oracle users can set the `sysUsername` and `sysPassword` to the same name as `dbUsername` and `dbPassword` in the `default_master.properties`. The system username and password are not required because js-import and js-export do not make changes to the database schema.
+        Oracle users can set the `sysUsername` and `sysPassword` to the same name as `dbUsername` and `dbPassword` in the `default_master.properties`. The system username and password are not required because js-import and js-export do not make changes to the database schema.
 
 3.  Run the following command:
 

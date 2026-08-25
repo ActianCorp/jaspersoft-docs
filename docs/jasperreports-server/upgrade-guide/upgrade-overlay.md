@@ -97,7 +97,9 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
 **Back up your Jasperserver Database**
 
 1.  Create a folder (if you did not do so in the step above) where you can save your `Jasperserver` database, for example `C:\JS_BACKUP` or `/opt/JS_BACKUP`.
+
 2.  Run the following commands for PostgreSQL or MySQL:
+
     - PostgreSQL
 
       ``` bash
@@ -125,11 +127,11 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
       <tbody>
       <tr>
       <td><p>Windows:</p></td>
-      <td><pre class="text"><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></td>
+      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></div></td>
       </tr>
       <tr>
       <td><p>Linux:</p></td>
-      <td><pre class="text"><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></td>
+      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></div></td>
       </tr>
       </tbody>
       </table>
@@ -160,9 +162,9 @@ The overlay upgrade package comes in a file named:
 
     \_overlay.zip. Create or choose a destination folder, such as `C:\JS_OVERLAY`on Windows,`/home/<user>/JS_OVERLAY` on Linux, or `/Users/<user>/JS_OVERLAY` on Mac.
 
-!!! note
+    !!! note
 
-    The overlay upgrade uses paths that exceed the 260-character limit on Windows. To extract the package, **Enable NTFS long paths** (Windows 10 only) or use a third-party file archive such as 7-Zip.
+        The overlay upgrade uses paths that exceed the 260-character limit on Windows. To extract the package, **Enable NTFS long paths** (Windows 10 only) or use a third-party file archive such as 7-Zip.
 
 3.  The overlay upgrade package unpacks into a folder named:
 
@@ -209,6 +211,7 @@ The overlay upgrade works only with the Tomcat application server. It supports o
     Linux: `./overlay install`
 
 5.  You are prompted to specify a path to a working folder:
+
     - You can accept the default or specify an alternate folder.
     - Press `enter` to accept the default `../overlayWorkspace`.
 
@@ -220,10 +223,13 @@ The overlay upgrade works only with the Tomcat application server. It supports o
 
 8.  If you are prompted to create a keystore, this means that the server's original keystore was not found in the user's home directory. Proceed with caution:
     - In general, it is recommended to exit the overlay procedure and make sure that the keystore is in the proper location, then rerun the overlay as described below.
+
     - Alternatively, update the current location of the keystore in the `keystore.init.properties` file at the following locations:
+
       - `.../WEB-INF/classes/keystore.init.properties`
       - `.../buildomatic/keystore.init.properties`
       - `.../buildomatic/conf_source/iePro/keystore.init.properties`
+
     - If you continue and create a keystore, then the overlay proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository, as described in [Encryption Keys](plan-upgrade-7.5.md).
 
 9.  You are prompted to specify a path to your `master.properties` file:
@@ -231,6 +237,7 @@ The overlay upgrade works only with the Tomcat application server. It supports o
     Specify the path for your `default_master.properties` file, which is present in the Overlay buildomatic directory.
 
 10. For final verification, the overlay prompts you for the path to your application server:
+
     - If you have not moved it, it is located in the path to: `<tomcat>`
     - Press `enter` to accept the default if it is correct.
 
@@ -265,7 +272,7 @@ The data is transferred to the `audit` database and the tables are deleted from 
 
 If you exit the `overlay install` for any reason, you can rerun the overlay by simply running the same command:
 
-```
+``` text
 overlay install
 ```
 
@@ -273,7 +280,7 @@ By default, the overlay runs in resume mode (`resumeMode=true`). This means that
 
 If you want to rerun the `overlay` "from scratch", run the following command:
 
-```
+``` text
 overlay install -DresumeMode=false
 ```
 
@@ -315,7 +322,7 @@ If you encounter an error with the overlay upgrade, use the following rollback p
 
 2.  Run the following commands for PostgreSQL:
 
-```
+``` bash
 cd /opt/JS_BACKUP
 pg_restore --username=postgres  jasperserver  <  js-db-dump.sql
 ```
@@ -393,7 +400,7 @@ In the `Jasperserver` database, compiled JasperReports Library resources are cac
 
 **To clear the repository cache database table manually, run a SQL command similar to the one shown below**:
 
-```
+``` sql
 update JIRepositoryCache set item_reference = null;
 delete from JIRepositoryCache;
 ```
@@ -404,7 +411,7 @@ If you run the overlay upgrade a second time, the overlay logic asks if you want
 
 The overlay procedure asks:
 
-```
+``` text
 "We have detected that the overlay install was already run. Do you want to resume your last run? The default is 'y' ([y], n):"
 ```
 

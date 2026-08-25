@@ -59,7 +59,7 @@ The `xss.soft.html.escape.tag.whitelist` property expands or replaces the defaul
 
 In normal usage, the first character is + so that the specified tags are added to the default whitelist. For example, if you want to add blink and marquee to the list of allowed HTML tags, specify the following value:
 
-```
+``` properties
 xss.soft.html.escape.tag.whitelist=+blink,marquee
 ```
 
@@ -73,7 +73,7 @@ When `+` is omitted, this list replaces the entire default whitelist. For exampl
 
 Certain HTML attributes create XSS vulnerabilities because they switch to JavaScript context, for example `onmouseover` and the like. The attribute map defines which attributes are dangerous and how to replace them when performing output escaping of dynamic content, also called asynchronous data. It uses a map of case-insensitive regular expressions (regex syntax) and replacements to detect and neutralize such malicious HTML. The default map that is coded in `xssUtil.js` is equivalent to the following expression:
 
-```
+``` properties
 xss.soft.html.escape.attrib.map= {'\\\\bjavascript:': '', '\\\\bon(\\\\w+?)\\\\s*=': 'on$1=', '\\\\(':'(', \ '\\\\bsrcdoc\\\\s*=': 'srcdoc='}
 ```
 
@@ -81,7 +81,7 @@ When regex syntax appears in properties files, `\` characters must be escaped. F
 
 For advanced use cases, you can modify this property by adding more pairs to the map. Copy the default map above and add the new regex and its safe replacement at the end. For example, to escape the string `data:text/html` by replacing it with nothing, use the following map:
 
-```
+``` properties
 xss.soft.html.escape.attrib.map= {'\\\\bjavascript:': '', '\\\\bon(\\\\w+?)\\\\s*=': 'on$1=', '\\\\(':'(', \ '\\\\bsrcdoc\\\\s*=': 'srcdoc=', '\\\\bdata:\\\\s*text/html\\\\b': ''}
 ```
 

@@ -20,8 +20,10 @@ The layout of the login page changed in JasperReports Server 7.2. There were no 
 JasperReports Server uses the Spring Security framework to implement security throughout the product. In JasperReports Server 7.2, the Spring Security framework was updated to Spring Security 4.2. For many users, this upgrade has no impact. However, you may need to make some changes if you have implemented the following:
 
 - External authentication–If you have implemented external authentication or Single Sign-on in your server implementation, you need to update your implementation:
+
   - If you implemented external authentication using one of the sample files included in the project, you need to reimplement your changes in the updated sample files included in JasperReports Server 7.2.
   - If you have implemented a custom external authentication solution, you need to migrate your solution to the new framework.
+
 - Customizations–If you have customized the server using Spring Security classes, you need to migrate your solution to the new framework.
 
 ### Migrating External Authentication Sample Files
@@ -29,10 +31,15 @@ JasperReports Server uses the Spring Security framework to implement security th
 If you have implemented external authentication using one of the sample-applicationContext-\<customName\>.xml files located in the \<js‑install\>/samples/externalAuth-sample-config directory, migrate your changes to JasperReports Server 7.2 as follows:
 
 1.  Prior to upgrade, back up your existing applicationContext-\<customName\>.xml (for example, applicationContext-externalAuth-LDAP.xml), located in the \<js-webapp\>/WEB-INF directory of your previous version of JasperReports Server.
+
 2.  Update your server installation to JasperReports Server 7.2, as described in the JasperReports Server Upgrade Guide.
+
 3.  In the new installation, locate the sample file that corresponds to the file you implemented previously. For example, if you implemented applicationContext-externalAuth-LDAP.xml, locate \<js‑install-7.2\>/samples/externalAuth-sample-config/sample-applicationContext-externalAuth-LDAP.xml.
+
 4.  Rename the JasperReports Server 7.2 sample file to remove the sample- prefix. For example, rename sample-applicationContext-externalAuth-LDAP.xml to applicationContext-externalAuth-LDAP.xml.
+
 5.  Configure the properties in the new sample file to match the properties in your existing sample file. To do this:
+
     1.  Locate each bean that you have modified in the previous version.
 
     2.  Find the same bean in the JasperReports Server 7.2 sample. The names of the beans have not changed between versions.

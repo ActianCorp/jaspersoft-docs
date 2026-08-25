@@ -16,22 +16,24 @@ Jaspersoft Studio supports a random data source that determines the field types 
 To create a new random data source in the current folder
 
 1.  Select **File \> New \> Data Adapter** from the main menu or select **New \> Data Adapter** from the context menu of a folder. The **Data Adapter Wizard** opens.
+
 2.  Select the folder where you want to place the adapter and click **Next**.
+
 3.  Select **random records** from the data adapter list and click **Next**.
 
-|  |
-|----|
-| ![jss data adapter random wizard1](../assets/images/jss-data-adapter-random-wizard1.png) |
-| *Figure 1: Random records data adapter type* |
+    |  |
+    |----|
+    | ![jss data adapter random wizard1](../assets/images/jss-data-adapter-random-wizard1.png) |
+    | *Figure 1: Random records data adapter type* |
 
-1.  Name the adapter and set the number of records that you need.
+4.  Name the adapter and set the number of records that you need.
 
-|  |
-|----|
-| ![jss data adapter random wizard2](../assets/images/jss-data-adapter-random-wizard2.png) |
-| *Figure 2: Choosing a number of random records* |
+    |  |
+    |----|
+    | ![jss data adapter random wizard2](../assets/images/jss-data-adapter-random-wizard2.png) |
+    | *Figure 2: Choosing a number of random records* |
 
-1.  Click **Finish**
+5.  Click **Finish**
 
 !!! note
 

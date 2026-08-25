@@ -128,19 +128,20 @@ To enable connections from the installation machine to the remote PostgreSQL ser
 
 1.  Locate the following PostgreSQL host-based authentication (hba) configuration file on the remote PostgreSQL server instance:
 
-Windows: `C:\Program Files\PostgreSQL\X.X\data\pg_hba.conf` (where X.X is the version number)
+    Windows: `C:\Program Files\PostgreSQL\X.X\data\pg_hba.conf` (where X.X is the version number)
 
-Linux: `/var/lib/pgsql/data/pg_hba.conf`
+    Linux: `/var/lib/pgsql/data/pg_hba.conf`
 
-1.  Add the IP address of your local JasperReports Server installation machine to this file. For example, to allow the local installation machine with address 192.168.12.10 to connect to the PostgreSQL server, add this entry to the pg_hba.conf file:
+2.  Add the IP address of your local JasperReports Server installation machine to this file. For example, to allow the local installation machine with address 192.168.12.10 to connect to the PostgreSQL server, add this entry to the pg_hba.conf file:
 
-`host all 192.168.12.10/32 trust`
+    `host all 192.168.12.10/32 trust`
 
-1.  Allow TCP/IP connections to the remote PostgreSQL server instance by making the following change to the postgresql.conf file on the remote machine:
+3.  Allow TCP/IP connections to the remote PostgreSQL server instance by making the following change to the postgresql.conf file on the remote machine:
 
-From: `listen_addresses = 'localhost`'
+    From: `listen_addresses = 'localhost`'
 
-To:` listen_addresses = '*' `
+    To:` listen_addresses = '*' `
 
-1.  Restart PostgreSQL.
-2.  Using your local PostgreSQL client tools, verify that you can connect to the target remote PostgreSQL from the local installation machine, as described in Using an Existing PostgreSQL on a Remote Host.
+4.  Restart PostgreSQL.
+
+5.  Using your local PostgreSQL client tools, verify that you can connect to the target remote PostgreSQL from the local installation machine, as described in Using an Existing PostgreSQL on a Remote Host.

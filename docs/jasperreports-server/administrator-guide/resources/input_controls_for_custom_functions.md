@@ -12,13 +12,15 @@ You can provide an custom expression using a subset of DomEL or call custom Java
 To create an input control with custom functions:
 
 1.  Follow steps 1 through 8 in the [Input Controls](input_controls.md) section.
+
 2.  In the **Display Settings** section, select the custom input control options in:
+
     - **Enable/Disable Input Control \> Conditional**
     - **Show/Hide Input Control \> Conditional**
 
-!!! note
+    !!! note
 
-    For more information, see the Input Controls with Custom Expressions section in the JasperReports Server User Guide.
+        For more information, see the Input Controls with Custom Expressions section in the JasperReports Server User Guide.
 
 3.  Call the custom Javascript/Groovy functions defined in the `WEB INF/custom_functions` directory:
 

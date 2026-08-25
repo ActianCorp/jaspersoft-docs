@@ -14,13 +14,15 @@ For a more complete description of how to create Domains, see JasperReports Serv
 To begin create a basic view from a Domain
 
 1.  On the Home page, click **Create \> Ad Hoc View**. The Select Data wizard opens.
+
 2.  Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Domains**. A description of the selected Domain appears at the bottom of the Domains tab.
 
-![js AdHoc SelectData SimpleDomain](../assets/images/js-AdHoc-SelectData-SimpleDomain.png)
+    ![js AdHoc SelectData SimpleDomain](../assets/images/js-AdHoc-SelectData-SimpleDomain.png)
 
-*Figure 1: Simple Domain Selected in the Select Data Dialog*
+    *Figure 1: Simple Domain Selected in the Select Data Dialog*
 
 3.  Select the domain you want to use.
+
 4.  Click **Choose Data**. the Data Chooser opens to the Fields page.<br>
     You are now ready to configure your data using the Data Chooser Wizard.
 

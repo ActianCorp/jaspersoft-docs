@@ -102,7 +102,7 @@ GET http://localhost:8080/jasperserver-pro/rest_v2/organizations?q=acc&includePa
 
 This request has the following response, as viewed by the superuser at the root of the organization hierarchy:
 
-```
+``` xml
 <organizations>
   <organization>
     <alias>Finance</alias>
@@ -169,7 +169,7 @@ The GET method with an organization ID retrieves a single descriptor containing 
 
 The organization descriptor is identical to the one returned when searching or listing an organization, but only a single descriptor is ever returned. The following example shows the descriptor in JSON format:
 
-```
+``` json
 {
   "id":"Finance",
   "alias":"Finance",
@@ -241,7 +241,7 @@ Boolean</p></td>
 
 The descriptor sent in the request should contain all the properties you want to set on the new organization. Specify the `parentId` value to set the parent of the organization, not the `tenantUri` or `tenantFolderUri` properties. The following example shows the descriptor in JSON format:
 
-```
+``` json
 {
   "id":"Audit",
   "alias":"Audit",
@@ -254,7 +254,7 @@ The descriptor sent in the request should contain all the properties you want to
 
 However, all properties have defaults or can be determined based on the alias value. The minimal descriptor necessary to create an organization is simply the alias property. In this case, the organization is created as a child of the logged-in user’s home organization. For example, if the `superuser` posts the following descriptor, the server creates an organization with the name, ID, and alias of HR as a child of the root organization:
 
-```
+``` json
 {
   "alias":"HR"
 }
@@ -308,7 +308,7 @@ To modify the properties of an organization, use the PUT method and specify the 
 
 The following example shows a descriptor sent to update the name and description of an organization:
 
-```
+``` json
 {
   "tenantName":"Audit Dept",
   "tenantDesc":"Audit Department of Finance Division"
@@ -323,7 +323,7 @@ For example:
 
 PUT http://localhost:8080/jasperserver-pro/rest_v2/organizations/Audit
 
-```
+``` json
 {
   "theme":"jasper_dark"
 }

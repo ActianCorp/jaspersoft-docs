@@ -55,9 +55,9 @@ To search for an alert:
 
         Only the specific alert name that meets with the search criteria of the Alert name column is displayed in the Alerts panel.
 
-![js alert search records](../assets/images/js-alert-search-records.png)
+    ![js alert search records](../assets/images/js-alert-search-records.png)
 
-*Figure 4: List of alerts found in Alerts Panel*
+    *Figure 4: List of alerts found in Alerts Panel*
 
 3.  If no alert name matches with your search term, then the list remains empty with a message, as shown in the following figure. Click the **Cancel** icon ![js alert close icon](../assets/images/js-alert-close-icon.png) to clear or cancel the search term.
 
@@ -110,13 +110,15 @@ You can delete an alert from the Alerts panel.
 To delete an alert
 
 1.  Click the View Alert List ![js alert list blue badge](../assets/images/js-alert-list-blue-badge.png) to view the alerts in the Alerts panel.
+
 2.  Click the delete icon ![js alert trash icon](../assets/images/js-alert-trash-icon.png) to delete the corresponding alert. A confirmation dialog with a warning message appears to confirm if you want to delete this alert.
 
-![js alert delete confirm panel](../assets/images/js-alert-delete-confirm-panel.png)
+    ![js alert delete confirm panel](../assets/images/js-alert-delete-confirm-panel.png)
 
-*Figure 9: Deleting Alert*
+    *Figure 9: Deleting Alert*
 
 3.  Click **Delete** to delete the alert else click **Cancel** to cancel the delete action.
+
 4.  Click **Close** to close the Alerts panel.
 
 # Disabling Alerts Feature

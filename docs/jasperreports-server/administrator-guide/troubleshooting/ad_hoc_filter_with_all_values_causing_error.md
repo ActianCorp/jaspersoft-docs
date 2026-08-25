@@ -9,7 +9,7 @@ When using filters in the Ad Hoc Editor, your browser sends lists of values to t
 
 For example, if you select 100,000 values in an Ad Hoc filter on a default installation on Tomcat, Tomcat logs an error and redirect the user to the JasperReports Server home page. The Tomcat error log may contain the following entry:
 
-```
+``` text
 2013-09-30 15:12:33,847 ERROR errorPage_jsp,http-8080-6:559 - stack trace of
 exception that redirected to errorPage.jsp
 java.lang.NullPointerException

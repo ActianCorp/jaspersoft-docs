@@ -45,9 +45,9 @@ You can also change the scale after rendering, in this case to more than double 
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>report
+<td><div class="language-text highlight"><pre><code>report
     .scale(2.5)
-    .run();</code></pre></td>
+    .run();</code></pre></div></td>
 </tr>
 </tbody>
 </table>

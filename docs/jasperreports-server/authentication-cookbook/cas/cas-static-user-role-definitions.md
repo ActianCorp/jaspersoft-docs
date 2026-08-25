@@ -13,7 +13,7 @@ If you're mapping all your external users to a single organization, you can assi
 
 The following example shows how to use the `mtExternalUserSetupProcessor` bean to define static roles. The configuration for `externalUserSetupProcessor` is similar:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">

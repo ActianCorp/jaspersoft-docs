@@ -257,7 +257,7 @@ Users can schedule reports to run at regular intervals. The default interval can
 
 To remove a temporal interval, enclose the corresponding bean in comment characters. For example, to prevent users from scheduling reports at minute intervals, comment out the bean containing the `INTERVAL_MINUTE` field:
 
-```
+``` text
 <!--
 <bean class="com.jaspersoft.jasperserver.war.dto.ByteEnum">
     <property name="code">
@@ -279,7 +279,7 @@ The scheduler maintains a list of named calendars, and the user interface allows
 
 Currently, the only method to define a holiday calendar is through the REST API. You can use any browser plug-in that acts as a REST client and can send PUT requests to JasperReports Server. Using such a plug-in, compose and send the following REST request (header and body) to your server:
 
-```
+``` text
 PUT http://<host>:<port>/jasperserver[-pro]/rest_v2/jobs/calendars/2014FrenchHolidays
 Content-Type: application/xml
 
@@ -521,4 +521,4 @@ To display execution metrics and logs in the Scheduler Dashboard, configure the 
 
 !!! note
 
-    To enable access to Jobs Historical Data, ensure that both `feature.audit_monitoring.enabled` and `audit.records.enabled` are set to `True`. For more information, see <a href="../diagnostics/configuring_auditing_and_monitoring.md">Configuring Auditing and Monitoring.</a>
+    To enable access to Jobs Historical Data, ensure that both `feature.audit_monitoring.enabled` and `audit.records.enabled` are set to `True`. For more information, see [Configuring Auditing and Monitoring.](../diagnostics/configuring_auditing_and_monitoring.md)

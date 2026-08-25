@@ -76,11 +76,11 @@ The following example shows the request to list the resources in the /reports fo
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>GET /jasperserver/rest/resources/reports HTTP/1.1
+<td><div class="language-text highlight"><pre><code>GET /jasperserver/rest/resources/reports HTTP/1.1
 User-Agent: Jakarta Commons-HttpClient/3.1
 Authorization: Basic amFzcGVyYWRtaW46amFzcGVyYWRtaW4=
 Host: localhost:8080
-Cookie: $Version=0; JSESSIONID=6854BF45EC89F3D3CE3E6F4FD6FF1BBD; $Path=/jasperserver</code></pre></td>
+Cookie: $Version=0; JSESSIONID=6854BF45EC89F3D3CE3E6F4FD6FF1BBD; $Path=/jasperserver</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -93,13 +93,13 @@ Because the example is not a recursive search, it simply returns the contents of
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>HTTP/1.1 200 OK
+<td><div class="language-text highlight"><pre><code>HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Pragma: No-cache
 Cache-Control: no-cache
 Expires: Thu, 01 Jan 1970 01:00:00 CET
 Content-Length: 1518
-Date: Fri, 24 Jun 2011 12:09:45 GMT</code></pre></td>
+Date: Fri, 24 Jun 2011 12:09:45 GMT</code></pre></div></td>
 </tr>
 <tr>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">resourceDescriptors</span>&gt;</span>
@@ -151,11 +151,11 @@ The following sample request is intended to list all the reports available in th
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>GET /jasperserver/rest/resources/reports?type=reportUnit&amp;recursive=1 HTTP/1.1
+<td><div class="language-text highlight"><pre><code>GET /jasperserver/rest/resources/reports?type=reportUnit&amp;recursive=1 HTTP/1.1
 User-Agent: Jakarta Commons-HttpClient/3.1
 Authorization: Basic amFzcGVyYWRtaW46amFzcGVyYWRtaW4=
 Host: localhost:8080
-Cookie: $Version=0; JSESSIONID=60B573BDC47098E6379FC867B24C5C0E; $Path=/jasperserver</code></pre></td>
+Cookie: $Version=0; JSESSIONID=60B573BDC47098E6379FC867B24C5C0E; $Path=/jasperserver</code></pre></div></td>
 </tr>
 </tbody>
 </table>

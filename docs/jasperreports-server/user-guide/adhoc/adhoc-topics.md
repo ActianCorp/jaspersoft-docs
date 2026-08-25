@@ -33,6 +33,7 @@ To upload a JRXML-based Topic
         **Add Resource** appears on the context menu only if your login account has write privilege to the folder.
 
 4.  In the Set Up the Report page, give the Topic a name, a Resource ID, and an optional description, then click **Next**.
+
     - The **Name** field is the visible name of the file in the repository, such as `Example Topic`.
     - The **Resource ID** field is the internal ID of the object, such as `Example_Topic`. The server does not accept spaces in an internal ID.
     - The **Description** field, such as `Topic uploaded for User Guide example`, helps users understand the purpose of the file.

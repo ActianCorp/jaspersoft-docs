@@ -58,7 +58,7 @@ Depending on your deployment and your needs, there are several ways to work with
 
 When working with the WAR file distribution or servers installed in application servers other than Apache Tomcat, the WAR file is kept as a single archive file from which you must extract, modify and replace the files. The following code sample shows one way to do this from the command line.
 
-```
+``` bash
 cd <js-webapp>
 "%JAVA_HOME%\bin\jar" xf jasperserver[-pro].war <path/filename>
 <edit> <path\filename>

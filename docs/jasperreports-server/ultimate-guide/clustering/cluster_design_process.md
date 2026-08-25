@@ -11,18 +11,18 @@ As with any software project, careful design and planning will help you meet you
 
 1.  Gather cluster requirements in the following areas:
 
-- Performance – Usually defined as average response time for a given load.
-- High availability – Usually measured as percentage up-time.
-- Scalability – The ease of adding nodes to improve performance and availability over time.
+    - Performance – Usually defined as average response time for a given load.
+    - High availability – Usually measured as percentage up-time.
+    - Scalability – The ease of adding nodes to improve performance and availability over time.
 
-1.  Estimate the size of your cluster to meet your requirements within your limitations such as time and budget. Sizing determines the architecture of your cluster:
+2.  Estimate the size of your cluster to meet your requirements within your limitations such as time and budget. Sizing determines the architecture of your cluster:
 
-- Load-balancing hardware
-- Size and number of cluster nodes
-- Shared resources, especially databases
-- JasperReports Server configuration
+    - Load-balancing hardware
+    - Size and number of cluster nodes
+    - Shared resources, especially databases
+    - JasperReports Server configuration
 
-1.  Deploy your cluster:
+3.  Deploy your cluster:
 
 - Hardware purchases and installation
 - Network configuration

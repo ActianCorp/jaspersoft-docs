@@ -10,23 +10,30 @@ The first step is to create your report book jrxml. This is the framework in whi
 To create the report book framework
 
 1.  In Jaspersoft Studio, click ![jss icon new](../assets/images/jss-icon-new.png) and select **Other...** to open the **Wizard Selection** window.
+
 2.  Expand the Jaspersoft Studio folder, select **Jasper Report**, and click **Next**.
+
 3.  In the **Categories** panel, select **Report Books**.
+
 4.  Click to select **Wave Book** then click **Next**.
+
 5.  In the Project Explorer, select the **My Reports** folder, change the file name to `Sample_Book.jrxml`, and click **Next**.
+
 6.  In the **Data Source** window, select a data adapter. For our walkthrough, use **Sample DB – Database JDBC Connection**.
+
 7.  In the text panel, enter the following query then click **Next**:
 
-`select distinct shipcountry from orders order by shipcountry`
+    `select distinct shipcountry from orders order by shipcountry`
 
-1.  In the **Fields** window, move **SHIPCOUNTRY** from the Dataset Fields panel to the Fields panel and click **Next**.
-2.  In the Book Sections window, make sure that all three options are selected:
+8.  In the **Fields** window, move **SHIPCOUNTRY** from the Dataset Fields panel to the Fields panel and click **Next**.
 
-- **Create Cover Section**
-- **Create Table of Contents**
-- **Create Back Cover Section**
+9.  In the Book Sections window, make sure that all three options are selected:
 
-1.  Click **Finish**.
+    - **Create Cover Section**
+    - **Create Table of Contents**
+    - **Create Back Cover Section**
+
+10. Click **Finish**.
 
 Your Report Book project opens in Jaspersoft Studio.
 

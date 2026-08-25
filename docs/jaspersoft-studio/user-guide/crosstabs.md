@@ -41,90 +41,96 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
 
 1.  Create a report:
 
-<!-- -->
+    1.  Choose a blank template.
+    2.  Select the Sample DB data adapter and click **Next**.
+    3.  Enter the query `select * from orders`.
+    4.  On the **Fields** page, select all fields and click **Finish**.
 
-1.  Choose a blank template.
-2.  Select the Sample DB data adapter and click **Next**.
-3.  Enter the query `select * from orders`.
-4.  On the **Fields** page, select all fields and click **Finish**.
-5.  Because a crosstab summarizes information, you put it in the Summary band. For this example, delete all bands except the **Title** and **Summary** bands. This eliminates blank pages in the final report.
-6.  Drag the Crosstab tool ![jss crosstab icon](assets/images/jss-crosstab-icon.png) into the **Summary** band. The **Dataset** page of the **Crosstab Wizard** is displayed.
+2.  Because a crosstab summarizes information, you put it in the Summary band. For this example, delete all bands except the **Title** and **Summary** bands. This eliminates blank pages in the final report.
 
-|  |
-|----|
-| ![jss crosstab wizard dataset](assets/images/jss-crosstab-wizard-dataset.png) |
-| *Figure 3: Dataset page of the Crosstab wizard* |
+3.  Drag the Crosstab tool ![jss crosstab icon](assets/images/jss-crosstab-icon.png) into the **Summary** band. The **Dataset** page of the **Crosstab Wizard** is displayed.
 
-1.  For this example, make sure that **Create a Crosstab using an existing dataset** is selected, and select **\[Main Dataset\]** from the drop-down menu.
-2.  Click **Next**. The Columns screen is displayed.
-3.  Enter one or more fields that you want as column groups. For this example, choose the **ORDERDATE** field.
+    |  |
+    |----|
+    | ![jss crosstab wizard dataset](assets/images/jss-crosstab-wizard-dataset.png) |
+    | *Figure 3: Dataset page of the Crosstab wizard* |
 
-|  |
-|----|
-| ![jss crosstab wizard columns](assets/images/jss-crosstab-wizard-columns.png) |
-| *Figure 4: Defining column groups* |
+4.  For this example, make sure that **Create a Crosstab using an existing dataset** is selected, and select **\[Main Dataset\]** from the drop-down menu.
 
-1.  Select the `ORDERDATE` field. Then click the Unique value in the **Calculation** column and select **Year** from the drop-down menu. This aggregates the orders by year.
+5.  Click **Next**. The Columns screen is displayed.
 
-!!! note
+6.  Enter one or more fields that you want as column groups. For this example, choose the **ORDERDATE** field.
 
-    When you have a time field in your crosstab, you can use the `Unique` aggregation function to group records having the same value, or you can aggregate it any of the following ways:
+    |  |
+    |----|
+    | ![jss crosstab wizard columns](assets/images/jss-crosstab-wizard-columns.png) |
+    | *Figure 4: Defining column groups* |
 
-    - Using a time-based aggregation function (such as `Year`, `Month`, `Week`, or `Day`) when you define the group
+7.  Select the `ORDERDATE` field. Then click the Unique value in the **Calculation** column and select **Year** from the drop-down menu. This aggregates the orders by year.
 
-    In this example, this is shown in the previous step.
+    !!! note
 
-    - Using a dataset query when you create the crosstab.
+        When you have a time field in your crosstab, you can use the `Unique` aggregation function to group records having the same value, or you can aggregate it any of the following ways:
 
-    In this example, in the first step of the wizard, you could create a dataset that uses a query that returns the year, such as `select ORDERDATE, SHIPVIA, SHIPPOSTALCODE, SHIPCOUNTRY, SHIPPEDDATE, YEAR(SHIPPEDDATE) as SHIPPEDYEAR from orders`.
+        - Using a time-based aggregation function (such as `Year`, `Month`, `Week`, or `Day`) when you define the group
 
-    - Manually editing the element expression in the crosstab editor after the crosstab has been created, as described in Editing the expression of a group.
+        In this example, this is shown in the previous step.
 
-    In this example, you could change the column element expression from `$F{SHIPPEDDATE}` to `YEAR($F{SHIPPEDDATE})`.
+        - Using a dataset query when you create the crosstab.
 
-1.  Click **Next**. The **Rows** screen is displayed.
-2.  Enter one or more fields that you want as row groups. For this example, choose **SHIPCOUNTRY** and **SHIPPOSTALCODE**.
+        In this example, in the first step of the wizard, you could create a dataset that uses a query that returns the year, such as `select ORDERDATE, SHIPVIA, SHIPPOSTALCODE, SHIPCOUNTRY, SHIPPEDDATE, YEAR(SHIPPEDDATE) as SHIPPEDYEAR from orders`.
 
-|                                                                         |
-|-------------------------------------------------------------------------|
-| ![jss crosstab wizard rows](assets/images/jss-crosstab-wizard-rows.png) |
-| *Figure 5: Defining row groups*                                         |
+        - Manually editing the element expression in the crosstab editor after the crosstab has been created, as described in Editing the expression of a group.
 
-1.  Make sure that the fields appear in the order you want them in the crosstab. For this example, ensure that **SHIPCOUNTRY** appears first in the list by selecting it and clicking **Up**.
+        In this example, you could change the column element expression from `$F{SHIPPEDDATE}` to `YEAR($F{SHIPPEDDATE})`.
 
-Grouping by **SHIPCOUNTRY** and then **SHIPPOSTALCODE** results in each row in the crosstab referring to a specific country, with subgroups by postal code within the country. Unlike in the main report, JasperReports sorts the data for you, although you can disable this function to speed up the fill process if your data is already sorted.
+8.  Click **Next**. The **Rows** screen is displayed.
 
-1.  Click **Next**. The **Measures** screen is displayed.
-2.  Enter one or more fields that you want as measures. For this example, choose **ORDERID**.
+9.  Enter one or more fields that you want as row groups. For this example, choose **SHIPCOUNTRY** and **SHIPPOSTALCODE**.
 
-Measures define the detailed data in the crosstab. Normally, this is the result of an aggregation function like the count of orders by country by year, or the sum of freight for the same combination (country/year). By default, the aggregate function is Count, which is what we want for this example. To change the aggregate function, you would select **ORDERID**, click Count, and select a different value from the drop-down menu.
+    |                                                                         |
+    |-------------------------------------------------------------------------|
+    | ![jss crosstab wizard rows](assets/images/jss-crosstab-wizard-rows.png) |
+    | *Figure 5: Defining row groups*                                         |
 
-|  |
-|----|
-| ![jss crosstab wizard measures](assets/images/jss-crosstab-wizard-measures.png) |
-| *Figure 6: Defining measures* |
+10. Make sure that the fields appear in the order you want them in the crosstab. For this example, ensure that **SHIPCOUNTRY** appears first in the list by selecting it and clicking **Up**.
 
-1.  Click **Next**. The **Layout** page is displayed.
-2.  Set options for the crosstab layout. You can indicate whether you want to see grid lines, use a color set to distinguish totals, headers, and detail cells, or display the total number of rows and columns.
+    Grouping by **SHIPCOUNTRY** and then **SHIPPOSTALCODE** results in each row in the crosstab referring to a specific country, with subgroups by postal code within the country. Unlike in the main report, JasperReports sorts the data for you, although you can disable this function to speed up the fill process if your data is already sorted.
 
-For this example, select the Burleywood color scheme.
+11. Click **Next**. The **Measures** screen is displayed.
 
-|  |
-|----|
-| ![jss crosstab wizard layout](assets/images/jss-crosstab-wizard-layout.png) |
-| *Figure 7: Choosing layout options* |
+12. Enter one or more fields that you want as measures. For this example, choose **ORDERID**.
 
-1.  Click **Finish**.
+    Measures define the detailed data in the crosstab. Normally, this is the result of an aggregation function like the count of orders by country by year, or the sum of freight for the same combination (country/year). By default, the aggregate function is Count, which is what we want for this example. To change the aggregate function, you would select **ORDERID**, click Count, and select a different value from the drop-down menu.
 
-The crosstab is created and added to your report.
+    |  |
+    |----|
+    | ![jss crosstab wizard measures](assets/images/jss-crosstab-wizard-measures.png) |
+    | *Figure 6: Defining measures* |
 
-|  |
-|----|
-| ![jss crosstab in report design](assets/images/jss-crosstab-in-report-design.png) |
-| *Figure 8: Crosstab in Design view* |
+13. Click **Next**. The **Layout** page is displayed.
 
-1.  Select the crosstab to display a border with handles. Drag the right-hand handle of the crosstab to the right margin of the report.
-2.  Preview your report. You see a crosstab. The row and column headers are the values of the fields that you selected for the rows and columns. For each row and column, the value is the number of orders for that year and postal code.
+14. Set options for the crosstab layout. You can indicate whether you want to see grid lines, use a color set to distinguish totals, headers, and detail cells, or display the total number of rows and columns.
+
+    For this example, select the Burleywood color scheme.
+
+    |  |
+    |----|
+    | ![jss crosstab wizard layout](assets/images/jss-crosstab-wizard-layout.png) |
+    | *Figure 7: Choosing layout options* |
+
+15. Click **Finish**.
+
+    The crosstab is created and added to your report.
+
+    |  |
+    |----|
+    | ![jss crosstab in report design](assets/images/jss-crosstab-in-report-design.png) |
+    | *Figure 8: Crosstab in Design view* |
+
+16. Select the crosstab to display a border with handles. Drag the right-hand handle of the crosstab to the right margin of the report.
+
+17. Preview your report. You see a crosstab. The row and column headers are the values of the fields that you selected for the rows and columns. For each row and column, the value is the number of orders for that year and postal code.
 
 |                                                                 |
 |-----------------------------------------------------------------|
@@ -170,9 +176,9 @@ To open the crosstab editor
 
 1.  Double-click the crosstab node in the **Outline** view for the main report.
 
-OR
+    OR
 
-1.  Double-click the crosstab in **Design** view for the main report.
+2.  Double-click the crosstab in **Design** view for the main report.
 
 When the crosstab editor is selected, a crosstab element is displayed in the outline view. This crosstab element shows the whole crosstab structure, including the crosstab parameters and the row and column groups, measures, and cells.
 
@@ -181,16 +187,17 @@ When the crosstab editor is selected, a crosstab element is displayed in the out
 Manually resizing a row or column
 
 1.  Open the crosstab editor.
+
 2.  Shift-click in the header of the row or column that you want to change.
 
-The row and column you selected are outlined.
+    The row and column you selected are outlined.
 
-|                                                                         |
-|-------------------------------------------------------------------------|
-| ![jss crosstabs row column](assets/images/jss-crosstabs-row-column.png) |
-| *Figure 11: Row and column selected in crosstab editor*                 |
+    |                                                                         |
+    |-------------------------------------------------------------------------|
+    | ![jss crosstabs row column](assets/images/jss-crosstabs-row-column.png) |
+    | *Figure 11: Row and column selected in crosstab editor*                 |
 
-1.  Drag an outline to resize the row or column. Make sure that the cells are large enough to contain their content completely when you run the report.
+3.  Drag an outline to resize the row or column. Make sure that the cells are large enough to contain their content completely when you run the report.
 
 #### Working with Cells
 
@@ -219,17 +226,16 @@ The following example shows how to edit the sample crosstab to group by the firs
 
 1.  Double-click the crosstab to open the crosstab editor.
 
-<!-- -->
+2.  In **Outline** view, select the group you want to edit. For this example, select **Crosstab \> Row Groups \> SHIPPOSTALCODE1**.
 
-1.  In **Outline** view, select the group you want to edit. For this example, select **Crosstab \> Row Groups \> SHIPPOSTALCODE1**.
+    |  |
+    |----|
+    | ![jss crosstab editor outline view](assets/images/jss-crosstab-editor-outline-view.png) |
+    | *Figure 12: Outline tree view – crosstab details in the crosstab editor* |
 
-|  |
-|----|
-| ![jss crosstab editor outline view](assets/images/jss-crosstab-editor-outline-view.png) |
-| *Figure 12: Outline tree view – crosstab details in the crosstab editor* |
+3.  In the **Properties** view, select the **Cell** tab.
 
-1.  In the **Properties** view, select the **Cell** tab.
-2.  Change the expression in the **Expression** entry bar to `$F{SHIPPOSTALCODE}.substring(0,1)`.
+4.  Change the expression in the **Expression** entry bar to `$F{SHIPPOSTALCODE}.substring(0,1)`.
 
 |  |
 |----|
@@ -252,42 +258,43 @@ The following example shows how to add a row group, `SHIPREGION`, to the example
 Example of adding a row group
 
 1.  Double-click the crosstab to open the crosstab editor.
+
 2.  In the **Outline** view, double-click the Crosstab node to expand it.
+
 3.  Right-click the Row Groups node and select **Create Row Group** from the context menu.
 
-|  |
-|----|
-| ![jss crosstabs create row group](assets/images/jss-crosstabs-create-row-group.png) |
-| *Figure 15: Adding a row group* |
+    |  |
+    |----|
+    | ![jss crosstabs create row group](assets/images/jss-crosstabs-create-row-group.png) |
+    | *Figure 15: Adding a row group* |
 
-The **Group Band** dialog is displayed.
+    The **Group Band** dialog is displayed.
 
-1.  Enter the information for your group in the **Group Band** dialog. For this example:
+4.  Enter the information for your group in the **Group Band** dialog. For this example:
 
-<!-- -->
+    1.  Enter SHIPREGION1 for the **Group Name**.
+    2.  Select **Create Group from a report object** and select SHIPREGION.
+    3.  Click **Finish**.
 
-1.  Enter SHIPREGION1 for the **Group Name**.
-2.  Select **Create Group from a report object** and select SHIPREGION.
-3.  Click **Finish**.
+    The new group is added to the crosstab as the innermost row group.
 
-The new group is added to the crosstab as the innermost row group.
+    |  |
+    |----|
+    | ![jss crosstabs add group band](assets/images/jss-crosstabs-add-group-band.png) |
+    | *Figure 16: Group Band dialog* |
 
-|  |
-|----|
-| ![jss crosstabs add group band](assets/images/jss-crosstabs-add-group-band.png) |
-| *Figure 16: Group Band dialog* |
+5.  To set the value class of the group, select the top-level node of the new SHIPREGION group in the outline view of the crosstab editor. Then, in the Cell tab of the properties view, enter the following value:
 
-1.  To set the value class of the group, select the top-level node of the new SHIPREGION group in the outline view of the crosstab editor. Then, in the Cell tab of the properties view, enter the following value:
+    - **Value Class Name**: `java.lang.String`
 
-- **Value Class Name**: `java.lang.String`
+    |  |
+    |----|
+    | ![jss crosstab row group properties](assets/images/jss-crosstab-row-group-properties.png) |
+    | *Figure 17: Setting Value Class Name of a row group* |
 
-|  |
-|----|
-| ![jss crosstab row group properties](assets/images/jss-crosstab-row-group-properties.png) |
-| *Figure 17: Setting Value Class Name of a row group* |
+6.  Change the order of the groups by selecting the top-level node of `SHIPREGION` in the outline view and dragging it above `SHIPPOSTALCODE`.
 
-1.  Change the order of the groups by selecting the top-level node of `SHIPREGION` in the outline view and dragging it above `SHIPPOSTALCODE`.
-2.  Preview the report.
+7.  Preview the report.
 
 Deleting a row or column group
 
@@ -348,70 +355,75 @@ Adding a measure
 
 1.  Create a report:
 
-<!-- -->
+    1.  Choose a blank template.
+    2.  Select the Sample DB data adapter and click **Next**.
+    3.  Enter the query **select \* from orders** and click **Next**.
+    4.  On the **Fields** page, select all fields and click **Finish**.
 
-1.  Choose a blank template.
-2.  Select the Sample DB data adapter and click **Next**.
-3.  Enter the query **select \* from orders** and click **Next**.
-4.  On the **Fields** page, select all fields and click **Finish**.
-5.  Delete all bands except the **Summary** band. This eliminates blank pages in the final report.
-6.  Add a crosstab ![jss crosstab icon](assets/images/jss-crosstab-icon.png) to the **Summary** band with the following settings:
+2.  Delete all bands except the **Summary** band. This eliminates blank pages in the final report.
 
-<!-- -->
+3.  Add a crosstab ![jss crosstab icon](assets/images/jss-crosstab-icon.png) to the **Summary** band with the following settings:
 
-1.  Dataset: **\[Main Dataset\]**
-2.  Column group: ORDERDATE; select **Year** from the drop-down menu in the **Calculation** column.
-3.  Row group: SHIPCOUNTRY.
-4.  Measure: ORDERID.
-5.  In the **Design** view for the report, double-click the crosstab to open the crosstab editor.
-6.  Shift-click in the second row and drag to expand the row height.
-7.  Drag a text field ![jss icon textfield](assets/images/jss-icon-textfield.png) into the intersection of the first row and column.
+    1.  Dataset: **\[Main Dataset\]**
+    2.  Column group: ORDERDATE; select **Year** from the drop-down menu in the **Calculation** column.
+    3.  Row group: SHIPCOUNTRY.
+    4.  Measure: ORDERID.
 
-The text field is added to the column.
+4.  In the **Design** view for the report, double-click the crosstab to open the crosstab editor.
 
-|  |
-|----|
-| ![jss crosstab measure add textfield](assets/images/jss-crosstab-measure-add-textfield.png) |
-| *Figure 19: Adding a text field to an existing measure* |
+5.  Shift-click in the second row and drag to expand the row height.
 
-Setting the measure expression
+6.  Drag a text field ![jss icon textfield](assets/images/jss-icon-textfield.png) into the intersection of the first row and column.
 
-1.  Select the text field that you added.
-2.  Select the **Text Field** tab in the **Properties** view.
+    The text field is added to the column.
 
-|  |
-|----|
-| ![jss crosstab measure textfield properties](assets/images/jss-crosstab-measure-textfield-properties.png) |
-| *Figure 20: Text field properties after setting the expression* |
+    |  |
+    |----|
+    | ![jss crosstab measure add textfield](assets/images/jss-crosstab-measure-add-textfield.png) |
+    | *Figure 19: Adding a text field to an existing measure* |
 
-1.  Click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png) to the right of the **Expression** field to open the expression editor.
-2.  Add a formula to calculate the following percentage:
+    Setting the measure expression
 
-(Number of orders placed in this country and in this year)  /  (All orders placed in this country)
+7.  Select the text field that you added.
 
-For Java, use the following expression:
+8.  Select the **Text Field** tab in the **Properties** view.
 
-```
-new Double(
-    $V{ORDERID_MEASURE1}.doubleValue()
-    /
-    $V{ORDERID_MEASURE1_ORDERDATE1_ALL}.doubleValue()
-)
-```
+    |  |
+    |----|
+    | ![jss crosstab measure textfield properties](assets/images/jss-crosstab-measure-textfield-properties.png) |
+    | *Figure 20: Text field properties after setting the expression* |
 
-For Groovy, use the following expression:
+9.  Click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png) to the right of the **Expression** field to open the expression editor.
 
-```
-(double)$V{ORDERID_MEASURE1} / (double)$V{ORDERID_MEASURE1_ORDERDATE1_ALL}
-```
+10. Add a formula to calculate the following percentage:
 
-!!! note
+    (Number of orders placed in this country and in this year)  /  (All orders placed in this country)
 
-    A percentage must be treated as a floating-point number. For this reason, extract the double-scalar values from `ORDERID_MEASURE1` and `ORDERID_MEASURE1_ORDERDATE1_ALL` objects even if they are the objects of the class-type `Integer`.
+    For Java, use the following expression:
 
-1.  Click **Finish** to close the expression editor.
-2.  Enter `#,##0.00%` in the **Pattern** field to format the result as a percentage.
-3.  Click **Preview** to run the report.
+    ``` text
+    new Double(
+        $V{ORDERID_MEASURE1}.doubleValue()
+        /
+        $V{ORDERID_MEASURE1_ORDERDATE1_ALL}.doubleValue()
+    )
+    ```
+
+    For Groovy, use the following expression:
+
+    ``` text
+    (double)$V{ORDERID_MEASURE1} / (double)$V{ORDERID_MEASURE1_ORDERDATE1_ALL}
+    ```
+
+    !!! note
+
+        A percentage must be treated as a floating-point number. For this reason, extract the double-scalar values from `ORDERID_MEASURE1` and `ORDERID_MEASURE1_ORDERDATE1_ALL` objects even if they are the objects of the class-type `Integer`.
+
+11. Click **Finish** to close the expression editor.
+
+12. Enter `#,##0.00%` in the **Pattern** field to format the result as a percentage.
+
+13. Click **Preview** to run the report.
 
 |  |
 |----|

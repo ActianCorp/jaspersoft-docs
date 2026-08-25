@@ -6,8 +6,11 @@ description: "If users need 8.1 Split installations but they are on 8.0 Compact,
 # Changes in 8.1 That May Affect Your Upgrade
 
 - Users are able to upgrade from 8.0 Compact to 8.1 Compact using samedb and newdb.
+
 - Users are able to upgrade from 8.0 Split to 8.1 Split using samedb and newdb.
+
 - Users will not be able to upgrade:
+
   - From 8.0 Compact to 8.1 Split.
   - From 8.0 Split to 8.1 Compact.
 

@@ -41,7 +41,7 @@ You can also configure the default value that appears in each type of input cont
 
 Edit the file `.../WEB-INF/applicationContext-cascade.xml` to change the following entries. The examples in comments show how you can use the default value to suggest a pattern for the input. To make an input control appear blank when no value is given, set `value=""` (an empty string).
 
-```
+``` xml
 <util:map id="globalDefaultValues" value-type="java.lang.String" key-type="java.lang.Byte">
     <!-- if DataType isn't defined-->
     <entry key="-1" value="~NULL~"></entry>

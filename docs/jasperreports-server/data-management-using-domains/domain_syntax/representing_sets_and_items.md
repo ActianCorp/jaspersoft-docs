@@ -11,7 +11,7 @@ The hierarchy of data islands, sets, and items are defined through the `dataIsla
 
 The following hierarchy is used to represent data islands, sets, and items. This hierarchy is at the top level, directly under the `schema` element.
 
-```
+``` xml
 <schema>
     <dataIslands> (0...1)
         <itemGroup> (1...n)
@@ -396,7 +396,7 @@ For example, suppose you have a join tree, JoinTree_1, with the following hierar
 
 The XML for this join tree might look like this:
 
-```
+``` xml
 <dataIslands>
   <itemGroup id="JoinTree_1" resourceId="JoinTree_1" />
 </dataIslands>

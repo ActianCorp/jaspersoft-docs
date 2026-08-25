@@ -89,21 +89,30 @@ Our sample report is based on the following query that requires the user to ente
 Creating the Country input control
 
 1.  On the repository tab, right click your report's folder and select **New** from the context menu. The **Add JasperReports Server Resource** wizard appears.
+
 2.  Select **Input Control** and click **Next**.
+
 3.  Enter Country for the **Name** of the input control and click **Next**.
+
 4.  Select the query type **Single Select Query**.
+
 5.  Click the ellipsis button next to the **Local Resource** field. The **Query** window opens.
+
 6.  Enter the SQL query:<br>
     **select distinct SHIPCOUNTRY from orders order by SHIPCOUNTRY**
 
-![ir CascadingICs country query](../assets/images/ir-CascadingICs-country-query.png)
+    ![ir CascadingICs country query](../assets/images/ir-CascadingICs-country-query.png)
 
-*Figure 2: Query for the Country Input Control*
+    *Figure 2: Query for the Country Input Control*
 
 7.  Click **Next**. The Data Source window opens.
+
 8.  Click the **Data Source from Repository** option, select your data source, then click **Finish**.
+
 9.  On the **Value and Visible Columns** tab, enter `SHIPCOUNTRY` in the **Value Column** field and click **Add**. This is the column whose value is returned as the value of the Country input control.
+
 10. Under **Visible Query Columns**, enter `SHIPCOUNTRY`. This is the column whose values populate the list of cities the user can choose from. In our case it is the same as the value column.
+
 11. Click **Finish**.
 
 ![ir CascadingICs value column](../assets/images/ir-CascadingICs-value-column.png)
@@ -118,19 +127,23 @@ Creating the City input control
 
     `Select distinct SHIPCITY from orders where SHIPCOUNTRY = $P{Country} order by SHIPCITY`
 
-![ir CascadingICs city query](../assets/images/ir-CascadingICs-city-query.png)
+    ![ir CascadingICs city query](../assets/images/ir-CascadingICs-city-query.png)
 
-*Figure 4: Query Using Country to Select Cities*
+    *Figure 4: Query Using Country to Select Cities*
 
 3.  Click **Next**. The Data Source window opens.
+
 4.  Click the **Data Source from the Repository** option, select your data source, then click **Finish**.
+
 5.  On the **Value and Visible Columns** tab, enter `SHIPCITY` in the **Value Column** field and click **Add**. This is the column whose value is returned as the value of the City input control.
+
 6.  Under **Visible Query Columns**, enter `SHIPCITY`. This is the column value used to create the list of cities the user can choose from.
+
 7.  Click **Finish**.
 
-![ir CascadingICs city value column](../assets/images/ir-CascadingICs-city-value-column.png)
+    ![ir CascadingICs city value column](../assets/images/ir-CascadingICs-city-value-column.png)
 
-*Figure 5: City Control Value and Visible Columns*
+    *Figure 5: City Control Value and Visible Columns*
 
 8.  Publish your report to JasperReports Server.<br>
     Now when you run your report in JasperReports Server, You'll see an input control for country and another for city. After you select the country, the values available for city are those within that country. Notice that the Country value is not passed to the report. It is used only to help the user select a city.

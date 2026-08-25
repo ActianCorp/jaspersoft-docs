@@ -8,14 +8,18 @@ description: To create a calculated field
 To create a calculated field
 
 1.  First, create the Ad Hoc view to use. To do this, select **Create** \> **Ad Hoc View** from the menu. The **Select Data** wizard appears.
+
 2.  Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Domains**.
+
 3.  Select **Supermart Domain**. Click **Choose Data**. The Data Chooser window appears.
+
 4.  In the Data Chooser window, double-click **Sales** to select it and click **OK**. A new Ad Hoc view opens.
+
 5.  In the Ad Hoc view, click ![js AdHoc icon kebab](../assets/images/js-AdHoc-icon-kebab.png) at the top right of the **Fields** section and select **Create Calculated Field...** from the context menu. The New Calculated Field dialog box appears, displaying the Formula Builder.
 
-![js AdHoc CalcFields](../assets/images/js-AdHoc-CalcFields.png)
+    ![js AdHoc CalcFields](../assets/images/js-AdHoc-CalcFields.png)
 
-*Figure 1: Formula Builder Tab in New Calculated Measure Dialog Box*
+    *Figure 1: Formula Builder Tab in New Calculated Measure Dialog Box*
 
 6.  Enter Volume Tier for the **Field Name**.
 
@@ -41,17 +45,18 @@ To create a calculated field
 
 11. Click **Validate** to verify that the formula does not have any syntax errors.
 
-Creating a summary calculation
+    Creating a summary calculation
 
-The Ad Hoc Editor creates a default summary calculation based on the type of formula you have entered. This section shows how to select a different summary function.
+    The Ad Hoc Editor creates a default summary calculation based on the type of formula you have entered. This section shows how to select a different summary function.
 
 12. Click the **Summary Calculation** tab.
 
-![js AdHoc CalcFields Summary](../assets/images/js-AdHoc-CalcFields-Summary.png)
+    ![js AdHoc CalcFields Summary](../assets/images/js-AdHoc-CalcFields-Summary.png)
 
-*Figure 2: Summary Tab in New Calculated Measure Dialog Box*
+    *Figure 2: Summary Tab in New Calculated Measure Dialog Box*
 
 13. Select Mode from the **Calculation** menu.
+
 14. Click **Create Field**.<br>
     The calculated field appears in bold text at the bottom of the list of available fields. A special icon indicates it is a calculated field ![js icon calculatedFields](../assets/images/js-icon-calculatedFields.png).
 

@@ -27,7 +27,7 @@ A `resourceDescriptor` tag is defined by the following DTD (Document Type Defini
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>&lt;!ELEMENT resourceDescriptor (label, description?, resourceProperty*, resourceDescriptor*, parameter*)&gt;
+<td><div class="language-text highlight"><pre><code>&lt;!ELEMENT resourceDescriptor (label, description?, resourceProperty*, resourceDescriptor*, parameter*)&gt;
 &lt;!ATTLIST resourceDescriptor
   name CDATA #REQUIRED
   wsType CDATA #REQUIRED
@@ -43,7 +43,7 @@ A `resourceDescriptor` tag is defined by the following DTD (Document Type Defini
 &lt;!ATTLIST parameter
   name CDATA #REQUIRED
   isListItem ( true | false ) false
-&gt;</code></pre></td>
+&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>

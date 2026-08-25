@@ -28,15 +28,21 @@ Once the data source service bean is available through Spring, you can add the b
 To create a bean data source
 
 1.  Log on as an administrator.
+
 2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears, as shown in the figure below.
+
 3.  From the **Type** dropdown, select **Bean**. The information on the page changes to reflect what's needed to define a bean data source.
+
 4.  Enter the **Bean Name**. If the data source service is to be instantiated through a factory method of the Spring bean, you should also enter the name of the method.
 
-![js DataSource Bean](../assets/images/js-DataSource-Bean.png)
+    ![js DataSource Bean](../assets/images/js-DataSource-Bean.png)
 
-*Figure 1: Bean Data Source Page*
+    *Figure 1: Bean Data Source Page*
 
 5.  Click **Test Connection** to validate the data source. If the validation fails, ensure that the values you entered are correct and that the bean is in the classpath.
+
 6.  When the test is successful, click **Save**. The **Save** dialog appears.
+
 7.  Enter the **Data source name** and an optional description. The **Resource ID** is generated from the name you enter. If you haven't already specified a location, expand the folder tree and select the location for your data source.
+
 8.  Click **Save** in the dialog. The data source appears in the repository.

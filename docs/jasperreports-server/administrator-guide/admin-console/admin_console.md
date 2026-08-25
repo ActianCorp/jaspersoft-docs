@@ -55,9 +55,9 @@ To edit a scheduled job for a report
 
 3.  Edit the fields in the **Schedule**, **Parameters**, **Output Options**, and **Notifications** tabs.
 
-!!! note
+    !!! note
 
-    See Creating a Schedule section in the JasperReports Server User Guide and repeat from steps 4-10.
+        See Creating a Schedule section in the JasperReports Server User Guide and repeat from steps 4-10.
 
 4.  Click **Save**. The update occurs immediately.
 

@@ -13,12 +13,14 @@ To get an Ad Hoc view embed code
 
 1.  On the Ad Hoc viewer toolbar, click ![js Dashboard icon GetEmbedCode](../assets/images/js-Dashboard-icon-GetEmbedCode.png) to open the **Ad Hoc View Embed Code** dialog.
 
-![js AdHoc GetEmbedCode](../assets/images/js-AdHoc-GetEmbedCode.png)
+    ![js AdHoc GetEmbedCode](../assets/images/js-AdHoc-GetEmbedCode.png)
 
-*Figure 1: Ad Hoc View Embed Code Dialog*
+    *Figure 1: Ad Hoc View Embed Code Dialog*
 
-The dialog shows the Visualize.js code and a preview of the dashboard as it is saved.
+    The dialog shows the Visualize.js code and a preview of the dashboard as it is saved.
 
 2.  Click the **Copy Code** button to copy the embed code to the clipboard.
+
 3.  Click the **Open in JSFiddle** button to load the embed code into JSFiddle, an online JavaScript viewer, and interactive editor.
+
 4.  Click the **Close** button to return to the Ad Hoc view.

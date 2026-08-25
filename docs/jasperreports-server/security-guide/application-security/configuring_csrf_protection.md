@@ -178,9 +178,12 @@ To enable CSRF protection for these browsers, you can add the corresponding user
 
 1.  Find the name of the user-agent for the given browser. If you cannot find the user-agent, many are listed on the following website:
 
-<http://www.useragentstring.com/pages/Browserlist/>
+    <http://www.useragentstring.com/pages/Browserlist/>
 
-1.  Open the file `.../WEB-INF/applicationContext.xml` for editing.
-2.  Locate the `csrfGuardFilter` bean and its `protectedUserAgentRegexs` property. Each list value is a regular expression that is matched against every request's user-agent value in its entirety.
-3.  Add a regular expression to the `protectedUserAgentRegexs` property list that matches the user-agent string from your desired browser.
-4.  Restart JasperReports Server.
+2.  Open the file `.../WEB-INF/applicationContext.xml` for editing.
+
+3.  Locate the `csrfGuardFilter` bean and its `protectedUserAgentRegexs` property. Each list value is a regular expression that is matched against every request's user-agent value in its entirety.
+
+4.  Add a regular expression to the `protectedUserAgentRegexs` property list that matches the user-agent string from your desired browser.
+
+5.  Restart JasperReports Server.

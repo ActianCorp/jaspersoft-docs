@@ -45,9 +45,9 @@ For example:
 
 1.  `$P{param}: "select * where num_column > $P{num_param}"`
 
-In this case `$P` should be used, because we do not have `$X{GREATER,…}`, and Null has no meaning for the operation “greater than”.
+    In this case `$P` should be used, because we do not have `$X{GREATER,…}`, and Null has no meaning for the operation “greater than”.
 
-1.  `$X{EQUAL, column_name, param_name}`
+2.  `$X{EQUAL, column_name, param_name}`
 
 Let us compare two expressions:
 
@@ -138,7 +138,7 @@ To use date ranges, create a parameter with type date range and use it as the th
 
 The following JRXML example shows data from the previous day:
 
-```
+``` xml
 <parameter name="myParameter" class="net.sf.jasperreports.types.date.DateRange">
   <defaultValueExpression>
     <![CDATA[new DateRangeBuilder("DAY-1").toDateRange()]]>
@@ -151,7 +151,7 @@ The following JRXML example shows data from the previous day:
 
 This JRXML example shows results prior to the end of last month:
 
-```
+``` xml
 <parameter class="net.sf.jasperreports.types.date.DateRange" name="EndDate">
   <defaultValueExpression>
     <![CDATA[new net.sf.jasperreports.types.date.DateRangeBuilder("MONTH-1").toDateRange().getEnd()]]>
@@ -202,7 +202,7 @@ Use `BETWEEN` to set up input controls that allow the user to specify a range (o
 
 The following JRXML example uses the `BETWEEN` keyword in the `$X()` function to find all data from the previous 20 years:
 
-```
+``` xml
 <parameter name="StartDate" class="net.sf.jasperreports.types.date.DateRange">
   <defaultValueExpression>
     <![CDATA[(new net.sf.jasperreports.types.date.DateRangeBuilder("YEAR-20")).toDateRange()]]>
@@ -221,7 +221,7 @@ The following JRXML example uses the `BETWEEN` keyword in the `$X()` function to
 
 You can use the `getStart()` and `getEnd()` methods to get the precise beginning and end of a relative date. Both of these methods return a date instead of a date range. The following example shows how to get the precise start date as a default value expression.
 
-```
+``` xml
 <parameter name="StartDate" class="java.util.Date" nestedType="java.util.Date">
   <defaultValueExpression><![CDATA[$P{UserPeriod}.getStart()]]></defaultValueExpression>
 </parameter>
@@ -240,7 +240,7 @@ When the **Supports DateRange Expressions** option is enabled, input controls fo
 
 Jaspersoft Studio passes parameters from a program “caller” to the print generator using a class that extends the `java.util.Map` interface. For example:
 
-```
+``` text
 ...
     HashMap hm = new HashMap();
         ...
@@ -271,7 +271,7 @@ All the other properties can be left as they are. Drag the parameter into the Ti
 
 To set the value of the `REPORT_TITLE` parameter in our application, modify the code of the previous source code example by adding:
 
-```
+``` text
  ...
 HashMap hm = new HashMap();
 hm.put(“REPORT_TITLE”,”This is the title of the report”);

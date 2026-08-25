@@ -52,7 +52,7 @@ The JMX server component is now disabled by default, and only the Internal Diagn
 
 To connect your management console to the JasperReports Server's JMX agent, initiate a new connection from your console and specify the following connection string:
 
-```
+``` text
 service:jmx:rmi://localhost/jndi/rmi://<host>:<port>/<connectionName>
 ```
 
@@ -64,7 +64,7 @@ where:
 
 Therefore, the default connection string is:
 
-```
+``` text
 service:jmx:rmi://localhost/jndi/rmi://<host>:10992/jasperserver
 ```
 
@@ -97,7 +97,7 @@ To change the port or connection name, edit one of following files:
 
 Find the following lines and edit the values to the port number and connection name you want:
 
-```
+``` properties
 diagnostic.jmx.port = 10992
 diagnostic.jmx.name = jasperserver
 ```
@@ -108,7 +108,7 @@ If you want to allow other users to establish the JMX connection from a remote m
 
 - For commercial editions, edit the `.../WEB-INF/applicationContext-diagnostic-pro.xml` file and modify the following setting:
 
-```
+``` xml
 <util:list id="diagnosticAllowedRolesPro">
     <value>ROLE_SUPERUSER</value>
 </util:list>
@@ -139,7 +139,7 @@ Most app servers also have a JMX agent, and if configured properly, they can dis
 
 To connect automatically to the app server's JMX agent, assuming one is available, edit the `default_master.properties` file before you deploy the JasperReports Server web app, and add the following line:
 
-```
+``` properties
 diagnostic.jmx.usePlatformServer = true
 ```
 

@@ -18,40 +18,46 @@ If you embed JasperReports Server in your application, you may want to remove al
     Removing the menus restricts your ability to navigate the JasperReports Server UI. If you need to revert to the default theme, change your theme for the session by adding `&theme=default` to the end of the current URL. You can also log in as an administrator, select **Manage Server**, then select **Repository** to locate and change themes.
 
 1.  Create a new theme in JasperReports Server. This example assumes you named the theme "embed".
+
 2.  On your computer, create the following CSS file and save it as `overrides_custom.css`.
 
-```
-/*
-overrides_custom.css
-Basic theme for embedding
-*/
-body {
-  background-color: white;
-  background: none;
-}
-#banner {
-  background: none;
-  display:none;
-}
-#frame {
-  top: 0;
-  bottom: 0;
-}
-#frameFooter {
-  display:none;
-}
-```
+    ``` text
+    /*
+    overrides_custom.css
+    Basic theme for embedding
+    */
+    body {
+      background-color: white;
+      background: none;
+    }
+    #banner {
+      background: none;
+      display:none;
+    }
+    #frame {
+      top: 0;
+      bottom: 0;
+    }
+    #frameFooter {
+      display:none;
+    }
+    ```
 
-!!! warning
+    !!! warning
 
-    If you're rebranding JasperReports Server, you must use the phrase "Powered by Jaspersoft" on any distributed reports or report portal. You may not remove or delete any of Jaspersoft's copyright or other proprietary notices.
+        If you're rebranding JasperReports Server, you must use the phrase "Powered by Jaspersoft" on any distributed reports or report portal. You may not remove or delete any of Jaspersoft's copyright or other proprietary notices.
 
-1.  Log into JasperReports Server as an administrator.
-2.  Select **View \> Repository** and navigate to the location where you created your theme.
-3.  Right-click the embed theme in the repository and select **Add Resource \> File \> CSS**.
-4.  Select the `overrides_custom.css` file you created and enter `overrides_custom.css` for the Name and Resource ID.
-5.  Click **Submit**.
-6.  Right-click the embed theme and select **Set as Active Theme**. The result is a theme that has no footers or menus.
+3.  Log into JasperReports Server as an administrator.
+
+4.  Select **View \> Repository** and navigate to the location where you created your theme.
+
+5.  Right-click the embed theme in the repository and select **Add Resource \> File \> CSS**.
+
+6.  Select the `overrides_custom.css` file you created and enter `overrides_custom.css` for the Name and Resource ID.
+
+7.  Click **Submit**.
+
+8.  Right-click the embed theme and select **Set as Active Theme**. The result is a theme that has no footers or menus.
 
 ![js Customization Embed](../assets/images/js-Customization-Embed.png)
 

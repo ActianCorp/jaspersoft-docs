@@ -37,10 +37,10 @@ This example shows a parameter tag:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>&lt;!ELEMENT parameter (#PCDATA)&gt;
+<td><div class="language-text highlight"><pre><code>&lt;!ELEMENT parameter (#PCDATA)&gt;
 &lt;!ATTLIST parameter
 name CDATA #REQUIRED
-isListItem ( true | false ) false</code></pre></td>
+isListItem ( true | false ) false</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -59,7 +59,7 @@ The next example shows the `getInputControlValues` call for a cascading multi-se
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>ResourceDescriptor rd = new ResourceDescriptor();
+<td><div class="language-text highlight"><pre><code>ResourceDescriptor rd = new ResourceDescriptor();
 rd.setUriString(&quot;/reports/samples/Cascading_multi_select_report_files/                 Cascading_state_multi_select&quot;);
 rd.setResourceProperty(rd.PROP_QUERY_DATA, null);
 ListItem li1 = new ListItem(&quot;Country_multi_select&quot;, &quot;USA&quot;);
@@ -71,10 +71,10 @@ rd.getParameters().add(li2);
 java.util.List args = new java.util.ArrayList();
 args.add(new Argument( Argument.IC_GET_QUERY_DATA, &quot;&quot;));
 args.add(new Argument( Argument.RU_REF_URI,                       &quot;/reports/samples/Cascading_multi_select_report&quot;));
-ResourceDescriptor rd2 = wsclnt.get(rd, null, args);</code></pre></td>
+ResourceDescriptor rd2 = wsclnt.get(rd, null, args);</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>if (rd2.getQueryData() != null) {
+<td><div class="language-text highlight"><pre><code>if (rd2.getQueryData() != null) {
   List l = (List) rd2.getQueryData();
   for (Object dr : l) {
     InputControlQueryDataRow icdr = (InputControlQueryDataRow) dr;
@@ -83,7 +83,7 @@ ResourceDescriptor rd2 = wsclnt.get(rd, null, args);</code></pre></td>
     }
     System.out.println();
   }
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -81,11 +81,16 @@ The **Font Family** page lets you define the basic configuration of the font or 
 The **Font Family** page shows the following:
 
 - **Family Name**: Name JasperReports Library uses to identify the font extension or font set. When you create a font extension from an external font file, by default, the font name is used for the family name. This can be edited.
+
 - **Hidden**: Flag that determines whether the font is shown as an available font extension "above the line" in the **Font** property of a report element. Use the Hidden flag to hide internal fonts from the user. See [Viewing the Available Font Extensions](fonts-using.md) for more information.
+
 - **Normal/Bold/Italic/Bold Italic**: Tabs that let you configure the individual files that define the specified attributes. For each attribute, you can configure the following:
+
   - **\[Font Format\]**: File location for the specific font and attribute. To change or add a file, use the **Browse** button to navigate to the file location for the specific font and attribute. You can only select one file for each tab.
   - **PDF Font Name** (deprecated): The name of the font when exported to PDF. This can be a pre-defined PDF font or the name of the font file. Not necessary when using font extensions.
+
 - **PDF Details**: Settings used for the font when exported to PDF. Deprecated for static text and text fields.
+
   - **PDF Encoding** (deprecated): The font encoding to use for the font. Defaults to Identity-H. To avoid Identity-H printing issues, set this to the correct encoding for your font.
   - **Embed this font in PDF document** (deprecated): Flag that specifies whether to embed the font in a generated PDF or not. Embedding fonts is recommended to ensure consistency across platforms.
 

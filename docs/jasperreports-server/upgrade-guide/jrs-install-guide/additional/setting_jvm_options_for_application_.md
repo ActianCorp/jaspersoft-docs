@@ -161,25 +161,27 @@ If you installed JasperReports Server to use Tomcat running as a Windows service
 
 1.  Launch the Tomcat configuration application. If you installed the bundled Tomcat, you can do this by going to the `<js-install>/apache-tomcat/bin` directory and double-clicking the `jasperreportsTomcat.exe` file. (If you have multiple instances of JasperReports Server installed, the file name will be of the form ` jasperreportsTomcatnum<number>.exe`, for example, ` jasperreportsTomcatnum2.exe`.) If you installed Tomcat using an existing Windows service, look for an `.exe` file in the same location, with the same name as your Tomcat service, or select the service from the Windows Start menu:
 
-****Start \> Programs \> Apache Tomcat \> Configure Tomcat (Run as administrator)****
+    ****Start \> Programs \> Apache Tomcat \> Configure Tomcat (Run as administrator)****
 
-1.  In the Apache Tomcat Properties dialog, click the **Java** tab.
-2.  In the `Java Options` field, add your `JAVA_OPTS` values according to the tables above.
+2.  In the Apache Tomcat Properties dialog, click the **Java** tab.
 
-Enter only the options preceded by `-X` or `-D`, not `set JAVA_OPTS=%JAVA_OPTS%`.
+3.  In the `Java Options` field, add your `JAVA_OPTS` values according to the tables above.
 
-Enter only one Java option setting per line.
+    Enter only the options preceded by `-X` or `-D`, not `set JAVA_OPTS=%JAVA_OPTS%`.
 
-1.  For instance, add options as follows:
+    Enter only one Java option setting per line.
 
-```
--Xms2048m
--Xmx4096m
--Xss2m
-```
+4.  For instance, add options as follows:
 
-1.  Click **Apply**, then click **OK**.
-2.  Stop and restart Tomcat.
+    ``` text
+    -Xms2048m
+    -Xmx4096m
+    -Xss2m
+    ```
+
+5.  Click **Apply**, then click **OK**.
+
+6.  Stop and restart Tomcat.
 
 ## Changing JVM Options for Bundled Tomcat on Linux
 
@@ -187,27 +189,26 @@ If you installed the bundled Tomcat, you can set Java options by editing the app
 
 1.  Open the following file for editing:
 
-`cd <js-install>/apache-tomcat/scripts/ctl.sh`
+    `cd <js-install>/apache-tomcat/scripts/ctl.sh`
 
-1.  Look for the `start_tomcat()` function and locate the `JAVA_OPTS` variable inside it.
+2.  Look for the `start_tomcat()` function and locate the `JAVA_OPTS` variable inside it.
 
-<!-- -->
+3.  Modify the `JAVA_OPTS` values according to the tables above. For example:
 
-1.  Modify the `JAVA_OPTS` values according to the tables above. For example:
+    ``` text
+    start_tomcat() {
+        is_tomcat_running
+        ...
+             export JAVA_OPTS="-Xms2048m -Xmx4096m"
+                export JAVA_OPTS="-Xss2m -XX:+UseG1GC"
+        ...
+    }
+    ```
 
-```
-start_tomcat() {
-    is_tomcat_running
-    ...
-         export JAVA_OPTS="-Xms2048m -Xmx4096m"
-            export JAVA_OPTS="-Xss2m -XX:+UseG1GC"
-    ...
-}
-```
+    !!! note
 
-!!! note
+        There may be more than one occurrence of the `Java_OPTS` variable in the ctl.sh file. Make sure you edit the instance inside the `start_tomcat()` function.
 
-    There may be more than one occurrence of the `Java_OPTS` variable in the ctl.sh file. Make sure you edit the instance inside the `start_tomcat()` function.
+4.  Save and close the `ctl.sh` file.
 
-1.  Save and close the `ctl.sh` file.
-2.  Stop and restart PostgreSQL and Tomcat as described in [Starting and Stopping the Server](../../../installation-guide/binary-installer/starting-server.md).
+5.  Stop and restart PostgreSQL and Tomcat as described in [Starting and Stopping the Server](../../../installation-guide/binary-installer/starting-server.md).

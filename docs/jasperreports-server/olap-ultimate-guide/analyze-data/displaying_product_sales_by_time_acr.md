@@ -12,21 +12,28 @@ In the following example, we’ll use the Foodmart Sample Analysis View.
 To compare quarterly snack foods sales dollar amounts among the West Coast states
 
 1.  Click **View \> Repository** to display the Repository panel.
+
 2.  In the Folders panel, expand the folder **Organization \>** **Analysis Components \>** **Analysis Views**.
 
-A list of OLAP views appears in the Repository panel
+    A list of OLAP views appears in the Repository panel
 
-1.  Click **Foodmart Sample Analysis View** to open it.
-2.  Click ![ja pro change data cube](../assets/images/ja-pro-change-data-cube.png).
+3.  Click **Foodmart Sample Analysis View** to open it.
 
-For details about using cube dimensions, see [Columns, Rows, and Filters](cube_configuration.md).
+4.  Click ![ja pro change data cube](../assets/images/ja-pro-change-data-cube.png).
 
-1.  Click the **Move to Rows** icon ![ja table move to row](../assets/images/ja-table-move-to-row.png) next to the **Store** filter to create a row, then expand the Store row and select **All Stores \> USA**. Click **OK**.
-2.  Click the filter icon ![ja table filter](../assets/images/ja-table-filter.png) next to **Product** in the Rows section, then click it and expand to and select **All Products \> Food \> Snack Foods**.
-3.  Click **OK** twice to accept the selections.
-4.  Click **Zoom on Drill** to activate it. When active, its tool bar button looks like this ![ja pro zoom on drill active](../assets/images/ja-pro-zoom-on-drill-active.png).
-5.  Click the **Edit Display Options** tool bar button ![ja pro editdisplayoptions](../assets/images/ja-pro-editdisplayoptions.png), click the **Show all parent Columns** check box to clear it, and click **OK**.
-6.  In the table, click **USA** to zoom in.
+    For details about using cube dimensions, see [Columns, Rows, and Filters](cube_configuration.md).
+
+5.  Click the **Move to Rows** icon ![ja table move to row](../assets/images/ja-table-move-to-row.png) next to the **Store** filter to create a row, then expand the Store row and select **All Stores \> USA**. Click **OK**.
+
+6.  Click the filter icon ![ja table filter](../assets/images/ja-table-filter.png) next to **Product** in the Rows section, then click it and expand to and select **All Products \> Food \> Snack Foods**.
+
+7.  Click **OK** twice to accept the selections.
+
+8.  Click **Zoom on Drill** to activate it. When active, its tool bar button looks like this ![ja pro zoom on drill active](../assets/images/ja-pro-zoom-on-drill-active.png).
+
+9.  Click the **Edit Display Options** tool bar button ![ja pro editdisplayoptions](../assets/images/ja-pro-editdisplayoptions.png), click the **Show all parent Columns** check box to clear it, and click **OK**.
+
+10. In the table, click **USA** to zoom in.
 
 The following navigation table appears.
 

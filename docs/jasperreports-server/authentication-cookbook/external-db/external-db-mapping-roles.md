@@ -12,13 +12,15 @@ The roles an external user has in JasperReports Server are imported from the ext
 To configure the retrieval and mapping for user roles in sample-applicationContext-externalAuth-db-mt.xml file, first make sure you've set up the `externalUserTenantDetailsService` bean as described in [Configuring User Authentication and Authorization via Database Queries](external-db-authentication-queries.md). Then configure `externalUserSetupProcessor` to map the external information to roles in the JasperReports Server as follows:
 
 - `defaultInternalRoles` property: A list of internal roles assigned to the external user by default.
+
 - `organizationRoleMap` property: A list of key/value pairs that maps external role names to internal ones. For commercial JasperReports Server deployments, you need to choose the level at which the role is assigned:
+
   - To map to an internal role at the organization level, append \|\* to the name of the internal role, for example, ROLE_EXTERNAL_USER\|\*. Roles mapped at the organization level don't have administrative privileges.
   - To map to an internal role at the system (null) level, don't modify the internal role name, for example, ROLE_EXTERNAL_ADMINISTRATOR. Roles at the system level are usually reserved for special users like the system administrator and allow access to the repository folder of all other organizations.
 
 The following example shows how to configure the `organizationRoleMap` property:
 
-```
+``` xml
 <property name="organizationRoleMap">
   <map>
   <!-- Example of mapping customer roles to JRS roles -->
@@ -43,7 +45,7 @@ If you're mapping all your external users to a single organization, you can assi
 
 The following example shows how to use the `mtExternalUserSetupProcessor` bean to define static roles. The configuration for `externalUserSetupProcessor` is similar:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">
@@ -69,7 +71,7 @@ The following example shows how to use the `mtExternalUserSetupProcessor` bean t
 
 You can assign roles to all users using the `defaultInternalRoles` property of `externalUserSetupProcessor` or `mtExternalUserSetupProcessor`. The following example shows how to use this property in `externalUserSetupProcessor` to assign `ROLE_USER` to all users, in addition to the roles assigned by mapping:
 
-```
+``` xml
   <property name="defaultInternalRoles">
     <list>
       <value>ROLE_USER</value>
@@ -83,7 +85,7 @@ If an external role has the same name as an internal role at the same organizati
 
 You can set the extension in the `conflictingExternalInternalRoleNameSuffix` property in the `externalUserSetupProcessor` or `mtExternalUserSetupProcessor` bean. If the property doesn't appear in the bean, the extension is still implemented but defaults to \_EXT. The following example shows how to configure this property:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">
@@ -102,7 +104,7 @@ You may not want every role in your external authority to appear as a role in Ja
 
 For example, to restrict the roles you create in JasperReports Server to roles that begin with JRS\_ or EXT\_ in your external authority, you would configure `permittedRolesRegex` in a way similar to the following:
 
-```
+``` xml
         <property name="permittedRolesRegex">
             <list>
                 <value>JRS_.*</value>
@@ -121,7 +123,7 @@ You can extend the supported character set by modifying the `permittedExternalRo
 
 The default value of the `permittedExternalRoleNameRegex` property is the regular expression \[A-Za-z0-9\_\]+. Edit this expression to add supported characters. For example, the following syntax allows alphanumeric characters, underscores, and the Cyrillic letter Я (Unicode 042F):
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor"  class="com.jaspersoft.jasperserver.api.security.
         externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">

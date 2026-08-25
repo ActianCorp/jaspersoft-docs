@@ -29,7 +29,7 @@ The `schema` element is the outermost container element of an XML Domain design 
 
 The following hierarchy is used for the `schema` element:
 
-```
+``` xml
 <schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.3"
     schemaLocation="schema_1_3.xsd">
     <dataIslands> (0..1)

@@ -128,13 +128,13 @@ Use the following arguments as an alternate method to send user credentials in a
 
 For example, the following request returns all repository resources in the Public folder that the sample user `joeuser` has permission to read:
 
-```
+``` text
 http[s]://<host>:<port>/jasperserver[-pro]/rest_v2/resources/Public?j_username=joeuser%7Corganization_1&j_password=<password>
 ```
 
 When using pre-authentication on the server, specify only the pp argument, for example (%3D is the encoding for =, and %7C for \|):
 
-```
+``` text
 http[s]://<host>:<port>/jasperserver[-pro]/rest_v2/resources/Public?pp=u%3Djoeuser
 %7Cr%3DUSER,SALES%7Co%3DHeadquarters%7Cpa1%3DUSA%7Cpa2%3DLosAngeles
 ```
@@ -245,14 +245,14 @@ Sending passwords in plain text is strongly discouraged, therefore Jaspersoft re
 
 Because browsers submit URLs with the GET method, you can test the login service and test credentials by submitting requests from a web browser. With developer tools in your browser, you can see the server's response, and when successful, the session cookie it contains. Credentials must be passed as arguments in the URL, as shown in the following example:
 
-```
+``` text
 http[s]://<host>:<port>/jasperserver[-pro]/rest_v2/login?j_username=<userID>[%7C<orgID>]&
 j_password=<password>
 ```
 
 Client applications typically use the POST method, and they gather the session cookie from the response to use in future requests. Credentials can be sent either in the URL arguments, as shown above, or in the content of the request, as shown in the following example:
 
-```
+``` text
 POST /jasperserver/rest_v2/login HTTP/1.1
 User-Agent: Jakarta Commons-HttpClient/3.1
 Host: localhost:8080
@@ -263,7 +263,7 @@ j_username=jasperadmin%7Corganization_1&j_password=jasperadmin
 
 When the login is successful, the server sends the "200 OK" response containing a cookie for the session ID of the now-logged-in user:
 
-```
+``` text
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Set-Cookie: JSESSIONID=52E79BCEE51381DF32637EC69AD698AE; Path=/jasperserver
@@ -273,7 +273,7 @@ Date: Fri, 3 Aug 2018 01:52:48 GMT
 
 For optimal performance, the session ID from the cookie should be used to keep the session open. Usually, your REST library will automatically include the cookie in future requests to the other RESTful services. For example, given the response to the POST request above, future requests to the repository services should include the following line in the header:
 
-```
+``` yaml
 Cookie: $Version=0; JSESSIONID=52E79BCEE51381DF32637EC69AD698AE; $Path=/jasperserver
 ```
 

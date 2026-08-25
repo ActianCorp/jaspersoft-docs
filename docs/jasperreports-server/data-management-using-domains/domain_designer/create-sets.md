@@ -27,10 +27,10 @@ To move a few columns from a join tree or a table to Sets and Items
 
 1.  Drag a single column from the **Data Structure** panel to **Sets and Items**.
 
-- If the column is part of a join tree, the join tree is added as a data island, and the column is added as an item directly under that data island.
-- If the column is part of an unjoined table, the table is added as a data island and the column is added as an item.
+    - If the column is part of a join tree, the join tree is added as a data island, and the column is added as an item directly under that data island.
+    - If the column is part of an unjoined table, the table is added as a data island and the column is added as an item.
 
-1.  Continue to drag columns to the data island that was created in the first step.
+2.  Continue to drag columns to the data island that was created in the first step.
 
 Columns are added directly to the data island.
 

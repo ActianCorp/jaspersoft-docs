@@ -42,18 +42,21 @@ Your workspace contains server connections, global data adapters, and your Jaspe
 Importing server connections
 
 1.  Select **File \> Import ...**.
+
 2.  Select **External JasperReports Server Connections** from the **Jaspersoft Studio** category.
+
 3.  Browse to the workspace that you want, click **OK**, and then click **Next**.
 
-The **Select the Server Connections** dialog opens.
+    The **Select the Server Connections** dialog opens.
 
-|                                                             |
-|-------------------------------------------------------------|
-| ![jss import servers](assets/images/jss-import-servers.png) |
-| *Figure 1: Select the Server Connections dialog*            |
+    |                                                             |
+    |-------------------------------------------------------------|
+    | ![jss import servers](assets/images/jss-import-servers.png) |
+    | *Figure 1: Select the Server Connections dialog*            |
 
-1.  Choose the connections that you want.
-2.  Click **Finish** to import the connections.
+4.  Choose the connections that you want.
+
+5.  Click **Finish** to import the connections.
 
 The selected server connections are imported into your Jaspersoft Studio instance.
 

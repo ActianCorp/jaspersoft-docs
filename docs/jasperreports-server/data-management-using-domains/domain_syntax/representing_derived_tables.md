@@ -11,7 +11,7 @@ To represent derived tables, use the `jdbcQuery` element. This element is very s
 
 The following hierarchy is used for `jdbcQuery` elements.
 
-```
+``` xml
 <jdbcQuery>
     <fieldList> (1)
         <field> (1...n)
@@ -123,7 +123,7 @@ The following sample query in PostgreSQL selects some columns from the result of
 
 Only fields selected in the query – in this case, `exp_date`, `store_id`, `amount`, `currency`, `conv`, and `as_dollars` – can be exposed as columns of the derived table. Fields not selected in the query cannot be referenced in the Domain design.
 
-```
+``` xml
 <query>
  select e.exp_date, e.store_id, e.amount, c.currency, c.conversion_ratio conv,
   amount * c.conversion_ratio as_dollars

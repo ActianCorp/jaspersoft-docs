@@ -33,11 +33,12 @@ To find a user, `JSBindAuthenticator` takes the login name entered into JasperRe
 
 1.  Using the specified pattern matching or search for the login name, find a candidate user entry.
 
-!!! note
+    !!! note
 
-    The LDAP username for this candidate does not have to be the JasperReports Server login name. If they are different, the user in JasperReports Server is assigned the login name given during the login process, and not the LDAP username.
+        The LDAP username for this candidate does not have to be the JasperReports Server login name. If they are different, the user in JasperReports Server is assigned the login name given during the login process, and not the LDAP username.
 
 2.  Attempt to log into the LDAP server using the candidate LDAP username with the login password.
+
 3.  A successful bind indicates that the right user was found.
 
 ## Alternative to Bind Authentication

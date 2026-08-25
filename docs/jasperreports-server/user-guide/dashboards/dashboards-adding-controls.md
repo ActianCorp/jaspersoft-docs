@@ -36,6 +36,7 @@ To add controls as a dashlet
 5.  Click ![js DomainDesigner icon save menu](../assets/images/js-DomainDesigner-icon-save-menu.png) and select **Save Dashboard**, then click the **Editing** button and select **Viewing** to preview the dashboard.
 
 6.  Click in the **Country** text box to display the available countries. In this input control, you have the following options:
+
     - The three countries: **Canada**, **Mexico**, and **USA**.
     - ![js icon InputControl SelectAll](../assets/images/js-icon-InputControl-SelectAll.png) **All**, which selects all available values in the input control.
     - ![js icon InputControl DeselectAll](../assets/images/js-icon-InputControl-DeselectAll.png) **None**, which deselects all available values in the input control.
@@ -53,7 +54,7 @@ To rename an input control or filter
 2.  Change the **Filter label** from `Product Family` to `Type`.
 3.  Select the Product Department input control, filter settings display in **Dashlet Settings** in the settings panel. Change the `Product Department` filter label to `Department`. The input control labels are updated.
 
-<img src="../assets/images/js-Dashboard-ParameterMapping.png" alt="js Dashboard ParameterMapping" />
+![js Dashboard ParameterMapping](../assets/images/js-Dashboard-ParameterMapping.png)
 
 *Figure 1: Parameter Mapping for the Sales Dashboard*
 

@@ -7,7 +7,7 @@ description: "In some cases, you may want to edit files manually in your C:/Jasp
 
 In some cases, you may want to edit files manually in your `C:/Jaspersoft` directory during or after installation. For security reasons, Windows 10 does not allow normal processes to change files in many folders, including the Program Files folder, for instance. When you attempt to edit these files, you may see an error like this:
 
-```
+``` text
 You don’t have permission to save in this location. Contact the administrator to obtain permission.
 ```
 

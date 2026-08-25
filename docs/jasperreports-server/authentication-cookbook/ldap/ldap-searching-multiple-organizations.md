@@ -14,29 +14,29 @@ This has two implications:
 
 1.  Your choice of pattern matching or search depends on the structure of user entries in LDAP. For example, if you have a small fixed number of organizations, you could match them with a pattern for each one, as follows:
 
-||
-||
-||
+    ||
+    ||
+    ||
 
-```
-      <property name="userDnPatterns"><list>
-        <value>uid={0},ou=users,o=Finance</value>
-        <value>uid={0},ou=users,o=HR</value>
-        <value>uid={0},ou=users,o=Executive</value></list>
-      </property>
-```
+    ``` xml
+          <property name="userDnPatterns"><list>
+            <value>uid={0},ou=users,o=Finance</value>
+            <value>uid={0},ou=users,o=HR</value>
+            <value>uid={0},ou=users,o=Executive</value></list>
+          </property>
+    ```
 
-But if you have a large number of organizations, or if the number or names of organizations can change, you need to search for every potential user. Depending on your LDAP structure, you may be able to specify a search base in `constructor-arg index="0"`; the example below doesn't have one.
+    But if you have a large number of organizations, or if the number or names of organizations can change, you need to search for every potential user. Depending on your LDAP structure, you may be able to specify a search base in `constructor-arg index="0"`; the example below doesn't have one.
 
-```
-<bean id="userSearch" class="com.jaspersoft.jasperserver.api.security.
-      externalAuth.wrappers.spring.ldap.JSFilterBasedLdapUserSearch">
-  <constructor-arg index="0"><value></value></constructor-arg>
-  <constructor-arg index="1"><value>(uid={0})</value></constructor-arg>
-  <constructor-arg index="2"><ref bean="ldapContextSource" /></constructor-arg>
-  <property name="searchSubtree"><value>true</value></property>
-</bean>
-```
+    ``` xml
+    <bean id="userSearch" class="com.jaspersoft.jasperserver.api.security.
+          externalAuth.wrappers.spring.ldap.JSFilterBasedLdapUserSearch">
+      <constructor-arg index="0"><value></value></constructor-arg>
+      <constructor-arg index="1"><value>(uid={0})</value></constructor-arg>
+      <constructor-arg index="2"><ref bean="ldapContextSource" /></constructor-arg>
+      <property name="searchSubtree"><value>true</value></property>
+    </bean>
+    ```
 
 2.  You cannot implement external authentication for two users with the same login name in different organizations. LDAP supports this as long as the two users have distinct DNs, and JasperReports Server supports this for the default internal authentication. But during external authentication, organization mapping happens after user search, so the user search must return a single LDAP entry:
 

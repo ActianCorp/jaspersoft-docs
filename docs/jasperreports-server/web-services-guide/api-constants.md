@@ -18,7 +18,7 @@ The following values are extracted from `ResourceDescriptor`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>// Resource wsTypes
+<td><div class="language-text highlight"><pre><code>// Resource wsTypes
 TYPE_FOLDER = &quot;folder&quot;;
 TYPE_REPORTUNIT = &quot;reportUnit&quot;;
 TYPE_DATASOURCE = &quot;datasource&quot;;
@@ -45,10 +45,10 @@ TYPE_LOV = &quot;lov&quot;; // List of values...
 TYPE_QUERY = &quot;query&quot;;
 TYPE_CONTENT_RESOURCE = &quot;contentResource&quot;;
 TYPE_STYLE_TEMPLATE = &quot;jrtx&quot;;
-TYPE_XML_FILE = &quot;xml&quot;;</code></pre></td>
+TYPE_XML_FILE = &quot;xml&quot;;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>// These constants are copied here from DataType for facility
+<td><div class="language-text highlight"><pre><code>// These constants are copied here from DataType for facility
 DT_TYPE_TEXT = 1;
 DT_TYPE_NUMBER = 2;
 DT_TYPE_DATE = 3;
@@ -79,7 +79,7 @@ CONTENT_TYPE_HTML = &quot;html&quot;;
 CONTENT_TYPE_XLS = &quot;xls&quot;;
 CONTENT_TYPE_RTF = &quot;rtf&quot;;
 CONTENT_TYPE_CSV = &quot;csv&quot;;
-CONTENT_TYPE_IMAGE = &quot;img&quot;;</code></pre></td>
+CONTENT_TYPE_IMAGE = &quot;img&quot;;</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -92,7 +92,7 @@ The constants in the `Argument` class are:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>// Arguments
+<td><div class="language-text highlight"><pre><code>// Arguments
 MODIFY_REPORTUNIT = &quot;MODIFY_REPORTUNIT_URI&quot;;
 CREATE_REPORTUNIT = &quot;CREATE_REPORTUNIT_BOOLEAN&quot;;
 LIST_DATASOURCES  = &quot;LIST_DATASOURCES&quot;;
@@ -118,7 +118,7 @@ REPORT_TYPE = &quot;REPORT_TYPE&quot;;
 START_FROM_DIRECTORY = &quot;START_FROM_DIRECTORY&quot;;
 NO_RESOURCE_DATA_ATTACHMENT = &quot;NO_ATTACHMENT&quot;;
 NO_SUBRESOURCE_DATA_ATTACHMENTS = &quot;NO_SUBRESOURCE_ATTACHMENTS&quot;;
-DESTINATION_URI = &quot;DESTINATION_URI&quot;;</code></pre></td>
+DESTINATION_URI = &quot;DESTINATION_URI&quot;;</code></pre></div></td>
 </tr>
 </tbody>
 </table>

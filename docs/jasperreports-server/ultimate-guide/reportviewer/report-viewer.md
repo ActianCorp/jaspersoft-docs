@@ -10,27 +10,33 @@ The interactive Report Viewer lets you highlight table values using conditional 
 To create the Ad Hoc table for use in the example
 
 1.  Select **Create \> Ad Hoc View** from the menu. The **Data Chooser** wizard opens.
+
 2.  Click **Domains**, select SuperMart Domain, and click **Choose Data**. The **Data Chooser** opens to the **Select Fields** page.
+
 3.  In the **Source** panel, double-click Sales to move it to the **Selected Fields** panel and click **OK**. The Ad Hoc Editor is displayed with the selected fields.
+
 4.  Click ![js icon column simple](../assets/images/js-icon-column%20simple.png). The **Select Visualization Type** window appears.
+
 5.  Select ![js AdHoc icon table](../assets/images/js-AdHoc-icon-table.png) and click **X** in the upper corner of the window to create a table.
+
 6.  Double-click the following fields and measures to add them to the Columns area: Product Name, Recyclable Packaging, Store Sales. The Ad Hoc view appears as shown in the following figure.
 
-![js AdHoc ConditionalView](../assets/images/js-AdHoc-ConditionalView.png)
+    ![js AdHoc ConditionalView](../assets/images/js-AdHoc-ConditionalView.png)
 
-*Figure 1: Ad Hoc View for Conditional Text*
+    *Figure 1: Ad Hoc View for Conditional Text*
 
-1.  Hover over ![js AdHoc SaveReport](../assets/images/js-AdHoc-SaveReport.png) and select **Save Ad Hoc View and Create Report**. The **Save Ad Hoc View** dialog opens.
-2.  Fill in the required fields as follows:
+7.  Hover over ![js AdHoc SaveReport](../assets/images/js-AdHoc-SaveReport.png) and select **Save Ad Hoc View and Create Report**. The **Save Ad Hoc View** dialog opens.
 
-<!-- -->
+8.  Fill in the required fields as follows:
 
-1.  Data View Name: Conditional Text Example View
-2.  Data View Description: Created in Ultimate Guide
-3.  Report Name: Conditional Text Example Report
-4.  Report Description: Created in Ultimate Guide
-5.  For **Save Location**, click **Browse**, select **Public \> Samples \> Reports**, and click **OK**.
-6.  Click **Save**. A message confirms that the view was saved.
+    1.  Data View Name: Conditional Text Example View
+    2.  Data View Description: Created in Ultimate Guide
+    3.  Report Name: Conditional Text Example Report
+    4.  Report Description: Created in Ultimate Guide
+
+9.  For **Save Location**, click **Browse**, select **Public \> Samples \> Reports**, and click **OK**.
+
+10. Click **Save**. A message confirms that the view was saved.
 
 To open the report in the viewer
 
@@ -40,35 +46,34 @@ To open the report in the viewer
 To create “stop light” conditional formatting on a numeric column
 
 1.  Click the Store Sales column. The column is highlighted and the column formatting icons appear at the top of the column.
+
 2.  Move your mouse over ![js icon columnOptions](../assets/images/js-icon-columnOptions.png) and select **Formatting...** The **Format Columns** dialog box appears.
+
 3.  Click the **Conditional Formatting** tab. The **Conditional Formatting** options appear.
+
 4.  Click **Add** to create a new condition, and fill in the fields as follows:
 
-<!-- -->
+    1.  Select **Greater than** from the **Operator** menu.
+    2.  Enter **8** in the **Condition** box.
+    3.  Click ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) and pick a green background.
 
-1.  Select **Greater than** from the **Operator** menu.
-2.  Enter **8** in the **Condition** box.
-3.  Click ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) and pick a green background.
-4.  Click **Add** to create a second condition, and fill in the fields as follows:
+5.  Click **Add** to create a second condition, and fill in the fields as follows:
 
-<!-- -->
+    1.  Select **Greater than** from the **Operator** menu.
+    2.  Enter **3.5** in the **Condition** box.
+    3.  Click ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) and pick a yellow background.
 
-1.  Select **Greater than** from the **Operator** menu.
-2.  Enter **3.5** in the **Condition** box.
-3.  Click ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) and pick a yellow background.
-4.  Click **Add** to create a new condition, and fill in the fields as follows:
+6.  Click **Add** to create a new condition, and fill in the fields as follows:
 
-<!-- -->
+    1.  Select **Less than or equal to** from the **Operator** menu.
+    2.  Enter **3.5** in the **Condition** box.
+    3.  Click ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) and pick a red background.
 
-1.  Select **Less than or equal to** from the **Operator** menu.
-2.  Enter **3.5** in the **Condition** box.
-3.  Click ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) and pick a red background.
+    ![js ReportViewer ConditionalNumeric](../assets/images/js-ReportViewer-ConditionalNumeric.png)
 
-![js ReportViewer ConditionalNumeric](../assets/images/js-ReportViewer-ConditionalNumeric.png)
+    *Figure 2: Conditional Formatting for Numeric Values*
 
-*Figure 2: Conditional Formatting for Numeric Values*
-
-1.  Click **OK**. The dialog box closes and your choices are applied. The report appears as shown in the following figure:
+7.  Click **OK**. The dialog box closes and your choices are applied. The report appears as shown in the following figure:
 
 ![js ReportViewer ConditionalReport](../assets/images/js-ReportViewer-ConditionalReport.png)
 

@@ -19,7 +19,7 @@ The `resources` element does not contain presentation elements. It is a direct c
 
 The following hierarchy is used for the `resources` element:
 
-```
+``` xml
 <resources>
     <null> (0...1)
         <fieldList> (1)

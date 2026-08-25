@@ -61,6 +61,7 @@ The following example shows how to set a report as the home page based on a role
     `'ROLE_MANAGER_DIME'`
 
 1.  First, set up the role and create a sample user:
+
     1.  Create the role you want to use, for example, `ROLE_REPORT_HOME`.
     2.  Create a user HomeUser and add `ROLE_REPORT_HOME` to HomeUser.
 

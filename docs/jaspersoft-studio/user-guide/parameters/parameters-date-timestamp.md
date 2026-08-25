@@ -10,40 +10,42 @@ When you add a parameter named `_ScheduledTime` to a JRXML report design in Jasp
 To display the date/time that the report ran
 
 1.  Open Jaspersoft Studio, and open an existing report.
+
 2.  In the Outline view, right-click Parameters, and select **Create Parameter**.
+
 3.  Rename the parameter `_ScheduledTime`.
 
-The new parameter appears in the **Outline** view.
+    The new parameter appears in the **Outline** view.
 
-|  |
-|----|
-| ![jss ScheduledTime OutlineView](../assets/images/jss-ScheduledTime-OutlineView.png) |
-| *Figure 1: \_ScheduledTime Parameter in Outline View* |
+    |  |
+    |----|
+    | ![jss ScheduledTime OutlineView](../assets/images/jss-ScheduledTime-OutlineView.png) |
+    | *Figure 1: \_ScheduledTime Parameter in Outline View* |
 
-1.  Set the following parameter properties:
+4.  Set the following parameter properties:
 
-- **Class** = java.util.Date
+    - **Class** = java.util.Date
+    - **Is for Prompting** = unchecked
 
-<!-- -->
+    |  |
+    |----|
+    | ![jss ScheduledTime Properties](../assets/images/jss-ScheduledTime-Properties.png) |
+    | *Figure 2: \_ScheduledTime Parameter Properties* |
 
-- **Is for Prompting** = unchecked
+5.  Drag the **\_ScheduledTime** element from the **Outline** view to a valid location, such as the **Title Band**, in the **Designer**:
 
-|  |
-|----|
-| ![jss ScheduledTime Properties](../assets/images/jss-ScheduledTime-Properties.png) |
-| *Figure 2: \_ScheduledTime Parameter Properties* |
+    |  |
+    |----|
+    | ![jss ScheduledTime Designer](../assets/images/jss-ScheduledTime-Designer.png) |
+    | *Figure 3: Report Design Includes the \_ScheduledTime Parameter Element* |
 
-1.  Drag the **\_ScheduledTime** element from the **Outline** view to a valid location, such as the **Title Band**, in the **Designer**:
+6.  Now you can set other properties, such as the text color of the date/time stamp. In **Properties**, check **Blank when Null** to prevent the word null from appearing on the report when it runs unscheduled.
 
-|  |
-|----|
-| ![jss ScheduledTime Designer](../assets/images/jss-ScheduledTime-Designer.png) |
-| *Figure 3: Report Design Includes the \_ScheduledTime Parameter Element* |
+7.  Compile the report, and upload it to JasperReports Server. For more information about uploading reports to JasperReports Server, see [Accessing JasperReports Server from Jaspersoft Studio](../jrs-server/jss2jrs.md).
 
-1.  Now you can set other properties, such as the text color of the date/time stamp. In **Properties**, check **Blank when Null** to prevent the word null from appearing on the report when it runs unscheduled.
-2.  Compile the report, and upload it to JasperReports Server. For more information about uploading reports to JasperReports Server, see [Accessing JasperReports Server from Jaspersoft Studio](../jrs-server/jss2jrs.md).
-3.  In the server, schedule the report to run immediately.
-4.  Open the output file.
+8.  In the server, schedule the report to run immediately.
+
+9.  Open the output file.
 
 |  |
 |----|

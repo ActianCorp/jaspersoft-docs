@@ -23,10 +23,11 @@ To compile and preview the report
 
 1.  Click the **Preview** tab.
 
-Be sure that the **Input Parameter** window is open. If not, click the gray right-arrow to the left of the **Preview** screen.
+    Be sure that the **Input Parameter** window is open. If not, click the gray right-arrow to the left of the **Preview** screen.
 
-1.  Add a value for the **MESSAGE** parameter. For this example, type **Parameter Example**.
-2.  Press the **Play** button. The message is printed in the title band.
+2.  Add a value for the **MESSAGE** parameter. For this example, type **Parameter Example**.
+
+3.  Press the **Play** button. The message is printed in the title band.
 
 |                                                                          |
 |--------------------------------------------------------------------------|

@@ -15,7 +15,7 @@ If you already have a suitable certificate, you can import it into the keystore,
 
 The following command is an example of how to import a certificate. In this case a self-signed certificate imported into a PKCS12 keystore using OpenSSL:
 
-```
+``` text
 openssl pkcs12 \-export \-in mycert.crt \-inkey mykey.key \-out mycert.p12
                \-name tomcat \-CAfile myCA.crt \-caname root \-chain
 ```
@@ -24,13 +24,13 @@ Next in this example, you create key.bin, the keystore file, in the Tomcat home 
 
 For Windows:
 
-```
+``` text
 %JAVA_HOME%\bin\keytool -genkey -alias tomcat -keyalg RSA -keystore %CATALINA_HOME%\conf\key.bin
 ```
 
 For Unix:
 
-```
+``` bash
 $JAVA_HOME/bin/keytool -genkey -alias tomcat -keyalg RSA -keystore $CATALINA_HOME/conf/key.bin
 ```
 
@@ -44,7 +44,7 @@ The basic install requires certain data. With the above commands, you are prompt
 
 Once the certificate and key are saved in the Tomcat keystore, you need to configure your secure socket in the \$CATALINA_BASE/conf/server.xml file, where \$CATALINA_BASE represents the base directory for the Tomcat instance. For your convenience, sample `<Connector>` elements for two common SSL connectors (blocking and non-blocking) are included in the default server.xml file that is installed with Tomcat. They are similar to the code below, with the connector elements commented out, as shown.
 
-```
+``` text
 <!-- Define a SSL HTTP/1.1 Connector on port 8443
      This connector uses the JSSE configuration, when using APR, the
      connector should be using the OpenSSL style configuration
@@ -77,7 +77,7 @@ Edit the file \<js-webapp\>/WEB-INF/web.xml. Near the end of the file, make the 
 
 Your final code should be like the following:
 
-```
+``` xml
 <security-constraint>
   <web-resource-collection>
     <web-resource-name>JasperServerWebApp</web-resource-name>

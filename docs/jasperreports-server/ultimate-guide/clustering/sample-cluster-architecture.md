@@ -20,11 +20,16 @@ The following diagram shows the architecture of a sample JasperReports Server cl
 The major components of the sample JasperReports Server cluster architecture are:
 
 - JasperReports Server clients:
+
   - Browser users: Administrators and end users who log into the JasperReports Server web interface.
   - API clients: Applications that embed JasperReports Server functionality through the REST API or Visualize.js.
+
 - Load balancer: Specialized hardware or software that redirects client requests to instances in the cluster.
+
 - JasperReports Server instances: Identically configured instances running on separate computers, real or virtual.
+
 - Shared resources:
+
   - Repository database: Defines users, roles, organization, folders, and resources for the cluster. The repository is a single logical database that should also be configured for high availability and failover.
   - Data sources – Contain the data that JasperReports Server queries when creating or running a report. Data sources should be able to handle the load of simultaneous queries expected from the cluster.
   - Email services: Send email notifications and output of scheduled reports. Email services are optional, but almost always implemented.

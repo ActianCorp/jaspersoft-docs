@@ -47,7 +47,7 @@ type</td>
 <td colspan="2"><p>Any input control that is defined for the report. Input controls that are multi-select may appear more than once. See examples below.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>interactive?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>interactive?</code></pre></div></td>
 <td><p>Boolean</p></td>
 <td colspan="2"><p>In a commercial editions of the server where HighCharts are used in the report, this property determines whether the JavaScript necessary for interaction is generated when exporting to HTML. By default it is true. If set to false, the chart is generated as a non-interactive image file.</p></td>
 </tr>

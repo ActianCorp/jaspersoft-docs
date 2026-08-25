@@ -8,10 +8,15 @@ description: "Jaspersoft OLAP extends the JasperReports Server web application t
 Jaspersoft OLAP extends the JasperReports Server web application to provide these OLAP features:
 
 - Browser-based OLAP interactive views are called OLAP views.
+
 - OLAP objects are managed in JasperReports Server's repository, including browser-based maintenance and object-level security.
+
 - JasperReports can use Jaspersoft OLAP connections and MDX as a basis for Ad Hoc views and reports, gaining access to advanced scalability and calculations.
+
 - XML/A services: Client applications, such as Excel, can run MDX queries against Jaspersoft OLAP cubes through the XML/A web services protocol. Jaspersoft ODBO Connect connects Microsoft Excel Pivot Tables to cubes through XML/A. You can get ODBO Connect from <https://community.jaspersoft.com/wiki/getting-started-odbo-connect>.
+
 - Jaspersoft OLAP commercial editions provide the following:
+
   - OLAP data-level security based on user profiles.
   - Browser-based management of run time parameters.
   - Access to remote XML/A providers from within JasperReports Server.

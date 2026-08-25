@@ -36,6 +36,7 @@ For example, for SQL Server the driver would go here:
     `cd <js-src>/jasperserver/buildomatic`
 
 2.  Copy the Oracle specific file to the current directory and change its name to `default_master.properties`:
+
     |  |  |
     |----|----|
     | Windows: | `copy sample_conf\oracle_master.properties default_master.properties` |
@@ -44,6 +45,7 @@ For example, for SQL Server the driver would go here:
 3.  Open the new `default_master.properties` file for editing.
 
 4.  Set the following properties for your local environment:
+
     <table>
     <colgroup>
     <col style="width: 50%" />
@@ -58,7 +60,7 @@ For example, for SQL Server the driver would go here:
     <tbody>
     <tr>
     <td><p><code>appServerType</code></p></td>
-    <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</code></pre></td>
+    <td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</span></code></pre></div></td>
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
@@ -134,12 +136,14 @@ For example, for SQL Server the driver would go here:
     `cd <js-src>/jasperserver/buildomatic`
 
 2.  Copy the SQL Server specific file to the current directory and change its name to `default_master.properties`:
+
     |  |  |
     |----|----|
     | Windows: | `copy sample_conf\sqlserver_master.properties default_master.properties` |
     | Linux: | `cp sample_conf/sqlserver_master.properties default_master.properties` |
 
 3.  Edit the new `default_master.properties` file and set the following properties for your local environment:
+
     <table>
     <colgroup>
     <col style="width: 50%" />
@@ -154,7 +158,7 @@ For example, for SQL Server the driver would go here:
     <tbody>
     <tr>
     <td><p><code>appServerType</code></p></td>
-    <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</code></pre></td>
+    <td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</span></code></pre></div></td>
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
@@ -216,12 +220,14 @@ For example, for SQL Server the driver would go here:
     `cd <js-src>/jasperserver/buildomatic`
 
 2.  Copy the DB2 specific file to the current directory and change its name to `default_master.properties`:
+
     |  |  |
     |----|----|
     | Windows: | `copy sample_conf\db2_master.properties default_master.properties` |
     | Linux: | `cp sample_conf/db2_master.properties ./default_master.properties` |
 
 3.  Edit the new `default_master.properties` file and set the following properties for your local environment:
+
     <table>
     <colgroup>
     <col style="width: 50%" />
@@ -236,7 +242,7 @@ For example, for SQL Server the driver would go here:
     <tbody>
     <tr>
     <td><p><code>appServerType</code></p></td>
-    <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</code></pre></td>
+    <td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</span></code></pre></div></td>
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>

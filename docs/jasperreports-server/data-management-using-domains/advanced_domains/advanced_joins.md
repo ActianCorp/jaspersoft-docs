@@ -72,48 +72,53 @@ To add a custom join to an existing join
 
 1.  Click ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) at the upper right of the join and select **Create Custom Join...**. The **New Custom Join** dialog appears.
 
-![js DomainDesigner CustomJoin New](../assets/images/js-DomainDesigner-CustomJoin-New.png)
+    ![js DomainDesigner CustomJoin New](../assets/images/js-DomainDesigner-CustomJoin-New.png)
 
-*Figure 3: New Custom Join dialog*
+    *Figure 3: New Custom Join dialog*
 
-1.  Select a column from the Field list. You can select a column from either table in the join.
-2.  Select an operator. The available operators depend on the column type.
-3.  Enter the range, set, or value you want for the field, based on the operator you chose.
+2.  Select a column from the Field list. You can select a column from either table in the join.
 
-- = or ≠ (available for all column types)
+3.  Select an operator. The available operators depend on the column type.
 
-\>, \<, \>=, or \<= (available for numeric and date columns only)
+4.  Enter the range, set, or value you want for the field, based on the operator you chose.
 
-Enter a constant value or an attribute that takes a single value. Strings are enclosed in single quotes. For example:
+    - = or ≠ (available for all column types)
 
-- `5000`
-- `'Mexico'`
-- `attribute('CountryAttribute')`
+    \>, \<, \>=, or \<= (available for numeric and date columns only)
 
-!!! note
+    Enter a constant value or an attribute that takes a single value. Strings are enclosed in single quotes. For example:
 
-    For more information about using attributes in Domains, see [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md).
+    - `5000`
+    - `'Mexico'`
+    - `attribute('CountryAttribute')`
 
-- IN or NOT IN – Enter one of the following:
-  - A set of strings or values, enclosed in parentheses and separated by commas. Strings are enclosed in single quotes. For example:
-    - `(1,2,3,4,5)`
+    !!! note
 
-    - `('San Francisco','Portland', 'Seattle') `
+        For more information about using attributes in Domains, see [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md).
 
-    - `('true')`
+    - IN or NOT IN – Enter one of the following:
 
-- A range of values, separated by a colon (numeric and date columns only). For example:
+      - A set of strings or values, enclosed in parentheses and separated by commas. Strings are enclosed in single quotes. For example:
 
-  - `(7000 : 8000)`
+        - `(1,2,3,4,5)`
 
-1.  To verify that your syntax is correct, click **Validate**. Fix errors if necessary.
-2.  Click **Create Custom Join**. The join is added below the existing join as part of a composite join.
+        - `('San Francisco','Portland', 'Seattle') `
 
-![js DomainDesigner CustomJoin Result](../assets/images/js-DomainDesigner-CustomJoin-Result.png)
+        - `('true')`
 
-*Figure 4: A custom join in the design panel*
+    - A range of values, separated by a colon (numeric and date columns only). For example:
 
-1.  To edit or delete a custom join:
+      - `(7000 : 8000)`
+
+5.  To verify that your syntax is correct, click **Validate**. Fix errors if necessary.
+
+6.  Click **Create Custom Join**. The join is added below the existing join as part of a composite join.
+
+    ![js DomainDesigner CustomJoin Result](../assets/images/js-DomainDesigner-CustomJoin-Result.png)
+
+    *Figure 4: A custom join in the design panel*
+
+7.  To edit or delete a custom join:
 
 - Click ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) and select **Edit Custom Join…** to open the **Edit Custom Join** dialog and modify the join.
 - Click ![js DomainDesigner icon remove](../assets/images/js-DomainDesigner-icon-remove.png) to delete a custom join.

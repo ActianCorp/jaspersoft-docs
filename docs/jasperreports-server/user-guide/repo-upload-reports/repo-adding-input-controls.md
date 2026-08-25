@@ -86,9 +86,9 @@ To add a text input control to the complex report example
 
     ![js ReportWizard InputControl textinput properties1](../assets/images/js-ReportWizard-InputControl-textinput-properties1.png)
 
-!!! note
+    !!! note
 
-    To reuse an input control, add it to the repository independent of any report using **Add Resource \> Input Control**. Before using the input control in a report, check that the parameter name in the JRXML matches the name in the **Create Input Control** page. If it does not, then the server cannot run the report.
+        To reuse an input control, add it to the repository independent of any report using **Add Resource \> Input Control**. Before using the input control in a report, check that the parameter name in the JRXML matches the name in the **Create Input Control** page. If it does not, then the server cannot run the report.
 
 7.  Click **Next**.
 
@@ -99,6 +99,7 @@ To add a text input control to the complex report example
         Instead of defining a datatype, you can use one in the repository if its type and range are compatible with your input control.
 
 9.  In **Set the Datatype Kind and Properties**, enter the properties for the datatype:
+
     1.  In **Type**, select **Number** from the drop-down as the type of data the user can enter.
 
         !!! note
@@ -145,6 +146,7 @@ To add a simple checkbox input control to the complex report example
 4.  On the **Create Input Control** page, select **Boolean** from the **Type** drop-down.
 
 5.  Enter the other properties:
+
     - **Prompt Text**: `Checkbox Input Control`.
 
     - **Custom Prompt Text**: Leave blank in this example.
@@ -180,6 +182,7 @@ To add a drop-down input control to the complex report example
 4.  On the **Create Input Control** page, select **Single-select List of Values** from the **Type** dropdown.
 
 5.  Enter the other properties:
+
     - **Prompt Text**: `List Input Control`.
     - **Custom Prompt Text**: Leave blank in this example.
     - **Parameter Name**: `ListInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
@@ -197,6 +200,7 @@ To add a drop-down input control to the complex report example
 8.  Click **Next**.
 
 9.  On the **Add List of Values** page, provide the name, resource ID, and optional description for the list of values. These properties are not visible outside of the input control. Enter these values:
+
     - **Name**: `list type`
     - **Resource ID**: `list_type`
     - **Description**: Leave blank in this example.
@@ -225,19 +229,29 @@ This example uses a datatype from the sample data in the repository.
 To add a date input control to the complex report example
 
 1.  On the **Controls & Resources** page, click **Add Input Control**.
+
 2.  On the **Locate Input Control** page, select **Define an Input Control in the next step**, then click **Next**.
+
 3.  On the **Create Input Control** page, select **Single-Value** from the **Type** drop-down.
+
 4.  Enter the other properties:
+
     - **Prompt Text**: `Date Input Control`.
     - **Custom Prompt Text**: Leave blank in this example.
     - **Parameter Name**: `DateInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
     - **Description**: Leave blank in this example.
     - **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
+
 5.  Click **Next**.
+
 6.  On the **Locate Datatypes** page, select **Select a Datatype from the Repository**.
+
 7.  Click **Browse**.
+
 8.  In **Select Resource from Repository**, expand **Input Data Types**, and select the **Date Datatype**.
+
 9.  Click **Select**. The **Locate DataTypes** page shows the location of this datatype in the repository, `/datatypes/DateDatatype`.
+
 10. Click **Next**. The **Controls & Resources** page appears with the new Date Input Control.
 
 ## Adding a Query-Based Input Control
@@ -253,41 +267,53 @@ A query-based input control presents a dynamically created list of choices to th
 To add a query-based input control to the complex report example
 
 1.  On the **Controls & Resources** page, click **Add Input Control**.
+
 2.  On the **Locate Input Control** page, select **Define an Input Control in the next step**.
+
 3.  Click **Next**.
+
 4.  On the **Create Input Control** page, select **Single-select Query** from the **Type** drop-down.
+
 5.  Enter the naming properties for the input control:
+
     - **Prompt Text**: `Query Input Control`
     - **Custom Prompt Text**: Leave blank in this example.
     - **Parameter Name**: `QueryInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
     - **Description**: Leave blank in this example.
     - **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
+
 6.  Click **Next**. The **Locate Query** page appears. The available options are:
+
     - To locate a reusable query in the repository
     - To define a new query dedicated to this input control
+
 7.  For this example, select **Define a Query in the next step.**
+
 8.  Click **Next**.
+
 9.  On the **Name the Query** page, enter the naming properties for the new query. For this example, enter `testQuery` in both the **Name** and **Resource ID** fields.
 
-![js ReportWizard InputControl QueryProperties](../assets/images/js-ReportWizard-InputControl-QueryProperties.png)
+    ![js ReportWizard InputControl QueryProperties](../assets/images/js-ReportWizard-InputControl-QueryProperties.png)
 
 10. Click **Next**. The **Link a Data Source to the Report** page appears. The available options include:
+
     - To use the same data source for the input control as you use for the report.
     - To define a new data source, dedicated to this input control.
     - To select a reusable data source from the repository.
+
 11. For this example, select **Do not link a data source** to use the same data source for the input control as you use for the report. You will select the data source for the report in [Selecting a Data Source for Running the Complex Report](repo-data-source-complex-report.md).
 
-![js ReportWizard InputControl QueryDataSource](../assets/images/js-ReportWizard-InputControl-QueryDataSource.png)
+    ![js ReportWizard InputControl QueryDataSource](../assets/images/js-ReportWizard-InputControl-QueryDataSource.png)
 
-Click **Next**.
+    Click **Next**.
 
-On the **Define the Query** page, select **SQL** from the **Query Language** drop-down.
+    On the **Define the Query** page, select **SQL** from the **Query Language** drop-down.
 
-Enter this Query String to retrieve the labels and values to be displayed for this input control:
+    Enter this Query String to retrieve the labels and values to be displayed for this input control:
 
-`SELECT user_name, first_name, last_name FROM users`
+    `SELECT user_name, first_name, last_name FROM users`
 
-![js ReportWizard InputControl QueryEdit](../assets/images/js-ReportWizard-InputControl-QueryEdit.png)
+    ![js ReportWizard InputControl QueryEdit](../assets/images/js-ReportWizard-InputControl-QueryEdit.png)
 
 12. Click **Save**.
 

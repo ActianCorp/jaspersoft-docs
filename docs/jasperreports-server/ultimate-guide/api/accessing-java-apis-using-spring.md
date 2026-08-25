@@ -27,7 +27,7 @@ The Spring configuration files use XML to define Java singleton instances, calle
 
 Below is part of a definition from a sample custom data source implementation. It demonstrates all the conventions above. The original file is `samples/customDataSource/webapp/WEB-INF/applicationContext-hibernateDS.xml` in the JasperReports Server distribution.
 
-```
+``` text
 <!-- define a custom data source -->
 <bean id="hibernateDataSource" class="com.jaspersoft.jasperserver.api.engine.jasperreports.util.  CustomDataSourceDefinition">
     <!-- this property is always the same; it registers the custom ds -->
@@ -59,10 +59,9 @@ Once you have a Java class you want to instantiate along with JasperReports Serv
 As an example of a reference to another bean, please refer to the `factory` property in the Spring file excerpt above. The `CustomDataSourceDefinition` instance uses the `factory` property to refer to a singleton implementation of `CustomReportDataSourceServiceFactory`, which has a bean ID of `custom-DataSourceServiceFactory`:
 
 - The `CustomDataSourceDefinition` implementation defines a factory JavaBean property by implementing the following setter and getter:
+
   - `public void setFactory(CustomReportDataSourceServiceFactory factory)`.
   - `public CustomReportDataSourceServiceFactory getFactory()`.
-
-<!-- -->
 
 - The `<bean>` element contains a `<property>` element with `name` set to `factory` and `ref` set to `customDataSourceServiceFactory`.
 

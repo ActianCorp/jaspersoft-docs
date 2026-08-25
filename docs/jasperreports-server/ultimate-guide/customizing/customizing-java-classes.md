@@ -29,23 +29,25 @@ The following procedure is an example of the steps for building and re-deploying
 To rebuild the source code
 
 1.  Make sure that all your file changes are saved in the \<js-src\> tree.
+
 2.  Stop the application server.
+
 3.  Select the ****Start Menu \> Accessories****, right-click **Command Prompt**, and select **Run as Administrator**.
 
-!!! note
+    !!! note
 
-    If you do not run Command Prompt as administrator, the build can fail during the deployment phase due to permissions problems when adding and deleting files.
+        If you do not run Command Prompt as administrator, the build can fail during the deployment phase due to permissions problems when adding and deleting files.
 
-1.  Go to the buildomatic directory in the source distribution:
+4.  Go to the buildomatic directory in the source distribution:
 
-`cd <js-src>/jasperserver/buildomatic`
+    `cd <js-src>/jasperserver/buildomatic`
 
-1.  Enter the following commands, checking for the BUILD SUCCESSFUL message upon completion of each one:
+5.  Enter the following commands, checking for the BUILD SUCCESSFUL message upon completion of each one:
 
-`js-ant build-ce`
+    `js-ant build-ce`
 
-`js-ant build-pro`
+    `js-ant build-pro`
 
-`js-ant deploy-webapp-pro`
+    `js-ant deploy-webapp-pro`
 
-1.  Restart Tomcat.
+6.  Restart Tomcat.

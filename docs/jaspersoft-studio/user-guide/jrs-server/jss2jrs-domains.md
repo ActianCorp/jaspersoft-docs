@@ -28,37 +28,40 @@ A data adapter for a domain identifies your instance of JasperReports Server and
 
 1.  In the Repository Explorer, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) or select **File \> New  \> Data Adapter** from the menu. In the **Data Adapter Wizard** that appears, double-click **Jaspersoft Server**.
 
-|  |
-|----|
-| ![jss RepositoryExplorer JaspersoftServer](../assets/images/jss-RepositoryExplorer-JaspersoftServer.png)      ![jss DataAdapterWizard JaspersoftServer](../assets/images/jss-DataAdapterWizard-JaspersoftServer.png) |
-| *Figure 1: Creating a New Data Adapter* |
+    |  |
+    |----|
+    | ![jss RepositoryExplorer JaspersoftServer](../assets/images/jss-RepositoryExplorer-JaspersoftServer.png)      ![jss DataAdapterWizard JaspersoftServer](../assets/images/jss-DataAdapterWizard-JaspersoftServer.png) |
+    | *Figure 1: Creating a New Data Adapter* |
 
-Alternatively, you can edit the empty Jaspersoft Server Data Adapter that is created by default as a template. Double-click it in the Repository Explorer panel to open it for editing in the **Data Adapter Wizard**.
+    Alternatively, you can edit the empty Jaspersoft Server Data Adapter that is created by default as a template. Double-click it in the Repository Explorer panel to open it for editing in the **Data Adapter Wizard**.
 
-|  |
-|----|
-| ![jss DataAdapterWizard supermartDomain](../assets/images/jss-DataAdapterWizard-supermartDomain.png) |
-| *Figure 2: Entering Server and Domain Information* |
+    |  |
+    |----|
+    | ![jss DataAdapterWizard supermartDomain](../assets/images/jss-DataAdapterWizard-supermartDomain.png) |
+    | *Figure 2: Entering Server and Domain Information* |
 
-1.  Enter a name for the data adapter, usually the name of the domain.
-2.  Enter the URL to access your server, ending in **jasperserver-pro/**, or click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png) to select from the list of saved servers.
-3.  Enter the username and password to access your server. If you access a domain in an organization, specify the credentials of a user or administrator in the organization, including the organization name or alias. It is good practice to use the credentials of the least permitted user who still has access to the domain or domains you want to access. If you have reports with different Domains using the same data adapter for this server, make sure that the user has access to all Domains and all the data that you need in the Domains.
+2.  Enter a name for the data adapter, usually the name of the domain.
 
-!!! warning
+3.  Enter the URL to access your server, ending in **jasperserver-pro/**, or click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png) to select from the list of saved servers.
 
-    A domain may restrict access to its data based on the user who accesses the data. Restrictions can be based on usernames, roles, attributes, or any combination of these. Depending on how your domain is defined, the credentials you choose here may affect the data that appears in reports that use this adapter. If you access multiple domains, the data from each of them may be affected by the user given here.
+4.  Enter the username and password to access your server. If you access a domain in an organization, specify the credentials of a user or administrator in the organization, including the organization name or alias. It is good practice to use the credentials of the least permitted user who still has access to the domain or domains you want to access. If you have reports with different Domains using the same data adapter for this server, make sure that the user has access to all Domains and all the data that you need in the Domains.
 
-1.  Click **Test** to make sure your server is accessible and the credentials are valid.
-2.  Optional: enter the repository URL of your domain or click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png) to browse for it. If you only access one domain on the server, specify it here. If you have several domains, each report can specify the domain that it uses.
+    !!! warning
 
-When browsing, you can enter a name and select it from the results, or navigate the repository tree that is accessible to the user you specified. Mouse over a resource to see its description and details.
+        A domain may restrict access to its data based on the user who accesses the data. Restrictions can be based on usernames, roles, attributes, or any combination of these. Depending on how your domain is defined, the credentials you choose here may affect the data that appears in reports that use this adapter. If you access multiple domains, the data from each of them may be affected by the user given here.
 
-|  |
-|----|
-| ![jss FindResource RepositoryTree](../assets/images/jss-FindResource-RepositoryTree.png)      ![jss FindResource RepositorySearch](../assets/images/jss-FindResource-RepositorySearch.png) |
-| *Figure 3: Creating a New Data Adapter* |
+5.  Click **Test** to make sure your server is accessible and the credentials are valid.
 
-1.  Click **Finish** to create the data adapter for your domain.
+6.  Optional: enter the repository URL of your domain or click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png) to browse for it. If you only access one domain on the server, specify it here. If you have several domains, each report can specify the domain that it uses.
+
+    When browsing, you can enter a name and select it from the results, or navigate the repository tree that is accessible to the user you specified. Mouse over a resource to see its description and details.
+
+    |  |
+    |----|
+    | ![jss FindResource RepositoryTree](../assets/images/jss-FindResource-RepositoryTree.png)      ![jss FindResource RepositorySearch](../assets/images/jss-FindResource-RepositorySearch.png) |
+    | *Figure 3: Creating a New Data Adapter* |
+
+7.  Click **Finish** to create the data adapter for your domain.
 
 ## Creating a Domain Report
 
@@ -67,41 +70,47 @@ As of Jaspersoft Studio 7.8, the jasperQL query language is the default query la
 To create a report based on a domain.
 
 1.  Make sure you have defined a data adapter for accessing the domain on your instance of JasperReports Server. For more information, see “Creating a Domain Data Adapter” on page 1.
+
 2.  Click ![jss icon new report](../assets/images/jss-icon-new-report.png) or select **File \> New  \> JasperReport** from the menu. The **New Report Wizard** is displayed.
+
 3.  Select a template and click **Next**.
+
 4.  Select a location to save your report, enter its name, and click **Next**.
+
 5.  Select the data adapter for your domain or server, in this example we use "Supermart Domain."
 
-The wizard refreshes to show the query language, the pathname of the Domain and the fields of the Domain that are available.
+    The wizard refreshes to show the query language, the pathname of the Domain and the fields of the Domain that are available.
 
-|  |
-|----|
-| ![jss NewReportWizard jasperQLDesigner](../assets/images/jss-NewReportWizard-jasperQLDesigner.png) |
-| *Figure 4: Fields of a Domain Available Through the Data Adapter* |
+    |  |
+    |----|
+    | ![jss NewReportWizard jasperQLDesigner](../assets/images/jss-NewReportWizard-jasperQLDesigner.png) |
+    | *Figure 4: Fields of a Domain Available Through the Data Adapter* |
 
-The default query language is jasperQL. You can select a different domain on the server if needed, and the dialog updates the available fields. The domain being used is stored in the report itself, therefore it may be different from the one in the data adapter.
+    The default query language is jasperQL. You can select a different domain on the server if needed, and the dialog updates the available fields. The domain being used is stored in the report itself, therefore it may be different from the one in the data adapter.
 
-1.  Select fields or folders in the Domain on the left of the dialog, and drag them to the Fields item on the right to create fields. For example, drag **Sales \> Stores**.
+6.  Select fields or folders in the Domain on the left of the dialog, and drag them to the Fields item on the right to create fields. For example, drag **Sales \> Stores**.
 
-The items are added as a flat list, using the labels from the Domain. At this point, you can refine the query by adding fields to filters, group by, and order by headings. These actions are covered in detail in the next section Using the jasperQL Query Designer.
+    The items are added as a flat list, using the labels from the Domain. At this point, you can refine the query by adding fields to filters, group by, and order by headings. These actions are covered in detail in the next section Using the jasperQL Query Designer.
 
-1.  When done, click **Next** to select the dataset fields. These are the fields that appear in the report outline for use in creating the report. In this simple example, click ![jss icon select all fields](../assets/images/jss-icon-select-all-fields.png) to add all fields.
+7.  When done, click **Next** to select the dataset fields. These are the fields that appear in the report outline for use in creating the report. In this simple example, click ![jss icon select all fields](../assets/images/jss-icon-select-all-fields.png) to add all fields.
 
-|  |
-|----|
-| ![jss NewReportWizard DatasetFields](../assets/images/jss-NewReportWizard-DatasetFields.png) |
-| *Figure 5: Fields of the Query Result Selected for the Report* |
+    |  |
+    |----|
+    | ![jss NewReportWizard DatasetFields](../assets/images/jss-NewReportWizard-DatasetFields.png) |
+    | *Figure 5: Fields of the Query Result Selected for the Report* |
 
-1.  Click **Finish** and the report appears in a new tab with a blank canvas. The elements and fields of the report appear in the report outline. When you mouse over the fields, you see the field's label from the domain.
+8.  Click **Finish** and the report appears in a new tab with a blank canvas. The elements and fields of the report appear in the report outline. When you mouse over the fields, you see the field's label from the domain.
 
-|  |
-|----|
-| ![jss Outline DomainReport Fields](../assets/images/jss-Outline-DomainReport-Fields.png) |
-| *Figure 6: Fields of a Domain in the Report Outline* |
+    |  |
+    |----|
+    | ![jss Outline DomainReport Fields](../assets/images/jss-Outline-DomainReport-Fields.png) |
+    | *Figure 6: Fields of a Domain in the Report Outline* |
 
-1.  Define your report as usual, using the **Palette** and **Outline** to add and organize components.
-2.  Click **Preview** to test your report. Jaspersoft Studio compiles your report. If it is successful, your report is filled and displayed.
-3.  You are prompted to publish your report on save, or click ![jss icon publish report](../assets/images/jss-icon-publish-report.png) to publish your report. For more information, see [Publishing a Report to JasperReports Server](jss2jrs-publishing.md).
+9.  Define your report as usual, using the **Palette** and **Outline** to add and organize components.
+
+10. Click **Preview** to test your report. Jaspersoft Studio compiles your report. If it is successful, your report is filled and displayed.
+
+11. You are prompted to publish your report on save, or click ![jss icon publish report](../assets/images/jss-icon-publish-report.png) to publish your report. For more information, see [Publishing a Report to JasperReports Server](jss2jrs-publishing.md).
 
 ## Using the jasperQL Query Designer
 

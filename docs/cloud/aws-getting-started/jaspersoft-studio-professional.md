@@ -17,42 +17,43 @@ See the Jaspersoft Studio User Guide for instructions on how to install Jasperso
 
 1.  Create a new Data Adapter (called Data Source in Jaspersoft Studio).
 
-<img src="assets/images/03000013.png" alt="03000013" />
+    ![03000013](assets/images/03000013.png)
 
-New DataAdapter button
+    New DataAdapter button
 
-In Jaspersoft Studio, click the New Data Adapter icon to display the DataAdapter wizard.
+    In Jaspersoft Studio, click the New Data Adapter icon to display the DataAdapter wizard.
 
-<img src="assets/images/03000014.png" alt="03000014" />
+    ![03000014](assets/images/03000014.png)
 
-DataAdapter wizard
+    DataAdapter wizard
 
-1.  Name your DataAdapter and click **Next**.
+2.  Name your DataAdapter and click **Next**.
 
-<img src="assets/images/03000015.png" alt="03000015" />
+    ![03000015](assets/images/03000015.png)
 
-Selecting a data source type
+    Selecting a data source type
 
-1.  Select the data source type. For Amazon RDS and Redshift, use **JDBC**. Then click **Next**.
+3.  Select the data source type. For Amazon RDS and Redshift, use **JDBC**. Then click **Next**.
 
-<img src="assets/images/03000017.png" alt="03000017" />
+    ![03000017](assets/images/03000017.png)
 
-Entering your database location
+    Entering your database location
 
-1.  Add the **JDBC Driver**. You may need to search the web for one that corresponds to your RDBMS or other technology on your EC2 instance.
-2.  Enter the **JDBC Url**. This is the Endpoint URL from your Amazon EC2 dashboard (including the port) and database type.
+4.  Add the **JDBC Driver**. You may need to search the web for one that corresponds to your RDBMS or other technology on your EC2 instance.
 
-<img src="assets/images/03000016.png" alt="03000016" />
+5.  Enter the **JDBC Url**. This is the Endpoint URL from your Amazon EC2 dashboard (including the port) and database type.
 
-Locating the Endpoint
+    ![03000016](assets/images/03000016.png)
 
-1.  Click the **Driver Classpath** tab and select the local path of the driver.
+    Locating the Endpoint
 
-<img src="assets/images/03000018.png" alt="03000018" />
+6.  Click the **Driver Classpath** tab and select the local path of the driver.
 
-Selecting the driver classpath
+    ![03000018](assets/images/03000018.png)
 
-1.  Test the connection.
+    Selecting the driver classpath
+
+7.  Test the connection.
 
 ## Connecting Jaspersoft Studio Pro to the JasperReports Server Repository
 
@@ -62,31 +63,31 @@ To define the Repository Explorer's connection
 
 1.  In Jaspersoft Studio, select **Window** \> **Show Views** \> **Other….**
 
-<img src="assets/images/0300001A.png" alt="0300001A" />
+    ![0300001A](assets/images/0300001A.png)
 
-**Window** \> **Show Views** \> **Other….** menu
+    **Window** \> **Show Views** \> **Other….** menu
 
-1.  Select **Repository Explorer**.
+2.  Select **Repository Explorer**.
 
-<img src="assets/images/0300001B.png" alt="0300001B" />
+    ![0300001B](assets/images/0300001B.png)
 
-Selecting the Repository Explorer
+    Selecting the Repository Explorer
 
-1.  Select the instance’s URL. It should start with `ec2`.
+3.  Select the instance’s URL. It should start with `ec2`.
 
-<img src="assets/images/0300001C.png" alt="0300001C" />
+    ![0300001C](assets/images/0300001C.png)
 
-Selecting the instance URL
+    Selecting the instance URL
 
-1.  Right-click the name of your instance to create a JasperReports Server repository connection.
+4.  Right-click the name of your instance to create a JasperReports Server repository connection.
 
-<img src="assets/images/0300001D.png" alt="0300001D" />
+    ![0300001D](assets/images/0300001D.png)
 
-Creating the JasperReports Server repository connection
+    Creating the JasperReports Server repository connection
 
-1.  Fill in the instance’s url, but don’t add the port ID number. Make sure to include `/jasperserver-pro/` at the end of the path.
+5.  Fill in the instance’s url, but don’t add the port ID number. Make sure to include `/jasperserver-pro/` at the end of the path.
 
-<img src="assets/images/0300001E.png" alt="0300001E" />
+![0300001E](assets/images/0300001E.png)
 
 Filling in the instance URL
 

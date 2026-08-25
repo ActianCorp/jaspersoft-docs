@@ -131,7 +131,7 @@ The parameters include:
 
 **Configuration example:**
 
-```
+``` properties
 password.modern.algorithm=pbkdf2
 password.modern.salt.length=32
 password.modern.iterations=100000
@@ -182,7 +182,7 @@ The parameters include:
 
 **Configuration example:**
 
-```
+``` bash
 #password.modern.algorithm=scrypt
 #password.modern.salt.length=32
 #password.modern.iterations=100000
@@ -228,7 +228,7 @@ The parameters include:
 
 **Configuration example:**
 
-```
+``` bash
 #password.modern.algorithm=argon2
 #password.modern.salt.length=16
 #password.modern.iterations=3
@@ -264,7 +264,7 @@ Security Advantages
 
 The `jasperserver/buildomatic/default_master.properties` file is used to customize your default security settings before you perform a fresh installation or an upgrade.
 
-```
+``` bash
 # Modern Password Algorithm Configuration
 password.strategy=modern
 password.modern.algorithm=pbkdf2
@@ -280,7 +280,7 @@ password.migration.batch.size=1000
 
 While these settings are automatically generated from your build configuration during the installation or upgrade process, you can manually adjust the configured strategy or its parameters by editing the `webapps/jasperserver-pro/WEB-INF/js.password-storage-config.properties` file and restarting the application server.
 
-```
+``` bash
 # =============================================================================
 # PASSWORD STORAGE CONFIGURATION
 # =============================================================================
@@ -348,7 +348,7 @@ password.migration.batch.size=1000
 
 Example:
 
-```
+``` text
 Old password: modern:pbkdf2:50000:... (weaker)
 New password: modern:pbkdf2:100000:... (stronger)
 ```
@@ -401,14 +401,14 @@ The system supports seamless transitions between different algorithms because:
 
 **Example:**
 
-```
+``` yaml
 Before: modern:pbkdf2:100000:65536:4:salt:hash
 After:  modern:scrypt:100000:131072:8:salt:hash
 ```
 
 **Real-world scenario:**
 
-```
+``` bash
 # Step 1: Change configuration from PBKDF2 to SCrypt
 password.modern.algorithm=scrypt
 

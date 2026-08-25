@@ -32,8 +32,11 @@ Element properties are divided into categories, visible via tabs in the Properti
 | Properties view for a rectangle                                        |
 
 - The **Appearance** tab allows you to set the location, size, color, and text style of the element.
+
 - The **Borders** tab allows you to set the padding and border style, color, and width of the element.
+
 - An element tab allows you to set evaluation time along with properties specific to the element type. For example:
+
   - The **Static Text** tab allows you to define unchangeable text for a field, and control its appearance.
   - The **Text Field** tab allows you to format and position a text field element.
   - The **Image** tab allows you to set image alignment, fill, and scale properties.

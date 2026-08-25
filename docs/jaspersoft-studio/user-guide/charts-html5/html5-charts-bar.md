@@ -37,58 +37,61 @@ To create the chart
 
 1.  Click ![jss icon html5 chart](../assets/images/jss-icon-html5-chart.png)**HTML5 Charts** in the **Components Pro** section of the **Palette**. The cursor changes to ![jss icon loaded palette element](../assets/images/jss-icon-loaded-palette-element.png) to show that an element is selected. Click and drag in the **Summary** band to size and place the chart.
 
-The **HTML5 Chart Edit Dialog** is displayed.
+    The **HTML5 Chart Edit Dialog** is displayed.
 
-|                                                                          |
-|--------------------------------------------------------------------------|
-| ![html5 charts bar select](../assets/images/html5-charts-bar-select.png) |
-| *Figure 1: Chart Types*                                                  |
+    |                                                                          |
+    |--------------------------------------------------------------------------|
+    | ![html5 charts bar select](../assets/images/html5-charts-bar-select.png) |
+    | *Figure 1: Chart Types*                                                  |
 
-1.  Select a chart type based on the information that you want to display. See [HTML5 Chart Types](html5-charts-overview.md) for help. You can use the menu at the left to restrict the selection to a particular type of chart. For this example, choose **Bar**.
-2.  Click the **Data Configuration** tab. This tab includes options for configuring chart dataset, chart properties, and hyperlinks. The options on this tab reflect the type of chart that you selected.
+2.  Select a chart type based on the information that you want to display. See [HTML5 Chart Types](html5-charts-overview.md) for help. You can use the menu at the left to restrict the selection to a particular type of chart. For this example, choose **Bar**.
 
-|                                                                      |
-|----------------------------------------------------------------------|
-| ![html5 charts bar data](../assets/images/html5-charts-bar-data.png) |
-| *Figure 2: HTML5 Charts Properties \> Chart Data \> Configuration*   |
+3.  Click the **Data Configuration** tab. This tab includes options for configuring chart dataset, chart properties, and hyperlinks. The options on this tab reflect the type of chart that you selected.
 
-1.  Enter the expression that you want to use for the categories. You can enter the expression directly, or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor. For this example, enter the following:
+    |                                                                      |
+    |----------------------------------------------------------------------|
+    | ![html5 charts bar data](../assets/images/html5-charts-bar-data.png) |
+    | *Figure 2: HTML5 Charts Properties \> Chart Data \> Configuration*   |
 
-- **Category Expression**: `$F{SHIPCOUNTRY}`.
+4.  Enter the expression that you want to use for the categories. You can enter the expression directly, or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor. For this example, enter the following:
 
-1.  Enter the information that you want for the series:
+    - **Category Expression**: `$F{SHIPCOUNTRY}`.
 
-- **Series**: This menu displays the default name of the series, for example, Series 1. If you want to change the name, use advanced configuration.
-- **Value Expression**: Enter the expression that you want to use as a base for the measure calculation. For this example, use `$F{Freight}`.
-- **Aggregation Function**: Select the function to apply to the value expression. For this example, use `Average`.
-- **Tooltip Expression**: Enter an expression to display as a label for the measure. For this example, enter `"Average Freight"`.
+5.  Enter the information that you want for the series:
 
-1.  To preview the chart from inside the dialog, click **Show Chart Preview**.
+    - **Series**: This menu displays the default name of the series, for example, Series 1. If you want to change the name, use advanced configuration.
+    - **Value Expression**: Enter the expression that you want to use as a base for the measure calculation. For this example, use `$F{Freight}`.
+    - **Aggregation Function**: Select the function to apply to the value expression. For this example, use `Average`.
+    - **Tooltip Expression**: Enter an expression to display as a label for the measure. For this example, enter `"Average Freight"`.
 
-A preview is displayed in the right of the dialog. This preview can take some time to load the first time it is run.
+6.  To preview the chart from inside the dialog, click **Show Chart Preview**.
 
-|  |
-|----|
-| ![html5 charts bar dialog preview](../assets/images/html5-charts-bar-dialog-preview.png) |
-| *Figure 3: Preview in the HTML5 Chart Edit Dialog* |
+    A preview is displayed in the right of the dialog. This preview can take some time to load the first time it is run.
 
-Configure the dataset
+    |  |
+    |----|
+    | ![html5 charts bar dialog preview](../assets/images/html5-charts-bar-dialog-preview.png) |
+    | *Figure 3: Preview in the HTML5 Chart Edit Dialog* |
 
-1.  Click the **Dataset** sub-tab. This sub-tab lets you choose a dataset and dataset properties. This example uses the default **\[Report main dataset\]**.
-2.  You can optionally filter the dataset by entering an expression in the **Increment expression** text box. You can enter text directly or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor. For this example, filter your dataset using the following increment expression:
+    Configure the dataset
 
-`$F{SHIPCOUNTRY}.startsWith("I") ||`
+7.  Click the **Dataset** sub-tab. This sub-tab lets you choose a dataset and dataset properties. This example uses the default **\[Report main dataset\]**.
 
-`$F{SHIPCOUNTRY}.startsWith ("S") ||`
+8.  You can optionally filter the dataset by entering an expression in the **Increment expression** text box. You can enter text directly or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor. For this example, filter your dataset using the following increment expression:
 
-`$F{SHIPCOUNTRY}.startsWith ("U")`
+    `$F{SHIPCOUNTRY}.startsWith("I") ||`
 
-1.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
-2.  Click **OK** to close the **HTML5 Chart Edit** dialog.
+    `$F{SHIPCOUNTRY}.startsWith ("S") ||`
 
-A placeholder for the chart is inserted in the design view of your report. The design view of a report does not display live data for a chart.
+    `$F{SHIPCOUNTRY}.startsWith ("U")`
 
-1.  Save, then click the **Preview** tab to see your chart. To see an interactive preview, select HTML from the **Preview** drop-down. Hover over a bar to see the average freight.
+9.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+
+10. Click **OK** to close the **HTML5 Chart Edit** dialog.
+
+    A placeholder for the chart is inserted in the design view of your report. The design view of a report does not display live data for a chart.
+
+11. Save, then click the **Preview** tab to see your chart. To see an interactive preview, select HTML from the **Preview** drop-down. Hover over a bar to see the average freight.
 
 |  |
 |----|
@@ -104,15 +107,18 @@ A placeholder for the chart is inserted in the design view of your report. The d
 Start with the HTML5 bar chart from the previous example to complete the following tasks.
 
 1.  On the **Design** tab, double-click your chart, or right-click it and choose **Edit Chart Properties**.
+
 2.  In the **HTML5 Chart Edit** dialog, click the **Data Configuration** tab.
+
 3.  In the **Measures** section, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png). A new series is created with the name Series 2. Enter the following information:
 
-- **Value Expression**: `$F{FREIGHT}`
-- **Aggregation Function**: `Average`
-- **Tooltip Expression**: `"Average Freight"`
+    - **Value Expression**: `$F{FREIGHT}`
+    - **Aggregation Function**: `Average`
+    - **Tooltip Expression**: `"Average Freight"`
 
-1.  Click **OK**.
-2.  Save and preview the chart.
+4.  Click **OK**.
+
+5.  Save and preview the chart.
 
 |  |
 |----|
@@ -132,31 +138,33 @@ You can set the HTML formatting of the chart using the Chart Formatting tab in t
 To add a title to an HTML5 chart
 
 1.  Double-click the chart or right-click and select **Edit Chart properties**.
+
 2.  Click the **Chart Formatting** tab.
+
 3.  Select **Title** on the left and enter your title in the **Title** text box. For this example, enter **Orders and Freight by Country**. You can also customize the alignment, position, color, and font.
 
-To change the position or layout of the legend
+    To change the position or layout of the legend
 
-1.  On the **Chart Formatting** tab of the HTML5 Chart Edit dialog, select **Legend** and set the following:
+4.  On the **Chart Formatting** tab of the HTML5 Chart Edit dialog, select **Legend** and set the following:
 
-- **Floating Legend**: true.
+    - **Floating Legend**: true.
 
-|  |
-|----|
-| ![jss html5 charts formatting legend](../assets/images/jss-html5-charts-formatting-legend.png) |
-| *Figure 6: Legend Properties* |
+    |  |
+    |----|
+    | ![jss html5 charts formatting legend](../assets/images/jss-html5-charts-formatting-legend.png) |
+    | *Figure 6: Legend Properties* |
 
-1.  Expand **Legend**, select **Legend \> Sizes and Position**, and set the location of the legend on the graph:
+5.  Expand **Legend**, select **Legend \> Sizes and Position**, and set the location of the legend on the graph:
 
-- **Horizontal Alignment**: right.
-- **Vertical Alignment**: middle.
-- **X offset**: -6. This moves the legend inside the plot background color.
+    - **Horizontal Alignment**: right.
+    - **Vertical Alignment**: middle.
+    - **X offset**: -6. This moves the legend inside the plot background color.
 
-1.  Select **Legend \> Items** and set the following:
+6.  Select **Legend \> Items** and set the following:
 
-- **Items Layout**: vertical.
+    - **Items Layout**: vertical.
 
-1.  Click **OK**.
+7.  Click **OK**.
 
 To set the chart's background color
 
@@ -175,20 +183,24 @@ To set the chart's background color
 ## Creating a Hyperlink
 
 1.  Double-click your bar chart or right-click and select **Edit Chart properties**.
+
 2.  Click the **Data Configuration** tab.
+
 3.  Click **Edit Hyperlink**.
 
-|  |
-|----|
-| ![jss html5 charts simple hyperlink](../assets/images/jss-html5-charts-simple-hyperlink.png) |
-| *Figure 8: Editing a hyperlink* |
+    |  |
+    |----|
+    | ![jss html5 charts simple hyperlink](../assets/images/jss-html5-charts-simple-hyperlink.png) |
+    | *Figure 8: Editing a hyperlink* |
 
-1.  Set the following:
+4.  Set the following:
 
-- **Hyperlink Target**: Top.
-- **Hyperlink Type**: Reference.
-- **Hyperlink Reference Expression**: `"http://www.ask.com/web?q=" + $F{SHIPCOUNTRY}`
+    - **Hyperlink Target**: Top.
+    - **Hyperlink Type**: Reference.
+    - **Hyperlink Reference Expression**: `"http://www.ask.com/web?q=" + $F{SHIPCOUNTRY}`
 
-1.  Click **OK**.
-2.  Click **OK** again to return to design mode.
-3.  Save and preview your report. In the HTML preview, click the bar for any country to open an Ask.com page for that country.
+5.  Click **OK**.
+
+6.  Click **OK** again to return to design mode.
+
+7.  Save and preview your report. In the HTML preview, click the bar for any country to open an Ask.com page for that country.

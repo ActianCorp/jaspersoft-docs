@@ -71,7 +71,7 @@ The configuration file for logging depends on whether you want to define loggers
 
 Loggers are based on the Java classname of the functionality that you want to log. To find an existing logger or create a new one, you must know the corresponding classname. A logger in the configuration file is defined by three related definitions with the following syntax:
 
-```
+``` text
 logger.<logger-name>.name=<Java-classname>
 logger.<logger-name>.level=<log-level>
 logger.<logger-name>.appenderRef.<output-type>.ref=<output-name>
@@ -84,7 +84,7 @@ where:
 - `<log-level>` is `error`, `warn`, `info`, or `debug`.
 - `<output-type>` is a Log4j 2 output type, either `stdout` or `rolling`. The respective `<output-name>` is either `stdout` or the name of a file output defined in the `log4j2.properties` file. There can be multiple output types, as shown in the following example:
 
-```
+``` properties
 logger.net_sf_jasperreports_engine_query_JRJdbcQueryExecuter.name=net.sf.jasperreports.engine.query.JRJdbcQueryExecuter
 logger.net_sf_jasperreports_engine_query_JRJdbcQueryExecuter.level=debug
 logger.net_sf_jasperreports_engine_query_JRJdbcQueryExecuter.appenderRef.stdout.ref = stdout
@@ -110,13 +110,13 @@ The available parameters for JasperReports Server logs include:
 
 JasperReports Server logs follow the following format, for example, for Log4j:
 
-```
+``` xml
 <Log4j pattern> <Request type> <Session Id> <User Id> <Resource URI> <Request Status> <TimeTaken> - <Actual text log message>
 ```
 
 Here is an example log from `jasperserver.log` when Data source fails:
 
-```
+``` text
 2023-07-14T03:22:13,469 ERROR SecureExceptionHandlerImpl,http-nio-8080-exec-6:135 -
 {REQUEST_STATUS=200, REQUEST_TYPE=POST, SESSION_ID=7F1DCDC110417960C651152A80E1877E, TIME_TAKEN=13, USER_ID=superuser}
 - FATAL: no PostgreSQL user name specified in startup packet org.postgresql.util.PSQLException: FATAL: no PostgreSQL user name specified in startup packet
@@ -198,13 +198,14 @@ If you know of a Log4j2 logger that JasperReports Server uses, you can edit a co
 To edit the list of loggers on the Log Settings page
 
 1.  Edit the file .../WEB-INF/bundles/logger_descriptions.properties.
+
 2.  Add a new line and specify the logger's classname and a brief description of it.
 
-Entries should be in the form `<Java-classname> = <description>`.
+    Entries should be in the form `<Java-classname> = <description>`.
 
-See the other properties in the file for guidance.
+    See the other properties in the file for guidance.
 
-1.  Restart the server for your changes to take effect.
+3.  Restart the server for your changes to take effect.
 
 The logger_descriptions_pro.properties file does not set any logger levels, it only determines which loggers are listed in the Log Settings UI. Loggers are shown in the UI with their currently active level, as described in Log Levels.
 

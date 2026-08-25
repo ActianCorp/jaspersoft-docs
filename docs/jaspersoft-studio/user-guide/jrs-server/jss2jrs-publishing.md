@@ -36,11 +36,15 @@ You can fix this by changing the JasperReports Library version in the **Server P
 The reports you create in Jaspersoft Studio can have embedded resources, such as images, query resources, and data adapters using `net.sf.jasperreports.data.adapter`. You can use the following columns in **Select Resources** to publish the page of the **Report Publishing Wizard** to control the resources you upload:
 
 - **Overwrite**: Controls whether you overwrite a resource if it exists. This setting is important when you republish a report that has been published before. Click the value in this column to display a dropdown menu with the following choices:
+
   - **Overwrite**: Creates a resource or overwrites an existing resource with the current version.
   - **Ignore**: Ignores the resource.
   - **Overwrite Only Expression**: Updates the expression for the resource. Enter the new value in the **Expression** column. It does not create or overwrite the resource.
+
 - **Expression**: When **Overwrite** or **Overwrite Only Expression** is selected, it lets you choose the expression you want to use. Click the value in this column and then click **...** to open the Expression Editor and edit the expression that specifies the location where the file is saved. By default, resources such as images are published to a repository location, and the uploaded report uses the `repo:` syntax to refer to the report location.
+
 - **Type**: When **Overwrite** is selected, specifies the existing resource to overwrite. Click the value in this column to display a dropdown menu with the following choices:
+
   - **Save to Folder**: Save to a location anywhere on your JasperReports Server instance. When you choose this option, you are prompted to navigate to the location you want.
   - **Link to Resource**: Links to an existing resource on your JasperReports Server instance. When you choose this option, you are prompted to navigate to the resource you want. If you modify a report and the report is set to **Overwrite**, the changes overwrite only the path, not the resource.
   - **Use Local Resource**: Save as a resource inside the report unit on JasperReports Server.
@@ -138,28 +142,32 @@ To use this option:
 To publish a report to the server
 
 1.  Open a report.
+
 2.  Click the **Publish Report** button ![jss icon publish report](../assets/images/jss-icon-publish-report.png) in the upper-right corner of the Designer. The **Report Publishing Wizard** opens.
 
-|  |
-|----|
-| ![report publishing wizard](../assets/images/report-publishing-wizard.png) |
-| *Figure 1: Report Publishing Wizard* |
+    |  |
+    |----|
+    | ![report publishing wizard](../assets/images/report-publishing-wizard.png) |
+    | *Figure 1: Report Publishing Wizard* |
 
-1.  Locate the directory for storing your report.
-2.  Name the report unit. The report unit contains all report files.
-3.  Click **Next**. The **Select Resources** window opens. This window displays any resources required by your report, such as images, query resources, and embedded data adapters.
+3.  Locate the directory for storing your report.
 
-|                                                              |
-|--------------------------------------------------------------|
-| ![jss jrs resources](../assets/images/jss-jrs-resources.png) |
-| *Figure 2: Select Resources*                                 |
+4.  Name the report unit. The report unit contains all report files.
 
-1.  Select any resources that you want to upload with your report and check the box if you want to overwrite previous versions of those resources. Click **Next**. The **Configure the data source** window opens.
+5.  Click **Next**. The **Select Resources** window opens. This window displays any resources required by your report, such as images, query resources, and embedded data adapters.
 
-|                                                                      |
-|----------------------------------------------------------------------|
-| ![configure data source](../assets/images/configure-data-source.png) |
-| *Figure 3: Configure Data Source*                                    |
+    |                                                              |
+    |--------------------------------------------------------------|
+    | ![jss jrs resources](../assets/images/jss-jrs-resources.png) |
+    | *Figure 2: Select Resources*                                 |
 
-1.  Select a data source configuration. See Publishing Data Adapters for more information.
-2.  Click **Finish**. The report is uploaded to the server. If there are no errors, an appropriate message is shown.
+6.  Select any resources that you want to upload with your report and check the box if you want to overwrite previous versions of those resources. Click **Next**. The **Configure the data source** window opens.
+
+    |                                                                      |
+    |----------------------------------------------------------------------|
+    | ![configure data source](../assets/images/configure-data-source.png) |
+    | *Figure 3: Configure Data Source*                                    |
+
+7.  Select a data source configuration. See Publishing Data Adapters for more information.
+
+8.  Click **Finish**. The report is uploaded to the server. If there are no errors, an appropriate message is shown.

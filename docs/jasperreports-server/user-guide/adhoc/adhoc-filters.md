@@ -78,6 +78,7 @@ However, with the custom filter functionality, you can exercise greater control 
 Custom filters are useful in a number of situations, including:
 
 - **When using the AND operator is not sufficient**. Consider an international company that wants to view data for stores located on the Pacific Rim; they may create a custom expression with the following criteria:
+
   - Country is USA
 
     AND
@@ -89,7 +90,9 @@ Custom filters are useful in a number of situations, including:
   - Country is Japan OR Indonesia
 
     Using the AND operator for all of these criteria returns an empty view, as no store is located in all of those areas.
+
 - **When you need to eliminate some results in a field.** For example, if your food and beverage distribution company wants to view sales for all drinks except for high-price items, you might include the following criteria in a custom expression:
+
   - Product Group is Beverages
 
     NOT
@@ -119,8 +122,11 @@ To create and apply a custom filter
 
 1.  Create two or more filters for your data, as described in Using Filters. These can be standard field-based filters, or **Keep Only** and **Exclude** filters.<br>
     Note that as you create the filters for use in a custom expression, you may find that the data in your view disappears, since most (if not all) of the data will not meet all of the filter criteria. When you create your custom expression and change some of the ANDs to ORs and NOTs, the data reappears in the panel.
+
 2.  At the bottom of the Filters panel, expand the **Custom Filter Expression** section.
+
 3.  In the text entry box, enter a filter expression using the letter designations, and including the following operators:
+
     - **AND** narrows your results and includes only fields that meet the criteria of both filters before and after the operator.
 
     - **OR** broadens your results and includes fields that meet the criteria of either filter before or after the operator.

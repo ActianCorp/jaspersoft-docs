@@ -27,6 +27,7 @@ To open the calculated fields dialog for Ad Hoc views
 The Formula Builder tab is where you create the formula for your calculated field or measure. This tab includes the following:
 
 - Formula entry box - Shows the current formula for calculating your field or measure. You can edit the formula by typing directly in the panel. You can also add Fields, Measures, and Functions by double-clicking them. Click the buttons below the Formula field to add operators. Formulas must use the following syntax:
+
   1.  Labels for fields and measures must be in double quotes ("): "Customer ID", "Date ordered".
   2.  Text must be in single quotes ('): '--'.
   3.  Levels must be in single quotes ('): 'ColumnGroup', 'Total'. See [section 1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information about levels.<br>
@@ -42,6 +43,7 @@ The Formula Builder tab is where you create the formula for your calculated fiel
   </div>
 
 - The tooltip content includes:
+
   - **Field Path** (for example: Sales \> Stores \> Regions \> City) for Domain-based Ad Hoc
   - **Original name** (from the domains)
   - **Formula** (for calculated fields and calculated measure only)
@@ -63,5 +65,6 @@ The Formula Builder tab is where you create the formula for your calculated fiel
 Summaries show a result applied to all data values. For example, for a numeric field such as Cost, the summary value might be the sum of all the costs; for a text field such as Customer Name, the summary value might be the count of all customers. The Summary tab sets the default summary function for your calculated field or measure.
 
 - Calculation list - Displays allowed summary functions for your calculated field or measure. The available options depend on the data type of the calculation. See [section 1.0.1, “Summary Calculations,” on page 1](calc-fields-summaries.md) for more information. Depending on your selection, you may see additional options:
+
   - Custom selection - Displays the same options available in the Formula Builder tab, including the Formula entry box, operator buttons, Fields and Measures list, Functions list, and Validate button. You can use these options to build a formula for your custom summary. However, for summaries, you are limited to aggregate functions, that is, functions that operate on all the values in your field. For example, `Sum` and `Mode` are valid summary functions, because they use all available field values to get a result. `Round` is not a valid summary function, because it operates on a single value at a time. See [section 1.0.1, “Summary Calculations,” on page 1](calc-fields-summaries.md) for more information.
   - Weighted Average - Displays a Weighted On dropdown list, which allows you to choose another field or measure to use as the weight for the average.

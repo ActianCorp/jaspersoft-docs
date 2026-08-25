@@ -15,12 +15,12 @@ In the previous sample, we see the attachments that are internal to the AllAccou
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>GET /jasperserver/rest/resource/reports/samples/AllAccounts_files/AllAccounts_Res3?
+<td><div class="language-text highlight"><pre><code>GET /jasperserver/rest/resource/reports/samples/AllAccounts_files/AllAccounts_Res3?
 fileData=true HTTP/1.1
 User-Agent: Jakarta Commons-HttpClient/3.1
 Authorization: Basic amFzcGVyYWRtaW46amFzcGVyYWRtaW4=
 Host: localhost:8080
-Cookie: $Version=0; JSESSIONID=6854BF45EC89F3D3CE3E6F4FD6FF1BBD; $Path=/jasperserver</code></pre></td>
+Cookie: $Version=0; JSESSIONID=6854BF45EC89F3D3CE3E6F4FD6FF1BBD; $Path=/jasperserver</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -37,11 +37,11 @@ In the case of a resource that is referenced in the repository, you can download
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>GET /jasperserver-pro/rest/resource/images/JRLogo?fileData=true HTTP/1.1
+<td><div class="language-text highlight"><pre><code>GET /jasperserver-pro/rest/resource/images/JRLogo?fileData=true HTTP/1.1
 User-Agent: Jakarta Commons-HttpClient/3.1
 Authorization: Basic amFzcGVyYWRtaW46amFzcGVyYWRtaW4=
 Host: localhost:8080
-Cookie: $Version=0; JSESSIONID=6854BF45EC89F3D3CE3E6F4FD6FF1BBD; $Path=/jasperserver</code></pre></td>
+Cookie: $Version=0; JSESSIONID=6854BF45EC89F3D3CE3E6F4FD6FF1BBD; $Path=/jasperserver</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -246,9 +246,11 @@ updateScheduledJobs(executionContext, reportJobs, jobModel,
 Two methods of the scheduling service let you retrieve a list of jobs. The retrieved list consists of instances of `com.jaspersoft.jasperserver.api.engine.scheduling.domain.ReportJobSummary` that contain basic job attributes, plus runtime attributes like job status and previous/next fire times.
 
 - `getScheduledJobSummaries` can be used as follows:
+
   - Retrieves job summaries of all active report jobs defined in the scheduler.
   - With a `reportUnitURI`, retrieves the list of job summaries for scheduled jobs for a report unit.
   - With a `ReportJobModel` along with other parameters, retrieves the list of scheduled job summaries that match the criteria specified by the `ReportJobModel`.
+
 - `getJobsByNextFireTime` retrieves the list of all jobs with a next fire time in a specified time interval.
 
 For example, to get all active jobs that match a report job model, you should use code similar to the following:

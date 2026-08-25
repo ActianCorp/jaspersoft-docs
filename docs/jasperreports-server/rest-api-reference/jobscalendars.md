@@ -66,7 +66,7 @@ The following examples show the types of exclusion calendars that you can add to
 
 JSON:
 
-```
+``` json
 {
     "calendarType":"annual",
     "description":"Annual calendar description",
@@ -77,7 +77,7 @@ JSON:
 
 XML:
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <reportJobCalendar>
   <calendarType>annual</calendarType>
@@ -95,7 +95,7 @@ XML:
 
 JSON:
 
-```
+``` json
 {
     "calendarType":"cron",
     "description":"Cron calendar description",
@@ -106,7 +106,7 @@ JSON:
 
 XML:
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <reportJobCalendar>
   <calendarType>cron</calendarType>
@@ -120,7 +120,7 @@ XML:
 
 JSON:
 
-```
+``` json
 {
     "calendarType":"daily",
     "description":"Daily calendar description",
@@ -133,7 +133,7 @@ JSON:
 
 XML:
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <reportJobCalendar>
   <calendarType>daily</calendarType>
@@ -149,7 +149,7 @@ XML:
 
 JSON:
 
-```
+``` json
 {
     "calendarType":"holiday",
     "description":"Holiday calendar (observed)",
@@ -171,7 +171,7 @@ JSON:
 
 XML:
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <reportJobCalendar>
   <calendarType>holiday</calendarType>
@@ -197,7 +197,7 @@ XML:
 
 JSON:
 
-```
+``` json
 {
     "calendarType": "weekly",
     "description": "Weekly calendar description",
@@ -218,7 +218,7 @@ JSON:
 
 JSON:
 
-```
+``` json
 {
     "calendarType":"monthly",
     "description":"Monthly calendar description",
@@ -303,7 +303,7 @@ Type</span></p></td>
 
 The list of calendar names in the result has the following format in XML:
 
-```
+``` xml
 <calendarNameList>
   <calendarName>name1</calendarName>
   <calendarName>name2</calendarName>
@@ -339,7 +339,7 @@ The calendar descriptor in a successful response has the following JSON format:
 
 - Annual calendar:
 
-```
+``` json
 {
     "calendarType": "annual",
     "description": "Annual calendar description",
@@ -354,7 +354,7 @@ The calendar descriptor in a successful response has the following JSON format:
 
 - Cron calendar:
 
-```
+``` json
 {
     "calendarType": "cron",
     "description": "Cron calendar description",
@@ -366,7 +366,7 @@ The calendar descriptor in a successful response has the following JSON format:
 
 - Daily calendar:
 
-```
+``` json
 {
     "calendarType": "daily",
     "description": "Daily calendar description",
@@ -380,7 +380,7 @@ The calendar descriptor in a successful response has the following JSON format:
 
 - Holiday calendar:
 
-```
+``` json
 {
     "calendarType": "holiday",
     "description": "Holiday calendar (observed)",
@@ -402,7 +402,7 @@ The calendar descriptor in a successful response has the following JSON format:
 
 - Weekly calendar (day flags are Sunday to Saturday):
 
-```
+``` json
 {
     "calendarType": "weekly",
     "description": "Weekly calendar description",
@@ -422,7 +422,7 @@ The calendar descriptor in a successful response has the following JSON format:
 
 - Monthly calendar (day flags are dates from 1 to 31):
 
-```
+``` json
 {
     "calendarType":"monthly",
     "description":"Monthly calendar description",
@@ -530,9 +530,9 @@ For example, you can make the following request to replace the calendar named `w
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/
         weeklyCalendar?replace=true&amp;updateTriggers=true
-Content-Type=application/json</code></pre></td>
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>
@@ -613,8 +613,8 @@ When creating or updating a calendar, the error messages can be expected in the 
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/annualCalendar
-Content-Type=application/json</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/annualCalendar
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>
@@ -663,8 +663,8 @@ Expected Reply:
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/cronCalendar
-Content-Type=application/json</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/cronCalendar
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>
@@ -713,8 +713,8 @@ Expected Reply:
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
-Content-Type=application/json</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>
@@ -765,8 +765,8 @@ Expected Reply:
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
-Content-Type=application/json</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>
@@ -817,8 +817,8 @@ Expected Reply:
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/holidayCalendar
-Content-Type=application/json</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/holidayCalendar
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>
@@ -867,8 +867,8 @@ Expected Reply:
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/weeklyCalendar
-Content-Type=application/json</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/weeklyCalendar
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>
@@ -917,8 +917,8 @@ Expected Reply:
 <tbody>
 <tr>
 <td><p>Request</p></td>
-<td><pre class="text"><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/monthlyCalendar
-Content-Type=application/json</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/monthlyCalendar
+Content-Type=application/json</code></pre></div></td>
 </tr>
 <tr>
 <td><p>Body</p></td>

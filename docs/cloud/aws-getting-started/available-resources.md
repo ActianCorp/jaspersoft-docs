@@ -11,7 +11,7 @@ Each of the resources below is accessible through the Jaspersoft Online Customer
 
 Note: You'll find many of these resources by using the navigation panel on the left side of every page in the portal.
 
-<img src="assets/images/03000002.png" alt="03000002" />
+![03000002](assets/images/03000002.png)
 
 The navigation panel on the left side of the Online Customer Portal
 

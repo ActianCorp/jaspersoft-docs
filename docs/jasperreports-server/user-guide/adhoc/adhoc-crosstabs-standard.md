@@ -58,7 +58,9 @@ You can pivot a crosstab in two ways:
 
 - In Old Layout Band, Pivot the entire crosstab by clicking ![js AdHoc SwitchGroup](../assets/images/js-AdHoc-SwitchGroup.png). The row and column groups for switching places. For more information, see [Creating a View from a Domain](adhoc-create-view-from-domain.md).<br>
   In the New Layout Band, The fields or measures in the drop areas can be swapped by clicking the Switch ![switch icon](../assets/images/switch-icon.png)icon between the two drop areas.<br>
+
 - Pivot a single group:
+
   - To pivot a single row group, right-click it and select **Move To Columns**.
   - To pivot a single column group, right-click it and select **Move To Rows**.
 
@@ -121,6 +123,7 @@ By default, the rows and columns of crosstabs are sorted in alphabetical order o
 To sort your crosstab
 
 - Right-click the heading that you want to use for sorting and select one of these options:
+
   - **Sort Ascending**
   - **Sort Descending**
   - **Don't Sort**<br>
@@ -133,12 +136,17 @@ To filter top or bottom N values
 You can filter the numeric data shown in a crosstab to show only the rows with the top or bottom N values, where N is a number that you specify. For example, you can filter a crosstab to display only the top 10 values in a column.
 
 1.  Right-click the heading that you want to use for filtering and select one of these options:
+
     - **Filter Top N Values**
     - **Filter Bottom N Values**
     - **Don't Filter Values**
+
 2.  Enter the number of values that you want to show in the crosstab.
+
 3.  Select whether to show an aggregate of the unranked values in the crosstab.
+
 4.  Select whether to apply the filter across all row groups.
+
 5.  Click **OK**.
 
 The crosstab is updated to reflect your filter option. The ![js AdHoc icon FilterTopN](../assets/images/js-AdHoc-icon-FilterTopN.png) icon appears in the heading when filtering a column for the top N values, while the ![js AdHoc icon FilterBottomN](../assets/images/js-AdHoc-icon-FilterBottomN.png) icon appears when filtering for the bottom N values. A blue dot appears in the context menu next to the currently applied filter option. Only one measure can be used for filtering at any one time. Changing the filtering or sort order for another measure resets the filtered column.
@@ -156,8 +164,11 @@ You can change the data that the crosstab displays as the Totals value for time 
 To change the total calculation using the time balance
 
 1.  In the Ad Hoc view, right-click the column or row header.
+
 2.  Select **Change Time Balance** from the context menu.
+
 3.  Select the option that you want to use. You can select one of the following:
+
     - Time Balance Default. This option displays the sum of all the numeric data for a period of time as the Total value.
     - Time Balance First. This option displays the first numeric value for a period of time as the Total value. For example, if the period of time is a month, the crosstab displays the first numeric value entered for the month.
     - Time Balance Last. The option displays the last numeric value for a period of time as the Total value. For example, if the period of time is a month, the crosstab displays the last numeric value entered for the month.

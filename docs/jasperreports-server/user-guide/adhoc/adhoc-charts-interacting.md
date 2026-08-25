@@ -71,7 +71,7 @@ Currently, only the fields in the **Row** axis are supported for drill down. If 
     <br>
     For **Old Layout Band**, when you try to drill down for any chart visualization, and a measure is placed between the fields, the drill down is done until the measure is encountered. The warning message then prompts to reposition the measure group to the beginning, or the end of the list, or to a different drop group area. Once the measure is moved, the drill down starts from the beginning.<br>
     <br>
-    <img src="../assets/images/drill-down.png" alt="drill down" /><br>
+    ![drill down](../assets/images/drill-down.png)<br>
 
 !!! note
 

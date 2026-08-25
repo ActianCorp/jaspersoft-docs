@@ -20,27 +20,30 @@ The JasperReports Server deployment includes a sample file for custom authentica
 To set up authentication based on the request:
 
 1.  Modify `CustomAuthenticationProcessingFilter.java` to work with your authentication method. This class takes a single `HttpServletRequest` parameter and returns a Spring `Authentication` object. You can use one of Spring's implementations of `Authentication` or our `CustomAuthenticationToken`. Your user request needs to have sufficient information for your custom authentication method to authenticate using the request.
+
 2.  Create a `myCustomProvider` class implementing `AuthenticationProvider`. In this class you must use the authentication object created in the previous step. For more information, refer to the documentation for Spring Security, as described in [Spring Security](../introduction/spring-security.md).
+
 3.  In sample-applicationContext-template.xml, add `myCustomProvider` to the providers list in `customAuthenticationManager`. Your provider should authenticate using the object returned by `CustomAuthenticationProcessingFilter`.
 
-```
-<bean id="customAuthenticationManager" class="com.jaspersoft.jasperserver.api.security.
-      externalAuth.wrappers.spring.JSProviderManager">
-  <property name="providers">
-    <list>
-     <ref bean="${bean.myCustomProvider}"/>
-     <ref bean="${bean.daoAuthenticationProvider}"/>
-   </list>
- </property>
-</bean>
-```
+    ``` xml
+    <bean id="customAuthenticationManager" class="com.jaspersoft.jasperserver.api.security.
+          externalAuth.wrappers.spring.JSProviderManager">
+      <property name="providers">
+        <list>
+         <ref bean="${bean.myCustomProvider}"/>
+         <ref bean="${bean.daoAuthenticationProvider}"/>
+       </list>
+     </property>
+    </bean>
+    ```
 
-1.  Comment out or remove the sample provider.
+4.  Comment out or remove the sample provider.
 
-```
-/* <bean id="customAuthenticationProvider  class="com.jaspersoft.jasperserver.api.security.
-      externalAuth.custom.CustomAuthenticationProvider"/> */
-```
+    ``` text
+    /* <bean id="customAuthenticationProvider  class="com.jaspersoft.jasperserver.api.security.
+          externalAuth.custom.CustomAuthenticationProvider"/> */
+    ```
 
-1.  Set up your processors to work with your users and organizations. You can use the processors for LDAP or CAS as examples.
-2.  Copy the modified file to the WEB-INF folder and remove the sample- prefix.
+5.  Set up your processors to work with your users and organizations. You can use the processors for LDAP or CAS as examples.
+
+6.  Copy the modified file to the WEB-INF folder and remove the sample- prefix.

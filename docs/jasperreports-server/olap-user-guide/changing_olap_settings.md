@@ -16,24 +16,28 @@ We recommend that you carefully review the effects of the changes you make to th
 To change the OLAP settings
 
 1.  Click **Manage \> Server Settings**.
+
 2.  Click **OLAP Settings**.
 
-The **OLAP Settings** page appears.
+    The **OLAP Settings** page appears.
 
-![ja add view olapoptions](assets/images/ja-add-view-olapoptions.png)
+    ![ja add view olapoptions](assets/images/ja-add-view-olapoptions.png)
 
-*Figure 1: OLAP Settings Page, Commercial Editions*
+    *Figure 1: OLAP Settings Page, Commercial Editions*
 
-Each property is listed with its underlying name (as it appears in the underlying OLAP engine), as well as a more descriptive label. The properties are described in [Table 1-1](changing_olap_settings.md).
+    Each property is listed with its underlying name (as it appears in the underlying OLAP engine), as well as a more descriptive label. The properties are described in [Table 1-1](changing_olap_settings.md).
 
-1.  If your edition of the server includes it, click the **Performance Profiling Enabled** checkbox to generate performance reports and views, and click **Change**.
+3.  If your edition of the server includes it, click the **Performance Profiling Enabled** checkbox to generate performance reports and views, and click **Change**.
 
-The page displays a message indicating that the setting was updated.
+    The page displays a message indicating that the setting was updated.
 
-1.  Locate and analyze the performance reports and views. The reports are found in the repository at **/performance/reports**. The views are found at **/performance/views**.
-2.  Review the available properties described below to determine if they can be changed to improve performance.
-3.  Adjust any options as needed, click **Change**, and run the performance views and reports to understand the impact your changes made.
-4.  Adjust the settings as necessary.
+4.  Locate and analyze the performance reports and views. The reports are found in the repository at **/performance/reports**. The views are found at **/performance/views**.
+
+5.  Review the available properties described below to determine if they can be changed to improve performance.
+
+6.  Adjust any options as needed, click **Change**, and run the performance views and reports to understand the impact your changes made.
+
+7.  Adjust the settings as necessary.
 
 Test your views and adjust properties as your findings dictate.
 

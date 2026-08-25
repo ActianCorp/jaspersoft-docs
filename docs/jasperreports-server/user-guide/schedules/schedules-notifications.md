@@ -31,6 +31,7 @@ Enter one or more email addresses to send the output after the job has run. You 
 - **Message** - Content of the notification email.
 
 - Choose one of the radio buttons to specify how email recipients access the output:
+
   - **Include reports/dashboard as repository links in email body** - Sends a link to the output in the repository. Not available unless **Output to Repository** is selected on the Output Options tab.
 
   - **Include report/dashboard files as attachments** - Sends the output as attachments to the notification email. If you have selected multiple output formats, each one is attached as a separate file to the email notification.
@@ -59,9 +60,11 @@ Enter one or more email addresses to send notification of job success or failure
 - **Subject** – The subject line of the notification email.
 
 - **Send success notification** – Checkbox option that, when checked, sends a notification when the scheduled job runs.
+
   - **Success Message** – The message in the body of the notification email sent on success.
 
 - **Send failure notification** – Checkbox option that, when checked, sends a notification when the scheduled job fails to run.
+
   - **Failure Message** – The message in the body of the notification email sent on failure.
 
 - **Include report/dashboard job information** – A checkbox option that, if selected, includes the report or dashboard's label, ID, description, and job status in the notification email.

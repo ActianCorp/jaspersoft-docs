@@ -7,7 +7,7 @@ description: "The file sample-applicationContext-externalAuth-LDAP-mt.xml contai
 
 The file sample-applicationContext-externalAuth-LDAP\[-mt\].xml contains an LDAP-specific authentication manager, `ldapAuthenticationManager`, configured as follows.
 
-```
+``` xml
 <bean id="ldapAuthenticationManager" class="com.jaspersoft.jasperserver.api.security.
       externalAuth.wrappers.spring.JSProviderManager">
   <constructor-arg index="0">

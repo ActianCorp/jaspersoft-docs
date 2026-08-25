@@ -11,48 +11,50 @@ To create a connection based on a CSV file
 
 1.  Click the **New** button in the **Connections/Datasources** dialog and select **CSV File** from the list of data adapter types.
 
-|  |
-|----|
-| ![jss google maps dataadapter](../assets/images/jss-google-maps-dataadapter.png) |
-| *Figure 1: CSV Data Adapter* |
+    |  |
+    |----|
+    | ![jss google maps dataadapter](../assets/images/jss-google-maps-dataadapter.png) |
+    | *Figure 1: CSV Data Adapter* |
 
-1.  Set a name for the connection.
-2.  In the **File\URL** field, choose a CSV file or enter the URL where your CSV data is located.
-3.  (URL only.) If you entered a URL in the **CSV file** field, click the **Options** button to open the **Http Connection Options** dialog.
+2.  Set a name for the connection.
 
-|  |
-|----|
-| ![jss data adapter connection options](../assets/images/jss-data-adapter-connection-options.png) |
-| *Figure 2: HTTP Connection Options* |
+3.  In the **File\URL** field, choose a CSV file or enter the URL where your CSV data is located.
 
-In this dialog you can enter the following options:
+4.  (URL only.) If you entered a URL in the **CSV file** field, click the **Options** button to open the **Http Connection Options** dialog.
 
-- **Username** and **Password** (optional): The username and password to use if your CSV location requires authentication.
-- **Request Type**: Select GET (default) or POST.
-- To add a parameter to the request URL, click **Add** in the **URL Parameters** tab. Enter the name and value of your parameters in the **Parameter** dialog and click **OK**. For multiple parameters, add each parameter separately.
-- For a POST request, to add parameters to the body of the POST, click **Add** in the POST Parameters tab. Enter the name and value of your parameters in the Parameter dialog and click **OK**. For multiple parameters, add each parameter separately.
+    |  |
+    |----|
+    | ![jss data adapter connection options](../assets/images/jss-data-adapter-connection-options.png) |
+    | *Figure 2: HTTP Connection Options* |
 
-When you have configured your request, click **OK**.
+    In this dialog you can enter the following options:
 
-1.  Declare the fields in the data adapter.
+    - **Username** and **Password** (optional): The username and password to use if your CSV location requires authentication.
+    - **Request Type**: Select GET (default) or POST.
+    - To add a parameter to the request URL, click **Add** in the **URL Parameters** tab. Enter the name and value of your parameters in the **Parameter** dialog and click **OK**. For multiple parameters, add each parameter separately.
+    - For a POST request, to add parameters to the body of the POST, click **Add** in the POST Parameters tab. Enter the name and value of your parameters in the Parameter dialog and click **OK**. For multiple parameters, add each parameter separately.
 
-- If the first line in your file contains the names of the columns, click **Get column names from the first row of the file** and select the **Skip the first line** checkbox . This forces JasperReports to skip the first line (the one containing your column labels). In any case, the column names read from the file are used instead of the declared ones, so avoid modifying the names found with the **Get column names** button.
-- If the first line of your CSV file does not contain the column names, set a name for each column using the syntax `COLUMN_0, COLUMN_1`, and so on.
+    When you have configured your request, click **OK**.
 
-!!! warning
+5.  Declare the fields in the data adapter.
 
-    If you define more columns than the ones available, you get an exception at report filling time.
+    - If the first line in your file contains the names of the columns, click **Get column names from the first row of the file** and select the **Skip the first line** checkbox . This forces JasperReports to skip the first line (the one containing your column labels). In any case, the column names read from the file are used instead of the declared ones, so avoid modifying the names found with the **Get column names** button.
+    - If the first line of your CSV file does not contain the column names, set a name for each column using the syntax `COLUMN_0, COLUMN_1`, and so on.
 
-JasperReports assumes that for each row all the columns have a value (even if they are empty).
+    !!! warning
 
-1.  If your CSV file uses nonstandard characters to separate fields and rows, you can adjust the default setting for separators using the Separators tab.
+        If you define more columns than the ones available, you get an exception at report filling time.
 
-|                                                        |
-|--------------------------------------------------------|
-| ![csv separators](../assets/images/csv-separators.png) |
-| *Figure 3: Separators Tab*                             |
+    JasperReports assumes that for each row all the columns have a value (even if they are empty).
 
-1.  Click **Finish**.
+6.  If your CSV file uses nonstandard characters to separate fields and rows, you can adjust the default setting for separators using the Separators tab.
+
+    |                                                        |
+    |--------------------------------------------------------|
+    | ![csv separators](../assets/images/csv-separators.png) |
+    | *Figure 3: Separators Tab*                             |
+
+7.  Click **Finish**.
 
 ## Registration of the Fields for a CSV Data Adapter
 

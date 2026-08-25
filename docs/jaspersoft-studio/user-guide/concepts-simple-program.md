@@ -34,7 +34,7 @@ In conclusion, the following is an example of a simple program that shows how to
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="kw">new</span> net<span class="op">.</span><span class="fu">sf</span><span class="op">.</span><span class="fu">jasperreports</span><span class="op">.</span><span class="fu">engine</span><span class="op">.</span><span class="fu">export</span><span class="op">.</span><span class="fu">JRPdfExporter</span><span class="op">();</span></span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>           exporter.setParameter(
+<td><div class="language-text highlight"><pre><code>           exporter.setParameter(
                 JRExporterParameter.OUTPUT_FILE_NAME,
                 outFileName);
             exporter.setParameter(
@@ -53,7 +53,7 @@ In conclusion, the following is an example of a simple program that shows how to
             System.exit(1);
         }
     }
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>

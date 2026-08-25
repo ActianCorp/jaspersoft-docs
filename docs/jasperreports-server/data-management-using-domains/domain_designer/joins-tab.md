@@ -130,30 +130,28 @@ The entry for each component displays the following:
 
 1.  In the **Data Structure** panel, find the column you want to use for the left-hand side of your join and drag it into the **Design** panel in the location you want:
 
-- To create a new join on an empty canvas, drag the column anywhere on the **Design** panel. A new join is created, along with the join tree that contains it.
-- To add a new join tree when join trees are already present, drag the column to a blank space above, between, or below the existing join trees. The target area is highlighted with a thick blue line.
+    - To create a new join on an empty canvas, drag the column anywhere on the **Design** panel. A new join is created, along with the join tree that contains it.
+    - To add a new join tree when join trees are already present, drag the column to a blank space above, between, or below the existing join trees. The target area is highlighted with a thick blue line.
+    - To add a join to an existing join tree, drag the column to the join tree. The target join tree is outlined with a dashed line to show it is selected.
 
-<!-- -->
+    A join is added to the **Design** panel. The column you dragged is added on the left, and the **Drag a field here** is displayed on the right.
 
-- To add a join to an existing join tree, drag the column to the join tree. The target join tree is outlined with a dashed line to show it is selected.
+    ![js DomainDesigner create join left](../assets/images/js-DomainDesigner-create-join-left.png)
 
-A join is added to the **Design** panel. The column you dragged is added on the left, and the **Drag a field here** is displayed on the right.
+    *Figure 6: Creating a New Join*
 
-![js DomainDesigner create join left](../assets/images/js-DomainDesigner-create-join-left.png)
+2.  Select the join type (**Inner**, **Left Outer**, **Right Outer**, **Full Outer**) you want from the **Type** menu. This can be changed later. See [Join Type](../advanced_domains/advanced_joins.md) for more information.
 
-*Figure 6: Creating a New Join*
+3.  Drag the column for the right table to the **Drag a field here** box. Make sure to choose a column that is compatible with the column you already chose. The column is added to the join.
 
-1.  Select the join type (**Inner**, **Left Outer**, **Right Outer**, **Full Outer**) you want from the **Type** menu. This can be changed later. See [Join Type](../advanced_domains/advanced_joins.md) for more information.
-2.  Drag the column for the right table to the **Drag a field here** box. Make sure to choose a column that is compatible with the column you already chose. The column is added to the join.
+    ![js DomainDesigner create join right](../assets/images/js-DomainDesigner-create-join-right.png)
 
-![js DomainDesigner create join right](../assets/images/js-DomainDesigner-create-join-right.png)
+    *Figure 7: Adding the Right Table to a Join*
 
-*Figure 7: Adding the Right Table to a Join*
+4.  If you want to change the comparison operator for the join, select a different operator from the list. The list of available operators depends on the column type.
 
-1.  If you want to change the comparison operator for the join, select a different operator from the list. The list of available operators depends on the column type.
+    !!! warning
 
-!!! warning
+        1.  Comparison operators other than = (such as ≠, \>, \<, \>=, \<= ) generate a large amount of rows (similar to a Cartesian product) when used on their own. Best practice is to use them in conjunction with a = join on the same pair of tables. See [Comparison Operators](../advanced_domains/advanced_joins.md) for more information.
 
-    1.  Comparison operators other than = (such as ≠, \>, \<, \>=, \<= ) generate a large amount of rows (similar to a Cartesian product) when used on their own. Best practice is to use them in conjunction with a = join on the same pair of tables. See [Comparison Operators](../advanced_domains/advanced_joins.md) for more information.
-
-1.  If you want to add a weight to the join, first make sure that **Use minimum path joins** is selected in the join tree settings. Then select the weight you want from the **Weight** menu. Remember that a higher weight means a less desirable join. See [Join Weights](../advanced_domains/advanced_joins.md) for more information.
+5.  If you want to add a weight to the join, first make sure that **Use minimum path joins** is selected in the join tree settings. Then select the weight you want from the **Weight** menu. Remember that a higher weight means a less desirable join. See [Join Weights](../advanced_domains/advanced_joins.md) for more information.

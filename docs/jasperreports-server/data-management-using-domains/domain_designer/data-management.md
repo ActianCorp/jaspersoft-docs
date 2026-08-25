@@ -96,25 +96,26 @@ You can use an attribute for a schema name. When you use an attribute for the sc
 To use an attribute for a schema
 
 1.  Make sure you have defined the attribute you want. See the JasperReports Server Administrator Guide for information about creating attributes.
+
 2.  Enter the correct syntax for the attribute in the **You may also use an attribute for the schema name:** text box, depending on the attribute level:
 
-- `{attribute('attributeName'), 'server'}` for a server-level attribute.
-- `{attribute('attributeName', 'organization')}` for an organization-level attribute.
-- `{attribute('attributeName', 'user')}` for a user-level attribute.
+    - `{attribute('attributeName'), 'server'}` for a server-level attribute.
+    - `{attribute('attributeName', 'organization')}` for an organization-level attribute.
+    - `{attribute('attributeName', 'user')}` for a user-level attribute.
 
-If no level is specified, the server will search for the attribute hierarchically, starting at the `'user'` level:
+    If no level is specified, the server will search for the attribute hierarchically, starting at the `'user'` level:
 
-- `{attribute('attributeName')}`
+    - `{attribute('attributeName')}`
 
-![js DomainDesigner AddSchemaAttribute](../assets/images/js-DomainDesigner-AddSchemaAttribute.png)
+    ![js DomainDesigner AddSchemaAttribute](../assets/images/js-DomainDesigner-AddSchemaAttribute.png)
 
-*Figure 6: Using a server-level attribute for a schema name*
+    *Figure 6: Using a server-level attribute for a schema name*
 
-!!! note
+    !!! note
 
-    If you forget the attribute syntax, enter any string in the **You may also use an attribute for the schema name:** text box and click **Add to Selected Schemas** to see a hint with the correct syntax.
+        If you forget the attribute syntax, enter any string in the **You may also use an attribute for the schema name:** text box and click **Add to Selected Schemas** to see a hint with the correct syntax.
 
-1.  Click **Add to Selected Schemas** to add the attribute to the **Selected Schemas** list.
+3.  Click **Add to Selected Schemas** to add the attribute to the **Selected Schemas** list.
 
 The attribute is resolved to its current value and the corresponding schema is shown in the **Selected Schemas** list. A special icon ![js DomainDesigner icon AttributeSchema](../assets/images/js-DomainDesigner-icon-AttributeSchema.png) appears.
 

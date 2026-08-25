@@ -7,7 +7,7 @@ description: "If the path of the war archive exceeds the maximum length allowed 
 
 If the path of the war archive exceeds the maximum length allowed by Windows, you get an error message like the one shown below.
 
-```
+``` yaml
 java.io.IOException: Cannot run program "C:\Program
 Files\Java\jdkx.x.x_xx\jre\bin\java.exe": CreateProcess error=206, The filename
 or extension is too long

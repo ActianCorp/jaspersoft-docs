@@ -12,11 +12,12 @@ The view is defined in terms of an OLAP connection and an MDX query. The OLAP co
 To open the sample OLAP view
 
 1.  Click “View \> Repository” to display the Repository panel.
+
 2.  In the Folders panel, expand the folder “Organization \> Analysis Components \> Analysis Views”.
 
-A list of OLAP views appears in the Repository panel.
+    A list of OLAP views appears in the Repository panel.
 
-1.  Click the name “Foodmart Sample Analysis View” to open the view.
+3.  Click the name “Foodmart Sample Analysis View” to open the view.
 
 The view displays the tool bar and navigation table.
 

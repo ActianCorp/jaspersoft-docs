@@ -69,13 +69,16 @@ For more information about domains, refer to the JasperReports Server User Guide
 The following example shows the JSON response for a domain with:
 
 - A set named expense containing:
+
   - An item named Exp Date of type Date
   - An item named Amount of type BigDecimal
+
 - A set named store containing:
+
   - An item named Store Type of type String
   - ...
 
-```
+``` json
 {
     "rootLevel": {
         "id":"root",
@@ -130,7 +133,7 @@ The following example shows the JSON response for a domain with:
 
 The following example shows the same domain as returned by the metadata service in XML format:
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <domainMetadata>
     <rootLevel>
@@ -222,7 +225,7 @@ GET http://\<host\>:\<port\>/jasperserver-pro/rest_v2/resources/Domains/supermar
 
 This descriptor contains the Domain schema as an internal resource:
 
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <semanticLayerDataSource>
     <creationDate>2013-10-10T15:30:31</creationDate>

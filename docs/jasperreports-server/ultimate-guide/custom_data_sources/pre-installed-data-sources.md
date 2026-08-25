@@ -75,7 +75,7 @@ To make pre-installed data source types available in the UI
 
 In the following example, JSON, JSON (Before 6.4), and Remote XML data source types are commented out so they appear in the drop-down menu in the **New Data Source** dialog:
 
-```
+``` xml
 <util:set id="customDataSourcesToHide">
         <value>remoteXmlDataSource2</value> <!-- Full domain support remote XML custom data source -->
         <value>remoteXmlDataSource</value>  <!-- Simple single table remote XML custom data source -->
@@ -101,14 +101,18 @@ After a data source type has been enabled in the UI, you can create an instance 
 To create a data source using a query example
 
 1.  Log on as an administrator.
+
 2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
+
 3.  In the Type field, select a data source that you enabled, for example **JSON Data Source (Before 6.4)** or **Remote XML Data Source**. The fields on the page change to prompt for the connection information required for your data source.
 
-You have the option to use attributes in the values of data source parameters. See the JasperReports Server Administrator Guide for more information.
+    You have the option to use attributes in the values of data source parameters. See the JasperReports Server Administrator Guide for more information.
 
-1.  Fill in the required connection information and enter the query you want to use.
-2.  Enter a name for the data source and an optional description. The Resource ID is generated from the name you enter. If you haven't already specified a location, expand the folder tree and select the location for your data source.
-3.  Click **Save** in the dialog. The data source appears in the repository.
+4.  Fill in the required connection information and enter the query you want to use.
+
+5.  Enter a name for the data source and an optional description. The Resource ID is generated from the name you enter. If you haven't already specified a location, expand the folder tree and select the location for your data source.
+
+6.  Click **Save** in the dialog. The data source appears in the repository.
 
 ## Understanding the Pre-installed Data Sources
 

@@ -26,7 +26,7 @@ This chapter contains the following sections:
 
 The properties structure passed to the `dashboard` function is defined as follows:
 
-```
+``` json
 {
     "title": "Dashboard Properties",
     "type": "object",
@@ -113,7 +113,7 @@ The properties structure passed to the `dashboard` function is defined as follow
 
 The `dashboard` module exposes the following functions:
 
-```
+``` javascript
 define(function () {
 
     /**
@@ -237,7 +237,7 @@ define(function () {
 
 The Dashboard Data structure represents the rendered dashboard object manipulated by the dashboard function. Even though it's named "data," it does not contain any data in the dashboard or reports, but rather data about the dashboard. For example, the Dashboard Data structure contains information about the items in the dashboard, called dashlets.
 
-```
+``` json
 {
     "title": "Dashboard Data",
     "description": "A JSON Schema describing a Dashboard Data",
@@ -350,7 +350,7 @@ The Dashboard Data structure represents the rendered dashboard object manipulate
 
 To run a dashboard on the server and render it in Visualize.js, create a dashboard object and set its properties. Like rendering a report, the resource property determines which dashboard to run, and the container property determines where it appears on your page.
 
-```
+``` javascript
 var dashboard = v.dashboard({
     resource: "/public/test_dashboard",
     container: "#container",
@@ -361,7 +361,7 @@ var dashboard = v.dashboard({
 
 The following code example shows how to define a dashboard ahead of time, then render it at a later time.
 
-```
+``` javascript
 var dashboard = v.dashboard({
     resource: "/public/test_dashboard",
     runImmediately: false
@@ -388,18 +388,21 @@ As of JasperReports Server 7.9, the server can provide the code to embed any das
 To copy the embed code of a dashboard:
 
 1.  Log into JasperReports Server and browse the repository to find the dashboard you want to embed.
+
 2.  View the dashboard so that it is displayed in the server's Dashboard Designer.
+
 3.  Click the ![js Viewer icon EmbedCode](assets/images/js-Viewer-icon-EmbedCode.png) icon in the menu bar to view the embed code.
+
 4.  The **Dashboard Embed Code** dialog shows you the Visualize.js code and a preview of the dashboard as it is currently saved. Select **Copy Code** to copy the entire code block to your clipboard. You can also highlight selected parts of the code and use Ctrl-C (Command-C on Mac OS), for example if you want only the main function.
 
-|  |
-|----|
-| ![js Dashboard GetEmbedCode](assets/images/js-Dashboard-GetEmbedCode.png) |
-| *Figure 1: The Embed Code of a Dashboard* |
+    |  |
+    |----|
+    | ![js Dashboard GetEmbedCode](assets/images/js-Dashboard-GetEmbedCode.png) |
+    | *Figure 1: The Embed Code of a Dashboard* |
 
-The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
+    The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
 
-1.  Alternatively, select **Open in JSFiddle** to load the same code into a new Fiddle, an online JavaScript viewer and interactive editor. This lets you modify the JavaScript or HTML, and add CSS if desired, then see the results in real time.
+5.  Alternatively, select **Open in JSFiddle** to load the same code into a new Fiddle, an online JavaScript viewer and interactive editor. This lets you modify the JavaScript or HTML, and add CSS if desired, then see the results in real time.
 
 If you have write permission to the dashboard, you can switch to editing mode and still get the embed code at any time. Regardless of when you get the embed code, Visualize.js always displays the latest saved version of a dashboard, as determined by the repository URL in the embed code.
 
@@ -409,7 +412,7 @@ When displayed through Visualize.js, the elements of a dashboard, called dashlet
 
 You can order the refresh or re-render of the dashboard, as well as cancel the refresh if necessary, for example if it takes too long.
 
-```
+``` javascript
 var dashboard = v.dashboard({
     resource: "/public/test_dashboard",
     container: "#container",
@@ -434,7 +437,7 @@ dashboard.run().done(function() {
 
 By listening for the `dashboardCompleted` event, you can give information or act when a dashboard finishes rendering.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -462,7 +465,7 @@ Visualize.js dashboard input controls are rendered directly by the server. If a 
 
 You can also set input controls programmatically; for example you might update a dashboard based on other events in your web application. Input controls are called parameters within Visualize.js dashboards. To set input controls programmatically, you must first discover the list of available parameters:
 
-```
+``` javascript
 var dashboard = v.dashboard({
     resource: "/public/test_dashboard",
     container: "#container",
@@ -473,7 +476,7 @@ var dashboard = v.dashboard({
 
 Then you read their values, modify them, and set new values. The dashboard then renders with the new input parameter values:
 
-```
+``` javascript
 var dashboard = v.dashboard({
     resource: "/public/test_dashboard",
     container: "#container",
@@ -494,15 +497,18 @@ Parameters are always sent as arrays of quoted string values, even if there is o
 The following values have special meanings:
 
 - `""`: An empty string, a valid value for a text input and some selectors.
+
 - `"~NULL~"`: Indicates a NULL value (absence of any value), and matches a field that has a NULL value, for example if it has never been initialized.
+
 - `"~NOTHING~"`: Indicates the lack of a selection. The meaning depends on the type of parameter:
+
   - In multi-select parameters, this is equivalent to indicating that nothing is deselected, thus all are selected.
   - In a single-select non-mandatory parameter, this corresponds to no selection (displayed as `---`).
   - In a single-select mandatory parameter, the lack of selection makes it revert to its default value.
 
 In the following example, a button resets the parameters to their default values by sending an empty parameter set (`params()`). First the HTML to define the container and the button:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 
 <button>Reset params</button>
@@ -513,7 +519,7 @@ In the following example, a button resets the parameters to their default values
 
 And then the JavaScript to perform the action:
 
-```
+``` javascript
 function handleError(e) {
     alert(e);
 }
@@ -541,7 +547,7 @@ visualize({
 
 In another example, the script initializes the parameters and the HTML displays a button when they are ready to be applied:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 
 <br/>
@@ -553,7 +559,7 @@ In another example, the script initializes the parameters and the HTML displays 
 
 And then the JavaScript to initialize the parameters and enable the button for the user:
 
-```
+``` javascript
 function handleError(e) {
     alert(e);
 }
@@ -623,7 +629,7 @@ To implement undo and redo actions, you must also use event listeners to know wh
 
 In the following example, the HTML has a table to display the input control values and buttons to perform the undo and redo actions:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 
 <table id="params">
@@ -646,7 +652,7 @@ In the following example, the HTML has a table to display the input control valu
 
 The CSS sets the size of the container to be large enough for a dashboard, and sets the table heading color for visibility:
 
-```
+``` bash
 #container {
   width: 1000px;
   height: 700px;
@@ -659,7 +665,7 @@ th {
 
 The JavaScript has listeners for the `canUndo` and `canRedo` events to set the visibility of the undo and redo buttons. When the buttons are enabled and the user clicks one, the code takes the corresponding action then displays the ids and values of the input controls in the table. By combining the event listeners and actions, the page allows the user to step backward and forward through various sets of input controls in the dashboard.
 
-```
+``` javascript
 visualize({
     auth: {...
     }
@@ -826,7 +832,7 @@ The following table shows the new default action for each combination of link an
 
 The following code samples demonstrate the default handling of hyperlinks and the effect of defining overrides that remove the default handling. First the HTML for some buttons:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 
 <button id="btn1">Extend default hyperlink behavior</button>
@@ -836,7 +842,7 @@ The following code samples demonstrate the default handling of hyperlinks and th
 
 And now some hyperlink overrides:
 
-```
+``` javascript
 visualize({
     auth: {
         name: "jasperadmin",
@@ -875,7 +881,7 @@ visualize({
 
 However, if your dashboards are designed for custom drill-down, you can still define custom link handling so your users can access more reports and more data. Be sure to modify your code to handle all three function parameters for `function(ev, link, default)`, as shown in this updated code sample:
 
-```
+``` javascript
 var dashboard = v.dashboard({
     resource: "/public/test_dashboard",
     container: "#container",
@@ -914,7 +920,7 @@ Like a report, you can export a dashboard by invoking its `export` function and 
 
 In the following examples, the HTML page has a container for the dashboard and a button for the export, and the CSS configures a simple loading animation:
 
-```
+``` html
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
 
 <button id="button">Export</button>
@@ -927,7 +933,7 @@ In the following examples, the HTML page has a container for the dashboard and a
 
 CSS:
 
-```
+``` bash
 #container {
     width: 1110px;
     height: 630px;
@@ -962,7 +968,7 @@ The default value is `false`. If you do not provide any value for the `detailed`
 
 In the first JavaScript example below, the button exports the PDF of the dashboard in the detailed export type, however the button is disabled until the dashboard has finished running and returned success. When the button is enabled and clicked, the export function is called with the `"pdf"` format in the detailed export type. When the export is ready, the PDF file is made available to download in the browser.
 
-```
+``` javascript
 visualize({
   auth: { ...
   }
@@ -1010,7 +1016,7 @@ To get the list of all supported export formats, use the following functions:
 
 This example uses the function for the screenshot export type. This example uses the same HTML and CSS code shown above.
 
-```
+``` javascript
 visualize({
   auth: { ...
   }
@@ -1075,7 +1081,7 @@ visualize({
 
 When you want to reuse a container for other contents and free the dashboard resources, use the `destroy` function to close it.
 
-```
+``` javascript
 var dashboard = v.dashboard({
     resource: "/public/test_dashboard",
     container: "#container"

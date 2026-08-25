@@ -16,6 +16,7 @@ You can drag-and-drop the objects instead of using the paste menu item. Move fol
 To move folders and resources by cutting and pasting
 
 1.  Log in to the server as a user who has these permissions:
+
     - Read permission on the folder or resource to move
     - Write permission on the destination folder<br>
       For example, log in as joeuser (use the password, joeuser).
@@ -33,6 +34,7 @@ To move folders and resources by cutting and pasting
     *Figure 1: New Financial Reports Folder*
 
 5.  The Financial Reports folder deserves a more prominent location. Move it up one level:
+
     1.  In **Folders**, right-click Financial Reports, and select **Cut**.
 
     2.  Right-click **Reports**, and select **Paste**.

@@ -81,7 +81,7 @@ The inputControls service uses either XML or JSON data structures. If no `Accept
 
 The body of the response contains an object defining the structure and optionally the state of the input controls. The following examples show the same input control in both the XML and JSON formats, including values in the state objects:
 
-```
+``` xml
 <inputControls>
     <inputControl>
         <description>Country multi select</description>
@@ -185,7 +185,7 @@ The body of the response contains an object defining the structure and optionall
 
 The following example shows two more JSON objects for single value number and date types of input controls. The number data type has limits, in this example 1 ≤ number ≤ 50, that your application should enforce when users input a value. Independently of the input limits, the values of these input controls are used as limits for a comparison filter, for example "store ID that is less than or equal to" or "Opening date after". Note that the type of filter is not reflected in the input control structure other than through a judiciously named label. Your app usually needs to know the structure of a report and the use of its input controls to properly render a UI that reflects the actual filters.
 
-```
+``` json
 {
     "inputControl": [
         {
@@ -304,7 +304,7 @@ The input control structure also includes certain validation rules that depend o
 
 - mandatoryValidationRule - This input is required (as indicated by `"mandatory": true`), and your client should ensure that the user enters a value.
 
-```
+``` text
     "mandatoryValidationRule" : {
         "errorMessage" : "This field is mandatory so you must enter data."
     }
@@ -312,7 +312,7 @@ The input control structure also includes certain validation rules that depend o
 
 - dateTimeFormatValidationRule - This input is a date or time value and your client should ensure that the user enters a valid date or time.
 
-```
+``` text
     "dateTimeFormatValidationRule" : {
         "errorMessage" : "Specify a valid date value.",
         "format" : "yyyy-MM-dd"
@@ -382,7 +382,7 @@ The body of the response contains a list of state objects for all input controls
 
 The following examples show the same state objects in both the XML and JSON formats:
 
-```
+``` xml
 <inputControlStateList>
     <inputControlState>
         <id>Country_multi_select</id>
@@ -443,7 +443,7 @@ The internal structure of the `inputControlState` object in an `inputControls/Va
 
 The following example shows two more JSON `inputControlState` objects for single value number and date types of input controls.
 
-```
+``` json
 {
     "inputControlState": [
         {
@@ -602,7 +602,7 @@ There are two forms of this operation, one that returns the full input control s
 
 When sending the values shown in the table above, the JSON response is a list of input control structures that begins with the following element:
 
-```
+``` json
 {
     "inputControl": [
         {
@@ -730,7 +730,7 @@ In the second form, you send the same content in the request, but the URL includ
 
 When sending the values shown in the table above, the JSON response is a list of state objects that begins with the following element:
 
-```
+``` json
 {
     "inputControlState": [
         {
@@ -766,9 +766,13 @@ This method is used to get the total available values and limit the count of the
 Provide inputs for the following fields in the request body:
 
 - Offset - Specify the values to be returned for each input control.
+
 - Limit - Specify the total number of values to be returned for each input control.
+
 - Criteria - Specify the texts or words to be returned for each input control. If specified, then it searches not only for the complete text, but also for the values provided in the texts for the specified criteria. For example, specifying "ry" in the criteria field returns all the values containing "ry" texts.
+
 - Select - This field is newly added. Specify either "selectedValues" or "allValues" in this field.
+
   - If "selectedValues" is chosen, then the returned available values have the default-selected values.
   - If "allValues" is chosen, then the returned available values have all the values selected.
   - If any other value other than "selectedValues" or "allValues" is provided, then this field is ignored.
@@ -881,7 +885,7 @@ Pass the following arguments to get the total available values of the input cont
 
 When sending the values shown in the table above, the JSON response has the total available values but the number of values are limited based on the offset, limit, and search criteria.
 
-```
+``` json
 {
   "inputControlState": [
     {
@@ -1006,7 +1010,7 @@ Pass the following arguments to get only the default-selected values of the inpu
 
 The following example shows a simple use of the `select` field in JSON:
 
-```
+``` json
 {
 
     "selectedValue": [
@@ -1052,7 +1056,7 @@ The following example shows a simple use of the `select` field in JSON:
 
 The following example shows a simple use of the `select` field in XML:
 
-```
+``` xml
 <selectedValues>
 
     <selectedValue id="Country_multi_select">

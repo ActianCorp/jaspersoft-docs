@@ -63,22 +63,24 @@ The default installation of JasperReports Server includes the following users:
 
 !!! warning
 
-    Due to security concerns, we recommend that you remove any users that are not being used in your instance, whether created by default or otherwise. Advise your users to change their passwords regularly. To configure periodic expiration of passwords, refer to the <span>JasperReports Server Security Guide</span>.
+    Due to security concerns, we recommend that you remove any users that are not being used in your instance, whether created by default or otherwise. Advise your users to change their passwords regularly. To configure periodic expiration of passwords, refer to the JasperReports Server Security Guide.
 
 ## Viewing User Properties
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
+
 2.  Select **Manage \> Users** or on the Admin Home page, click **Manage** in the Users workflow block. The Manage Users page displays the users in each organization and the properties of the selected user.
 
-![js ManageUsers overview](../assets/images/js-ManageUsers-overview.png)
+    ![js ManageUsers overview](../assets/images/js-ManageUsers-overview.png)
 
-*Figure 1: Manage Users Page*
+    *Figure 1: Manage Users Page*
 
-The columns in the Users panel list the user ID, the username, and the organization of each user. The list of users includes everyone in the chosen organization and its suborganizations. The same user ID may appear more than once, indicating that users with the same ID were created in different organizations.
+    The columns in the Users panel list the user ID, the username, and the organization of each user. The list of users includes everyone in the chosen organization and its suborganizations. The same user ID may appear more than once, indicating that users with the same ID were created in different organizations.
 
-In this example, the system admin can see all users in all organizations by selecting the root of the Organization hierarchy. There are always multiple `jasperadmin` users in a hierarchy of organizations, because it is the default administrator ID in each organization.
+    In this example, the system admin can see all users in all organizations by selecting the root of the Organization hierarchy. There are always multiple `jasperadmin` users in a hierarchy of organizations, because it is the default administrator ID in each organization.
 
 3.  To locate a user:
+
     - Browse for users - Expand the organization hierarchy in the left-panel, and select an organization or suborganization. Scroll through the list of users if it is too long to fit on your screen.
     - Search for a user - Select the organization (or any parent organization) and enter a search string in the **Search** field of the Users panel. The search results show all user ID or names in the selected organization and suborganizations that match the search string.
 
@@ -88,19 +90,22 @@ In this example, the system admin can see all users in all organizations by sele
 
 !!! note
 
-    As the administrator of a given organization, you can see the roles defined in your organization and its suborganizations but not the parent organization (except for certain system-wide roles). A user may have roles defined and assigned from a parent organization that are not visible to the administrator of the user's organization. For more information, see <a href="managing_roles.md">Managing Roles</a>.
+    As the administrator of a given organization, you can see the roles defined in your organization and its suborganizations but not the parent organization (except for certain system-wide roles). A user may have roles defined and assigned from a parent organization that are not visible to the administrator of the user's organization. For more information, see [Managing Roles](managing_roles.md).
 
 ## Creating a User
 
 1.  Log in as an administrator (`jasperadmin` in the user's intended organization or any parent organization, or `superuser`).
+
 2.  Select **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+
 3.  In the Organizations panels, select the organization for the new user and click **Add User**. The Add User dialog appears.
 
-![js ManageUsers AddUser](../assets/images/js-ManageUsers-AddUser.png)
+    ![js ManageUsers AddUser](../assets/images/js-ManageUsers-AddUser.png)
 
-*Figure 2: Adding a User*
+    *Figure 2: Adding a User*
 
 4.  Enter the following information:
+
     - User name - The new user's full name. The name is optional but recommended. It appears in the menu bar of the UI when the user is logged in.
     - User ID - Generated automatically from the username. You can accept the suggested value or type your own. The user ID is used to log into JasperReports Server, and for administrators to manage users and resources. The User ID must be unique within the organization, but may exist in multiple organizations.
     - Email - This is optional but must be in a valid email format.
@@ -118,22 +123,29 @@ One way to assign roles to a user is to edit the user's properties. Alternativel
 To edit a user's properties:
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
+
 2.  Click **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+
 3.  In the Organizations panel, select the user's organization or a parent organization.
+
 4.  In the Users panel, select the user.
+
 5.  In the user's Properties panel, click **Edit**.
 
-![js ManageUsers EditUser](../assets/images/js-ManageUsers-EditUser.png)
+    ![js ManageUsers EditUser](../assets/images/js-ManageUsers-EditUser.png)
 
-*Figure 3: Editing the Properties of a User*
+    *Figure 3: Editing the Properties of a User*
 
 6.  Edit the user's properties as needed. You can't edit the user ID. It always has the value defined when the user was created originally.
+
 7.  To assign or remove roles from the user, select the roles, and use the arrow buttons between the Roles Available and Roles Assigned lists.
 
-The Roles Available list includes any role in the organizations of the current administrator, as well as the special system-wide roles. For more information on creating and adding roles, see [Managing Roles](managing_roles.md).
+    The Roles Available list includes any role in the organizations of the current administrator, as well as the special system-wide roles. For more information on creating and adding roles, see [Managing Roles](managing_roles.md).
 
 8.  For information about attributes on the user, see [Managing User Attributes](managing_attributes.md).
+
 9.  Click **Save** to keep your changes.
+
 10. In the Properties panel, click **Login as User** to test the user's permissions, as explained in [Testing User Permissions](../repository/permissions.md).
 
 Logging in as another user is also necessary when you are maintaining resources that use absolute references in the repository. For more information, see [Referencing Resources in the Repository](../repository/multiple_organizations.md).
@@ -181,7 +193,7 @@ An Administrator can re-enable locked-out users from their organizations by sele
 
 If a superuser account gets locked out, then such an account can be re-enabled by another superuser, or by a DB Administrator (DBA) by performing the following command to update the JIUser table, which correct the following issue:
 
-```
+``` sql
 update jiuser set enabled=‘t’ where username=‘superuser’;
 ```
 
@@ -201,7 +213,7 @@ The following security considerations should be taken before re-enabling a user'
 
 - You can enable logging of user login events and failed attempts by setting:
 
-```
+``` text
 com.jaspersoft.jasperserver.api.security.externalAuth.wrappers.spring.ldap.JSLdapAuthenticationProvider
 com.jaspersoft.jasperserver.api.security.internalAuth.InternalDaoAuthenticationProvider
 ```

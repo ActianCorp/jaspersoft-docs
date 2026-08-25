@@ -45,7 +45,7 @@ Use the following methods to verify the server information, such as version numb
 
 The server returns a structure containing the information in the requested format, XML, or JSON:
 
-```
+``` xml
 <serverInfo>
   <build>20141121_1750</build>
   <dateFormatPattern>yyyy-MM-dd</dateFormatPattern>

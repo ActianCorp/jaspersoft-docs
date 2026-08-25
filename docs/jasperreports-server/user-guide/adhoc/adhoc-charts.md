@@ -26,8 +26,10 @@ The initial display reflects only the measures you add. It does not change when 
 All available fields are listed in the Data Selection panel, as either standard fields or measures.
 
 - Standard fields can be added as:
+
   - For Old Layout Band, to a column or row.
   - For New Layout Band, to the supported drop areas according to the visualization type selected.
+
 - Measures contain summarized values. They are typically numeric fields that determine the length of bars, size of pie slices, location of points (in line charts), and height of areas. They can be added to the drop areas, but must all be in the same target — that is:<br>
   In Old Layout Band you can add one or more measures to the chart as columns, or add one or more measures to the chart as rows, but you cannot have one measure as a column and another as a row in the same chart.<br>
   In New Layout Band, for example in **Column** chart you can add fields to Y-axis and/ or Columns, and add one or more measures to the Y-axis, but you cannot add measures to the Columns.<br>
@@ -614,15 +616,22 @@ Rows → Unused</td>
 To recreate this view
 
 1.  Select **Create \> Ad Hoc View**.
+
 2.  In the Select Data wizard, select **foodmart data for crosstab** and click **OK**.
+
 3.  Click ![js icon column simple](../assets/images/js-icon-column%20simple.png) to open the Visualization Selector.
+
 4.  Click ![js AdHoc icon chart column](../assets/images/js-AdHoc-icon-chart-column.png) and then **Apply and Close**.
+
 5.  Drag the following from the Fields panel to the Layout Band:
+
     - Store Sales from **Measures** to **Columns**. The view changes to show a column with the total. No slider is added for measures.
     - Product Family from **Fields** to **Columns**. The **Data Level** area is shown in the **Filters** panel, with a **Columns** slider added.
     - Date from **Fields** to **Rows**. A **Rows** slider is added to the **Data Level** area in the **Filters** panel.
+
 6.  Use the sliders to see how the view changes.<br>
     The sliders help you explore your data visually in a number of ways:
+
     - The slider reflects the hierarchy of the row or column groups, as determined by the order in which fields are arranged in the Layout Band.
     - Hovering over a setting on the slider shows the name of the field or dimension corresponding to that setting.
     - When you pivot a chart, slider settings are preserved and applied to the new target. For example, if you have the **Row** slider set to Month, the **Column** slider is set to Month when you pivot. See Pivoting a Chart for more information.
@@ -633,6 +642,7 @@ To recreate this view
 If your chart includes data based on a date field, you can change the level of aggregation for the time data. To select the unit of time to chart:
 
 - Right-click on the date field in the Layout Band and select **Change Grouping**. Then select the time period you want from the cascading sub-menu:
+
   - Year
 
   - Quarter (examples: Q1, Q2, etc.)

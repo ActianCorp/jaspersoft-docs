@@ -71,6 +71,7 @@ Each .properties file is a text file containing key-value pairs for a locale:
 File naming follows a strict convention where all files have the same base name, with additional codes that indicate the locale of the file.
 
 - File names are of the form \<base_name\>\_\<locale\>.properties, where:
+
   - \<base_name\> is arbitrary and the same for all files.
   - \<locale\> is a Java-compliant locale identifier, for example `fr` or `fr_CA`.
   - You should include a default .properties file, which is used for the default locale or when a key is missing or empty in one of the other .properties files. The default properties file name is \<base_name\>.properties. It does not have a language extension.

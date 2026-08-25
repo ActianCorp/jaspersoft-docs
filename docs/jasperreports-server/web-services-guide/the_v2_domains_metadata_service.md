@@ -59,9 +59,12 @@ For more information about Domains, refer to the JasperReports® Server User Gui
 The following example shows the JSON response for a Domain with:
 
 - A set named expense containing:
+
   - An item named Exp Date of type Date
   - An item named Amount of type BigDecimal
+
 - A set named store containing:
+
   - An item named Store Type of type String
   - ...
 

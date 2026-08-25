@@ -9,7 +9,7 @@ Each OLAP view operates against a particular cube within the OLAP connection. Th
 
 MDX is a query language used to define the contents of an OLAP view. It is also used when by Ad Hoc views built on OLAP client connections. Originating at Microsoft, the language is widely used for multidimensional data retrieval. An MDX query, coupled with an OLAP schema, retrieves data from a database. The following is a typical MDX query:
 
-```
+``` sql
 select {[Measures].[Unit Sales], [Measures].[Store Cost], [Measures].[Store Sales]} ON
 COLUMNS, {([Promotion Media].[All Media], [Product].[All Products])} ON ROWS
 from [Sales]

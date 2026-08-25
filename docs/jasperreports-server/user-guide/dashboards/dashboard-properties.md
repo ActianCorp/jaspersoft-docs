@@ -11,7 +11,7 @@ To view and edit the Dashboard Settings
 
 In the Dashboard Designer, Dashboard Settings display in the settings panel.
 
-<img src="../assets/images/js-Dashboard-DashboardProperties%28Print%29.png" alt="js Dashboard DashboardProperties(Print)" />
+![js Dashboard DashboardProperties(Print)](../assets/images/js-Dashboard-DashboardProperties%28Print%29.png)
 
 *Figure 1: Dashboard Settings*
 
@@ -32,10 +32,15 @@ In the Dashboard Designer, Dashboard Settings display in the settings panel.
 ### Dashlet
 
 - **Show Filter Dashlet as pop-up window**: Click the switch to turn the setting on, when you want the filter dashlet to appear as a pop-up window instead of a dashlet pinned on the dashboard.
+
 - **Show borders**: This setting is on by default. Click the switch to turn the setting off, to hide the dashlet borders.
+
 - **Outer margin (pixels)**: Enter the required width, in pixels, of the margins between dashlets.
+
 - **Inner padding (pixels)**: Enter the required width, in pixels, of the padding inside each dashlet.
+
 - **Title bar**:
+
   - Text: Text color for the title bars of all the dashboard's dashlets. Select the color by using the color picker or by entering a color value (hex, rgb, and rgba color formats are supported).
 
   - Background: Background color for the title bars of all the dashboard's dashlets. Select the color by using the color picker or by entering a color value (hex, rgb, and rgba color formats are supported).
@@ -50,7 +55,7 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 
 ## General and Dashlet Appearance Settings for Reports and Ad Hoc View Dashlets
 
-<img src="../assets/images/js-Dashboard-DashletProperties%28Print%29.png" alt="js Dashboard DashletProperties(Print)" />
+![js Dashboard DashletProperties(Print)](../assets/images/js-Dashboard-DashletProperties%28Print%29.png)
 
 *Figure 2: General and Dashlet Appearance Settings for Reports and Ad Hoc View Dashlets*
 
@@ -93,6 +98,7 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 - **Enable hyperlinks**: Click the **Enable hyperlinks** switch to turn it on.
 
 - **Action**: Select the link behavior for this dashlet:
+
   - **Update page**: Select this option to update the dashboard's contents when a user clicks a link in the dashlet.
 
   - **Open new page**: Select this to have the dashlet open a web page or report, dashboard, or an Ad Hoc view in the repository in a new browser tab or window when a user clicks the dashlet. Click **Browse** to select a resource from the repository.
@@ -242,7 +248,7 @@ To open Parameter Mapping
 1.  Open a dashboard with filters, such as the Sales Dashboard created in [Creating a Dashboard](dashboards-creating-simple.md), in the Dashboard Designer.
 2.  Click ![js Dashboard icon NewParameterMapping](../assets/images/js-Dashboard-icon-NewParameterMapping.png) to open Parameter Mapping.
 
-<img src="../assets/images/js-Dashboard-ParameterMapping.png" alt="js Dashboard ParameterMapping" />
+![js Dashboard ParameterMapping](../assets/images/js-Dashboard-ParameterMapping.png)
 
 *Figure 9: Parameter Mapping for the Sales Dashboard*
 

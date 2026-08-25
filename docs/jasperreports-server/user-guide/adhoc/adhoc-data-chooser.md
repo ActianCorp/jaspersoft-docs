@@ -8,7 +8,9 @@ description: "To design a Domain Topic or a view based on a domain, use the Data
 To design a Domain Topic or a view based on a domain, use the Data Chooser wizard. To open the Data Chooser wizard:
 
 1.  Click **Create** \> **Ad Hoc View**.
+
 2.  Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and browse to a Domain, then click **Choose Data** to access the following pages of the Data Chooser:
+
     - The Select Fields Page – Choose the fields to make available in the Ad Hoc Editor.
     - The Pre-filters Page – Define a filter on any field, with the option of prompting for user input, or to compare fields.
     - The Display Page – Change the order and names of fields that appear in the Ad Hoc Editor.
@@ -25,9 +27,13 @@ Use this page to choose fields and sets of fields to use in the view or make ava
 *Figure 1: The Fields Page of the Data Chooser*
 
 - The Source panel displays the sets of fields in the Domain. Use ![js AdHoc icon hide filter detail](../assets/images/js-AdHoc-icon-hide-filter-detail.png) and ![js AdHoc icon show filter detail](../assets/images/js-AdHoc-icon-show-filter-detail.png) to collapse or expand each set.
+
 - The Selected Fields panel shows the items that you selected. You can move a field or set back and forth between the panels by dragging, double-clicking, or selecting the item and clicking an arrow button, such as ![js AdHoc icon Sort On Arrow](../assets/images/js-AdHoc-icon-Sort-On-Arrow.png).
+
 - When you select any field from a set in the Source panel, the set name appears with the field in the Selected Fields panel. If you do not want sets, then use the settings on the Display page.
+
 - Some Domains define sets that are not joined, also called data islands. When you select a field from such a set, the behavior on the Select Fields page depends on how the joins were created in the Domain:
+
   - If the Domain uses basic joins, the unjoined sets are not available. The Domain Designer only creates basic joins.
   - If the Domain uses advanced joins, all joins are available regardless of the join set of the fields you add. In this case, you must manually make sure that you do not add fields that are in different data islands to a single Ad Hoc view. Otherwise you receive errors when attempting to work with the view.
 

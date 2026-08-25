@@ -141,7 +141,7 @@ The recurrence can be defined as follows:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>&lt; &lt;calendarTrigger&gt;
+<td><div class="language-text highlight"><pre><code>&lt; &lt;calendarTrigger&gt;
     &lt;endDate&gt;2012-12-12T12:12:12-08:00&lt;/endDate&gt;
     &lt;timezone&gt;America/Los_Angeles&lt;/timezone&gt;
     &lt;version&gt;0&lt;/version&gt;
@@ -154,7 +154,7 @@ The recurrence can be defined as follows:
     &lt;months&gt;6&lt;/months&gt;
     &lt;weekDays&gt;3&lt;/weekDays&gt;
     &lt;weekDays&gt;5&lt;/weekDays&gt;
-  &lt;/calendarTrigger&gt;</code></pre></td>
+  &lt;/calendarTrigger&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -99,7 +99,7 @@ GET http://localhost:8080/jasperserver/rest_v2/roles
 
 This method returns the set of all default system and root roles defined on a server with the sample data (no organization roles have been defined yet):
 
-```
+``` xml
 <roles>
   <role>
     <externallyDefined>false</externallyDefined>
@@ -182,7 +182,7 @@ After adding roles to an organization, the following example shows the simple ro
 
 GET http://localhost:8080/jasperserver-pro/rest_v2/organizations/Finance/roles/ROLE_MANAGER
 
-```
+``` json
 {
   "name":"ROLE_MANAGER",
   "externallyDefined":false,

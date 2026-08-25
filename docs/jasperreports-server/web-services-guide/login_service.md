@@ -81,19 +81,19 @@ The following example shows the HTTP request and response when testing the login
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>GET /jasperserver/rest/login?j_username=jasperadmin&amp;j_password=jasperadmin HTTP/1.1
+<td><div class="language-text highlight"><pre><code>GET /jasperserver/rest/login?j_username=jasperadmin&amp;j_password=jasperadmin HTTP/1.1
 Host: localhost:8080
 User-Agent: Mozilla/5.0 (Windows NT 6.0; rv:5.0) Gecko/20100101 Firefox/5.0
-Connection: keep-alive</code></pre></td>
+Connection: keep-alive</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>HTTP/1.1 200 OK
+<td><div class="language-text highlight"><pre><code>HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Pragma: No-cache
 Cache-Control: no-cache
 Expires: Wed, 31 Dec 1969 16:00:00 PST
 Content-Length: 0
-Date: Fri, 19 Aug 2011 00:52:48 GMT</code></pre></td>
+Date: Fri, 19 Aug 2011 00:52:48 GMT</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -106,19 +106,19 @@ The following example shows the content of a POST request where the credentials 
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>POST /jasperserver/rest/login HTTP/1.1
+<td><div class="language-text highlight"><pre><code>POST /jasperserver/rest/login HTTP/1.1
 User-Agent: Jakarta Commons-HttpClient/3.1
 Host: localhost:8080
 Content-Length: 45
 Content-Type: application/x-www-form-urlencoded
-j_username=jasperadmin&amp;j_password=jasperadmin</code></pre></td>
+j_username=jasperadmin&amp;j_password=jasperadmin</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>HTTP/1.1 200 OK
+<td><div class="language-text highlight"><pre><code>HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Set-Cookie: JSESSIONID=52E79BCEE51381DF32637EC69AD698AE; Path=/jasperserver
 Content-Length: 0
-Date: Fri, 19 Aug 2011 01:52:48 GMT</code></pre></td>
+Date: Fri, 19 Aug 2011 01:52:48 GMT</code></pre></div></td>
 </tr>
 </tbody>
 </table>

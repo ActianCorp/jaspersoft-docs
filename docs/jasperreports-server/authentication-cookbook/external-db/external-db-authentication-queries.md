@@ -15,7 +15,7 @@ The `externalUserTenantDetailsService` bean configures this bean to define the q
 
 The following example shows how to set up the `externalUserTenantDetailsService` bean queries:
 
-```
+``` xml
 <bean id="externalUserTenantDetailsService" class="com.jaspersoft.jasperserver.
         multipleTenancy.security.externalAuth.db.MTExternalJDBCUserDetailsService">
     <property name="dataSource" ref="externalDataSource"/>

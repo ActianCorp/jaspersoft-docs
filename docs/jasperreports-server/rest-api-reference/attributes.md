@@ -37,7 +37,7 @@ This chapter includes the following sections:
 
 Attributes are represented as a pair of string fields, one for the name of the attribute, the other for its value. For example, the following JSON structure defines an attribute:
 
-```
+``` json
 {
     "name": "Attr1",
     "value": "Value1"
@@ -46,7 +46,7 @@ Attributes are represented as a pair of string fields, one for the name of the a
 
 Each attribute may only have one value, however that value may contain a comma-separated list that, in certain uses, is interpreted by the server as being multi-valued. Such attributes can be used in Domain security filters that match against a collection of values.
 
-```
+``` json
 {
     "name": "Attr2",
     "value": "Value2a,Value2b,Value2c"
@@ -69,7 +69,7 @@ JasperReports Server 6.0 also introduced the notion of the secure attribute that
 
 When reading the value of a secure attribute, the server returns the field `"secure": "true"` instead of the `"value"` field. Applications that read attributes must test for this case:
 
-```
+``` json
 {
     "name": "Attr3",
     "secure": "true"
@@ -78,7 +78,7 @@ When reading the value of a secure attribute, the server returns the field `"sec
 
 When setting the value of a secure attribute, your application should specify both the secure field and the value field.
 
-```
+``` json
 {
     "name": "Attr3"
     "value": "SecureValue3"
@@ -219,7 +219,7 @@ The list of attributes includes the name and value of each attribute. The follow
 
 GET http://localhost:8080/jasperserver-pro/rest_v2/organizations/organzation_1/users/joeuser/attributes
 
-```
+``` json
 {
   "attribute":[
     {
@@ -275,7 +275,7 @@ The response is a single attribute name-value pair. The following example shows 
 
 GET http://localhost:8080/jasperserver-pro/rest_v2/organizations/organization_1/attributes/Attr2
 
-```
+``` json
 {
   "name": "Attr2",
   "value":"Value2a,Value2b,Value2c"
@@ -327,13 +327,13 @@ Sample response:
 
 Attribute not configured for user
 
-```
+``` json
 {"dashboardWebpageDomainWhitelist":[""]}
 ```
 
 Attribute configured for user
 
-```
+``` json
 {"dashboardWebpageDomainWhitelist": ["value.com", "value2.com", "value3.com"]
 }
 ```
@@ -342,7 +342,7 @@ Attribute configured for user
 
 Sample response:
 
-```
+``` json
 {"message":"Access is denied","errorCode":"access.denied"}
 ```
 
@@ -352,7 +352,7 @@ Sample response:
 
 Attribute not configured for user
 
-```
+``` json
 {
     "dashboardWebpageDomainWhitelist": [
         ""
@@ -362,7 +362,7 @@ Attribute not configured for user
 
 Attribute configured for user
 
-```
+``` json
 {
     "dashboardWebpageDomainWhitelist": [
         "http://www.example.com",
@@ -419,7 +419,7 @@ The following example shows how to set all attributes on an organization. The li
 
 PUT http://localhost:8080/jasperserver-pro/rest_v2/organizations/organization_1/attributes
 
-```
+``` json
 {
   "attribute":[
     {
@@ -483,7 +483,7 @@ The content in the request is a single attribute, for example:
 PUT http://localhost:8080/jasperserver-pro/rest_v2/organizations/organization_1/users/<br>
 joeuser/attributes/Attr2
 
-```
+``` json
 {
   "name": "Attr2",
   "value":"NewValue2"

@@ -159,23 +159,23 @@ Hibernate property values are:
 <tbody>
 <tr>
 <td><p>PostgreSQL:</p></td>
-<td><pre class="properties"><code>metadata.hibernate.dialect=com.jaspersoft.hibernate.dialect.PostgresqlNoBlobDialect</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">metadata.hibernate.dialect</span><span class="o">=</span><span class="s">com.jaspersoft.hibernate.dialect.PostgresqlNoBlobDialect</span></code></pre></div></td>
 </tr>
 <tr>
 <td><p>MySQL 5.5:</p></td>
-<td><pre class="properties"><code>metadata.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">metadata.hibernate.dialect</span><span class="o">=</span><span class="s">org.hibernate.dialect.MySQL5InnoDBDialect</span></code></pre></div></td>
 </tr>
 <tr>
 <td><p>DB2:</p></td>
-<td><pre class="properties"><code>metadata.hibernate.dialect=com.jaspersoft.ji.hibernate.dialect.DB2JICustomDialect</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">metadata.hibernate.dialect</span><span class="o">=</span><span class="s">com.jaspersoft.ji.hibernate.dialect.DB2JICustomDialect</span></code></pre></div></td>
 </tr>
 <tr>
 <td><p>Oracle:</p></td>
-<td><pre class="properties"><code>metadata.hibernate.dialect=com.jaspersoft.ji.hibernate.dialect.OracleJICustomDialect</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">metadata.hibernate.dialect</span><span class="o">=</span><span class="s">com.jaspersoft.ji.hibernate.dialect.OracleJICustomDialect</span></code></pre></div></td>
 </tr>
 <tr>
 <td><p>SQL Server:</p></td>
-<td><pre class="properties"><code>metadata.hibernate.dialect=com.jaspersoft.ji.hibernate.dialect.SQLServerJICustomDialect</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">metadata.hibernate.dialect</span><span class="o">=</span><span class="s">com.jaspersoft.ji.hibernate.dialect.SQLServerJICustomDialect</span></code></pre></div></td>
 </tr>
 </tbody>
 </table>

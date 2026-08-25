@@ -9,7 +9,7 @@ System admins and organization admins use the same pages for managing organizati
 
 !!! note
 
-    Administrators of deployments with a default single organization can generally skip this section. However, the procedure in <a href="managing_organizations.md">Editing an Organization</a> can be used to change the name of the default organization.
+    Administrators of deployments with a default single organization can generally skip this section. However, the procedure in [Editing an Organization](managing_organizations.md) can be used to change the name of the default organization.
 
 The system admin (`superuser`) can view all the organizations in the server, as shown in the following figure. In the Organizations panel on the left, the system administrator's view begins at the root of the organization hierarchy and includes all defined organizations and suborganizations, so he can manage any organization or suborganization in the server. In this example, there are two top-level organizations, and one of them has several suborganizations.
 
@@ -26,13 +26,16 @@ The following figure shows the same repository as seen by the admin of Organizat
 ## Viewing Organization Properties
 
 1.  Log in as a user with administrative privileges for the organization you want to view.
+
 2.  Select **Manage \> Organizations**.
+
 3.  The organization management page appears, as shown in the previous figures.
+
 4.  To select an organization, click its parent in the left-hand Organizations panel, then select the organization in the center panel. If there are many organizations, you can search for a specific organization.
 
-!!! note
+    !!! note
 
-    The search only applies to suborganizations of the parent organization currently selected in the left-hand panel.
+        The search only applies to suborganizations of the parent organization currently selected in the left-hand panel.
 
 5.  Once you select an organization, the **Properties** panel on the right shows information about it:
 
@@ -46,20 +49,24 @@ The following figure shows the same repository as seen by the admin of Organizat
 
 !!! note
 
-    Both system admins and organization admins can also export and import entire organizations from the Manage Organizations page. This functionality can be used to duplicate organizations or change their hierarchy, or to create a backup. For more information, see <a href="../importexport/through_the_web_ui.md">Exporting from Organizations</a> and <a href="../importexport/through_the_web_ui.md">Importing to Organizations</a>.
+    Both system admins and organization admins can also export and import entire organizations from the Manage Organizations page. This functionality can be used to duplicate organizations or change their hierarchy, or to create a backup. For more information, see [Exporting from Organizations](../importexport/through_the_web_ui.md) and [Importing to Organizations](../importexport/through_the_web_ui.md).
 
 ## Creating an Organization
 
 1.  Log in as a user with administrative privileges for the parent of the new organization.
+
 2.  Click **Manage \> Organizations**.
+
 3.  In the left-Organizations panel, expand the hierarchy of organizations to select the parent organization, for example Finance, then click **Add Organization** in the middle panel.
+
 4.  The **Add Organization** dialog appears.
 
-![js ManageOrgs AddOrg investments](../assets/images/js-ManageOrgs-AddOrg-investments.png)
+    ![js ManageOrgs AddOrg investments](../assets/images/js-ManageOrgs-AddOrg-investments.png)
 
-*Figure 3: Adding an Organization*
+    *Figure 3: Adding an Organization*
 
 5.  Enter the **Organization Name**. The server automatically fills in the ID and alias based on the name. You can change the ID and alias if needed before saving the organization. Once saved, the organization ID can no longer be modified. The **Description** is optional. The previous figure shows this dialog with sample values.
+
 6.  To save the new organization, click **Add Organization to \<organization\>**.
 
 The new organization appears in the **Organizations** panels. When you select it in the center panel, its properties appear in the **Properties** panel on the right.
@@ -70,7 +77,7 @@ The **Properties** panel shows the number of users and roles in the organization
 
 !!! warning
 
-    For security reasons, always change the default passwords immediately after creating a new organization. For instructions, see <a href="managing_users.md">Managing Users</a>.
+    For security reasons, always change the default passwords immediately after creating a new organization. For instructions, see [Managing Users](managing_users.md).
 
 - The new organization has no roles of its own. The default users have the system-wide roles **ROLE_USER** and **ROLE_ADMINISTRATOR**.
 - In the repository, a new folder is created in the parent's Organization folder. This new organization folder contains a copy of the parent's **Organization/Folder Template** folder. To manage the **Organization** folders, select **View \> Repository**.
@@ -97,16 +104,21 @@ Finally, the **Folder Template** itself is copied into a new organization, so ea
 ## Editing an Organization
 
 1.  Log in as a user with administrative privileges for the organization.
+
 2.  Click **Manage \> Organizations**.
+
 3.  In the left-Organizations panels, select the organization's parent. In the center Organizations panel, select the **Organization**.
+
 4.  In the **Properties** panel, click **Edit** so you can change the organization's properties.
 
-![js ManageOrgs Edit Investments](../assets/images/js-ManageOrgs-Edit-Investments.png)
+    ![js ManageOrgs Edit Investments](../assets/images/js-ManageOrgs-Edit-Investments.png)
 
-*Figure 4: Editing Properties of an Organization*
+    *Figure 4: Editing Properties of an Organization*
 
 5.  Edit the organization **Properties** as needed. Changing the **Organization Name** changes the name of the organization's folder, as well, but no other data. You can change the alias and description. The organization ID is defined when the organization was created and cannot be modified.
+
 6.  For information about attributes on the organization, see [Managing Organization Attributes](managing_attributes.md).
+
 7.  Click **Save** to keep your changes, or **Cancel** to quit without saving.
 
 ## Deleting an Organization

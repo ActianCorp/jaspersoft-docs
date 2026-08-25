@@ -50,11 +50,11 @@ Java sample:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String imgUri = &quot;/images/JRLogo&quot;;
+<td><div class="language-text highlight"><pre><code>String imgUri = &quot;/images/JRLogo&quot;;
 ResourceDescriptor rdis = new ResourceDescriptor();
 rdis.setParentFolder(&quot;/images&quot;);
 rdis.setUriString(imgUri);
-ResourceDescriptor result = wsclient.get(rdis, null);</code></pre></td>
+ResourceDescriptor result = wsclient.get(rdis, null);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -242,7 +242,7 @@ The following schema may elucidate the whole data structure:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>PROP_QUERY_DATA
+<td><div class="language-text highlight"><pre><code>PROP_QUERY_DATA
   (
   PROP_QUERY_DATA_ROW, value
     (
@@ -255,16 +255,16 @@ The following schema may elucidate the whole data structure:
     PROP_QUERY_DATA_ROW_COLUMN, value
     PROP_QUERY_DATA_ROW_COLUMN, value
     ...
-    )</code></pre></td>
+    )</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>  PROP_QUERY_DATA_ROW, value
+<td><div class="language-text highlight"><pre><code>  PROP_QUERY_DATA_ROW, value
     (
     PROP_QUERY_DATA_ROW_COLUMN, value
     PROP_QUERY_DATA_ROW_COLUMN, value
     ...
     )
-  )</code></pre></td>
+  )</code></pre></div></td>
 </tr>
 </tbody>
 </table>

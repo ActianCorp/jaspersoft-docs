@@ -13,15 +13,15 @@ The following changes configure the [Apache HTTP server](http://httpd.apache.org
 
 1.  Add following line to the end of the httpd.conf file:
 
-```
-Include conf/mod-jk.conf
-```
+    ``` text
+    Include conf/mod-jk.conf
+    ```
 
-1.  Create the following two files in the `/conf` folder of your `httpd` server.
+2.  Create the following two files in the `/conf` folder of your `httpd` server.
 
 - `mod-jk.conf`:
 
-```
+``` bash
 # Load mod_jk module
 # Specify the filename of the mod_jk lib
 LoadModule jk_module modules/mod_jk.so
@@ -71,7 +71,7 @@ JkShmFile logs/jk.shm
 
 - `workers.properties`:
 
-```
+``` bash
 # Define list of workers that will be used
 # for mapping requests
 worker.list=loadbalancer,status
@@ -106,7 +106,7 @@ The following example is a configuration for the [HAProxy](http://www.haproxy.or
 
 Edit the `/etc/haproxy.cfg` file as follows:
 
-```
+``` text
 global
         log         127.0.0.1 local2 debug #log using syslog service on localhost
         maxconn     4096 # Total Max Connections. This is dependent on ulimit

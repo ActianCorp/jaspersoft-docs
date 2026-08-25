@@ -188,13 +188,20 @@ In the Ad Hoc Editor, you can sort the rows of a table by any field, using a num
 To sort a table
 
 1.  Click ![js AdHoc icon SortOrder](../assets/images/js-AdHoc-icon-SortOrder.png). The Sortwindow appears. If the table is already sorted, the window shows the fields used.
+
 2.  To add a field to sort on, double-click the field in **Available Fields**. The Available Fields panel now lists only fields not currently in Sort On. Hover over the fields in the Available fields panel to view the tooltip information. For more information on tooltip, see [The Data Source Selection Panel](adhoc-data-source-selection.md).
+
 3.  Select one or more fields to sort by. You can also use Ctrl-click to select multiple fields.
+
 4.  Click ![js AdHoc icon Sort On Arrow](../assets/images/js-AdHoc-icon-Sort-On-Arrow.png).
+
 5.  To arrange the sorting precedence of the fields, select each field in the Sort window and click **Move to top**, **Move up**, **Move down**, or **Move to bottom**: ![js AdHoc icon Move top](../assets/images/js-AdHoc-icon-Move-top.png), ![js AdHoc icon Move up](../assets/images/js-AdHoc-icon-Move-up.png), ![js AdHoc icon Move down](../assets/images/js-AdHoc-icon-Move-down.png), and ![js AdHoc icon Move bottom](../assets/images/js-AdHoc-icon-Move-bottom.png).
+
 6.  To remove a field, select it and click ![js AdHoc icon RemoveFromSort](../assets/images/js-AdHoc-icon-RemoveFromSort.png).
+
 7.  Click **OK**. The table updates to display the rows sorted by the selected fields.<br>
     You can also sort a table using the following methods:
+
     - Right-click a field in the Fields section of the **Data Source Selection** panel, and select **Use for Sorting** from the context menu. In this case, the table is sorted by a field that is not in the table; you may want to note the sorting fields in the title.
     - Right-click a column header on the Canvas of the **Ad Hoc View** panel, and select **Use for Sorting** from the context menu.
 
@@ -238,9 +245,11 @@ You can control the data displayed in the table using the **Appearance** setting
 Your options are:
 
 - **Data Detail**:
+
   - **Details**, which displays table detail only. For instance, in a table listing sales in dollars for all stores in a region for a given month, the amount sold by each store that month is displayed.
   - **Totals**, which displays the table totals only. In the table described above, the total amount of all sales at all regional stores that month is displayed.
   - **Details and Totals, which display** both the individual store sales numbers, as well as the total sales numbers at the bottom of the store sales column.
+
 - **Show Duplicate Rows**, which displays only the distinct values in your table if you choose to hide the duplicate rows. By default, the **Show Duplicate Rows** setting is on. See Showing Distinct Values for more information.<br>
   Select the option that you want to apply to your table.
 

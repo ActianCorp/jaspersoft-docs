@@ -42,18 +42,18 @@ To configure OpenTelemetry and Jaeger in the JasperReports Server:
     - `export OTEL_JAVAAGENT_DEBUG`: The default value is false for this argument and is not editable.
     - `export OTEL_METRICS_EXPORTER`: The default value is none for this argument and is not editable.
 
-```
-export JAVA_OPTS="$JAVA_OPTS -javaagent:/opt/jaeger/opentelemetry-javaagent.jar"
-export OTEL_TRACES_EXPORTER=jaeger
-export OTEL_EXPORTER_JAEGER_ENDPOINT=http://hostname:14250
-export OTEL_RESOURCE_ATTRIBUTES=service.name=jasperserver-pro
-export OTEL_JAVAAGENT_DEBUG=false
-export OTEL_METRICS_EXPORTER=none
-```
+    ``` text
+    export JAVA_OPTS="$JAVA_OPTS -javaagent:/opt/jaeger/opentelemetry-javaagent.jar"
+    export OTEL_TRACES_EXPORTER=jaeger
+    export OTEL_EXPORTER_JAEGER_ENDPOINT=http://hostname:14250
+    export OTEL_RESOURCE_ATTRIBUTES=service.name=jasperserver-pro
+    export OTEL_JAVAAGENT_DEBUG=false
+    export OTEL_METRICS_EXPORTER=none
+    ```
 
-!!! note
+    !!! note
 
-    Ensure that the correct path of the javaagent and hostname is provided in the `stenv.sh` file.
+        Ensure that the correct path of the javaagent and hostname is provided in the `stenv.sh` file.
 
 4.  Download Jaeger using <https://www.jaegertracing.io/download/> on the JasperReports Server node. As a result, Jaeger gets downloaded in ZIP format.
 
@@ -61,9 +61,9 @@ export OTEL_METRICS_EXPORTER=none
 
 6.  Open the command prompt and run ` ./jaeger-all-in-one --collector.zipkin.host-port=:9411 &` command to start the Jaeger application.
 
-!!! note
+    !!! note
 
-    Before setting up the javaagent and Jaeger file, ensure that the root user has setup OTel and Jaeger in the respective folders and assigned permissions for the jasperserver user. If no files are set up, then the application misbehaves. In such cases, start the service by logging as a `jasperserver` user.
+        Before setting up the javaagent and Jaeger file, ensure that the root user has setup OTel and Jaeger in the respective folders and assigned permissions for the jasperserver user. If no files are set up, then the application misbehaves. In such cases, start the service by logging as a `jasperserver` user.
 
 7.  Start the Tomcat service to access Jaeger using the JasperReports Server URL: `http://<hostname>:16686` to see traces of the JasperReports Server application node. As a result, Jaeger gets successfully configured with JasperReports Server and Jaeger running in two separate tabs in the browser.
 
@@ -109,9 +109,9 @@ To configure OpenTelemetry and Jaeger in the JasperReports Server cluster enviro
     export OTEL_METRICS_EXPORTER=none
     ```
 
-!!! note
+    !!! note
 
-    In the above code snippet, ensure the `OTEL_EXPORTER_JAEGER_ENDPOINT` option should have the URL of the JasperReports Server Load balancer and the `-javaagent` option should have the correct path where the OpenTelemetry javaagent is stored.
+        In the above code snippet, ensure the `OTEL_EXPORTER_JAEGER_ENDPOINT` option should have the URL of the JasperReports Server Load balancer and the `-javaagent` option should have the correct path where the OpenTelemetry javaagent is stored.
 
 4.  Login to Load balancer node and download Jaeger on the JasperReports Server node using - <https://www.jaegertracing.io/download/>. As a result, Jaeger gets downloaded in ZIP format.
 

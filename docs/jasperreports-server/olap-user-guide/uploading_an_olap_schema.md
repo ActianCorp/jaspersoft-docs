@@ -13,23 +13,26 @@ To upload a schema
 
 1.  Click **View \> Repository**.
 
-The repository appears.
+    The repository appears.
 
-1.  In the Folder panel, navigate to **Analysis Components \> Analysis Schemas**.
-2.  Right-click the folder and navigate to **Add Resource \> File \> OLAP Schema**.
+2.  In the Folder panel, navigate to **Analysis Components \> Analysis Schemas**.
 
-The **Upload a File From Your Local Computer** page appears and prompts you to select a file and set its properties.
+3.  Right-click the folder and navigate to **Add Resource \> File \> OLAP Schema**.
 
-![ja add view uploadfilefromyourlocalcomputer](assets/images/ja-add-view-uploadfilefromyourlocalcomputer.png)
+    The **Upload a File From Your Local Computer** page appears and prompts you to select a file and set its properties.
 
-*Figure 1: Upload a File From Your Local Computer - OLAP Schema*
+    ![ja add view uploadfilefromyourlocalcomputer](assets/images/ja-add-view-uploadfilefromyourlocalcomputer.png)
 
-1.  Under **Path to File**, click **Choose File** and locate the OLAP schema you want to add.
-2.  Enter a name and description for the schema.
+    *Figure 1: Upload a File From Your Local Computer - OLAP Schema*
 
-The **Resource ID** is auto-generated as you type in the **Name** field. You can change the ID if necessary.
+4.  Under **Path to File**, click **Choose File** and locate the OLAP schema you want to add.
 
-1.  Next to the **Save Location** field, click **Browse**, and navigate to the location in the repository where you want the file to reside.
-2.  Click **Submit**.
+5.  Enter a name and description for the schema.
+
+    The **Resource ID** is auto-generated as you type in the **Name** field. You can change the ID if necessary.
+
+6.  Next to the **Save Location** field, click **Browse**, and navigate to the location in the repository where you want the file to reside.
+
+7.  Click **Submit**.
 
 The new file appears in the repository.

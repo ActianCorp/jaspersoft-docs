@@ -31,6 +31,6 @@ The following Sample Data is available:
 
 !!! info "Important"
 
-    On the <span>Azure Welcome Page</span> (BYOL only available), users should update their passwords on the first login:<br>
+    On the Azure Welcome Page (BYOL only available), users should update their passwords on the first login:<br>
     username:` superuser`<br>
     password: `<generated>`

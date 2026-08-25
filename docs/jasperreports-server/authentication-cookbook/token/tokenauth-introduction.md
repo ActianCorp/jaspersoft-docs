@@ -35,16 +35,18 @@ The following diagram shows the general steps involved in logging into JasperRep
 The following steps explain the interaction between the user’s browser, JasperReports Server, and a pre-authenticated user:
 
 1.  A user requests any page in JasperReports Server.
+
 2.  If the user has not previously accessed JasperReports Server, the server looks for the `principalParameter` in the URL or request header. If the token is present and correctly formatted, the user is automatically authenticated.
 
-!!! note
+    !!! note
 
-    In token-based authentication, the JasperReports Server login screen is not displayed to the user and the user does not log in directly.
+        In token-based authentication, the JasperReports Server login screen is not displayed to the user and the user does not log in directly.
 
-After the user has authenticated and a JasperReports Server session has been created, future requests do not require the `principalParameter`.
+    After the user has authenticated and a JasperReports Server session has been created, future requests do not require the `principalParameter`.
 
-1.  JasperReports Server decrypts the token in the URL or request header and creates a principal object to represent the user’s session in memory. The username, roles, and organization information are extracted from the token and synchronized with the internal database, where the user account is marked as an external user. The JasperReports Server environment reflects the user’s roles and organization as defined in the token. For more information about synchronization, see [Synchronization of External Users](../authentication-in-jrs/synchronization-users.md).
-2.  As with the default internal authorization, JasperReports Server now sends the requested content to the user, or if none was specified, the home page appropriate for the user. An application-server user session is established and the connection between the requesting browser or process is maintained by repeatedly sending session identification information, usually in the form of an HTTP cookie. The token doesn't need to be resent until the user logs out or the session is inactive for a period of time.
+3.  JasperReports Server decrypts the token in the URL or request header and creates a principal object to represent the user’s session in memory. The username, roles, and organization information are extracted from the token and synchronized with the internal database, where the user account is marked as an external user. The JasperReports Server environment reflects the user’s roles and organization as defined in the token. For more information about synchronization, see [Synchronization of External Users](../authentication-in-jrs/synchronization-users.md).
+
+4.  As with the default internal authorization, JasperReports Server now sends the requested content to the user, or if none was specified, the home page appropriate for the user. An application-server user session is established and the connection between the requesting browser or process is maintained by repeatedly sending session identification information, usually in the form of an HTTP cookie. The token doesn't need to be resent until the user logs out or the session is inactive for a period of time.
 
 When comparing these steps with those in [Default Internal Authentication](../authentication-in-jrs/internal-authentication-steps.md), you'll notice three significant differences:
 
@@ -98,10 +100,13 @@ JasperReports Server will accept any properly formatted token; therefore, you ne
 Some token configuration is specified in the `proxyPreAuthenticatedProcessingFilter` bean using the following properties:
 
 - `principalParameter`: A fixed string at the start of the token that triggers token-based authentication. The first time the user accesses JasperReports Server, the `principalParameter` must be present in the request. `principalParameter` can be any URL-safe string that's different from all other JasperReports Server request parameter names.
+
 - `tokenInRequestParam`: Boolean that specifies the location of `principalParameter` as follows:
+
   - `true`: JasperReports Server looks for `principalParameter` in the request URL only.
   - `false`: JasperReports Server looks for `principalParameter` in the request header only.
   - absent: JasperReports Server checks the request header first and then the URL.
+
 - `tokenDecryptor`: Specifies the class to use to decrypt the token. For security reasons, you should encrypt the token to keep its payload from being intercepted when it's exposed in the browser's cache or when SSL is not enabled. If the token is encrypted, you must provide an implementation of Jaspersoft's token decryptor interface `CipherI`. The default assumes the token is unencrypted and passes the token through as plaintext.
 
 #### Setting Token Decryption
@@ -115,7 +120,7 @@ If you want to encrypt the token, you need to select the encryption you'll use t
 
 You can implement any encryption method you choose.
 
-```
+``` java
 package com.mycompany;
 
 public class MyCipher implements CipherI {
@@ -135,7 +140,7 @@ public class MyCipher implements CipherI {
 
 Once you've created your implementation of `CipherI`, you need to incorporate it in a jar file and reference it in the `tokenDecryptor` property of `proxyPreAuthenticatedProcessingFilter`:
 
-```
+``` xml
 <bean id="proxyPreAuthenticatedProcessingFilter"  class="com.jaspersoft.jasperserver.api.security.
     externalAuth.preauth.BasePreAuthenticatedProcessingFilter">
         ...
@@ -152,7 +157,7 @@ Specify the token format using the `preAuthenticatedUserDetailsService` construc
 
 Sample Code Configuration
 
-```
+``` xml
 <bean class="com.jaspersoft.jasperserver.api.security.externalAuth.wrappers.spring.preauth.
         JSPreAuthenticatedAuthenticationProvider">
   <property name="preAuthenticatedUserDetailsService">
@@ -216,7 +221,7 @@ For more information about the valid patterns for this field, refer to:<br>
 
 The token has to match the configuration you specify in `preAuthenticatedUserDetailsService`. With the configuration shown in Sample Code Configuration, you would use the following token syntax in the page header:
 
-```
+``` properties
 pp=u=user|r=role1,role2,...|o=org1[,org2,...]|pa1=PA11,PA12,...|pa2=PA21,PA22,...|exp=time
 ```
 
@@ -237,13 +242,13 @@ The key-value pairs can appear in the token in any order, but must be delineated
 
 With this configuration, the following would be a valid token. The user would be placed in the Sales suborganization of the EMEA organization:
 
-```
+``` properties
 pp=u=Sven|r=Manager|o=EMEA,Sales|pa1=Sweden
 ```
 
 If you're passing the token in the URL, you need to encode all equal signs (=) (as %3D) and pipe symbols (\|) (as %7C) in the token to make the token URL-safe:
 
-```
+``` text
 http://localhost:8080/jasperserver?pp=u%3DSven%7Cr%3DManager%7Co%3DEMEA,Sales%7Cpa1%3DSweden
 ```
 
@@ -265,7 +270,7 @@ The `organizationRoleMap` property contains key/value pairs that map external ro
 
 The following example shows how you might configure the `externalUserSetupProcessor` bean to map roles from the external authority to roles in JasperReports Server:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"  parent="abstractExternalProcessor">
 <property name="organizationRoleMap">
@@ -280,7 +285,7 @@ The following example shows how you might configure the `externalUserSetupProces
 
 You can assign roles to all users using the `defaultInternalRoles` property of `externalUserSetupProcessor` or `mtExternalUserSetupProcessor`. The following example shows how to use this property in `externalUserSetupProcessor` to assign `ROLE_USER` to all users, in addition to the roles assigned by mapping:
 
-```
+``` xml
   <property name="defaultInternalRoles">
     <list>
       <value>ROLE_USER</value>
@@ -294,7 +299,7 @@ If an external role has the same name as an internal role at the same organizati
 
 You can set the extension in the `conflictingExternalInternalRoleNameSuffix` property in the `externalUserSetupProcessor` or `mtExternalUserSetupProcessor` bean. If the property doesn't appear in the bean, the extension is still implemented but defaults to \_EXT. The following example shows how to configure this property:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">
@@ -313,7 +318,7 @@ You may not want every role in your external authority to appear as a role in Ja
 
 For example, to restrict the roles you create in JasperReports Server to roles that begin with JRS\_ or EXT\_ in your external authority, you would configure `permittedRolesRegex` in a way similar to the following:
 
-```
+``` xml
         <property name="permittedRolesRegex">
             <list>
                 <value>JRS_.*</value>
@@ -332,7 +337,7 @@ You can extend the supported character set by modifying the `permittedExternalRo
 
 The default value of the `permittedExternalRoleNameRegex` property is the regular expression \[A-Za-z0-9\_\]+. Edit this expression to add supported characters. For example, the following syntax allows alphanumeric characters, underscores, and the Cyrillic letter Я (Unicode 042F):
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor"  class="com.jaspersoft.jasperserver.api.security.
         externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">
@@ -359,7 +364,7 @@ If you're mapping all your external users to a single organization, you can assi
 
 The following example shows how to use the `mtExternalUserSetupProcessor` bean to define static roles. The configuration for `externalUserSetupProcessor` is similar:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"
     parent="abstractExternalProcessor">
@@ -401,72 +406,75 @@ In a multi-organization deployment, JasperReports Server creates a `jasperadmin`
 To set up admin users
 
 1.  Open your sample-applicationContext-xxx-externalAuth.xml file in a text editor.
+
 2.  Locate the `externalTenantSetupUsers` property in the `ldapExternalTenantProcessor``externalTenantSetupProcessor` bean.
+
 3.  The sample contains a bean of class `ExternalTenantSetupUser` already configured for `jasperadmin`.
 
-```
-<property name="externalTenantSetupUsers">
-  <list>
+    ``` xml
+    <property name="externalTenantSetupUsers">
+      <list>
+        <bean class="com.jaspersoft.jasperserver.multipleTenancy.security.
+                     externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
+          <property name="username" value="${new.tenant.user.name.1}"/>
+          <property name="fullName" value="${new.tenant.user.fullname.1}"/>
+          <property name="password" value="${new.tenant.user.password.1}"/>
+          <property name="emailAddress" value="${new.tenant.user.email.1}"/>
+          <property name="roleSet">
+            <set>
+              <value>ROLE_ADMINISTRATOR</value>
+              <value>ROLE_USER</value>
+            </set>
+          </property>
+        </bean>
+      </list>
+    </property>
+    ```
+
+4.  To create additional admin users for each external organization, create a bean of class `ExternalTenantSetupUser` for each admin user you want.
+
+    ``` xml
     <bean class="com.jaspersoft.jasperserver.multipleTenancy.security.
-                 externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
-      <property name="username" value="${new.tenant.user.name.1}"/>
-      <property name="fullName" value="${new.tenant.user.fullname.1}"/>
-      <property name="password" value="${new.tenant.user.password.1}"/>
-      <property name="emailAddress" value="${new.tenant.user.email.1}"/>
-      <property name="roleSet">
-        <set>
-          <value>ROLE_ADMINISTRATOR</value>
-          <value>ROLE_USER</value>
-        </set>
-      </property>
-    </bean>
-  </list>
-</property>
-```
+                     externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
+          <property name="username" value="${new.tenant.user.name.2}"/>
+          <property name="fullName" value="${new.tenant.user.fullname.2}"/>
+          <property name="password" value="${new.tenant.user.password.2}"/>
+          <property name="emailAddress" value="${new.tenant.user.email.2}"/>
+     <property name="roleSet">
+            <set>
+              <value>ROLE_ADMINISTRATOR</value>
+              <value>ROLE_USER</value>
+            </set>
+          </property>
+        </bean>
+    ```
 
-1.  To create additional admin users for each external organization, create a bean of class `ExternalTenantSetupUser` for each admin user you want.
+5.  The \${...} syntax above references values configured in the following file:
 
-```
-<bean class="com.jaspersoft.jasperserver.multipleTenancy.security.
-                 externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
-      <property name="username" value="${new.tenant.user.name.2}"/>
-      <property name="fullName" value="${new.tenant.user.fullname.2}"/>
-      <property name="password" value="${new.tenant.user.password.2}"/>
-      <property name="emailAddress" value="${new.tenant.user.email.2}"/>
- <property name="roleSet">
-        <set>
-          <value>ROLE_ADMINISTRATOR</value>
-          <value>ROLE_USER</value>
-        </set>
-      </property>
-    </bean>
-```
+    \<js-install\>\buildomatic\conf_source\iePro\js.config.properties file.
 
-1.  The \${...} syntax above references values configured in the following file:
+    To set these values, open \<js-install\>\buildomatic\conf_source\iePro\js.config.properties and edit the entries there.
 
-\<js-install\>\buildomatic\conf_source\iePro\js.config.properties file.
+    ``` properties
+    new.tenant.user.name.1=jasperadmin
+    new.tenant.user.fullname.1=jasperadmin
+    new.tenant.user.password.1=mynewpassword
+    new.tenant.user.email.1=
+    new.tenant.user.name.2=anotheradmin
+    new.tenant.user.fullname.2=Another Admin
+    new.tenant.user.password.2=anotherpassword
+    new.tenant.user.email.2=
+    ```
 
-To set these values, open \<js-install\>\buildomatic\conf_source\iePro\js.config.properties and edit the entries there.
+    !!! note
 
-```
-new.tenant.user.name.1=jasperadmin
-new.tenant.user.fullname.1=jasperadmin
-new.tenant.user.password.1=mynewpassword
-new.tenant.user.email.1=
-new.tenant.user.name.2=anotheradmin
-new.tenant.user.fullname.2=Another Admin
-new.tenant.user.password.2=anotherpassword
-new.tenant.user.email.2=
-```
+        The property names, for example, `new.tenant.user.name.1`, are arbitrary. You can use any name for each property as long as the name in the applicationContext-externalAuth-xxx.xml file matches the name in the js.config.properties file.
 
-!!! note
+6.  If you want to obfuscate the default passwords in the js.config.properties files, encrypt them as described in the JasperReports Server Security Guide. Obfuscation must be implemented before you install the server.
 
-    The property names, for example, `new.tenant.user.name.1`, are arbitrary. You can use any name for each property as long as the name in the applicationContext-externalAuth-xxx.xml file matches the name in the js.config.properties file.
+7.  If you don't want to obfuscate default passwords, you can eliminate the reference to js.config.properties and instead configure the values directly in the `externalTenantSetupUsers` property in the applicationContext-externalAuth-xxx.xml file. For example:
 
-1.  If you want to obfuscate the default passwords in the js.config.properties files, encrypt them as described in the JasperReports Server Security Guide. Obfuscation must be implemented before you install the server.
-2.  If you don't want to obfuscate default passwords, you can eliminate the reference to js.config.properties and instead configure the values directly in the `externalTenantSetupUsers` property in the applicationContext-externalAuth-xxx.xml file. For example:
-
-```
+``` xml
       <property name="username" value="anotheradmin"/>
       <property name="fullName" value="Another Admin"/>
       <property name="password" value="anotherpassword"/>
@@ -479,7 +487,7 @@ You have the option to use the `organizationMap` property in the `externalTenant
 
 For example, the following would map users in External_Org_1 in the external authority to JRS_Org_1 in JasperReports Server and users in External_Org_2 in the external authority to JRS_Org_2 in JasperReports Server:
 
-```
+``` xml
     <property name="organizationMap">
         <map>
             <entry key="External_Org_1" value="JRS_Org_1" />
@@ -502,7 +510,7 @@ When specifying the `defaultOrganization` value, the organization ID must not co
 
 The following example shows how to configure `externalTenantSetupProcessor``ldapExternalTenantProcessor` to assign all users to organization_1:
 
-```
+``` xml
 <bean id="externalTenantSetupProcessorldapExternalTenantProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.
     security.externalAuth.processors.MTExternalTenantSetupProcessorLdapExternalTenantProcessor"     parent="abstractExternalProcessor">
   <property name="multiTenancyService">

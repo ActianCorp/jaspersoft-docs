@@ -117,7 +117,7 @@ Both types of nested resources are further described in the following sections.
 
 Referenced resources are defined by special structures within the descriptors of other resources. For example, in the following query resource, the data source field contains a `dataSourceReference` object that contains the URI of the target reference:
 
-```
+``` json
 {
     "version": 0,
     "permissionMask": 1,
@@ -256,7 +256,7 @@ or <span>secureMondrianConnection</span></p></td>
 
 Nested resources that are not referenced resources must be defined locally within the parent resource. The nested resource is defined by a complete resource descriptor of the appropriate type. The following example shows a data source that is defined locally within the parent query resource:
 
-```
+``` json
 {
     "version": 0,
     "permissionMask": 1,

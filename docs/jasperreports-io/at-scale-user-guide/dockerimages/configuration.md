@@ -45,35 +45,35 @@ Optional
 
 1.  Specify the server URL in the following three modules configuration files:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td>Files</td>
-<td>jrio-reporting-docker/jrio/applicationContext-jrs.xml<br />
-jrio-export-docker/jrio/applicationContext-jrs.xml<br />
-jrio-rest-docker/jrio/WEB-INF/applicationContext-jrs.xml</td>
-</tr>
-<tr>
-<td>Bean</td>
-<td>id="serverConfiguration"<br />
-class="com.jaspersoft.jrio.common.repository.jrs.ServerConfiguration"</td>
-</tr>
-<tr>
-<td>Property</td>
-<td>serverURL</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>&lt;property name="serverURL" value="http://example.com:8080/jasperserver-pro"/&gt;</td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td>Files</td>
+    <td>jrio-reporting-docker/jrio/applicationContext-jrs.xml<br />
+    jrio-export-docker/jrio/applicationContext-jrs.xml<br />
+    jrio-rest-docker/jrio/WEB-INF/applicationContext-jrs.xml</td>
+    </tr>
+    <tr>
+    <td>Bean</td>
+    <td>id="serverConfiguration"<br />
+    class="com.jaspersoft.jrio.common.repository.jrs.ServerConfiguration"</td>
+    </tr>
+    <tr>
+    <td>Property</td>
+    <td>serverURL</td>
+    </tr>
+    <tr>
+    <td>Example</td>
+    <td>&lt;property name="serverURL" value="http://example.com:8080/jasperserver-pro"/&gt;</td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  By default, JasperReports IO At-Scale includes the standalone repository in the jrio-export, jrio-rest, and jrio-reporting modules. The sample repository in each module is accessible. For more information, see [Using a Local Repository](local_repository.md). Deploying the JasperReports IO At-Scale with a sample repository in each module will not impact the performance. If you want to disable these file repositories, open each of the following files and comment out all of the listed beans:
+2.  By default, JasperReports IO At-Scale includes the standalone repository in the jrio-export, jrio-rest, and jrio-reporting modules. The sample repository in each module is accessible. For more information, see [Using a Local Repository](local_repository.md). Deploying the JasperReports IO At-Scale with a sample repository in each module will not impact the performance. If you want to disable these file repositories, open each of the following files and comment out all of the listed beans:
 
 <table>
 <colgroup>

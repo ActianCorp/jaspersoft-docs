@@ -32,10 +32,12 @@ To create a virtual data source that accesses a data source for big data
 
 1.  Create a native data source for big data, or verify that it was created as described in one of the following sections:
 
-- [“Cassandra Data Sources” on page 1](cassandra_data_sources.md)
-- [“Hadoop-Hive Data Sources” on page 1](hadoop-hive_data_sources.md)
-- [“MongoDB Data Sources” on page 1](mongodb_data_sources.md)
+    - [“Cassandra Data Sources” on page 1](cassandra_data_sources.md)
+    - [“Hadoop-Hive Data Sources” on page 1](hadoop-hive_data_sources.md)
+    - [“MongoDB Data Sources” on page 1](mongodb_data_sources.md)
 
-1.  Create a virtual data source as described in [“Virtual Data Sources” on page 1](virtual_data_sources.md).
-2.  In the virtual data source creation dialog, select the big data source that you created in the first step, and save the virtual data source. You can select one or more big data sources, or any mix of big data, JDBC, and JNDI data sources.
-3.  Create a Domain, specify the virtual data source you just created, and then select the big data tables when you create the Domain schema. The data from the data source is mapped to tables and fields in the Domain that you can use to create joins, filters, and all other features of a Domain.
+2.  Create a virtual data source as described in [“Virtual Data Sources” on page 1](virtual_data_sources.md).
+
+3.  In the virtual data source creation dialog, select the big data source that you created in the first step, and save the virtual data source. You can select one or more big data sources, or any mix of big data, JDBC, and JNDI data sources.
+
+4.  Create a Domain, specify the virtual data source you just created, and then select the big data tables when you create the Domain schema. The data from the data source is mapped to tables and fields in the Domain that you can use to create joins, filters, and all other features of a Domain.

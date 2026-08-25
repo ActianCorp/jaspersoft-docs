@@ -40,12 +40,12 @@ If the `JRDataSource` supplied with JasperReports does not meet your requirement
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>package net.sf.jasperreports.engine;
+<td><div class="language-text highlight"><pre><code>package net.sf.jasperreports.engine;
 public interface JRDataSource
 {
 public boolean next() throws JRException;
 public Object getFieldValue(JRField jrField) throws JRException;
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -92,7 +92,7 @@ The `next` method increases the index variable that you use to track the positio
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">this</span><span class="op">(</span><span class="st">&quot;.&quot;</span><span class="op">);</span></span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>}
+<td><div class="language-text highlight"><pre><code>}
 public boolean next() throws JRException
 {
 index++;
@@ -113,17 +113,17 @@ return f.getName();
 else if (jrField.getName().equals(&quot;IS_DIRECTORY&quot;))
 {
 return new Boolean(f.isDirectory());
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>else if (jrField.getName().equals(&quot;SIZE&quot;))
+<td><div class="language-text highlight"><pre><code>else if (jrField.getName().equals(&quot;SIZE&quot;))
 {
 return new Long(f.length());
 }
 // Field not found...
 return null;
 }
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>

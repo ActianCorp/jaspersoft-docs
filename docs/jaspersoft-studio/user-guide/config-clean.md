@@ -30,13 +30,16 @@ To set the clean flag at startup on Linux, run the following commands:
 To set the clean flag at startup on Windows, edit the desktop shortcut as follows:
 
 1.  Right-click on the desktop shortcut and select **Properties**.
+
 2.  On the Shortcut tab, append `-clean` to the **Target** field. For example:
 
-`"<jss-install>\Jaspersoft Studio Professional" -clean`
+    `"<jss-install>\Jaspersoft Studio Professional" -clean`
 
-1.  Click **OK**.
-2.  Double-click the shortcut to run the application.
-3.  Once you have cleaned the application, edit the shortcut again to remove the `-clean` flag to avoid slowing down application startup.
+3.  Click **OK**.
+
+4.  Double-click the shortcut to run the application.
+
+5.  Once you have cleaned the application, edit the shortcut again to remove the `-clean` flag to avoid slowing down application startup.
 
 ## Setting the -clean Flag in the .ini File
 
@@ -45,17 +48,21 @@ As an Eclipse-based product, Jaspersoft Studio uses an `.ini` configuration file
 To enable cleaning via the .ini file:
 
 1.  Locate the `.ini` file (for example, `Jaspersoft Studio.ini`). This file is in your `<jss-install>` directory on Windows and Linux, and in the `<jss-install>/Contents/Eclipse` directory on Mac.
+
 2.  Open the file in a text editor.
+
 3.  Locate the following line:
 
-`-vm`
+    `-vm`
 
-This line sets the location of the JVM to be used.
+    This line sets the location of the JVM to be used.
 
-1.  Add the following line *before*`-vm`:
+4.  Add the following line *before*`-vm`:
 
-`-clean`
+    `-clean`
 
-1.  Save the file.
-2.  Start Jaspersoft Studio.
-3.  Once you have cleaned the application, edit the `.ini` file again to remove the `-clean` flag to avoid slowing down application startup.
+5.  Save the file.
+
+6.  Start Jaspersoft Studio.
+
+7.  Once you have cleaned the application, edit the `.ini` file again to remove the `-clean` flag to avoid slowing down application startup.

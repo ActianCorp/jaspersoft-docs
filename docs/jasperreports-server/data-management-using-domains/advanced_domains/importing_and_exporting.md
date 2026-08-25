@@ -24,24 +24,28 @@ Uploading a design file overwrites the existing Domain and may break Ad Hoc view
 To upload a Domain design file
 
 1.  Log into the server as an administrator and edit an existing Domain or create a new one.
+
 2.  Click ![js DomainDesigner icon import](../assets/images/js-DomainDesigner-icon-import.png) on the menu bar.
+
 3.  **Browse** to find the design file you want to upload, select it, and click **Open**.
 
-A warning dialog appears.
+    A warning dialog appears.
 
-1.  Click **Update Domain Design** to continue.
+4.  Click **Update Domain Design** to continue.
 
-!!! warning
+    !!! warning
 
-    The design file overwrites any existing design without prompting. If you make a mistake or upload the wrong file, exit the Domain Designer without saving and start over.
+        The design file overwrites any existing design without prompting. If you make a mistake or upload the wrong file, exit the Domain Designer without saving and start over.
 
-The server validates the syntax of the uploaded file. If there are syntax or semantic errors, the current design is not replaced. You may also see warnings if you have changed the data source, schema names, or deleted schemas, tables, or columns from the Design file. If there are any errors or inconsistencies, you should make changes to the design file, upload it again, and verify it again.
+    The server validates the syntax of the uploaded file. If there are syntax or semantic errors, the current design is not replaced. You may also see warnings if you have changed the data source, schema names, or deleted schemas, tables, or columns from the Design file. If there are any errors or inconsistencies, you should make changes to the design file, upload it again, and verify it again.
 
-The results of editing a design in the Domain Designer based on an inconsistent XML file are unpredictable. If you can't resolve problems, or are unsure that the result will be what you want, exit the Domain Designer without saving.
+    The results of editing a design in the Domain Designer based on an inconsistent XML file are unpredictable. If you can't resolve problems, or are unsure that the result will be what you want, exit the Domain Designer without saving.
 
-1.  After the design appears correctly in the Domain Designer, make any further modifications on any of the tabs.
-2.  Select **Save Domain** from the ![js DomainDesigner icon save menu](../assets/images/js-DomainDesigner-icon-save-menu.png) menu to update the Domain in the repository.
-3.  If you modified an existing Domain, you must clear the Ad Hoc cache of all queries based on the Domain. This removes any data that was based on the old instance of the Domain and avoids inconsistencies in new reports. For instructions, see the JasperReports Server Administrator Guide.
+5.  After the design appears correctly in the Domain Designer, make any further modifications on any of the tabs.
+
+6.  Select **Save Domain** from the ![js DomainDesigner icon save menu](../assets/images/js-DomainDesigner-icon-save-menu.png) menu to update the Domain in the repository.
+
+7.  If you modified an existing Domain, you must clear the Ad Hoc cache of all queries based on the Domain. This removes any data that was based on the old instance of the Domain and avoids inconsistencies in new reports. For instructions, see the JasperReports Server Administrator Guide.
 
 ## Exporting a Domain and Its Resources
 

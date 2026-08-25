@@ -34,9 +34,6 @@ For the image and text elements you can visualize a frame or define a particular
 In the Properties view, click the **Borders** option. This includes the following controls:
 
 - Padding allows you to define padding widths for each of the four sides, or to apply the same value to all sides.
-
-<!-- -->
-
 - Borders allow you to select their color, style, and width, as well as choose where it appears.
 
 As always, all the measurements are shown in pixels.

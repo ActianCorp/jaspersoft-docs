@@ -16,9 +16,12 @@ Therefore, an application using the REST API can only manipulate the definition 
 The general structure of a dashboard descriptor contains:
 
 - Typical descriptor properties such as `label`, `description`, and `PROP_PARENT_FOLDER`.
+
 - The `dashboardState` descriptor containing:
+
   - The `ADHOC_FRAMES` property that lists the reports, labels, and buttons, and gives their coordinates in the dashboard.
   - The `ADHOC_PROPERTIES` property that gives the overall dashboard layout properties.
+
 - `reference` descriptors for each of the reports included in the `ADHOC_FRAMES` property. These references ensure that the reports can’t be deleted from the repository as long as they are used in this dashboard.
 
 The following example shows the contents of a dashboard’s resource descriptor:
@@ -60,23 +63,23 @@ The following example shows the contents of a dashboard’s resource descriptor:
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  Top Fives Report;</span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>frame_1,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameSource=%2Fflow.html
+<td><div class="language-text highlight"><pre><code>frame_1,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameSource=%2Fflow.html
   %3F_flowId%3DviewReportFlow%26viewAsDashboardFrame%3Dtrue%26reportUnit%3D;
 frame_1,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashResourceIndex=0;
-frame_1,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameScrollBars=false;</code></pre></td>
+frame_1,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameScrollBars=false;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameLeft=254;
+<td><div class="language-text highlight"><pre><code>frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameLeft=254;
 frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameTop=0;
 frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameWidth=450;
 frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameHeight=418;
 frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameResourceType=
   com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.ReportUnit;
 frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameResourceName=
-  Sales By Month Report;</code></pre></td>
+  Sales By Month Report;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameSource=%2Fflow.html
+<td><div class="language-text highlight"><pre><code>frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameSource=%2Fflow.html
   %3F_flowId%3DviewReportFlow%26viewAsDashboardFrame%3Dtrue%26reportUnit%3D;
 frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashResourceIndex=1;
 frame_2,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameScrollBars=false;
@@ -95,16 +98,16 @@ frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameHeight=350;
 frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameResourceType=
   com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.ReportUnit;
 frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameResourceName=
-  Sales Gauges Report;</code></pre></td>
+  Sales Gauges Report;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameSource=%2Fflow.html
+<td><div class="language-text highlight"><pre><code>frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameSource=%2Fflow.html
   %3F_flowId%3DviewReportFlow%26viewAsDashboardFrame%3Dtrue%26reportUnit%3D;
 frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashResourceIndex=2;
-frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameScrollBars=false;</code></pre></td>
+frame_3,com.jaspersoft.ji.adhoc.DashboardContentFrame,dashFrameScrollBars=false;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>text_2,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameLeft=736;
+<td><div class="language-text highlight"><pre><code>text_2,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameLeft=736;
 text_2,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameTop=352;
 text_2,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameWidth=66;
 text_2,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameHeight=16;
@@ -115,30 +118,30 @@ text_2,com.jaspersoft.ji.adhoc.DashboardTextFrame,maxFontSize=11;
 control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameLeft=816;
 control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameTop=352;
 control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameWidth=85;
-control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameHeight=16;</code></pre></td>
+control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameHeight=16;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameParamName=
+<td><div class="language-text highlight"><pre><code>control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameParamName=
   startMonth;
 control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameParamValue=
   1;
 control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameDefaultParam
   Value=1;
 control_2,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameDataType=
-  String;</code></pre></td>
+  String;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameLeft=744;
+<td><div class="language-text highlight"><pre><code>text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameLeft=744;
 text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameTop=376;
 text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameWidth=59;
 text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashFrameHeight=16;
 text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashTextFrameLabel=End Month;
 text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,fontResizes=false;
 text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,dashTextFrameFontSize=11;
-text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,maxFontSize=11;</code></pre></td>
+text_3,com.jaspersoft.ji.adhoc.DashboardTextFrame,maxFontSize=11;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameLeft=816;
+<td><div class="language-text highlight"><pre><code>control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameLeft=816;
 control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameTop=376;
 control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameWidth=85;
 control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashFrameHeight=16;
@@ -149,22 +152,22 @@ control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameParamVal
 control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameDefaultParam
   Value=12;
 control_3,com.jaspersoft.ji.adhoc.DashboardControlFrame,dashControlFrameDataType=
-  String;</code></pre></td>
+  String;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameLeft=832;
+<td><div class="language-text highlight"><pre><code>button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameLeft=832;
 button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameTop=400;
 button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameWidth=72;
-button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameHeight=24;</code></pre></td>
+button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameHeight=24;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashClickableFrameID=
+<td><div class="language-text highlight"><pre><code>button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashClickableFrameID=
   submit;
 button_1,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashClickableFrameType=
-  button;</code></pre></td>
+  button;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>button_2,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameLeft=744;
+<td><div class="language-text highlight"><pre><code>button_2,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameLeft=744;
 button_2,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameTop=400;
 button_2,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameWidth=72;
 button_2,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashFrameHeight=24;
@@ -172,7 +175,7 @@ button_2,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashClickableFrameID=re
 button_2,com.jaspersoft.ji.adhoc.DashboardClickableFrame,dashClickableFrameType=
   button;
       &lt;/value&gt;
-    &lt;/resourceProperty&gt;</code></pre></td>
+    &lt;/resourceProperty&gt;</code></pre></div></td>
 </tr>
 <tr>
 <td><div class="sourceCode" id="cb13"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">resourceProperty</span> <span class="ot">name=</span><span class="st">&quot;ADHOC_PROPERTIES&quot;</span>&gt;</span>

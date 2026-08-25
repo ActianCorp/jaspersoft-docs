@@ -261,7 +261,7 @@ The standalone import and export tools have their own bundles located outside of
 
 Create a resource bundle by making a copy of each \*.properties file, using the following syntax for the copy's file name:
 
-```
+``` xml
 <default_file_name>_<locale>.properties
 ```
 
@@ -303,7 +303,7 @@ Each locale may have its own rules for displaying dates and datetime values. Sys
 
 For example in the English resource bundle, the four entries are:
 
-```
+``` properties
 date.format=dd-MM-yyyy
 datetime.format=dd-MM-yyyy HH:mm
 calendar.date.format=%d-%m-%Y
@@ -325,7 +325,9 @@ If you prefer to not have Input Controls operating only in ISO date format (for 
 To use the date/format from `jasperserver_config.properties` for Input Controls, apart from setting formats found in the `config.properties` file, perform the following steps:
 
 1.  Update the `jasperserver_config.properties` file.
+
 2.  Update the `/WEB-INF/js.spring.properties` file:
+
     1.  Comment out `` `bean.calendarFormatProvider=isoCalendarFormatProvider` `` line.
 
     - Uncomment `` `bean.calendarFormatProvider=messagesCalendarFormatProvider` `` line.
@@ -353,18 +355,20 @@ Customize the available data format masks for dates, integers, and decimals by e
 </thead>
 <tbody>
 <tr>
-<td><pre class="properties"><code>ADH_100_MASK_date_0 = short,hide
-ADH_100_MASK_date_1 = long,hide
-ADH_100_MASK_date_2 = short,medium
-ADH_100_MASK_date_3 = medium,medium
-&#10;ADH_100_MASK_int_0 = #,##0
-ADH_100_MASK_int_1 = 0
-ADH_100_MASK_int_2 = $#,##0;($#,##0)
-ADH_100_MASK_int_3 = #,##0;(#,##0)
-&#10;ADH_100_MASK_dec_0 = #,##0.00
-ADH_100_MASK_dec_1 = 0
-ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
-ADH_100_MASK_dec_3 = $#,##0;($#,##0)</code></pre></td>
+<td><div class="language-properties highlight"><pre><code><span class="na">ADH_100_MASK_date_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">short,hide</span>
+<span class="na">ADH_100_MASK_date_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">long,hide</span>
+<span class="na">ADH_100_MASK_date_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">short,medium</span>
+<span class="na">ADH_100_MASK_date_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">medium,medium</span>
+
+<span class="na">ADH_100_MASK_int_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">#,##0</span>
+<span class="na">ADH_100_MASK_int_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span>
+<span class="na">ADH_100_MASK_int_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$#,##0;($#,##0)</span>
+<span class="na">ADH_100_MASK_int_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">#,##0;(#,##0)</span>
+
+<span class="na">ADH_100_MASK_dec_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">#,##0.00</span>
+<span class="na">ADH_100_MASK_dec_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span>
+<span class="na">ADH_100_MASK_dec_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$#,##0.00;($#,##0.00)</span>
+<span class="na">ADH_100_MASK_dec_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$#,##0;($#,##0)</span></code></pre></div></td>
 <td><p>3/31/09<br />
 Mar 31, 2009<br />
 March 31, 2009<br />
@@ -383,7 +387,7 @@ Mar 31, 2009 23:59:59</p>
 
 The data format masks for each type are numbered consecutively from zero; create new masks by adding new entries. The keys of the new entries must follow the convention established in the default entries. For example, a new decimal data format mask might have this ID:
 
-```
+``` text
 ADH_100_MASK_dec_4
 ```
 

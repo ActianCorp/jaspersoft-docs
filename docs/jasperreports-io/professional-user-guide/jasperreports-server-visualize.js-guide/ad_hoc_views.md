@@ -24,7 +24,7 @@ This chapter contains the following sections:
 
 The properties structure passed to the `adhocView` function determines the view to be displayed and its initial state. It is defined as follows:
 
-```
+``` json
 {
   "type": "object",
   "properties": {
@@ -124,7 +124,7 @@ The properties structure passed to the `adhocView` function determines the view 
 
 The `adhocView` function exposes the following functions:
 
-```
+``` javascript
 /**
  * @param {Object} properties - Ad Hoc View properties
  * @constructor
@@ -188,7 +188,7 @@ return adhocView;
 
 The data object of an `adhocView` contains metadata about the Ad Hoc view:
 
-```
+``` json
 {
   "title": "Ad Hoc View Data",
   "description": "A JSON Schema describing Ad Hoc View Data",
@@ -261,7 +261,7 @@ The data object of an `adhocView` contains metadata about the Ad Hoc view:
 
 As with reports and dashboards, Ad Hoc views run on the server and are rendered in a container on your page. First, you create an `adhocView` object and then set its properties. As with other objects, the resource property determines which Ad Hoc view to run, and the container property determines where it appears on your page.
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     container: "#AdHocContainer",
@@ -276,7 +276,7 @@ However, the rendering of an Ad Hoc view includes the ![vz icon ChartSelector](.
 
 If you wish to disable the chart selector, specify the following property on the container:
 
-```
+``` bash
 #AdHocContainer .jr-mAdhoc-visualization-launcher.jr {
   display: none;
 }
@@ -290,7 +290,7 @@ If you wish to disable the chart selector, specify the following property on the
 
 In the following example, the adhocView object is created and initialized first, and then it runs and renders later on demand in the specified container.
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     runImmediately: false
@@ -310,7 +310,7 @@ ahv
 
 Of course, you can add styles to change the size and placement of your Ad Hoc view container, as shown in the following CSS sample.
 
-```
+``` bash
 #AdHocContainer {
   width: 800px;
   height: 400px;
@@ -321,7 +321,7 @@ Of course, you can add styles to change the size and placement of your Ad Hoc vi
 
 There are two more functions to manage your Ad Hoc view. Refresh will update the rendered view, and destroy will remove it, leaving only the `adhocView` object with its properties set.
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     container: "#AdHocContainer"
@@ -341,18 +341,21 @@ As of JasperReports Server 7.9, the server can provide the code to embed any Ad 
 To copy the embed code of an Ad Hoc view:
 
 1.  Log into JasperReports Server and browse the repository to find the Ad Hoc view you want to embed.
+
 2.  Open the Ad Hoc view so that it is displayed in the server's Ad Hoc Editor.
+
 3.  Click the ![js Viewer icon EmbedCode](../assets/images/js-Viewer-icon-EmbedCode.png) icon in the menu bar to view the embed code. If this icon is not visible in the menu bar, click the ![js AdHoc icon ToggleMode](../assets/images/js-AdHoc-icon-ToggleMode.png) icon to toggle design mode first.
+
 4.  The **Ad Hoc Embed Code** dialog shows you the Visualize.js code and a preview of the view as it is currently saved. Select **Copy Code** to copy the entire code block to your clipboard. You can also highlight selected parts of the code and use Ctrl-C (Command-C on Mac OS), for example if you want only the main function.
 
-|                                                                      |
-|----------------------------------------------------------------------|
-| ![js AdHoc GetEmbedCode](../assets/images/js-AdHoc-GetEmbedCode.png) |
-| *Figure 1: The Embed Code of an Ad Hoc View*                         |
+    |                                                                      |
+    |----------------------------------------------------------------------|
+    | ![js AdHoc GetEmbedCode](../assets/images/js-AdHoc-GetEmbedCode.png) |
+    | *Figure 1: The Embed Code of an Ad Hoc View*                         |
 
-The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
+    The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
 
-1.  Alternatively, select **Open in JSFiddle** to load the same code into a new Fiddle, an online JavaScript viewer and interactive editor. This lets you modify the JavaScript or HTML, and add CSS if desired, then see the results in real time.
+5.  Alternatively, select **Open in JSFiddle** to load the same code into a new Fiddle, an online JavaScript viewer and interactive editor. This lets you modify the JavaScript or HTML, and add CSS if desired, then see the results in real time.
 
 As shown by the preview, Visualize.js displays the table, crosstab, or chart of the Ad Hoc views without any design elements such as data selection panel, layout band, or filter panel. Regardless of any changes you make in the Ad Hoc editor, Visualize.js always displays the latest saved version of an Ad Hoc view, as determined by the repository URL in the embed code.
 
@@ -370,7 +373,7 @@ An Ad Hoc view has a default visualization type, either table, crosstab, or char
 
 The following example shows how your code can set the visualization type by modifying the `canvas` object of your `adhocView` object during initialization.
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     container: "#AdHocContainer",
@@ -383,7 +386,7 @@ var ahv = v.adhocView({
 
 You can also let the Ad Hoc view render with the default visualization and then change to a different the visualization type at a later time:
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     container: "#AdHocContainer",
@@ -397,7 +400,7 @@ ahv.canvas({
 
 The available visualization types and charts are listed by the `type` property of the `canvas` object:
 
-```
+``` text
     "canvas": {
       "type": "object",
       "properties": {
@@ -423,7 +426,7 @@ Another way to interact programmatically with Ad Hoc views is to get and set any
 
 As with reports and dashboards, filter values are called parameters and exposed through the `params` object. In the following example, the Country filter is known to be saved in the Ad Hoc view, so it can be set during initialization of the view, just before it is run and rendered.
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     container: "#AdHocContainer",
@@ -444,7 +447,7 @@ You can use the `metadata.inputParameters` property of the `data` object to obta
 
 In the next example, the code requests the current filter values, processes them, and then uses the information about the current filters and values to set different values, in this case a different selection:
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     container: "#AdHocContainer",
@@ -468,7 +471,7 @@ Hyperlinks, or simply links, are elements of the Ad Hoc view that your code can 
 
 The elements that you can access are called `outputParameters`, and their structure is defined in the Ad Hoc View Data Structure. You can use the `metadata.outputParameters` property of the `data` object to obtain the name and type of each hyperlink.
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView"
     container: "#AdHocContainer",
@@ -484,7 +487,7 @@ ahv.canvas({
 
 Using the `linkOptions` properties, you can access the events on links, use the link values, and take other actions. The following example shows how to add a listener that displays link values in the console:
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample_AdHocView",
     linkOptions: {
@@ -503,7 +506,7 @@ var ahv = v.adhocView({
 
 You can use the `beforeRender` property of the `linkOptions` to modify the appearance of elements in the Ad Hoc view. In the following example, every element is printed to the log and given the same color, but you could implement logic to highlight high or low values based on other thresholds.
 
-```
+``` javascript
 var ahv = v.adhocView({
     resource: "/public/Sample",
     linkOptions: {
@@ -521,7 +524,7 @@ var ahv = v.adhocView({
 
 The following structure defines what properties are available for values in an Ad Hoc table, also called an Ad Hoc hyperlink:
 
-```
+``` json
 {
     "title": "Adhoc Hyperlink",
     "description": "A JSON Schema describing embeddable adhoc hyperlink",
@@ -546,7 +549,7 @@ The following structure defines what properties are available for values in an A
 
 The following structure defines what properties are available for the table element of an Ad Hoc view, also called an Ad Hoc Table hyperlink. In particular, this structure gives your code access to the rows, columns, groups, and aggregation information about the Ad Hoc table:
 
-```
+``` json
 {
     "title": "Extended Adhoc Hyperlink",
     "description": "An Extended JSON Schema describing embeddable adhoc hyperlink",
@@ -724,7 +727,7 @@ The following structure defines what properties are available for the table elem
 
 The following example displays a lot of information about an Ad Hoc view in the console. You can use a generic script like this to examine your Ad Hoc views and determine which fields and data you can use to add interactive features.
 
-```
+``` javascript
 visualize({
   auth: {
     name: "superuser",

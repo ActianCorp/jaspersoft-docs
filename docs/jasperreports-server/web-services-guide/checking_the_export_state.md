@@ -38,19 +38,19 @@ The body of the response contains the current state of the export operation:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
   phase: &quot;inprogress&quot;,
   message: &quot;Progress...&quot;
-}</code></pre></td>
-<td><pre class="text"><code>{
+}</code></pre></div></td>
+<td><div class="language-text highlight"><pre><code>{
   phase: &quot;ready&quot;,
   message: &quot;Ready!&quot;
-}</code></pre></td>
-<td><pre class="text"><code>{
+}</code></pre></div></td>
+<td><div class="language-text highlight"><pre><code>{
   phase: &quot;failure&quot;,
   message: &quot;Not enough space on
             disk&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -10,15 +10,22 @@ You need to select a data source to retrieve data for the report and the query i
 To select a data source and run the complex report
 
 1.  On the Controls & Resources page of the JasperReport wizard, select **Data Source**.
+
 2.  On the Locate Data Source page, choose **Select data source from repository**.
+
 3.  Click **Browse**, choose **Organization \> Data Sources \> JServerJNDI Data Source**, and lick **Select**.
+
 4.  On Link a Data Source to the Report, click **Submit**.
+
 5.  On the Locate Query Page, click **Submit** again to save the complex report.<br>
     Skip the Query and Customization pages of the JasperReport wizard to use the default settings on those pages.<br>
     The server validates the report and a message appears indicating that the report was added to the repository.
+
 6.  In the Repository, click the name New Complex Report to run and view the report.<br>
     Input controls appear.
+
 7.  Enter these input values, as shown in Figure 5‑22:
+
     - Text Input Control: `myText`
 
     - Checkbox Input Control: Check the checkbox.
@@ -29,16 +36,16 @@ To select a data source and run the complex report
 
     - Query Input Control: Select **Sarah Smith** from the dropdown.
 
-![js ReportOptions InputControls queryinput](../assets/images/js-ReportOptions-InputControls-queryinput.png)
+    ![js ReportOptions InputControls queryinput](../assets/images/js-ReportOptions-InputControls-queryinput.png)
 
-*Figure 1: Input Controls Dialog for the New Complex Report*
+    *Figure 1: Input Controls Dialog for the New Complex Report*
 
 8.  Click **OK** or **Apply** to run the report with the selected input, including the incorrect non-numerical input for the Text Input Control.<br>
     The server enforces the proper format defined for each input control. You defined the Text Input Control as a numeric type, so it accepts only valid numbers, as indicated by the message to specify a valid float number, as shown in Figure 5‑23.
 
-![js ReportOptions InputControls invalidinput](../assets/images/js-ReportOptions-InputControls-invalidinput.png)
+    ![js ReportOptions InputControls invalidinput](../assets/images/js-ReportOptions-InputControls-invalidinput.png)
 
-*Figure 2: Invalid Input Message*
+    *Figure 2: Invalid Input Message*
 
 9.  In Text Input Control, enter `3` and click **OK** or **Apply**.<br>
     The sample report includes a header that displays the value of each parameter received from the input controls. Values and labels appear in the language specified by the active resource bundle, in this case English.

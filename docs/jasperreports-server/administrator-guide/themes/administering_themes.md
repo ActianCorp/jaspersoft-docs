@@ -46,11 +46,12 @@ The following procedures assume that the system theme is still set to the defaul
 Professional edition users can give different themes to their organizations.
 
 1.  Log into JasperReports Server as system admin (`superuser`) or as the organization admin (`jasperadmin`).
+
 2.  Click **View \> Repository** and expand the Themes folder if necessary. The organization's **Theme** folder is shown in the following figure.
 
-![js Themes OrgLevel](../assets/images/js-Themes-OrgLevel.png)
+    ![js Themes OrgLevel](../assets/images/js-Themes-OrgLevel.png)
 
-*Figure 4: Organization Themes Seen by Organization Admin*
+    *Figure 4: Organization Themes Seen by Organization Admin*
 
 3.  Right-click the new theme folder name and select **Set as Active Theme**.<br>
     As soon as the screen is refreshed, you see the effect of the new theme. The new theme applies to all organization users and is inherited by all suborganizations, if any.
@@ -66,21 +67,27 @@ System admins may want to restrict access to themes, so that all themes are cont
     This procedure applies only to system admins. Organization admins cannot modify the `ROLE_ADMINISTRATOR` permission, even in their suborganizations. They must request that the system admin perform the procedure for them
 
 1.  Log into JasperReports Server as system administrator (`superuser`).
+
 2.  Click **View \> Repository**.
+
 3.  Expand the **Organizations** folder.
+
 4.  Locate the name of the organization where you want to restrict access to themes and expand its folder.
+
 5.  Right-click the **Themes** folder name and select **Permissions**.
+
 6.  Change the permission for the **ROLE_ADMINISTRATOR** from **Administer** to **Execute Only**.
 
-![js Themes permissions](../assets/images/js-Themes-permissions.png)
+    ![js Themes permissions](../assets/images/js-Themes-permissions.png)
 
-*Figure 5: Restricting jasperadmin Access to Organization Themes*
+    *Figure 5: Restricting jasperadmin Access to Organization Themes*
 
-By setting **Execute Only** access, the organization administrators cannot see the **Themes** folder in the repository, and thus cannot change themes or create a new theme.
+    By setting **Execute Only** access, the organization administrators cannot see the **Themes** folder in the repository, and thus cannot change themes or create a new theme.
 
-!!! warning
+    !!! warning
 
-    You shouldn't change any other permissions on themes, even if the permissions dialog allows it. You could inadvertently make the user interface inaccessible.
+        You shouldn't change any other permissions on themes, even if the permissions dialog allows it. You could inadvertently make the user interface inaccessible.
 
 7.  To restrict access to all organizations, repeat Step 4 to Step 6 for every organization in the server, including suborganizations.
+
 8.  If you want to restrict access in the same way in all future organizations, repeat Step 5 and Step 6 in the Folder Template of every organization and suborganization in the server. Fore more information, see [Placing Themes in the Folder Template](creating_themes.md).

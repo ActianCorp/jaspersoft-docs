@@ -32,43 +32,44 @@ To configure Tomcat to support UTF-8
 
 1.  Open the `conf/server.xml` file and locate the following code:
 
-```
-<!-- Define a non-SSL HTTP/1.1 Connector on port 8080 -->
-<Connector>
-    port="8080" maxHttpHeaderSize="8192"
-    maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
-    enableLookups="false" redirectPort="8443" acceptCount="100"
-    connectionTimeout="20000" disableUploadTimeout="true"
-</Connector>
-```
+    ``` text
+    <!-- Define a non-SSL HTTP/1.1 Connector on port 8080 -->
+    <Connector>
+        port="8080" maxHttpHeaderSize="8192"
+        maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+        enableLookups="false" redirectPort="8443" acceptCount="100"
+        connectionTimeout="20000" disableUploadTimeout="true"
+    </Connector>
+    ```
 
 2.  At the end of this section, insert the following line before the closing tag:
 
-```
-URIEncoding="UTF-8"
-```
+    ``` properties
+    URIEncoding="UTF-8"
+    ```
 
 3.  For example, after your changes, the section might read:
 
-```
-<!-- Define a non-SSL HTTP/1.1 Connector on port 8080 -->
-    <Connector>
-    port="8080" maxHttpHeaderSize="8192"
-    maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
-    enableLookups="false" redirectPort="8443" acceptCount="100"
-    connectionTimeout="20000" disableUploadTimeout="true"
-    URIEncoding="UTF-8"
-</Connector>
-```
+    ``` text
+    <!-- Define a non-SSL HTTP/1.1 Connector on port 8080 -->
+        <Connector>
+        port="8080" maxHttpHeaderSize="8192"
+        maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+        enableLookups="false" redirectPort="8443" acceptCount="100"
+        connectionTimeout="20000" disableUploadTimeout="true"
+        URIEncoding="UTF-8"
+    </Connector>
+    ```
 
 4.  Save the file.
+
 5.  Restart Tomcat.
 
 ## PostgreSQL
 
 JasperReports Server requires PostgreSQL to use UTF-8 character encoding for the database that stores its repository as well as for data sources. A simple way to meet the requirement is to create the database with a UTF-8 character set. For example, enter the following command:
 
-```
+``` sql
 create database jasperserver encoding='utf8';
 ```
 
@@ -76,19 +77,19 @@ create database jasperserver encoding='utf8';
 
 By default, MySQL uses ISO-8859-1 (ISO Latin 1) character encoding. However, JasperReports Server requires MySQL to use UTF-8 character encoding for the database that stores its repository as well as for data sources. The simplest way to meet the requirement is to create the database with a UTF-8 character set. For example, enter the following command:
 
-```
+``` sql
 create database jasperserver character set utf8;
 ```
 
 To support UTF-8, the MySQL JDBC driver also requires that the `useUnicode` and `characterEncoding` parameters be set as in this startup URL:
 
-```
+``` properties
 url="jdbc:mysql://localhost:3306/jasperserver?useUnicode=true&characterEncoding=UTF-8"
 ```
 
 If the MySQL database is a JNDI data source managed by Tomcat, such as the JasperReports Server repository database, the parameters can be added to the JDBC URL in `.../META-INF/context.xml`. The following is a sample resource definition from that file:
 
-```
+``` xml
 <Resource name="jdbc/jasperserver" auth="Container" type="javax.sql.DataSource"
     maxTotal="100" maxIdle="30" maxWaitMillis="10000"
     username="root" password="password" driverClassName="com.mysql.jdbc.Driver"
@@ -101,7 +102,7 @@ JBoss ignores the `context.xml` file. Instead define JNDI data sources in `<jbos
 
 If the database is a JDBC data source configured in the repository, change the JDBC URL by editing the data source in the JasperReports Server repository. The following is an example of the JDBC URL (note that the ampersand isn't escaped):
 
-```
+``` text
 jdbc:mysql://localhost:3306/foodmart_ja?useUnicode=true&characterEncoding=UTF-8
 ```
 
@@ -111,7 +112,7 @@ Oracle databases have both a default character set and a national character set 
 
 To work properly with Unicode data, the Oracle JDBC driver requires you to set a Java system property by passing the following argument to the JVM:
 
-```
+``` text
 -Doracle.jdbc.defaultNChar=true
 ```
 
@@ -119,10 +120,10 @@ In Tomcat, add the variable to `JAVA_OPTS` in `<jboss>/bin/standalone.conf` (Lin
 
 1.  Locate the following line in the script:
 
-|         |                                                   |
-|---------|---------------------------------------------------|
-| Linux   | `# Set the default -Djava.endorsed.dirs argument` |
-| Windows | `Set the default -Djava.endorsed.dirs argument`   |
+    |         |                                                   |
+    |---------|---------------------------------------------------|
+    | Linux   | `# Set the default -Djava.endorsed.dirs argument` |
+    | Windows | `Set the default -Djava.endorsed.dirs argument`   |
 
 2.  Add the following line before it:
 

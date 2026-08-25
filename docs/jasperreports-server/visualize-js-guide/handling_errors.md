@@ -22,7 +22,7 @@ This chapter contains the following sections:
 
 The properties structure for `Generic Errors` is defined as follows:
 
-```
+``` json
 {
     "title": "Generic Errors",
     "description": "A JSON Schema describing Visualize Generic Errors",
@@ -124,13 +124,13 @@ The following table lists common errors, their messages, and causes.
 
 Visualize.js is designed to have many places where you can catch and handle errors. The visualize function definition, as shown in [Contents of the Visualize.js Script](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/visualize_js_api_reference.md), is:
 
-```
+``` text
 function visualize(properties, callback, errorback, always)
 ```
 
 During initialization and authentication, you can handle errors in the third parameter named `errorback` (an error callback). Your application would then have this structure:
 
-```
+``` javascript
 visualize({
     auth : { ...
     }
@@ -149,7 +149,7 @@ visualize({
 
 One way to handle search errors is to specify an error handler as the second parameter of `run`:
 
-```
+``` javascript
 new ResourcesSearch({
     server:"http://localhost:8080/jasperserver-pro",
     folderUri: "/public",
@@ -163,7 +163,7 @@ new ResourcesSearch({
 
 Another way to handle search errors is to specify a function as the third parameter of `run`. This function is an `always` handler that runs every time when operation ends.
 
-```
+``` javascript
 new ResourcesSearch({
     server:"http://localhost:8080/jasperserver-pro",
     folderUri: "/public",
@@ -179,7 +179,7 @@ new ResourcesSearch({
 
 You can also validate the structure of the search properties without making an actual call to the search function:
 
-```
+``` javascript
 var call = new ResourcesSearch({
     server:"http://localhost:8080/jasperserver-pro",
     folderUri: "/public",
@@ -199,7 +199,7 @@ if (!error){
 
 To catch and handle errors when running reports, define the contents of the `err` function as shown in the following sample:
 
-```
+``` javascript
 visualize({
     auth : { ...
     }
@@ -224,7 +224,7 @@ visualize({
 
 Catching and handling input control errors is very similar to handling report errors. Define the contents of the `err` function that gets invoked in error conditions, as shown in the following sample:
 
-```
+``` javascript
 visualize({
     auth : { ...
     }
@@ -249,7 +249,7 @@ visualize({
 
 You can also validate the structure of your input controls without making an actual call. However, the values of the input controls and their relevance to the named resource are not checked.
 
-```
+``` javascript
 var ic = new InputControls({
     server: "http://localhost:8080/jasperserver-pro",
     resource: "/public/my_report",

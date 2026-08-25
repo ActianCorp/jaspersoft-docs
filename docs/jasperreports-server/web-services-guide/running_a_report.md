@@ -40,27 +40,27 @@ Descriptor&gt;</p></td>
 <td colspan="2"><p>Argument used to pass a transformer key to be used when running a report using JRPRINT as output format. The transformer key will be used to transform generic elements in the generated report as per net.sf.jasperreports.engine. export.GenericElementReportTransformer. This is a required argument when using multipart requests.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>interactive?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>interactive?</code></pre></div></td>
 <td><p>Boolean</p></td>
 <td colspan="2"><p>In a commercial editions of the server where HighCharts are used in the report, this property determines whether the JavaScript necessary for interaction is generated when exporting to HTML. By default it is true. If set to false, the chart is generated as a non-interactive image file.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>IMAGES_URI?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>IMAGES_URI?</code></pre></div></td>
 <td><p>String</p></td>
 <td colspan="2"><p>The uri prefix used for images when exporting in HTML. The default is <code>images</code>.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>X-Method-Override?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>X-Method-Override?</code></pre></div></td>
 <td><p>POST</p></td>
 <td colspan="2"><p>This method can be used to perform a POST instead of a PUT.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>PAGE?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PAGE?</code></pre></div></td>
 <td><p>Integer &gt; 0</p></td>
 <td colspan="2"><p>An integer value used to export a specific page</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>ignorePagination</code></pre></td>
+<td><div class="language-text highlight"><pre><code>ignorePagination</code></pre></div></td>
 <td><p>Boolean</p></td>
 <td colspan="2"><p>When true, the report output will be generated on a single page in all export formats. When false or omitted, all export formats will be paginated.</p></td>
 </tr>

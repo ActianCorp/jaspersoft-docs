@@ -14,18 +14,20 @@ You can also use queries to populate list input controls, as described in [Query
 To create a reusable query:
 
 1.  Login as an administrator.
+
 2.  Click **View \> Repository** and locate the folder for the query.
+
 3.  Right-click the folder's name and select **Add Resource \> Query** from the context menu. The **Add Query** page appears.
 
-![js AddQuery NameTheQuery](../assets/images/js-AddQuery-NameTheQuery.png)
+    ![js AddQuery NameTheQuery](../assets/images/js-AddQuery-NameTheQuery.png)
 
-*Figure 1: Add Query - Name the Query Page*
+    *Figure 1: Add Query - Name the Query Page*
 
 4.  Enter a name for the query. Resource ID is filled in automatically, and the description is optional. Click **Next**. The **Link a Data Source** page appears.
 
-![js AddQuery LinkADataSource](../assets/images/js-AddQuery-LinkADataSource.png)
+    ![js AddQuery LinkADataSource](../assets/images/js-AddQuery-LinkADataSource.png)
 
-*Figure 2: Add Query - Link a Data Source Page*
+    *Figure 2: Add Query - Link a Data Source Page*
 
 5.  Select the data source and click **Next**. Your options are:
 
@@ -33,19 +35,20 @@ To create a reusable query:
     - **Create a new data source**: You can define a local data source within this query resource that is not accessible to any other resource. Click the link to create any data source as described in [Data Sources](../datasources/datasources_intro.md). This new data source overrides any data source specified in reports that use the query.
     - **Select data source from repository**: This creates a reference to a data source in the repository. Click **Browse** to select an existing data source. The data source that you select overrides any data source specified in reports that use the query.
 
+    ![js AddQuery DefineTheQuery](../assets/images/js-AddQuery-DefineTheQuery.png)
+
+    *Figure 3: Add Query - Define the Query Page*
+
     Click **Next**. The **Define the Query** page appears.
-
-![js AddQuery DefineTheQuery](../assets/images/js-AddQuery-DefineTheQuery.png)
-
-*Figure 3: Add Query - Define the Query Page*
 
 6.  Select a **Query Language**. For this example, choose **SQL**.<br>
     The query language Domain (sl) is selected when opening Domain-based queries created in versions of the server before 3.7. It is used only for backward compatibility and should not be selected for new domain-based queries.
+
 7.  Enter the text of your query in the **Query String** field, for example:
 
-```
-SELECT * FROM orders
-```
+    ``` sql
+    SELECT * FROM orders
+    ```
 
 8.  Click **Save**.
 

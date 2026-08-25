@@ -68,7 +68,9 @@ You create a subdataset using the Dataset wizard. To open the Dataset wizard, ri
 The **Dataset** page of the Dataset wizard shows the following options:
 
 - **Dataset name**: A name for the subdataset. Must be unique in the report.
+
 - Dataset radio buttons:
+
   - **Create new dataset from a connection or Data Source**: Select this to use a connection or data source to define the metadata for the dataset. The connection or data source introspects its associated data and suggest fields and field types for the dataset. Later, when you add an element and create a dataset run, you make the final choice on where to retrieve the data for the element. At that point, you can use the same data source/connection, or select a different one.
   - **Create an empty dataset**: Select this to create a dataset without metadata. In this case, you need to define the metadata later, when you create a dataset run that uses this dataset.
 
@@ -132,18 +134,28 @@ A dataset has the following properties:
 | `Error` | Generates an exception and stops the filling process. |
 
 - **Filter Expression**: Boolean expression that determines whether records that are read from the data source should be used. Can use all the objects of the dataset (parameters, variables, and fields). Here are some examples of filter expressions:
+
   - Filter only records where the field `FIRSTNAME` starts with the letter “L”:
+
     - JavaScript: \$F{FIRSTNAME}.substr(0,1) == "L"
     - Groovy: \$F{FIRSTNAME}.startsWith("L")
+
   - Filter only records where the length of the field `FIRSTNAME` is less than 5:
+
     - JavaScript: \$F{FIRSTNAME}.length \< 5
     - Groovy: \$F{FIRSTNAME}.length() \< 5
+
   - Filter only records where the field `FIRSTNAME` is the one provided by the parameter `NAME:`
+
     - JavaScript: \$F{FIRSTNAME} == \$P{NAME}
     - Groovy: \$F{FIRSTNAME} == \$P{NAME}
+
 - **Scriptlet Class**: A scriptlet is a Java class whose methods are run according to specific events during report creation, such as the beginning of a new page or the end of a group. For those who are familiar with visual tools such as Microsoft Access or Microsoft Excel, a scriptlet can be compared with a module in which procedures associated with other events or functions (for example, the expression of a textfield) are inserted. The scriptlet property identifies only the main scriptlet, but other scriptlets can be added to the report by using the outline view.
+
 - **Resource Bundle**: Used to internationalize a report. A resource bundle is the set of files that contain the text of the labels, sentences, and expressions used within a report in one defined language. What you set in the resource bundle property is the *resource bundle base name*, which is the prefix through which you can find the file with the correct translation. To reconstruct the file name required for a particular language, some language/country initials (for example, “\_it_IT” for Italian-Italy) are added to this prefix, as well as the `.properties` extension.
+
 - **Default Data Adapter**: Sets the name and location of the XML data adapter resource that JasperReports should use.
+
 - **Edit query, filter and sort options button**: Opens the Dataset and Query dialog, where you can edit the query, sorting, and filter options for the subdataset. See [Using the Dataset and Query Dialog](dataset_and_query_dialog.md) for more information.
 
 ## Dataset Runs

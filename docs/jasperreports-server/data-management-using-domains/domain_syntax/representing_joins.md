@@ -15,7 +15,7 @@ A join is represented in the design file as a `jdbcTable` element. A join tree i
 
 The following hierarchy is used to represent a join tree.
 
-```
+``` xml
 <jdbcTable>
     <fieldList> (1)
         <field> (1...n)
@@ -234,9 +234,6 @@ Each column used in the expression must come from the two tables in the current 
 The following expressions are supported:
 
 - Boolean operators: AND, OR, and NOT. See the other expressions for examples of how these are used.
-
-<!-- -->
-
 - Comparison operators: Supports equal to (==), less than (&lt;), less than or equal to (&lt;=), greater than (&gt;), greater than or equal to (&gt;=), and not equal to (!=). Operators other than == must be used in conjunction with ==. For example:
 
 `expr="(store.store_id == employee.store_id) AND`<br>
@@ -250,6 +247,7 @@ The following expressions are supported:
     You have to use the character entities for less than (&lt;) and greater than (&gt;).
 
 - IN operator: Must be used in conjunction with ==. Supports the following:
+
   - A set of strings or values, separated by commas. Strings are enclosed in single quotes. For example:
 
 `expr="(store.region_id == region.region_id) AND (store.store_city IN ('San Francisco','Portland', 'Seattle'))" `
@@ -342,7 +340,7 @@ The following example shows a join tree with three joins between three tables. T
 - The join between `region` and `customer` has a join `weight` of 2. This makes it a less desirable join than the other joins in the tree.
 - `alwaysIncludeTable` is set to `true` for the `region` table.
 
-```
+``` xml
 <schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.3">
 <resources>
  <jdbcTable id="JoinTree_1" datasourceId="FoodmartDataSourceJNDI" schemaAlias="public" datasourceTableName="customer">

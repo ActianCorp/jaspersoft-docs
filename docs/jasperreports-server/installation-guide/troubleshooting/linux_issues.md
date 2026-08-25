@@ -23,7 +23,7 @@ If the import operation fails during installation, the installation will also fa
 
 An improperly configured hosts file typically causes error messages like these:
 
-```
+``` text
 Caused by: java.net.NoRouteToHostException: No route to host
 com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
 ERROR Cache:145 - Unable to set localhost. This prevents creation of a GUID
@@ -35,18 +35,18 @@ To fix the /etc/hosts file:
 
 1.  Include entries that look like these:
 
-`127.0.0.1      localhost.localdomain`
+    `127.0.0.1      localhost.localdomain`
 
-`172.17.5.0     myhost.mydomain.com       myhost`
+    `172.17.5.0     myhost.mydomain.com       myhost`
 
-For instance:
+    For instance:
 
-`127.0.0.1       localhost.localdomain           localhost`
+    `127.0.0.1       localhost.localdomain           localhost`
 
-`172.17.5.0      myhost.jaspersoft.com          myhost`
+    `172.17.5.0      myhost.jaspersoft.com          myhost`
 
-1.  You can also double check the file `/etc/sysconfig/network` (if it exists). In this file it would be similar to the following:
+2.  You can also double check the file `/etc/sysconfig/network` (if it exists). In this file it would be similar to the following:
 
-`HOSTNAME=myhost`
+    `HOSTNAME=myhost`
 
-1.  After fixing the `/etc/hosts` file, reinstall JasperReports Server.
+3.  After fixing the `/etc/hosts` file, reinstall JasperReports Server.

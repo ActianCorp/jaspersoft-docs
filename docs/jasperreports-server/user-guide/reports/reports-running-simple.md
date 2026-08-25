@@ -18,12 +18,13 @@ This section describes how to run a tabular report that lists account data.
 To run a report
 
 1.  Log in to the server as an administrator, such as jasperadmin.
+
 2.  On the Home page, click the large icon in the **Reports** block.<br>
     The search results appear, listing your own files and other files that your user account has permission to view. If you log in as jasperadmin, 05. Accounts Report appears in the search results.
 
-![js ViewReports](../assets/images/js-ViewReports.png)
+    ![js ViewReports](../assets/images/js-ViewReports.png)
 
-*Figure 1: Search Results Listing*
+    *Figure 1: Search Results Listing*
 
 3.  To run a report, click the name of a report in the repository. For example, click **05. Accounts Report**. The report appears, as shown in Figure 3‑2.
 
@@ -59,7 +60,9 @@ You can now begin working with your report. If you close the report without savi
 When you create a report, the Create Report wizard displays layout options for generating and exporting the report:
 
 - **Default Report Template** applies basic layout options to your report. This is usually the Actual Size template.
+
 - **Custom Report Template** allows you to browse to an existing template. JasperReports Server includes a number of templates are available by default, including:
+
   - A4 Landscape
   - A4 Portrait
   - Actual Size

@@ -328,20 +328,20 @@ As a prerequisite, the proprietary type must be logically equivalent to one of f
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>java.lang.Boolean
+<td><div class="language-text highlight"><pre><code>java.lang.Boolean
 java.lang.Byte
 java.lang.Character
 java.lang.Double
-java.lang.Float</code></pre></td>
-<td><pre class="text"><code>java.lang.Integer
+java.lang.Float</code></pre></div></td>
+<td><div class="language-text highlight"><pre><code>java.lang.Integer
 java.lang.Long
 java.lang.Short
 java.lang.String
-java.math.BigDecimal</code></pre></td>
-<td><pre class="text"><code>java.sql.Date
+java.math.BigDecimal</code></pre></div></td>
+<td><div class="language-text highlight"><pre><code>java.sql.Date
 java.sql.Time
 java.sql.Timestamp
-java.util.Date</code></pre></td>
+java.util.Date</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -450,21 +450,22 @@ For example, the native MS SQL Server driver might return code 92 for a column o
 Follow these steps to customize the configuration:
 
 1.  Find the `<bean class="com.jaspersoft.jasperserver.api.engine.common.domain.JdbcDriverMetaConfigurationImpl">` in the `../WEB-INF/applicationContext-jdbc-metadata.xml` file.
+
 2.  Uncomment the bean and set its properties:
 
-```
-<bean class="com.jaspersoft.jasperserver.api.engine.common.domain.JdbcDriverMetaConfigurationImpl">
-    <property name="databaseProductName" value="Microsoft SQL Server"/>
-    <property name="codeToJdbcTypeMapping">
-        <map>
-            <entry key="92" value="TIMESTAMP"/>
-            <entry key="8" value="FLOAT_OR_DOUBLE_TYPE"/>
-        </map>
-    </property>
-</bean>
-```
+    ``` xml
+    <bean class="com.jaspersoft.jasperserver.api.engine.common.domain.JdbcDriverMetaConfigurationImpl">
+        <property name="databaseProductName" value="Microsoft SQL Server"/>
+        <property name="codeToJdbcTypeMapping">
+            <map>
+                <entry key="92" value="TIMESTAMP"/>
+                <entry key="8" value="FLOAT_OR_DOUBLE_TYPE"/>
+            </map>
+        </property>
+    </bean>
+    ```
 
-Ensure that the class is set to `com.jaspersoft.jasperserver.api.engine.common.domain.JdbcDriverMetaConfigurationImpl`, indicating that this bean can override the default configuration per driver type. The `databaseProductName` value should be set to the JDBC Driver Name found in the driver's official documentation or retrieved by executing `getDatabaseProductName()` in Java code.
+    Ensure that the class is set to `com.jaspersoft.jasperserver.api.engine.common.domain.JdbcDriverMetaConfigurationImpl`, indicating that this bean can override the default configuration per driver type. The `databaseProductName` value should be set to the JDBC Driver Name found in the driver's official documentation or retrieved by executing `getDatabaseProductName()` in Java code.
 
 3.  Restart JasperReports Server.
 
@@ -474,7 +475,7 @@ In certain scenarios, MS SQL Server may return code 8 for columns of the Float t
 
 To resolve this difference, a specialized mapping is introduced by assigning code 8 to `FLOAT_OR_DOUBLE_TYPE`. This addition adds an extra check performed later in the `jdbc2JavaTypeMapping` property:
 
-```
+``` xml
 <property name="jdbc2JavaTypeMapping">
     <map>
         <!-- ... other mappings ... -->

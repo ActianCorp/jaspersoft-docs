@@ -19,27 +19,30 @@ To define a derived table
 
 1.  Right-click the data source node on the Data Management tab and select **Create Derived Table…** OR click ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) and select **Create Derived Table…**.
 
-The **New Derived Table** dialog appears.
+    The **New Derived Table** dialog appears.
 
-![js DomainDesigner DerivedTable](../assets/images/js-DomainDesigner-DerivedTable.png)
+    ![js DomainDesigner DerivedTable](../assets/images/js-DomainDesigner-DerivedTable.png)
 
-*Figure 1: New Derived Table dialog*
+    *Figure 1: New Derived Table dialog*
 
-![js DomainDesigner DerivedTable trino](../assets/images/js-DomainDesigner-DerivedTable-trino.png)
+    ![js DomainDesigner DerivedTable trino](../assets/images/js-DomainDesigner-DerivedTable-trino.png)
 
-*Figure 2: New Derived Table dialog for Trino-based data source*
+    *Figure 2: New Derived Table dialog for Trino-based data source*
 
-1.  Type a name for the table in the **Derived Table Name** field.
-2.  Enter a valid SQL query in **Query**. Only queries that begin with the `SELECT` statement are allowed. Stored procedures and functions are supported. Do *not* include a closing semi-colon (`;`). For Trino, the query should contain the catalog name in prefix of the table and field name. For example:
+2.  Type a name for the table in the **Derived Table Name** field.
 
-- Query for Table using non-Trino data-source: `select * from schema.table_name;`
-- Query for Table using Trino data-source: `select * from catalog.schema.table_name;`
+3.  Enter a valid SQL query in **Query**. Only queries that begin with the `SELECT` statement are allowed. Stored procedures and functions are supported. Do *not* include a closing semi-colon (`;`). For Trino, the query should contain the catalog name in prefix of the table and field name. For example:
 
-To use an attribute, enter `{attribute('AttributeName')}` or `{attribute('AttributeName', 'Level')}`. This must be a single-valued attribute; collections cannot be used. See [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md) for more information.
+    - Query for Table using non-Trino data-source: `select * from schema.table_name;`
+    - Query for Table using Trino data-source: `select * from catalog.schema.table_name;`
 
-1.  When the query is complete, click **Run Query** to test it. If the query is successful, the resulting fields are displayed in the **Query Result** list. By default, all columns in the result are selected.
-2.  Ctrl-click fields in the **Query Result** list to change the selection. If you want only a few columns out of many, it may be easier to specify the column names in the `SELECT` clause of the query.
-3.  Click **Create Derived Table**.
+    To use an attribute, enter `{attribute('AttributeName')}` or `{attribute('AttributeName', 'Level')}`. This must be a single-valued attribute; collections cannot be used. See [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md) for more information.
+
+4.  When the query is complete, click **Run Query** to test it. If the query is successful, the resulting fields are displayed in the **Query Result** list. By default, all columns in the result are selected.
+
+5.  Ctrl-click fields in the **Query Result** list to change the selection. If you want only a few columns out of many, it may be easier to specify the column names in the `SELECT` clause of the query.
+
+6.  Click **Create Derived Table**.
 
 The derived table is added under the Derived Tables node in the **Data Structure** panel. A distinctive icon ![js DomainDesigner icon DerivedTable](../assets/images/js-DomainDesigner-icon-DerivedTable.png) identifies it as a derived table.
 
@@ -71,7 +74,7 @@ The following is an example of the usage of Trino functions in JasperReports Ser
 
 You can use FILTER keyword to remove rows from aggregation, with a condition expressed using a WHERE clause. For example, you can filter *store_names* according to *coffee_bar_present* or not, as shown in the following query:
 
-```
+``` sql
 SELECT store.store_name, bool_or(coffee_bar) AS coffee_bar_present
 FROM postgresqldb.public.store
 GROUP BY store_name, coffee_bar

@@ -24,6 +24,7 @@ To locate the sample report for this example
         **Add Resource** appears on the context menu only if you have write permission to the folder.
 
 4.  In **Naming**, enter the name and description of the new report and accept the generated Resource ID:
+
     - Name - Display the name of the report: `Sample Query Report`.
     - Resource ID - Permanent designation of the report object in the repository: `Sample_Query_Report`.
     - Description - Optional description displayed in the repository: `Example of changing a query in a report`.
@@ -41,6 +42,7 @@ To select a data source for the report
 To define a custom query for the simple report example
 
 1.  In the Add JasperReport wizard, click **Query**. The Locate Query page presents the following choices:
+
     - **Do not link a Query** - Select this option to use the existing query already defined within the main JRXML.
 
     - **Click here to create a new Query** - Guides you through defining a new query for this report only.
@@ -52,22 +54,25 @@ To define a custom query for the simple report example
       <p>The <span>SimpleReport.jrxml</span> file already contains a query. Choosing the second or third option overrides the existing query by defining a new one.</p>
       </div>
 
-![js AddReport AddQuery](../assets/images/js-AddReport-AddQuery.png)
+    ![js AddReport AddQuery](../assets/images/js-AddReport-AddQuery.png)
 
-*Figure 1: Query Page*
+    *Figure 1: Query Page*
 
 2.  Select **Click here to create a new Query**. The link becomes active.
+
 3.  Click the link, **Click here to create a new Query**. The Add Query wizard appears and displays the Name the Query page.
+
 4.  Enter the name, resource ID, and description of the query. The query in this example retrieves only Mexican accounts. Enter the following values:
+
     - Name - `MexicoAccounts`
     - Resource ID - `MexicoAccounts`
     - Description - `Query for example in User Guide`
 
-This query and its properties are visible only within the report unit.
+    This query and its properties are visible only within the report unit.
 
-![js AddReport NameQuery](../assets/images/js-AddReport-NameQuery.png)
+    ![js AddReport NameQuery](../assets/images/js-AddReport-NameQuery.png)
 
-*Figure 2: Name the Query Page*
+    *Figure 2: Name the Query Page*
 
 5.  Click **Next**. The Link a Data Source to the Query page appears. Here you have the option to select a data source to use only with this query. This can be different from the data source you selected for uploading the report. You can choose an existing data source from the repository, define a new one, or select not to link a data source.
 
@@ -79,11 +84,12 @@ This query and its properties are visible only within the report unit.
 
     `SELECT * FROM accounts WHERE billing_address_country = 'Mexico' ORDER BY billing_address_city`
 
-![js AddReport DefineQuery](../assets/images/js-AddReport-DefineQuery.png)
+    ![js AddReport DefineQuery](../assets/images/js-AddReport-DefineQuery.png)
 
-*Figure 3: Definition of a Query*
+    *Figure 3: Definition of a Query*
 
 9.  Click **Save** to save the query. The Customization page appears. No customization is required for the example.
+
 10. Click **Submit** to submit the new report unit to the repository.
 
 To run the report

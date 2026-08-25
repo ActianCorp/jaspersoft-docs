@@ -70,12 +70,17 @@ Note the following when using attributes:
     If you use an attribute in your data source definition, you must ensure that referenced schemas, tables, and columns will be available. Data source attributes are defined outside the Domain Designer. See the section on defining attributes in the JasperReports Server Administrator Guide for more information.
 
 - If a specified attribute does not exist, any item that uses it will fail. For example, if you specify the attribute `Country` for a schema name, and a `Country` attribute does not exist anywhere on the server, you will be unable to load the schema. This is similar to referring to column that does not exist.
+
 - If an attribute exists but is not defined (empty) for this particular user, the behavior depends on where the attribute is used. An empty attribute can occur, for example, if you have set up a `Country` attribute, but the current user has no value defined for `Country`.
+
 - For pre-filters, an empty attribute is interpreted based on the field's data type as described below.
+
   - For a field of type string, an empty attribute is interpreted as an empty string: `""`
   - For a boolean field, and empty attribute is interpreted as `FALSE`.
   - For numeric and date fields, an error will occur.
+
 - For derived table queries and custom joins, the attribute will fail in most cases. However, in some cases, JasperReports Server will consider the resulting expression to be valid, with potentially unexpected results, so be cautious when using attributes in this part of your design.
+
 - For schema names, the default schema is used. The default schema must be defined in the XML Domain design file. See [Default Schema](../domain_syntax/representing_data_sources.md) for more information.
 
 ## Using Attributes for Pre-Filters

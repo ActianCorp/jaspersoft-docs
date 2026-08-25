@@ -28,19 +28,23 @@ To encrypt passwords in a Tomcat installation, modify the installation procedure
 
 1.  Depending on the database you use, copy the installation configuration file as usual:
 
-from: `<js-install>/buildomatic/sample_conf/<database>_master.properties`to: `<js-install>/buildomatic/default_master.properties`
+    from: `<js-install>/buildomatic/sample_conf/<database>_master.properties`to: `<js-install>/buildomatic/default_master.properties`
 
 2.  Edit the `default_master.properties` file:
+
     - Enter values specific to your installation.
     - Enter your passwords in plain text.
     - Turn on configuration file encryption by uncommenting the `encrypt=true` property. You don't have to uncomment any other encryption properties because they all have the default values shown.
     - Unless you are using Oracle, uncomment `propsToEncrypt` and set it to `dbPassword,sysPassword`.
     - Optionally, specify additional properties to encrypt as described in Encrypting Additional Properties in default_master.properties.
     - Optionally, change the settings for configuration file encryption as described in Encryption Options.
+
 3.  Run the buildomatic installation script (js-install) and all other installation steps according to the JasperReports® Server Installation Guide. This has the following effects:
+
     1.  The plain text passwords in default_master.properties are overwritten with their encrypted equivalents. There is no warning when you run js-install with `encrypt=true`.
     2.  The encrypted passwords are propagated to all configuration files.
     3.  The installation proceeds and copies the files to their final locations.
+
 4.  After installation, passwords are encrypted in the following locations:
 
 - In all server configuration files in `.../WEB-INF/applicationContext*.xml`.
@@ -62,9 +66,12 @@ from: `<js-install>/buildomatic/sample_conf/<database>_master.properties`to: `
 Most enterprise servers, like JBoss, Glassfish, WebSphere, and WebLogic, have proprietary ways to set up password encryption. You should use these encryption methods. JasperReports Server doesn't automatically set up encrypted passwords for these servers during deployment. In this case, you can encrypt the passwords in the buildomatic file after deployment:
 
 1.  Deploy JasperReports Server to your enterprise server as specified in the JasperReports Server Installation Guide. The resulting JasperReports Server instance will have unencrypted JNDI data source passwords. If you want to encrypt these passwords, refer to your application server's documentation.
+
 2.  After the server has been successfully configured, encrypt the JasperReports Server configuration files as follows:
+
     1.  In `default_master.properties`, turn on encryption by uncommenting `encrypt=true`.
     2.  Run the target `js-ant refresh-config`. This will remove and recreate all the configuration files without deploying them to the application server. Now the buildomatic files will have the database passwords encrypted. You should still be able to execute import/export or other scripts.
+
 3.  After running `js-ant refresh-config`, you will need to manually copy the encrypted password to the application server configuration file. Copy the encrypted password from the updated `default_master.properties` file to the corresponding database connection files on the server, such as the `/META-INF/context.xml` file for Tomcat.
 
 !!! warning
@@ -79,7 +86,7 @@ You can encrypt additional properties in the `default_master.properties` file. T
 
     If a property is defined via JNDI, we recommend pointing there instead of encrypting:
 
-    ```
+    ``` xml
     <property name="password">
         <jee:jndi-lookup jndi-name="java:comp/env/emailPassword" />
     </property>
@@ -87,7 +94,7 @@ You can encrypt additional properties in the `default_master.properties` file. T
 
 The following code sample shows the `propertyConfigurer` bean in `applicationContext-webapp.xml`:
 
-```
+``` xml
 <bean id="propertyConfigurer" class="com.jaspersoft.jasperserver.api.common.properties.DecryptingPropertyPlaceholderConfigurer">
     <property name="locations">
       <list>
@@ -109,7 +116,7 @@ The following code sample shows the `propertyConfigurer` bean in `applicationCon
 
 Because we extended Spring's `PropertyPlaceholderConfigurer` class as `DecryptingPropertyPlaceholderConfigurer`, all the loaded properties are scanned for the special marker `ENC-<value>-`. If that marker is found around the property value, that property is decrypted before it is loaded into the Spring context.To determine if your property is scanned by `propertyConfigurer`, search the files in `propertyConfigurer`'s location to see if it is defined in one of these files. For example, suppose you want to encrypt the `password` property of the `reportSchedulerMailSender` bean in `applicationContext-report-scheduling.xml`:
 
-```
+``` xml
 <bean id="reportSchedulerMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
   <property name="host" value="${report.scheduler.mail.sender.host}"/>
   <property name="username" value="${report.scheduler.mail.sender.username}"/>
@@ -128,29 +135,32 @@ The use of the `${...}` syntax tells you that `report.scheduler.mail.sender.pass
 
 1.  Set the password for `quartz.mail.sender.password` in `default-master.properties`:
 
-```
-quartz.mail.sender.password=cleartextpassword
-```
+    ``` properties
+    quartz.mail.sender.password=cleartextpassword
+    ```
 
 2.  Uncomment the `encrypt=true` property in the same file.
+
 3.  Uncomment `propsToEncrypt=dbPassword` in `default-master.properties`.
+
 4.  Add `quartz.mail.sender.password` to `propsToEncrypt`:
 
-```
-quartz.mail.sender.password=cleartextpassword
-...
-encrypt=true
-propsToEncrypt=dbPassword,quartz.mail.sender.password
-```
+    ``` properties
+    quartz.mail.sender.password=cleartextpassword
+    ...
+    encrypt=true
+    propsToEncrypt=dbPassword,quartz.mail.sender.password
+    ```
 
 5.  Configure and install your JasperReports® Server WAR installation as described in the JasperReports Server Installation Guide.
+
 6.  Verify that `report.scheduler.mail.sender.password` was encrypted in both `default-master.properties` and in `/WEB-INF/js.quartz.properties`.
 
 ## Password Encryption for External Authentication
 
 As of JasperReports Server 5.6, you can encrypt the passwords in the external authentication configuration files for LDAP and external database authentication. Here we cover only the encryption of these passwords; for details about configuring external authentication, see the JasperReports Server External Authentication Cookbook. To enable encryption during installation, property values in the external authentication sample configuration are referenced from other configuration files. For example, if you're using LDAP to authenticate, the sample configuration file contains the following reference to the LDAP password:
 
-```
+``` xml
 <bean id="ldapContextSource"
     class="com.jaspersoft.jasperserver.api.security.externalAuth.ldap.JSLdapContextSource">
   <constructor-arg value="${external.ldap.url}" />
@@ -161,7 +171,7 @@ As of JasperReports Server 5.6, you can encrypt the passwords in the external au
 
 The values referenced by the `${...}` format are defined in the `js.externalAuth.properties` file and imported into the Spring context via the `propertyConfigurer`. For example, the LDAP properties are defined in `js.externalAuth.properties` as follows:
 
-```
+``` properties
 external.ldap.url=${external.ldapUrl}
 external.ldap.username=${external.ldapDn}
 external.ldap.password=${external.ldapPassword}
@@ -169,7 +179,7 @@ external.ldap.password=${external.ldapPassword}
 
 The `${...}` syntax again references other configuration properties that must be set in `default_master.properties` before installation or upgrade. The following example shows the syntax of the properties in the `default_master.properties` file:
 
-```
+``` properties
 external.ldapUrl=ldap://hostname:389/dc=example,dc=com
 external.ldapDn=cn=Administrator,dc=example,dc=com
 external.ldapPassword=password
@@ -177,7 +187,7 @@ external.ldapPassword=password
 
 To encrypt the password property, set the following values in `default_master.properties` before installation or upgrade:
 
-```
+``` properties
 external.ldapPassword=cleartextpassword
 ...
 encrypt=true
@@ -186,7 +196,7 @@ propsToEncrypt=dbPassword, external.ldapPassword
 
 During the installation process, the password value in `default_master.properties` and its reference in `js.externalAuth.properties` are overwritten with the encrypted value. If your external authentication is configured to create organizations for external users, and you're using JasperReports Server 6.0, or later, there is another password to encrypt. When external authentication creates an organization, it uses the information in `ExternalTenantSetupUser` of the `externalTenantSetupProcessor` bean to create the organization administrator.
 
-```
+``` xml
 <bean class="com.jaspersoft.jasperserver.multipleTenancy.security.externalAuth.processors.
              MTAbstractExternalProcessor.ExternalTenantSetupUser">
   <property name="username" value="${new.tenant.user.name.1}"/>
@@ -204,7 +214,7 @@ During the installation process, the password value in `default_master.propertie
 
 The values referenced by the `${...}` format are defined in the `js.config.properties` file as follows:
 
-```
+``` bash
 ## New tenant creation: user config
 new.tenant.user.name.1=jasperadmin
 new.tenant.user.fullname.1=jasperadmin
@@ -219,13 +229,13 @@ new.tenant.user.email.1=
 
 To encrypt this password, modify the `js.config.properties` file as follows:
 
-```
+``` properties
 new.tenant.user.password.1=${tenant.user.password}
 ```
 
 Then add the following lines to `default_master.properties` before installation or upgrade:
 
-```
+``` properties
 tenant.user.password=cleartextpassword
 ...
 encrypt=true

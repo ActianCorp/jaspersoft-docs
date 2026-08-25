@@ -28,54 +28,58 @@ To create the report for the chart
 To create the chart
 
 1.  Give your report a title like “Maximum and Average Freight in Years for City”.
+
 2.  Drag the **HTML5 Charts** element into the summary band.
+
 3.  Select **Scatter**. If a verification dialog is displayed, click **Yes**.
+
 4.  Click the **Data Configuration** tab.
+
 5.  Click **Switch to Advanced Configuration**.
 
-|  |
-|----|
-| ![jss html5 charts advanced scatter](../assets/images/jss-html5-charts-advanced-scatter.png) |
-| *Figure 1: Scatter Chart Properties* |
+    |  |
+    |----|
+    | ![jss html5 charts advanced scatter](../assets/images/jss-html5-charts-advanced-scatter.png) |
+    | *Figure 1: Scatter Chart Properties* |
 
-1.  Under **Categories Levels**, select Level1 and click **Modify**. Then enter the following:
+6.  Under **Categories Levels**, select Level1 and click **Modify**. Then enter the following:
 
-- **Name**: `ShipCountry`
-- **Expression**:` $F{SHIPCOUNTRY}`
-- **Value Class Name**: `java.lang.String`
-- **Order**: `Ascending`
+    - **Name**: `ShipCountry`
+    - **Expression**:` $F{SHIPCOUNTRY}`
+    - **Value Class Name**: `java.lang.String`
+    - **Order**: `Ascending`
 
-Click **OK**.
+    Click **OK**.
 
-1.  Under Categories Levels, click `Add` and create a second Category with the following information:
+7.  Under Categories Levels, click `Add` and create a second Category with the following information:
 
-- **Name**: `ShipCity`
-- **Expression**:` $F{SHIPCITY}`
-- **Value Class Name**: `java.lang.String`
-- **Order**: `Ascending`
+    - **Name**: `ShipCity`
+    - **Expression**:` $F{SHIPCITY}`
+    - **Value Class Name**: `java.lang.String`
+    - **Order**: `Ascending`
 
-Click **OK**.
+    Click **OK**.
 
-1.  Under Series Level, select Series1 and click **Modify**. Then enter the following:
+8.  Under Series Level, select Series1 and click **Modify**. Then enter the following:
 
-- **Name**: `Order Year`
-- **Expression**: `YEAR($F{ORDERDATE}) `
-- **Value Class Name**: `java.lang.Integer`
-- **Order**: `Ascending`
+    - **Name**: `Order Year`
+    - **Expression**: `YEAR($F{ORDERDATE}) `
+    - **Value Class Name**: `java.lang.Integer`
+    - **Order**: `Ascending`
 
-Click **OK**.
+    Click **OK**.
 
-1.  Under Measures, select Measure1 and click **Modify**. Then enter the following for maximum freight:
+9.  Under Measures, select Measure1 and click **Modify**. Then enter the following for maximum freight:
 
-- **Name**: `Max Freight`
-- **Label Expression**: `"Max Freight"`
-- **Calculation**: `Highest`
-- **Value Expression**: `$F{FREIGHT}`
-- **Value Class Name**: `java.math.BigDecimal`
+    - **Name**: `Max Freight`
+    - **Label Expression**: `"Max Freight"`
+    - **Calculation**: `Highest`
+    - **Value Expression**: `$F{FREIGHT}`
+    - **Value Class Name**: `java.math.BigDecimal`
 
-Click **OK**.
+    Click **OK**.
 
-1.  Under Measures, select Measure0 and click **Modify**. Then enter the following for average freight:
+10. Under Measures, select Measure0 and click **Modify**. Then enter the following for average freight:
 
 - **Name**: `Average Freight`
 - **Label Expression**: `"Average Freight"`

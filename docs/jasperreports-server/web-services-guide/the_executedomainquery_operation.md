@@ -51,9 +51,12 @@ Note that when the query string appears in the SOAP example below, special chara
 The `executeDomainQuery`operation returns results in the following objects:
 
 - `ResultSetData`. Encapsulates the results of the Domain query. It contains column names and rows of data:
+
   - `names`. Array of column names in the result set. These names match the order and items in the query fields.
   - `data`. An array of data rows.
+
 - `DataRow`. Represents a record and contains values for each column in a row:
+
   - `data`. An array of strings, one for the value in each column, in the same order as the names array.
 
 !!! note
@@ -69,7 +72,7 @@ The following example shows the full SOAP request for an `executeDomainQuery` op
 <tbody>
 <tr>
 <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;utf-8&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">soapenv:Envelope</span> <span class="ot">xmlns:soapenv=</span><span class="st">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> <span class="ot">xmlns:xsd=</span><span class="st">&quot;http://www.w3.org/2001/XMLSchema&quot;</span> <span class="ot">xmlns:xsi=</span><span class="st">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>&gt;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">soapenv:Envelope</span>&gt;</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">soapenv:Body</span>&gt;</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">ns1:executeDomainQuery</span> <span class="ot">soapenv:encodingStyle=</span><span class="st">&quot;http://schemas.xmlsoap.org/soap/</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">      encoding/&quot;</span> <span class="ot">xmlns:ns1=</span><span class="st">&quot;http://www.jasperforge.org/jasperserver/ws&quot;</span>&gt;</span>
@@ -93,22 +96,21 @@ The response to the request contains the current values in the specified Domain:
 <tbody>
 <tr>
 <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">soapenv:Envelope</span> <span class="ot">xmlns:soapenv=</span><span class="st">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> <span class="ot">xmlns:xsd=</span><span class="st">&quot;http://www.w3.org/2001/XMLSchema&quot;</span> <span class="ot">xmlns:xsi=</span><span class="st">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>&gt;</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">soapenv:Envelope</span>&gt;</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">soapenv:Body</span>&gt;</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">ns1:executeDomainQueryResponse</span> <span class="ot">soapenv:encodingStyle=</span><span class="st">&quot;http://schemas.xmlsoap.org/</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">      soap/encoding/&quot;</span> <span class="ot">xmlns:ns1=</span><span class="st">&quot;http://www.jasperforge.org/jasperserver/ws&quot;</span>&gt;</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">executeDomainQueryReturn</span> <span class="ot">xsi:type=</span><span class="st">&quot;ns1:ResultSetData&quot;</span>&gt;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">names</span> <span class="ot">soapenc:arrayType=</span><span class="st">&quot;xsd:string[31]&quot;</span> <span class="ot">xsi:type=</span><span class="st">&quot;soapenc:Array&quot;</span> </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>          <span class="ot">xmlns:soapenc=</span><span class="st">&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;</span>&gt;</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            description/&gt;</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_expense_fact_</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            account_id/&gt;</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_parent/&gt;</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_rollup/&gt;</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_type/&gt;</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_Custom_Members/&gt;</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join.ej_expense_fact_amount/&gt;</span></code></pre></div></td>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">names</span> <span class="ot">soapenc:arrayType=</span><span class="st">&quot;xsd:string[31]&quot;</span> <span class="ot">xsi:type=</span><span class="st">&quot;soapenc:Array&quot;</span>&gt;</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            description/&gt;</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_expense_fact_</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            account_id/&gt;</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_parent/&gt;</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_rollup/&gt;</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_account_type/&gt;</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_account.ej_account_Custom_Members/&gt;</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join.ej_expense_fact_amount/&gt;</span></code></pre></div></td>
 </tr>
 <tr>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_store.ej_store_store_type/&gt;</span>
@@ -118,32 +120,31 @@ The response to the request contains the current values in the specified Domain:
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_store.ej_store_store_state/&gt;</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">names</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;expense_join_store.ej_store_store_postal_code/&gt;</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">names</span>&gt;</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">data</span> <span class="ot">soapenc:arrayType=</span><span class="st">&quot;ns1:DataRow[600]&quot;</span> <span class="ot">xsi:type=</span><span class="st">&quot;soapenc:Array&quot;</span> </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          <span class="ot">xmlns:soapenc=</span><span class="st">&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;</span>&gt;</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;ns1:DataRow&quot;</span>&gt;</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">data</span> <span class="ot">soapenc:arrayType=</span><span class="st">&quot;xsd:string[31]&quot;</span> <span class="ot">xsi:type=</span><span class="st">&quot;soapenc:Array&quot;</span>&gt;</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;Marketing&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;4300&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;4000&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;+&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;Expense&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span> <span class="ot">xsi:nil=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;1884.0000&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;01/01/1997&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;HeadQuarters&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;1 Alameda Way&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;Alameda&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;CA&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;94502&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;USA&lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            &lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>          &lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">data</span>&gt;</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      &lt;/<span class="kw">executeDomainQueryReturn</span>&gt;</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">ns1:executeDomainQueryResponse</span>&gt;</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">soapenv:Body</span>&gt;</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">soapenv:Envelope</span>&gt;</span></code></pre></div></td>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">data</span> <span class="ot">soapenc:arrayType=</span><span class="st">&quot;ns1:DataRow[600]&quot;</span> <span class="ot">xsi:type=</span><span class="st">&quot;soapenc:Array&quot;</span>&gt;</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>          &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;ns1:DataRow&quot;</span>&gt;</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">data</span> <span class="ot">soapenc:arrayType=</span><span class="st">&quot;xsd:string[31]&quot;</span> <span class="ot">xsi:type=</span><span class="st">&quot;soapenc:Array&quot;</span>&gt;</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;Marketing&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;4300&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;4000&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;+&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;Expense&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span> <span class="ot">xsi:nil=</span><span class="st">&quot;true&quot;</span>/&gt;</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;1884.0000&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;01/01/1997&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;HeadQuarters&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;1 Alameda Way&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;Alameda&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;CA&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;94502&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>              &lt;<span class="kw">data</span> <span class="ot">xsi:type=</span><span class="st">&quot;xsd:string&quot;</span>&gt;USA&lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            &lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>          &lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">data</span>&gt;</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>      &lt;/<span class="kw">executeDomainQueryReturn</span>&gt;</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">ns1:executeDomainQueryResponse</span>&gt;</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">soapenv:Body</span>&gt;</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">soapenv:Envelope</span>&gt;</span></code></pre></div></td>
 </tr>
 </tbody>
 </table>

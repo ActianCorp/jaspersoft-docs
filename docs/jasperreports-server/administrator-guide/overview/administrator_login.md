@@ -14,7 +14,7 @@ Administrators log in on the standard login page, using the following default pa
 
 !!! warning
 
-    For security reasons, always change the default administrator password<span>s</span> immediately after installing JasperReports Server. For instructions, see <a href="../management/managing_users.md">Editing a User</a>.
+    For security reasons, always change the default administrator passwords immediately after installing JasperReports Server. For instructions, see [Editing a User](../management/managing_users.md).
 
 For more information about options on the Login page and logging in with multiple organizations, see the JasperReports Server User Guide.
 
@@ -38,6 +38,6 @@ After logging in for the first time, you should set the email on the `superuser`
 
 !!! warning
 
-    This is also a good time to change the default passwords on the<span>`superuser` and</span>`jasperadmin` account<span>s</span>.
+    This is also a good time to change the default passwords on the`superuser` and`jasperadmin` accounts.
 
 To set the email and passwords on the administrator accounts, edit the user account information as described in [Editing a User](../management/managing_users.md).

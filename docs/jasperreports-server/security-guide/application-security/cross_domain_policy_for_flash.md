@@ -11,7 +11,7 @@ As a result, even servers in subdomains cannot share data with a server in the p
 
 The following `crossdomain.xml `sample allows access from only the example domain or any of its subdomains. This example says the server with this file trusts only example.com to use its data.
 
-```
+``` xml
 <?xml version="1.0" ?>
     <!DOCTYPE cross-domain-policy SYSTEM
         "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
@@ -24,7 +24,7 @@ The following `crossdomain.xml `sample allows access from only the example domai
 
 Behind a firewall, servers and users often refer to other computers in the same domain without using the domain name. Flash considers this a different domain and blocks access to data unless the computer name is given in the policy.
 
-```
+``` xml
     <cross-domain-policy>
         <allow-access-from domain="myserver.example.com" />
         <allow-access-from domain="myserver" />
@@ -33,7 +33,7 @@ Behind a firewall, servers and users often refer to other computers in the same 
 
 When using web services, use the `allow-http-request-headers-from` element so that actions encoded in the request header are allowed. The following example allows standard requests and web service requests from any subdomain of example.com.
 
-```
+``` xml
     <cross-domain-policy>
         <site-control permitted-cross-domain-policies="master-only"/>
         <allow-access-from domain="*.example.com"/>

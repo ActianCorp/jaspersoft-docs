@@ -22,6 +22,7 @@ For additional credentials required for logging into JasperReports Server, go to
 
 1.  In Azure Marketplace, perform the following steps:<br>
     To find Jaspersoft on the Azure Marketplace, type Jaspersoft in the search field and press enter. The search result displays all the Jaspersoft offerings.
+
     1.  Select TIBCO Jaspersoft Reporting and Analytics for Azure. TIBCO Jaspersoft Reporting and Analytics for Azure screen is displayed.
 
     2.  Select any of the following options to launch the VM.
@@ -46,6 +47,7 @@ For additional credentials required for logging into JasperReports Server, go to
         - Compute optimized(F-series)
 
     6.  After you select the workload environment and workload type, click **Continue** to create a VM.
+
 2.  Perform the following steps for installation.
     1.  On the **Create a Virtual Machine** wizard, select a resources group or click **Create new link** to create a resource group for your deployment - this gathers all the resources together in one folder.
 
@@ -74,5 +76,6 @@ For additional credentials required for logging into JasperReports Server, go to
             If a Public IP address is being used and the Jaspersoft Welcome page does not open, then the VM is still in process.
 
     10. On the J**aspersoft Welcome Screen**, register for the Jaspersoft Studio license and support. Change your first time credentials on the **Login Page**.
+
 3.  Upload your license (for BYOL).<br>
     On obtaining a license from Jaspersoft, please reference this article to learn how to upload your Jaspersoft license.

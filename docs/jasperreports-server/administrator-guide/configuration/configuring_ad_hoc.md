@@ -34,6 +34,7 @@ This section covers the following ways to configure Ad Hoc:
 The Ad Hoc settings include the following:
 
 - General Settings to modify the Ad Hoc Editor user interface:
+
   - **Show Duplicate Table Rows**. It sets the default behavior for **Show duplicate rows** in the Ad Hoc Editor. Users with `ROLE_SUPERUSER` can edit the Ad Hoc settings. This setting is applied by default when the Ad Hoc view is created. If a user logs in and changes the default setting of **Show duplicate rows** in the **Ad Hoc Designer \> Format Visualization \> Appearance**, then the server setting gets overridden for a particular Ad Hoc view.
   - **Configure View Query**. Determines whether users can see a button in the Ad Hoc Editor to display the SQL or MDX query generated for the view. This can be useful for advanced users, but you should consider your data security before enabling this. System admins can always view queries in the Ad Hoc Cache (see Ad Hoc Cache Management).
   - Use Old Layout Band. By default, the New Layout Band is displayed in the Ad Hoc editor. Select the Old Layout band checkbox to use the old layout, to build visualization in the Ad Hoc editor. For more information, see JasperReports® Server User Guide, The Layout Band topic.
@@ -244,39 +245,41 @@ By default no custom report generators defined on the server, and none appear in
 To add a custom report generator
 
 1.  Create a Java class that implements the `com.jaspersoft.ji.adhoc.service.AdhocReportGenerator` interface.
+
 2.  Compile the class and place the resulting JAR file in `.../WEB-INF/lib`.
+
 3.  Open the file `.../WEB-INF/applicationContext-adhoc.xml` for editing and register your class as a Spring bean as shown in the following example:
 
-```
-<bean id="myCustomReportGenerator" class="com.example.myCustomReportGenerator">
-    <property name="id" value="my-custom-generator"/>
-    <property name="..." value="..."/>
-    ...
-</bean>
-```
+    ``` xml
+    <bean id="myCustomReportGenerator" class="com.example.myCustomReportGenerator">
+        <property name="id" value="my-custom-generator"/>
+        <property name="..." value="..."/>
+        ...
+    </bean>
+    ```
 
 4.  In the same file, update the `reportGeneratorFactory` bean to include your custom generator bean:
 
-```
-<bean id="reportGeneratorFactory" class="com.jaspersoft.ji.adhoc.service.ReportGeneratorFactoryImpl">
-    <property name="reportGenerators">
-        <list>
-            <ref bean="myCustomReportGenerator" />
-            <!--<ref bean="actualSizeReportGenerator" />-->
-            <!--<ref bean="letterPortraitReportGenerator" />-->
-            <!--<ref bean="letterLandscapeReportGenerator" />-->
-            <!--<ref bean="a4PortraitReportGenerator" />-->
-            <!--<ref bean="a4LandscapeReportGenerator" />-->
-        </list>
-    </property>
-</bean>
-```
+    ``` xml
+    <bean id="reportGeneratorFactory" class="com.jaspersoft.ji.adhoc.service.ReportGeneratorFactoryImpl">
+        <property name="reportGenerators">
+            <list>
+                <ref bean="myCustomReportGenerator" />
+                <!--<ref bean="actualSizeReportGenerator" />-->
+                <!--<ref bean="letterPortraitReportGenerator" />-->
+                <!--<ref bean="letterLandscapeReportGenerator" />-->
+                <!--<ref bean="a4PortraitReportGenerator" />-->
+                <!--<ref bean="a4LandscapeReportGenerator" />-->
+            </list>
+        </property>
+    </bean>
+    ```
 
 5.  Edit the `.../WEB-INF/bundles/adhoc_messages.properties` file to add a UI label for your custom generator. The key has the form `ADH_REPORT_GENERATOR_<generator-id>`. Add the same key to other language bundles if you want to support other languages.
 
-```
-    ADH_REPORT_GENERATOR_my-custom-generator=Corporate Template
-```
+    ``` text
+        ADH_REPORT_GENERATOR_my-custom-generator=Corporate Template
+    ```
 
 6.  Restart the server or redeploy the JasperReports Server web app. The label for your custom generator appears in the list of report generators when users create and save a report from an Ad Hoc view.
 
@@ -364,7 +367,7 @@ By default, datasets for each user are cached separately. A parameter in the cac
 
 The following code configures the `cacheKeyInterceptor` bean to ignore logged-in users' credentials when creating the cache keys:
 
-```
+``` xml
 <property name="ignoredParameters">
     <list>
         ...
@@ -440,18 +443,22 @@ The Ad Hoc cache page also allows administrators to manually remove datasets if 
 To view queries and manually clear the Ad Hoc cache
 
 1.  In JasperReports Server, log in as system administrator (`superuser` by default).
+
 2.  Click **Manage \> Server Settings** and choose **Ad Hoc Cache** in the left panel.<br>
     The **Ad Hoc Cache** page appears, displaying all the datasets in the cache, sorted by age.
 
-![js Settings AdHocCache](../assets/images/js-Settings-AdHocCache.png)
+    ![js Settings AdHocCache](../assets/images/js-Settings-AdHocCache.png)
 
-*Figure 1: Ad Hoc Dataset Caching Administration Page*
+    *Figure 1: Ad Hoc Dataset Caching Administration Page*
 
-Each dataset is listed by its corresponding query and data source. Recall that Ad Hoc Topics have user-defined queries, so they tend to be short, whereas the query for Domains are generated from the design of the Domain and user selections in the **Data Chooser** dialog. The **Ad Hoc Cache** page displays only the first few lines of a query, as well as the data source.
+    Each dataset is listed by its corresponding query and data source. Recall that Ad Hoc Topics have user-defined queries, so they tend to be short, whereas the query for Domains are generated from the design of the Domain and user selections in the **Data Chooser** dialog. The **Ad Hoc Cache** page displays only the first few lines of a query, as well as the data source.
 
 3.  To remove all datasets, click **Clear All** at the bottom of the **Ad Hoc Cache** page. This also clears the Teiid cache used by virtual data sources, including a virtual data source that wraps a data source for big data.
+
 4.  To remove a specific dataset from the cache, and click **Clear** beside the corresponding query.
+
 5.  To find a specific cache entry, you can change the sorting in the upper-left by clicking **Age**, **Last Used Time**, **Memory Used**, or **Data Source URI**.
+
 6.  To view the details of a specific query, including the full query string, click the query itself in the **Query & Source** column. The **Detail** page appears, displaying additional information for the selected query, such as the number of rows in the cached dataset.
 
 ![js Settings AdHocCache detail](../assets/images/js-Settings-AdHocCache-detail.png)

@@ -31,7 +31,7 @@ There are two syntaxes; the following one is for deleting multiple attributes or
 <td colspan="2"><p>Description</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>name</code></pre></td>
+<td><div class="language-text highlight"><pre><code>name</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specify an attribute name to remove that attribute. Repeat this argument to delete multiple attributes. When this argument is omitted, all attributes are deleted from the given entity.</p></td>

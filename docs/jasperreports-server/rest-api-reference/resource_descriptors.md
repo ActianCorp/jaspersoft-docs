@@ -148,11 +148,11 @@ Only the label and description fields are writable.
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;jndiName&quot;:&quot;&lt;jndiName&gt;&quot;,
     &quot;timezone&quot;:&quot;&lt;timezone&gt;&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">jndiDataSource</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">jndiName</span>&gt;{jndiName}&lt;/<span class="kw">jndiName</span>&gt;</span>
@@ -177,14 +177,14 @@ Only the label and description fields are writable.
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;driverClass&quot;:&quot;&lt;driverClass&gt;&quot;,
     &quot;password&quot;:&quot;&lt;password&gt;&quot;,
     &quot;username&quot;:&quot;&lt;username&gt;&quot;,
     &quot;connectionUrl&quot;:&quot;&lt;connectionURL&gt;&quot;,
     &quot;timezone&quot;:&quot;&lt;timezone&gt;&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">jdbcDataSource</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">driverClass</span>&gt;{driverClass}&lt;/<span class="kw">driverClass</span>&gt;</span>
@@ -214,7 +214,7 @@ Only the label and description fields are writable.
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;driverClass&quot;:&quot;&lt;driverClass&gt;&quot;,
     &quot;password&quot;:&quot;&lt;password&gt;&quot;,
@@ -229,7 +229,7 @@ Only the label and description fields are writable.
     &quot;dbInstanceIdentifier&quot;:
         &quot;&lt;dbInstanceIdentifier&gt;&quot;,
     &quot;dbService&quot;:&quot;&lt;dbService&gt;&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">awsDataSource</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">driverClass</span>&gt;{driverClass}&lt;/<span class="kw">driverClass</span>&gt;</span>
@@ -325,7 +325,7 @@ The `id` of each `subDataSource` must be unique. The server does not prevent dup
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;subDataSources&quot;:[
         {
@@ -334,7 +334,7 @@ The `id` of each `subDataSource` must be unique. The server does not prevent dup
         },
         ...
     ]
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">virtualDataSource</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">subDataSources</span>&gt;</span>
@@ -366,7 +366,7 @@ The value of the `serviceClass` attribute is read-only and depends on the specif
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;serviceClass&quot;:&quot;&lt;serviceClass&gt;&quot;,
     &quot;dataSourceName&quot;:&quot;&lt;dataSourceName&gt;&quot;,
@@ -377,7 +377,7 @@ The value of the `serviceClass` attribute is read-only and depends on the specif
         },
         ...
     ]
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">customDataSource</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">serviceClass</span>&gt;</span>
@@ -413,11 +413,11 @@ The value of the `serviceClass` attribute is read-only and depends on the specif
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;beanName&quot;:&quot;&lt;beanName&gt;&quot;,
     &quot;beanMethod&quot;:&quot;&lt;beanMethod&gt;&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">beanDataSource</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">beanName</span>&gt;{beanName}&lt;<span class="kw">beanName</span>&gt;</span>
@@ -442,7 +442,7 @@ The value of the `serviceClass` attribute is read-only and depends on the specif
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;type&quot;:&quot;text|number|date|dateTime|time&quot;,
     &quot;pattern&quot;:&quot;&lt;pattern&gt;&quot;,
@@ -451,7 +451,7 @@ The value of the `serviceClass` attribute is read-only and depends on the specif
     &quot;minValue&quot;:&quot;&lt;minValue&gt;&quot;,
     &quot;strictMin&quot;:&quot;true|false&quot;
     &quot;maxLength&quot;:&quot;&lt;maxLengthInteger&gt;&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">dataType</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">type</span>&gt;text|number|date|dateTime|time&lt;/<span class="kw">type</span>&gt;</span>
@@ -481,7 +481,7 @@ The value of the `serviceClass` attribute is read-only and depends on the specif
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;items&quot;:[
         {
@@ -490,7 +490,7 @@ The value of the `serviceClass` attribute is read-only and depends on the specif
         },
         ...
     ]
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">listOfValues</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">items</span>&gt;</span>
@@ -522,7 +522,7 @@ The dataSource field of the query may be null. Set an empty dataSource field whe
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;value&quot;:&quot;&lt;query&gt;&quot;,
     &quot;language&quot;:&quot;&lt;language&gt;&quot;,
@@ -531,7 +531,7 @@ The dataSource field of the query may be null. Set an empty dataSource field whe
             &quot;uri&quot;:&quot;&lt;dataSourceURI&gt;&quot;
         }
     }
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">query</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">value</span>&gt;{query}&lt;/<span class="kw">value</span>&gt; </span>
@@ -561,7 +561,7 @@ Input controls come in several types that require different fields. The followin
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;mandatory&quot;:&quot;true|false&quot;,
     &quot;readOnly&quot;:&quot;true|false&quot;, &quot;readOnlyExpression&quot;:&quot;&lt;comparisonExpression&gt;&quot;,
@@ -585,7 +585,7 @@ Input controls come in several types that require different fields. The followin
             &quot;uri&quot;: &quot;&lt;queryResourceURI&gt;&quot;
         }
     }
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">inputControl</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">mandatory</span>&gt;true|false&lt;/<span class="kw">mandatory</span>&gt;</span>
@@ -645,7 +645,7 @@ The repository.file+\<format\> descriptor is used to identify the file type.
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;type&quot;:&quot;pdf|html|rtf|csv|odt|txt
             |docx|ods|xlsx|img|font|jrxml
@@ -654,7 +654,7 @@ The repository.file+\<format\> descriptor is used to identify the file type.
             |accessGrantSchema
             |unspecified&quot;,
     &quot;content&quot;:&quot;&lt;base64EncodedContent&gt;&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">file</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">type</span>&gt;pdf|html|rtf|csv|odt|txt</span>
@@ -696,17 +696,17 @@ The default value for the `controlsLayout` is `popupScreen`. The `reportRenderin
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;controlsLayout&quot;:&quot;&lt;popupScreen|separatePage
-          |topOfPage|inPage&gt;&quot;,</code></pre></td>
+          |topOfPage|inPage&gt;&quot;,</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportUnit</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">controlsLayout</span>&gt;popupScreen|separatePage</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        |topOfPage|inPage&lt;/<span class="kw">controlsLayout</span>&gt;</span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>    &quot;alwaysPromptControls&quot;:&quot;true|false&quot;,
+<td><div class="language-text highlight"><pre><code>    &quot;alwaysPromptControls&quot;:&quot;true|false&quot;,
     &quot;inputControlRenderingView&quot;:
         &quot;&lt;inputControlRenderingView&gt;&quot;,
     &quot;reportRenderingView&quot;:
@@ -758,7 +758,7 @@ The default value for the `controlsLayout` is `popupScreen`. The `reportRenderin
         }]
         ...
     }
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">alwaysPromptControls</span>&gt;true|false</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">alwaysPromptControls</span>&gt;</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">inputControlRenderingView</span>&gt;</span>
@@ -832,7 +832,7 @@ The default value for the `controlsLayout` is `popupScreen`. The `reportRenderin
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;reportUri&quot;:&quot;&lt;reportURI&gt;&quot;,
     &quot;reportParameters&quot;:[
@@ -846,7 +846,7 @@ The default value for the `controlsLayout` is `popupScreen`. The `reportRenderin
         },
         ...
     ]
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportOptions</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">reportUri</span>&gt;{reportURI}&lt;/<span class="kw">reportUri</span>&gt;</span>
@@ -883,7 +883,7 @@ When the `locale` property is left empty, the default locale bundle is used.
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;dataSource&quot;:{
         &quot;dataSourceReference&quot;: {
@@ -904,7 +904,7 @@ When the `locale` property is left empty, the default locale bundle is used.
     &quot;securityFile&quot;: {
         &quot;securityFileReference&quot;: {
             &quot;uri&quot;: &quot;&lt;securityFileURI&gt;&quot;
-}   }   }</code></pre></td>
+}   }   }</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">semanticLayerDataSource</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">dataSourceReference</span>&gt;</span>
@@ -970,14 +970,14 @@ A Domain Topic is a Topic created by selecting database fields from a Domain. It
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;url&quot;:&quot;&lt;xmlaServiceURL&gt;&quot;,
     &quot;xmlaDataSource&quot;:&quot;&lt;xmlaDataSource&gt;&quot;,
     &quot;catalog&quot;:&quot;&lt;catalog&gt;&quot;,
     &quot;username&quot;:&quot;&lt;username&gt;&quot;,
     &quot;password&quot;:&quot;&lt;password&gt;&quot;
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">xmlaConnection</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">url</span>&gt;{xmlaServiceURL}&lt;/<span class="kw">url</span>&gt;</span>
@@ -1009,7 +1009,7 @@ Mondrian connections without the access grant schemas are used in the Community 
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;dataSource&quot;:{
         &quot;dataSourceReference&quot;: {
@@ -1021,7 +1021,7 @@ Mondrian connections without the access grant schemas are used in the Community 
             &quot;uri&quot;: &quot;&lt;schemaFileResourceURI&gt;&quot;
         }
     }
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">mondrianConnection</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">dataSourceReference</span>&gt;</span>
@@ -1052,7 +1052,7 @@ Secure Mondrian connections are available only in commercial releases of JasperR
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;dataSource&quot;:{
         &quot;dataSourceReference&quot;: {
@@ -1072,7 +1072,7 @@ Secure Mondrian connections are available only in commercial releases of JasperR
         },
         ...
     ]
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">secureMondrianConnection</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">dataSourceReference</span>&gt;</span>
@@ -1106,7 +1106,7 @@ Secure Mondrian connections are available only in commercial releases of JasperR
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;mdxQuery&quot;:&quot;&lt;mdxQuery&gt;&quot;,
     &quot;olapConnection&quot;: {
@@ -1114,7 +1114,7 @@ Secure Mondrian connections are available only in commercial releases of JasperR
             &quot;uri&quot;: &quot;&lt;olapConnectionReferenceURI&gt;&quot;
         }
     }
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">olapUnit</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">mdxQuery</span>&gt;{mdxQuery}&lt;/<span class="kw">mdxQuery</span>&gt;  </span>
@@ -1141,7 +1141,7 @@ Secure Mondrian connections are available only in commercial releases of JasperR
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>{
+<td><div class="language-text highlight"><pre><code>{
     &lt;commonAttributes&gt;,
     &quot;catalog&quot;:&quot;&lt;catalog&gt;&quot;,
     &quot;mondrianConnection&quot;: {
@@ -1149,7 +1149,7 @@ Secure Mondrian connections are available only in commercial releases of JasperR
             &quot;uri&quot;: &quot;&lt;mondrianConnectionResourceURI&gt;&quot;
         }
     }
-}</code></pre></td>
+}</code></pre></div></td>
 <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">mondrianXmlaDefinition</span>&gt;</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    {commonAttributes}</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">catalog</span>&gt;{catalog}&lt;/<span class="kw">catalog</span>&gt;</span>

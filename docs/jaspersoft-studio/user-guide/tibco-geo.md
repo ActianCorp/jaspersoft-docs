@@ -44,15 +44,16 @@ To create a TIBCO Map component
 
 1.  First locate the component in the Palette. It uses this icon: ![tmap icon](assets/images/tmap-icon.png); drag it onto the canvas.
 
-At a minimum, the TIBCO Map component requires the location of the area to display, which can be defined by these manually exclusive options:
+    At a minimum, the TIBCO Map component requires the location of the area to display, which can be defined by these manually exclusive options:
 
-1.  The latitude and longitude of the location.
-2.  The street address of the location (assuming you have a license for TIBCO GeoAnalytics geolocation services). To use this option, you must also provide credentials for TIBCO's geolocation service. You can either enter these in the Maparama Credentials section of the TIBCO map component's properties, or by defining them in the jasperreports.properties file so that they can share across multiple reports. These properties are:
+2.  The latitude and longitude of the location.
 
-- `com.jaspersoft.jasperreports.tibco.maps.customer`: the customer name used with TIBCO GeoAnalytics Maps
-- `com.jaspersoft.jasperreports.tibco.maps.key`: the corresponding license key for the specified user
+3.  The street address of the location (assuming you have a license for TIBCO GeoAnalytics geolocation services). To use this option, you must also provide credentials for TIBCO's geolocation service. You can either enter these in the Maparama Credentials section of the TIBCO map component's properties, or by defining them in the jasperreports.properties file so that they can share across multiple reports. These properties are:
 
-1.  To define a location, edit the TIBCO Maps component's Location properties. Entering a latitude/longitude pair or address defines a static location. You can also use parameters to define the components location and all other TIBCO Map properties dynamically.
+    - `com.jaspersoft.jasperreports.tibco.maps.customer`: the customer name used with TIBCO GeoAnalytics Maps
+    - `com.jaspersoft.jasperreports.tibco.maps.key`: the corresponding license key for the specified user
+
+4.  To define a location, edit the TIBCO Maps component's Location properties. Entering a latitude/longitude pair or address defines a static location. You can also use parameters to define the components location and all other TIBCO Map properties dynamically.
 
 |                                                           |
 |-----------------------------------------------------------|
@@ -119,32 +120,34 @@ This section describes:
 ### Static Markers
 
 1.  Edit the map component's properties.
+
 2.  On the Markers tab, click Add.
+
 3.  Define your marker by specifying a location and icon. The list of properties for a marker includes:
 
-- target
-- string
-- optional
-- \_blank
-- The hyperlink target for the marker
+    - target
+    - string
+    - optional
+    - \_blank
+    - The hyperlink target for the marker
 
-|                                                       |
-|-------------------------------------------------------|
-| ![tmap marker tab](assets/images/tmap-marker-tab.png) |
-| *Figure 6: Defining a map's markers*                  |
+    |                                                       |
+    |-------------------------------------------------------|
+    | ![tmap marker tab](assets/images/tmap-marker-tab.png) |
+    | *Figure 6: Defining a map's markers*                  |
 
-1.  Specify the icon as a URL that points to the image to use. It's loaded by the JavaScript API.
+4.  Specify the icon as a URL that points to the image to use. It's loaded by the JavaScript API.
 
-Jaspersoft does not currently support loading an image directly from the repository, or as a resource local to the report.
+    Jaspersoft does not currently support loading an image directly from the repository, or as a resource local to the report.
 
-The location can be set by latitude/longitude coordinates or an address to be geolocated, as described above.
+    The location can be set by latitude/longitude coordinates or an address to be geolocated, as described above.
 
-|                                                       |
-|-------------------------------------------------------|
-| ![tmap address ri](assets/images/tmap-address-ri.png) |
-| *Figure 7: A map with a marker*                       |
+    |                                                       |
+    |-------------------------------------------------------|
+    | ![tmap address ri](assets/images/tmap-address-ri.png) |
+    | *Figure 7: A map with a marker*                       |
 
-1.  For the addresses, set each property to form the address: country, state, zip, city, street.
+5.  For the addresses, set each property to form the address: country, state, zip, city, street.
 
 |                                                                       |
 |-----------------------------------------------------------------------|
@@ -258,34 +261,45 @@ Since the data set includes both street addresses and latitude/longitude pairs, 
 To use dynamic locations
 
 1.  Create an Excel file with the data provided above and a data adapter that points to it. Export the data adapter to the project folder; name it CollegeFacilities.jrdax.
+
 2.  In the report, create a dataset: right-click the root in the outline view and select **Create Dataset**.
+
 3.  Right-click the new dataset and select **Dataset and Query**.
+
 4.  In the **Query** dialog, select the CollegeFacilities.jrdax data adapter and click **Read Fields**.
+
 5.  By default, the fields are all set as type String. To change the Latitude field to a Float, double-click in the Class Type column, click the button ellipsis**...**, and select java.lang.Float from the type menu. Repeat these steps to set the Longitude data type to Float.
+
 6.  Click **OK**.
+
 7.  Use the data adapter to populate the dataset. With the CollegeFacilities dataset selected in the outline view, click the **Advanced** tab in the **Properties** view, then select the property **Properties** and click the button ellipsis to open the **Properties** dialog.
+
 8.  Add a property: `net.sf.jasperreports.data.adapter`, and specify the name of the data adapter file saved earlier (CollegeFacilities.jrdax).
 
-We can use this new dataset to set markers on the map.
+    We can use this new dataset to set markers on the map.
 
-1.  Select the map in the **Design** tab, click the **Markers** tab, and click **Add**.
-2.  Click **Dataset**, check the **Use Dataset** checkbox, and click **Add**.
-3.  Select the CollegeFacilities dataset and accept the defaults. Studio uses the data adapter referenced by the `net.sf.jasperreports.data.adapter` property set previously for this dataset.
-4.  Click **OK**.
+9.  Select the map in the **Design** tab, click the **Markers** tab, and click **Add**.
 
-The dataset is added to the list of datasets that we use for markers.
+10. Click **Dataset**, check the **Use Dataset** checkbox, and click **Add**.
 
-1.  Click **Values** and create an expression for each marker property. For example, provide the title, street, city, state, country.
+11. Select the CollegeFacilities dataset and accept the defaults. Studio uses the data adapter referenced by the `net.sf.jasperreports.data.adapter` property set previously for this dataset.
 
-|                                                                     |
-|---------------------------------------------------------------------|
-| ![tmap props dataset loc](assets/images/tmap-props-dataset-loc.png) |
-| *Figure 9: Location values defined as expressions*                  |
+12. Click **OK**.
 
-This example uses an icon from the web: [Pink Push Pin](http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Push-Pin-1-Pink-icon.png).
+    The dataset is added to the list of datasets that we use for markers.
 
-1.  Click **OK**.
-2.  Preview your report in HTML.
+13. Click **Values** and create an expression for each marker property. For example, provide the title, street, city, state, country.
+
+    |                                                                     |
+    |---------------------------------------------------------------------|
+    | ![tmap props dataset loc](assets/images/tmap-props-dataset-loc.png) |
+    | *Figure 9: Location values defined as expressions*                  |
+
+    This example uses an icon from the web: [Pink Push Pin](http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Push-Pin-1-Pink-icon.png).
+
+14. Click **OK**.
+
+15. Preview your report in HTML.
 
 |                                                                    |
 |--------------------------------------------------------------------|
@@ -306,14 +320,12 @@ To define a path in Jaspersoft Studio
 
 1.  On the **Paths** tab, use the Styles section to define a style to associate with the path: click Add to do so.
 
-Style properties can be added manually or by specifying a dataset. The style name sets the style property when adding points to the path.
+    Style properties can be added manually or by specifying a dataset. The style name sets the style property when adding points to the path.
 
-1.  Use the **Paths** section to add points to the path: click **Add** in this UI area to do so. For each point, specify:
+2.  Use the **Paths** section to add points to the path: click **Add** in this UI area to do so. For each point, specify:
 
-<!-- -->
-
-1.  The path name (to identify which path includes the point)
-2.  The style property (to identify the style associated with this path)
-3.  The latitude/longitude coordinates or the address of the point
+    1.  The path name (to identify which path includes the point)
+    2.  The style property (to identify the style associated with this path)
+    3.  The latitude/longitude coordinates or the address of the point
 
 Like styles, points can be added manually or by using a specific dataset. Pay close attention when adding points. They are connected on the map in the order that they are declared in the JRXML file. If they are not declared in a sensible order, the path does not make sense, either.

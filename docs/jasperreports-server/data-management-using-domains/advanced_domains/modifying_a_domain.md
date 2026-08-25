@@ -14,19 +14,20 @@ You can add, change, and delete domain components.
 To edit a Domain
 
 1.  Log into the server as an administrator and navigate to the Domain location in the repository.
+
 2.  Right-click the Domain and select **Edit** from the context menu.
 
-The Domain Designer opens on the **Data Presentation** tab. Click the tab with the information you want to edit and make your changes.
+    The Domain Designer opens on the **Data Presentation** tab. Click the tab with the information you want to edit and make your changes.
 
-1.  If you want to change the data source, select **Replace Data…** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu, select the data source you want in the **Choose Data** dialog, and click **OK**.
+3.  If you want to change the data source, select **Replace Data…** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu, select the data source you want in the **Choose Data** dialog, and click **OK**.
 
-If you change to a data source with a different database, the definitions in the Domain design may become invalid and you can't save the Domain. See Changing the Data Source for more information.
+    If you change to a data source with a different database, the definitions in the Domain design may become invalid and you can't save the Domain. See Changing the Data Source for more information.
 
-!!! warning
+    !!! warning
 
-    Before you switch the data source for a Domain, back up the Domain by exporting a Domain design file.
+        Before you switch the data source for a Domain, back up the Domain by exporting a Domain design file.
 
-1.  Save the Domain.
+4.  Save the Domain.
 
 After modifying a Domain, you must clear the Ad Hoc cache of all queries based on the Domain. This removes any data that was based on the old instance of the Domain and avoids inconsistencies in new reports. For instructions, see the JasperReports Server Administrator Guide.
 
@@ -67,37 +68,37 @@ Before you select a new data source manually or use attributes to specify data s
 To select a new data source:
 
 1.  Select **Replace Data…** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu.
+
 2.  Select the data source you want in the **Choose Data** dialog, and click **OK**.
 
-The **Select Schemas to Map** dialog appears. This dialog shows the schemas used by your Domain on the left, and the schemas available in the data source on the right.
+    The **Select Schemas to Map** dialog appears. This dialog shows the schemas used by your Domain on the left, and the schemas available in the data source on the right.
 
-![js DomainDesigner MapSchemas](../assets/images/js-DomainDesigner-MapSchemas.png)
+    ![js DomainDesigner MapSchemas](../assets/images/js-DomainDesigner-MapSchemas.png)
 
-*Figure 2: Selecting schemas to map*
+    *Figure 2: Selecting schemas to map*
 
-!!! note
+    !!! note
 
-    If you are switching between a schemaless data source (such as MySQL) and a schema-based data source (such as Oracle), the dialog is different, as follows:
+        If you are switching between a schemaless data source (such as MySQL) and a schema-based data source (such as Oracle), the dialog is different, as follows:
 
-    - If the original data source is schemaless and the new data source supports schemas, the Current Schemas list is omitted. Select a new schema from the available schemas.
-    - If the original data source has schemas and the new data source is schemaless, the New Data Source Schemas list is omitted. Select one of the schemas in your Domain to use for the new data source. In addition, if your Domain has only one schema and you are selecting a schemaless data source, the schema is mapped automatically and you do not see this dialog.
+        - If the original data source is schemaless and the new data source supports schemas, the Current Schemas list is omitted. Select a new schema from the available schemas.
+        - If the original data source has schemas and the new data source is schemaless, the New Data Source Schemas list is omitted. Select one of the schemas in your Domain to use for the new data source. In addition, if your Domain has only one schema and you are selecting a schemaless data source, the schema is mapped automatically and you do not see this dialog.
 
-1.  To associate an existing schema in your Domain with a schema in the data source:
+3.  To associate an existing schema in your Domain with a schema in the data source:
 
-<!-- -->
+    1.  Select the schema in the Domain in the **Current Schemas** list.
+    2.  Select the schema you want to replace it with in the **New Data Source Schemas** list.
+    3.  Click ![js DomainDesigner icon LinkSchemas](../assets/images/js-DomainDesigner-icon-LinkSchemas.png).
 
-1.  Select the schema in the Domain in the **Current Schemas** list.
-2.  Select the schema you want to replace it with in the **New Data Source Schemas** list.
-3.  Click ![js DomainDesigner icon LinkSchemas](../assets/images/js-DomainDesigner-icon-LinkSchemas.png).
+    The schemas are associated. A number is added after the schema name to make it easier to manage multiple schemas.
 
-The schemas are associated. A number is added after the schema name to make it easier to manage multiple schemas.
+4.  Repeat the previous step for each schema you want to map. If you want to unlink two schemas, click ![js DomainDesigner icon UnlinkSchemas](../assets/images/js-DomainDesigner-icon-UnlinkSchemas.png).
 
-1.  Repeat the previous step for each schema you want to map. If you want to unlink two schemas, click ![js DomainDesigner icon UnlinkSchemas](../assets/images/js-DomainDesigner-icon-UnlinkSchemas.png).
-2.  Click **Confirm** to map the schemas.
+5.  Click **Confirm** to map the schemas.
 
-JasperReports Server retrieves the data structure from the data source and validates the Domain. If all the tables and columns in your Domain are found, the Domain Designer opens at the **Data Management** tab.
+    JasperReports Server retrieves the data structure from the data source and validates the Domain. If all the tables and columns in your Domain are found, the Domain Designer opens at the **Data Management** tab.
 
-1.  If there are missing tables or columns, a warning dialog lists the affected components of your design. Click **Delete Items** to continue and delete all the items listed, or click **Cancel** to keep the original data source.
+6.  If there are missing tables or columns, a warning dialog lists the affected components of your design. Click **Delete Items** to continue and delete all the items listed, or click **Cancel** to keep the original data source.
 
 ![js DomainDesigner ReplaceDataSource Warning](../assets/images/js-DomainDesigner-ReplaceDataSource-Warning.png)
 
@@ -141,14 +142,17 @@ During validation, the Domain Designer does the following:
 
 1.  Verifies that the tables and columns of the Domain design exist in the data source (validation against data source).
 
-!!! note
+    !!! note
 
-    1.  In special cases where you need to create a design before the data source is available, this step can be omitted by setting a parameter in the server configuration file. See the JasperReports Server Administrator Guide.
+        1.  In special cases where you need to create a design before the data source is available, this step can be omitted by setting a parameter in the server configuration file. See the JasperReports Server Administrator Guide.
 
-1.  Verifies that all items in each defined set originate in the same join tree.
-2.  Verifies that all items reference existing columns.
-3.  Verifies that derived tables have valid SQL queries.
-4.  If a security file has been uploaded, verifies that all items and sets in the security file exist in the Domain design.
+2.  Verifies that all items in each defined set originate in the same join tree.
+
+3.  Verifies that all items reference existing columns.
+
+4.  Verifies that derived tables have valid SQL queries.
+
+5.  If a security file has been uploaded, verifies that all items and sets in the security file exist in the Domain design.
 
 If validation fails, you will not be able to save the Domain. Make the necessary changes to the settings and save again. If the settings are in the uploaded files, edit the files and upload them again.
 

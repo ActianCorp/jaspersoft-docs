@@ -23,14 +23,14 @@ The configuration files in this section contain passwords for your server and da
 
 Use the following command to create a secret containing your passwords. Note that commands are often stored in a history, therefore it is best to create a script to run these commands:
 
-```
+``` text
 kubectl create secret generic jrs-credentials --from-literal=appCredentialsSecretName=password
         --from-literal=foodmart.password=password --from-literal=audit.password=password
 ```
 
 You can then reference this secret inside the configuration files, for example:
 
-```
+``` properties
 appCredentialsSecretName=jrs-credentials
 ```
 

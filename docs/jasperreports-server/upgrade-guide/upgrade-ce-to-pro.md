@@ -62,7 +62,9 @@ For example, for Apache Tomcat, back up the `jasperserver` directory from the `<
 Go to the location where you originally unpacked your CP WAR File Distribution zip. (Or create a new local folder to hold your backup file.)
 
 1.  Go to the `<js-install-cp>` directory.
+
 2.  Run one of the following commands:
+
     - For PostgreSQL on Windows or Linux:
 
       ``` bash
@@ -178,6 +180,7 @@ This example uses PostgreSQL (the same general logic applies to other databases)
 3.  Rename the file to: `default_master.properties`
 
 4.  Edit `default_master.properties` for your database and application server. Sample property values are:
+
     - `appServerType=tomcat (or wildfly, and so on)`
     - `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
     - `dbUsername=postgres`
@@ -201,6 +204,7 @@ This example uses MySQL (the same general logic applies to other databases).
 3.  Rename the file to: `default_master.properties`
 
 4.  Edit `default_master.properties` for your database and application server. Sample property values are:
+
     - `appServerType=tomcat (or wildfly, and so on)`
     - `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
     - `dbUsername=root`
@@ -336,14 +340,17 @@ Before starting the server:
 
 1.  Set up the JasperReports Server License.
 
-Copy the `<js-install-pro>/jasperserver.jrs.license` file to the `C:\Users\<user>` directory (Windows 7 example).
+    Copy the `<js-install-pro>/jasperserver.jrs.license` file to the `C:\Users\<user>` directory (Windows 7 example).
 
-For information about how to set up the license, see the JasperReports Server Installation Guide.
+    For information about how to set up the license, see the JasperReports Server Installation Guide.
 
-1.  Delete any files in the `<tomcat>\temp` folder.
-2.  Delete any files, directories, or subdirectories in `<tomcat>\work\Catalina\localhost`.
-3.  Delete any `jasperserver*.xml` files that might exist in `<tomcat>\conf\Catalina\localhost`.
-4.  (Optional) Move any existing `<tomcat-install>\logs` files into a backup directory to clean up old CP log data.
+2.  Delete any files in the `<tomcat>\temp` folder.
+
+3.  Delete any files, directories, or subdirectories in `<tomcat>\work\Catalina\localhost`.
+
+4.  Delete any `jasperserver*.xml` files that might exist in `<tomcat>\conf\Catalina\localhost`.
+
+5.  (Optional) Move any existing `<tomcat-install>\logs` files into a backup directory to clean up old CP log data.
 
 For instructions on clearing directories, see 1.9, “Additional Tasks to Complete the Upgrade,” on page 1.
 
@@ -379,6 +386,7 @@ You need to update XML/A connection definitions to include the organization the 
 The XML/A connection also specifies an instance URI. You need to update this URI to the commercial instance. Edit your XML/A connections as shown in the following examples:
 
 - User IDs
+
   - Change `jasperadmin` to `jasperadmin|organization_1`
   - Change `joeuser` to `joeuser|organization_1`
 
@@ -424,7 +432,7 @@ In the `Jasperserver` database, compiled JasperReports Library resources are cac
 
 **To clear the repository cache database table manually, run a SQL command similar to the one shown below**:
 
-```
+``` sql
 update JIRepositoryCache set item_reference = null;
 delete from JIRepositoryCache;
 ```

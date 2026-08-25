@@ -11,24 +11,24 @@ The DB2 client software, db2 or db2cmd, can be used to interact with DB2.
 
 1.  Enter commands similar to the ones below in the DB2 command window to create and initialize the repository database, called `jsprsrvr` in DB2 to conform to the 8-character limitation:
 
-```
-db2 create database jsprsrvr using codeset utf-8 territory us pagesize 16384
-```
+    ``` text
+    db2 create database jsprsrvr using codeset utf-8 territory us pagesize 16384
+    ```
 
-1.  Enter the following commands to create and initialize the JSAudit database `jsaudit` in DB2 to conform to the 8-character limitation:
+2.  Enter the following commands to create and initialize the JSAudit database `jsaudit` in DB2 to conform to the 8-character limitation:
 
-```
-db2 create database jsaudit using codeset utf-8 territory us pagesize 16384
-```
+    ``` text
+    db2 create database jsaudit using codeset utf-8 territory us pagesize 16384
+    ```
 
-1.  (Optional) Run the following commands in the DB2 command window if you want to install sample databases:
+3.  (Optional) Run the following commands in the DB2 command window if you want to install sample databases:
 
-```
-db2 create database sugarcrm
-db2 create database foodmart
-```
+    ``` text
+    db2 create database sugarcrm
+    db2 create database foodmart
+    ```
 
-1.  Continue installing JasperReports Server as described in [Installing the WAR File Using js-install Scripts](../../../installation-guide/warfileinstall/war_install_using_js_install.md).
+4.  Continue installing JasperReports Server as described in [Installing the WAR File Using js-install Scripts](../../../installation-guide/warfileinstall/war_install_using_js_install.md).
 
 Further considerations:
 

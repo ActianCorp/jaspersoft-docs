@@ -62,21 +62,22 @@ Now you have a simple map component and you can customize its appearance to meet
 Adding background color and border to the map
 
 1.  Right-click the HTML5 element and select **Edit Map properties**. The **HTML5 Map Edit Dialog** is displayed.
+
 2.  On the **Map Formatting** tab, select the **Map** section and set the **Background Color**, for this example, enter the following value:
 
-- **Background Color**: `#14D9D5`
+    - **Background Color**: `#14D9D5`
 
-1.  Select the **Borders and Plot Area** section and enter the following values:
+3.  Select the **Borders and Plot Area** section and enter the following values:
 
-- **Plot Shadow**: `true`
-- **Plot Background Color**: `#F2EB1D`
-- **Plot Border Color**: `#F7072B`
-- **Plot Border Width**: `1 px`
-- **Border Color**: `#130FFA` (this refers to the map regions outside the plot area)
-- **Border Radius**: `4 px`
-- **Border Width**: `3 px`
+    - **Plot Shadow**: `true`
+    - **Plot Background Color**: `#F2EB1D`
+    - **Plot Border Color**: `#F7072B`
+    - **Plot Border Width**: `1 px`
+    - **Border Color**: `#130FFA` (this refers to the map regions outside the plot area)
+    - **Border Radius**: `4 px`
+    - **Border Width**: `3 px`
 
-1.  To preview the map from inside the dialog, click **Show Map Preview**.
+4.  To preview the map from inside the dialog, click **Show Map Preview**.
 
 |                                                                      |
 |----------------------------------------------------------------------|
@@ -86,19 +87,21 @@ Adding background color and border to the map
 To set the color of the entire map
 
 1.  On the **Map Formatting** tab, select the Colors section and select the first color from the **Color Palette**.
+
 2.  Click Modify, **Pick the new color** dialog is displayed.
+
 3.  On the **Advanced Colors** tab, enter the following value:
 
-- Hex: `#433BD4`
+    - Hex: `#433BD4`
 
-1.  Click **OK**.
+4.  Click **OK**.
 
-|  |
-|----|
-| ![jss map custom color settings](../assets/images/jss-map-custom%20color-settings.png) |
-| *Figure 3: Customizing Map Color* |
+    |  |
+    |----|
+    | ![jss map custom color settings](../assets/images/jss-map-custom%20color-settings.png) |
+    | *Figure 3: Customizing Map Color* |
 
-1.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+5.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
 |                                                          |
 |----------------------------------------------------------|
@@ -149,11 +152,11 @@ To customize the map copyright information
 
 1.  On the **Map Formatting** tab, select the **Credits** section. For this example, enter the following information:
 
-- **Show credits**: `true`
-- **Credits**: `Map Example`
-- **Hyperlink Reference**: `https://example.com`
+    - **Show credits**: `true`
+    - **Credits**: `Map Example`
+    - **Hyperlink Reference**: `https://example.com`
 
-1.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+2.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
 |                                                                          |
 |--------------------------------------------------------------------------|

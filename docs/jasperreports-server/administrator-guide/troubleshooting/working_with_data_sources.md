@@ -38,9 +38,6 @@ JasperReports Server ships with drivers for several databases, as listed in the 
 When creating database users, you must ensure that they have the appropriate privileges to access data, as well as permission to connect from the server that JasperReports Server is running on.
 
 - The database user that you specify in your data source definition needs the privileges to run `SELECT` queries on the tables used in your reports. The server blocks any `DROP, INSERT, UPDATE`, and `DELETE` SQL commands through its SQL injection protection. In some cases, additional permissions may be required to execute stored procedures, depending on your configuration and needs.
-
-<!-- -->
-
 - If you accept the defaults during installation of JasperReports Server on Linux from an RPM using apt-get, rpm, or yum, the bundled PostgreSQL allows only the user who owns PostgreSQL to connect. Enter the following commands to connect:
 
 ``` text
@@ -185,23 +182,25 @@ The ElasticSearch JDBC driver is not enabled by default due to certain limitatio
 To enable the Jaspersoft JDBC drivers for ElasticSearch data sources
 
 1.  Open the file `.../WEB-INF/applicationContext-webapp.xml` for editing.
+
 2.  Locate the `jdbcTibcoConnectionMap` bean and find the following lines for the inactive ElasticSearch JDBC driver:
 
-``` text
-<!--  entry key="elastic_search">
-   ...
-</entry -->
-```
+    ``` text
+    <!--  entry key="elastic_search">
+       ...
+    </entry -->
+    ```
 
 3.  Modify the lines as follows to enable the JDBC driver in JasperReports Server:
 
-``` xml
-<entry key="elastic_search">
-   ...
-</entry>
-```
+    ``` xml
+    <entry key="elastic_search">
+       ...
+    </entry>
+    ```
 
 4.  Save the file.
+
 5.  Upload the JDBC driver separately and restart JasperReports Server.
 
 ## JNDI Services on Apache Tomcat
@@ -283,26 +282,27 @@ Follow these steps to configure JasperReports Server to use JNDI data sources wi
 
 1.  Append the following definition to the `<reference-descriptor>` node of `.../WEB-INF/weblogic.xml`:
 
-``` xml
-<resource-description>
-    <res-ref-name>TestDatabase</res-ref-name>
-    <jndi-name>jdbc/testDatabase</jndi-name>
-</resource-description>
-```
+    ``` xml
+    <resource-description>
+        <res-ref-name>TestDatabase</res-ref-name>
+        <jndi-name>jdbc/testDatabase</jndi-name>
+    </resource-description>
+    ```
 
 2.  Append the following definition to `.../WEB-INF/web.xml`:
 
-``` xml
-<resource-ref>
-    <description>TestDatabase database</description>
-    <res-ref-name>TestDatabase</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <res-auth>Container</res-auth>
-</resource-ref>
-```
+    ``` xml
+    <resource-ref>
+        <description>TestDatabase database</description>
+        <res-ref-name>TestDatabase</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    ```
 
 3.  In the **WebLogic Admin Console**, create a JNDI data source, in this example its JNDI name would be **TestDatabase**.<br>
     Ensure that the database user in your JNDI definition has the privileges to run `SELECT` queries on the tables used in your reports. In some cases, additional permissions may be required to execute stored procedures, depending on your configuration and needs. For more information, see [Database Permissions](working_with_data_sources.md).
+
 4.  Restart the `jasperserver` instance using the **WebLogic Admin Console**.
 
 ## Creating a Data Source on SQL Server Using Windows Authentication
@@ -311,29 +311,44 @@ If your database is Microsoft SQL Server and you use Windows Authentication (als
 
 1.  Download the latest JDBC driver for your version of Microsoft SQL Server. For example [download Microsoft SQL Server JDBC Driver 6.4](https://www.microsoft.com/en-us/download/details.aspx?id=56615).<br>
 
-!!! note
+    !!! note
 
-    To find the latest version of your Microsoft SQL Server driver, see the [Microsoft JDBC Driver for SQL Server Support Matrix](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix).
+        To find the latest version of your Microsoft SQL Server driver, see the [Microsoft JDBC Driver for SQL Server Support Matrix](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix).
 
-    For information about downloading and installing Microsoft SQL Server drivers, see the [Microsoft JDBC Driver for SQL Server](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server) page.
+        For information about downloading and installing Microsoft SQL Server drivers, see the [Microsoft JDBC Driver for SQL Server](https://docs.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server) page.
 
 2.  Download and run the self-extracting executable: **sqljdbc_6.4.0.0_enu.exe**
+
 3.  Open the extracted folder `sqljdbc_6.4\enu\auth\x64` and copy the file `sqljdbc_auth.dll` to the folder your app server automatically searches for DLLs.<br>
     For Tomcat, this is the `<tomcat>\bin` folder.
+
 4.  Open the extracted folder `sqljdbc_6.4\enu` and copy `mssql-jdbc-6.4.0.jre8.jar` to the folder to let your app server automatically searches for jars. For Tomcat, this is the `<tomcat>\lib` folder.
+
 5.  Restart your app server.
+
 6.  Log into JasperReports Server as an administrator.
+
 7.  Select **Create \> Data Source** from the main menu.
+
 8.  In the **Type** field, select **JDBC Data Source**. The page refreshes to show the fields necessary for a JDBC data source.
+
 9.  Enter a name and optional description for your data source.
+
 10. From the dropdown field, select `com.microsoft.sqlserver.jdbc.SQLServerDriver`.
+
 11. Enter the database hostname and database name of your SQL Server instance.
+
 12. In the URL field, add the following string to the end of the generated URL:<br>
     `;integratedSecurity=true`
+
 13. In the **Username** field, enter any non-blank string you want, for example **none**.
+
 14. In the **Password** field, enter any non-blank string you want, for example **none**.
+
 15. Set the **Time Zone** and **Save Location** fields if necessary.
+
 16. Click **Test Connection** and verify that the connection works.
+
 17. Click **Save** to save the data source in the repository.
 
 ## Upgrading Bean Data Sources

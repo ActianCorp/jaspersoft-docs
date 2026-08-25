@@ -15,10 +15,10 @@ Here are examples of calls to `deleteUser` and `deleteRole`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSRole role = new WSRole();
+<td><div class="language-text highlight"><pre><code>WSRole role = new WSRole();
 role.setRoleName(&quot;ROLE_WS&quot;);
 role.setTenantId(&quot;organization_1&quot;);
-binding.deleteRole(role);</code></pre></td>
+binding.deleteRole(role);</code></pre></div></td>
 </tr>
 </tbody>
 </table>

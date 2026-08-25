@@ -23,6 +23,7 @@ Your deployment procedure must include the following steps:
     2.  In every organization, change the password of each automatically created administrator.
 
 6.  Initialize your repository:
+
     1.  If you're using organizations, create additional repository resources, like data sources and shared reports, within each organization folder.
     2.  Define all your repository permissions using the external roles that were created.
 

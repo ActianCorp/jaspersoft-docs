@@ -64,6 +64,7 @@ Parameters have the following properties on the **Object** tab in the **Outline*
 You may legally define another parameter as the value of **Default Value Expression**, but this method requires careful report design. Jaspersoft Studio parses parameters in the same order in which they are declared, so a default value parameter must be declared before the current parameter.
 
 - **Evaluation Time** – Use this to specify the evaluation time for the parameter:
+
   - **Early** – Evaluate the parameter default value expression before the data adapter.
   - **Late** – Evaluate the parameter default value expression after the data adapter.
 

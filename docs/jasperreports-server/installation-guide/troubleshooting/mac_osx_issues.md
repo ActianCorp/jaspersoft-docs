@@ -19,35 +19,37 @@ Delete catalina.pid using the Finder:
 
 1.  Navigate to the `<js-install>/tomcat/temp` folder.
 
-For instance: `/Applications/10.1.0/tomcat/temp`
+    For instance: `/Applications/10.1.0/tomcat/temp`
 
-1.  Delete `catalina.pid`
+2.  Delete `catalina.pid`
 
 Delete the catalina.pid file using the Terminal shell:
 
 1.  Open a Terminal shell (**Finder \> Go \> Utilities \> Terminal Icon**)
+
 2.  Navigate to the `<js-install>/tomcat/temp` folder.
 
-For instance: `/Applications/10.1.0/tomcat/temp`
+    For instance: `/Applications/10.1.0/tomcat/temp`
 
-1.  Enter the following command:
+3.  Enter the following command:
 
 `rm catalina.pid`
 
 To start and stop the PostgreSQL and Tomcat components separately from the command-line shell:
 
 1.  Open a Terminal shell (**Finder \> Go \> Utilities \> Terminal Icon**).
+
 2.  Navigate to the `<js-install>` folder.
 
-For instance: `/Applications/10.1.0`
+    For instance: `/Applications/10.1.0`
 
-1.  To start:
+3.  To start:
 
-`./ctlscript start postgresql`
+    `./ctlscript start postgresql`
 
-`./ctlscript start tomcat`
+    `./ctlscript start tomcat`
 
-1.  To shut down:
+4.  To shut down:
 
 `./ctlscript stop `
 

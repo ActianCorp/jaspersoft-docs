@@ -41,13 +41,18 @@ Unlike Topics, which must be stored in a specific folder in the repository, Doma
 To begin designing a Domain-based view
 
 1.  Launch the Ad Hoc Editor by clicking **Create \> Ad Hoc View.**
+
 2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Domains**.
+
 3.  Expand the Domains folder and select a domain.
+
 4.  Click **Choose Data...**, and click the options on the left of the window to perform the following tasks:
+
     - Click **Fields** to select fields of data to use in the view.
     - Click **Pre-filters** to create filters to limit the data available in the Ad Hoc Editor.
     - Click **Display** to change the fields’ display names.
     - Click **Save as Topic** to save the customized topic for later use.
+
 5.  Select the type of view that you want to create: table, chart, or crosstab. For an overview of view types, see [Ad Hoc View Types](adhoc-view-types.md).
 
 You can now begin working on your view in the Ad Hoc Editor.

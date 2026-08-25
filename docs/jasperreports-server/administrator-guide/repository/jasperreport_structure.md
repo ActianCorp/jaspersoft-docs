@@ -10,11 +10,17 @@ The repository resource that aggregates all information needed to run a report i
 A JasperReport is a complex resource composed of other resources:
 
 - The main JRXML file that defines the report
+
 - A data source that supplies data for the report.
+
 - A query if none is specified in the main JRXML.
+
   - The query may specify its own data source, which overrides the data source defined in the report.
+
 - Input controls for parameters that users may enter before running the report. Input controls are composed of either a datatype definition or a list of values.
+
 - Any additional file resources, such as images, fonts, and resource bundles referenced by the report template.
+
 - If the report includes subreports, the JRXML files for the subreports.
 
 The collection of all the resources referenced in a JasperReport is sometimes called a report unit. End users usually see and interact with a JasperReport as a single resource in the repository, but report creators must define all of the component resources.
@@ -45,7 +51,7 @@ As with a file system path, the repository path is composed of the resource ID o
 
 !!! note
 
-    If you implement organizations, the absolute path is relative to the user's organization, as described in <a href="multiple_organizations.md">Multiple Organizations in the Repository</a>.
+    If you implement organizations, the absolute path is relative to the user's organization, as described in [Multiple Organizations in the Repository](multiple_organizations.md).
 
 When uploading the JRXML with absolute resource references as part of a JasperReport in the server, you need to ensure only that the resource with the given path exists in the repository before running the report. When the report runs, the server locates the resource in the repository and uses it to render the report.
 

@@ -23,35 +23,39 @@ To create the chart
 
 1.  Click ![jss icon html5 chart](../assets/images/jss-icon-html5-chart.png) **HTML5 Charts** on the **Components Pro** section of the **Palette**. The cursor changes ![jss icon loaded palette element](../assets/images/jss-icon-loaded-palette-element.png) to an element is selected. Drag to fill the **Summary** band of your report.
 
-The **HTML5 Chart Edit Dialog** is displayed.
+    The **HTML5 Chart Edit Dialog** is displayed.
 
-1.  Select **TimeSeriesSpline** for your chart type.
-2.  Click the **Data Configuration** tab.
+2.  Select **TimeSeriesSpline** for your chart type.
 
-|  |
-|----|
-| ![Simple data configuration view for time series charts](../assets/images/Simple%20data%20configuration%20view%20for%20time-series%20charts.png) |
-| *Figure 1: Simple data configuration view for time-series charts* |
+3.  Click the **Data Configuration** tab.
 
-1.  Enter an expression for the date in the **Date Expression** field. You can click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to use the expression editor or enter the expression manually. For this example, enter:<br>
+    |  |
+    |----|
+    | ![Simple data configuration view for time series charts](../assets/images/Simple%20data%20configuration%20view%20for%20time-series%20charts.png) |
+    | *Figure 1: Simple data configuration view for time-series charts* |
+
+4.  Enter an expression for the date in the **Date Expression** field. You can click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to use the expression editor or enter the expression manually. For this example, enter:<br>
     `$F{ORDERDATE}`.
-2.  To use multiple series, select **Define your series manually**.
-3.  Define your first series. For this example, use the following data:
 
-- **Series**: Series 1. The name of the series is automatically generated. You cannot change it in a simple configuration.
-- **Value Expression**: `$F{FREIGHT}`.
-- **Aggregation Function**: Highest
-- **Tooltip Expression**: "max freight"
+5.  To use multiple series, select **Define your series manually**.
 
-1.  To define an additional series, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png). For this example, define a second measure using the following data.
+6.  Define your first series. For this example, use the following data:
 
-- **Series**: Series 2.
-- **Value Expression**: `$F{FREIGHT}.multiply(new BigDecimal(0.5))`
-- **Aggregation Function**: Sum
-- **Tooltip Expression**: "total freight/2"
+    - **Series**: Series 1. The name of the series is automatically generated. You cannot change it in a simple configuration.
+    - **Value Expression**: `$F{FREIGHT}`.
+    - **Aggregation Function**: Highest
+    - **Tooltip Expression**: "max freight"
 
-1.  Click **OK** to close the **HTML5 Chart Edit Dialog**.
-2.  Preview the report.
+7.  To define an additional series, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png). For this example, define a second measure using the following data.
+
+    - **Series**: Series 2.
+    - **Value Expression**: `$F{FREIGHT}.multiply(new BigDecimal(0.5))`
+    - **Aggregation Function**: Sum
+    - **Tooltip Expression**: "total freight/2"
+
+8.  Click **OK** to close the **HTML5 Chart Edit Dialog**.
+
+9.  Preview the report.
 
 |  |
 |----|

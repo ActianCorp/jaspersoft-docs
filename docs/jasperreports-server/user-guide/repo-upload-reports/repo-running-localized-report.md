@@ -10,9 +10,13 @@ In this procedure, you run the Romanian version of the complex report that you a
 To run the Romanian version of the complex report
 
 1.  Choose the Romanian locale on the login page of the server, and login as an administrator.
+
 2.  Click **View \> Repository**, and navigate to **Organization \> Reports**.
+
 3.  Click the name of the complex report, New Complex Report. The Input Controls dialog appears.
+
 4.  Enter input control values:
+
     1.  Text Input Control: `3`
 
     2.  Check Box Input Control: Check the check box.

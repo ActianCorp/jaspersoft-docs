@@ -302,7 +302,7 @@ To prevent brute-force attacks against user and administrator accounts, JasperRe
 
 The following bean definition is available in the `applicationContext-security.xml` for the class `LoginLockoutConfig`.
 
-```
+``` xml
 <bean id="loginLockoutConfig" class="com.jaspersoft.jasperserver.api.common.configuration.LoginLockoutConfig">
 <property name="allowedNumberOfLoginAttempts" value="10"></property>
 </bean>
@@ -325,14 +325,18 @@ You can leave the default cleanup of 1 hour or you can change it.
 The following steps, as an example, describe how to change the threshold to 2 and cron time to 20 minutes:
 
 1.  Edit the `applicationContext.xml` file.
+
 2.  Search for '`<bean id="externalUserLoginAttemptsCleanUpService">`'
+
 3.  Change "`<property name="userLoginAttemptsThreshold" value="100"/>`" to "`<property name="userLoginAttemptsThreshold" value="2"/>`".
+
 4.  Search for `<task:scheduled-tasks scheduler="externalUserCleanupScheduler">`.
+
 5.  Change "`<task:scheduled ref="externalUserLoginAttemptsCleanUpService" method="clearAllData" cron="0 0 /1 * * *" />`" to "`<task:scheduled ref="externalUserLoginAttemptsCleanUpService" method="clearAllData" cron="0 */20 * * *" />`".
 
-!!! note
+    !!! note
 
-    The cron job runs every 20 minutes. Adjust this value if needed.
+        The cron job runs every 20 minutes. Adjust this value if needed.
 
 6.  Restart Tomcat.
 

@@ -24,145 +24,150 @@ In the following example, Input controls are grouped by location and time.
 To customize the Input controls
 
 1.  Create a report with Input controls named Country, Zip, Year, and Month.
+
 2.  Create a `customParametersForm.jsp` file and place it in the `jasperserver-pro/WEB-INF/jsp/modules/inputControls/` folder with the following content:
 
-```
-<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
+    ``` javascript
+    <%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
 
-<jsp:include page="InputControlTemplates.jsp" />
-<script type=“text/javascript” src=“${pageContext.request.contextPath}/scripts/underscore-umd-min.js”></script>
+    <jsp:include page="InputControlTemplates.jsp" />
+    <script type=“text/javascript” src=“${pageContext.request.contextPath}/scripts/underscore-umd-min.js”></script>
 
-<!-- styles we want to apply to new tabs on Input Controls dialog -->
+    <!-- styles we want to apply to new tabs on Input Controls dialog -->
 
-<style type="text/css">
+    <style type="text/css">
 
-    .tabsButtons {
-        margin-bottom: 30px;
-    }
+        .tabsButtons {
+            margin-bottom: 30px;
+        }
 
-    #nicPanel {
-        min-width:500px;
-        min-height:400px;
-    }
+        #nicPanel {
+            min-width:500px;
+            min-height:400px;
+        }
 
-    .nicControlsPanel {
-        border: 1px solid #e0e0e0;
-        padding: 20px;
-    }
+        .nicControlsPanel {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+        }
 
-    #nicCountrySearch {
-        width: 300px;
-    }
+        #nicCountrySearch {
+            width: 300px;
+        }
 
-    #spanCountry {
-        position: relative;
-        top: -7px;
-    }
+        #spanCountry {
+            position: relative;
+            top: -7px;
+        }
 
-    #inputControls {
-        min-width: 550px;
-        min-height: 500px;
-    }
-</style>
+        #inputControls {
+            min-width: 550px;
+            min-height: 500px;
+        }
+    </style>
 
-<!-- adding tabs element from template -->
-<div class="tabs tabsButtons">
-    <t:insertTemplate template="/WEB-INF/jsp/templates/control_tabSet.jsp">
-        <t:putAttribute name="type" value="buttons"/>
-        <t:putAttribute name="containerClass" value="horizontal"/>
-        <t:putListAttribute name="tabset">
-            <!-- tab that will contain input controls related to Shipping Location -->
-            <t:addListAttribute>
-                <t:addAttribute>nicByShippingLocationTab</t:addAttribute>
-                <t:addAttribute>By Shipping Location</t:addAttribute>
-                <t:addAttribute>selected</t:addAttribute>
-            </t:addListAttribute>
-            <!-- tab that will contain input controls related to Shipping Date -->
-            <t:addListAttribute>
-                <t:addAttribute>nicByShippingDateTab</t:addAttribute>
-                <t:addAttribute>By Shipping Date</t:addAttribute>
-            </t:addListAttribute>
-        </t:putListAttribute>
-    </t:insertTemplate>
-</div>
-<div id="nicByShippingLocationPanel" class="nicControlsPanel">
-</div>
-<div id="nicByShippingDatePanel" class="nicControlsPanel"></div>
+    <!-- adding tabs element from template -->
+    <div class="tabs tabsButtons">
+        <t:insertTemplate template="/WEB-INF/jsp/templates/control_tabSet.jsp">
+            <t:putAttribute name="type" value="buttons"/>
+            <t:putAttribute name="containerClass" value="horizontal"/>
+            <t:putListAttribute name="tabset">
+                <!-- tab that will contain input controls related to Shipping Location -->
+                <t:addListAttribute>
+                    <t:addAttribute>nicByShippingLocationTab</t:addAttribute>
+                    <t:addAttribute>By Shipping Location</t:addAttribute>
+                    <t:addAttribute>selected</t:addAttribute>
+                </t:addListAttribute>
+                <!-- tab that will contain input controls related to Shipping Date -->
+                <t:addListAttribute>
+                    <t:addAttribute>nicByShippingDateTab</t:addAttribute>
+                    <t:addAttribute>By Shipping Date</t:addAttribute>
+                </t:addListAttribute>
+            </t:putListAttribute>
+        </t:insertTemplate>
+    </div>
+    <div id="nicByShippingLocationPanel" class="nicControlsPanel">
+    </div>
+    <div id="nicByShippingDatePanel" class="nicControlsPanel"></div>
 
-<script type="text/javascript">
-    document.addEventListener("controls:initialized", function(event) {
-    const controlsViewModel = event.detail;
-    controlsViewModel.draw = function (jsonStructure) {
+    <script type="text/javascript">
+        document.addEventListener("controls:initialized", function(event) {
+        const controlsViewModel = event.detail;
+        controlsViewModel.draw = function (jsonStructure) {
 
-        //get and initialize Inptut Controls object
-        const drawControl = function (container, jsonControl) {
-            if (jsonControl.visible) {
-                const control = this.findControl({id: jsonControl.id});
-                control.render();
-                document.getElementById(container).append(control.getElem() && control.getElem()[0]);
+            //get and initialize Inptut Controls object
+            const drawControl = function (container, jsonControl) {
+                if (jsonControl.visible) {
+                    const control = this.findControl({id: jsonControl.id});
+                    control.render();
+                    document.getElementById(container).append(control.getElem() && control.getElem()[0]);
+                }
+            };
+
+            //selecting only input controls named Country or Zip
+            const leftPanelControls = _.filter(jsonStructure, function (controlStructure) {
+                return _.indexOf(["Country", "Zip"], controlStructure.id) >= 0;
+            });
+
+            //assigning Country and Zip ICs to the left panel
+            _.each(leftPanelControls, _.bind(drawControl, this, "nicByShippingLocationPanel"));
+
+
+            //selecting only input controls named Year or Month
+            const rightPanelControls = _.filter(jsonStructure, function (controlStructure) {
+                return _.indexOf(["Month", "Year"], controlStructure.id) >= 0;
+            });
+
+
+            //assigning Year and Month ICs to the right panel
+            _.each(rightPanelControls, _.bind(drawControl, this, "nicByShippingDatePanel"));
+        };
+
+        // tab handlers
+        const nic = {
+            tabByShippingLocationClickHandler: function () {
+                document.getElementById("nicByShippingLocationPanel").hidden = false;
+                document.getElementById("nicByShippingDatePanel").hidden = true;
+                document.querySelector("div.tabs.tabsButtons > ul > li.tab.first").
+                           classList.add("selected");
+                document.querySelector("div.tabs.tabsButtons > ul > li.tab.last").
+                           classList.remove("selected");
+            },
+
+            tabByShippingDateClickHandler: function () {
+                document.getElementById("nicByShippingLocationPanel").hidden = true;
+                document.getElementById("nicByShippingDatePanel").hidden = false;
+                document.querySelector("div.tabs.tabsButtons > ul > li.tab.last").
+                           classList.add("selected");
+                document.querySelector("div.tabs.tabsButtons > ul > li.tab.first").
+                           classList.remove("selected");
             }
         };
 
-        //selecting only input controls named Country or Zip
-        const leftPanelControls = _.filter(jsonStructure, function (controlStructure) {
-            return _.indexOf(["Country", "Zip"], controlStructure.id) >= 0;
+        nic.clickHandlerMap = {
+            'nicByShippingLocationTab':nic.tabByShippingLocationClickHandler,
+            'nicByShippingDateTab':nic.tabByShippingDateClickHandler
+        };
+
+
+        // assign handlers
+        _.each(nic.clickHandlerMap, function (handler, selector) {
+            const shippingTabElement = document.getElementById(selector);
+            shippingTabElement.addEventListener('click', handler, false);
         });
-
-        //assigning Country and Zip ICs to the left panel
-        _.each(leftPanelControls, _.bind(drawControl, this, "nicByShippingLocationPanel"));
-
-
-        //selecting only input controls named Year or Month
-        const rightPanelControls = _.filter(jsonStructure, function (controlStructure) {
-            return _.indexOf(["Month", "Year"], controlStructure.id) >= 0;
-        });
-
-
-        //assigning Year and Month ICs to the right panel
-        _.each(rightPanelControls, _.bind(drawControl, this, "nicByShippingDatePanel"));
-    };
-
-    // tab handlers
-    const nic = {
-        tabByShippingLocationClickHandler: function () {
-            document.getElementById("nicByShippingLocationPanel").hidden = false;
-            document.getElementById("nicByShippingDatePanel").hidden = true;
-            document.querySelector("div.tabs.tabsButtons > ul > li.tab.first").
-                       classList.add("selected");
-            document.querySelector("div.tabs.tabsButtons > ul > li.tab.last").
-                       classList.remove("selected");
-        },
-
-        tabByShippingDateClickHandler: function () {
-            document.getElementById("nicByShippingLocationPanel").hidden = true;
-            document.getElementById("nicByShippingDatePanel").hidden = false;
-            document.querySelector("div.tabs.tabsButtons > ul > li.tab.last").
-                       classList.add("selected");
-            document.querySelector("div.tabs.tabsButtons > ul > li.tab.first").
-                       classList.remove("selected");
-        }
-    };
-
-    nic.clickHandlerMap = {
-        'nicByShippingLocationTab':nic.tabByShippingLocationClickHandler,
-        'nicByShippingDateTab':nic.tabByShippingDateClickHandler
-    };
-
-
-    // assign handlers
-    _.each(nic.clickHandlerMap, function (handler, selector) {
-        const shippingTabElement = document.getElementById(selector);
-        shippingTabElement.addEventListener('click', handler, false);
     });
-});
-</script>
-```
+    </script>
+    ```
 
-1.  Download the `underscore-umd-min.js` script from <https://underscorejs.org/underscore-umd-min.js> and place it into `/webapps/jasperserverpro/scripts/`.
-2.  Restart JasperReports Server.
-3.  Go to **View \> Repository** and click **Edit**.
-4.  Select **Controls & Resources** from the menu and then enter `modules/inputControls/customParametersForm.jsp` in the **Optional JSP Location** field.
-5.  Save and run the report.
+3.  Download the `underscore-umd-min.js` script from <https://underscorejs.org/underscore-umd-min.js> and place it into `/webapps/jasperserverpro/scripts/`.
+
+4.  Restart JasperReports Server.
+
+5.  Go to **View \> Repository** and click **Edit**.
+
+6.  Select **Controls & Resources** from the menu and then enter `modules/inputControls/customParametersForm.jsp` in the **Optional JSP Location** field.
+
+7.  Save and run the report.
 
 You can see that the **Input Controls** dialog has two tabs "By Shipping Location" and "By Shipping Date". Each of these tabs contains the corresponding Input controls.
 
@@ -188,22 +193,22 @@ To modify the Save and Save As buttons in the report viewer:
 
 1.  Add the line to import the Spring `authz` tag near the beginning of the file. This line is necessary to implement access control in a JSP file:
 
-`<%@ taglib uri="http://www.springframework.org/security/tags" prefix="authz"%>`
+    `<%@ taglib uri="http://www.springframework.org/security/tags" prefix="authz"%>`
 
-```
-...
-<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="js" uri="/WEB-INF/jasperserver.tld" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib  prefix="authz" uri="http://www.springframework.org/security/tags"%>
-...
-```
+    ``` text
+    ...
+    <%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+    <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+    <%@ taglib prefix="js" uri="/WEB-INF/jasperserver.tld" %>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+    <%@ taglib  prefix="authz" uri="http://www.springframework.org/security/tags"%>
+    ...
+    ```
 
-1.  Insert `authz:authorize` tags around the elements that implement the **Save** and **Save As** options.
+2.  Insert `authz:authorize` tags around the elements that implement the **Save** and **Save As** options.
 
-```
+``` text
 <%-- changes for Ult Guide to remove save buttons --%>
 <authz:authorize access="hasRole('ROLE_ADMINISTRATOR')">
   <c:if test="${isPro}">

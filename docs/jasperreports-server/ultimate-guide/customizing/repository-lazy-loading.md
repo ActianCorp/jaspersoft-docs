@@ -61,11 +61,13 @@ To enable lazy loading for the JasperReports Wizard's repository trees, you wil
 To enable "lazy loading" for your repository
 
 1.  Open the repository tree configuration file you want to edit.
+
 2.  Locate the bean for the repository tree for which you want to enable lazy loading.
+
 3.  Add the following line to the bean:
 
-```
-<property name="lazy" value="true" />
-```
+    ``` xml
+    <property name="lazy" value="true" />
+    ```
 
-1.  Save the modified file and restart the application server to see changes.
+4.  Save the modified file and restart the application server to see changes.

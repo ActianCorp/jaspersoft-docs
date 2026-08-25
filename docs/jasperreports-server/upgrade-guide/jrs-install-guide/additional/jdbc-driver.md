@@ -49,6 +49,7 @@ If for instance, you want to use a JDBC driver built and distributed by the MySQ
     `https://dev.mysql.com/downloads/connector/j/`
 
 2.  Next, change your buildomatic configuration properties to point to this new driver.
+
     1.  Edit your `default_master.properties` file:
 
         `<js-install>/buildomatic/default_master.properties`
@@ -136,7 +137,7 @@ To support additional functionality with Oracle RAC, such as load balancing with
 1.  Change to the `<tomcat>/webapps/jasperserver-pro/META-INF` directory and open `context.xml` in a text editor.
 2.  Edit the `url` property by adding additional connection properties for the data sources that you want. The following example shows how to set up the connection pool to use Oracle RAC with load balancing with a primary server and three alternate servers:
 
-```
+``` text
 jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=on)(ADDRESS=(PROTOCOL=tcp)(HOST=myhost1)(PORT=1525))(ADDRESS=(PROTOCOL=tcp)(HOST=myhost2)(PORT=1525))(CONNECT_DATA=(SERVICE_NAME=myserviceDB1)))
 ```
 
@@ -145,7 +146,7 @@ jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=on)(ADDRESS=(PROTOCOL=tcp)(HOST=myh
 1.  Change to the `<jboss-install>/standalone/deployments/jasperserver-pro.war/WEB-INF` directory and open `js-jboss7-ds.xml` in a text editor.
 2.  Edit the `connection-url` tag for the data sources that you want. The following example shows how to set up a connection pool to use PostgreSQL RAC with load balancing with a primary server and three alternate servers.
 
-```
+``` xml
 <datasource jta="false" jndi-name="java:/jdbc/jasperserver" pool-name="jasperserver" enabled="true" use-ccm="false">
    <connection-url>jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=on)(ADDRESS=(PROTOCOL=tcp)(HOST=myhost1)(PORT=1525))(ADDRESS=(PROTOCOL=tcp)(HOST=myhost2)(PORT=1525))(CONNECT_DATA=(SERVICE_NAME=myserviceDB1)))</connection-url>
    <driver>ojdbc8-23.2.0.0.jar</driver>

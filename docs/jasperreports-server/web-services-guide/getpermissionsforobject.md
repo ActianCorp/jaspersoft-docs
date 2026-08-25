@@ -15,7 +15,7 @@ To call `getPermissionsForObject`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSObjectPermission[] objectPermissions = binding.getPermissionsForObject(“repo:/”);</code></pre></td>
+<td><div class="language-text highlight"><pre><code>WSObjectPermission[] objectPermissions = binding.getPermissionsForObject(“repo:/”);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -28,7 +28,7 @@ In the return, the permissioned object can be a user or role:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>String getUri()
+<td><div class="language-text highlight"><pre><code>String getUri()
 Object getPermissionRecipient()
 int getPermissionMask()
 String getRoleName()
@@ -42,7 +42,7 @@ Boolean getExternallyDefined()
 Boolean getEnabled()
 Date getPreviousPasswordChangeTime()
 String getTenantId()
-WSRole[] getRoles()</code></pre></td>
+WSRole[] getRoles()</code></pre></div></td>
 </tr>
 </tbody>
 </table>

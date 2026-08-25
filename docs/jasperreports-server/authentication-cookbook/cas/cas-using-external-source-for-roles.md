@@ -18,13 +18,15 @@ The `casJDBCUserDetailsService` bean is configured with the following properties
 The `externalUserSetupProcessor` or `mtExternalUserSetupProcessor` bean has the following properties:
 
 - `defaultInternalRoles` property: A list of internal roles assigned to the external user by default.
+
 - `organizationRoleMap` property: A list of key/value pairs that map external role names to internal ones. For a commercial JasperReports Server deployment, you need to choose the level at which the role is assigned:
+
   - To map to an internal role at the organization level, append \|\* to the name of the internal role, for example, ROLE_EXTERNAL_USER\|\*. Roles mapped at the organization level do not have administrative privileges.
   - To map to an internal role at the system (null) level, do not modify the internal role name, for example, ROLE_EXTERNAL_ADMINISTRATOR. Roles at the system level are usually reserved for special users like the system administrator and allow access to the repository folders of all organizations.
 
 The following shows how you might configure the `externalUserSetupProcessor` bean:
 
-```
+``` xml
 <bean id="mtExternalUserSetupProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
     externalAuth.processors.MTExternalUserSetupProcessor"  parent="abstractExternalProcessor">
 <property name="organizationRoleMap">

@@ -7,7 +7,7 @@ description: "The Display Options dialog lets you control the content and appear
 
 The **Display Options** dialog lets you control the content and appearance of the information in your view, such as cube options, drill-through options, and sort options, which are described in the following sections.
 
-<img src="assets/images/ja-toolbar-displayoptions.png" alt="ja toolbar displayoptions" />
+![ja toolbar displayoptions](assets/images/ja-toolbar-displayoptions.png)
 
 *Figure 1: Display options Dialog*
 
@@ -55,7 +55,7 @@ The option to sort across a cube's hierarchy is also available in the form of a 
 
 For more information, see the Jaspersoft OLAP Ultimate Guide.
 
-<img src="assets/images/ja-toolbar-sorthierarchy.png" alt="ja toolbar sorthierarchy" />
+![ja toolbar sorthierarchy](assets/images/ja-toolbar-sorthierarchy.png)
 
 *Figure 2: Sorting Across Hierarchy*
 

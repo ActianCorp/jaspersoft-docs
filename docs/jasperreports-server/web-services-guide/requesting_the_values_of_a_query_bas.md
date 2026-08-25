@@ -68,7 +68,7 @@ The following response shows the resource descriptor for the requested input con
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">resourceProperty</span>&gt;</span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>    ...
+<td><div class="language-text highlight"><pre><code>    ...
     &lt;resourceProperty name=&quot;PROP_QUERY_DATA_ROW&quot;&gt;&lt;value&gt;Zacatecas&lt;/value&gt;
       &lt;resourceProperty name=&quot;PROP_QUERY_DATA_ROW_COLUMN&quot;&gt;
         &lt;value&gt;Mexico&lt;/value&gt;&lt;/resourceProperty&gt;
@@ -118,12 +118,12 @@ The following response shows the resource descriptor for the requested input con
       &lt;resourceProperty name=&quot;PROP_REFERENCE_URI&quot;&gt;
         &lt;value&gt;/datasources/JServerJNDIDS&lt;/value&gt;&lt;/resourceProperty&gt;
       &lt;resourceProperty name=&quot;PROP_IS_REFERENCE&quot;&gt;&lt;value&gt;true&lt;/value&gt;
-      &lt;/resourceProperty&gt;</code></pre></td>
+      &lt;/resourceProperty&gt;</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>    &lt;/resourceDescriptor&gt;
+<td><div class="language-text highlight"><pre><code>    &lt;/resourceDescriptor&gt;
   &lt;/resourceDescriptor&gt;
-&lt;/resourceDescriptor&gt;</code></pre></td>
+&lt;/resourceDescriptor&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>

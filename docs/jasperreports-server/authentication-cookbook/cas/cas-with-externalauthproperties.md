@@ -13,7 +13,7 @@ The `externalAuthProperties` bean stores properties specific to Jaspersoft’s e
 
 The following example shows how you might set these beans:
 
-```
+``` xml
 <bean id="externalAuthProperties" class="com.jaspersoft.jasperserver.api.security.
       externalAuth.ExternalAuthProperties">
   <property name="externalLoginUrl" value="#ssoServerLocation#/login"/>

@@ -54,7 +54,7 @@ Contrary to REST conventions, the alert service uses the PUT method to create an
 
 The following is an example of the request body for updating multiple alerts in JSON:
 
-```
+``` json
 {
     "label":"Modified label",
     "isDescriptionModified":true,
@@ -69,7 +69,7 @@ The following is an example of the request body for updating multiple alerts in 
 
 The following is an example of the response body for the list of updated alert IDs in JSON:
 
-```
+``` json
 {"alertId":[5594,5645]}
 ```
 
@@ -114,7 +114,7 @@ The following method pauses currently scheduled alert execution, also called as 
 
 The request and the response have the same format, an array, or list of `alertId` elements:
 
-```
+``` json
 {
     "alertsId": [
         5805
@@ -163,7 +163,7 @@ Use the following method to resume all paused alerts. On the resume of an alert 
 
 The request and the response have the same format, an array, or list of alertId elements:
 
-```
+``` json
 {
     "alertsId": [
         5805
@@ -212,7 +212,7 @@ Use the following method to rerun failed alerts. For each alert to be restarted,
 
 The request and the response have the same format, an array, or list of alertId elements:
 
-```
+``` json
 {
     "alertsId": [
         5805
@@ -247,7 +247,7 @@ Use the DELETE method to remove multiple alerts from the report. The below form 
 
 The following is an example of the request body for deleting an alert in JSON:
 
-```
+``` json
 {
     "alertsId": [
         5330,
@@ -258,7 +258,7 @@ The following is an example of the request body for deleting an alert in JSON:
 
 The following is an example of the response body for deleting an alert in JSON:
 
-```
+``` json
 {
     "alertsId": [
         5330,

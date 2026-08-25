@@ -121,7 +121,7 @@ For example, the following request shows all permission for a resource, similar 
 
 GET http://localhost:8080/jasperserver-pro/rest_v2/permissions/public?resolveAll=true
 
-```
+``` xml
 <permissions>
   <permission>
     <mask>0</mask>

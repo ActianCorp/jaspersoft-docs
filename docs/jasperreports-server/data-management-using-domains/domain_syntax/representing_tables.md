@@ -11,7 +11,7 @@ To represent tables, use the `jdbcTable` element. A table is a child of the `res
 
 The following hierarchy is used for `jdbcTable` elements when representing a table from the data source.
 
-```
+``` xml
 <jdbcTable>
     <fieldList> (1)
         <field> (1...n)

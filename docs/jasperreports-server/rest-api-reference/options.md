@@ -52,7 +52,7 @@ The following method retrieves a list of report options summaries. The summaries
 
 The body of the response contains the labels of the report options, for example:
 
-```
+``` json
 {
   "reportOptionsSummary": [{
     "uri": "/reports/samples/Options",
@@ -134,7 +134,7 @@ http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Ca
 
 With the following request body:
 
-```
+``` json
 {
    "Country_multi_select":["Mexico"],
    "Cascading_state_multi_select":["Guerrero", "Sinaloa"]
@@ -143,7 +143,7 @@ With the following request body:
 
 When successful, the server responds with a JSON object that describes the new report options, for example:
 
-```
+``` json
 {
   "uri":"/reports/samples/MyReportOption",
   "id":"MyReportOption",
@@ -190,7 +190,7 @@ http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Ca
 
 And the following request body:
 
-```
+``` json
 {
    "Country_multi_select":["USA"],
    "Cascading_state_multi_select":["CA", "WA"]

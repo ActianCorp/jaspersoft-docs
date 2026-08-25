@@ -14,28 +14,35 @@ You can populate reports created in Jaspersoft Studio with data from Spotfire. Y
 To create a data adapter for a Spotfire Information Link
 
 1.  In the Repository Explorer, right-click **Data Adapters** and select **Create Data Adapter** to display the **Data Adapter Wizard**.
+
 2.  Enter a name for the data adapter.
+
 3.  Enter the URL to your Spotfire Web Player in this form:
 
-`http://<web-player-host>/SpotfireWeb`
+    `http://<web-player-host>/SpotfireWeb`
 
-where `<web-player-host>` is the IP address or name of the computer hosting the Spotfire Web Player where you access your Information Link.
+    where `<web-player-host>` is the IP address or name of the computer hosting the Spotfire Web Player where you access your Information Link.
 
-1.  Enter your Spotfire username and password.
-2.  Click **Browse** next to the **Resource ID** field to locate and select your Information Link ![jss icon spotfire infolink](../assets/images/jss-icon-spotfire-infolink.png) in the **Spotfire Library**.
+4.  Enter your Spotfire username and password.
 
-|  |
-|----|
-| ![jss inspect sf info links](../assets/images/jss-inspect-sf-info-links.png) |
-| *Figure 1: Spotfire Library displayed in Jaspersoft Studio* |
+5.  Click **Browse** next to the **Resource ID** field to locate and select your Information Link ![jss icon spotfire infolink](../assets/images/jss-icon-spotfire-infolink.png) in the **Spotfire Library**.
 
-You can also create reports against SBDFs ![jss icon spotfire sbdf](../assets/images/jss-icon-spotfire-sbdf.png); to do so, select one from your **Spotfire Library**.
+    |  |
+    |----|
+    | ![jss inspect sf info links](../assets/images/jss-inspect-sf-info-links.png) |
+    | *Figure 1: Spotfire Library displayed in Jaspersoft Studio* |
 
-1.  If you have prompts in your information link and want to set their values using parameters in Jaspersoft Studio, make sure **Use a query (required to use parameters)** is selected.
-2.  Click **OK**.
-3.  Click **Test** to test your connection.
-4.  If the test fails, check your URL, credentials, and resource ID.
-5.  When the test succeeds, click **Finish**.
+    You can also create reports against SBDFs ![jss icon spotfire sbdf](../assets/images/jss-icon-spotfire-sbdf.png); to do so, select one from your **Spotfire Library**.
+
+6.  If you have prompts in your information link and want to set their values using parameters in Jaspersoft Studio, make sure **Use a query (required to use parameters)** is selected.
+
+7.  Click **OK**.
+
+8.  Click **Test** to test your connection.
+
+9.  If the test fails, check your URL, credentials, and resource ID.
+
+10. When the test succeeds, click **Finish**.
 
 !!! note
 
@@ -117,7 +124,7 @@ The **Dataset and Query** dialog shows the prompts for your **Spotfire Informati
 
 For example, for a `Range` prompt of type `DateTime`, you might create two parameters of type `java.sql.Timestamp` that are used to take input for the start and end time:
 
-```
+``` xml
 <parameter name="OrderStartDate" class="java.sql.Timestamp">
     <defaultValueExpression><![CDATA[DATE(2006,10,1)]]></defaultValueExpression>
 </parameter>
@@ -128,7 +135,7 @@ For example, for a `Range` prompt of type `DateTime`, you might create two param
 
 Then you would create a dependent parameter that uses these two parameters to construct a string to pass to Spotfire:
 
-```
+``` xml
 <parameter name="OrderDateRange" class="java.lang.String" isForPrompting="false">
     <defaultValueExpression><![CDATA["" + $P{OrderStartDate} +"^" + $P{OrderEndDate}]]></defaultValueExpression>
 </parameter>
@@ -158,22 +165,23 @@ The parameters would look like this on the **Parameters** tab.
 <!-- -->
 
 1.  If you are not in the **Dataset and Query** dialog, open it by right-clicking on the root node of your report in **Outline** view and selecting **Dataset and Query…** from the context menu.
+
 2.  Select the correct data adapter and select **spotfire** as the language.
 
-Jaspersoft Studio connects to the Spotfire server and returns the list of prompts for the Spotfire Information Link.
+    Jaspersoft Studio connects to the Spotfire server and returns the list of prompts for the Spotfire Information Link.
 
-1.  To map a prompt to a parameter:
+3.  To map a prompt to a parameter:
 
-<!-- -->
+    1.  Double-click a prompt. The GUID for the prompt is displayed, followed by an equals sign (=).
+    2.  Type the name of the parameter that you want to use after the equals sign (=) in the form `$P{ParameterName}`. For example, for the date range prompt above, you would enter `$P{OrderDateRange}`.
 
-1.  Double-click a prompt. The GUID for the prompt is displayed, followed by an equals sign (=).
-2.  Type the name of the parameter that you want to use after the equals sign (=) in the form `$P{ParameterName}`. For example, for the date range prompt above, you would enter `$P{OrderDateRange}`.
+    |  |
+    |----|
+    | ![jss spotfire prompts guids](../assets/images/jss-spotfire-prompts-guids.png) |
+    | *Figure 4: Prompts with GUIDs mapped to parameters* |
 
-|  |
-|----|
-| ![jss spotfire prompts guids](../assets/images/jss-spotfire-prompts-guids.png) |
-| *Figure 4: Prompts with GUIDs mapped to parameters* |
+4.  Repeat these steps for each prompt.
 
-1.  Repeat these steps for each prompt.
-2.  Once you have correctly configured your parameters, click **Read Fields** to read the fields.
-3.  Click **OK** to close the **Dataset and Query** dialog.
+5.  Once you have correctly configured your parameters, click **Read Fields** to read the fields.
+
+6.  Click **OK** to close the **Dataset and Query** dialog.

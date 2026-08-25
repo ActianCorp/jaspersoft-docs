@@ -68,7 +68,7 @@ The following examples of the Helm chart for each pod assume that the Docker ima
 
 - The jrio-client module is optional, and usually only included for demonstration purposes.
 
-```
+``` bash
 ###############################
 ## jrio-client config ##
 ###############################
@@ -82,7 +82,7 @@ jrioClient:
 
 - The jrio-manager pod has memory and CPU settings, as well as options for its JVM (Java Virtual Machine).
 
-```
+``` bash
 #########################
 ## jrio-manager config ##
 #########################
@@ -98,7 +98,7 @@ jrioManager:
 
 - In addition to resource limits and JVM options, the jrio-reporting pod has a timeout setting and a thread setting. You can also specify the `jasperReportsProperties` property and provide a list of JasperReports Library property names and values to be used when generating reports.
 
-```
+``` bash
 ###########################
 ## jrio-reporting config ##
 ###########################
@@ -121,7 +121,7 @@ jrioReporting:
 
 - In addition to resource limits and JVM options, the jrio-export pod also has a timeout setting and a thread setting. You can also specify the `jasperReportsProperties` property and provide a list of JasperReports Library property names and values to be used when exporting reports.
 
-```
+``` bash
 ###########################
 ## jrio-export config ##
 ###########################
@@ -144,7 +144,7 @@ jrioExport:
 
 - The jrio-rest pod has properties for resource limits, JVM options and a timeout. If you are not using the standard 8080 port, specify it here as well.
 
-```
+``` bash
 ######################
 ## jrio-rest config ##
 ######################
@@ -164,7 +164,7 @@ jrioRest:
 
 - The redis pod for the Redis queue only needs the port specified if you are not using the default (6379).
 
-```
+``` bash
 ##################
 ## redis config ##
 ##################
@@ -178,7 +178,7 @@ redis:
 
 - This setting identifies the URL of the JasperReports Server instance hosting the repository that you want to use for reports and data adapters. This value overrides any repository URL defined in the docker images.
 
-```
+``` bash
 ################
 ## JRS config ##
 ################
@@ -193,7 +193,7 @@ Jaspersoft recommended using a static IP address for the JasperReports Server EC
 
 In the following example, the server is running on AWS (Amazon Web Services). You do not need to specify the port if it uses the default port 80.
 
-```
+``` yaml
     url: "http://jrs-instance-lb-002.us-east-1.elb.amazonaws.com/jasperserver-pro"
 ```
 
@@ -201,7 +201,7 @@ In the following example, the server is running on AWS (Amazon Web Services). Yo
 
 If you deploy on Minikube using the Docker VM, you must specify the following JasperReports Library property in the jrioReporting and jrioExport sections.
 
-```
+``` yaml
 jasperReportsProperties:
     net.sf.jasperreports.chrome.argument.no-sandbox=true
 ```

@@ -55,13 +55,15 @@ Administrators should organize file resources into folders in the repository to 
 To add a file resource
 
 1.  Log in as an administrator and select **View \> Repository**.
+
 2.  In the Folders panel, right-click the parent folder's name and select **Add Resource \> File** from the context menu , and select a resource type. In this example, **Font**. The **Add File** dialog appears.
+
 3.  Enter the required information for the file resource. In additions to the name and ID, file resources only require you to enter the path to a file. Click **Browse** to locate a file on your file system.<br>
     The figure below shows the dialog for adding a Font file. All file resources are created by uploading a file in this way.
 
-![js AddFile Font](../assets/images/js-AddFile-Font.png)
+    ![js AddFile Font](../assets/images/js-AddFile-Font.png)
 
-*Figure 1: Adding a File Resource*
+    *Figure 1: Adding a File Resource*
 
 4.  When done, click **Submit**. The new file resource appears in the selected folder in the Repository panel.
 
@@ -72,14 +74,17 @@ The following example shows how to edit a file resource.
 To edit a file resource
 
 1.  Log on as an administrator.
+
 2.  In the repository, browse or search for the resource.
+
 3.  Right-click the resource and select **Edit** from the context menu. In this example, we edit the font resource created in Creating a File Resource.
 
-![js EditFile Font](../assets/images/js-EditFile-Font.png)
+    ![js EditFile Font](../assets/images/js-EditFile-Font.png)
 
-*Figure 2: Editing a File Resource*
+    *Figure 2: Editing a File Resource*
 
 4.  Use the **Edit** dialog to view or modify the resource definition and its values. In the figure above, you can see how the Description field was changed. You can also change the contents of the file resource by specifying another file to upload. The **Path to File** field is not required unless you want to reload the file from disk.
+
 5.  Click **Submit** to save any changes.
 
 ## Uploading an SSH Private Key File to the Repository

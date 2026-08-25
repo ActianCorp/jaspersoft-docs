@@ -24,37 +24,39 @@ To create a Cassandra adapter
 
 1.  Create the connection globally or locally:
 
-- To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
-- To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the DataAdapter File dialog, and then click **Next**.
+    - To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
+    - To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the DataAdapter File dialog, and then click **Next**.
 
-The Data Adapter wizard appears (see [Data Adapter Wizard](data-adapters-creating.md)).
+    The Data Adapter wizard appears (see [Data Adapter Wizard](data-adapters-creating.md)).
 
-1.  From the list, select **Cassandra Connection** to open the Data Adapter dialog.
+2.  From the list, select **Cassandra Connection** to open the Data Adapter dialog.
 
-|  |
-|----|
-| ![jss data adapter cassandra native connection](../assets/images/jss-data-adapter-cassandra-native-connection.png) |
-| Configuring a Cassandra Native Connection |
+    |  |
+    |----|
+    | ![jss data adapter cassandra native connection](../assets/images/jss-data-adapter-cassandra-native-connection.png) |
+    | Configuring a Cassandra Native Connection |
 
-1.  Fill in the required fields:
+3.  Fill in the required fields:
 
-- Name: The name that appears on the list of available data adapters when you create a report.
-- Port: Use port 9042 with the Cassandra data source. Cassandra's default port of 9160 is for the Thrift client that is commonly used with Cassandra. To use the Cassandra Query Language (CQL) with your Cassandra data source, you may need to configure your Cassandra instance as follows:
+    - Name: The name that appears on the list of available data adapters when you create a report.
+    - Port: Use port 9042 with the Cassandra data source. Cassandra's default port of 9160 is for the Thrift client that is commonly used with Cassandra. To use the Cassandra Query Language (CQL) with your Cassandra data source, you may need to configure your Cassandra instance as follows:
 
-`start_native_transport: true`
+    `start_native_transport: true`
 
-`native_transport_port: 9042`
+    `native_transport_port: 9042`
 
-- Keyspace: The keyspace of your Cassandra instance.
+    - Keyspace: The keyspace of your Cassandra instance.
 
-1.  If you have configured your Cassandra source to be password protected, specify a valid username and password. Due to compatibility issues, Cassandra authentication is supported only when you use Cassandra 1.12.18 and above. If the password is empty, it is better if you specify that it be saved. You can choose to save the password in one of two ways:
+4.  If you have configured your Cassandra source to be password protected, specify a valid username and password. Due to compatibility issues, Cassandra authentication is supported only when you use Cassandra 1.12.18 and above. If the password is empty, it is better if you specify that it be saved. You can choose to save the password in one of two ways:
 
-- Clear text: This is not secure, but can sometimes be convenient when working in a developer or staging environment.
-- Eclipse secure storage: This is the correct option for security, but can be difficult to work with when testing and saving adapters. In addition, it can make it difficult to share adapters with other developers or deploy data adapters to JasperReports Server.
+    - Clear text: This is not secure, but can sometimes be convenient when working in a developer or staging environment.
+    - Eclipse secure storage: This is the correct option for security, but can be difficult to work with when testing and saving adapters. In addition, it can make it difficult to share adapters with other developers or deploy data adapters to JasperReports Server.
 
-1.  Click **Test** to check the values you entered. Make sure that the port is set to 9042, because the connection test also works with the wrong port (9160). If everything's okay, you will see a success message.
-2.  Click **OK** to exit the message.
-3.  Click **Finish** to create the connection.
+5.  Click **Test** to check the values you entered. Make sure that the port is set to 9042, because the connection test also works with the wrong port (9160). If everything's okay, you will see a success message.
+
+6.  Click **OK** to exit the message.
+
+7.  Click **Finish** to create the connection.
 
 !!! note
 

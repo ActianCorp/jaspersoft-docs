@@ -68,32 +68,52 @@ A stack is a collection of AWS resources that you create and delete as a single 
 To create a JasperReports IO instance
 
 1.  Open the Launching Jaspersoft for AWS web page.
+
 2.  Click the **Launch Jaspersoft IO for AWS** tab.
+
 3.  Click the URL for your region. The **Select Template** page appears. By default, AWS provides a stack template source URL. Do not change this.
+
 4.  Click **Next**. The **Specify Details** page appears.
+
 5.  In the **Stack Name** field, give your CloudFormation stack a unique name.
+
 6.  Select an **InstanceType** from the dropdown. See Supported Instance Types for more information.
+
 7.  In the **KeyName** field, enter an existing key pair name.
+
 8.  In the **RemoveSamples** field, select whether to remove the sample web application and reports from your JasperReports IO instance's repository.
+
 9.  Choose the **VpcId** from your account.
+
 10. Choose the **SubnetId** from the VPC.
+
 11. Choose whether to create a publicly accessible IP address for the instance using **EnablePublicIp**. Default is set to True. Select **False** to refuse.
+
 12. In the **SecuredIp** field, enter the IP address and mask for SSH access.
+
 13. Choose whether to enable CloudWatch logs for your instance by selecting Yes for **CloudWatchIntegration**.
+
 14. In the **S3BucketName** field, enter the name of the S3 bucket where you want to store your JasperReports IO reports and customizations. The S3 bucket must be in the same region as your JasperReports IO instance. A new S3 bucket is created if you leave the field empty.
 
-!!! note
+    !!! note
 
-    If you enter an existing S3 bucket's name incorrectly, you experience errors when using JasperReports IO because the S3 bucket does not exist. See Correcting an Invalid S3 Bucket for instructions on fixing the issue.
+        If you enter an existing S3 bucket's name incorrectly, you experience errors when using JasperReports IO because the S3 bucket does not exist. See Correcting an Invalid S3 Bucket for instructions on fixing the issue.
 
-1.  Click **Next**. The **Options** page appears.
-2.  Add any tags that you want to use to simplify the administration of your infrastructure. A tag consists of a key/value pair and will flow to resources inside your stack. You can add up to 10 unique keys to each instance, along with an optional value for each key.
-3.  If you want all operations for the stack limited to a certain role, use the **Permissions** section to choose the role.
-4.  In the **Rollback Triggers** section, set alarms you want CloudFormation to use to monitor the creation of the stack. If any alarms are triggered, CloudFormation stops of the creation of the stack and rolls it back.
-5.  Expand the **Advanced** section and set your notification, timeout, and other options.
-6.  Click **Next**. The **Review** page appears. Double-check your template, parameter, and option information.
-7.  Click the acknowledgment checkbox, then click **Create**. You see your stack name listed in a table. While it is being created the Status column displays `CREATE_IN_PROGRESS`. After a few minutes, the status should change to `CREATE_COMPLETE`. If the status changes to `ROLLBACK` instead of `CREATE_COMPLETE`, you may need to accept the Terms of Use. Check the Events tab for more information.
-8.  Select your complete instance and click the **Outputs** tab. Here you find the name of the S3 bucket for your repository, the link for the CloudWatch log, and the Getting Started URL for logging into the JasperReports IO web application if you enabled a publicly accessible IP address.
+15. Click **Next**. The **Options** page appears.
+
+16. Add any tags that you want to use to simplify the administration of your infrastructure. A tag consists of a key/value pair and will flow to resources inside your stack. You can add up to 10 unique keys to each instance, along with an optional value for each key.
+
+17. If you want all operations for the stack limited to a certain role, use the **Permissions** section to choose the role.
+
+18. In the **Rollback Triggers** section, set alarms you want CloudFormation to use to monitor the creation of the stack. If any alarms are triggered, CloudFormation stops of the creation of the stack and rolls it back.
+
+19. Expand the **Advanced** section and set your notification, timeout, and other options.
+
+20. Click **Next**. The **Review** page appears. Double-check your template, parameter, and option information.
+
+21. Click the acknowledgment checkbox, then click **Create**. You see your stack name listed in a table. While it is being created the Status column displays `CREATE_IN_PROGRESS`. After a few minutes, the status should change to `CREATE_COMPLETE`. If the status changes to `ROLLBACK` instead of `CREATE_COMPLETE`, you may need to accept the Terms of Use. Check the Events tab for more information.
+
+22. Select your complete instance and click the **Outputs** tab. Here you find the name of the S3 bucket for your repository, the link for the CloudWatch log, and the Getting Started URL for logging into the JasperReports IO web application if you enabled a publicly accessible IP address.
 
 ## Creating a Repository Folder in Your S3 Bucket
 
@@ -117,41 +137,57 @@ If you enter the incorrect name for an existing S3 bucket when creating your ins
 To correct the S3 bucket
 
 1.  On the AWS Management Console home page, click **EC2**.
+
 2.  Click **Instances** in the sidebar.
+
 3.  Click the instance with the invalid S3 bucket in the table.
+
 4.  Click **Actions \> Instance State \> Stop** to stop the instance.
+
 5.  Click **Actions \> Instance Settings \> View/Change User Data**.
+
 6.  Locate the `s3.repository.bucket` and replace the invalid S3 bucket name with the correct one.
+
 7.  Click **Save**.
+
 8.  Return to the AWS Management Console home page and click **IAM**.
+
 9.  Click **Roles** in the sidebar.
+
 10. Click the name of the IAM role created for your JasperReports IO instance in the table.
+
 11. On the **Permissions** tab, expand the policy and click **S3** under Service. The tab displays a list of S3 actions.
+
 12. Click **Edit Policy**.
+
 13. Click the **JSON** tab.
+
 14. Locate `Resource` and replace the invalid S3 bucket name with the correct one. For example:
 
-```
-{
-            "Statement": [
-            {
-            "Action": [
-            "s3:Get*",
-            "s3:List*"
-            ],
-            "Resource": [
-            "arn:aws:s3:::jrio-jrios3bucket-12",
-            "arn:aws:s3:::jrio-jrios3bucket-12/*"
-            ],
-            "Effect": "Allow"
+    ``` json
+    {
+                "Statement": [
+                {
+                "Action": [
+                "s3:Get*",
+                "s3:List*"
+                ],
+                "Resource": [
+                "arn:aws:s3:::jrio-jrios3bucket-12",
+                "arn:aws:s3:::jrio-jrios3bucket-12/*"
+                ],
+                "Effect": "Allow"
+                }
+                ]
             }
-            ]
-        }
-```
+    ```
 
-1.  Click **Review the policy**.<br>
+15. Click **Review the policy**.<br>
     AWS displays the S3 service that you are updating. You can click **S3** to review the service before committing your changes.
-2.  Click **Save changes**.<br>
+
+16. Click **Save changes**.<br>
     AWS updates the IAM role with the S3 bucket changes.
-3.  Return to the AWS Management Console home page and click **IAM**.
-4.  Restart your instance.
+
+17. Return to the AWS Management Console home page and click **IAM**.
+
+18. Restart your instance.

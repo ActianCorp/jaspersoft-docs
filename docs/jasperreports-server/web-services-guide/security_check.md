@@ -176,7 +176,7 @@ For example, if you have configured the server to use CAS as your SSO provider, 
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>GET http://localhost:8080/jasperserver-pro/j_spring_security_check?ticket=ST-40-CZeUUnGPxEqgScNbxh9l-sso-cas.eng.jaspersoft.com</code></pre></td>
+<td><div class="language-text highlight"><pre><code>GET http://localhost:8080/jasperserver-pro/j_spring_security_check?ticket=ST-40-CZeUUnGPxEqgScNbxh9l-sso-cas.eng.jaspersoft.com</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -240,7 +240,7 @@ For example, if you have configured the server to use pre-authentication, you ca
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>GET http://localhost:8080/jasperserver-pro?pp=u%3DSteve%7Cr%3DExt_User%7Co%3Dorganization_1%7Cpa1%3DUSA%7Cpa2%3D1</code></pre></td>
+<td><div class="language-text highlight"><pre><code>GET http://localhost:8080/jasperserver-pro?pp=u%3DSteve%7Cr%3DExt_User%7Co%3Dorganization_1%7Cpa1%3DUSA%7Cpa2%3D1</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -14,23 +14,24 @@ To get started, download the template file.
 The Domain Designer lets you download a template with all keys currently defined in the Domain.
 
 1.  Open the Domain for editing and navigate to the **Locales** tab.
+
 2.  Click **download the template**.
 
-![js DomainDesigner LocalesTab](../assets/images/js-DomainDesigner-LocalesTab.png)
+    ![js DomainDesigner LocalesTab](../assets/images/js-DomainDesigner-LocalesTab.png)
 
-*Figure 1: Template Download Link on the Locales Tab*
+    *Figure 1: Template Download Link on the Locales Tab*
 
-1.  In the **File Options** dialog box, select which keys to export:
+3.  In the **File Options** dialog box, select which keys to export:
 
-- **Generate missing label keys**: Automatically generates label key names for any elements where **Label Key** is not defined.
-- **Generate missing description keys**: Automatically generates description key names for any elements where **Description Key** is not defined.
-- When both options are deselected, keys are not generated automatically. Only keys explicitly defined as **Label Key** or **Descriptions Key** are exported.
+    - **Generate missing label keys**: Automatically generates label key names for any elements where **Label Key** is not defined.
+    - **Generate missing description keys**: Automatically generates description key names for any elements where **Description Key** is not defined.
+    - When both options are deselected, keys are not generated automatically. Only keys explicitly defined as **Label Key** or **Descriptions Key** are exported.
 
-![js DomainDesigner DownloadTemplate options](../assets/images/js-DomainDesigner-DownloadTemplate-options.png)
+    ![js DomainDesigner DownloadTemplate options](../assets/images/js-DomainDesigner-DownloadTemplate-options.png)
 
-*Figure 2: File Options for Downloading a .properties Template*
+    *Figure 2: File Options for Downloading a .properties Template*
 
-1.  Click **OK**.
+4.  Click **OK**.
 
 The bundle is exported with a generated file name such as "domain `name.properties`". You can change the name to match the name you want to use for your properties files.
 

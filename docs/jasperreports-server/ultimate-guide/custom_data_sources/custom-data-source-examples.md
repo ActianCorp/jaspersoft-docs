@@ -53,22 +53,26 @@ The `<js‑install>/samples/customDataSource` and `<js‑install>/samples/custom
 To install the samples in your JasperReports Server web application
 
 1.  At the command line, change directories to the custom data source sample directory (`<js‑install>/samples/customDataSource`).
+
 2.  Edit `build.xml` and set the `webAppDir` property to the root of your JasperReports Server web application.
+
 3.  Run the Ant command (as described in Prerequisites) with no arguments. This executes the default target, which is named `deploy`. The `deploy` target initiates these actions:
 
-- Compiles the Java source files under the src directory.
+    - Compiles the Java source files under the src directory.
 
-- Deploys the compiled Java class files to the web application.
+    - Deploys the compiled Java class files to the web application.
 
-- Deploys files under the webapp directory to the web application.
+    - Deploys files under the webapp directory to the web application.
 
-!!! note
+    !!! note
 
-    See [Table 1-1, “Files Used by a Custom Data Source Implementation,” on page 1](custom-data-source-creation.md) for the final locations of the files in JasperReports Server
+        See [Table 1-1, “Files Used by a Custom Data Source Implementation,” on page 1](custom-data-source-creation.md) for the final locations of the files in JasperReports Server
 
-1.  Repeat this procedure for the sample in `<js‑install>/samples/customDataSource-pro`.
-2.  For the webscraper report example, you must register its query executer factory as described in Webscraper Custom Data Source.
-3.  Restart the application server.
+4.  Repeat this procedure for the sample in `<js‑install>/samples/customDataSource-pro`.
+
+5.  For the webscraper report example, you must register its query executer factory as described in Webscraper Custom Data Source.
+
+6.  Restart the application server.
 
 The example custom data source types are now available from the New Data Source page in JasperReports Server.
 
@@ -131,16 +135,19 @@ The data source takes two parameters: the URL of the web page and the XPath that
 In order to use the webscraper data source, you must first register the webscraper query executer factory. One way to do this is as follows:
 
 1.  Install the samples using ant as described in Installing the Custom Data Source Examples.
+
 2.  Open the file `.../WEB-INF/classes/jasperreports.properties` for editing.
+
 3.  Add the following at the end of the file:
 
-```
-# registering query executer for webscraperQEtest.jrxml example
-net.sf.jasperreports.query.executer.factory.webscraper=example.cds.WebScraperQueryExecuterFactory
-```
+    ``` bash
+    # registering query executer for webscraperQEtest.jrxml example
+    net.sf.jasperreports.query.executer.factory.webscraper=example.cds.WebScraperQueryExecuterFactory
+    ```
 
-1.  Save the file.
-2.  Restart your application server.
+4.  Save the file.
+
+5.  Restart your application server.
 
 For more information about registering query executors, see the Report Query section in the *JasperReports Library Ultimate Guide*.
 
@@ -163,24 +170,23 @@ The sample Hibernate test report contains an HQL query on the JasperReports Serv
 To run the Hibernate data source example
 
 1.  Install the samples using ant as described in Installing the Custom Data Source Examples.
+
 2.  Create a new Hibernate data source:
 
-<!-- -->
+    1.  Create a data source and select **Hibernate** for the type.
+    2.  Enter `sessionFactory` for the name of the `SessionFactory` bean – this is the id of the repository's Hibernate `SessionFactory`.
+    3.  Save the data source and give it a name when prompted.
 
-1.  Create a data source and select **Hibernate** for the type.
-2.  Enter `sessionFactory` for the name of the `SessionFactory` bean – this is the id of the repository's Hibernate `SessionFactory`.
-3.  Save the data source and give it a name when prompted.
-4.  Upload and configure the sample report:
+3.  Upload and configure the sample report:
 
-<!-- -->
+    1.  Navigate to the repository location where you want to save the report.
+    2.  Right-click and select **Add Resource \> JasperReport**. The **Add JasperReport** page is displayed.
+    3.  On the **Set Up** page, enter a name for the report unit.
+    4.  Select **Upload a Local File**, click **Browse**, select `<js‑install>/samples/customDataSource/reports/hqlTest.jrxml`, and click **OK**.
+    5.  On the **Data Source** page, click **Select data source from repository** and browse to the data source created in the previous step.
+    6.  Click **Submit** to save the report.
 
-1.  Navigate to the repository location where you want to save the report.
-2.  Right-click and select **Add Resource \> JasperReport**. The **Add JasperReport** page is displayed.
-3.  On the **Set Up** page, enter a name for the report unit.
-4.  Select **Upload a Local File**, click **Browse**, select `<js‑install>/samples/customDataSource/reports/hqlTest.jrxml`, and click **OK**.
-5.  On the **Data Source** page, click **Select data source from repository** and browse to the data source created in the previous step.
-6.  Click **Submit** to save the report.
-7.  Run the new report, and it should show a list of resources in the repository.
+4.  Run the new report, and it should show a list of resources in the repository.
 
 ## Custom Data Source Pro
 

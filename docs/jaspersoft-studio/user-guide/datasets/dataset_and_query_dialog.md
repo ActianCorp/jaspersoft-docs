@@ -77,13 +77,21 @@ The **Data Adapter** tab is visible when the selected data adapter supports addi
 This tab lets you configure the following information for the data adapter:
 
 - **Data URL**: Base URI for the request.
+
 - **Username** and **Password**: Credentials for web services that require authentication.
+
 - **Request method**: The method to use for the data adapter. Supported methods are GET, POST, and PUT.
+
 - **URL Parameters** tab: Parameters to append to the URI.
+
 - **POST/PUT Parameters** tab: Parameters to send in the request body.
+
 - **POST/PUT Body** tab: Data to send in the request body.
+
 - **Headers** tab: Parameters to send in the HTTP header.
+
 - The following additional information is shown:
+
   - ![jss icon dataset query data adapter mapped to parameter](../assets/images/jss-icon-dataset-query-data-adapter-mapped-to-parameter.png): The URL parameter in the data adapter has been associated with an HTTP parameter in the report. The name of the report parameter is shown to the right.
   - ![jss icon dataset query parameter default](../assets/images/jss-icon-dataset-query-parameter-default.png): The URL parameter in the data adapter has a default value.
 

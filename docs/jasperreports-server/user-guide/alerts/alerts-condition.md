@@ -8,7 +8,9 @@ description: "On the Condition tab, you can change the following settings:"
 On the **Condition** tab, you can change the following settings:
 
 - **Alert name** - The name of your alert. You can save the duplicate alert name without any error.
+
 - **Condition** - You can choose one of the following conditions for an alert:
+
   - Equals
   - Not equal to
   - Less than

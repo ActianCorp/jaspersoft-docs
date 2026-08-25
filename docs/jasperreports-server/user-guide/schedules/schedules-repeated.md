@@ -48,12 +48,16 @@ In Figure 3‑21 you see an example of calendar recurrence settings.
 Calendar recurrence options are:
 
 - **Months** – The months during which the job runs.
+
   - Every Month
   - Selected Months
+
 - **Days** – The days when the job runs.
+
   - Every Day
   - Selected Days
   - Dates in Months – Enter dates or date ranges separated by commas, for example: `1, 15`.
+
 - **Times** – The time of day in minutes and hours when the job should run. The hours use the 24-hour format.
 
 You can also enter multiple minutes or hours, and ranges, separated by commas. For example, entering `0,``15,``30,``45` for the minutes, and `9-17` for the hours, runs the report every 15 minutes from 9:00 a.m. to 5:45 p.m. Enter an asterisk (`*`) to run the job every minute or every hour.

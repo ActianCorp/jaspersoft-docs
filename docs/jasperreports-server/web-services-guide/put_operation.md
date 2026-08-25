@@ -31,8 +31,8 @@ The following XML code creates a folder called `test` inside the /reports/sample
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">resourceProperty</span>&gt;</span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>  &lt;/resourceDescriptor&gt;
-&lt;/request&gt;</code></pre></td>
+<td><div class="language-text highlight"><pre><code>  &lt;/resourceDescriptor&gt;
+&lt;/request&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -47,20 +47,20 @@ The following Java sample creates a new image resource in the repository using t
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>ResourceDescriptor rdis = new ResourceDescriptor();
+<td><div class="language-text highlight"><pre><code>ResourceDescriptor rdis = new ResourceDescriptor();
 rdis.setResourceType(ResourceDescriptor.TYPE_IMAGE);
 rdis.setName(&quot;testImageName&quot;);
 rdis.setLabel(&quot;TestImageLabel&quot;);
 rdis.setDescription(&quot;Test Image Description&quot;);
-rdis.setParentFolder(&quot;/images&quot;);</code></pre></td>
+rdis.setParentFolder(&quot;/images&quot;);</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>rdis.setUriString(rdis.getParentFolder() + &quot;/&quot; + rdis.getName());
+<td><div class="language-text highlight"><pre><code>rdis.setUriString(rdis.getParentFolder() + &quot;/&quot; + rdis.getName());
 rdis.setWsType(ResourceDescriptor.TYPE_IMAGE);
 File img = new File(&quot;/some/file/logo.jpg&quot;));
 rdis.setHasData(true);
 rdis.setIsNew(true);
-ResourceDescriptor result = wsclient.addOrModifyResource(rdis, img);</code></pre></td>
+ResourceDescriptor result = wsclient.addOrModifyResource(rdis, img);</code></pre></div></td>
 </tr>
 </tbody>
 </table>

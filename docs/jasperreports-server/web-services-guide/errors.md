@@ -21,7 +21,7 @@ The following shows an Axis connection refused error:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>AxisFault
+<td><div class="language-text highlight"><pre><code>AxisFault
 faultCode: {http://schemas.xmlsoap.org/soap/envelope/}Server.userException
 faultSubcode:
 faultString: java.net.ConnectException: Connection refused: connect
@@ -33,7 +33,7 @@ at java.net.PlainSocketImpl.socketConnect(Native Method)
 at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
 at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
 at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
-at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)</code></pre></td>
+at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -46,17 +46,17 @@ The following shows an Axis user name/password error:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>AxisFault
+<td><div class="language-text highlight"><pre><code>AxisFault
 faultCode: {http://xml.apache.org/axis/}HTTP
 faultSubcode:
 faultString: (401)Bad credentials
 faultActor:
 faultNode:
 faultDetail:
-:return code: 401</code></pre></td>
+:return code: 401</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;Apache Tomcat/5.5.16 - Error re
+<td><div class="language-text highlight"><pre><code>&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;Apache Tomcat/5.5.16 - Error re
 port&amp;lt;/title&amp;gt;&amp;lt;style&amp;gt;&amp;lt;!--H1 {font-family:Tahoma,Arial,sans-serif;co
 lor:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial
 ,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-famil
@@ -72,16 +72,16 @@ pe&amp;lt;/b&amp;gt; Status report&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;b&a
 u&amp;gt;This request requires HTTP authentication (Bad credentials).&amp;lt;/u&amp;gt;&amp;lt;/
 p&amp;gt;&amp;lt;HR size=&amp;quot;1&amp;quot; noshade=&amp;quot;noshade&amp;quot;&amp;gt;&amp;lt;h3&amp;gt;Apache T
 omcat/5.5.16&amp;lt;/h3&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
-{http://xml.apache.org/axis/}HttpErrorCode:401</code></pre></td>
+{http://xml.apache.org/axis/}HttpErrorCode:401</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>(401)Bad credentials
+<td><div class="language-text highlight"><pre><code>(401)Bad credentials
 at org.apache.axis.transport.http.HTTPSender.readFromSocket(HTTPSender.java:744)
 at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:144)
 at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
 at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
 at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
-at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)</code></pre></td>
+at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)</code></pre></div></td>
 </tr>
 </tbody>
 </table>

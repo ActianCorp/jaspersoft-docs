@@ -75,7 +75,7 @@ To run a report asynchronously, the reportExecutions service provides a method t
 
 The following example shows the structure of the `ReportExecutionRequest`:
 
-```
+``` xml
 <reportExecutionRequest>
     <reportUnitUri>/supermart/details/CustomerDetailReport</reportUnitUri>
     <async>true</async>
@@ -226,7 +226,7 @@ The following descriptor shows that the report is still running (\<status\>execu
 
 The following descriptor shows that the report was placed in the report execution queue ("status":"queued"):
 
-```
+``` xml
 <reportExecution>
     <currentPage>1</currentPage>
     <exports>
@@ -408,7 +408,7 @@ Once the report is ready, your client must determine the names of the files to d
 
 The `reportExecution` descriptor now contains the list of exports for the report, including the report output itself and any other file attachments. File attachments such as images and JavaScript occur only with HTML export.
 
-```
+``` json
 {
     "status": "ready",
     "totalPages": 47,
@@ -616,13 +616,13 @@ Some reports have additional meta-information associated with them, such as book
 
 Example of a request URL:
 
-```
+``` text
 https://localhost:8080/jasperserver[-pro]/rest_v2/reportExecutions/70b9b169-1c0e-431c-b8bc-a6f49328bc75/info
 ```
 
 JSON:
 
-```
+``` json
 {
   "bookmarks": {
     "id": "bkmrk_1058907116",
@@ -733,7 +733,7 @@ After running a report and downloading its content in a given format, you can re
 
 The following example shows the `exportExecution` descriptor that the server sends in response to the export request:
 
-```
+``` json
 {
     "id":"6b7ce8fa-f1d7-4d53-9af6-4569edb05d1b",
     "status":"queued"
@@ -986,7 +986,7 @@ To search for running or finished reports, use the search arguments with the fol
 
 The response contains a list of summary `reportExecution` descriptors, for example in XML:
 
-```
+``` xml
 <reportExecutions>
     <reportExecution>
         <reportURI>repo:/supermart/details/CustomerDetailReport</reportURI>

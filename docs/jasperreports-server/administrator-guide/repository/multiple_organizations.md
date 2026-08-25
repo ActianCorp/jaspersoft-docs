@@ -56,7 +56,7 @@ Also, because these references are not transformed, you must observe the followi
 
 !!! note
 
-    To test the absolute references, you should log in as an admin of the organization using the references. See <a href="permissions.md">Testing User Permissions</a>.
+    To test the absolute references, you should log in as an admin of the organization using the references. See [Testing User Permissions](permissions.md).
 
 ## Best Practices
 

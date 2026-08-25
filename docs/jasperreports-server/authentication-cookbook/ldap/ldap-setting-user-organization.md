@@ -41,7 +41,7 @@ Specify the following information in the `ldapExternalTenantProcessor` bean to m
 
 The following example shows the syntax of the `ldapExternalTenantProcessor` bean and its properties:
 
-```
+``` xml
 <bean id="ldapExternalTenantProcessor" class="com.jaspersoft.jasperserver.multipleTenancy.security.
       externalAuth.processors.ldap.LdapExternalTenantProcessor" parent="abstractExternalProcessor">
   <property name="ldapContextSource" ref="ldapContextSource" />
@@ -78,72 +78,75 @@ In a multi-organization deployment, JasperReports Server creates a `jasperadmin`
 To set up admin users
 
 1.  Open your sample-applicationContext-xxx-externalAuth.xml file in a text editor.
+
 2.  Locate the `externalTenantSetupUsers` property in the `ldapExternalTenantProcessor``externalTenantSetupProcessor` bean.
+
 3.  The sample contains a bean of class `ExternalTenantSetupUser` already configured for `jasperadmin`.
 
-```
-<property name="externalTenantSetupUsers">
-  <list>
+    ``` xml
+    <property name="externalTenantSetupUsers">
+      <list>
+        <bean class="com.jaspersoft.jasperserver.multipleTenancy.security.
+                     externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
+          <property name="username" value="${new.tenant.user.name.1}"/>
+          <property name="fullName" value="${new.tenant.user.fullname.1}"/>
+          <property name="password" value="${new.tenant.user.password.1}"/>
+          <property name="emailAddress" value="${new.tenant.user.email.1}"/>
+          <property name="roleSet">
+            <set>
+              <value>ROLE_ADMINISTRATOR</value>
+              <value>ROLE_USER</value>
+            </set>
+          </property>
+        </bean>
+      </list>
+    </property>
+    ```
+
+4.  To create additional admin users for each external organization, create a bean of class `ExternalTenantSetupUser` for each admin user you want.
+
+    ``` xml
     <bean class="com.jaspersoft.jasperserver.multipleTenancy.security.
-                 externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
-      <property name="username" value="${new.tenant.user.name.1}"/>
-      <property name="fullName" value="${new.tenant.user.fullname.1}"/>
-      <property name="password" value="${new.tenant.user.password.1}"/>
-      <property name="emailAddress" value="${new.tenant.user.email.1}"/>
-      <property name="roleSet">
-        <set>
-          <value>ROLE_ADMINISTRATOR</value>
-          <value>ROLE_USER</value>
-        </set>
-      </property>
-    </bean>
-  </list>
-</property>
-```
+                     externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
+          <property name="username" value="${new.tenant.user.name.2}"/>
+          <property name="fullName" value="${new.tenant.user.fullname.2}"/>
+          <property name="password" value="${new.tenant.user.password.2}"/>
+          <property name="emailAddress" value="${new.tenant.user.email.2}"/>
+     <property name="roleSet">
+            <set>
+              <value>ROLE_ADMINISTRATOR</value>
+              <value>ROLE_USER</value>
+            </set>
+          </property>
+        </bean>
+    ```
 
-1.  To create additional admin users for each external organization, create a bean of class `ExternalTenantSetupUser` for each admin user you want.
+5.  The \${...} syntax above references values configured in the following file:
 
-```
-<bean class="com.jaspersoft.jasperserver.multipleTenancy.security.
-                 externalAuth.processors.MTAbstractExternalProcessor.ExternalTenantSetupUser">
-      <property name="username" value="${new.tenant.user.name.2}"/>
-      <property name="fullName" value="${new.tenant.user.fullname.2}"/>
-      <property name="password" value="${new.tenant.user.password.2}"/>
-      <property name="emailAddress" value="${new.tenant.user.email.2}"/>
- <property name="roleSet">
-        <set>
-          <value>ROLE_ADMINISTRATOR</value>
-          <value>ROLE_USER</value>
-        </set>
-      </property>
-    </bean>
-```
+    \<js-install\>\buildomatic\conf_source\iePro\js.config.properties file.
 
-1.  The \${...} syntax above references values configured in the following file:
+    To set these values, open \<js-install\>\buildomatic\conf_source\iePro\js.config.properties and edit the entries there.
 
-\<js-install\>\buildomatic\conf_source\iePro\js.config.properties file.
+    ``` properties
+    new.tenant.user.name.1=jasperadmin
+    new.tenant.user.fullname.1=jasperadmin
+    new.tenant.user.password.1=mynewpassword
+    new.tenant.user.email.1=
+    new.tenant.user.name.2=anotheradmin
+    new.tenant.user.fullname.2=Another Admin
+    new.tenant.user.password.2=anotherpassword
+    new.tenant.user.email.2=
+    ```
 
-To set these values, open \<js-install\>\buildomatic\conf_source\iePro\js.config.properties and edit the entries there.
+    !!! note
 
-```
-new.tenant.user.name.1=jasperadmin
-new.tenant.user.fullname.1=jasperadmin
-new.tenant.user.password.1=mynewpassword
-new.tenant.user.email.1=
-new.tenant.user.name.2=anotheradmin
-new.tenant.user.fullname.2=Another Admin
-new.tenant.user.password.2=anotherpassword
-new.tenant.user.email.2=
-```
+        The property names, for example, `new.tenant.user.name.1`, are arbitrary. You can use any name for each property as long as the name in the applicationContext-externalAuth-xxx.xml file matches the name in the js.config.properties file.
 
-!!! note
+6.  If you want to obfuscate the default passwords in the js.config.properties files, encrypt them as described in the JasperReports Server Security Guide. Obfuscation must be implemented before you install the server.
 
-    The property names, for example, `new.tenant.user.name.1`, are arbitrary. You can use any name for each property as long as the name in the applicationContext-externalAuth-xxx.xml file matches the name in the js.config.properties file.
+7.  If you don't want to obfuscate default passwords, you can eliminate the reference to js.config.properties and instead configure the values directly in the `externalTenantSetupUsers` property in the applicationContext-externalAuth-xxx.xml file. For example:
 
-1.  If you want to obfuscate the default passwords in the js.config.properties files, encrypt them as described in the JasperReports Server Security Guide. Obfuscation must be implemented before you install the server.
-2.  If you don't want to obfuscate default passwords, you can eliminate the reference to js.config.properties and instead configure the values directly in the `externalTenantSetupUsers` property in the applicationContext-externalAuth-xxx.xml file. For example:
-
-```
+``` xml
       <property name="username" value="anotheradmin"/>
       <property name="fullName" value="Another Admin"/>
       <property name="password" value="anotherpassword"/>
@@ -156,7 +159,7 @@ You have the option to use the `organizationMap` property in the `externalTenant
 
 For example, the following would map users in External_Org_1 in the external authority to JRS_Org_1 in JasperReports Server and users in External_Org_2 in the external authority to JRS_Org_2 in JasperReports Server:
 
-```
+``` xml
     <property name="organizationMap">
         <map>
             <entry key="External_Org_1" value="JRS_Org_1" />
@@ -190,7 +193,7 @@ The following steps show how to map all external users to a single organization 
 
 The following example places all external users in the default organization, `organization_1`.
 
-```
+``` xml
 <bean id="ldapExternalTenantProcessor"
         class="com.jaspersoft.jasperserver.multipleTenancy.security.
               externalAuth.processors.ldap.LdapExternalTenantProcessor"

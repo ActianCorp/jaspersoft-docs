@@ -96,10 +96,10 @@ The following Java sample illustrates `wsclient` as an instance of `com.jasperso
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>ResourceDescriptor rd = new ResourceDescriptor();
+<td><div class="language-text highlight"><pre><code>ResourceDescriptor rd = new ResourceDescriptor();
 rd.setWsType( ResourceDescriptor.TYPE_FOLDER );
 rd.setUriString(&quot;/&quot;);
-List lst = wsclient.list(rd);</code></pre></td>
+List lst = wsclient.list(rd);</code></pre></div></td>
 </tr>
 </tbody>
 </table>
@@ -142,12 +142,12 @@ The list operation also provides a shortcut to get the list of all resources of 
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">request</span>&gt;</span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>or
+<td><div class="language-text highlight"><pre><code>or
 &lt;request operationName=&quot;list&quot;&gt;
   &lt;argument name=&quot;LIST_RESOURCES&quot;/&gt;
   &lt;argument name=&quot;RESOURCE_TYPE&quot;&gt;reportUnit&lt;/argument&gt;
   &lt;argument name=&quot;START_FROM_DIRECTORY&quot;&gt;/reports&lt;/argument&gt;
-&lt;/request&gt;</code></pre></td>
+&lt;/request&gt;</code></pre></div></td>
 </tr>
 </tbody>
 </table>

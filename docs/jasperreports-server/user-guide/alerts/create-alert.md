@@ -9,21 +9,21 @@ To create an alert
 
 1.  On the Report Viewer toolbar, click the Turn on alert mode icon ![js alert icon](../assets/images/js-alert-icon.png). This enables the numeric values or data points.
 
-![js alert navigate](../assets/images/js-alert-navigate.png)
+    ![js alert navigate](../assets/images/js-alert-navigate.png)
 
-*Figure 1: Enabling Alert mode*
+    *Figure 1: Enabling Alert mode*
 
-![js data point for alert creation](../assets/images/js-data-point-for-alert-creation.png)
+    ![js data point for alert creation](../assets/images/js-data-point-for-alert-creation.png)
 
-*Figure 2: Alert Mode Enabled*
+    *Figure 2: Alert Mode Enabled*
 
 2.  Click any data point to open the new **Create Alert** panel.
 
-![js alert create save](../assets/images/js-alert-create-save.png)
+    ![js alert create save](../assets/images/js-alert-create-save.png)
 
-*Figure 3: Create Alert Panel*
+    *Figure 3: Create Alert Panel*
 
-The **Create Alert** panel has Condition, Parameters, Schedule, Notifications, and Output tabs. For more information about the tabs, see [Alert Overview](alerts-introduction.md).
+    The **Create Alert** panel has Condition, Parameters, Schedule, Notifications, and Output tabs. For more information about the tabs, see [Alert Overview](alerts-introduction.md).
 
 3.  Click the Condition tab to set the condition for the alert as described in [Setting Condition](alerts-condition.md).
 

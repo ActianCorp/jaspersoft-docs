@@ -14,7 +14,7 @@ You can configure your connection to the database in one of two ways:
 
 The preferred method for setting the database connection parameters is to configure the `external.jdbcDriverClass`, `external.jdbcUrl`, `external.dbUsername` and `dbPassword` properties in the default_master.properties file before installation or upgrade. In JasperReports Server 5.6 and later, the default configuration of the `externalDataSource` bean in sample-applicationContext-externalAuth-db-mt.xml uses context properties for the database connection properties:
 
-```
+``` xml
 <bean id="externalDataSource" class="com.jaspersoft.jasperserver.api.security.
     externalAuth.wrappers.spring.jdbc.JSDriverManagerDataSource">
   <property name="driverClassName" value="${external.jdbc.driverClassName}"/>
@@ -27,18 +27,19 @@ The preferred method for setting the database connection parameters is to config
 To configure these properties using default_master.properties, follow these steps:
 
 1.  Open default_master.properties in a text editor.
+
 2.  Locate and set the following properties for your LDAP server:
 
-- `external.jdbcDriverClass` property: The name of the JDBC driver class for your database. Make sure the driver jar library is available on the classpath; for example, you can place the jar in the lib directory of your application server or in the \<js-webapp\>/lib directory.
-- `external.jdbcUrl` property: The JDBC URL for your database server, including the hostname, port, and database you want to access.
-- `external.dbUsername` property: The username of your database administrator.
-- `external.dbPassword` property: The password of your database administrator.
+    - `external.jdbcDriverClass` property: The name of the JDBC driver class for your database. Make sure the driver jar library is available on the classpath; for example, you can place the jar in the lib directory of your application server or in the \<js-webapp\>/lib directory.
+    - `external.jdbcUrl` property: The JDBC URL for your database server, including the hostname, port, and database you want to access.
+    - `external.dbUsername` property: The username of your database administrator.
+    - `external.dbPassword` property: The password of your database administrator.
 
 3.  You can choose to encrypt any of the LDAP connection parameters.
 
 The following example shows the syntax of the properties in the default_master.properties file:
 
-```
+``` properties
 external.jdbcDriverClass=com.mysql.jdbc.Driver
 external.jdbcUrl=jdbc:mysql://127.0.0.1:3306/external_sso_test
 external.dbUsername=username
@@ -47,7 +48,7 @@ external.dbPassword=password
 
 To encrypt the password property, also set the following:
 
-```
+``` properties
 encrypt=true
 propsToEncrypt=dbPassword,external.dbPassword
 ```
@@ -72,7 +73,7 @@ To set the connection parameters for the external database server directly in th
 
 The following is an example of the connection information for a MySQL database:
 
-```
+``` xml
 <bean id="externalDataSource" class="com.jaspersoft.jasperserver.api.security.
       externalAuth.wrappers.spring.jdbc.JSDriverManagerDataSource">
   <property name="driverClassName" value="com.mysql.jdbc.Driver"/>

@@ -17,7 +17,7 @@ The default installation is the Compact installation.
 
     The Access and Audit events are now processed asynchronously using a thread pool. The default number of threads is 15 and is configurable in the applicationContext-events-logging.xml file. If you want to switch back to the synchronous mode, comment out the following section:
 
-    ```
+    ``` xml
     <bean id="loggingEventsService" class="com.jaspersoft.jasperserver.api.logging.service.impl.LoggingFacade">  <property name="asyncExecutor" ref="asyncEventsExecutor"/></bean>
     ```
 

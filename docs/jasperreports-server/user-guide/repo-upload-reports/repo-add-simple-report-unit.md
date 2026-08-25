@@ -30,6 +30,7 @@ To upload the main JRXML for this example
         **Add Resource** appears on the context menu only if you have write permission to the folder.
 
 4.  In **Naming**, enter the name and description of the new report and accept the generated Resource ID:
+
     - Name - Display the name of the report: `New Simple Report`
 
     - Resource ID - Permanent designation of the report object in the repository: `New_Simple_Report`
@@ -42,11 +43,11 @@ To upload the main JRXML for this example
 
         This example shows how to upload a JRXML file from the samples folder in the installation directory. You can also **Select a JRXML from the Repository** or **Use a blank JRXML**. On selecting the **Use a blank JRXML** option, a report unit with blank JRXML is saved after clicking **Submit**. This blank JRXML is then opened in an embedded JasperReports Web Studio, which gives you the ability to create pixel perfect reports from JasperReports Server.
 
-In Required Set Up Values, you can see the Set Up the Report page.
+    In Required Set Up Values, you can see the Set Up the Report page.
 
-![js AddJasperReport SetUp](../assets/images/js-AddJasperReport-SetUp.png)
+    ![js AddJasperReport SetUp](../assets/images/js-AddJasperReport-SetUp.png)
 
-*Figure 1: Required Set Up Values*
+    *Figure 1: Required Set Up Values*
 
 6.  Click **Controls & Resources**.
 

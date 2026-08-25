@@ -44,9 +44,13 @@ Setting up the Ad Hoc view
 The examples in this section uses the Ad Hoc view created in [section 1.0.0.1, “Creating a Calculated Field,” on page 1](calc-fields-creating.md). The initial view for these examples can be set up as follows:
 
 1.  Select Crosstab from the Visualization Selector.
+
 2.  Add Store Sales 2019 and Low Fat to the Columns entry bar.
+
 3.  Add Country and Store Type to the Rows Entry Bar.
+
 4.  To make the example clearer, the data has been restricted. To do this, create three filters:
+
     1.  Expand Regions in the Fields Picker, right-click on Country, and select **Create Filter**. In the Filters pane, set the filter to **is one of** then select Canada and USA.
     2.  Create a filter for Store Sales 2013. In the Filters pane, set the filter to **is greater than**, and enter 19.70.
     3.  Right-click on Store Type and select **Create Filter**. In the Filters pane, set the filter to **is one of** then select Deluxe Supermarket, Gourmet Supermarket, and Mid-Size Grocery.

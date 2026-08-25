@@ -117,7 +117,7 @@ Suppose you want to use a silent install for Jaspersoft Studio and have the foll
 
 The install command is:
 
-```
+``` text
 \JASPERSOFT\Installer\TIBCOJaspersoftStudioPro-x.x.x.final-windows-installer-x86_64.exe /S /LICENSE=C:\Jaspersoft\My Licenses\jasperserver.license /D=C:\SW\JASPERSOFT\JSS\xxx
 ```
 

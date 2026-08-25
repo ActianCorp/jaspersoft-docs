@@ -13,7 +13,7 @@ Attributes have permissions, so that system admins or organization admins can re
 
 !!! note
 
-    The permission feature of attributes is designed to work with multiple organizations in commercial editions of JasperReports Server. The feature is enabled in all editions of the server, but has limited use in<span> servers with only a single default organization</span>.
+    The permission feature of attributes is designed to work with multiple organizations in commercial editions of JasperReports Server. The feature is enabled in all editions of the server, but has limited use in servers with only a single default organization.
 
 ## Referencing Attributes
 
@@ -38,7 +38,9 @@ An attribute is a named value that is defined on a user, organization, or root o
 In the places that you reference attributes (see above), there are two ways to determine the value of an attribute:
 
 - Categorical value - References the value of a named attribute at a specific level, either user level, organization level, or server level. If the attribute does not exist at the requested level, no value is returned.
+
 - Hierarchical value - References the value of a named attribute across all levels, starting at the user level. The server searches for an attribute with the given name in the following order, stopping and returning the first value that it finds:
+
   - At the user level, in the user attributes of the logged in user.
 
   - At the organization level, in the organization the attributes of the logged in user's organization and all parent organizations.
@@ -73,7 +75,7 @@ To properly secure an attribute, you should make it encrypted so it cannot be se
 
 !!! note
 
-    Attribute permissions were designed to work with multiple organizations in JasperReports Server. The feature has limited use in<span> servers with only a single default organization</span>.
+    Attribute permissions were designed to work with multiple organizations in JasperReports Server. The feature has limited use in servers with only a single default organization.
 
 Because the attribute hierarchy allows attribute values at lower levels to take precedence over attributes with the same name at higher levels, administrators need a mechanism to enforce the priority of higher-level attributes. The permissions on attributes allow admins to prevent the same attribute name from being seen or redefined in lower levels. Otherwise, a low-level organization admin could define an attribute with the same name as a critical server-level attribute defined by the system admin.
 
@@ -105,15 +107,15 @@ To view, create, modify, or delete server-level attributes
 
     Each server level attribute is listed with its value, encrypted status, and permission. Holding the pointer over an attribute name shows the description associated with the attribute. When an attribute value is encrypted, its value is shown as \*\*\* symbols.
 
-![js Attributes Server](../assets/images/js-Attributes-Server.png)
+    ![js Attributes Server](../assets/images/js-Attributes-Server.png)
 
-*Figure 1: Managing Attributes at the Server Level*
+    *Figure 1: Managing Attributes at the Server Level*
 
 3.  To create a new server-level attribute, click **Add new attribute**. Enter the attribute name and value, as well as an optional description. If desired, set the permission from the dropdown list and select the Encrypt checkbox. Click **OK** to close the dialog and then click **Save** to submit the new attribute.
 
-![js Attributes Server add](../assets/images/js-Attributes-Server-add.png)
+    ![js Attributes Server add](../assets/images/js-Attributes-Server-add.png)
 
-*Figure 2: Adding a Server Attribute*
+    *Figure 2: Adding a Server Attribute*
 
 4.  To modify an attribute, click the edit icon ![js Attributes icon edit](../assets/images/js-Attributes-icon-edit.png). In the edit dialog, modify the desired fields. Click **OK** to close the dialog and then click **Save** to modify the attribute.
 
@@ -143,36 +145,40 @@ To view, create, modify, or delete organization-level attributes
 
     The right-hand column displays the properties of the target organization, including a table of all attributes visible at this organization's level. The attributes include locally defined attributes, as well as inherited attributes. An inherited attribute is one defined in a parent organization or at the server-level, and whose permissions allow it to be visible in this organization.
 
-![js Attributes Organization](../assets/images/js-Attributes-Organization.png)
+    ![js Attributes Organization](../assets/images/js-Attributes-Organization.png)
 
-*Figure 3: Viewing Attributes on the Manage Organizations Page*
+    *Figure 3: Viewing Attributes on the Manage Organizations Page*
 
-!!! note
+    !!! note
 
-    In the figure above, the system admin (superuser) is logged in and viewing organization attributes. The system admin can view all attributes at all levels, even inherited attributes, regardless of permissions. Also, the root organization is visible and represents the server level. Selecting root in the Manage Organizations page displays the same attributes and offers the same functionality as the **Server Attributes** page under **Manage \> Server Settings**. By definition, none of the attributes at the server level are inherited.
+        In the figure above, the system admin (superuser) is logged in and viewing organization attributes. The system admin can view all attributes at all levels, even inherited attributes, regardless of permissions. Also, the root organization is visible and represents the server level. Selecting root in the Manage Organizations page displays the same attributes and offers the same functionality as the **Server Attributes** page under **Manage \> Server Settings**. By definition, none of the attributes at the server level are inherited.
 
 4.  To create, modify, or delete the attributes on an organization, click **Edit** in the right-hand column, then select the **Attributes** tab. In the following figure, the Finance organization admin is logged in and does not see the `userName` and `password` attributes because they are hidden by permissions. Also, inherited attributes with the read-only permission are shown but cannot be modified.
 
-![js Attributes Organization edit](../assets/images/js-Attributes-Organization-edit.png)
+    ![js Attributes Organization edit](../assets/images/js-Attributes-Organization-edit.png)
 
-*Figure 4: Editing Organization Attributes*
+    *Figure 4: Editing Organization Attributes*
 
 5.  You can filter the attributes in the list to include only the inherited attributes or only the locally defined (not inherited) ones.
+
 6.  To create a new organization attribute, click **Add new attribute**. Enter the attribute name and value, as well as an optional description. If desired, set the permission from the dropdown list and select the Encrypt checkbox. Click **OK** to close the dialog and then click **Save** to submit the new attribute.
 
-![js Attributes Organization add](../assets/images/js-Attributes-Organization-add.png)
+    ![js Attributes Organization add](../assets/images/js-Attributes-Organization-add.png)
 
-*Figure 5: Adding an Organization Attribute*
+    *Figure 5: Adding an Organization Attribute*
 
 7.  To modify an attribute, click the edit icon ![js Attributes icon edit](../assets/images/js-Attributes-icon-edit.png). In the edit dialog, modify the desired fields. Click **OK** to close the dialog and then click **Save** to modify the attribute.<br>
     You can also modify the attribute's permission and encryption by using the dropdown and checkbox in its table row. After confirming any changes, click **Save** to make them take effect.<br>
     When modifying an organization attribute, be aware of the following:
+
     - Inherited attributes belong to a parent organization or server root and are shown at the organization level to display the hierarchical attribute values. Any modification to an inherited attribute actually creates a local attribute definition with the modified parameters. In the hierarchy for the selected organization, this new attribute takes precedence over the previously inherited attribute.
     - Changing the name of a locally defined attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference the attribute, you are asked to confirm the name change.
     - Be aware that changing the encryption or permission of an attribute can impact the visibility of an attribute and the features that might rely on referencing its value. Again, this may impact features that reference the attribute, and you are asked to confirm the change.
     - Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. Click the edit icon to give the attribute a new value.
+
 8.  To delete an organization attribute, click the delete icon ![js Attributes icon delete](../assets/images/js-Attributes-icon-delete.png) in the attribute row and confirm the operation. Because this may impact features that reference attributes, you are asked to confirm the deletion. Click **Save** to make the deletion take effect.<br>
     When deleting an organization attribute, be aware of the following:
+
     - On deletion, some attributes remain in the list as inherited attributes. This indicates that the local definition of the attribute was deleted, but another attribute with the same name is visible higher in the attribute hierarchy.
     - You cannot delete an inherited attribute, because it belongs to a higher organization or server root. To remove an inherited attribute, you must find where it is defined then delete it at that level. The system admin can also change the permission of the attribute where it is defined to Execute Only or No Access so it does not appear to organization admins in the lower organization anymore.
 
@@ -187,34 +193,41 @@ Users never see the attributes defined on their user profile; only administrator
 To view, create, modify, or delete user-level attributes
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
+
 2.  Click **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+
 3.  In the Organizations panel, select the user's organization. Or select a parent organization and search for the user by name.
+
 4.  Select the user in the Users panel. The properties panel includes a table of all attributes for the user, both locally defined and inherited from the attribute hierarchy In the following figure, the system administrator can see that `attr2` attribute was redefined at the organization level before being inherited by the user.
 
-![js Attributes User](../assets/images/js-Attributes-User.png)
+    ![js Attributes User](../assets/images/js-Attributes-User.png)
 
-*Figure 6: Viewing Attributes on the Manage Users Page*
+    *Figure 6: Viewing Attributes on the Manage Users Page*
 
 5.  To create, modify, or delete the attributes on a user, click **Edit** in the right-hand column, then select the **Attributes** tab.
 
-![js Attributes User edit](../assets/images/js-Attributes-User-edit.png)
+    ![js Attributes User edit](../assets/images/js-Attributes-User-edit.png)
 
-*Figure 7: Editing User Attributes*
+    *Figure 7: Editing User Attributes*
 
 6.  You can filter attributes in the list to include only the inherited attributes or only the locally defined (not inherited) ones.
+
 7.  To create a new user attribute, click **Add new attribute**. Enter the attribute name and value, as well as an optional description. If the attribute value should not be visible to other administrators, select the Encrypt checkbox. Click **OK** to close the dialog and then click **Save** to submit the new attribute.
 
-![js Attributes User add](../assets/images/js-Attributes-User-add.png)
+    ![js Attributes User add](../assets/images/js-Attributes-User-add.png)
 
-*Figure 8: Adding a User Attribute*
+    *Figure 8: Adding a User Attribute*
 
 8.  To modify an attribute, click the edit icon ![js Attributes icon edit](../assets/images/js-Attributes-icon-edit.png). In the edit dialog, modify the desired fields. Click **OK** to close the dialog and then click **Save** to modify the attribute.<br>
     You can also modify the attribute's encryption by using the check box in its table row. After confirming any changes, click **Save** to make them take effect.<br>
     When modifying a user attribute, be aware of the following:
+
     - Inherited attributes belong to a parent organization or the server level and are shown at the user level to display the hierarchical attribute values. Any modification to an inherited attribute actually creates a local attribute definition with the modified parameters. In the hierarchy of attributes for this user, the new attribute takes precedence over the previously inherited attribute.
     - Changing the name of a locally defined attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference attributes, you are asked to confirm the name change.
     - Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. Click the edit icon to give the attribute a new value.
+
 9.  To delete a user attribute, click the delete icon ![js Attributes icon delete](../assets/images/js-Attributes-icon-delete.png) in the attribute row and confirm the operation. Because this may impact features that reference attributes, you are asked to confirm the deletion. Click **Save** to make the deletion take effect.<br>
     When deleting a user attribute, be aware of the following:
+
     - On deletion, some attributes remain in the list as inherited attributes. This indicates that the local definition of the attribute was deleted, but another attribute with the same name exists higher in the attribute hierarchy.
     - You cannot delete an inherited attribute because it belongs to a parent organization or the server level. To remove an inherited attribute, you must find where it is defined, then delete it at that level. The system admin can also change the permission of the attribute where it is defined to Execute Only or No Access so it does not appear on the user anymore.

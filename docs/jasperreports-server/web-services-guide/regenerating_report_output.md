@@ -29,17 +29,17 @@ To export a report in a different format after its first execution, or to export
 <td colspan="2"><p>Description</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>RUN_OUTPUT_FORMAT?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>RUN_OUTPUT_FORMAT?</code></pre></div></td>
 <td><p>OutputType</p></td>
 <td colspan="2"><p>The format of the report output. Possible values: PDF, HTML, XLS, RTF, CSV, XML, JRPRINT. The Default is PDF.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>IMAGES_URI?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>IMAGES_URI?</code></pre></div></td>
 <td><p>String</p></td>
 <td colspan="2"><p>The uri prefix used for images when exporting in HTML. The default is <code>images</code>.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>PAGE?</code></pre></td>
+<td><div class="language-text highlight"><pre><code>PAGE?</code></pre></div></td>
 <td><p>Integer &gt; 0</p></td>
 <td colspan="2"><p>An integer value used to export a specific page.</p></td>
 </tr>

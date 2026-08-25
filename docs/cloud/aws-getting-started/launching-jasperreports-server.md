@@ -10,4 +10,4 @@ Upon purchasing JasperReports Server (JRS) on AWS Marketplace or obtaining your 
 - If you purchase JRS directly on AWS Marketplace, the license key is included.
 - If you're using the Jaspersoft BYOL license key option, you can download the BYOL license key from the Jaspersoft Customer Support Portal (<http://support.jaspersoft.com/>).
 
-<img src="assets/images/03000003.png" alt="03000003" />
+![03000003](assets/images/03000003.png)

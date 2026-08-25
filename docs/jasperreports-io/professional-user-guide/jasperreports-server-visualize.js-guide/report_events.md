@@ -19,7 +19,7 @@ This chapter contains the following sections:
 
 By listening for the `reportCompleted` event, you can give information or take action when a report finishes rendering.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -62,7 +62,7 @@ jrio(function(jrioClient) {
 
 By listening for the `responsiveBreakpointChanged` event, you can track when the container size has been passed from one interval to another.
 
-```
+``` javascript
 visualize({
     auth: {...
     }
@@ -97,7 +97,7 @@ visualize({
 
 By listening for the `changeTotalPages` event, you can track the filling of the report.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -139,7 +139,7 @@ jrio(function(jrioClient) {
 
 Listening for the `pageFinal` event, lets you know when the last page of a running report has been generated.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -168,7 +168,7 @@ visualize({
 
 By listening for the `beforeRender` event, you can access the Document Object Model (DOM) of the report to view or modify it before it is displayed. In the example the listener finds `span` elements and adds a color style and an attribute `my-attr="test"` to each one.
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -206,7 +206,7 @@ visualize({
 
 By listening for the `beforeRender` event, you can access the Document Object Model (DOM) of the report to view or modify it before it is displayed. In the example the listener finds `span` elements and adds a color style and an attribute `my-attr="test"` to each one.
 
-```
+``` javascript
 jrio.config({
     ...
 });
@@ -244,7 +244,7 @@ jrio(function(jrioClient) {
 
 The HTML page that displays the report uses a static list of reports in a drop-down selector, but otherwise needs only a container element. This is similar to the basic report example in [Rendering a Report](displaying_reports.md), except that the JavaScript above will change the report before it's displayed.
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- Provide the URL to visualize.js -->
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -260,7 +260,7 @@ The HTML page that displays the report uses a static list of reports in a drop-d
 
 The HTML page that displays the report uses a static list of reports in a drop-down selector, but otherwise needs only a container element. This is similar to the basic report example in [Rendering a Report](displaying_reports.md), except that the JavaScript above will change the report before it's displayed.
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 <!-- Provide the URL to jrio.js -->

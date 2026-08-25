@@ -10,18 +10,22 @@ Finally, CZS tested the view security by logging in as each CZS user and checkin
 To test the access granted to users on data in the CZS Sales Numbers Ad Hoc view
 
 1.  Click **Manage \>** **Users**.
+
 2.  In the Users panel, select the CZS user to test.
+
 3.  In the user’s Properties panel, click **Login as User**.
 
-The selected user’s Home page appears.
+    The selected user’s Home page appears.
 
-1.  In the Search field, enter CZS and press return
-2.  Click **CZS Sales Numbers Ad Hoc View**.
+4.  In the Search field, enter CZS and press return
 
-The view appears.
+5.  Click **CZS Sales Numbers Ad Hoc View**.
 
-1.  Test the view to ensure that it only displays data the user should see and does not hide data the user should see.
-2.  Click **Log Out** to return to your Home page, then login as each of the other users.
+    The view appears.
+
+6.  Test the view to ensure that it only displays data the user should see and does not hide data the user should see.
+
+7.  Click **Log Out** to return to your Home page, then login as each of the other users.
 
 When reviewing the CZS Ad Hoc views below (Figure 1-1 to Figure 1-4), note the different access each user has to the data.
 

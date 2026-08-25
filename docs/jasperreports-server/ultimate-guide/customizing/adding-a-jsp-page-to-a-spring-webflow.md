@@ -67,9 +67,10 @@ This example is divided into several tasks:
 
 4.  Name the file `docSampleFlow.xml` and save it in the `<js-src>/jasperserver/jasperserver-war/src/main/webapp/WEB-INF/flows` directory.
 
-**Example of setting flow permissions**
+    **Example of setting flow permissions**
 
 5.  Set permissions for your flow:
+
     1.  Edit the file `<js-src>/jasperserver/common/shared-config/applicationContext-security.xml`.
 
     2.  Locate the `flowVoter` bean. This bean sets the permissions for flows.
@@ -97,9 +98,10 @@ This example is divided into several tasks:
 
             The final entry in the `flowVoter` bean, `*=ROLE_USER,ROLE_ADMINISTRATOR`, sets the default permissions for all flows not specified directly. If you don't create an entry for your flow, these permissions apply.
 
-**Example of creating an action and adding it to the flow**
+    **Example of creating an action and adding it to the flow**
 
 6.  Create a java class that defines the controller in the Spring MVC framework. In this example, this file always returns `success` when invoked.
+
     1.  Go to the `<js-src>/jasperserver/jasperserver-war-jar/src/main/java/com/jaspersoft/ji/war/` directory. This is where the JasperReports Server source looks for java files used by the Spring web flow framework.
 
     2.  Create a subdirectory for your flow package, `<js-src>/jasperserver/jasperserver-war-jar/src/main/java/com/jaspersoft/ji/war/sampleFlow/`
@@ -138,6 +140,7 @@ This example is divided into several tasks:
     ```
 
 8.  Modify `docSampleFlow.xml` to start with an action state that calls the `SampleAction` class you created:
+
     1.  Change the start-state to `start`.
 
     2.  Create an action state `start` that calls `sampleAction` and transitions to the view-state `sampleView` on success. Insert this state before `sampleView`.
@@ -177,10 +180,12 @@ This example is divided into several tasks:
         ```
 
 9.  Add error handling as shown in the code sample above:
+
     1.  Add a view-state `errorPage` to your flow. In this example, you add it immediately after `sampleView`.
     2.  Add a global-transitions state that handles Java exceptions by displaying `errorPage`.
 
 10. (Optional) If you want, you can rebuild the source code and view your page:
+
     - Rebuild the source code and redeploy the web application according to the instructions in the Building JasperReports Server section in the JasperReports Server Source Build Guide within your distribution. See [Working With Source Code Files](customizing-java-classes.md) for an overview of this process.
 
     - Log in to your JasperReports Server.
@@ -193,13 +198,13 @@ This example is divided into several tasks:
 
       `http://localhost:8080/jasperserver-pro/flow.html?_flowId=docSampleFlow`
 
-**Example of creating a menu item to call your flow**
+    **Example of creating a menu item to call your flow**
 
-Now you can add a menu item to call the flow you created. The process is similar to the one described in [Adding an Item to the Main Menu](adding-an-item-to-a-menu.md), but because you're modifying the source, the file locations are different in this example.
+    Now you can add a menu item to call the flow you created. The process is similar to the one described in [Adding an Item to the Main Menu](adding-an-item-to-a-menu.md), but because you're modifying the source, the file locations are different in this example.
 
-!!! note
+    !!! note
 
-    Because the commercial source code includes the community source, most modifications to the menu are made in the community source files.
+        Because the commercial source code includes the community source, most modifications to the menu are made in the community source files.
 
 11. Edit the file `<js-src>/jasperserver/common/shared-config/actionModel-navigation.xml`. Locate the `actionModel` for the **View** menu in the file.
 
@@ -300,7 +305,7 @@ Now you can add a menu item to call the flow you created. The process is similar
     </html>
     ```
 
-**Compile code and view changes**
+    **Compile code and view changes**
 
 20. Build the JavaScript source code in your working directory and copy the output back to JasperReports Server as described in [1.0.1, “Customizing JavaScript Files,” on page 1](customizing-javascript.md).
 

@@ -15,11 +15,11 @@ To view the Supermart dashboard
 
         Passwords are case-sensitive. Use the lowercase when you type `demo`.
 
-The Supermart Top View dashboard opens in the dashboard viewer.
+    The Supermart Top View dashboard opens in the dashboard viewer.
 
-![js Dashboard Example SuperMart Gauges](../assets/images/js-Dashboard-Example-SuperMart-Gauges.png)
+    ![js Dashboard Example SuperMart Gauges](../assets/images/js-Dashboard-Example-SuperMart-Gauges.png)
 
-*Figure 1: Supermart Dashboard Example*
+    *Figure 1: Supermart Dashboard Example*
 
 2.  Click one of the **USA** gauges.
 

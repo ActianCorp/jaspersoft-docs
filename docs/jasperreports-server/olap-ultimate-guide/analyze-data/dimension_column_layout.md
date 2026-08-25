@@ -8,10 +8,13 @@ description: "The layout of the dimension columns in a navigation table is confi
 The layout of the dimension columns in a navigation table is configured using these options:
 
 - Edit Display options:
+
   - Show all parent columns
   - Show individual parent cells
   - Include member attributes
+
 - Hide Empty Rows/Columns
+
 - Swap Axes
 
 ## Show all parent columns

@@ -20,7 +20,7 @@ The following example shows how to configure the `userSearch` bean for LDAP auth
 
 The following example shows how you might set the `sAMAccountName` attribute.
 
-```
+``` xml
 <bean id="userSearch"  class="com.jaspersoft.jasperserver.api.security.externalAuth.wrappers.
        spring.ldap.JSFilterBasedLdapUserSearch">
   <constructor-arg index="0"><value>cn=Users</value></constructor-arg>
@@ -38,7 +38,7 @@ Note that for Active Directory, `sAMAccountName` must be in `constructor-arg ind
 
 Some Active Directory servers are unable to automatically follow referrals, which leads to a `PartialResultException` being thrown in searches. To handle this, set the Spring `referral` property in `LdapContextSource` to follow, for example:
 
-```
+``` xml
 <bean id="ldapContextSource"
         class="com.jaspersoft.jasperserver.api.security.externalAuth.ldap.JSLdapContextSource">
   <constructor-arg value="ldap://hostname:389/dc=example, dc=com" />

@@ -69,7 +69,7 @@ The following example calls a report with no parameters and exports to the defau
 
 The URL is:
 
-```
+``` text
 http://<host>:<port>/<context>/flow.html?_flowId=viewReportFlow&
 reportUnit=/public/Samples/Reports/SalesByMonthReport
 ```
@@ -88,7 +88,7 @@ Reports support the following types of parameters:
 
 The following example executes the same report as the previous section, but also passes `7` as an input control parameter and exports to PDF instead of HTML:
 
-```
+``` text
 http://<host>:<port>/<context>/flow.html?_flowId=viewReportFlow
 &reportUnit=/public/Samples/Reports/SalesByMonthReport&startMonth=7&output=pdf
 ```
@@ -101,7 +101,7 @@ Note the URL parameters:
 
 If the report parameter supports multiple values, you can specify them using the ampersand (&); for example:
 
-```
+``` text
 http://<host>:<port>/<context>/flow.html?_flowId=viewReportFlow&reportUnit=
 /reports/SalesbyState&country=US&country=Canada&output=pdf
 ```
@@ -128,13 +128,13 @@ As of JasperReports Server 6.0, dashboards do not use the flow.html entry point 
 
 The following example opens a dashboard for viewing:
 
-```
+``` text
 http://<host>:<port>/<context>/dashboard/viewer.html#/public/Samples/Dashboards/1._Supermart_Dashboard
 ```
 
 To open a dashboard for editing, call the Dashboard Designer:
 
-```
+``` text
 http://<host>:<port>/<context>/dashboard/designer.html#/public/Samples/Dashboards/1._Supermart_Dashboard
 ```
 
@@ -156,13 +156,13 @@ As of JasperReports Server 6.1, you can use non-authentication parameters before
 
 For example, suppose you enter the following URL:
 
-```
+``` text
 http://<host>:<port>/<context>/dashboard/viewer.html?theme=pods_summer#/public/Samples/Dashboards/1._Supermart_Dashboard&userLocale=de&country=Mexico
 ```
 
 When you go to the Dashboard Viewer, you are redirected as follows:
 
-```
+``` text
 http://<host>:<port>/<context>/dashboard/viewer.html?theme=pods_summer&userLocale=de&country=Mexico
 #/public/Samples/Dashboards/1._Supermart_Dashboard
 ```
@@ -173,13 +173,13 @@ The following reserved dashboard parameters are available:
 
 - `viewAsDashboardFrame` (optional): displays the dashboard without any decoration. This setting is similar to decorate=no, but hides the dashboard viewer toolbar in addition to the page headers, footers, and borders. You can use `viewAsDashboardFrame` when you embed your dashboard in another webapp. For example:
 
-```
+``` text
 http://<host>:<port>/<context>/dashboard/viewer.html?viewAsDashboardFrame=true#/public/MyDashboard
 ```
 
 - `dashboardResource` (optional, deprecated): supports earlier versions of JasperReports Server dashboard execution URLs. Use only for backwards compatibility.
 
-```
+``` text
 http://<host>:<port>/<context>/dashboard/viewer.html?dashboardResource=/public/MyDashboard
 ```
 
@@ -192,6 +192,7 @@ When your application uses this format, JasperReports Server automatically redir
 In addition to the standard parameters, report and dashboard execution URLs can contain parameters that provide values for input controls/parameters. The URL parameter names must match the name of the corresponding input control. The values used for such URL parameters depend on the type of input control:
 
 - For filters or simple single value input controls, the value is a URL parameter value:
+
   - If the type of the input control is text, the URL parameter value is directly used as the input control value.
   - If the type of the input control is numeric, the URL parameter value is the numerical value formatted according to standard rules, using a period (.) as the decimal separator.
   - If the type of the input control is date or date/time, the URL parameter value is the date/time value formatted as described in the jasperserver_config\_\<locale\>.properties file for the current locale. See the *JasperReports Server Administrator Guide* for more information on formatting date and time. The following table shows the formats for the default locale.
@@ -201,14 +202,23 @@ In addition to the standard parameters, report and dashboard execution URLs can 
   | date.format        | yyyy-MM-dd              | 2021-06-28          |
   | datetime.format    | yyyy-MM-dd 'T' HH:mm:ss | 2021-06-28T13:45:22 |
   | time.format        | HH:mm:ss                | 13:45:22            |
+
 - For Boolean (check box) input controls, the URL parameter value is either `true` or `false`.
+
 - For input controls that refer to a static list of values, the URL parameter value is the key/value of the list entry. For example, to select the first value in a list called `ListInput`, use the parameter `&ListInput=1`.
+
 - For input controls that rely on a query, the URL parameter value corresponds to the query key/value column. For example, to set a query-based control to the value `l_meade`, use the parameter `&QueryInput=lmeade`.
+
 - For multi-value input controls, multiple occurrences of the same URL parameter can be used. For example, `parameter=value1&parameter=value2&parameter=value3`.
+
 - You can use the following special values for input controls:
+
   - no value: when a string parameter is called with no value, it finds all instances where the string is empty, for example, `&Country=`. When the database result set does not include an empty string value, this URL input is ignored.
+
   - `~NULL~`: finds NULL value. For example, `&Address=~NULL~` returns all records with a NULL address. When the database result set does not include any NULL values, this URL input is ignored.
+
   - `~NOTHING~`: depends on the form of the input control:
+
     - For an input control that supports multi-selection, `~NOTHING~` clears the current selection and resets the input control to all values. (The generated SQL query in this case is 0=0, which essentially omits the filter.) For example, consider a multi-value input control named MultiInput. By default, this parameter is a list of two values. To override this list of values with another set of two values, you could use the parameter `&MultiInput=item1&MultiInput=item2`, where `item1`and `item2` are the overriding list values. To override the default with an empty list, use the parameter `&MultiInput=~NOTHING~`.
     - For a single-select, non-mandatory input control, `~NOTHING~` selects --.
     - For a single-select, mandatory input control, `~NOTHING~` selects the default value.
@@ -221,7 +231,7 @@ The HTTP interface can return generated content saved to the repository in PDF, 
 
 The following example links to a PDF file stored in the repository:
 
-```
+``` text
 http://<host>:<port>/<context>/fileview/fileview/public/Samples/Reports/05._Accounts_Report.pdf
 ```
 
@@ -229,12 +239,12 @@ http://<host>:<port>/<context>/fileview/fileview/public/Samples/Reports/05._Acco
 
 The following example displays all resources saved in the /public/Samples/Reports folder in the repository:
 
-```
+``` text
 http://<host>:<port>/<context>/flow.html?_flowId=searchFlow&folderUri=/public/Samples/Reports
 ```
 
 The following example displays all resources of the type `olapview` (analysis view) saved in all folders in the repository:
 
-```
+``` text
 http://<host>:<port>/<context>/flow.html?_flowId=olapViewListFlow
 ```

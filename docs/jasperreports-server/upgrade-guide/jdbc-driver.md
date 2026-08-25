@@ -100,7 +100,7 @@ You can download the driver supplied by the database vendor as described below. 
 | Overlay upgrade: | `<overlay-folder>/buildomatic/conf_source/db/oracle/jdbc/` |
 | Other upgrade: | `<js-install>/buildomatic/conf_source/db/oracle/jdbc/` |
 
-```
+``` bash
 # 1) Setup Standard Oracle JDBC Driver
 #
 # Uncomment and modify the value to native
@@ -118,72 +118,78 @@ maven.jdbc.version=11.2.0.3
 
 1.  Copy your SQL Server driver to the following directory:
 
-|  |  |
-|----|----|
-| Overlay upgrade: | `<overlay_folder>/buildomatic/conf_source/db/sqlserver/jdbc` |
-| Other upgrade: | `<js_install>/buildomatic/conf_source/db/sqlserver/jdbc` |
+    |  |  |
+    |----|----|
+    | Overlay upgrade: | `<overlay_folder>/buildomatic/conf_source/db/sqlserver/jdbc` |
+    | Other upgrade: | `<js_install>/buildomatic/conf_source/db/sqlserver/jdbc` |
 
-1.  Change to the `<js_install>/buildomatic` directory and open `default_master.properties` in a text editor.
-2.  Go to the Additional Settings section in this file.
-3.  Go to the first setup item, Setup Standard SQL Server JDBC Driver.
-4.  Uncomment the required properties and enable your driver. The following example shows how to set up `default_master.properties` to point to a driver named `mssql-jdbc-6.4.0.jre8.jar`:
+2.  Change to the `<js_install>/buildomatic` directory and open `default_master.properties` in a text editor.
 
-```
-# 1) Setup Standard SQLServer JDBC Driver
-#
-# Uncomment and modify the value to native
-jdbcDriverMaker=native
-#
-# Uncomment and modify the value in order to change the default
-# Driver will be found here: <path>/buildomatic/conf_source/db/sqlserver/native.jdbc
-#
-maven.jdbc.groupId=sqlserver
-maven.jdbc.artifactId=sqljdbc
-maven.jdbc.version=6.4.0.jre8
-```
+3.  Go to the Additional Settings section in this file.
 
-1.  Save the `default_master.properties` file.
+4.  Go to the first setup item, Setup Standard SQL Server JDBC Driver.
+
+5.  Uncomment the required properties and enable your driver. The following example shows how to set up `default_master.properties` to point to a driver named `mssql-jdbc-6.4.0.jre8.jar`:
+
+    ``` bash
+    # 1) Setup Standard SQLServer JDBC Driver
+    #
+    # Uncomment and modify the value to native
+    jdbcDriverMaker=native
+    #
+    # Uncomment and modify the value in order to change the default
+    # Driver will be found here: <path>/buildomatic/conf_source/db/sqlserver/native.jdbc
+    #
+    maven.jdbc.groupId=sqlserver
+    maven.jdbc.artifactId=sqljdbc
+    maven.jdbc.version=6.4.0.jre8
+    ```
+
+6.  Save the `default_master.properties` file.
 
 ### DB2 Example
 
 1.  Copy your DB2 driver to the following directory:
 
-|                  |                                                        |
-|------------------|--------------------------------------------------------|
-| Overlay upgrade: | `<overlay_folder>/buildomatic/conf_source/db/db2/jdbc` |
-| Other upgrade:   | `<js_install>/buildomatic/conf_source/db/db2/jdbc`     |
+    |                  |                                                        |
+    |------------------|--------------------------------------------------------|
+    | Overlay upgrade: | `<overlay_folder>/buildomatic/conf_source/db/db2/jdbc` |
+    | Other upgrade:   | `<js_install>/buildomatic/conf_source/db/db2/jdbc`     |
 
-1.  Change to the `<js_install>/buildomatic directory` and open `default_master.properties` in a text editor.
-2.  Go to the Additional Settings section in this file.
-3.  Go to the first setup item, Setup Standard DB2 JDBC Driver.
-4.  Uncomment the required properties and enable your driver.
+2.  Change to the `<js_install>/buildomatic directory` and open `default_master.properties` in a text editor.
 
-```
-# 1) Setup Standard DB2 JDBC Driver
-#
-# Uncomment and modify the value to native
-jdbcDriverMaker=native
-#
-# Uncomment and modify the value in order to change the default
-# Driver will be found here: <path>/buildomatic/conf_source/db/db2/native.jdbc
-#
-maven.jdbc.groupId=ibm
-maven.jdbc.artifactId=db2jcc
-maven.jdbc.version=9.7
-```
+3.  Go to the Additional Settings section in this file.
 
-1.  Add the following additional properties, setting the correct values for your installation. For example:
+4.  Go to the first setup item, Setup Standard DB2 JDBC Driver.
 
-```
-db2.driverType=4
-db2.fullyMaterializeLobData=true
-db2.fullyMaterializeInputStreams=true
-db2.progressiveStreaming=2
-db2.progressiveLocators=2
-dbPort=50000
-js.dbName=JSPRSRVR
-sugarcrm.dbName=SUGARCRM
-foodmart.dbName=FOODMART
-```
+5.  Uncomment the required properties and enable your driver.
 
-1.  Save the `default_master.properties` file.
+    ``` bash
+    # 1) Setup Standard DB2 JDBC Driver
+    #
+    # Uncomment and modify the value to native
+    jdbcDriverMaker=native
+    #
+    # Uncomment and modify the value in order to change the default
+    # Driver will be found here: <path>/buildomatic/conf_source/db/db2/native.jdbc
+    #
+    maven.jdbc.groupId=ibm
+    maven.jdbc.artifactId=db2jcc
+    maven.jdbc.version=9.7
+    ```
+
+6.  Add the following additional properties, setting the correct values for your installation. For example:
+
+    ``` properties
+    db2.driverType=4
+    db2.fullyMaterializeLobData=true
+    db2.fullyMaterializeInputStreams=true
+    db2.progressiveStreaming=2
+    db2.progressiveLocators=2
+    dbPort=50000
+    js.dbName=JSPRSRVR
+    sugarcrm.dbName=SUGARCRM
+    foodmart.dbName=FOODMART
+    ```
+
+7.  Save the `default_master.properties` file.

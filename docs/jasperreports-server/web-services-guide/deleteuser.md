@@ -15,10 +15,10 @@ To call `deleteUser`:
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSUser user = new WSUser();
+<td><div class="language-text highlight"><pre><code>WSUser user = new WSUser();
 user.setUsername(&quot;john&quot;);
 user.setTenantId(&quot;organization_1&quot;);
-binding.deleteUser(user);</code></pre></td>
+binding.deleteUser(user);</code></pre></div></td>
 </tr>
 </tbody>
 </table>

@@ -31,7 +31,7 @@ There are two syntaxes; the following one is for reading multiple attributes or 
 <td colspan="2"><p>Description</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>name</code></pre></td>
+<td><div class="language-text highlight"><pre><code>name</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specify an attribute name to list the value of that specific attribute. Repeat this argument to view multiple attributes. When this argument is omitted, all attributes and their values are returned for the given entity.</p></td>

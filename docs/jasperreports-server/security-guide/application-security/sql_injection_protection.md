@@ -167,21 +167,21 @@ The validator expression is a regular expression that must match the query strin
 
 If you wish to use a different validator expression for queries, always create a validator expression with a new name in `validation.properties`. Then substitute that name in the validation rule in `security.properties`. For example, if you wish to forbid queries from running stored procedures in your database, add the following validator expression in `validation.properties`:
 
-```
+``` bash
 #Validator.ValidSQL=(?is)^\\s*(select|call)\\b((?!\\binto\\b)[^;])*;?\\s*$
 Validator.ValidSQLnoProc=(?is)^\\s*(select)\\b((?!\\binto\\b)[^;])*;?\\s*$
 ```
 
 Then you would uncomment and modify the validation rule in `security.properties` as follows:
 
-```
+``` bash
 # Main SQL execution point
 sqlQueryExecutor=Alpha,ValidSQLnoProc,500000,true,SQL_Query_Executor_context
 ```
 
 It is also possible to have two or more validation rules that are applied sequentially (logical AND) until one fails. The rules must have the same name but with a numerical suffix, for example:
 
-```
+``` bash
 # Main SQL execution point
 sqlQueryExecutor=Alpha,ValidSQL,500000,true,SQL_Query_Executor_context
 sqlQueryExecutor2=Alpha,ValidSQLCustom,500000,true,SQL_Custom_Executor_context

@@ -98,20 +98,20 @@ Automatic table tagging only works with table elements. If you have a table-like
 To manually tag a tabular arrangement of elements as a table
 
 1.  Tag the first element in your table: **PDF 508 Tags \> Table \> Start**.
+
 2.  Tag the start and end of each row:
 
-<!-- -->
+    1.  Tag the first element in your row: **PDF 508 Tags \> Table Row \> Start**.
+    2.  Tag the last element in your row: **PDF 508 Tags \> Table Row \> End**.
 
-1.  Tag the first element in your row: **PDF 508 Tags \> Table Row \> Start**.
-2.  Tag the last element in your row: **PDF 508 Tags \> Table Row \> End**.
 3.  To make a row a header row, add header tags to the start and end:
 
-<!-- -->
+    1.  Tag the first element in each header row: **PDF 508 Tags \> Table Header \> Start**.
+    2.  Tag the last element in each header row: **PDF 508 Tags \> Table Header \> End**.
 
-1.  Tag the first element in each header row: **PDF 508 Tags \> Table Header \> Start**.
-2.  Tag the last element in each header row: **PDF 508 Tags \> Table Header \> End**.
-3.  Tag each detail element in each row: **PDF 508 Tags \> Table Details \> Full**.
-4.  Tag the final element in your table: **PDF 508 Tags \> Table \> End**.
+4.  Tag each detail element in each row: **PDF 508 Tags \> Table Details \> Full**.
+
+5.  Tag the final element in your table: **PDF 508 Tags \> Table \> End**.
 
 To manually tag elements as a list
 
@@ -124,25 +124,30 @@ To manually tag elements as a list
 Once you have inserted your 508C tags correctly, you must set the PDF export parameters in your report.
 
 1.  Click the report preview.
+
 2.  The first time the report runs, it does not have tags. To speed up the initial run, select One Empty Record.
+
 3.  Select PDF from the format menu and wait for the report to run.
+
 4.  If necessary, click ![jss preview icon restore](assets/images/jss-preview-icon-restore.png) to open the panel on the left of the preview window.
+
 5.  Click ![jss preview icon exporter parameters](assets/images/jss-preview-icon-exporter-parameters.png) to view the exporter parameters.
 
-|  |
-|----|
-| ![jss preview pdf export parameters common](assets/images/jss-preview-pdf-export-parameters-common.png) |
-| *Figure 4: PDF Export Parameters tab in report preview* |
+    |  |
+    |----|
+    | ![jss preview pdf export parameters common](assets/images/jss-preview-pdf-export-parameters-common.png) |
+    | *Figure 4: PDF Export Parameters tab in report preview* |
 
-1.  Select **Is Tagged**.
-2.  Enter a language code in the **Tag Language** field.
+6.  Select **Is Tagged**.
 
-|  |
-|----|
-| ![jss preview pdf export parameters common 508c](assets/images/jss-preview-pdf-export-parameters-common-508c.png) |
-| *Figure 5: 508C tags in the PDF Export Parameters tab* |
+7.  Enter a language code in the **Tag Language** field.
 
-1.  Select the correct data adapter and run your report.
+    |  |
+    |----|
+    | ![jss preview pdf export parameters common 508c](assets/images/jss-preview-pdf-export-parameters-common-508c.png) |
+    | *Figure 5: 508C tags in the PDF Export Parameters tab* |
+
+8.  Select the correct data adapter and run your report.
 
 ## Configuring a Report's Metadata for Use With the JSON Data Exporter
 
@@ -161,7 +166,7 @@ You can define a structure by separating the names of the levels you want to cre
 
 When exported to JSON, the data is structured with three distinct paths:
 
-```
+``` text
 store
   sale
     amount
@@ -172,7 +177,7 @@ cust
 
 Example exported data would be similar to:
 
-```
+``` json
 [
   {store:
     [
@@ -192,28 +197,38 @@ It is important to define paths that create a structure that the application rec
 To define JSON export object metadata in your report
 
 1.  Open a report that includes the fields you want to export to your application.
+
 2.  Right-click a field in the **Design** tab, and select **JSON tags \> JSON Metadata Path**.
 
-If the field you selected appears in a frame, you are warned that you JasperReports Library may ignore the property. This warning relates only to older versions of the library. It remains in the product for backwards-compatibility. For current versions of JasperReports Server, JasperReports Server, and Jaspersoft Studio, properties defined in frames are not ignored.
+    If the field you selected appears in a frame, you are warned that you JasperReports Library may ignore the property. This warning relates only to older versions of the library. It remains in the product for backwards-compatibility. For current versions of JasperReports Server, JasperReports Server, and Jaspersoft Studio, properties defined in frames are not ignored.
 
-1.  If you receive this warning, click **OK**. The **JSON Exporter Property Configuration** window is displayed.
-2.  In the **Path** field, enter a string that specifies the way the data from this field should be exported. For example, if you are working with a field that returns a sales amount value, you might enter `store.sale.amount`.
-3.  If the data being returned necessitates it, check the **Repeat value if missing** check the box.
+3.  If you receive this warning, click **OK**. The **JSON Exporter Property Configuration** window is displayed.
 
-This option is helpful if your source data does not include values for every row of data returned. Selecting this option instructs Jaspersoft Studio to use the last value passed when a value is missing, which may prevent problems in the application receiving the JSON object.
+4.  In the **Path** field, enter a string that specifies the way the data from this field should be exported. For example, if you are working with a field that returns a sales amount value, you might enter `store.sale.amount`.
 
-1.  If you want to manipulate the data being exported, check the **Use custom expression for exported value** checkbox, click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png), and define an expression.
-2.  Click **OK**.
-3.  Select each field that you want to export to JSON and define its metadata.
-4.  Click **File \> Save**.
-5.  Click **Preview**.
-6.  If the JSON Metadata preview is not selected, click the arrow next to the current preview format, and select **JSON Metadata**.
+5.  If the data being returned necessitates it, check the **Repeat value if missing** check the box.
 
-|  |
-|----|
-| ![jss JSON Metadata Preview](assets/images/jss-JSON-Metadata-Preview.png) |
-| *Figure 6: Selecting the JSON Metadata Preview* |
+    This option is helpful if your source data does not include values for every row of data returned. Selecting this option instructs Jaspersoft Studio to use the last value passed when a value is missing, which may prevent problems in the application receiving the JSON object.
 
-1.  Review the structure of the data to ensure your application can interpret it.
-2.  If the data is not structured correctly, click **Design** and edit each field's JSON export properties.
-3.  When you are satisfied with the data returned by Jaspersoft Studio, you can publish your report to JasperReports Server and begin testing your own application's ability to use the data passed by the server.
+6.  If you want to manipulate the data being exported, check the **Use custom expression for exported value** checkbox, click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png), and define an expression.
+
+7.  Click **OK**.
+
+8.  Select each field that you want to export to JSON and define its metadata.
+
+9.  Click **File \> Save**.
+
+10. Click **Preview**.
+
+11. If the JSON Metadata preview is not selected, click the arrow next to the current preview format, and select **JSON Metadata**.
+
+    |  |
+    |----|
+    | ![jss JSON Metadata Preview](assets/images/jss-JSON-Metadata-Preview.png) |
+    | *Figure 6: Selecting the JSON Metadata Preview* |
+
+12. Review the structure of the data to ensure your application can interpret it.
+
+13. If the data is not structured correctly, click **Design** and edit each field's JSON export properties.
+
+14. When you are satisfied with the data returned by Jaspersoft Studio, you can publish your report to JasperReports Server and begin testing your own application's ability to use the data passed by the server.

@@ -1,56 +1,62 @@
 ---
 title: Parameters
-description: "1. Right-click your report's root node in the outline view. 2. Select Add Dataset from the context menu."
+description: "1. Right-click your report's root node in the outline view."
 ---
 
 Create a subdataset
 
 1.  Right-click your report's root node in the outline view.
+
 2.  Select **Add Dataset** from the context menu.
 
-The Dataset wizard is displayed.
+    The Dataset wizard is displayed.
 
-|                                                             |
-|-------------------------------------------------------------|
-| ![jss dataset wizard](assets/images/jss-dataset-wizard.png) |
-| Creating a new subdataset                                   |
+    |                                                             |
+    |-------------------------------------------------------------|
+    | ![jss dataset wizard](assets/images/jss-dataset-wizard.png) |
+    | Creating a new subdataset                                   |
 
-1.  Enter a name for your dataset. For this tutorial, name it ExampleDataset.
-2.  For this tutorial, select **Create new dataset from a connection or Data Source**. This includes a data adapter as part of your dataset definition.
+3.  Enter a name for your dataset. For this tutorial, name it ExampleDataset.
 
-!!! note
+4.  For this tutorial, select **Create new dataset from a connection or Data Source**. This includes a data adapter as part of your dataset definition.
 
-    If you select **Create an empty dataset**, your dataset does not include any data adapter or field information. You need to configure this information separately for each dataset run.
+    !!! note
 
-1.  Click **Next**.
-2.  Select the data source that you want for your dataset. For this example, select Sample DB.
+        If you select **Create an empty dataset**, your dataset does not include any data adapter or field information. You need to configure this information separately for each dataset run.
 
-|  |
-|----|
-| ![jss datasets datasource menu](assets/images/jss-datasets-datasource-menu.png) |
-| Data Source page of the Dataset wizard |
+5.  Click **Next**.
 
-1.  Create a subdataset query and set it to:
+6.  Select the data source that you want for your dataset. For this example, select Sample DB.
 
-`select SHIPCOUNTRY, COUNT(*) country_orders from ORDERS group by SHIPCOUNTRY`
+    |  |
+    |----|
+    | ![jss datasets datasource menu](assets/images/jss-datasets-datasource-menu.png) |
+    | Data Source page of the Dataset wizard |
 
-The fields are registered in the subdataset (see Figure 14‑8).
+7.  Create a subdataset query and set it to:
 
-|                                  |
-|----------------------------------|
-|                                  |
-| The subdataset to fill the chart |
+    `select SHIPCOUNTRY, COUNT(*) country_orders from ORDERS group by SHIPCOUNTRY`
 
-1.  For this tutorial, select **Create an empty dataset**. There is no data adapter currently defined for this dataset. You configure this information later when you create a dataset run.
-2.  Click **Finish**. The dataset is created and appears in outline view for the report.
-3.  Select the dataset in outline view.
-4.  On the Dataset tab of the properties view for the dataset, select **Edit query, filter and sort options**. In the Dataset and Query dialog, enter the query:
+    The fields are registered in the subdataset (see Figure 14‑8).
 
-`select SHIPCOUNTRY, COUNT(*) country_orders from ORDERS group by SHIPCOUNTRY`
+    |                                  |
+    |----------------------------------|
+    |                                  |
+    | The subdataset to fill the chart |
 
-Note that no fields are detected, because there is no data adapter for this data set. However, it is still possible to set the query.
+8.  For this tutorial, select **Create an empty dataset**. There is no data adapter currently defined for this dataset. You configure this information later when you create a dataset run.
 
-1.  Click **OK** to save the query.
+9.  Click **Finish**. The dataset is created and appears in outline view for the report.
+
+10. Select the dataset in outline view.
+
+11. On the Dataset tab of the properties view for the dataset, select **Edit query, filter and sort options**. In the Dataset and Query dialog, enter the query:
+
+    `select SHIPCOUNTRY, COUNT(*) country_orders from ORDERS group by SHIPCOUNTRY`
+
+    Note that no fields are detected, because there is no data adapter for this data set. However, it is still possible to set the query.
+
+12. Click **OK** to save the query.
 
 Create a chart and its dataset run
 
@@ -65,26 +71,31 @@ If you want to use a different connection type, you can refer to Subreports wher
 Create a subdataset
 
 1.  Right-click your report's root node in the outline view.
+
 2.  Select **Add Dataset** from the context menu.
 
-The Dataset wizard is displayed.
+    The Dataset wizard is displayed.
 
-|                                                             |
-|-------------------------------------------------------------|
-| ![jss datasets empty](assets/images/jss-datasets-empty.png) |
-| Creating a new subdataset                                   |
+    |                                                             |
+    |-------------------------------------------------------------|
+    | ![jss datasets empty](assets/images/jss-datasets-empty.png) |
+    | Creating a new subdataset                                   |
 
-1.  Enter a name for your dataset. For this tutorial, name it EmptyDataset.
-2.  For this tutorial, select **Create an empty dataset**. There is no data adapter currently defined for this dataset. You configure this information later when you create a dataset run.
-3.  Click **Finish**. The dataset is created and appears in outline view for the report.
-4.  Select the dataset in outline view.
-5.  On the Dataset tab of the properties view for the dataset, select **Edit query, filter and sort options**. In the Dataset and Query dialog, enter the query:
+3.  Enter a name for your dataset. For this tutorial, name it EmptyDataset.
 
-`select SHIPCOUNTRY, COUNT(*) country_orders from ORDERS group by SHIPCOUNTRY`
+4.  For this tutorial, select **Create an empty dataset**. There is no data adapter currently defined for this dataset. You configure this information later when you create a dataset run.
 
-Note that no fields are detected, because there is no data adapter for this data set. However, it is still possible to set the query.
+5.  Click **Finish**. The dataset is created and appears in outline view for the report.
 
-1.  Click **OK** to save the query.
+6.  Select the dataset in outline view.
+
+7.  On the Dataset tab of the properties view for the dataset, select **Edit query, filter and sort options**. In the Dataset and Query dialog, enter the query:
+
+    `select SHIPCOUNTRY, COUNT(*) country_orders from ORDERS group by SHIPCOUNTRY`
+
+    Note that no fields are detected, because there is no data adapter for this data set. However, it is still possible to set the query.
+
+8.  Click **OK** to save the query.
 
 # Parameters
 

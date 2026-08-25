@@ -43,15 +43,16 @@ To select a new visualization type
 
 1.  In the Ad Hoc Editor tool bar, click the ![js icon column simple](../assets/images/js-icon-column%20simple.png) icon to display the **Select Visualization Type** window.
 
-![js AdHoc Charts SelectChartType](../assets/images/js-AdHoc-Charts-SelectChartType.png)
+    ![js AdHoc Charts SelectChartType](../assets/images/js-AdHoc-Charts-SelectChartType.png)
 
-*Figure 1: Select Visualization Type Window, for Old Layout Band*
+    *Figure 1: Select Visualization Type Window, for Old Layout Band*
 
-![js AdHoc Charts SelectChartType(newLB)](../assets/images/js-AdHoc-Charts-SelectChartType%28newLB%29.png)
+    ![js AdHoc Charts SelectChartType(newLB)](../assets/images/js-AdHoc-Charts-SelectChartType%28newLB%29.png)
 
-*Figure 2: Select Visualization Type Window, for New Layout Band*
+    *Figure 2: Select Visualization Type Window, for New Layout Band*
 
 2.  Click the type of visualization that you want to apply to your report. The selected visualization type is outlined in blue. The Visualization Selector displays a description of the selected visualization and the number of fields and measures that it uses.
+
 3.  Click **Apply and Close** to use the visualization type.
 
 The following table describes the available visualization types, and the rules (if any) affecting their use:

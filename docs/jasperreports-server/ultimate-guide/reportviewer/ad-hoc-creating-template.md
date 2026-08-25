@@ -22,23 +22,34 @@ The following example shows how to create a template using the following:
 To export a template in JasperReports Server
 
 1.  Log in as an admin to JasperReports Server.
+
 2.  Click **View \> Repository** and browse to **Public \> Templates**.
+
 3.  Right-click on the Actual Size report template and select **Export**. The **Export Resources** dialog appears.
 
-![js AdHoc Template Export](../assets/images/js-AdHoc-Template-Export.png)
+    ![js AdHoc Template Export](../assets/images/js-AdHoc-Template-Export.png)
 
-*Figure 1: Export Dialog Box*
+    *Figure 1: Export Dialog Box*
 
-1.  If desired, change the default name of the zip file for the exported catalog. This dialog allows only the zip archive format.
-2.  Select the Legacy key to protect any passwords in the export catalog.
-3.  Click **Export**. The server generates the catalog Zip file and your browser prompts you to save the file.
-4.  Locate the Zip file in your download folder and extract the files.
-5.  In the extracted files folder, find `resources/public/templates/actual_size.<ver>.jrxml.data`.
-6.  Rename the file to remove the .data extension. The filename should now be `actual_size.<ver>.jrxml`.
-7.  Move the template file to your MyReports folder in your Jaspersoft Studio workspace.
-8.  In JasperReports Server browse to **Public \> Samples \> Resources \> Images**.
-9.  Right-click the logo.png file and select **Properties** from the context menu.
-10. Copy the path for the file and click **Cancel**.
+4.  If desired, change the default name of the zip file for the exported catalog. This dialog allows only the zip archive format.
+
+5.  Select the Legacy key to protect any passwords in the export catalog.
+
+6.  Click **Export**. The server generates the catalog Zip file and your browser prompts you to save the file.
+
+7.  Locate the Zip file in your download folder and extract the files.
+
+8.  In the extracted files folder, find `resources/public/templates/actual_size.<ver>.jrxml.data`.
+
+9.  Rename the file to remove the .data extension. The filename should now be `actual_size.<ver>.jrxml`.
+
+10. Move the template file to your MyReports folder in your Jaspersoft Studio workspace.
+
+11. In JasperReports Server browse to **Public \> Samples \> Resources \> Images**.
+
+12. Right-click the logo.png file and select **Properties** from the context menu.
+
+13. Copy the path for the file and click **Cancel**.
 
 ![js AdHoc Template ImageProperties](../assets/images/js-AdHoc-Template-ImageProperties.png)
 
@@ -47,27 +58,36 @@ To export a template in JasperReports Server
 To edit a report template in Jaspersoft Studio
 
 1.  Open Jaspersoft Studio.
+
 2.  Go to **File \> Open File**.
+
 3.  Browse to your My Reports folder, select the template file, and click **Open**. Jaspersoft Studio opens the template in the **Design** tab.
+
 4.  In the **Outline** tab, right-click **Page Header** and select **Add Band**. The **Page Header** band appears in the template.
+
 5.  Right-click **Page Footer** and select **Add Band**. The **Page Footer** appears in the template.
+
 6.  From the **Palette** tab, drag the **Image** element to the Title band of the template. The Create new image element window appears.
+
 7.  Select **Select a resource from Jaspersoft Server**.
+
 8.  Enter the repository path for the `logo.png` image file in the field under **Options** and click **OK**.
 
-![js AdHoc Template Image](../assets/images/js-AdHoc-Template-Image.png)
+    ![js AdHoc Template Image](../assets/images/js-AdHoc-Template-Image.png)
 
-*Figure 3: Create New Image Element Window*
+    *Figure 3: Create New Image Element Window*
 
-1.  Click and drag the image's margins to adjust its size.
-2.  From the **Palette** tab, drag the **Current Date** element to the title bar of the template.
-3.  Drag the **Page Number** element to the footer of the template.
+9.  Click and drag the image's margins to adjust its size.
 
-![js AdHoc Template JSS](../assets/images/js-AdHoc-Template-JSS.png)
+10. From the **Palette** tab, drag the **Current Date** element to the title bar of the template.
 
-*Figure 4: Customized Report Template*
+11. Drag the **Page Number** element to the footer of the template.
 
-1.  Save the template with a new filename.
+    ![js AdHoc Template JSS](../assets/images/js-AdHoc-Template-JSS.png)
+
+    *Figure 4: Customized Report Template*
+
+12. Save the template with a new filename.
 
 !!! note
 

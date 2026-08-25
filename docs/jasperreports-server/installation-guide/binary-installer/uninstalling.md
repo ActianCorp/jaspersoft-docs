@@ -20,13 +20,14 @@ On Linux, the \<js-install\> folder includes an executable that removes JasperRe
 To uninstall JasperReports Server
 
 1.  From the command line, log in as any user with sufficient privileges.
+
 2.  Enter the following commands:
 
-`cd <js-install>`
+    `cd <js-install>`
 
-`./uninstall`
+    `./uninstall`
 
-1.  Respond `Y` or `yes` to the prompt that asks if you want to remove JasperReports Server from this computer.
+3.  Respond `Y` or `yes` to the prompt that asks if you want to remove JasperReports Server from this computer.
 
 ## Mac OSX
 

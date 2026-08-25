@@ -13,14 +13,14 @@ In `deletePermission`, the parameter `objPerm` has the type `WSObjectPermission`
 </colgroup>
 <tbody>
 <tr>
-<td><pre class="text"><code>WSObjectPermission objectPermission = new WSObjectPermission();
+<td><div class="language-text highlight"><pre><code>WSObjectPermission objectPermission = new WSObjectPermission();
 objectPermission.setUri(resourceUri);
 objectPermission.setPermissionMask(2);
 WSUser wsUser = new WSUser();
 wsUser.setUsername(&quot;joeuser&quot;);
 wsUser.setTenantId(&quot;organization_1&quot;);
 objectPermission.setPermissionRecipient(wsUser);
-binding.deletePermission(objectPermission);</code></pre></td>
+binding.deletePermission(objectPermission);</code></pre></div></td>
 </tr>
 </tbody>
 </table>

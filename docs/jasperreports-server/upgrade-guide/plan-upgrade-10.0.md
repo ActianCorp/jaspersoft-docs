@@ -44,8 +44,11 @@ Custom Input Controls for JasperReports Server allow you to create sophisticated
 ## Important Notes about Compact and Split installations
 
 - Users are able to upgrade from 9.0 Compact to 10.0.0 Compact using `samedb` and `newdb`.
+
 - Users are able to upgrade from 9.0 Split to 10.0.0 Split using using `samedb` and `newdb`.
+
 - Users will not be able to upgrade:
+
   - From 9.0 Compact to 10.0.0 Split.
   - From 9.0 Split to 10.0.0 Compact.
 

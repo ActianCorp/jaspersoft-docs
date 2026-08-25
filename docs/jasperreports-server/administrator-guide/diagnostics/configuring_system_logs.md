@@ -57,7 +57,7 @@ The configuration file for logging depends on whether you want to define loggers
 
 Loggers are based on the Java classname of the functionality that you want to log. To find an existing logger or create a new one, you must know the corresponding classname. A logger in the configuration file is defined by three related definitions with the following syntax:
 
-```
+``` text
 logger.<logger-name>.name=<Java-classname>
 logger.<logger-name>.level=<log-level>
 logger.<logger-name>.appenderRef.<output-type>.ref=<output-name>
@@ -73,7 +73,7 @@ where:
 
 - `<output-type>` is a Log4j 2 output type, either `stdout` or `rolling`. The respective `<output-name>` is either `stdout` or the name of a file output defined in the `log4j2.properties` file. There can be multiple output types, as shown in the following example:
 
-```
+``` properties
 logger.net_sf_jasperreports_engine_query_JRJdbcQueryExecuter.name=net.sf.jasperreports.engine.query.JRJdbcQueryExecuter
 logger.net_sf_jasperreports_engine_query_JRJdbcQueryExecuter.level=debug
 logger.net_sf_jasperreports_engine_query_JRJdbcQueryExecuter.appenderRef.stdout.ref = stdout
@@ -99,13 +99,13 @@ The available parameters for JasperReports Server logs include:
 
 JasperReports Server logs follow the following format, for example, for Log4j:
 
-```
+``` xml
 <Log4j pattern> <Request type> <Session Id> <User Id> <Resource URI> <Request Status> <TimeTaken> - <Actual text log message>
 ```
 
 Here is an example log from `jasperserver.log` when Data source fails:
 
-```
+``` text
 2023-07-14T03:22:13,469 ERROR SecureExceptionHandlerImpl,http-nio-8080-exec-6:135 -
 {REQUEST_STATUS=200, REQUEST_TYPE=POST, SESSION_ID=7F1DCDC110417960C651152A80E1877E, TIME_TAKEN=13, USER_ID=superuser}
 - FATAL: no PostgreSQL user name specified in startup packet org.postgresql.util.PSQLException: FATAL: no PostgreSQL user name specified in startup packet
@@ -148,11 +148,12 @@ JasperReports Server provides a simple way to set log levels through the UI, and
 To set the current logging levels
 
 1.  Log in as a system administrator (`superuser` by default).
+
 2.  Select **Manage \> Server Settings** and choose **Log Settings** in the left panel.
 
-![js Settings Logs](../assets/images/js-Settings-Logs.png)
+    ![js Settings Logs](../assets/images/js-Settings-Logs.png)
 
-*Figure 1: System Log Settings*
+    *Figure 1: System Log Settings*
 
 3.  In the list of loggers, use the drop-down selectors to change the log level for a given logger. Any change to a logging level on this page takes effect immediately, without restarting JasperReports Server.
 

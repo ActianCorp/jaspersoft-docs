@@ -15,27 +15,30 @@ Follow these steps to create a MongoDB data source with the native MongoDB drive
 
 1.  Create the connection globally or locally:
 
-- To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
-- To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
+    - To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
+    - To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
 
-The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
+    The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
 
-1.  From the list, select **MongoDB Connection** to open the **Data Adapter** dialog.
+2.  From the list, select **MongoDB Connection** to open the **Data Adapter** dialog.
 
-|  |
-|----|
-| ![jss data adapters mongodb native](../assets/images/jss-data-adapters-mongodb-native.png) |
-| *Figure 1: Configuring a MongoDB Connection* |
+    |  |
+    |----|
+    | ![jss data adapters mongodb native](../assets/images/jss-data-adapters-mongodb-native.png) |
+    | *Figure 1: Configuring a MongoDB Connection* |
 
-1.  Fill in the required fields:
+3.  Fill in the required fields:
 
-- **Name**: The name that appears on the list of available data adapters when you create or run a report.
-- **Mongo URI**: The URI of your MongoDB data.
+    - **Name**: The name that appears on the list of available data adapters when you create or run a report.
+    - **Mongo URI**: The URI of your MongoDB data.
 
-1.  If you have configured your MongoDB source to be password protected, specify a valid username and password.
-2.  Click **Test** to check the values you entered. If everything's okay, you see a success message.
-3.  Click **OK** to exit the message.
-4.  Click **Finish** to create the connection.
+4.  If you have configured your MongoDB source to be password protected, specify a valid username and password.
+
+5.  Click **Test** to check the values you entered. If everything's okay, you see a success message.
+
+6.  Click **OK** to exit the message.
+
+7.  Click **Finish** to create the connection.
 
 !!! note
 
@@ -49,13 +52,13 @@ The Jaspersoft MongoDB Query Language is a declarative language for specifying w
 
 - Retrieve all documents (rows) in the given collection (table):
 
-```
+``` text
 { 'collectionName' : 'accounts' }
 ```
 
 - From all documents in the given collection, select the named fields (columns) and sort the results:
 
-```
+``` text
 {
   'collectionName' : 'accounts',
   'findFields' : {'name':1,'phone_office':1,'billing_address_city':1,
@@ -66,7 +69,7 @@ The Jaspersoft MongoDB Query Language is a declarative language for specifying w
 
 - Retrieve only the documents (rows) in the given collection (table) that match the query (where clause). In this case, the date is greater-than-or-equal to the input parameter, and the name matches a string (starts with N):
 
-```
+``` text
 {
   'collectionName' : 'accounts',
   'findQuery' : {

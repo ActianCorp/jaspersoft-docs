@@ -45,12 +45,12 @@ To export the theme as a JAR
 
 1.  On the **Preview** tab, click ![jss chart theme icon export](../assets/images/jss-chart-theme-icon-export.png). The **Save As** window opens.
 
-|                                                        |
-|--------------------------------------------------------|
-| ![save theme jar](../assets/images/save-theme-jar.png) |
-| *Figure 2: Save As JAR*                                |
+    |                                                        |
+    |--------------------------------------------------------|
+    | ![save theme jar](../assets/images/save-theme-jar.png) |
+    | *Figure 2: Save As JAR*                                |
 
-1.  Enter or select the parent folder, name the file, and name your theme. Click **OK**.
+2.  Enter or select the parent folder, name the file, and name your theme. Click **OK**.
 
 A dialog indicates that the **Chart Theme** was generated.
 

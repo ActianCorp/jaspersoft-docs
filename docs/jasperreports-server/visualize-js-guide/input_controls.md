@@ -25,7 +25,7 @@ This chapter contains the following sections:
 
 The properties structure passed to the `inputControls` function is defined as follows:
 
-```
+``` json
 {
     "type": "object",
     "properties": {
@@ -64,7 +64,7 @@ The properties structure passed to the `inputControls` function is defined as fo
 
 The `InputControls` function exposes the following functions:
 
-```
+``` javascript
 define(function () {
 
     /**
@@ -120,7 +120,7 @@ If desired, it is still possible to generate your own UI widgets for each input 
 
 In the simplest embedding case, you specify the URI of the report resource and a container. Only the input controls for the designated report are embedded in the container. The input controls appear on your page as standard selection boxes and drop-down selectors that the user can interact with and choose new values. The following example shows the HTML and corresponding JavaScript:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 <div id="inputContainer"></div>
 
@@ -141,7 +141,7 @@ visualize({
 
 Of course, you can add styles to determine the shape and placement of your input controls container, as shown in the following CSS sample. If you wish to change the appearance of the embedded controls *within* the container, see Embedded Input Control Styles.
 
-```
+``` bash
 #inputContainer {
   width: 300px;
   padding-left: 50px;
@@ -150,7 +150,7 @@ Of course, you can add styles to determine the shape and placement of your input
 
 The following is a more realistic example that shows how to embed both the report and its input controls into separate containers on your page. The page also provides a button to run the report after the user has made changes to input controls:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 <script type='text/javascript' src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <div id="inputContainer" style="width:300px"></div>
@@ -162,7 +162,7 @@ Run
 
 The JavaScript embeds the report and the input controls in their respective containers, then it handles the button click to read the current values of the input controls (called `parameters` in this instance) and run the report using those values:
 
-```
+``` javascript
 var inputControls="";
 visualize({
     auth: { ...
@@ -206,7 +206,7 @@ Because the input controls are separate from the report, events provide a way fo
 
 The most common use is to listen for input control change events in order to run the associated report with the new input control values. In this example, the HTML sample has the report and input controls containers side by side in a row (styles or CSS not shown):
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 <div class="container">
   <div class="row">
@@ -221,7 +221,7 @@ The most common use is to listen for input control change events in order to run
 
 Then, the JavaScript embeds the report and the input controls in their respective containers and adds a listener for change events. If there is no error, the input control values (called `params` in this instance) are taken from the event and used to run the report again. This is a very common pattern when using input controls:
 
-```
+``` javascript
 visualize({
     auth: { ...
     }
@@ -252,7 +252,7 @@ Another use for change events is to update other parts of your page based on the
 
 In the following example, the change event triggers an update to text that displays the current value of an input control. The HTML has a placeholder for the text:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 
 <div id="inputContainer"></div>
@@ -265,7 +265,7 @@ In the following example, the change event triggers an update to text that displ
 
 The CSS hides the text at first:
 
-```
+``` bash
 #inputContainer {
     width:200px;
 }
@@ -277,7 +277,7 @@ The CSS hides the text at first:
 
 And the JavaScript catches the input control change event, then extracts the value of a given parameter to display it:
 
-```
+``` javascript
 visualize({
     auth: {...
     }
@@ -300,7 +300,7 @@ visualize({
 
 The change event can also be used to check whether the input controls entered by the user passed validation checks. Validation is defined on the server and ensures that values entered by the user are of the expected type or within a given range. The following example shows an event handler that checks the validation result:
 
-```
+``` javascript
         events: {
             change : function(state, validationResult) {
               if (validationResult) {
@@ -318,7 +318,7 @@ The change event can also be used to check whether the input controls entered by
 
 The following example has buttons to run the report and also to reset input controls. The HTML sample has the containers and buttons that are needed:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 <script type='text/javascript' src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <div id="inputContainer" style="width:300px"></div>
@@ -333,7 +333,7 @@ Reset
 
 The corresponding JavaScript invokes the reset function when the button is clicked, and then it runs the report as well again:
 
-```
+``` javascript
 var inputControls="";
 visualize({
     auth: { ...
@@ -384,7 +384,7 @@ With the embedded input controls, the server generates all of the UI widgets wit
 
 In the following simple example, the HTML has a container and the JavaScript uses it for the input controls:
 
-```
+``` html
 <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
 <div id="inputContainer" style="width:300px"></div>
 
@@ -406,7 +406,7 @@ visualize({
 
 The following CSS will change the text color of the label of the boolean input control:
 
-```
+``` bash
 #inputContainer .jr-mInput-boolean-label {
     color: #218c00;
 }
@@ -414,7 +414,7 @@ The following CSS will change the text color of the label of the boolean input c
 
 The following list shows the CSS base classes and secondary class names for the labels of each kind of input control embedded by the server. Use these in your CSS rules as shown in the example above to change the appearance of your labels.
 
-```
+``` bash
 #inputContainer .jr-mInputControlBoolean .jr-mInput-boolean-label
 #inputContainer .jr-mInputControlSingleValueText .jr-mInput-label
 #inputContainer .jr-mInputControlSingleValueDate .jr-mInput-label
@@ -439,7 +439,7 @@ Custom input controls require more JavaScript coding, and might be specific to a
 
 The data() for InputControls is an array of InputControl objects, with the structure shown in this example:
 
-```
+``` json
 [
   {
     "id":"Cascading_name_single_select",
@@ -484,7 +484,7 @@ The data() for InputControls is an array of InputControl objects, with the struc
 
 The data being output here has the input control structure shown in the previous section:
 
-```
+``` javascript
 visualize(function(v){
     var ic = v.inputControls({
         resource: "/public/ReportWithControls",
@@ -497,7 +497,7 @@ visualize(function(v){
 
 This example shows an alternate way of fetching input controls:
 
-```
+``` javascript
 (new InputControls({
     server: "http://localhost:8080/jasperserver-pro",
     resource: "/public/my_report",
@@ -514,7 +514,7 @@ This example shows an alternate way of fetching input controls:
 
 This example retrieves the input controls of a report and parses the structure to create drop-down menus of values for each control:
 
-```
+``` javascript
 visualize({
     auth: {
         name: "superuser",
@@ -554,7 +554,7 @@ visualize({
 
 In order to implement cascading input controls, you must implement a change listener on the parent control and use it to trigger an update on the dependent control:
 
-```
+``` javascript
 var reportUri = "/public/Samples/Reports/Cascading_Report_2_Updated";
 
 visualize({
@@ -586,7 +586,7 @@ function renderInputControls(data) {
 
 Associated HTML:
 
-```
+``` html
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="http://underscorejs.org/underscore-min.js"></script>
 <script src="http://bi.example.com:8080/jasperserver-pro/client/visualize.js"></script>
@@ -598,7 +598,7 @@ Associated HTML:
 
 Input controls are meant to be dynamic and modified by users. By using the `inputControls.params` function, you can update the values of input controls and then update the corresponding report.
 
-```
+``` javascript
 var inputControls = new InputControls({
     server: "http://localhost:8080/jasperserver-pro",
     resource: "/public/my_report"
@@ -615,7 +615,7 @@ inputControls.params({ "Country_multi_select": ["USA"] }).run(doSomethingWithRes
 
 You can store the data from the `inputControls` function and access the data() structure at a later time:
 
-```
+``` javascript
 var call = (new InputControls({
     server: "http://localhost:8080/jasperserver-pro",
     resource: "/public/my_report"

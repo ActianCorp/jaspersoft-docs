@@ -52,10 +52,11 @@ To resolve this, you need to add mapping to the map in `applicationContext.xml`.
 To add the mapping
 
 1.  Open the file `.../WEB-INF/applicationContext-webapp.xml` for editing.
+
 2.  Locate the `formatPatternsMap` bean and add the following new entry.
 
-```
-<entry key="d MMM, yyyy, h:mm:ss a" value="d MMM, yyyy h:mm:ss AM/PM"/>
-```
+    ``` xml
+    <entry key="d MMM, yyyy, h:mm:ss a" value="d MMM, yyyy h:mm:ss AM/PM"/>
+    ```
 
 3.  Restart the server.

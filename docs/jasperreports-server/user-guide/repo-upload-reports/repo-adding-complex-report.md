@@ -45,6 +45,7 @@ To upload the main JRXML and suggested resource files for the complex report uni
         **Add Resource** appears on the menu only if you have write privilege to the folder.
 
 4.  Enter these properties:
+
     - Name - `New Complex Report`
     - Resource ID - `New_Complex_Report`
     - Description - `This is a complex report`
@@ -53,22 +54,26 @@ To upload the main JRXML and suggested resource files for the complex report uni
 
 6.  Click **Controls & Resources**.<br>
     The Controls & Resources page in Figure 5‑11 suggests resources to be uploaded for the report:
+
     - A sub-report (the SalesByMonthDetail.jrxml file)
 
     - A logo image
 
-![js AddJasperReport CandR](../assets/images/js-AddJasperReport-CandR.png)
+    ![js AddJasperReport CandR](../assets/images/js-AddJasperReport-CandR.png)
 
-*Figure 1: Suggested Resources for the Complex Report*
+    *Figure 1: Suggested Resources for the Complex Report*
 
 7.  On the Controls & Resources page, upload the sub-report:
+
     1.  Click **Add Now**in the SalesByMonthDetail row. The Locate File Resource page appears.
     2.  Select **Upload a Local File**.
     3.  Click **Browse** and locate the file \<js-install\>/samples/reports/SalesByMonthDetail.jrxml. Select SalesByMonthDetail.jrxml.<br>
         The path to SalesByMonthDetail.jrxml appears in the **Upload a Local File** field.
     4.  On the Locate File Resource page, click **Next**.
     5.  On the Add a Report Resource page, click **Next** to accept the default report resource name and resource ID.
+
 8.  On the Controls & Resources page, upload the logo image resource:
+
     1.  Click **Add Now** in the Logo row. The Locate File Resource page appears.
     2.  On the Locate File Resource page, click **Select a resource from the Repository**.
     3.  Click **Browse**to locate the file /Images/JR Logo and select JR Logo.

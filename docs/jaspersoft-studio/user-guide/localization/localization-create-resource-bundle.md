@@ -16,25 +16,26 @@ Working area on the right. The contents of this area depend on the selection:
 To create a base name and empty bundle files
 
 1.  Go to **File \> New \> Other...** to open the New dialog.
+
 2.  Select **Messages Editor \> ResourceBundle** and click **Next**.
 
-The ResourceBundle wizard is displayed.
+    The ResourceBundle wizard is displayed.
 
-1.  Set the following:
+3.  Set the following:
 
-- **Folder**: The folder where you want the resource bundle files. This can be in the current project or in another project in Jaspersoft Studio. Note that you can share bundles between projects.
-- **Base Name**: The base name for bundle files. Country and location codes are appended to this name. For this example, use SampleBundle.
+    - **Folder**: The folder where you want the resource bundle files. This can be in the current project or in another project in Jaspersoft Studio. Note that you can share bundles between projects.
+    - **Base Name**: The base name for bundle files. Country and location codes are appended to this name. For this example, use SampleBundle.
 
-1.  Choose the locales that you want. You can set a language (for example, French) or a language and location (for example, French (Luxembourg)). Note that the **\[Default\]** locale is automatically created. This example uses American English for the default locale.
+4.  Choose the locales that you want. You can set a language (for example, French) or a language and location (for example, French (Luxembourg)). Note that the **\[Default\]** locale is automatically created. This example uses American English for the default locale.
 
-- To add a locale, select it from the **Choose or type a Locale** dropdown or enter the locale code in the **Lang.** box, then click **Add**. You may optionally enter a **Country** or **Variant**.
-- To remove a locale, select it in the list of **Selected locales** to the right and click **Remove**.
+    - To add a locale, select it from the **Choose or type a Locale** dropdown or enter the locale code in the **Lang.** box, then click **Add**. You may optionally enter a **Country** or **Variant**.
+    - To remove a locale, select it in the list of **Selected locales** to the right and click **Remove**.
 
-If you are using the locale dropdown, you can type the first letter of a locale to jump to that letter in the list. When you select a locale, the code for the locale are entered in the boxes below the dropdown.
+    If you are using the locale dropdown, you can type the first letter of a locale to jump to that letter in the list. When you select a locale, the code for the locale are entered in the boxes below the dropdown.
 
-For this example, select the French locale or type `fr` directly in the **Lang.** box.
+    For this example, select the French locale or type `fr` directly in the **Lang.** box.
 
-1.  Click **Finish**.
+5.  Click **Finish**.
 
 The Resource Bundle editor is displayed. In addition, a separate properties file is created for each locale you specified, along with a default file.
 
@@ -69,10 +70,11 @@ You can view or edit all the values corresponding to a single key.
 
 1.  Click a key in the key panel on the left.
 
-The value (if any) for each language bundle is shown.
+    The value (if any) for each language bundle is shown.
 
-1.  To add or edit values, click in an entry box and edit your text. To edit a different value, click in the entry box for the locale you want.
-2.  To save your changes, use **Ctrl-S** or select **File \> Save**.
+2.  To add or edit values, click in an entry box and edit your text. To edit a different value, click in the entry box for the locale you want.
+
+3.  To save your changes, use **Ctrl-S** or select **File \> Save**.
 
 Editing properties files
 
@@ -80,46 +82,49 @@ You can directly edit a property file as a text file.
 
 1.  Open the Default property file for editing:
 
-- Click the file name in the right-hand panel
-- OR: Click the Default tab at the bottom of the bundle editor.
+    - Click the file name in the right-hand panel
+    - OR: Click the Default tab at the bottom of the bundle editor.
 
-The file opens and displays the keys with blank values.
+    The file opens and displays the keys with blank values.
 
-1.  Type the values that you want for the default:
+2.  Type the values that you want for the default:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><pre class="properties"><code>field.firstname=First Name
-field.lastname=Last Name
-&#10;titleband.title=Title</code></pre></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="language-properties highlight"><pre><code><span class="na">field.firstname</span><span class="o">=</span><span class="s">First Name</span>
+<span class="w">    </span><span class="na">field.lastname</span><span class="o">=</span><span class="s">Last Name</span>
+<span class="w">    </span>
+<span class="na">titleband.title</span><span class="o">=</span><span class="s">Title</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  Click the French tab and edit it as follows:
+3.  Click the French tab and edit it as follows:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><pre class="properties"><code>field.firstname=Prénom
-field.lastname=Nom de famille
-&#10;titleband.title=Titre</code></pre></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="language-properties highlight"><pre><code><span class="na">field.firstname</span><span class="o">=</span><span class="s">Prénom</span>
+<span class="w">    </span><span class="na">field.lastname</span><span class="o">=</span><span class="s">Nom de famille</span>
+<span class="w">    </span>
+<span class="na">titleband.title</span><span class="o">=</span><span class="s">Titre</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  Click the tab English (United Kingdom).
-2.  Edit the 4th line to read `field.lastname = Surname`
+4.  Click the tab English (United Kingdom).
 
-!!! note
+5.  Edit the 4th line to read `field.lastname = Surname`
 
-    If you do not add a value for a given key, the report uses the value in the default file.
+    !!! note
 
-1.  To return to the main view, click the **Properties** tab at the bottom of the bundle editor.
+        If you do not add a value for a given key, the report uses the value in the default file.
+
+6.  To return to the main view, click the **Properties** tab at the bottom of the bundle editor.

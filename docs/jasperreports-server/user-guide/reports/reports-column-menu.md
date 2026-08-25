@@ -77,7 +77,7 @@ In the main JRXML of the report unit (See [Overview of a Report Unit](../repo-up
 
 For example:
 
-```
+``` xml
 <property name=“net.sf.jasperreports.htmlviewer.responsive.breakpoints” value=“1000, 1200"/>
 ```
 

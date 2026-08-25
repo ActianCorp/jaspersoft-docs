@@ -21,11 +21,8 @@ Suppose you are using objects of this Java class:
 To register fields for the class:
 
 1.  Put the class name in the name field and click **Read attributes**. JJaspersoft Studio scans the class.
-
-<!-- -->
-
-1.  Check the scan results to make sure Jaspersoft Studio has captured the correct object attributes for the class type.
-2.  Select the fields that you want to use in your report and click **Add**.
+2.  Check the scan results to make sure Jaspersoft Studio has captured the correct object attributes for the class type.
+3.  Select the fields that you want to use in your report and click **Add**.
 
 Jaspersoft Studio creates fields corresponding to the selected attributes and adhesion to the list. The description, in this case, stores the method that the data source must invoke to retrieve the value for the specified field.
 

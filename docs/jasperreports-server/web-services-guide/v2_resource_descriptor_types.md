@@ -237,7 +237,7 @@ The `{region}` values are specified in the file .../WEB-INF/application-context.
 </thead>
 <tbody>
 <tr>
-<td><pre class="text"><code>us-east-1.amazonaws.com
+<td><div class="language-text highlight"><pre><code>us-east-1.amazonaws.com
 us-west-2.amazonaws.com
 us-west-1.amazonaws.com
 eu-west-1.amazonaws.com
@@ -245,8 +245,8 @@ eu-central-1.amazonaws.com
 ap-southeast-1.amazonaws.com
 ap-southeast-2.amazonaws.com
 ap-northeast-1.amazonaws.com
-sa-east-1.amazonaws.com</code></pre></td>
-<td><pre class="text"><code>US East (Northern Virginia) Region
+sa-east-1.amazonaws.com</code></pre></div></td>
+<td><div class="language-text highlight"><pre><code>US East (Northern Virginia) Region
 US West (Oregon) Region
 US West (Northern California) Region
 EU (Ireland) Region
@@ -254,7 +254,7 @@ EU (Frankfurt) Region
 Asia Pacific (Singapore) Region
 Asia Pacific (Sydney) Region
 Asia Pacific (Tokyo) Region
-South America (São Paulo) Region</code></pre></td>
+South America (São Paulo) Region</code></pre></div></td>
 </tr>
 </tbody>
 </table>

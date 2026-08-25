@@ -87,6 +87,7 @@ You can also move a set or item by dragging. You can reorder sets and items by d
 | **Data Properties** | Lets you select whether an item is a dimension or measure; lets you view and edit properties specific to measures. | Source, Content Type, Summary Calculation, Data Format |
 
 - The following selections let you expand and collapse the list of sets and items and their properties.
+
   - **Expand All Properties**: Expands all sets and items and displays expanded properties for all.
   - **Collapse All Properties**: Collapses all sets and items and displays collapsed properties for all. The properties shown depend on the selection you made.
 

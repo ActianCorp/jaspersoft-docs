@@ -100,15 +100,18 @@ To resume a paused job
 To delete a scheduled job
 
 1.  Click **Manage \> Admin Console**.
+
 2.  Select **Schedules**. The Scheduled Jobs page appears.
+
 3.  Click the delete icon ![js alert trash icon](../assets/images/js-alert-trash-icon.png) in the row of the job you want to delete. A warning message is displayed to confirm if the user wants to delete the job.
 
-When the server receives a request to delete a job that is running, the server completes running the job before deleting it.
+    When the server receives a request to delete a job that is running, the server completes running the job before deleting it.
 
-SC will be added once the UI is ready
+    SC will be added once the UI is ready
 
-1.  Click **Delete** to delete the scheduled job else click **Cancel** to cancel the delete action.
-2.  Click **Close** to close the Scheduled job panel.
+4.  Click **Delete** to delete the scheduled job else click **Cancel** to cancel the delete action.
+
+5.  Click **Close** to close the Scheduled job panel.
 
 ## Diagnostic
 

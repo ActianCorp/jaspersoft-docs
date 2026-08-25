@@ -48,22 +48,22 @@ The **Outline** view is a good tool for people with a basic understanding of SQL
 <td><div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   count(*) as number_of_orders,</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   count(*) as number_of_orders,</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   Orders.country</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   Orders.country</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>FROM</code></pre></td>
+<td><div class="language-text highlight"><pre><code>FROM</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   Orders</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   Orders</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>GROUP BY</code></pre></td>
+<td><div class="language-text highlight"><pre><code>GROUP BY</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   Orders.country</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   Orders.country</code></pre></div></td>
 </tr>
 <tr>
 <td></td>
@@ -84,28 +84,28 @@ The **Outline** view is a good tool for people with a basic understanding of SQL
 <td><div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   count(*) as number_of_orders,</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   count(*) as number_of_orders,</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   Orders.country</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   Orders.country</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>FROM</code></pre></td>
+<td><div class="language-text highlight"><pre><code>FROM</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   Orders</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   Orders</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>GROUP BY</code></pre></td>
+<td><div class="language-text highlight"><pre><code>GROUP BY</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   Orders.country</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   Orders.country</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>HAVING</code></pre></td>
+<td><div class="language-text highlight"><pre><code>HAVING</code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>   count(*) &gt; 40</code></pre></td>
+<td><div class="language-text highlight"><pre><code>   count(*) &gt; 40</code></pre></div></td>
 </tr>
 <tr>
 <td></td>

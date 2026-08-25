@@ -11,99 +11,102 @@ To edit a Mondrian connection
 
 1.  In the **Search** field, enter the name (or partial name) of the Mondrian connection you want to edit, and click the Search icon. For example, enter a **foodmart**.
 
-The repository appears and displays objects that match the text you entered.
+    The repository appears and displays objects that match the text you entered.
 
-1.  Right-click the Mondrian connection that you want to edit and click **Edit**.
+2.  Right-click the Mondrian connection that you want to edit and click **Edit**.
 
-The **Set Connection Type and Properties** page appears with the fields populated.
+    The **Set Connection Type and Properties** page appears with the fields populated.
 
-![ja add view setconnectiontypepropertiesmondrian](assets/images/ja-add-view-setconnectiontypepropertiesmondrian.png)
+    ![ja add view setconnectiontypepropertiesmondrian](assets/images/ja-add-view-setconnectiontypepropertiesmondrian.png)
 
-*Figure 1: Set Connection Type and Properties Page*
+    *Figure 1: Set Connection Type and Properties Page*
 
-1.  Change values as necessary and click **Next**.
+3.  Change values as necessary and click **Next**.
 
-The **Locate OLAP Schema** page appears.
+    The **Locate OLAP Schema** page appears.
 
-![ja add view locateolapschema](assets/images/ja-add-view-locateolapschema.png)
+    ![ja add view locateolapschema](assets/images/ja-add-view-locateolapschema.png)
 
-*Figure 2: Locate OLAP Schema Page*
+    *Figure 2: Locate OLAP Schema Page*
 
-You can either accept the existing file or replace it. If you replace the file, you can either upload a new file or select one from the repository.
+    You can either accept the existing file or replace it. If you replace the file, you can either upload a new file or select one from the repository.
 
-1.  To accept the existing file, click **Next**.
-2.  To replace the file, either:
+4.  To accept the existing file, click **Next**.
 
-- Click **Upload a Local File** and click **Browse** to upload a new schema from your local computer.
-- Click **Select a resource from the Repository**, click **Browse**, and navigate the repository to the schema you want to use. Then click **Select**.
+5.  To replace the file, either:
 
-1.  Click **Next**.
+    - Click **Upload a Local File** and click **Browse** to upload a new schema from your local computer.
+    - Click **Select a resource from the Repository**, click **Browse**, and navigate the repository to the schema you want to use. Then click **Select**.
 
-The **OLAP Schema Resource** page appears.
+6.  Click **Next**.
 
-![ja add view accessgrantresource](assets/images/ja-add-view-accessgrantresource.png)
+    The **OLAP Schema Resource** page appears.
 
-*Figure 3: OLAP Schema Resource*
+    ![ja add view accessgrantresource](assets/images/ja-add-view-accessgrantresource.png)
 
-1.  If you chose to upload a new file, enter a name and description for it.
+    *Figure 3: OLAP Schema Resource*
 
-If you accepted the existing file or selected one from the repository, the fields are not editable.
+7.  If you chose to upload a new file, enter a name and description for it.
 
-1.  Click **Next**.
+    If you accepted the existing file or selected one from the repository, the fields are not editable.
 
-The **Locate Data Source** page appears.
+8.  Click **Next**.
 
-![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
+    The **Locate Data Source** page appears.
 
-*Figure 4: Locate the Data Source*
+    ![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
 
-You can either accept the existing data source or replace it. If you replace it, you can either define a new data source or select one from the repository.
+    *Figure 4: Locate the Data Source*
 
-1.  To accept the existing data source, click **Next**.
-2.  To replace the data source, either:
+    You can either accept the existing data source or replace it. If you replace it, you can either define a new data source or select one from the repository.
 
-- Click **Define a Data Source in the next step**.
-- Click **Select a Data Source from the Repository**, click **Browse**, and navigate the repository to locate the data source you want to use. Then click **Select**.
+9.  To accept the existing data source, click **Next**.
 
-1.  Click **Next**.
+10. To replace the data source, either:
 
-If you accepted the existing data source, or if you selected a data source from the repository, that connection is used. Clicking **Next** displays the **Locate Access Grant** page.
+    - Click **Define a Data Source in the next step**.
+    - Click **Select a Data Source from the Repository**, click **Browse**, and navigate the repository to locate the data source you want to use. Then click **Select**.
 
-If you chose to define a new data source, the **Set Data Source Type and Properties** page appear.
+11. Click **Next**.
 
-![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
+    If you accepted the existing data source, or if you selected a data source from the repository, that connection is used. Clicking **Next** displays the **Locate Access Grant** page.
 
-*Figure 5: Set Data Source Type and Properties Page*
+    If you chose to define a new data source, the **Set Data Source Type and Properties** page appear.
 
-1.  Enter the requested information, For details on defining data sources, refer to [Working with Data Sources](working_with_data_sources.md) and to the JasperReports Server Administrator Guide.
+    ![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
 
-!!! note
+    *Figure 5: Set Data Source Type and Properties Page*
 
-    Test the new data source to ensure it works properly.
+12. Enter the requested information, For details on defining data sources, refer to [Working with Data Sources](working_with_data_sources.md) and to the JasperReports Server Administrator Guide.
 
-1.  Click **Submit**.
+    !!! note
 
-The **Locate Access Grant Definition** page appears.
+        Test the new data source to ensure it works properly.
 
-![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
+13. Click **Submit**.
 
-*Figure 6: Locate Access Grant Definition Page*
+    The **Locate Access Grant Definition** page appears.
 
-1.  Click one of the following options:
+    ![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
 
-- **Do not link an Access Grant**. Click **Next** and skip step 17.
-- **Upload a Local File**. Click **Browse** to select a different local file.
-- **Select a resource from the Repository**. Click **Browse** to select a different file in the repository.
+    *Figure 6: Locate Access Grant Definition Page*
 
-1.  Click **Next**.
+14. Click one of the following options:
 
-If you chose to secure the data, the **Access Grant Resource** page appears.
+    - **Do not link an Access Grant**. Click **Next** and skip step 17.
+    - **Upload a Local File**. Click **Browse** to select a different local file.
+    - **Select a resource from the Repository**. Click **Browse** to select a different file in the repository.
 
-![ja add view accessgrantresourcewindow](assets/images/ja-add-view-accessgrantresourcewindow.png)
+15. Click **Next**.
 
-*Figure 7: Access Grant Resource Page*
+    If you chose to secure the data, the **Access Grant Resource** page appears.
 
-1.  If you upload a new AGXML file, enter the requested information. For details, refer [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you select a resource from the repository, the fields are not editable.
-2.  Click **Submit**.
+    ![ja add view accessgrantresourcewindow](assets/images/ja-add-view-accessgrantresourcewindow.png)
+
+    *Figure 7: Access Grant Resource Page*
+
+16. If you upload a new AGXML file, enter the requested information. For details, refer [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you select a resource from the repository, the fields are not editable.
+
+17. Click **Submit**.
 
 The updated connection appears in the repository.

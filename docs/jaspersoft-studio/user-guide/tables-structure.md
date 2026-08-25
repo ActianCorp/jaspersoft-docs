@@ -14,9 +14,6 @@ A table must have at least one column, but it can have any number. A set of colu
 Each table is divided into sections similar to the main document bands:
 
 - **Table header and footer**: each printed only once.
-
-<!-- -->
-
 - **Column header and footer**: repeated on each page the table spans. For column groups, the table can display a group header and footer section for each group and for each column.
 - **Detail**: repeated for each record of the table. Each column contains only one detail section, and the section cannot span multiple columns.
 

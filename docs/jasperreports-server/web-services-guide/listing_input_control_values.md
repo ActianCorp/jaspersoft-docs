@@ -57,14 +57,14 @@ The body of the response contains the structure of the input controls for the re
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span><span class="ot">,</span> <span class="fu">{</span></span></code></pre></div></td>
 </tr>
 <tr>
-<td><pre class="text"><code>      &quot;label&quot; : &quot;USA&quot;,
+<td><div class="language-text highlight"><pre><code>      &quot;label&quot; : &quot;USA&quot;,
       &quot;selected&quot; : &quot;true&quot;,
       &quot;value&quot; : &quot;USA&quot;
     }
   },
   ...
   ]
-}</code></pre></td>
+}</code></pre></div></td>
 </tr>
 </tbody>
 </table>

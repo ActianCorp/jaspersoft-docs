@@ -29,31 +29,31 @@ To create the JasperReports Server database manually in PostgreSQL:
 
 1.  On the Windows, Linux, or Mac command line, enter these commands:
 
-```
-cd <js-install>/buildomatic/install_resources/sql/postgresql
-psql -U postgres -W
-postgres=#create database jasperserver encoding=’utf8’;
-postgres=#\c jasperserver;
-postgres=#\i -pro
-    -create.ddl
-postgres=#\i quartz.ddl
-postgres=#\q
-```
+    ``` bash
+    cd <js-install>/buildomatic/install_resources/sql/postgresql
+    psql -U postgres -W
+    postgres=#create database jasperserver encoding=’utf8’;
+    postgres=#\c jasperserver;
+    postgres=#\i -pro
+        -create.ddl
+    postgres=#\i quartz.ddl
+    postgres=#\q
+    ```
 
-1.  Run the following commands to install the JSAudit database:
+2.  Run the following commands to install the JSAudit database:
 
-```
-cd <js-install>/buildomatic/install_resources/sql/postgresql
-psql -U postgres -W
-postgres=#create database jsaudit;
-postgres=#\c jsaudit;
-postgres=#\i js-pro-create-audit.ddl
-postgres=#\q
-```
+    ``` bash
+    cd <js-install>/buildomatic/install_resources/sql/postgresql
+    psql -U postgres -W
+    postgres=#create database jsaudit;
+    postgres=#\c jsaudit;
+    postgres=#\i js-pro-create-audit.ddl
+    postgres=#\q
+    ```
 
-1.  (Optional) Run the following commands if you want to install sample databases:
+3.  (Optional) Run the following commands if you want to install sample databases:
 
-```
+``` bash
 cd <js-install>/buildomatic/install_resources/sql/postgresql
 psql -U postgres -W
 postgres=#create database sugarcrm encoding=’utf8’;
@@ -100,30 +100,30 @@ You can use the MySQL client software, `mysql.exe` or `mysql`, to interact with 
 
 1.  On the Windows, Linux, or Mac command line, enter the following commands to create and initialize the JasperReports Server database.
 
-```
-cd <js-install>/buildomatic/install_resources/sql/mysql
-mysql -u root -p
-mysql>create database jasperserver character set utf8;
-mysql>use jasperserver;
-mysql>source -pro
-    -create.ddl
-mysql>source quartz.ddl
-mysql>exit
-```
+    ``` bash
+    cd <js-install>/buildomatic/install_resources/sql/mysql
+    mysql -u root -p
+    mysql>create database jasperserver character set utf8;
+    mysql>use jasperserver;
+    mysql>source -pro
+        -create.ddl
+    mysql>source quartz.ddl
+    mysql>exit
+    ```
 
-1.  Run these commands to create and initialize the JSAudit database.
+2.  Run these commands to create and initialize the JSAudit database.
 
-```
-mysql -u root -p
-mysql>create database jsaudit;
-mysql>use jsaudit;
-mysql>source js-pro-create-audit.ddl
-mysql>exit
-```
+    ``` text
+    mysql -u root -p
+    mysql>create database jsaudit;
+    mysql>use jsaudit;
+    mysql>source js-pro-create-audit.ddl
+    mysql>exit
+    ```
 
-1.  (Optional) Run these commands to install sample databases:
+3.  (Optional) Run these commands to install sample databases:
 
-```
+``` bash
 cd <js-install>/buildomatic/install_resources/sql/mysql
 mysql -u root -p
 mysql>create database sugarcrm;
@@ -170,34 +170,34 @@ You can use the Oracle client software, `sqlplus.exe` or `sqlplus`, to interact 
 
 1.  On the Windows, Linux, or Mac command line, enter the following commands to create and initialize the JasperReports Server database.
 
-```
-cd <js-install>/buildomatic/install_resources/sql/oracle
-sqlplus /nolog (start sqlplus client)
-SQL> connect system/password (use your sysUsername and password)
-(or SQL>connect sys/password as sysdba
-SQL> create user jasperserver identified by password; (as sys user)
-SQL> grant connect, resource to jasperserver; (as sys user)
-SQL> grant unlimited tablespace to jasperserver; (as sys user)
-SQL> connect jasperserver/password@ORCL (use your password, your SID)
-SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/js-pro-create.ddl
-SQL> @/opt/jasperreports-server-pro-8.0.0-
-bin/buildomatic/install_resources/sql/oracle/quartz.ddl or quartz-23onwards.ddl (depending on the oracle db version being used)
-SQL> exit
-```
+    ``` bash
+    cd <js-install>/buildomatic/install_resources/sql/oracle
+    sqlplus /nolog (start sqlplus client)
+    SQL> connect system/password (use your sysUsername and password)
+    (or SQL>connect sys/password as sysdba
+    SQL> create user jasperserver identified by password; (as sys user)
+    SQL> grant connect, resource to jasperserver; (as sys user)
+    SQL> grant unlimited tablespace to jasperserver; (as sys user)
+    SQL> connect jasperserver/password@ORCL (use your password, your SID)
+    SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/js-pro-create.ddl
+    SQL> @/opt/jasperreports-server-pro-8.0.0-
+    bin/buildomatic/install_resources/sql/oracle/quartz.ddl or quartz-23onwards.ddl (depending on the oracle db version being used)
+    SQL> exit
+    ```
 
-1.  To create and initialize the JSAudit database, enter the following commands.
+2.  To create and initialize the JSAudit database, enter the following commands.
 
-```
-SQL> create user jsaudit identified by password; (as sys user)
-SQL> grant connect, resource to jsaudit; (as sys user)
-SQL> grant unlimited tablespace to jsaudit; (as sys user)
-SQL> connect jsaudit/password@ORCL
-SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/js-sequence-create.ddl
-SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/js-pro-create-audit.ddl
-SQL> exit
-```
+    ``` text
+    SQL> create user jsaudit identified by password; (as sys user)
+    SQL> grant connect, resource to jsaudit; (as sys user)
+    SQL> grant unlimited tablespace to jsaudit; (as sys user)
+    SQL> connect jsaudit/password@ORCL
+    SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/js-sequence-create.ddl
+    SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/js-pro-create-audit.ddl
+    SQL> exit
+    ```
 
-1.  Go to the `<js-install>/buildomatic` path and configure the `default_master.properties` file with the required values. For example:<br>
+3.  Go to the `<js-install>/buildomatic` path and configure the `default_master.properties` file with the required values. For example:<br>
     <br>
     `cd <js-install>/buildomatic`<br>
     `dbUsername=jasperserver`<br>
@@ -207,70 +207,71 @@ SQL> exit
     `dbHost=localhost`<br>
     `dbPort=1521 sid=ORCL `
 
-`dbVersion=oracleDbVersion` `(for example, 12, 19c, 21c, 23ai, 26ai and so on)`<br>
-<br>
-`#audit props`<br>
-`installType=split`<br>
-`audit.dbHost=localhost`<br>
-`audit.dbPort=1521`<br>
-`audit.sid=ORCL`<br>
-`audit.dbUsername=jsaudit`<br>
-`audit.dbPassword=password`<br>
-`audit.dbName=jsaudit`<br>
-`audit.sysUsername=system`<br>
-`audit.sysPassword=password`
+    `dbVersion=oracleDbVersion` `(for example, 12, 19c, 21c, 23ai, 26ai and so on)`<br>
+    <br>
+    `#audit props`<br>
+    `installType=split`<br>
+    `audit.dbHost=localhost`<br>
+    `audit.dbPort=1521`<br>
+    `audit.sid=ORCL`<br>
+    `audit.dbUsername=jsaudit`<br>
+    `audit.dbPassword=password`<br>
+    `audit.dbName=jsaudit`<br>
+    `audit.sysUsername=system`<br>
+    `audit.sysPassword=password`
 
-You can set sysUsername and sysPassword the same as dbUsername and dbPassword.
+    You can set sysUsername and sysPassword the same as dbUsername and dbPassword.
 
-1.  Create a server setting with the audit db schema name (auditDB=JSAUDIT), to do so:
-2.  Go to `<js-install>/buildomatic/bin` path and edit the `db-common.xml` file.
-3.  Add the following target at the end of file and before `</project>`:<br>
-    `<target name="import-profile-attributes">`<br>
-    `<import-profile-attribute key="auditDB" attrValue="${audit.dbName}"/>`<br>
-    `</target>`
-4.  Save the file.
-5.  Run the following command:<br>
-    `./js-ant import-profile-attributes`
+4.  Create a server setting with the audit db schema name (auditDB=JSAUDIT), to do so:
 
-!!! note
+    1.  Go to `<js-install>/buildomatic/bin` path and edit the `db-common.xml` file.
+    2.  Add the following target at the end of file and before `</project>`:<br>
+        `<target name="import-profile-attributes">`<br>
+        `<import-profile-attribute key="auditDB" attrValue="${audit.dbName}"/>`<br>
+        `</target>`
+    3.  Save the file.
+    4.  Run the following command:<br>
+        `./js-ant import-profile-attributes`
 
-    Server setting auditDB=JSAUDIT is needed for audit reports working properly on oracle in case of split installation.
+    !!! note
 
-1.  (Optional) Special edit to the `sugarcrm.sql` script that creates the `sugarcrm` sample database. The `sqlplus` command line tool interprets SQL statements differently than a JDBC call (that is, the way buildomatic runs SQL scripts). Because of this, the `sugarcrm.sql` file must be edited to run using `sqlplus`. To make these edits, do the following:
+        Server setting auditDB=JSAUDIT is needed for audit reports working properly on oracle in case of split installation.
 
-- Unzip the `sugarcrm.zip` file to get the `sugarcrm.sql` file. Open `sugarcrm.sql` for editing:
-- Uncomment the `"-- set define off"` line to look like this `"set define off"` (Line 7)
-- Uncomment the `"--/"` line that follows the `CREATE TRIGGER` statements (there are 12 of these toward the very end of the file on line 71,282. Just before the `CREATE INDEX` statements). Change to be just `"/"`. (This stops the trigger procedure definition in `sqlplus`.)
-- Save the file.
+5.  (Optional) Special edit to the `sugarcrm.sql` script that creates the `sugarcrm` sample database. The `sqlplus` command line tool interprets SQL statements differently than a JDBC call (that is, the way buildomatic runs SQL scripts). Because of this, the `sugarcrm.sql` file must be edited to run using `sqlplus`. To make these edits, do the following:
 
-!!! note
+    - Unzip the `sugarcrm.zip` file to get the `sugarcrm.sql` file. Open `sugarcrm.sql` for editing:
+    - Uncomment the `"-- set define off"` line to look like this `"set define off"` (Line 7)
+    - Uncomment the `"--/"` line that follows the `CREATE TRIGGER` statements (there are 12 of these toward the very end of the file on line 71,282. Just before the `CREATE INDEX` statements). Change to be just `"/"`. (This stops the trigger procedure definition in `sqlplus`.)
+    - Save the file.
 
-    If you build and load the sample databases using buildomatic, the NLS_LANG setting is automatically handled via a JDBC driver setting.
+    !!! note
 
-    If you load the sample databases using buildomatic, you will not need to set any variables or make any script edits.
+        If you build and load the sample databases using buildomatic, the NLS_LANG setting is automatically handled via a JDBC driver setting.
 
-1.  (Optional) Set the `NLS_LANG` variable. The `sugarcrm` database has test data that requires a specific NLS_LANG setting to load into Oracle correctly. You need to set this in your shell environment if you are manually loading the `sugarcrm` database.
+        If you load the sample databases using buildomatic, you will not need to set any variables or make any script edits.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Windows:</p></td>
-<td><pre class="text"><code>set NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1</code></pre></td>
-</tr>
-<tr>
-<td><p>Linux:</p></td>
-<td><pre class="text"><code>export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1</code></pre></td>
-</tr>
-</tbody>
-</table>
+6.  (Optional) Set the `NLS_LANG` variable. The `sugarcrm` database has test data that requires a specific NLS_LANG setting to load into Oracle correctly. You need to set this in your shell environment if you are manually loading the `sugarcrm` database.
 
-1.  (Optional) Run the following commands if you want to install sample databases:
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Windows:</p></td>
+    <td><div class="language-text highlight"><pre><code>set NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1</code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Linux:</p></td>
+    <td><div class="language-text highlight"><pre><code>export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1</code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-```
+7.  (Optional) Run the following commands if you want to install sample databases:
+
+``` bash
 cd <js-install>/buildomatic/install_resources/sql/oracle
 sqlplus /nolog (start sqlplus client)
 SQL> connect system/password (use your sysUsername and password)
@@ -321,29 +322,29 @@ Use the DB2 client software, `db2` or `db2cmd`, to interact with DB2.
 
 1.  Change to the following directory:
 
-`cd <js-install>/buildomatic/install_resources/sql/db2`
+    `cd <js-install>/buildomatic/install_resources/sql/db2`
 
-1.  Enter these commands in the DB2 command window to create and initialize the repository database called `jsprsrvr` in DB2 to conform to the 8-character limitation:
+2.  Enter these commands in the DB2 command window to create and initialize the repository database called `jsprsrvr` in DB2 to conform to the 8-character limitation:
 
-```
-db2 create database jsprsrvr using codeset utf-8 territory us pagesize 16384
-db2 connect to jsprsrvr
-db2 -tf js-pro-create.ddl
-db2 -tf quartz.ddl
-```
+    ``` text
+    db2 create database jsprsrvr using codeset utf-8 territory us pagesize 16384
+    db2 connect to jsprsrvr
+    db2 -tf js-pro-create.ddl
+    db2 -tf quartz.ddl
+    ```
 
-1.  To create and initialize the JSAudit database, enter the following commands in the DB2 command window:
+3.  To create and initialize the JSAudit database, enter the following commands in the DB2 command window:
 
-```
-db2 create database jsaudit
-db2 connect to jsaudit
-db2 -tf js-pro-create-audit.ddl
-db2 exit
-```
+    ``` text
+    db2 create database jsaudit
+    db2 connect to jsaudit
+    db2 -tf js-pro-create-audit.ddl
+    db2 exit
+    ```
 
-1.  (Optional) Run the following commands in the DB2 command window if you want to install sample databases:
+4.  (Optional) Run the following commands in the DB2 command window if you want to install sample databases:
 
-```
+``` text
 db2 create database sugarcrm
 db2 connect to sugarcrm
 db2 -tf sugarcrm.sql (first make sure file is unzipped)
@@ -393,55 +394,57 @@ To create the JasperReports Server database manually in SQL Server:
 
 1.  Open a Command Prompt and enter the following commands using the administrator (sa) username and password.
 
-```
-cd <js-install>\buildomatic\install_resources\sql\sqlserversqlcmd -S ServerName -Usa -Psa
-1> CREATE DATABASE [jasperserver]
-2> GO
-1> USE [jasperserver]
-2> GO
-1> :r js-pro-create.ddl
-2> GO
-1> :r quartz.ddl
-2> GO
-```
+    ``` bash
+    cd <js-install>\buildomatic\install_resources\sql\sqlserversqlcmd -S ServerName -Usa -Psa
+    1> CREATE DATABASE [jasperserver]
+    2> GO
+    1> USE [jasperserver]
+    2> GO
+    1> :r js-pro-create.ddl
+    2> GO
+    1> :r quartz.ddl
+    2> GO
+    ```
 
-1.  From the Windows Start menu, select ****Microsoft SQL Server \> SQL Server Management Studio****.
-2.  Connect to SQL Server as the administrative database user, and check that the `jasperserver` database appears in the Object Explorer.
-3.  Expand the tables in the `jasperserver` database, and check that the tables have been added.
+2.  From the Windows Start menu, select ****Microsoft SQL Server \> SQL Server Management Studio****.
 
-To create and initialize the JSAudit database:
+3.  Connect to SQL Server as the administrative database user, and check that the `jasperserver` database appears in the Object Explorer.
 
-1.  Run the following commands:
+4.  Expand the tables in the `jasperserver` database, and check that the tables have been added.
 
-```
-cd <js-install>\buildomatic\install_resources\sql\sqlserver
-sqlcmd -S ServerName -Usa -Psa
-1> CREATE DATABASE [jsaudit]
-2> GO
-1> USE [jsaudit]
-2> GO
-1> :r js-pro-create-audit.ddl
-2> GO
-```
+    To create and initialize the JSAudit database:
 
-To create the optional sample databases manually in SQL Server:
+5.  Run the following commands:
 
-1.  Extract the files in the `sugarcrm.zip` file to the level above your current directory, placing the `sugarcrm.sql` file in this directory:
+    ``` bash
+    cd <js-install>\buildomatic\install_resources\sql\sqlserver
+    sqlcmd -S ServerName -Usa -Psa
+    1> CREATE DATABASE [jsaudit]
+    2> GO
+    1> USE [jsaudit]
+    2> GO
+    1> :r js-pro-create-audit.ddl
+    2> GO
+    ```
 
-`<js-install>\jasperserver\buildomatic\install_resources\sql\sqlserver`
+    To create the optional sample databases manually in SQL Server:
 
-1.  Enter these commands to create and initialize the `sugarcrm` database:
+6.  Extract the files in the `sugarcrm.zip` file to the level above your current directory, placing the `sugarcrm.sql` file in this directory:
 
-```
-1> CREATE DATABASE [sugarcrm]
-2> GO
-1> USE [sugarcrm]
-2> GO
-1> :r sugarcrm.sql
-2> GO
-```
+    `<js-install>\jasperserver\buildomatic\install_resources\sql\sqlserver`
 
-1.  You cannot initialize the foodmart database manually. Instead, change to the buildomatic directory and use the following buildomatic commands to create and initialize it from the command line:
+7.  Enter these commands to create and initialize the `sugarcrm` database:
+
+    ``` text
+    1> CREATE DATABASE [sugarcrm]
+    2> GO
+    1> USE [sugarcrm]
+    2> GO
+    1> :r sugarcrm.sql
+    2> GO
+    ```
+
+8.  You cannot initialize the foodmart database manually. Instead, change to the buildomatic directory and use the following buildomatic commands to create and initialize it from the command line:
 
 `js-ant create-foodmart-db`
 
@@ -449,7 +452,7 @@ To create the optional sample databases manually in SQL Server:
 
 Alternatively, you can replace the first command and create the database manually using the following SQL Server commands, but you still have to use the buildomatic command `js-ant load-foodmart-db` to load the data:
 
-```
+``` text
 1> CREATE DATABASE [foodmart]
 2> GO
 1> USE [foodmart]

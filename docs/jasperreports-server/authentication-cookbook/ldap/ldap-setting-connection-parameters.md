@@ -14,7 +14,7 @@ You can configure your connection to the LDAP server in one of two ways:
 
 The preferred approach is to configure the `external.ldapUrl`, `external.ldapDn`, and `external.ldapPassword` properties in the `default_master.properties` file before installation or upgrade. The default configuration of the `ldapContextSource` bean in `sample-applicationContext-externalAuth-LDAP[-mt].xml` uses context properties for the LDAP connection properties:
 
-```
+``` xml
 <bean id="ldapContextSource"
     class="com.jaspersoft.jasperserver.api.security.externalAuth.ldap.JSLdapContextSource">
   <constructor-arg value="${external.ldap.url}" />
@@ -26,17 +26,18 @@ The preferred approach is to configure the `external.ldapUrl`, `external.ldapDn`
 To configure these properties using default_master.properties, follow these steps:
 
 1.  Open default_master.properties in a text editor.
+
 2.  Locate the following properties and set them for your LDAP server as follows:
 
-- `external.ldapUrl` property: The URL of your LDAP server, including the base DN.
-- `external.ldapDn` property: The distinguished name (DN) of your LDAP administrator.
-- `external.ldapPassword` property: The password of your LDAP administrator.
+    - `external.ldapUrl` property: The URL of your LDAP server, including the base DN.
+    - `external.ldapDn` property: The distinguished name (DN) of your LDAP administrator.
+    - `external.ldapPassword` property: The password of your LDAP administrator.
 
 3.  You can choose to encrypt any of the LDAP connection parameters.
 
 The following example shows the syntax of the properties in the default_master.properties file:
 
-```
+``` properties
 external.ldapUrl=ldap://hostname:389/dc=example,dc=com
 external.ldapDn=cn=Administrator,dc=example,dc=com
 external.ldapPassword=password
@@ -44,7 +45,7 @@ external.ldapPassword=password
 
 To encrypt the password property, also set the following:
 
-```
+``` properties
 encrypt=true
 propsToEncrypt=dbPassword,external.ldapPassword
 ```
@@ -72,7 +73,7 @@ To set the connection parameters for the LDAP server directly in the application
 
 Here's an example shows the syntax of the bean’s constructor and properties when manually configured:
 
-```
+``` xml
 <bean id="ldapContextSource"
     class="com.jaspersoft.jasperserver.api.security.externalAuth.ldap.JSLdapContextSource">
   <constructor-arg value="ldap://hostname:389/dc=example,dc=com" />

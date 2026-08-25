@@ -17,112 +17,110 @@ To analyze the FoodMart view
 
 1.  Begin by looking at a top-level summary of sales for all products. An aggregated view like this lets us dive into the data in any direction of interest. In this example, we look at data for the month of December.
 
-![ja ug admin toplevelsummary](../assets/images/ja-ug-admin-toplevelsummary.png)
+    ![ja ug admin toplevelsummary](../assets/images/ja-ug-admin-toplevelsummary.png)
 
-Top-level Summary for December
+    Top-level Summary for December
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
-<p>Hierarchize({[Product].[All Products]}) ON ROWS</p>
-<p>from [Sales]</p></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
+    <p>Hierarchize({[Product].[All Products]}) ON ROWS</p>
+    <p>from [Sales]</p></td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  Drill-down is the most basic function in analysis.
+2.  Drill-down is the most basic function in analysis.
 
-To drill-down, click ![ja expand position nav table](../assets/images/ja-expand-position-nav-table.jpg) next to the ALL PRODUCTS member. The next level of the PRODUCT hierarchy, **Product Family**, appears.
+    To drill-down, click ![ja expand position nav table](../assets/images/ja-expand-position-nav-table.jpg) next to the ALL PRODUCTS member. The next level of the PRODUCT hierarchy, **Product Family**, appears.
 
-![ja ug admin drilldown1](../assets/images/ja-ug-admin-drilldown1.png)
+    ![ja ug admin drilldown1](../assets/images/ja-ug-admin-drilldown1.png)
 
-Expand All Products
+    Expand All Products
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
-<p>Hierarchize(Union({[Product].[All Products]}, [Product].[All Products]<span>.Children))</span> ON ROWS</p>
-<p>from [Sales]</p>
-<p>where [Time].[2012].[Q4].[12]</p></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
+    <p>Hierarchize(Union({[Product].[All Products]}, [Product].[All Products]<span>.Children))</span> ON ROWS</p>
+    <p>from [Sales]</p>
+    <p>where [Time].[2012].[Q4].[12]</p></td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  Drill down again, this time by zooming on the Drink product family. Use ![ja pro zoom on drill](../assets/images/ja-pro-zoom-on-drill.png) on DRINK.
+3.  Drill down again, this time by zooming on the Drink product family. Use ![ja pro zoom on drill](../assets/images/ja-pro-zoom-on-drill.png) on DRINK.
 
-![ja ug admin drilldown2](../assets/images/ja-ug-admin-drilldown2.png)
+    ![ja ug admin drilldown2](../assets/images/ja-ug-admin-drilldown2.png)
 
-Zoom on the Drink Product Family
+    Zoom on the Drink Product Family
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
-<p>[Product].[Drink]<span>.Children</span> ON ROWS</p>
-<p>from [Sales]</p>
-<p>where [Time].[2012].[Q4].[12]</p></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
+    <p>[Product].[Drink]<span>.Children</span> ON ROWS</p>
+    <p>from [Sales]</p>
+    <p>where [Time].[2012].[Q4].[12]</p></td>
+    </tr>
+    </tbody>
+    </table>
 
-1.  By zooming, we could drill down to the lowest level of data in the cube. Let us instead focus our attention by zooming on the ALCOHOLIC BEVERAGES product department, then the BEER AND WINE product category.
+4.  By zooming, we could drill down to the lowest level of data in the cube. Let us instead focus our attention by zooming on the ALCOHOLIC BEVERAGES product department, then the BEER AND WINE product category.
 
-![ja ug admin expand1](../assets/images/ja-ug-admin-expand1.png)
+    ![ja ug admin expand1](../assets/images/ja-ug-admin-expand1.png)
 
-Expand Beer and Wine Subcategories
+    Expand Beer and Wine Subcategories
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
-<p>[Product].[Drink].[Alcoholic Beverages].[Beer and Wine]<span>.Children</span> ON ROWS</p>
-<p>from [Sales]</p>
-<p>where [Time].[2012].[Q4].[12]</p></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>select {[Measures].[Store Sales]} ON COLUMNS,</p>
+    <p>[Product].[Drink].[Alcoholic Beverages].[Beer and Wine]<span>.Children</span> ON ROWS</p>
+    <p>from [Sales]</p>
+    <p>where [Time].[2012].[Q4].[12]</p></td>
+    </tr>
+    </tbody>
+    </table>
 
-Now we can see that, overall, wine makes up the majority of the dollar amount for this category.
+    Now we can see that, overall, wine makes up the majority of the dollar amount for this category.
 
-1.  Let us see if that finding holds true across different stores. To do so, we add another dimension, which creates a crossjoin. Analytic views make creating a crossjoin easy.
+5.  Let us see if that finding holds true across different stores. To do so, we add another dimension, which creates a crossjoin. Analytic views make creating a crossjoin easy.
 
-<!-- -->
+    1.  Select ![ja pro change data cube](../assets/images/ja-pro-change-data-cube.png), make STORE a row, and select **All Stores**\> USA \> CA (for instructions on adding a dimension, refer to [Cube Configuration](../analyze-data/cube_configuration.md)). Adding the STORE dimension to rows allows you to see the breakdown within the store as well as across different stores with respect to certain products (if we wanted to compare different products across stores, we would make PRODUCTS a row instead of STORES).
 
-1.  Select ![ja pro change data cube](../assets/images/ja-pro-change-data-cube.png), make STORE a row, and select **All Stores**\> USA \> CA (for instructions on adding a dimension, refer to [Cube Configuration](../analyze-data/cube_configuration.md)). Adding the STORE dimension to rows allows you to see the breakdown within the store as well as across different stores with respect to certain products (if we wanted to compare different products across stores, we would make PRODUCTS a row instead of STORES).
+    ![ja ug admin expand2](../assets/images/ja-ug-admin-expand2.png)
 
-![ja ug admin expand2](../assets/images/ja-ug-admin-expand2.png)
+    Adding the All Stores Dimension
 
-Adding the All Stores Dimension
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p><code>select {[Measures].[Store Sales]} ON COLUMNS,</code></p>
+    <p><code> Crossjoin([Product].[Drink].[Alcoholic Beverages].[Beer and Wine].Children, {[Store].[All Stores]}) ON ROWS</code></p>
+    <p><code>from [Sales]</code></p>
+    <p><code>where [Time].[2012].[Q4].[12]</code></p></td>
+    </tr>
+    </tbody>
+    </table>
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><code>select {[Measures].[Store Sales]} ON COLUMNS,</code></p>
-<p><code> Crossjoin([Product].[Drink].[Alcoholic Beverages].[Beer and Wine].Children, {[Store].[All Stores]}) ON ROWS</code></p>
-<p><code>from [Sales]</code></p>
-<p><code>where [Time].[2012].[Q4].[12]</code></p></td>
-</tr>
-</tbody>
-</table>
-
-1.  Deselect the ![ja pro zoom on drill](../assets/images/ja-pro-zoom-on-drill.png), then use ![ja expand position 2 nav table](../assets/images/ja-expand-position-2-nav-table.jpg) to drill down to navigate to intersections of the store and city data. For example, under both the BEER and WINE subcategories, drill-down on ALL STORES, then USA, then CALIFORNIA to examine the data on the California stores. Notice that your are comparing two products across five stores, in an easy-to-understand format. We did this by navigating the data presented by Jaspersoft OLAP without having to design and run a report.
+6.  Deselect the ![ja pro zoom on drill](../assets/images/ja-pro-zoom-on-drill.png), then use ![ja expand position 2 nav table](../assets/images/ja-expand-position-2-nav-table.jpg) to drill down to navigate to intersections of the store and city data. For example, under both the BEER and WINE subcategories, drill-down on ALL STORES, then USA, then CALIFORNIA to examine the data on the California stores. Notice that your are comparing two products across five stores, in an easy-to-understand format. We did this by navigating the data presented by Jaspersoft OLAP without having to design and run a report.
 
 ![ja ug admin drilldown3](../assets/images/ja-ug-admin-drilldown3.png)
 

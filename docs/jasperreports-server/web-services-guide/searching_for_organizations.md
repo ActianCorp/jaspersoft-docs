@@ -29,25 +29,25 @@ The GET method without any organization ID searches for organizations by ID, ali
 <td colspan="2"><p>Description</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>q</code></pre></td>
+<td><div class="language-text highlight"><pre><code>q</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specify a string or substring to match the organization ID, alias, or name of any organization. The search is not case sensitive. Only the matching organizations are returned in the results, regardless of their hierarchy.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>includeParents</code></pre></td>
+<td><div class="language-text highlight"><pre><code>includeParents</code></pre></div></td>
 <td><p>Optional<br />
 Boolean</p></td>
 <td colspan="2"><p>When used with a search, the result will include the parent hierarchy of each matching organization. When not specified, this argument is false by default.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>rootTenantId</code></pre></td>
+<td><div class="language-text highlight"><pre><code>rootTenantId</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specifies an organization ID as a base for searching and listing child organizations. The base is not included in the results. Regardless of this base, the <code>tenantFolderURI</code> values in the result are always relative to the logged-in user’s organization. When not specified, the default base is the logged-in user’s organization.</p></td>
 </tr>
 <tr>
-<td><pre class="text"><code>sortBy</code></pre></td>
+<td><div class="language-text highlight"><pre><code>sortBy</code></pre></div></td>
 <td><p>Optional<br />
 String</p></td>
 <td colspan="2"><p>Specifies a sort order for results. When not specified, lists of organizations are in the order that they were created. The possible values are:</p>

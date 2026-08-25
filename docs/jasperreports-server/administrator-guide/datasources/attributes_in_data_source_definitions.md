@@ -15,9 +15,11 @@ Attributes can be used to derive all data source parameters that are not selecte
 When referring to an attribute in a data source definition, you can specify the attribute categorically or hierarchically:
 
 - Categorical reference: If you specify a category for the attribute value, the server attempts to find that particular value of the attribute. If the attribute is not defined where specified, reports using this data source fails with an error. You can specify these attribute categories:
+
   - User: In the attributes defined on the logged in user.
   - Tenant: In the attributes defined on the organization of the logged in user.
   - Server: In the attributes defined at the server-level.
+
 - Hierarchical reference: If you do not specify a category for the attribute, the server searches attributes hierarchically and uses the value of the first attribute it finds with the given name. This search starts with the logged in user, then proceeds to the user's organization and parent organizations, and finally to the server level. If the specified attribute is not found in any of these, reports using this data source fails with an error.
 
 The following figure is an example of the attributes used to define data source parameters.

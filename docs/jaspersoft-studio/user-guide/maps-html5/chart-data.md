@@ -34,7 +34,7 @@ To retrieve the chart data
 1.  In the **Outline** view, right-click the report name and select **Dataset and Query**.
 2.  Choose Sample DB from the data adapters list in the upper-left corner and enter the SQL query in the query panel, for example:
 
-```
+``` sql
 SELECT "hc-key", "hc_a2" , "name" ,"region" , "x", "y", "value"
 FROM
 (VALUES
@@ -99,7 +99,9 @@ Now the chart data is prepared, and the "value" field represents the population 
 The three fields that contain common values with the GeoJSON map data are "hc-key", "hc_a2" and "name". Both "hc-key" and "name" correspond to the similar named fields in the GeoJSON file, and "hc_a2" corresponds to hc-a2 GeoJSON field. The following shows the joining process:
 
 - If a field named `hc-key` is present in the chart data, then by default, it associates with the `hc-key` field in the GeoJSON map data, and there is no need to set the `plotOptions.map.joinBy` property.
+
 - If there is no `hc-key` field, or if you prefer to use another field to join data, then there are two possibilities:
+
   - If the chart data field has the same name as the GeoJSON map data field (for this example, the common field is "name"), then we need to set the `plotOptions.map.joinBy` property with the following common field name:<br>
     `plotOptions.map.joinBy = "name"`
   - If the related fields of chart data and GeoJSON map data have different names (for this example, "hc_a2" and "hc-a2"), then we need to set the `plotOptions.map.joinBy` property with an array containing the two field names (starting with the GeoJSON field name):<br>
@@ -108,50 +110,56 @@ The three fields that contain common values with the GeoJSON map data are "hc-ke
 ## Joining Data Using the Default hc-key Field
 
 1.  Right-click the map and select the **Edit Map properties**. The **HTML5 Map Edit Dialog** is displayed.
+
 2.  Select **Data Configuration** \> **Data**. For this example, use the following values.
 
-- **Entity Expression**: `$F{hc-key}`
-- **Value Expression**: `$F{value}`
+    - **Entity Expression**: `$F{hc-key}`
+    - **Value Expression**: `$F{value}`
 
-1.  Click the **Switch to advanced configuration**.
+3.  Click the **Switch to advanced configuration**.
 
-|  |
-|----|
-| ![html5 maps advanced config](../assets/images/html5-maps-advanced%20config.png) |
-| *Figure 1: Advanced Configuration for Map* |
+    |  |
+    |----|
+    | ![html5 maps advanced config](../assets/images/html5-maps-advanced%20config.png) |
+    | *Figure 1: Advanced Configuration for Map* |
 
-1.  If there is no hc-key under Measures, click **Add** and follow step 4 to step 11 to add the hc-key value for each chart data point. Enter the following values:
+4.  If there is no hc-key under Measures, click **Add** and follow step 4 to step 11 to add the hc-key value for each chart data point. Enter the following values:
 
-- **Name**: `hc-key`
-- Select the **Hidden** checkbox
-- **Label Expression**: `$F{hc-key}`
-- **Calculation**: Nothing
-- **Value Expression**: `$F{hc-key}`
-- **Value Class Name**:` java.lang.String`
+    - **Name**: `hc-key`
+    - Select the **Hidden** checkbox
+    - **Label Expression**: `$F{hc-key}`
+    - **Calculation**: Nothing
+    - **Value Expression**: `$F{hc-key}`
+    - **Value Class Name**:` java.lang.String`
 
-|                                                              |
-|--------------------------------------------------------------|
-| ![html5 map measure](../assets/images/html5-map-measure.png) |
-| *Figure 2: Adding Measure Values*                            |
+    |                                                              |
+    |--------------------------------------------------------------|
+    | ![html5 map measure](../assets/images/html5-map-measure.png) |
+    | *Figure 2: Adding Measure Values*                            |
 
-1.  Click **OK**.
-2.  Under Measures, select Measure1 and click **Modify**.
-3.  Click the **Advanced Properties** tab and click **Add**. The **Edit Property** dialog is displayed.
-4.  Set the following values:
+5.  Click **OK**.
 
-- **Contributor**: `SeriesItemProperty`
-- **Property Name**: `hc-key`
+6.  Under Measures, select Measure1 and click **Modify**.
 
-1.  Select the **Use Measure Value** and then select the `hc-key` from the drop-down list.
+7.  Click the **Advanced Properties** tab and click **Add**. The **Edit Property** dialog is displayed.
 
-|                                                                    |
-|--------------------------------------------------------------------|
-| ![jss html5 map hc key](../assets/images/jss-html5-map-hc-key.png) |
-| *Figure 3: Selecting Use Measure Value*                            |
+8.  Set the following values:
 
-1.  Click **OK**.
-2.  Click **OK** again.
-3.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+    - **Contributor**: `SeriesItemProperty`
+    - **Property Name**: `hc-key`
+
+9.  Select the **Use Measure Value** and then select the `hc-key` from the drop-down list.
+
+    |                                                                    |
+    |--------------------------------------------------------------------|
+    | ![jss html5 map hc key](../assets/images/jss-html5-map-hc-key.png) |
+    | *Figure 3: Selecting Use Measure Value*                            |
+
+10. Click **OK**.
+
+11. Click **OK** again.
+
+12. Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
 |  |
 |----|
@@ -165,54 +173,58 @@ You can see that the color of the map has been changed. This is because when you
 You can configure chart data of the map using the **Map Formatting** tab in the **HTML5 Map Edit Dialog**.
 
 1.  To add a subtitle to an HTML5 map, right-click the map and select the **Edit Map properties**. The **HTML5 Map Edit Dialog** is displayed.
-2.  Click the **Map Formatting** tab.
-3.  Select the **Subtitle** section and enter your subtitle in the **Subtitle** text box. For this example, enter the following:
 
-- **Subtitle**: `- population map -`
+    1.  Click the **Map Formatting** tab.
+    2.  Select the **Subtitle** section and enter your subtitle in the **Subtitle** text box. For this example, enter the following:
 
-1.  Select the **Colors** section and set the following:
+    - **Subtitle**: `- population map -`
 
-- **Min**: `0`
-- **Max**: `40000000`
-- **Tick Interval**: `10000000`
-- **Min Color**:` #88FCEF`
-- **Max Color**: `#2E0EE6`
+2.  Select the **Colors** section and set the following:
 
-1.  To configure a map legend for adding quantitative information, select the **Legend** section and set the following. For example:
+    - **Min**: `0`
+    - **Max**: `40000000`
+    - **Tick Interval**: `10000000`
+    - **Min Color**:` #88FCEF`
+    - **Max Color**: `#2E0EE6`
 
-- **Show Legend**: `true`
-- **Background Color**: `#FFFFFF`
+3.  To configure a map legend for adding quantitative information, select the **Legend** section and set the following. For example:
 
-1.  Select the **Tooltip** section and set **Show Tooltip** to true.
-2.  To add `hc_a2` value for each chart data point, on the **Data Configuration** tab, click **Switch to advanced configuration**.
-3.  In the **Measures** section, click **Add**. The **Measure** dialog is displayed.
+    - **Show Legend**: `true`
+    - **Background Color**: `#FFFFFF`
 
-<!-- -->
+4.  Select the **Tooltip** section and set **Show Tooltip** to true.
 
-1.  Enter the following values:
+5.  To add `hc_a2` value for each chart data point, on the **Data Configuration** tab, click **Switch to advanced configuration**.
 
-- **Name**: `hc_a2`
-- Select the **Hidden** checkbox
-- **Label Expression**: `$F{hc_a2}`
-- **Calculation**: Nothing
-- **Value Expression**: `$F{hc_a2}`
-- **Value Class Name**: `java.lang.String`
+6.  In the **Measures** section, click **Add**. The **Measure** dialog is displayed.
 
-1.  Click **OK**.
-2.  Under **Measures**, select Measure1 and click **Modify**.
-3.  Click the **Advanced Properties** tab and click **Add**. The **Edit Property** dialog is displayed.
-4.  Set the following values:
+    1.  Enter the following values:
 
-- **Contributor**: `SeriesItemProperty`
-- **Property Name**: `hc_a2`
-- Select the **Use Measure Value** and then select `hc_a2` from the drop-down list.
+    - **Name**: `hc_a2`
+    - Select the **Hidden** checkbox
+    - **Label Expression**: `$F{hc_a2}`
+    - **Calculation**: Nothing
+    - **Value Expression**: `$F{hc_a2}`
+    - **Value Class Name**: `java.lang.String`
 
-1.  In the **Plot Options** section, select **Data Labels** and set the following:
+7.  Click **OK**.
 
-- **Enabled**: `true`
-- **Format**: `{point.hc_a2}`
+8.  Under **Measures**, select Measure1 and click **Modify**.
 
-1.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+9.  Click the **Advanced Properties** tab and click **Add**. The **Edit Property** dialog is displayed.
+
+10. Set the following values:
+
+    - **Contributor**: `SeriesItemProperty`
+    - **Property Name**: `hc_a2`
+    - Select the **Use Measure Value** and then select `hc_a2` from the drop-down list.
+
+11. In the **Plot Options** section, select **Data Labels** and set the following:
+
+    - **Enabled**: `true`
+    - **Format**: `{point.hc_a2}`
+
+12. Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
 |  |
 |----|
@@ -226,11 +238,11 @@ If chart data does not provide a hc-key field and has another field such as hc_a
 1.  In the **Plot Options** section in the **HTML5 Map Edit Dialog**, set the following expression for the **Join By** property:<br>
     `Arrays.asList("hc-a2","hc_a2")`
 
-!!! note
+    !!! note
 
-    In the join expression, always start with the name of the field in the GeoJSON map data (that is "hc-a2").
+        In the join expression, always start with the name of the field in the GeoJSON map data (that is "hc-a2").
 
-1.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview. You can see that the data is correctly mapped and the map remains the same.
+2.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview. You can see that the data is correctly mapped and the map remains the same.
 
 |                                                                |
 |----------------------------------------------------------------|
@@ -268,28 +280,34 @@ The HTML5 map component also supports hyperlinks. You need to create a hidden me
 To create a hyperlink
 
 1.  Change the expression of **Value Expression** back to `$F{value}`.
+
 2.  Under Measures, click **Add** to add a new hidden measure and enter the following information:
 
-- **Name**: `linkName`
-- Select the **Hidden** checkbox.
-- **Label Expression**: `$F{name}`
-- **Calculation**: `Nothing`
-- **Value Expression**: `"https://en.wikipedia.org/wiki/" +$F{name}`
-- **Value Class Name**:` java.lang.String`
+    - **Name**: `linkName`
+    - Select the **Hidden** checkbox.
+    - **Label Expression**: `$F{name}`
+    - **Calculation**: `Nothing`
+    - **Value Expression**: `"https://en.wikipedia.org/wiki/" +$F{name}`
+    - **Value Class Name**:` java.lang.String`
 
-1.  Click **OK**.
-2.  Select Measure1 and click **Modify**.
-3.  Click **Edit Hyperlink**. The **Edit Hyperlink Information** dialog is displayed.
-4.  Enter the following information:
+3.  Click **OK**.
 
-- Select **Use Hyperlink** checkbox.
-- **Hyperlink Target**: `Blank`
-- Hyperlink Type: `Reference`
-- Select **Use Measure Value** and then select `linkName` from the list.
+4.  Select Measure1 and click **Modify**.
 
-1.  Click **OK**.
-2.  Click **OK** again.
-3.  Preview the map. In the HTML Preview, click the state to open the associated wiki page for that state.
+5.  Click **Edit Hyperlink**. The **Edit Hyperlink Information** dialog is displayed.
+
+6.  Enter the following information:
+
+    - Select **Use Hyperlink** checkbox.
+    - **Hyperlink Target**: `Blank`
+    - Hyperlink Type: `Reference`
+    - Select **Use Measure Value** and then select `linkName` from the list.
+
+7.  Click **OK**.
+
+8.  Click **OK** again.
+
+9.  Preview the map. In the HTML Preview, click the state to open the associated wiki page for that state.
 
 |                                                                          |
 |--------------------------------------------------------------------------|
@@ -303,12 +321,13 @@ To Zoom in the map
 1.  On the Map Formatting tab, select the Map section and enter the following information:<br>
     **Zoom Type**: `xy`
 
-!!! note
+    !!! note
 
-    Because the HTML5 maps are two-dimensional, setting the **Zoom Type** to ‘x’ or ‘y’ generates only proportional responses. For instance, if Zoom Type is set to ‘x’ only, the ‘y’ dimension cannot grow beyond the y-axis bounds, it enlarges with a small fraction. As a consequence, the ‘x’ dimension enlarges proportionally with the same fraction.
+        Because the HTML5 maps are two-dimensional, setting the **Zoom Type** to ‘x’ or ‘y’ generates only proportional responses. For instance, if Zoom Type is set to ‘x’ only, the ‘y’ dimension cannot grow beyond the y-axis bounds, it enlarges with a small fraction. As a consequence, the ‘x’ dimension enlarges proportionally with the same fraction.
 
-1.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
-2.  In the preview pane, drag the mouse over a map to zoom in.
+2.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+
+3.  In the preview pane, drag the mouse over a map to zoom in.
 
 |                                                                      |
 |----------------------------------------------------------------------|

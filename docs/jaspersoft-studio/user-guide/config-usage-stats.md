@@ -10,15 +10,17 @@ By default, the first time you run a new installation of Jaspersoft Studio, you 
 To disable the usage statistics dialog:
 
 1.  Locate the `.ini` file (for example, `Jaspersoft Studio.ini`). This file is in your `<jss-install>` directory on Windows and Linux, and in the `<jss-install>/Contents/Eclipse` directory on Mac.
+
 2.  Open the file in a text editor.
+
 3.  Locate the following line:
 
-`-vm`
+    `-vm`
 
-This line sets the location of the JVM to be used.
+    This line sets the location of the JVM to be used.
 
-1.  Add the following line *before* `-vm`:
+4.  Add the following line *before* `-vm`:
 
-`-com.jaspersoft.studio.skipUsageQuestion true`
+    `-com.jaspersoft.studio.skipUsageQuestion true`
 
-1.  Save the file.
+5.  Save the file.

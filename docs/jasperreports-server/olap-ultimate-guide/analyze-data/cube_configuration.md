@@ -37,31 +37,33 @@ To configure a measure
 
 1.  Click the **Measures** hyperlink in the Change Data Cube dialog.
 
-The Measures dialog appears.
+    The Measures dialog appears.
 
-![ja ug analysisview tools ChangeDataCubeMeasures](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures.png)
+    ![ja ug analysisview tools ChangeDataCubeMeasures](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures.png)
 
-*Figure 3: Measures Dialog*
+    *Figure 3: Measures Dialog*
 
-1.  Click a checkbox to select its measure.
+2.  Click a checkbox to select its measure.
 
 To move a measure within its section of the dialog
 
 1.  Click ![ja table sort](../assets/images/ja-table-sort.png) next to the measure. The icon changes color to red ![ja table sort red](../assets/images/ja-table-sort-red.png).
 
-Other icons throughout the dialog change, as well, to signal that moving is enabled.
+    Other icons throughout the dialog change, as well, to signal that moving is enabled.
 
-![ja ug analysisview tools ChangeDataCubeMeasures movesenabled](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-movesenabled.png)
+    ![ja ug analysisview tools ChangeDataCubeMeasures movesenabled](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-movesenabled.png)
 
-*Figure 4: Measures Dialog with Moving Enabled*
+    *Figure 4: Measures Dialog with Moving Enabled*
 
-1.  Click any triangle. The measure selected in step 1, Store Sales, moves down one position in the list.
-2.  Click a checkbox to indicate that the corresponding measure should be displayed in the view.
-3.  Click **Group** to collapse the list of measures into groups of 12 measures each.
+2.  Click any triangle. The measure selected in step 1, Store Sales, moves down one position in the list.
 
-The **Group** button changes to a **Flat** button. Click **Flat** to return to the expanded list.
+3.  Click a checkbox to indicate that the corresponding measure should be displayed in the view.
 
-1.  Click **None** to clear the icons and your selections. This removes all measures from the view.
+4.  Click **Group** to collapse the list of measures into groups of 12 measures each.
+
+    The **Group** button changes to a **Flat** button. Click **Flat** to return to the expanded list.
+
+5.  Click **None** to clear the icons and your selections. This removes all measures from the view.
 
 To move a dimension into the Columns or Rows section of the Change Data Cube dialog
 
@@ -87,21 +89,21 @@ To use a dimension as a filter
 
 1.  In the Change Data Cube dialog, click ![ja table filter](../assets/images/ja-table-filter.png) next to the dimension.
 
-The dimension appears in the Filter section.
+    The dimension appears in the Filter section.
 
-![ja ug analysisview tools ChangeDataCubeMeasures timeasfilter](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-timeasfilter.png)
+    ![ja ug analysisview tools ChangeDataCubeMeasures timeasfilter](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-timeasfilter.png)
 
-*Figure 7: TIME Dimension as a Filter*
+    *Figure 7: TIME Dimension as a Filter*
 
-1.  Click the dimension.
+2.  Click the dimension.
 
-The root level of the dimension appears. In this example, look at the TIME dimension.
+    The root level of the dimension appears. In this example, look at the TIME dimension.
 
-![ja ug analysisview tools ChangeDataCube dimsasfilters](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-dimsasfilters.png)
+    ![ja ug analysisview tools ChangeDataCube dimsasfilters](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-dimsasfilters.png)
 
-*Figure 8: Selecting a Member from the TIME Dimension*
+    *Figure 8: Selecting a Member from the TIME Dimension*
 
-1.  Click **Group** to collapse the list of TIME measures into groups of 12 measures each.
+3.  Click **Group** to collapse the list of TIME measures into groups of 12 measures each.
 
 The **Group** button changes to a **Flat** button. Click **Flat** to expand the list of measures.
 
@@ -120,6 +122,7 @@ The MDX Query Editor contains the MDX query that retrieves the contents of the n
 An MDX query consists of data sets, query scope, and filter specifications:
 
 - A SELECT statement determines the data sets that populate the columns (x-axis) and rows (y-axis) of the navigation table. The SELECT statement includes the measures to use as columns and rows. The query in this example specifies data sets in terms of:
+
   - \[Measures\].\[Unit Sales\], \[Measures\].\[Store Cost\], \[Measures\].\[Store Sales\] as columns; \[Promotion Media\].\[All Media\] and \[Product\].\[All Products\] as rows.
   - The FROM clause specifies the cube that is queried. You can query only one cube at a time.
   - The WHERE clause uses dimensions to constrain the data sets retrieved by the query, that is, the clause specifies the filters that screen the data the query returns. In this example, \[TIME\].\[2012\] is the filter.

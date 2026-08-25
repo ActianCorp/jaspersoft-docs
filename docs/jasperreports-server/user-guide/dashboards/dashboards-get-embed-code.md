@@ -17,12 +17,14 @@ To get a dashboard embed code
 
 1.  On the toolbar, click ![js Dashboard icon GetEmbedCode](../assets/images/js-Dashboard-icon-GetEmbedCode.png) to open the **Dashboard Embed Code** dialog.
 
-![js Dashboard GetEmbedCode](../assets/images/js-Dashboard-GetEmbedCode.png)
+    ![js Dashboard GetEmbedCode](../assets/images/js-Dashboard-GetEmbedCode.png)
 
-*Figure 1: Dashboard Embed Code Dialog*
+    *Figure 1: Dashboard Embed Code Dialog*
 
-The dialog shows the Visualize.js code and a preview of the dashboard as it is currently saved.
+    The dialog shows the Visualize.js code and a preview of the dashboard as it is currently saved.
 
-1.  Click the **Copy Code** button to copy the embed code to the clipboard.
-2.  Click the **Open in JSFiddle** button to load the embed code into JSFiddle, an online JavaScript viewer and interactive editor.
-3.  Click the **Close** button to return to the dashboard.
+2.  Click the **Copy Code** button to copy the embed code to the clipboard.
+
+3.  Click the **Open in JSFiddle** button to load the embed code into JSFiddle, an online JavaScript viewer and interactive editor.
+
+4.  Click the **Close** button to return to the dashboard.

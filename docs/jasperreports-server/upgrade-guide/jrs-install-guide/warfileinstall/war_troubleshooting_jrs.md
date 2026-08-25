@@ -23,15 +23,15 @@ To troubleshoot problems running js-install scripts
 
 1.  Open the output log file available at:
 
-`<js-install>/buildomatic/logs/js-install-<date>-<number>.log`
+    `<js-install>/buildomatic/logs/js-install-<date>-<number>.log`
 
-1.  Try to find the first error encountered by the `js-install` steps.
+2.  Try to find the first error encountered by the `js-install` steps.
 
-- Go to the end of the output log.
-- Scroll back through lines of error messages until you find the first error logged. Typically, this error causes more errors later in the log.
-- Finding the original error is the way to understand the problem. However, this can often be tricky because Java stack traces with the Spring application component framework can make the error output quite long.
+    - Go to the end of the output log.
+    - Scroll back through lines of error messages until you find the first error logged. Typically, this error causes more errors later in the log.
+    - Finding the original error is the way to understand the problem. However, this can often be tricky because Java stack traces with the Spring application component framework can make the error output quite long.
 
-1.  Incorrect settings in the `default_master.properties` file cause most problems, which you can correct by editing your `default_master.properties` settings. Common errors are:
+3.  Incorrect settings in the `default_master.properties` file cause most problems, which you can correct by editing your `default_master.properties` settings. Common errors are:
 
 - Typos in the path for the application server
 - Misspelling the hostname or password for the database
@@ -53,9 +53,9 @@ To run the js-install script in test mode on Windows
 
 1.  Navigate to the buildomatic directory:
 
-`cd <js-install>/buildomatic`
+    `cd <js-install>/buildomatic`
 
-1.  Enter the following command to run the js-install script in `test` mode:
+2.  Enter the following command to run the js-install script in `test` mode:
 
 `js-install`` .bat test`
 
@@ -63,9 +63,9 @@ To run the js-install script in test mode on Linux or Mac OSX
 
 1.  Navigate to the buildomatic directory:
 
-`cd <js-install>/buildomatic`
+    `cd <js-install>/buildomatic`
 
-1.  Enter the following command to run the `js-install` script in `test` mode:
+2.  Enter the following command to run the `js-install` script in `test` mode:
 
 `./``js-install`` .sh test`
 
@@ -77,7 +77,7 @@ A cloud database instance (such as Amazon EC2) typically disables unused IP port
 
 The export of Reports, Ad Hoc Views, and Dashboards fails when Tomcat is run as root in the JasperReports Server installation on Linux. The Tomcat log file displays an error, for example:
 
-```
+``` text
 2020-06-11T17:32:19,031 ERROR SecureExceptionHandlerImpl,http-nio-8080-exec-8:116 - com.github.kklisura.cdt.launch.exceptions.ChromeProcessTimeoutException: Failed while waiting for chrome to start: Timeout expired! Chrome output: [0611/173218.897370:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
 ```
 

@@ -118,12 +118,14 @@ default_master.properties
 
 2.  Copy the PostgreSQL specific file to the current directory and change its name to<br>
     default_master.properties as shown below:
+
     |  |  |
     |----|----|
     | Windows: | `copy sample_conf\postgresql_master.properties default_master.properties` |
     | Linux: | `cp sample_conf/postgresql_master.properties default_master.properties` |
 
 3.  Edit the new default_master.properties file and set the following properties for your local environment:
+
     <table>
     <colgroup>
     <col style="width: 50%" />
@@ -138,7 +140,7 @@ default_master.properties
     <tbody>
     <tr>
     <td><p><code>appServerType</code></p></td>
-    <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</code></pre></td>
+    <td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</span></code></pre></div></td>
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
@@ -209,12 +211,14 @@ default_master.properties
     ```
 
 2.  Copy the MySQL specific file to the current directory and change its name to `default_master.properties`:
+
     |  |  |
     |----|----|
     | Windows: | `copy sample_conf\mysql_master.properties default_master.properties` |
     | Linux: | `cp sample_conf/mysql_master.properties default_master.properties` |
 
 3.  Edit the new `default_master.properties` file and set the following properties to your local environment:
+
     <table>
     <colgroup>
     <col style="width: 50%" />
@@ -229,7 +233,7 @@ default_master.properties
     <tbody>
     <tr>
     <td><p><code>appServerType</code></p></td>
-    <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</code></pre></td>
+    <td><div class="language-properties highlight"><pre><code><span class="na">appServerType</span><span class="o">=</span><span class="s">tomcat [jboss-eap-8, wildfly, skipAppServerCheck]</span></code></pre></div></td>
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>

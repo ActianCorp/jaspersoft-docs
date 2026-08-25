@@ -18,21 +18,22 @@ To enable Domain security logging
 
 1.  Locate and open the `log4j.properties` file and scroll to the bottom.
 
-You'll find this file in the `WEB-INF` folder; if you use Tomcat as your application server, the default path to this location is:
+    You'll find this file in the `WEB-INF` folder; if you use Tomcat as your application server, the default path to this location is:
 
-`<js-install>\apache-tomcat\webapps\jasperserver-pro\WEB-INF`.
+    `<js-install>\apache-tomcat\webapps\jasperserver-pro\WEB-INF`.
 
-1.  Add the following lines after the last line in the file:
+2.  Add the following lines after the last line in the file:
 
-```
-log4j.logger.com.jaspersoft.commons.semantic.datasource.impl.
-    SemanticLayerSecurityResolverImpl=debug
-log4j.logger.com.jaspersoft.commons.semantic.dsimpl.JdbcTableDataSet=DEBUG, stdout, fileout
-log4j.logger.com.jaspersoft.commons.util.JSControlledJdbcQueryExecuter=DEBUG, stdout, fileout
-```
+    ``` text
+    log4j.logger.com.jaspersoft.commons.semantic.datasource.impl.
+        SemanticLayerSecurityResolverImpl=debug
+    log4j.logger.com.jaspersoft.commons.semantic.dsimpl.JdbcTableDataSet=DEBUG, stdout, fileout
+    log4j.logger.com.jaspersoft.commons.util.JSControlledJdbcQueryExecuter=DEBUG, stdout, fileout
+    ```
 
-1.  Save the file.
-2.  Restart JasperReports Server.
+3.  Save the file.
+
+4.  Restart JasperReports Server.
 
 Information about Domains and their security will now be written to the log and to the console.
 

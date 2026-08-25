@@ -20,21 +20,26 @@ A theme is simply a folder in the repository that contains CSS and image files, 
 To create theme folders and file resources
 
 1.  Log in as an administrator with access to the location where you want to place the theme.
+
 2.  Click **View \> Repository** and expand the folder tree to view the **Themes** folder where you want to place the theme.
+
 3.  Right-click the **Themes** folder and select **Add Folder**. Give your folder a name and optional description as you would when creating any folder. The folder name is used as the name of the theme.
 
-!!! note
+    !!! note
 
-    Theme folders and files can be created, copied or moved anywhere in the repository, but they can only be made active, uploaded, or downloaded when properly placed in a Themes folder.
+        Theme folders and files can be created, copied or moved anywhere in the repository, but they can only be made active, uploaded, or downloaded when properly placed in a Themes folder.
 
 4.  Right-click your new folder and select **Add Resource \> File \> CSS**, and use the dialog to upload an individual CSS file. In order to be used as part of a theme, it must be one of the file names shown in [Contents of the Root default Theme](how_themes_work.md).
+
 5.  To add images to your theme, create any image folders and upload image files with **Add Resource \> File \> Image**.
+
 6.  Repeat Step 4 and Step 5 to create all the files and images you need. If several themes use the same files or images, you can copy-paste the file resources or entire image folders from one theme to another.
+
 7.  If you need to change the contents of a CSS or image file, you can right-click it and select **Edit** to specify another file to upload and replace the current file.
 
-!!! note
+    !!! note
 
-    If you upload CSS and image files into the active theme, the changes are visible after reloading the page in your browser.
+        If you upload CSS and image files into the active theme, the changes are visible after reloading the page in your browser.
 
 8.  Interacting with theme folders and files through the repository is a convenient and flexible way to create a theme. However, this method suffers from the limitation that, like other repository resources, you cannot download the files or images to edit them. For this purpose, the repository provides special download and upload actions on theme folders.
 
@@ -59,25 +64,28 @@ When you have created all the files you need in your theme, upload it with the f
 To upload a ZIP file as a theme
 
 1.  Place the CSS files, optional folders, and images files that constitute your theme in a folder on your computer.
+
 2.  Use an archiving or compression utility to create a standard ZIP file of the contents of your theme folder.
 
-!!! note
+    !!! note
 
-    The ZIP file should include only the contents of your theme, not the theme folder itself.
+        The ZIP file should include only the contents of your theme, not the theme folder itself.
 
 3.  Log in as an administrator with access to the location where you want to upload the theme.
+
 4.  Click **View \> Repository** and expand the **Themes** folder if necessary.
+
 5.  Right-click the **Themes** folder and select **Upload a Theme**.
 
-![js Themes UploadATheme](../assets/images/js-Themes-UploadATheme.png)
+    ![js Themes UploadATheme](../assets/images/js-Themes-UploadATheme.png)
 
-*Figure 1: Uploading a Theme ZIP File in an Organization*
+    *Figure 1: Uploading a Theme ZIP File in an Organization*
 
 6.  In the dialog that appears, enter a name for your theme, and browse to find the ZIP file on your computer. Click **Upload**. The theme name becomes the name of the theme folder.
 
-!!! note
+    !!! note
 
-    You cannot use the ZIP upload dialog to overwrite an existing theme. You must specify a theme name that doesn't already exist in the chosen**Themes** folder.
+        You cannot use the ZIP upload dialog to overwrite an existing theme. You must specify a theme name that doesn't already exist in the chosen**Themes** folder.
 
 7.  The server uploads your ZIP file and extracts it contents. Then it creates a folder for the new theme and creates file resources in the folder for each of the CSS and images in your ZIP file. If you had sub-folders in your theme, they are created as well. After uploading your theme ZIP file, you can make it active to see effect of your theme on the user interface.
 

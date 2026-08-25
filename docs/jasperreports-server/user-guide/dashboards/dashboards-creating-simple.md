@@ -14,12 +14,14 @@ This section describes the creation of a simple dashboard.
 To create a simple dashboard
 
 1.  Click **Create \> Dashboard**. The Dashboard Designer appears, displaying the list of available content and the canvas.
+
 2.  In the **Existing Content** section of the **Available Content** panel, find report 16. Interactive Sales Report.
+
 3.  Click and drag the report onto the Dashboard Canvas.
 
-![js Dashboard AddReport(Print)](../assets/images/js-Dashboard-AddReport%28Print%29.png)
+    ![js Dashboard AddReport(Print)](../assets/images/js-Dashboard-AddReport%28Print%29.png)
 
-*Figure 1: Dragging report onto Dashboard Canvas*
+    *Figure 1: Dragging report onto Dashboard Canvas*
 
 4.  In **Available Content**, find 04. Product Results by Store Type Report.
 

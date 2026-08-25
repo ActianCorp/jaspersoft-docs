@@ -639,22 +639,22 @@ The POST method also supports a way to create complex resources and their neste
 <td colspan="2"><p>Root resource multipart item name: <span>resource</span></p>
 <p>Root resource multipart Content-type and corresponding item names:</p>
 <ul>
-<li><span>mondrianConnection</span>
+<li><p><span>mondrianConnection</span></p>
 <ul>
 <li><span>schema</span> - Mondrian schema XML file</li>
 </ul></li>
-<li><span>secureMondrianConnection</span>
+<li><p><span>secureMondrianConnection</span></p>
 <ul>
 <li><span>schema</span> - Mondrian schema XML file</li>
 <li><span>accessGrantSchemas.accessGrantSchema[{itemIndex}]</span> - XML file</li>
 </ul></li>
-<li><span>semanticLayerDataSource</span>
+<li><p><span>semanticLayerDataSource</span></p>
 <ul>
 <li><span>schema</span> - Domain schema XML file</li>
 <li><span>securityFile</span> - XML security file</li>
 <li><span>bundles.bundle[{bundleIndex}]</span> - Properties file for internationalization</li>
 </ul></li>
-<li><span>reportUnit</span>
+<li><p><span>reportUnit</span></p>
 <ul>
 <li>jrxml - Report unit JRXML file</li>
 <li><span>files.{fileName}</span> - Report unit attached resource file (for example, images)</li>

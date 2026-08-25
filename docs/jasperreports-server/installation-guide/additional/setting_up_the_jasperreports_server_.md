@@ -50,11 +50,11 @@ On Windows:
 
 1.  In the file `<tomcat>\bin\setclasspath.bat`, locate the following line:
 
-`set JAVA_ENDORSED_DIRS=%BASEDIR%\common\endorsed`
+    `set JAVA_ENDORSED_DIRS=%BASEDIR%\common\endorsed`
 
-Alternatively, create an empty file called `<tomcat>/bin/setenv.bat`.
+    Alternatively, create an empty file called `<tomcat>/bin/setenv.bat`.
 
-1.  Below that line or in the new file, insert the following line:
+2.  Below that line or in the new file, insert the following line:
 
 `set JAVA_OPTS=%JAVA_OPTS% -Djs.license.directory="<js-install>"`
 
@@ -66,11 +66,11 @@ On Linux and Mac OSX:
 
 1.  In the file `<tomcat>/bin/setclasspath.sh`, locate the following line:
 
-`JAVA_ENDORSED_DIRS="$BASEDIR"/common/endorsed`
+    `JAVA_ENDORSED_DIRS="$BASEDIR"/common/endorsed`
 
-Alternatively, create an empty file called \<tomcat\>/bin/setenv.sh.
+    Alternatively, create an empty file called \<tomcat\>/bin/setenv.sh.
 
-1.  Below that line or in the new file, insert the following line:
+2.  Below that line or in the new file, insert the following line:
 
 `export JAVA_OPTS="$JAVA_OPTS -Djs.license.directory=<js-install>"`
 
@@ -86,16 +86,17 @@ To specify a specific folder to hold the `jaspersoft.jrs.license`:
 
 1.  Open the following file for editing:
 
-`cd <js-install>/apache-tomcat/bin/service.bat`
+    `cd <js-install>/apache-tomcat/bin/service.bat`
 
-1.  Look for the second line of two lines that set JVM options, specifically the line which contains the license string. For example, `-Djs.license.directory=C:\Jaspersoft\10.1.0`.
-2.  Update the line to point to your license location, for example:
+2.  Look for the second line of two lines that set JVM options, specifically the line which contains the license string. For example, `-Djs.license.directory=C:\Jaspersoft\10.1.0`.
+
+3.  Update the line to point to your license location, for example:
 
 `-Djs.license.directory=C:\MyLicenses`
 
 Because Tomcat is installed as a service, you need to re-install the service. From a Windows Command shell, enter these commands (Note: the cmd shell will disappear when these commands are run. You need to open a new cmd shell for each command.). To open a cmd shell: `Start Menu > Run... > cmd`:
 
-```
+``` bash
 cd <js-install>\apache-tomcat\scripts
 serviceinstall.bat REMOVE
 serviceinstall.bat INSTALL
@@ -119,9 +120,9 @@ On Windows
 
 1.  In the file `<jboss>\bin\standalone.conf.bat`, locate the following line:
 
-`set JAVA_OPTS=%JAVA_OPTS% -Dprogram.name=%PROGNAME%`
+    `set JAVA_OPTS=%JAVA_OPTS% -Dprogram.name=%PROGNAME%`
 
-1.  Below that line, insert the following line:
+2.  Below that line, insert the following line:
 
 `set JAVA_OPTS=%JAVA_OPTS% -Djs.license.directory="<js-install>"`
 
@@ -133,9 +134,9 @@ On Linux and Mac OSX
 
 1.  In the file `<jboss>/bin/standalone.conf`, locate the following line:
 
-`export JAVA_OPTS="$JAVA_OPTS -Dprogram.name=$PROGNAME"`
+    `export JAVA_OPTS="$JAVA_OPTS -Dprogram.name=$PROGNAME"`
 
-1.  Below that line, insert this line:
+2.  Below that line, insert this line:
 
 `export JAVA_OPTS="$JAVA_OPTS -Djs.license.directory=<js-install>"`
 

@@ -11,8 +11,6 @@ The following terminologies are used to describe HTML5 charts:
 
 - **Values**: Static properties.
 
-<!-- -->
-
 - **Expressions**: Dynamic properties.
 
 - **Categories**: Rows. In a pie chart, the categories are the slices.

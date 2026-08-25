@@ -20,42 +20,61 @@ On the Controls & Resources page, upload the undetected resources to the server 
 To upload the undetected file resources for the complex report example
 
 1.  Add and upload the scriptlet JAR file:
+
     1.  On the Controls & Resources page, click **Add Resource**.
+
     2.  On the Locate File Resource page, select **Upload a Local File**, and **Browse** to the \<js-install\>/samples/jars/scriptlet.jar file. Select scriptlet.jar.<br>
         The path to the file appears in the **Upload a Local file** field.
+
     3.  Click **Next**.<br>
         The Add a Report Resource page appears. Figure 1 shows the file name scriptlet.jar, indicating that the server successfully loaded and automatically detected the JAR.
+
     4.  Enter the following information:
+
         - Name – `Scriptlet`
         - Resource ID – `Scriptlet`. The Resource ID is referenced in the main JRXML file, so do not change it.
         - Description – `Scriptlet JAR for complex report`
 
-The following figure shows these values entered on the Add a Report Resource page.
+    The following figure shows these values entered on the Add a Report Resource page.
 
-![js ReportWizard FileResource scriptlet properties](../assets/images/js-ReportWizard-FileResource-scriptlet-properties.png)
+    ![js ReportWizard FileResource scriptlet properties](../assets/images/js-ReportWizard-FileResource-scriptlet-properties.png)
 
-*Figure 1: Scriptlet JAR Resource Properties*
+    *Figure 1: Scriptlet JAR Resource Properties*
 
 2.  Click **Next**.
+
 3.  Add and upload the English resource bundle:
+
     1.  On the **Controls & Resources** page, click **Add Resource**. The Locate File Resource page appears.
+
     2.  Select **Upload a Local File**, **Browse** to \<js-install\>/samples/resource_bundles/sales.properties, and select it. The path to the resource bundle appears in the **Upload a Local file** field.
+
     3.  In Locate File Resource, click **Next**. The **Add a Report Resource** page indicates that the file was successfully loaded and automatically detected as a resource bundle.
+
     4.  Enter the following information:
+
         - Name – sales.properties
 
         - Resource ID – sales.properties
 
         - Description – Default English resource bundle
+
 4.  Click **Next**.
+
 5.  Add and upload the Romanian Resource bundle:
+
     1.  On the Controls & Resources page, click **Add Resource**.
+
     2.  Select **Upload a Local File**, **Browse** to the file \<js-install\>/samples/resource_bundles/sales_ro.properties, and select it.
+
     3.  In Locate File Resource, click **Next**. The Add a Report Resource page shows that uploading the file was successful. The server recognized the type (resource bundle) and name (sales_ro.properties) of the selected resource.
+
     4.  Enter the following information:
+
         - Name – `sales_ro.properties`
         - Resource ID – `sales_ro.properties`
         - Description – `Romanian resource bundle`
+
     5.  Click **Next**. Controls & Resources lists all the files.
 
 ![js ReportWizard ResourcesList undetected](../assets/images/js-ReportWizard-ResourcesList-undetected.png)

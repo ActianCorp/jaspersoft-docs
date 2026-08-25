@@ -11,146 +11,152 @@ To create an OLAP, view with a local Mondrian connection,
 
 1.  Click **View \> Repository**.
 
-The repository page appears.
+    The repository page appears.
 
-1.  In the **Folders** panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Views**.
-2.  Right-click the folder and select **Add Resource \> OLAP View**.
+2.  In the **Folders** panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Views**.
 
-The **Name the View** page appears and prompts you to provide a name for the new view.
+3.  Right-click the folder and select **Add Resource \> OLAP View**.
 
-![ja add view NameTheView](assets/images/ja-add-view-NameTheView.png)
+    The **Name the View** page appears and prompts you to provide a name for the new view.
 
-*Figure 1: Name the View Page*
+    ![ja add view NameTheView](assets/images/ja-add-view-NameTheView.png)
 
-1.  Enter a name and description for the new view. The **Resource ID** field is auto-generated when you type in the **Name** field. After it is saved, it cannot be changed.
-2.  Click **Next**.
+    *Figure 1: Name the View Page*
 
-The **Locate Mondrian Client Connection Source** page appears and prompts you to select or create a local Mondrian connection.
+4.  Enter a name and description for the new view. The **Resource ID** field is auto-generated when you type in the **Name** field. After it is saved, it cannot be changed.
 
-![ja add view locatemondrianolapclientconnsource](assets/images/ja-add-view-locatemondrianolapclientconnsource.png)
+5.  Click **Next**.
 
-*Figure 2: Locate Mondrian Client Connection Source Page*
+    The **Locate Mondrian Client Connection Source** page appears and prompts you to select or create a local Mondrian connection.
 
-1.  Click either:
+    ![ja add view locatemondrianolapclientconnsource](assets/images/ja-add-view-locatemondrianolapclientconnsource.png)
 
-- **Define a Mondrian Client Connection in the next step**.
-- **Select a Mondrian Client Connection from the repository**.
+    *Figure 2: Locate Mondrian Client Connection Source Page*
 
-Then click **Browse**, navigate to the connection you want, and click **Select**.
+6.  Click either:
 
-1.  Click **Next**.
+    - **Define a Mondrian Client Connection in the next step**.
+    - **Select a Mondrian Client Connection from the repository**.
 
-If you chose to define a new Mondrian connection, the **Set Connection Type and Properties** page appears and prompts you to define a connection.
+    Then click **Browse**, navigate to the connection you want, and click **Select**.
 
-![ja add view setconnectiontypepropertiesmondrian](assets/images/ja-add-view-setconnectiontypepropertiesmondrian.png)
+7.  Click **Next**.
 
-*Figure 3: Set Connection Type and Properties Page*
+    If you chose to define a new Mondrian connection, the **Set Connection Type and Properties** page appears and prompts you to define a connection.
 
-1.  To change the type of the connection, select a connection type from the **Type** dropdown and complete the fields. Otherwise, enter the requested information. For details see [Creating a Mondrian Connection](creating_a_mondrian_connection.md).
-2.  To chose a location for the connection, click **Browse**, navigate to a folder, and click **Select**.
-3.  Click **Next.**
+    ![ja add view setconnectiontypepropertiesmondrian](assets/images/ja-add-view-setconnectiontypepropertiesmondrian.png)
 
-The **Locate OLAP Schema** page appears and prompts you to upload an OLAP schema or select one from the repository.
+    *Figure 3: Set Connection Type and Properties Page*
 
-![ja add view locateolapschema](assets/images/ja-add-view-locateolapschema.png)
+8.  To change the type of the connection, select a connection type from the **Type** dropdown and complete the fields. Otherwise, enter the requested information. For details see [Creating a Mondrian Connection](creating_a_mondrian_connection.md).
 
-*Figure 4: Locate OLAP Schema Page*
+9.  To chose a location for the connection, click **Browse**, navigate to a folder, and click **Select**.
 
-1.  Click either:
+10. Click **Next.**
 
-- **Upload a Local File** to select a file from your local computer.
+    The **Locate OLAP Schema** page appears and prompts you to upload an OLAP schema or select one from the repository.
 
-Then click **Browse,** navigate to select the file you want, and click **Select**.
+    ![ja add view locateolapschema](assets/images/ja-add-view-locateolapschema.png)
 
-- **Select a resource from the Repository** to select an existing schema.
+    *Figure 4: Locate OLAP Schema Page*
 
-Then click **Browse**, navigate to select the schema, and click **Select**.
+11. Click either:
 
-1.  Click **Next**.
+    - **Upload a Local File** to select a file from your local computer.
 
-The **OLAP Schema Resource** page appears.
+    Then click **Browse,** navigate to select the file you want, and click **Select**.
 
-![ja add view OLAP schema details](assets/images/ja-add-view-OLAP-schema-details.png)
+    - **Select a resource from the Repository** to select an existing schema.
 
-*Figure 5: OLAP Schema Resource Page*
+    Then click **Browse**, navigate to select the schema, and click **Select**.
 
-If you chose to upload a new file, the fields are editable. Enter the requested information. For details, refer to [Working with OLAP Schemas](working_with_olap_schemas.md).
+12. Click **Next**.
 
-1.  Click **Next**.
+    The **OLAP Schema Resource** page appears.
 
-The **Locate Data Source** page appears and prompts you to create or select a data source.
+    ![ja add view OLAP schema details](assets/images/ja-add-view-OLAP-schema-details.png)
 
-![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
+    *Figure 5: OLAP Schema Resource Page*
 
-*Figure 6: Locate Data Source Page*
+    If you chose to upload a new file, the fields are editable. Enter the requested information. For details, refer to [Working with OLAP Schemas](working_with_olap_schemas.md).
 
-1.  Click either:
+13. Click **Next**.
 
-- **Define a Data Source in the next step** to add a data source.
-- **Select a Data Source from the repository** to select a data source from the repository.
+    The **Locate Data Source** page appears and prompts you to create or select a data source.
 
-Then click **Browse**, navigate to the data source you want to use, and click **Select**. Click **Next** and skip to step 18.
+    ![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
 
-1.  Click **Next**.
+    *Figure 6: Locate Data Source Page*
 
-If you chose to create a new data source, the **Set Data Source Type and Properties** page appear.
+14. Click either:
 
-![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
+    - **Define a Data Source in the next step** to add a data source.
+    - **Select a Data Source from the repository** to select a data source from the repository.
 
-*Figure 7: Set Data Source Type and Properties Page*
+    Then click **Browse**, navigate to the data source you want to use, and click **Select**. Click **Next** and skip to step 18.
 
-1.  Enter the requested information and test the connection. For details, refer to [Working with Data Sources](working_with_data_sources.md) and to the JasperReports Server Administrator Guide.
-2.  When the test succeeds, click **Next**.
+15. Click **Next**.
 
-If you use a commercial edition of the server, the **Locate Access Grant Definition** page appears, prompting you to set the properties for the resource.
+    If you chose to create a new data source, the **Set Data Source Type and Properties** page appear.
 
-![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
+    ![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
 
-*Figure 8: Locate Access Grant Definition Page*
+    *Figure 7: Set Data Source Type and Properties Page*
 
-1.  Click one of the following:
+16. Enter the requested information and test the connection. For details, refer to [Working with Data Sources](working_with_data_sources.md) and to the JasperReports Server Administrator Guide.
 
-- **Do not link an Access Grant** if you do not need to apply for data security.
+17. When the test succeeds, click **Next**.
 
-Then click **Next** and skip to another step 22.
+    If you use a commercial edition of the server, the **Locate Access Grant Definition** page appears, prompting you to set the properties for the resource.
 
-- **Upload a Local File** to select a file from your local computer.
+    ![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
 
-Then click **Browse,** navigate to select the file you want, and click **Select**.
+    *Figure 8: Locate Access Grant Definition Page*
 
-- **Select a resource from the Repository** to select an existing schema.
+18. Click one of the following:
 
-Then click **Browse**, navigate to select the schema, and click **Select**.
+    - **Do not link an Access Grant** if you do not need to apply for data security.
 
-In our case, we do not need to secure the data in the view, so you will not specify an access grant schema. The next steps show you how to add a file if it’s needed.
+    Then click **Next** and skip to another step 22.
 
-1.  Click **Next**.
+    - **Upload a Local File** to select a file from your local computer.
 
-The **Access Grant Resource** page appears.
+    Then click **Browse,** navigate to select the file you want, and click **Select**.
 
-![ja add view accessgrantresourcewindow](assets/images/ja-add-view-accessgrantresourcewindow.png)
+    - **Select a resource from the Repository** to select an existing schema.
 
-*Figure 9: Access Grant Resource Page*
+    Then click **Browse**, navigate to select the schema, and click **Select**.
 
-1.  If you chose to upload a new file from your computer, the fields are editable. Enter the requested information. For details, refer to [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you chose a file from the repository, the fields are not editable.
-2.  Click **Next**.
+    In our case, we do not need to secure the data in the view, so you will not specify an access grant schema. The next steps show you how to add a file if it’s needed.
 
-The **Define the Query** page appears and prompts you for an MDX query string.
+19. Click **Next**.
 
-![ja add view MDXquery](assets/images/ja-add-view-MDXquery.png)
+    The **Access Grant Resource** page appears.
 
-*Figure 10: Define the Query Page*
+    ![ja add view accessgrantresourcewindow](assets/images/ja-add-view-accessgrantresourcewindow.png)
 
-1.  Enter an MDX query. For example, type:
+    *Figure 9: Access Grant Resource Page*
 
-`select {[Measures].[Unit Sales], [Measures].[Store Cost], [Measures].[Store Sales]} on columns, {([Promotion Media].[All Media], [Product].[All Products])} ON rows from Sales where ([Time].[2012].[Q4].[12])`
+20. If you chose to upload a new file from your computer, the fields are editable. Enter the requested information. For details, refer to [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you chose a file from the repository, the fields are not editable.
 
-To learn more about writing MDX queries, refer to the reference material listed in [External Information Resources](external_information_resources.md).
+21. Click **Next**.
 
-1.  Click **Submit**.
+    The **Define the Query** page appears and prompts you for an MDX query string.
 
-If the view passes validation, it is added to the repository. If you receive an error, it is likely that the problem is a typo in your query. Carefully review the query to ensure that it is valid.
+    ![ja add view MDXquery](assets/images/ja-add-view-MDXquery.png)
 
-1.  When you have a valid OLAP view, clicking **Submit** adds it to the repository.
+    *Figure 10: Define the Query Page*
+
+22. Enter an MDX query. For example, type:
+
+    `select {[Measures].[Unit Sales], [Measures].[Store Cost], [Measures].[Store Sales]} on columns, {([Promotion Media].[All Media], [Product].[All Products])} ON rows from Sales where ([Time].[2012].[Q4].[12])`
+
+    To learn more about writing MDX queries, refer to the reference material listed in [External Information Resources](external_information_resources.md).
+
+23. Click **Submit**.
+
+    If the view passes validation, it is added to the repository. If you receive an error, it is likely that the problem is a typo in your query. Carefully review the query to ensure that it is valid.
+
+24. When you have a valid OLAP view, clicking **Submit** adds it to the repository.
 
 If the view passes validation, it is added to the repository.

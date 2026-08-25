@@ -18,28 +18,30 @@ Before you begin, configure your JasperReports Server instance for CAS, as descr
 Add the CAS server to your Jaspersoft Studio workspace
 
 1.  In Jaspersoft Studio, select **Window \> Preferences** (**Eclipse \> Preferences** on Mac).
+
 2.  In the Preferences window, navigate to **Jaspersoft Studio \> JasperReports Server Settings \> Single Sign On Servers**.
 
-|                                                                      |
-|----------------------------------------------------------------------|
-| ![jss preferences sso 1](../assets/images/jss-preferences-sso-1.png) |
-| *Figure 1: Single Sign On Servers in Preferences Dialog*             |
+    |                                                                      |
+    |----------------------------------------------------------------------|
+    | ![jss preferences sso 1](../assets/images/jss-preferences-sso-1.png) |
+    | *Figure 1: Single Sign On Servers in Preferences Dialog*             |
 
-1.  In the **Single Sign On Servers** pane, click **Add**.
-2.  Enter the **URL** of your **CAS** server along with the **Username** and **Password** that you want to use for access.
+3.  In the **Single Sign On Servers** pane, click **Add**.
 
-|                                                        |
-|--------------------------------------------------------|
-| ![jss sso server](../assets/images/jss-sso-server.png) |
-| *Figure 2: SSO Server Settings Dialog*                 |
+4.  Enter the **URL** of your **CAS** server along with the **Username** and **Password** that you want to use for access.
 
-1.  Click **OK**.
+    |                                                        |
+    |--------------------------------------------------------|
+    | ![jss sso server](../assets/images/jss-sso-server.png) |
+    | *Figure 2: SSO Server Settings Dialog*                 |
 
-The CAS server is added to the list of available single sign-on servers.
+5.  Click **OK**.
 
-![jss preferences sso](../assets/images/jss-preferences-sso.png)
+    The CAS server is added to the list of available single sign-on servers.
 
-1.  Click **Apply and Close**.
+    ![jss preferences sso](../assets/images/jss-preferences-sso.png)
+
+6.  Click **Apply and Close**.
 
 Configure your JasperReports Server connection to use SSO in browser
 

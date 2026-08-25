@@ -128,12 +128,17 @@ Follow the instructions in the Amazon document to create compute with managed no
 Use the following information during the procedure:
 
 - Create a role for the nodes in the IAM console as described. This document uses the name EKSNodeInstanceRole.
+
 - There is no need for a launch template.
+
 - On the compute and scaling configuration page:
+
   - AMI (Amazon Machine Image): the only supported option is Amazon Linux (Intel based), not GPU nor ARM.
   - Disk size: select the default.
   - Node group scaling: specify reasonable values, they can be changed later.
+
 - On the networking page, select all the subnets you defined in the VPC. Machines in the same VPC are all able to see each other, but only the ones that have public subnets will have access to the Internet.
+
 - An SSH key pair is needed only if you want to ssh to one of the nodes. In most cases this is not needed because the node lifecycle is managed via Kubernetes, and most work can be performed using kubectl.
 
 After you create the managed node group, wait until they are in the ready state, as given by the following command:

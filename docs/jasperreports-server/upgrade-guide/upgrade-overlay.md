@@ -1,15 +1,15 @@
 ---
 title: Overlay Upgrade
-description: "While upgrading from version 9.0 to JasperReports Server 10.1, the appropriate version of Tomcat must be installed. For steps on installation, see JasperReports® Server Installation Guide."
+description: "While upgrading from version 10.0 to JasperReports Server 10.1, the appropriate version of Tomcat must be installed. For steps on installation, see JasperReports® Server Installation Guide."
 ---
 
 # Overlay Upgrade
 
 !!! note
 
-    While upgrading from version 9.0 to JasperReports Server 10.1, the appropriate version of Tomcat must be installed. For steps on installation, see JasperReports® Server Installation Guide.
+    While upgrading from version 10.0 to JasperReports Server 10.1, the appropriate version of Tomcat must be installed. For steps on installation, see JasperReports® Server Installation Guide.
 
-This chapter describes the overlay process for upgrading to JasperReports Server 10.0.0 and contains the following sections:
+This chapter describes the overlay process for upgrading to JasperReports Server 10.1.0 and contains the following sections:
 
 - Introduction to the Overlay Upgrade
 
@@ -17,7 +17,7 @@ This chapter describes the overlay process for upgrading to JasperReports Server
 
 - Plan Your Upgrade
 
-- Back Up Your JasperReports Server Instance
+- Back Up Your JasperReports® Server Instance
 
 - Unpack the Overlay Upgrade Package
 
@@ -51,13 +51,13 @@ The overlay upgrade procedure is available only for the JasperReports Server Com
 
     - Only the certified repository databases are supported.
 
-The overlay upgrade supports upgrading from JasperReports Server versions 8.0 and later to JasperReports Server 10.1.
+The overlay upgrade supports upgrading from JasperReports Server versions 9.0 and later to JasperReports Server 10.1.
 
 Although the overlay upgrade does offer a rollback feature, you should always back up your database and application before upgrading.
 
 !!! note
 
-    This section uses 9.0 to 10.1 upgrade as an example.
+    This section uses 10.0 to 10.1 upgrade as an example.
 
 ## Upgrade Steps Overview
 
@@ -67,13 +67,11 @@ These are the general steps used in this section:
 
 2.  Back up your current JasperReports Server instance.
 
-    (The overlay tool automatically takes back up of your war file and ask if you have backed up your database.)
+    (The overlay tool automatically takes back up of your war file and confirms if you have backed up your database.)
 
 3.  Download and unpack the new JasperReports Server overlay upgrade 10.1 package zip file.
 
-4.  Copy `../webapps/jasperserver-pro` directory from Tomcat 9.0 to Tomcat 10.1.x.
-
-5.  Run the upgrade steps.
+4.  Run the upgrade steps.
 
 The overlay upgrade procedure helps you to identify any modifications or extensions you have made to your JasperReports Server instance.
 
@@ -83,7 +81,7 @@ The overlay upgrade procedure helps you to identify any modifications or extensi
 
 ## Plan Your Upgrade
 
-If your current instance of JasperReports Server has modifications or extensions, keep track of these and re-integrate them into your 10.1 instance after upgrading. See [Planning Your Upgrade](plan-upgrade-intro.md) to determine if any customizations you've made to your existing version of JasperReports Server are affected by changes to the updated version.
+If your current instance of JasperReports Server has modifications or extensions, keep track of these and re-integrate them into your 10.1 instance after upgrading. See [Planning Your Upgrade](plan-upgrade-intro.md) to determine if any customizations you have made to your existing version of JasperReports Server are affected by changes to the updated version.
 
 ## Back Up Your JasperReports® Server Instance
 
@@ -138,7 +136,7 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
 
 !!! note
 
-    For MySQL, If you receive an error about packet size, see the Troubleshooting appendix of the JasperReports Server Installation Guide.
+    For MySQL, If you receive an error about packet size, see the Troubleshooting section of the JasperReports Server Installation Guide.
 
 **Back up your JasperReports Server Keystore**
 
@@ -164,7 +162,7 @@ The overlay upgrade package comes in a file named:
 
 !!! note
 
-    The overlay upgrade uses paths that exceed the 260-character limit on Windows. To extract the package,**Enable NTFS long paths** (Windows 10 only) or use a third-party file archive such as 7-Zip.
+    The overlay upgrade uses paths that exceed the 260-character limit on Windows. To extract the package, **Enable NTFS long paths** (Windows 10 only) or use a third-party file archive such as 7-Zip.
 
 3.  The overlay upgrade package unpacks into a folder named:
 
@@ -176,19 +174,19 @@ The overlay upgrade package comes in a file named:
 
 ## Check for JDBC Driver (Oracle, SQL Server, DB2)
 
-JasperReports Server uses the JDBC drivers for the Oracle, SQL Server, and DB2 commercial databases. If you want to use a different JDBC driver, you need to copy it to the correct location. If you use Oracle or DB2, you must also use your existing version of the `db.template.properties` file. See [Working With JDBC Drivers](jdbc-driver.md) for more information.
+JasperReports Server uses the JDBC drivers for the Oracle, SQL Server, and DB2 commercial databases. If you want to use a different JDBC driver, you need to copy it to the correct location. If you use Oracle or DB2, you must also use your existing version of the `db.template.properties` file. For more information, see [Working With JDBC Drivers](jdbc-driver.md).
 
 ## Configure the Properties in the default_master.properties File
 
 Before running the overlay upgrade, copy the `default_master.properties` file from the existing JasperReports Server buildomatic directory to the Overlay buildomatic directory.
 
-Edit the `default_master.properties` file and set `appServer` directory path to Tomcat 10.1.x path. For example, `appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x`.
+Edit the `default_master.properties` file and set `appServer` directory path to Tomcat 11.0.x path. For example, `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x`.
 
 Configure the properties specific to the installation type:
 
 - For Compact upgrade: No additional configuration is required in the `default_master.properties` file.
 
-- For Split upgrade: Edit the `default_master.properties` file to configure the settings as described in [Additional Buildomatic Configuration for Split Installation Upgrade](jrs-install-guide/introduction/installation_types.md).
+- For Split upgrade: Edit the `default_master.properties` file to configure the settings as described in [Installation Types](jrs-install-guide/introduction/installation_types.md).
 
 ## Run the Overlay Upgrade
 
@@ -248,8 +246,6 @@ The overlay upgrade works only with the Tomcat application server. It supports o
     - The `jasperserver-pro` war file will be upgraded.
     - The core data resources will be upgraded in the `Jasperserver` repository database.
 
-12. Copy the `persistence.xml` file from `.../overlay/buildomatic/conf_source/hibernate/webapp/WEB-INF/classes/META-INF/` folder to `<tomcat_folder>/webapps/jasperserver-pro/WEB-INF/classes/META-INF` folder.
-
 When the overlay upgrade has finished, start Tomcat, and log in to test the upgraded JasperReports Server.
 
 If the upgrade was successful, you see `BUILD SUCCESSFUL` on the command line.
@@ -299,7 +295,7 @@ If you encounter an error with the overlay upgrade, use the following rollback p
 
 3.  Specify the path to the working folder:
 
-    The default is `../overlayWorkspace`
+    The default is `../overlayWorkspace`.
 
 4.  The tool asks if you have rolled back your JasperReports Server database:
 
@@ -355,7 +351,7 @@ URL: `http://localhost:8080/``jasperserver`` ``-pro`` `
 | `superuser`   | \<your-password\> | System-wide administrator                  |
 | `jasperadmin` | \<your-password\> | Administrator for the default organization |
 
-Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting appendix of the JasperReports Server Installation Guide.
+Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting section of the JasperReports Server Installation Guide.
 
 !!! note
 

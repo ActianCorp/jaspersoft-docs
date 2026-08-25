@@ -63,7 +63,7 @@ The default installation of JasperReports Server includes the following users:
 
 !!! warning
 
-    Due to security concerns, we recommend that you remove any users that are not being used in your instance, whether created by default or otherwise. Advise your users to change their passwords regularly. To configure periodic expiration of passwords, refer to the <span>JasperReports Server Security Guide</span>.<br>
+    Due to security concerns, we recommend that you remove any users that are not being used in your instance, whether created by default or otherwise. Advise your users to change their passwords regularly. To configure periodic expiration of passwords, refer to the <span>JasperReports Server Security Guide</span>.
 
 ## Viewing User Properties
 
@@ -88,7 +88,7 @@ In this example, the system admin can see all users in all organizations by sele
 
 !!! note
 
-    As the admin of a given organization, you can see the roles defined in your organization and its suborganizations but not the parent organization (except for certain system-wide roles). A user may have roles defined and assigned from a parent organization that are not visible to the administrator of the user's organization. For more information, see <a href="managing_roles.md">Managing Roles</a>.
+    As the administrator of a given organization, you can see the roles defined in your organization and its suborganizations but not the parent organization (except for certain system-wide roles). A user may have roles defined and assigned from a parent organization that are not visible to the administrator of the user's organization. For more information, see <a href="managing_roles.md">Managing Roles</a>.
 
 ## Creating a User
 

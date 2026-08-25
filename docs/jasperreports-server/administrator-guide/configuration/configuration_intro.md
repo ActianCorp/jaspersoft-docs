@@ -64,3 +64,5 @@ This chapter contains the following sections:
 - [Configuration for File Resource Type](configuration_for_file_resource.md)
 
 - [Configuration for Repository files](configuration_for_repository_files.md)
+
+- [Configuring Password Storage Strategy and Password History](configuring-password-encryption-strategy.md)

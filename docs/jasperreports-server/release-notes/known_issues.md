@@ -190,9 +190,9 @@ The following issues exist in this release of JasperReports® Server:
 <p><strong>Workaround:</strong> None</p></td>
 </tr>
 <tr>
-<td>JS-67108</td>
-<td><strong>Summary:</strong> When an Ad Hoc View uses an <strong>Is one of filter</strong> and the <strong>Select All</strong> option is applied, saving the view as an Ad Hoc View report fails to transfer the selection. The resulting report's Input Control shows none of the values selected.
-<p><strong>Workaround:</strong> None</p></td>
+<td>JS-79740</td>
+<td><strong>Summary:</strong> JasperReports® Server fails to start following an overlay upgrade from version 9.0.0 to 10.1.0.
+<p><strong>Workaround:</strong> Customers can perform either a samedb or newdb upgrade to version 10.1.0, but any previous customizations will need to be reapplied.</p></td>
 </tr>
 <tr>
 <td>JS-70941</td>
@@ -200,8 +200,13 @@ The following issues exist in this release of JasperReports® Server:
 <p><strong>Workaround:</strong> None</p></td>
 </tr>
 <tr>
-<td>JS-77061</td>
-<td><strong>Summary:</strong> Dashboard Input Control's <strong>Select All</strong> functionality is broken following Hotfix JRSPro9.0.0_cumulative_20250816_0129.
+<td>JS-79431</td>
+<td><strong>Summary:</strong> When attempting to export large reports in JasperReports® Server and JasperReports® IO version 10.1.0, the process fails and throws an error.
+<p><strong>Workaround:</strong> None</p></td>
+</tr>
+<tr>
+<td>JSS-3161</td>
+<td><strong>Summary:</strong> HighMaps hyperlinks are not functioning as expected. Clicking the links within the report does not trigger navigation.
 <p><strong>Workaround:</strong> None</p></td>
 </tr>
 <tr>
@@ -212,6 +217,16 @@ The following issues exist in this release of JasperReports® Server:
 <tr>
 <td>JSS-3266</td>
 <td><strong>Summary:</strong> For report bursting, invalid parameter name has no validation.
+<p><strong>Workaround:</strong> None</p></td>
+</tr>
+<tr>
+<td>JSS-3748</td>
+<td><strong>Summary:</strong> Selecting a JSON data adapter and attempting to open the <strong>Add Property</strong> dialog triggers an <code>IllegalArgumentException</code> crash.
+<p><strong>Workaround:</strong> None</p></td>
+</tr>
+<tr>
+<td>JSS-3751</td>
+<td><strong>Summary:</strong> In Jaspersoft® Studio 9.0.3, users are unable to change the font size of a text field using the toolbar dropdown list.
 <p><strong>Workaround:</strong> None</p></td>
 </tr>
 <tr>
@@ -260,23 +275,8 @@ The following issues exist in this release of JasperReports® Server:
 <p><strong>Workaround:</strong> None</p></td>
 </tr>
 <tr>
-<td>JS-57111</td>
-<td><strong>Summary:</strong> Incorrect date shown on AdHoc view with Oracle DATE datatype.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
 <td>JS-32077</td>
 <td><strong>Summary:</strong> Multi-select input controls for reports treat the values as case-sensitive even if the data source is case-insenstive.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRIO-707</td>
-<td><strong>Summary:</strong> Observed 500 error when an invalid parameter value is provided in the POST request body.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JSS-3194</td>
-<td><strong>Summary:</strong> For jasperQL, aggregate functions are not getting applied on the fields and the column is being returned as blank.
 <p><strong>Workaround:</strong> None</p></td>
 </tr>
 <tr>
@@ -285,100 +285,9 @@ The following issues exist in this release of JasperReports® Server:
 <p><strong>Workaround:</strong> None</p></td>
 </tr>
 <tr>
-<td>JRL-1890</td>
-<td><p><strong>Summary:</strong> The latest Apache Batik SVG library (v.1.17) does not support the new SVG feature <code>feDropShadow</code>. This means that the shadow effect will be ignored in static exports (PDF, PPTX, DOCX, Excel, ODT, ODS).</p>
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1113</td>
-<td><strong>Summary:</strong> When you drop an element from the Palette to the Designing Area, the alignment of the existing elements on the Designing Area is not displayed.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1129</td>
-<td><p><strong>Summary:</strong> While creating a report:</p>
-<ul>
-<li>when the report is not saved, it is correctly previewed.</li>
-<li>when the report is saved and previewed, an error message is displayed.</li>
-<li>when the report is reopened and previewed, an error message is displayed.</li>
-</ul>
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1287</td>
-<td><p><strong>Summary:</strong> When you log in using Local Folder, and preview a report, an error is displayed.</p>
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1296</td>
-<td><p><strong>Summary:</strong> The color of the Search icons in Dataset view and in report preview are different.</p>
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1300</td>
-<td><p><strong>Summary:</strong> When you log in using Gdrive, add an image in a report and preview it, an error is displayed. However, when you save the report, you can preview it without any errors.</p>
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1303</td>
-<td><p><strong>Summary:</strong> When you log in using JackRabbit, provide a report Description in Properties view, save, and preview or close the report, the added Description is lost.</p>
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1312</td>
-<td><strong>Summary:</strong> When you log in using a local repository, on previewing a report from Samples, an error is displayed.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1315</td>
-<td><strong>Summary:</strong> On starting JasperReports® Web Studio and checking the details for JasperReports® Web Studio 3.0.1 in the command prompt, the details are not available.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JRWS-1317</td>
-<td><strong>Summary:</strong> Log in using the local repository and open a report from the Samples folder. When you change the chart type, and revert to the original chart type of a report, the chart is not displayed on previewing a report.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JS-75375</td>
-<td><p><strong>Summary:</strong> On MySQL platform, the API returns wrong response code after updating permissions.</p>
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
 <td>JS-75621</td>
 <td><p><strong>Summary:</strong> The report with HTML Pro component, with a URL, doesn't run correctly and PDF export is continuously loading.</p>
 <p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JS-75655</td>
-<td><strong>Summary:</strong> The Report execution (Async) scenario in JasperReports Server 10.1.0 exhibited a substantial 30% performance degradation compared to JasperReports Server 9.0.0 during regression testing with a single user. This was attributed to a rise in average latency for all actions, and the performance impact became more pronounced with increasing concurrent users.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JS-75712</td>
-<td><strong>Summary:</strong> Import with jobs failing on JBoss 8 platform.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JS-75713</td>
-<td><strong>Summary:</strong> On JBoss 8 platform, when the data format of a timestamp field is altered to show date and time, the resulting format is incorrect. It shows extra comma after date value.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JS-75739</td>
-<td><strong>Summary:</strong> On MySQL platform, the API returns an incorrect response code after an attribute's value or description is updated.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JS-77638</td>
-<td><strong>Summary:</strong> Users encounter an error when attempting to access specific folders following an upgrade or overlay upgrade.
-<p><strong>Workaround:</strong> None</p></td>
-</tr>
-<tr>
-<td>JS-77668</td>
-<td><strong>Summary:</strong> When the user accesses the JasperReports® Server URL and clicks the <strong>About JasperReports Server</strong> link in the lower-left corner before logging in, and closes the dialog, the page dimmer remains active, preventing the user from logging in.
-<p><strong>Workaround:</strong> Refresh the JasperReports® Server login page to be able to login again.</p>
-<p>**Note** To avoid the specific login issue, users should access the **About JasperReports Server** details post-login.</p></td>
 </tr>
 </tbody>
 </table>

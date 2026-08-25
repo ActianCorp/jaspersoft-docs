@@ -7,11 +7,11 @@ description: This section describes new features introduced in the Jaspersoft BI
 
 This section describes new features introduced in the Jaspersoft BI Suite Version 10.1 release.
 
-To view the Release Notes of version 9.0.0, see [JasperReports® Server Release Notes v9.0.0](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-release-notes/v900/relnotesbody-_-overview/).
+To view the Release Notes of version 10.0.0, see [JasperReports® Server Release Notes v10.0.0](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-release-notes/v1000/relnotesbody-_-overview/).
 
 To view the new features added to the various products of Jaspersoft BI Suite, refer to the following list:
 
-- JasperReports® Server10.1.0
+- JasperReports® Server 10.1.0
 - Jaspersoft® Studio 10.1.0
 - JasperReports® Web Studio 10.1.0
 
@@ -19,168 +19,127 @@ To view the new features added to the various products of Jaspersoft BI Suite, r
 
 For JasperReports® Server 10.1.0, the following improvements have been added:
 
-- **Jakarta Upgrade**
+- **Centralized Scheduler Dashboard**
 
-  The Jakarta upgrade represents a significant stride towards modernizing our platform and ensuring its compatibility with evolving technologies. By enabling JasperReports® Server to run on Apache Tomcat 10.1.24 onwards, we are embracing the latest advancements in the Jakarta EE 10 specifications. This transition involves:
+  Enhance operational oversight with the new Scheduler Dashboard. This centralized Admin Console provides real-time visibility into your entire scheduled report landscape.
 
-  - Updating the codebase to align with the new Jakarta namespace, guaranteeing a seamless and future-proof experience for our users.
+  - Comprehensive Monitoring: Track job states in real-time, from queued to completed.
 
-  - Upgrading the Spring and Commons DBCP libraries to ensure compatibility with the evolving Java enterprise ecosystem to be used effectively in Jakarta EE environments.
+  - Enhanced Admin Controls: Restart individual job executions or view detailed historical data for finished triggers using new dedicated action buttons.
 
-  - moving from ehcache2 to JCache API implementation. Currently, Infinispan is the only verified JCache implementation.
+  - Actionable Insights: Administrators gain full access to execution history, while standard users can monitor success and failure counts at a glance.
 
-- **Hibernate Upgrade**
+- **Password History Validation**
 
-  The application now leverages Hibernate version 6. This involved replacing the older, XML-based (.hbm.xml) object-relational mappings with modern JPA annotation-based @Entity classes.
+  Strengthen your enterprise security and simplify compliance with our new Password History Validation. This feature prevents users from recycling their last *n* passwords during the reset process, defending against unauthorized access and aligning your environment with modern security best practices.
 
-- **Enhanced Tooltip for Fields and Measures**
+  This feature is turned off by default. To implement password recycling restrictions, you must explicitly enable the corresponding configuration property.
 
-  Gain valuable insights at a glance with our enhanced tooltip. It now provides comprehensive field information, including **Field Path, Original Name, Formula, Description, Data Type, Field Type**, and **Default Summary Function**. The details are available for all available fields/measures, selected fields/measures, and fields/measures used in filters, empowering you to make informed decisions and optimize your reports.
+  For more information, see JasperReports® Server Security Guide.
 
-  For more information, see JasperReports® Server User Guide.
+- **Modernized Password Storage**
 
-- **Ad Hoc UX Panel (Layout Band)**
+  Upgrade your security posture with our state-of-the-art password storage system. We have introduced industry-leading, one-way hashing algorithms that provide superior protection against unauthorized access. This update ensures a more robust defense while maintaining seamless backward compatibility for all existing users.
 
-  The Layout Band has been completely redesigned to provide a more intuitive and user-friendly experience when creating visualizations. It now dynamically adapts to each visualization type, presenting specific areas for fields and measures that directly correspond to how the visualization is constructed. This update improves the user experience and simplifies the visualization building process.
+  For more information, see JasperReports® Server Security Guide.
 
-  Informative tooltips are added to guide you on where to drag and drop fields and measures to achieve the perfect layout for your visualizations.
+- **Migration to Jackson**
 
-  For more information, see JasperReports® Server User Guide.
+  We have successfully migrated JasperReports® Server’s data binding and serialization framework from legacy Castor to the industry-leading Jackson library. This architectural upgrade delivers faster response times and significantly improved system stability. While this represents a major technical leap forward, the transition is entirely seamless. Users will enjoy a faster, more reliable experience with no manual configuration required.
 
-- **Print Functionality**
+  <div class="admonition note">
+  <p class="admonition-title">Note</p>
 
-  Now you can easily print your reports, dashboards, and Ad Hoc designs with a single click. Our new print function, integrated directly into the toolbars, instantly generates a PDF and opens your system's **Print** dialogue. For dashboards, you have even more control with configurable visibility for the print button (both for the entire dashboard and individual dashlets), offering "screenshot" or "detailed" print options to perfectly capture your data.
+                      <p>Resources exported from version 10.1.0  cannot be imported into older versions of the application.</p>
 
-  For more information, see JasperReports® Server User Guide.
+  </div>
 
-- **Visual indicator of filters/dashlets**
+  For more information, see JasperReports® Server Upgrade Guide.
 
-  Unlock deeper insights with enhanced dashboard interactivity. Our latest update visually clarifies data relationships, highlighting affected dashlets when you select a filter. Gain a more intuitive understanding of your data at a glance.
+- **Retired Apache Tiles**
 
-  For more information, see JasperReports® Server User Guide.
+  We have streamlined the JasperReports® Server core by migrating from legacy Apache Tiles to standard JSP Tag Files. By eliminating complex external dependencies and adopting a sleek, native framework (now located in `WEB-INF/tags/templates/`), we have built a reliable foundation.
 
-- **Editing external Ad Hoc view from Dashboard**
+  This is an internal architectural upgrade. The user interface and public APIs remain unchanged. If you use custom JSP overlays, update your references from `tiles:insertTemplate` to the new `<tmpl:*>` tag files to align with this modernization.
 
-  Unlock seamless, in-dashboard editing. This powerful enhancement lets you modify existing Ad Hoc views directly from within your dashboard. Simply enter edit mode, right-click any dashlet, and select **Edit** to instantly access and fine-tune the underlying data view. Save your changes, close the view, and watch your dashboard update dynamically—all without leaving your workflow.
-
-  For more information, see JasperReports® Server User Guide.
-
-- **Disabling Alert**
-
-  Take complete control of the **Alert** feature visibility. Easily disable system alerts by setting the `isAlertEnabled` flag to `false` ( `true` by default) and simply restart the server.
-
-  For more information, see JasperReports® Server User Guide.
-
-- **Accessibility Changes**
-
-  With the accessibility changes, the usability and precision for users is enhanced. There are improvements in some areas of the Ad Hoc designer and the Input Controls dialog providing smoother navigation, clearer interface and wider compatibility.
-
-- **New License Manager**
-
-  A new in-house license manager/validator is added in JasperReports® Server 10.1.0. The name of the license file is now changed to `jaspersoft.jrs.license`, while the application's functionality remains the same regardless of the license. Correct permissions must be set on this new file.
-
-  For more information, see JasperReports® Server Installation Guide.
-
-- **Telemetry**
-
-  We have significantly upgraded our telemetry and license management to improve compliance and deliver greater customer value. This expanded data collection provides increased visibility into usage patterns, enabling our teams to generate actionable insights for product and sales development. Key focuses include compliance monitoring (tracking user counts and feature limits to prevent violations) and onboarding improvement (tracking initial user actions to reduce drop-off). This new mechanism efficiently aggregates all crucial data, providing a single, comprehensive view of each customer's deployments in the Diagnostic Report.
-
-  For more information, see JasperReports® Server Administrator Guide.
-
-- **HTML Pro Component**
-
-  With the new HTML Pro component, you can embed the HTML content (including layout, tables, and images) into JasperReports. While the support for basic HTML formatting using HTML as the markup language for text fields is already available, it is limited and does not support images, tables, and custom CSS-based formatting. The HTML PRO component leverages the Microsoft Playwright library version 1.50.0 to provide enhanced HTML report generation capabilities.
-
-  For more information, see the JasperReports® Server User Guide.
-
-- **Sending Emails Using SendGrid API**
-
-  You can configure the scheduler to utilize SendGrid API for sending and receiving emails.
-
-  For more information, see JasperReports® Server Administrator Guide and JasperReports® Server Installation Guide.
-
-- **Custom Input Controls**
-
-  Custom Input Controls for JasperReports Server empower you to transform your reports and dashboards from generic displays into highly intuitive, sophisticated interfaces. You now have the flexibility to use custom expressions to **Enable/Disable** and **Show/Hide** Input Control. You can also update the Input Control title using custom expressions. This precision gives every user the exact controls they need, resulting in smarter, faster filtering and a truly intuitive experience for complex data analysis.
-
-  For more information, see JasperReports® Server User Guide and JasperReports® Server Administrator Guide.
-
-- **Show or Hide Columns in Interactive Tables**
-
-  JIVE action of show/hide columns in report viewer is now enhanced to provide more control over which columns to display. You can now show or hide single/multiple columns.
-
-  For more information, see JasperReports® Server Administrator Guide.
+  For more information, see JasperReports® Server Upgrade Guide.
 
 ## Jaspersoft® Studio 10.1.0
 
 For Jaspersoft® Studio 10.1.0, the following improvements have been added:
 
-- **Eclipse 4.36 and Java 21 Upgrade**
+- **Intuitive report design**
 
-  The Eclipse 4.36 and Java 21 upgrade is a significant modernization of the core platform used to build and run Jaspersoft® Studio. With this upgrade, Jaspersoft® Studio runs on a more modern, stable, and feature-rich foundation, ensuring better compatibility and a more responsive user interface. The Eclipse 4.36 platform requires a more recent version of the Java runtime to function correctly, forcing the minimum Java version requirement to move up. Moving the minimum requirement to Java 21 is a substantial jump, as Java 21 is one of the latest versions.
+  The JasperReports Library PDF exporter now supports Section 508, PDF/UA, and WCAG standards by embedding semantic tags for screen reader navigation. Our goal is to ensure reports pass validation in tools like PAC, VeraPDF, and Adobe Professional.
 
-  This combined upgrade represents a major technological shift aimed at modernizing the application's core. It replaces older software dependencies with modern, performance-optimized, and more secure components (Eclipse 4.36 and Java 21), ensuring the platform remains current and viable for future development.
+  True accessibility is a partnership between the software and the report designer. While the exporter provides the technical tagging, report designers must still prioritize accessible layouts, such as high color contrast and simple table structures, to ensure true readability.
 
-- **HTML Pro Component**
+  <div class="admonition note">
+  <p class="admonition-title">Note</p>
 
-The new HTML Pro component is exclusively available for Jaspersoft® Studio Professional users. The HTML Pro component allows the embedding of HTML content (including layout, tables, and images) into JasperReports. While the support for basic HTML formatting using HTML as the markup language for text fields is already available, it is limited and does not support images, tables, and custom CSS-based formatting. The HTML PRO component leverages the Microsoft Playwright library version 1.50.0 to provide enhanced HTML report generation capabilities.
+                      <p>Starting release 10.1.0, accessibility features have been removed from all future Community Edition releases. When upgrading to or embedding library version 10.1.0, reports will throw a <code>Tag PDF not supported</code> exception on the first run due to the removal of accessibility features from the Community Edition. </p>
+                      <p>For more information, see <a href="https://community.jaspersoft.com/knowledgebase/getting-started/jasperreports-library-pdf-accessibility-feature-r5060/">JasperReports Library PDF Accessibility Feature</a>.</p>
 
-For more information, see the Jaspersoft® Studio User Guide.
+  </div>
 
-- **New License Manager**
+- **Single Sign On (Browser) option**
 
-A new in-house license manager/validator is added in Jaspersoft Studio 10.1.0. The name of the license file is now changed to `jaspersoft.jss.license`, while the application's functionality remains the same regardless of the license.
+  Jaspersoft® Studio now features enhanced SSO support via an embedded browser widget, simplifying connections to JasperReports® Server instances secured by external identity providers (such as Okta).
 
-For more information, see the Jaspersoft® Studio User Guide.
+  You select the new **Single Sign-On (Browser)** option in the **Server Profile Wizard** to log in via an in-app browser window. Upon successful authentication, you can capture the active `JSESSIONID` session cookie to securely unlock repository browsing, report publishing, and resource management without storing corporate credentials.
 
-- **New JRXML 7 Model**
+- **Improved Eclipse IO Console appender**
 
-With the introduction of the new JRXML 7 model, a warning message will now appear when publishing reports to JasperReports® Server. You can modify the compatibility settings, such as the JasperReports® Library version, as needed.
+  This release introduces key improvements to our logging capabilities. We have enhanced the Eclipse IO Console appender and added two new JVM properties:
 
-For more information, see the Jaspersoft® Studio User Guide.
+  - `jss.logging.tmpdir`, can be configured in your `.ini` file for use in the `log4J2.xml` file appender.
 
-- **Alternative Login Method**
-
-A secondary, smartphone-based activation method to Jaspersoft® Studio Community is offered to improve the activation experience for users with limited or no internet connectivity. In case of network limitations, Jaspersoft® Studio generates a QR code containing encrypted installation details. Users can scan this code with their smart phones, log in to the Jaspersoft® community, and receive a unique activation code. Entering this code into Jaspersoft® Studio completes the registration process. This enables offline usage and allows installation tracking.
+  - `jss.logging.redirectSystemStreams` (defaults to `false`), allows you to intercept and redirect `System.out` and `System.err` streams when enabled.
 
 ## JasperReports® Web Studio 10.1.0
 
 For JasperReports® Web Studio 10.1.0, the following improvements have been added:
 
-- **Wizard for Table Creation**
+- **Drag-and-drop query building**
 
-  Instantly build powerful, data-rich reports with the Table Wizard. This essential tool is designed to drastically streamline table creation, transforming complex setup into a smooth, step-by-step process. The Wizard guides you through everything—from selecting or defining your datasets to configuring data adapters—ensuring a fast, efficient workflow so you can publish your reports sooner.
+  Accelerate query design by dragging nodes directly from the **Metadata** panel into the query editor. This streamlined workflow eliminates manual coding errors and simplifies the construction of complex queries.
 
-- **Crosstab Wizard**
+- **Composite elements**
 
-  The enhanced crosstab creation feature is designed to give you a clearer, more intuitive understanding of complex data relationships. We have completely streamlined the process: the new Crosstab Wizard makes adding sophisticated crosstabs to your reports easier than ever, guiding you effortlessly to better data insights.
+  Accelerate report creation with new Composite elements. Effortlessly drag and drop preconfigured components, such as dynamic timestamps and automatic page numbering, into your canvas to streamline complex workflows and save development time.
 
-- **Report Wizard**
+- **Contextual "maximize" action**
 
-  Generate powerful reports effortlessly with our intuitive Report Wizard. We have taken the complexity out of report creation by guiding you through a clear, step-by-step process. Simply follow the wizard to select your data adapter, define your query, choose fields, and apply precise grouping and sorting. It’s the easiest way to ensure a seamless workflow and instantly create the reports you need.
+  Maximize your design workspace with the new "Maximize Band" action. Simply select any report band and click the button to instantly expand it to fill the available space, streamlining your layout workflow and eliminating manual resizing.
 
-- **Refactor Home page**
+- **Manual parameter reordering**
 
-  The application's default login page allows users to connect to various repositories like JasperReports Server, Google Drive, and GitHub via the upper-right menu. Users can switch between these repositories and set a default login page from server settings.
+  Manage the resolution sequence of your datasets precisely by using a simple drag-and-drop interface. By grabbing the new handle icon to the left of any parameter name, you can reorder your list to ensure that dependent variables resolve in the correct sequence for your query, eliminating manual configuration errors and streamlining dataset logic.
 
-- **Effortless Table Editing**
+- **Enhanced pattern editor**
 
-  Take full control of your tables by effortlessly adding, deleting, or reordering columns. Populate your table with data and use the intuitive contextual menu or mini toolbar to seamlessly perform any action. With the enhanced table editor, you can effortlessly add or delete sections, such as table headers, and merge or split cells to achieve your desired layout.
+  Configuring numeric and date-time formats is now more intuitive with the enhanced Pattern Editor. Clicking the ellipsis (...) button opens a new dialog featuring a comprehensive library of common presets. Simply select a predefined pattern and use the built-in controls to fine-tune the formatting to your specific requirements, ensuring precision with minimal effort.
 
-- **Intuitive Contextual Menu**
+- **Automated aggregate calculations**
 
-  Streamline your workflow with the convenient contextual menu. Select elements from the Outline and effortlessly align or resize them within the Designing Area. Simply right-click the element and choose from the context-sensitive menu options to achieve precise positioning and sizing.
+  Dragging fields into summary or group bands now triggers the "Smart Calculation" dialog, automating the setup of aggregate data. Simply choose your desired calculation, such as sum, average, or count, and the system instantly generates the necessary variables and expressions. For numeric fields, additional advanced aggregation options are available to further accelerate your report design.
 
-- **Enhanced Design Experience**
+- **JDBC scalability improvements**
 
-  Experience a new level of report design with our improved layout designer.
+  Experience significantly faster performance when working with large database schemas. Our new lazy-loading logic eliminates timeouts by fetching metadata in smaller, on-demand increments, ensuring a smooth and responsive design experience even when connecting to the most complex data environments.
 
-  - **Snap to Geometry**: Achieve pixel-perfect alignment of elements within the Designing Area. Select one or more elements and effortlessly move, resize, or align them together.
+- **Streamlined repository access**
 
-  - **Image Preview**: Add images to your design and instantly preview them. Easily edit and adjust display settings to achieve the perfect visual impact.
+  Simplify your onboarding. Report repositories and owners are now generated automatically. Upon login, the interface directs you straight to your personal repository, eliminating manual configuration and providing a seamless start-to-finish experience.
 
-  - **Inline Text Element Editing**: Edit text elements directly within the design canvas. Double-click any text field or static text element to conveniently modify the expression or text. Personalize element properties such as color and font with ease.
+- **Cross-Site Request Forgery (CSRF) protection**
 
-  - **Column Support**: Create tables with multiple columns effortlessly. Specify the desired number of columns in the Properties view to evenly divide the Designing Area.
+  implemented CSRF security filters across the entire application. This critical security update prevents unauthorized commands from being executed on behalf of authenticated users, significantly strengthening the platform's defense against malicious exploits and ensuring a more secure environment for your data.
 
-  - **Expression Editor**: Simplify expression editing by double-clicking the field to replace the text with the corresponding field expression.
+- **Advanced Query Designer**
+
+  Our new JavaScript-based query editor is a powerful tool designed to bridge the gap between complex design and actionable data. This powerhouse editor offers an intuitive interface that combines visual drag-and-drop building with a professional text-based environment, allowing you to master datasets using standard `SELECT, FROM, WHERE`, and `ORDER BY` components. With integrated metadata insights and high-fidelity result previews, you can build sophisticated queries featuring conditional logic, dynamic expressions, and nested subqueries with confidence. Every design is backed by intelligent real-time validation, ensuring flawless accuracy and peak performance for your most demanding reports.
+
+- **Modernized Repository UI**
+
+  Experience a professional-grade file management interface designed for speed and precision. This comprehensive refactor introduces visual versatility, allowing you to tailor your workspace with customizable view modes, and precision control through multi-select functionality and hover-triggered shortcuts. We have also optimized file handling to ensure folder creation. Data transfers are faster and more reliable. Additionally, you can now gain priority access to your most important resources via the new **Favorites** section, putting your go-to reports just one click away.

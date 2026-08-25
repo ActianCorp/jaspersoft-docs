@@ -15,10 +15,8 @@ Applies to Jaspersoft **10.1.0**.
 
 - [Introduction](introduction.md)
 - [Overlay Upgrade](upgrade-overlay.md)
-- [Upgrading from 9.0 to 10.1](upgrade-with-sql-script.md)
-- [Upgrading from 8.0.x - 8.2 to 10.1](upgrading.md)
+- [Upgrading from 10.0 to 10.1](upgrade-10.0-to-10.1.md)
 - [Migrating from Compact 10.1 to Split 10.1](migrate-from-compact-to-split.md)
-- [Upgrading JasperReports Server 6.4.x or Earlier](upgradenotes.md)
 - [Upgrading from the Community Project](upgrade-ce-to-pro.md)
 - [Upgrade JasperReports Web Studio](upgrade-jrws.md)
 - [Planning Your Upgrade](plan-upgrade-intro.md)

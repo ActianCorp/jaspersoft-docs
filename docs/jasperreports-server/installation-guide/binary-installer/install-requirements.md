@@ -13,7 +13,7 @@ Pre-installation tasks include the tasks that you must complete before you start
 
 ### Exclude JasperReports Server Installer File from Security Software Scans
 
-If using anti-virus security software, you may need to ensure that the exception list includes the js-jrs_8.x.x_win_x86_64.exe installer file.
+If using anti-virus security software, you may need to ensure that the exception list includes the `js-jrs_10.x.x_win_x86_64.exe` installer file.
 
 ### Download JasperReports Server Software
 

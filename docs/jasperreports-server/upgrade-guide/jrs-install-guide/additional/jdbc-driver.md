@@ -19,20 +19,20 @@ If you want to use a newer JDBC driver version or a different JDBC driver, you 
 
 The buildomatic/conf_source/db/postgresql/jdbc folder contains these driver files:
 
-`postgresql-42.2.5.jar`
+`postgresql-42.7.11.jar`
 
 For instance, to change the default driver used by PostgreSQL from type `jdbc4.2` to` jdbc4.1`:
 
-1.  Download `postgresql-42.5.5.jar` from https://jdbc.postgresql.org/download.html and save it under `buildomatic/conf_source/db/postgresql/jdbc`.
+1.  Download `postgresql-42.2.28.jre7.jar` from https://jdbc.postgresql.org/download.html and save it under `buildomatic/conf_source/db/postgresql/jdbc`.
 2.  Edit your `default_master.properties` file, `<js-install>`. Edit your `default_master.properties` file, `<js-install>/buildomatic/default_master.properties` as follows:
 
 Uncomment and change:
 
-`# maven.jdbc.version=42.2.5`
+`# maven.jdbc.version=42.3.5`
 
 To:
 
-`maven.jdbc.version42.2.5.jre7`
+`maven.jdbc.version=42.2.28.jre7`
 
 When you next run a buildomatic command, such as `deploy-webapp-``pro`` `, the `jdbc4.1` driver is copied to your application server.
 

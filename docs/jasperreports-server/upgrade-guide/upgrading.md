@@ -45,13 +45,13 @@ These are the general steps used in this section:
 
 4.  Download and set up the new 10.1 JasperReports Server WAR file distribution zip.
 
-5.  Copy `../webapps/jasperserver-pro` directory from Tomcat 9 to Tomcat 10.1.x folder.
+5.  Copy `../webapps/jasperserver-pro` directory from Tomcat 9 to Tomcat 11.0.x folder.
 
 6.  Run the `js-upgrade` script as described in Upgrading to JasperReports Server 10.1.
 
 ## Upgrading with Customizations
 
-If your current instance of JasperReports Server has modifications or extensions, keep track of these and re-integrate them into your 10.1 instance after upgrading. See [Planning Your Upgrade](plan-upgrade-intro.md) to determine if any customizations you've made to your existing version of JasperReports Server are affected by changes to the updated version.
+If your current instance of JasperReports Server has modifications or extensions, keep track of these and re-integrate them into your 10.1 instance after upgrading. See [Planning Your Upgrade](plan-upgrade-intro.md) to determine if any customizations you have made to your existing version of JasperReports Server are affected by changes to the updated version.
 
 ## Back Up Your JasperReports Server Instance
 
@@ -106,7 +106,7 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
 
 !!! note
 
-    For MySQL, If you receive an error about packet size, see the Troubleshooting appendix of the JasperReports Server Installation Guide.
+    For MySQL, If you receive an error about packet size, see the Troubleshooting section of the JasperReports Server Installation Guide.
 
 **Back up your JasperReports Server Keystore**
 
@@ -182,7 +182,7 @@ This upgrade procedure uses the `js-upgrade-newdb ` shell script.
 
 !!! note
 
-    For Unix, the bash shell is required for the js-upgrade scripts. If you are installing to a non-Linux Unix platform such as IBM AIX, FreeBSD or Solaris, you need to download and install the bash shell. See the Troubleshooting appendix of the JasperReports Server Installation Guide for more information.
+    For Unix, the bash shell is required for the js-upgrade scripts. If you are installing to a non-Linux Unix platform such as IBM AIX, FreeBSD or Solaris, you need to download and install the bash shell. See the Troubleshooting section of the JasperReports Server Installation Guide for more information.
 
 PostgreSQL, MySQL, and Oracle databases. Other databases are similar.
 
@@ -219,7 +219,7 @@ To configure `default_master.properties` for PostgreSQL:
 <tr>
 <td><p>PostgreSQL</p></td>
 <td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)
+appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
 dbUsername=postgres
 dbPassword=postgres
 dbHost=localhost</code></pre></td>
@@ -258,7 +258,7 @@ To configure `default_master.properties` for MySQL:
 <tr>
 <td><p>MySQL</p></td>
 <td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)
+appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
 dbUsername=root
 dbPassword=password
 dbHost=localhost</code></pre></td>
@@ -297,12 +297,13 @@ To configure `default_master.properties` for Oracle:
 <tr>
 <td><p>Oracle</p></td>
 <td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)
+appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
 dbUsername=jasperserver
 dbPassword=password
 sysUsername=system
 sysPassword=password
-dbHost=localhost</code></pre></td>
+dbHost=localhost
+dbVersion=oracleDbVersion (for example, 12, 19c, 21c, 23ai, 26ai and so on)</code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -347,9 +348,9 @@ Now that your buildomatic scripts are configured, you can complete the upgrade.
 
 !!! note
 
-    On MySQL, if you receive an error about packet size, see the Troubleshooting appendix of the JasperReports Server Installation Guide.
+    On MySQL, if you receive an error about packet size, see the Troubleshooting section of the JasperReports Server Installation Guide.
 
-    If you have auditing enabled, see the section about including audit events in the Troubleshooting appendix of the JasperReports Server Installation Guide.
+    If you have auditing enabled, see the section about including audit events in the Troubleshooting section of the JasperReports Server Installation Guide.
 
 !!! note
 
@@ -358,7 +359,7 @@ Now that your buildomatic scripts are configured, you can complete the upgrade.
 If you are prompted to create a keystore, this means that the server's original keystore was not found in the user's home directory. Proceed with caution:
 
 - In general, it is recommended to exit the upgrade procedure and make sure that the keystore is in the proper location, then rerun the upgrade.
-- If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository, as described in [“Encryption Keys” on page 1](plan-upgrade-7.5.md).
+- If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository.
 
 ### js-upgrade Test Mode
 
@@ -366,21 +367,19 @@ Use the `test` option to run the `js-upgrade` script in test mode. For example, 
 
 `cd <js-install-10.1>/buildomatic`
 
-`js-upgrade-newdb .bat test <path>/js-8.0.x-export.zip`
+`js-upgrade-newdb .bat test <path>/js-9.0-export.zip`
 
-`js-upgrade-samedb .bat test`
-
-In test mode, the js-upgrade scripts check your default_master.properties settings and validate your application server location and its ability to connect to your database. Test mode can help you debug issues like an incorrect database password without altering your system.
+In test mode, the `js-upgrade` scripts check your `default_master.properties` settings and validate your application server location and its ability to connect to your database. Test mode can help you debug issues like an incorrect database password without altering your system.
 
 ### Output Log Location
 
-The js-upgrade script creates an output log that captures both standard and error output. If problems occur during script execution, or you just want to remember which options you chose, open the output log file located here:
+The `js-upgrade` script creates an output log that captures both standard and error output. If problems occur during script execution, or you just want to remember which options you chose, open the output log file located here:
 
 `<js-install-10.1>/buildomatic/logs/js-upgrade-<date>-<number>.log`
 
 ### Errors
 
-If you encounter errors running the `js-upgrade` script, first look at the output log to see if you can spot the errors. For help, refer to the Troubleshooting appendix of the JasperReports Server Installation Guide. The information in this appendix applies to both `js-upgrade` scripts and `js-install` scripts.
+If you encounter errors running the `js-upgrade` script, first look at the output log to see if you can spot the errors. For help, refer to the Troubleshooting section of the JasperReports Server Installation Guide. The information in this section applies to both `js-upgrade` scripts and `js-install` scripts.
 
 If you need to modify values in your `default_master.properties` file, you can simply edit the file. When you run the `js‑upgrade` script again, it uses the new values.
 
@@ -403,7 +402,7 @@ URL: `http://localhost:8080/``jasperserver`` ``-pro`` `
 | `superuser`   | \<your-password\> | System-wide administrator                  |
 | `jasperadmin` | \<your-password\> | Administrator for the default organization |
 
-Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting appendix of the JasperReports Server Installation Guide.
+Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting section of the JasperReports Server Installation Guide.
 
 !!! note
 

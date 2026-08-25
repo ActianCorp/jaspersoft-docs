@@ -20,589 +20,315 @@ The following issues have been fixed in this release of JasperReports® Server:
 </thead>
 <tbody>
 <tr>
-<td>JRL-2039</td>
-<td>Implement a class whitelist extension to prevent unauthorized or dangerous classes from being loaded during deserialization.</td>
+<td>JRIO-841</td>
+<td>Jetty and JasperReports Library documentation links are not working in JasperReports® IO application.</td>
 </tr>
 <tr>
-<td>JS-31960</td>
-<td>Data is not displayed in the Crosstab when a filter with the <strong>ElapsedDate</strong> calculated field is applied.</td>
+<td>JRIO-842</td>
+<td>The system fails to generate the expected PDF output files during report bursting.</td>
 </tr>
 <tr>
-<td>JS-57052</td>
-<td>An error occurred when filtering datetime data in AWS Redshift using an Ad Hoc filter.</td>
+<td>JRIO-844</td>
+<td>Formatting dialog does not open for Table reports.</td>
 </tr>
 <tr>
-<td>JS-65548</td>
-<td>When performing a manual WAR file installation of JasperReports® Server 8.0.0, an error occurred while running the <code>js-ant import-minimal-pro</code> command.</td>
+<td>JRIO-846</td>
+<td>The <code>AccessibleReport</code> reference sample located in the JasperReports® IO<code> /samples/reports</code> directory is outdated.</td>
 </tr>
 <tr>
-<td>JS-67848</td>
-<td>Ad Hoc View embedded in a JasperReports® Server dashboard incorrectly auto-selects all filter values whereas running same Ad Hoc View in standalone, shows where (1=1) instead of all the values.</td>
+<td>JRL-2112</td>
+<td>When a report is configured with PDF/A properties, JasperReports® Web Studio drops the <code>linkType</code> attribute from <code>JRHyperlink</code> elements. As a result, the generated hyperlinks are non-clickable.</td>
 </tr>
 <tr>
-<td>JS-68641</td>
-<td>When users upgrade their JasperReports® Server from 7.5 to 8.0 using the samedb script, duplicated scheduled jobs are introduced, resulting in significant performance issues with job execution.</td>
+<td>JS-34719</td>
+<td>In JasperReports® Server, memory leak warnings during application shutdown prevented the server process from closing entirely, resulting in orphaned Java processes.</td>
 </tr>
 <tr>
-<td>JS-69038</td>
-<td>If JDK 17 is installed on a system, then installing JasperReports® Server using binary installer displayed errors.</td>
+<td>JS-57111</td>
+<td>Incorrect date shown on AdHoc view with Oracle DATE datatype.</td>
 </tr>
 <tr>
-<td>JS-70424</td>
-<td>After upgrading to JasperReports® Server 8.2.0, external users are unable to log in to the application and are receiving errors. This functionality worked correctly in JasperReports® Server version 7.5.</td>
+<td>JS-67108</td>
+<td>When an Ad Hoc View uses an <strong>Is one of filter</strong> and the <strong>Select All</strong> option is applied, saving the view as an Ad Hoc View report fails to transfer the selection. The resulting report's Input Control shows none of the values selected.</td>
 </tr>
 <tr>
-<td>JS-70500</td>
-<td>When a user enters a weak password, the system redirects them instead of displaying a password validation error.</td>
+<td>JS-68665</td>
+<td>When navigating to <strong>View &gt; Search</strong>, the system fails to return any results if the query exceeds the maximum parameter limit allowed by SQL Server.</td>
 </tr>
 <tr>
-<td>JS-70923</td>
-<td>When a user is authenticated via Token Based Authentication, they are unable to successfully export Ad Hoc views or run corresponding Ad Hoc reports.</td>
+<td>JS-75375</td>
+<td><p>On MySQL platform, the API returns wrong response code after updating permissions.</p></td>
 </tr>
 <tr>
-<td>JS-71031</td>
-<td>JDBC connection leaks are causing Connection Pooling failures and resulting in high JVM memory consumption.</td>
+<td>JS-75655</td>
+<td>The Report execution (Async) scenario in JasperReports Server 10.0 exhibited a substantial 30% performance degradation compared to JasperReports Server 9.0.0 during regression testing with a single user. This was attributed to a rise in average latency for all actions, and the performance impact became more pronounced with increasing concurrent users.</td>
 </tr>
 <tr>
-<td>JS-71042</td>
-<td>Input control values fail to refresh upon a new user logging in.</td>
+<td>JS-75712</td>
+<td>Import with jobs failing on JBoss 8 platform.</td>
 </tr>
 <tr>
-<td>JS-71193</td>
-<td>Column borders are lost on a JasperReport Table when data spans across multiple report pages.</td>
+<td>JS-75713</td>
+<td>On JBoss 8 platform, when the data format of a timestamp field is altered to show date and time, the resulting format is incorrect. It shows extra comma after date value.</td>
 </tr>
 <tr>
-<td>JS-71577</td>
-<td>The Single Select Query Input Control displays the wrong selection after a user performs a search for a value.</td>
+<td>JS-75735</td>
+<td>On MySQL platform, the API returns an incorrect response code after the permission is updated.</td>
 </tr>
 <tr>
-<td>JS-71651</td>
-<td><p>User has reported two critical issues with the JasperReports® Server 9.0.0 WAR package installation:</p>
+<td>JS-75739</td>
+<td>On MySQL platform, the API returns an incorrect response code after an attribute's value or description is updated.</td>
+</tr>
+<tr>
+<td>JS-76888</td>
+<td>When accessed via the rest_v2 API endpoints, JasperReports® Server 9.0.0 fails to properly sanitize or escape the <code>type</code> query parameter, allowing arbitrary JavaScript to be executed in the context of the user's browser.</td>
+</tr>
+<tr>
+<td>JS-77015</td>
+<td>When an item is deselected from the input control's "Selected" list, the report is not updated.</td>
+</tr>
+<tr>
+<td>JS-77222</td>
+<td><strong>Select All</strong> option fails in the <strong>Scheduler</strong> input controls for Ad Hoc View reports.</td>
+</tr>
+<tr>
+<td>JS-77308</td>
+<td>Editing and saving an existing Domain Topic updates both its 'Modified' and 'Created' dates to the current date.</td>
+</tr>
+<tr>
+<td>JS-77475</td>
+<td>In JasperReports® Server 9.0.0, when user role is added for ERROR MESSAGE, then key details are displayed instead of the value in error message.</td>
+</tr>
+<tr>
+<td>JS-77563</td>
+<td>When running an Ad Hoc View report, the Input Controls panel displays locale keys for labels instead of the Input Control labels.</td>
+</tr>
+<tr>
+<td>JS-77638</td>
+<td>Users encounter an error when attempting to access folder containing dashboard resources following an upgrade or overlay upgrade on Postgresql database.</td>
+</tr>
+<tr>
+<td>JS-78095</td>
+<td>In JasperReports® Server 10.0.0, when a scheduled report job is deleted by a user or an administrator, the deletion is incomplete at the database level. The entries are deleted from some tables and still exist in some.</td>
+</tr>
+<tr>
+<td>JS-78203</td>
+<td>JasperReports® Server is currently utilizing deprecated and EOL AWS-Java-SDK-1.x dependencies.</td>
+</tr>
+<tr>
+<td>JS-78365</td>
+<td>When JasperReports® Server is configured to use an IBM DB2 database, following a standard major version upgrade or an overlay upgrade to JasperReports® Server 10.0.0, users encounter error dialog when navigating to repository folders containing Dashboard resources.</td>
+</tr>
+<tr>
+<td>JS-78499</td>
+<td>In JasperReports® Server 9.0.0, a performance is observed when a user interacts with a report input control and selects the <strong>Select All</strong> option, specifically when the underlying dataset for that input control exceeds 100,000 (100K) values.</td>
+</tr>
+<tr>
+<td>JS-78514</td>
+<td>JasperReports® Server 10.0.0 fails to start if the theme is configured to load directly from the local file system rather than the standard metadata repository database.</td>
+</tr>
+<tr>
+<td>JS-78530</td>
+<td>In JasperReports® Server 10.0.0, when a report is configured with an optional input control and scheduled with the option to save as a data snapshot, the scheduled execution fails to save data snapshot during output generation.</td>
+</tr>
+<tr>
+<td>JS-78612</td>
+<td><p>In JasperReports® Server 10.0.0, when a report has a valid data snapshot saved directly to the repository database, manual execution correctly pulls data from that snapshot under normal conditions.</p>
+<p>However, if the Apache Tomcat cache is cleared (deleting the contents of the <code>&lt;tomcat&gt;/temp</code> and <code>&lt;tomcat&gt;/work</code> directories) and the service is restarted, manual report execution runs a fresh query instead of referring to data snapshot which is saved to repository database.</p></td>
+</tr>
+<tr>
+<td>JS-78767</td>
+<td>Data source creation is blocked when using a license restricted to the FUSION feature.</td>
+</tr>
+<tr>
+<td>JSS-3194</td>
+<td>For jasperQL, aggregate functions are not getting applied on the fields and the column is being returned as blank.</td>
+</tr>
+<tr>
+<td>JSS-3531</td>
+<td>When copying and pasting a resource within the same directory in the Repository Explorer, the system does not offer the option to rename the duplicate file.</td>
+</tr>
+<tr>
+<td>JSS-3558</td>
+<td>When designing reports in Jaspersoft® Studio using jasperQL, field aggregations are not working correctly.</td>
+</tr>
+<tr>
+<td>JSS-3646</td>
+<td>Users were unable to view or access the report options within Jaspersoft® Studio.</td>
+</tr>
+<tr>
+<td>JSS-3705</td>
+<td>Allow the table column weight property to accept negative numbers for layout configurations.</td>
+</tr>
+<tr>
+<td>JSS-3706</td>
+<td>Fix proposed i18n properties file list in Translation Wizard.</td>
+</tr>
+<tr>
+<td>JSS-3707</td>
+<td>Exception thrown when creating table-based reports using the <strong>New Report Wizard</strong>.</td>
+</tr>
+<tr>
+<td>JSS-3710</td>
+<td>Jaspersoft® Studio requires internal classes to be explicitly added to the whitelist property for publishing to JasperReports® Server.</td>
+</tr>
+<tr>
+<td>JSS-3730</td>
+<td>Reports utilizing Google Maps components are currently failing to render and are throwing timeout errors during execution.</td>
+</tr>
+<tr>
+<td>JSS-3733</td>
+<td>After successfully publishing a report to JasperReports® Server, the <strong>Reset</strong> and <strong>Legend</strong> components fail to render on the page.</td>
+</tr>
+<tr>
+<td>JSS-3734</td>
+<td>There is a color mismatch with Google Maps components, where the marker colors displayed in the legend box do not align with the actual markers on the map.</td>
+</tr>
+<tr>
+<td>JSS-3749</td>
+<td>Fix the UI and input handling behavior of the date widget during report previews.</td>
+</tr>
+<tr>
+<td>JRWS-1113</td>
+<td>When you drop an element from the Palette to the Designing Area, the alignment of the existing elements on the Designing Area is not displayed.</td>
+</tr>
+<tr>
+<td>JRWS-1129</td>
+<td><p>While creating a report:</p>
 <ul>
-<li><p>Missing SQL Server JDBC Configuration: The <code>sqlserver_master.properties</code> (or <code>default_master.properties</code>) file is missing the standard SQL Server JDBC driver configuration details. This omission creates confusion and hinders the clear setup of the JasperReports® Server repository database using Microsoft SQL Server with the standard JDBC driver.</p></li>
-<li><p>Missing JDBC Resource Definitions: The <code>js-install.sh</code> minimal script fails to define the <code>jdbc/jasperserverAuditAnalytics</code> and <code>jdbc/jasperserverSystemAnalytics</code> JDBC resources within the context.xml file. This results in server startup failure and the error <strong>javax.naming.NamingException: Could not create resource instance</strong> is displayed.</p></li>
+<li>when the report is not saved, it is correctly previewed.</li>
+<li>when the report is saved and previewed, an error message is displayed.</li>
+<li>when the report is reopened and previewed, an error message is displayed.</li>
 </ul></td>
 </tr>
 <tr>
-<td>JS-71898</td>
-<td>Following a session timeout, the presence of the GUID in the URL causes it to become invalid, leading to an intermittent page crash.</td>
+<td>JRWS-1296</td>
+<td><p>The color of the Search icons in Dataset view and in report preview are different.</p></td>
 </tr>
 <tr>
-<td>JS-71914</td>
-<td>Creating a new user triggers the <code>JSONObject["enabled"] is not a string</code> error.</td>
+<td>JRWS-1300</td>
+<td>When you log in using Gdrive, add an image in a report and preview it, an error is displayed. However, when you save the report, you can preview it without any errors.</td>
 </tr>
 <tr>
-<td>JS-71927</td>
-<td>SFTP (FTP over SSH) connections are failing for the Scheduler on Rocky Linux 9 and CentOS 8.</td>
+<td>JRWS-1303</td>
+<td>When you log in using JackRabbit, provide a report Description in Properties view, save, and preview or close the report, the added Description is lost.</td>
 </tr>
 <tr>
-<td>JS-71972</td>
-<td>The cascading multi-select input control continually loads and prevents users from selecting any values.</td>
+<td>JRWS-1312</td>
+<td>When you log in using a local repository, on previewing a report from Samples, an error is displayed.</td>
 </tr>
 <tr>
-<td>JS-72016</td>
-<td>The inability to disable the Alerts feature poses a risk to system performance.</td>
+<td>JRWS-1315</td>
+<td>On starting JasperReports® Web Studio and checking the details for JasperReports® Web Studio 3.0.1 in the command prompt, the details are not available.</td>
 </tr>
 <tr>
-<td>JS-72027</td>
-<td><p>A user with <code>ROLE_USER</code> is facing functionality issues when accessing a large (15,000+ records) Ad Hoc view from a Snowflake database in JasperReports® Server. The issues include:</p>
+<td>JRWS-1317</td>
+<td>Log in using the local repository and open a report from the Samples folder. When you change the chart type, and revert to the original chart type of a report, the chart is not displayed on previewing a report.</td>
+</tr>
+<tr>
+<td>JRWS-1130</td>
+<td>Two configuration properties within the dataset fail to apply or execute properly.</td>
+</tr>
+<tr>
+<td>JRWS-1214</td>
+<td>Missing documentation for concurrent report execution.</td>
+</tr>
+<tr>
+<td>JRWS-1337</td>
+<td>Unable to toggle <strong>Start on a new page</strong> and associated group definition checkbox properties.</td>
+</tr>
+<tr>
+<td>JRWS-1405</td>
+<td>On previewing a report in the JasperReports® Server + JasperReports® Web Studiointegrated environment, the left-side bookmarks tab does not display correctly.</td>
+</tr>
+<tr>
+<td>JRWS-1406</td>
+<td>Previewing a report in the JasperReports® Server + JasperReports® Web Studiointegrated environment triggers a console error and results in page alignment discrepancies when compared to the standalone JasperReports® Web Studio view.</td>
+</tr>
+<tr>
+<td>JRWS-1471</td>
+<td>The initial report in the JasperReports® Server sample library fails to render, triggering a <code>Headers too big</code> HTTP error.</td>
+</tr>
+<tr>
+<td>JRWS-1474</td>
+<td>The HTML Pro Component is displayed as unparsed text instead of HTML when rendered via Visualize.js.</td>
+</tr>
+<tr>
+<td>JRWS-1486</td>
+<td>When exploring repositories or folders in both Standalone JasperReports® Web Studio and the JasperReports® Server integration, repository paths are no longer visible when attempting to select a data adapter.</td>
+</tr>
+<tr>
+<td>JRWS-1487</td>
+<td>A 403 Forbidden error occurs when the system attempts to load the required fonts for <code>FirstJasper.jrxml</code>, preventing the report from rendering correctly.</td>
+</tr>
+<tr>
+<td>JRWS-1488</td>
+<td>Prevented users from generating TIBCO maps within the system.</td>
+</tr>
+<tr>
+<td>JRWS-1509</td>
+<td>Opening the Query Editor initializes the Text tab as <code>undefined</code> and causes an error upon switching to the Outline tab.</td>
+</tr>
+<tr>
+<td>JRWS-1510</td>
+<td><p>Intermittent session/state corruption occurs when navigating from JasperReports® Server back to Jackrabbit repository, resulting in:</p>
 <ul>
-<li><p>The Ad Hoc view loads very slowly.</p></li>
-<li><p>Drill-down functionality in the Ad Hoc view is not working, resulting in a blank screen.</p></li>
+<li><p>An infinite loading loop when expanding the root <code>(/)</code> path in the <strong>New Report</strong> file picker.</p></li>
+<li><p>A save failure error (<strong>Error saving this new report</strong>) on report creation.</p></li>
+<li><p>Intermittent errors during the logout process on both repositories.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>JS-72194</td>
-<td>Drill-down functionality in Ad Hoc views works correctly in the <strong>Edit</strong> mode. But in the <strong>View</strong> mode it fails resulting in a blank page, instead of the expected detailed data.</td>
+<td>JRWS-1513</td>
+<td>Switching between Text and Outline tabs in Query Editor deletes the <code>WHERE</code> clause.</td>
 </tr>
 <tr>
-<td>JS-72198</td>
-<td>Exporting an Ad Hoc report from a dashboard after performing a drill-down results in a blank PDF.</td>
-</tr>
-<tr>
-<td>JS-72210</td>
-<td>When editing the scheduler, the recurrence type is incorrectly shown as <strong>Simple</strong> instead of <strong>None</strong>.</td>
-</tr>
-<tr>
-<td>JS-72234</td>
-<td>When a ROLE_USER tries to open an Ad Hoc View created from a Snowflake database containing a large dataset of over 15,000 records of visualization type as table or chart (to use drill-down), the view either loads very slowly or fails to load. Additionally, the drill-down feature in the Ad Hoc View is not working and a blank screen is shown.</td>
-</tr>
-<tr>
-<td>JS-72271</td>
-<td>Users are unable to create charts when using a Parameterized Report topic as the data source.</td>
-</tr>
-<tr>
-<td>JS-72315</td>
-<td>Report execution in JasperReports® Server is failing due to <code>net.sf.jasperreports.engine.JRException: java.lang.NumberFormatException: Input String '4100028930' </code>error.</td>
-</tr>
-<tr>
-<td>JS-72551</td>
-<td><p>When the SQL query executor is enabled in JasperReports® Server while creating an Ad Hoc view in <code>NoData</code> mode, database queries are generated when:</p>
+<td>JRWS-1515</td>
+<td><p>Issues in the <strong>Properties &gt; Dataset</strong> tab:</p>
 <ul>
-<li><p>User switches visualization types, for example from Column chart to Crosstab and viceversa.</p></li>
-<li><p>User adds fields to Chart visualization.</p></li>
+<li><p>Search function is not working as expected.</p></li>
+<li><p>The Custom properties section is misnamed.</p></li>
+<li><p>The <code>net.sf.jasperreports.style.fontName</code> property is incorrectly displayed by default in the custom properties section.</p></li>
 </ul></td>
 </tr>
 <tr>
-<td>JS-72660</td>
-<td>Users are unable to open and edit Domains that are imported from JasperReports® Server version 8.0.4 to 9.0.0.</td>
+<td>JRWS-1518</td>
+<td>Implemented standard multi-select behavior in Repository view (Cmd/Ctrl and Shift clicks).</td>
 </tr>
 <tr>
-<td>JS-72997</td>
-<td>Using Visualize.js for repeated rendering of reports with input controls causes exceptions.</td>
+<td>JRWS-1519</td>
+<td>The <code>jrws.jrs.token.login.url.js</code> file was ignored during token-based SSO. The <code>UIService</code> servlet has been updated to correctly pass this property from <code>jrws.properties</code> to the frontend.</td>
 </tr>
 <tr>
-<td>JS-73171</td>
-<td>When a report is opened, modified, and saved via the <strong>Open in Editor</strong> option in the repository view, the <strong>Modified Date</strong> timestamp fails to update, incorrectly showing the old date and time despite successful changes to the report content.</td>
+<td>JRWS-1520</td>
+<td>Clean up JasperReports® Web Studio by removing all references to the TibcoMaps component.</td>
 </tr>
 <tr>
-<td>JS-73230</td>
-<td>The selection order of values in an integer multi-select input control is not preserved when running the report via the scheduler.</td>
+<td>JRWS-1533</td>
+<td>A 500 Internal Server Error is triggered when a user attempts to log in using their GitHub account.</td>
 </tr>
 <tr>
-<td>JS-73266</td>
-<td>Even when an Ad Hoc view report with no data is scheduled with the <strong>Do not send emails for empty reports</strong> option selected, an email containing an empty report is sent.</td>
+<td>JRWS-1534</td>
+<td>Update the JasperReports® Web Studio implementation to adopt and integrate JasperReports® Library export tags.</td>
 </tr>
 <tr>
-<td>JS-73268</td>
-<td><p>In JasperReports® Server version 7.9, to allow existing Ad Hoc views to continue working, <code>&lt;property name="checkSourcesInStrictMode" value="false"/&gt;</code> was set in <code>applicationContext-ad-hoc-dataStrategy.xml</code>.</p>
-<p>After upgrading to JasperReports® Server version 9.0.0, the previously implemented workaround is no longer functioning as expected and the existing Ad Hoc views are failing to open.</p></td>
+<td>JRWS-1537</td>
+<td>For Integrated JasperReports® Web Studio, clicking <strong>Get Metadata</strong> triggers a 500 Internal Server Error and fails to retrieve data for the selected data adapter.</td>
 </tr>
 <tr>
-<td>JS-73279</td>
-<td>After upgrading to JasperReports® Server 8.2.0, chart-based Ad Hoc reports are generating console errors upon execution. The error can be viewed in the Console tab of the browser.</td>
+<td>JRWS-1539</td>
+<td>When running JasperReports® Web Studio in Standalone mode, statistics are not being captured or tracked for the creation of data adapters.</td>
 </tr>
 <tr>
-<td>JS-73681</td>
-<td>Ad Hoc Views fail to open with a <code>ConcurrentModificationException</code> when they contain date filters and are opened for viewing or editing.</td>
-</tr>
-<tr>
-<td>JS-73692</td>
-<td>Scheduler output filenames do not support special characters.</td>
-</tr>
-<tr>
-<td>JS-74069</td>
-<td>Cascading input control (IC) values fail to populate on the first attempt. Users must apply a workaround by adding extra spaces or tabs to required fields to trigger the correct population and dismiss the red validation text on the second attempt.</td>
-</tr>
-<tr>
-<td>JS-74097</td>
-<td>Attempting to save a dashboard with a Japanese name fails and returns the <strong>Folder not found at xxx</strong> error.</td>
-</tr>
-<tr>
-<td>JS-74555</td>
-<td>Repeated Hibernate exceptions in the logs, resulting in the eventual failure of the Tomcat server.</td>
-</tr>
-<tr>
-<td>JS-74637</td>
-<td>The <strong>Select All</strong> option is malfunctioning within the Ad Hoc View report input control.</td>
-</tr>
-<tr>
-<td>JS-74599</td>
-<td>SFTP error encountered when running scheduled reports on JasperReports® Server 9.0.0 Server.</td>
-</tr>
-<tr>
-<td>JS-74664</td>
-<td>The dashboard fails to load or refresh content after a filter is applied, displaying the <strong>This content is not available due to an error</strong> message.</td>
-</tr>
-<tr>
-<td>JS-74815</td>
-<td>Installation of JasperReports® Server fails with an <strong>ORA-17056: Non-supported character set: EE8ISO8859P2</strong> error when using the Oracle EE8ISO8859P2 character set.</td>
-</tr>
-<tr>
-<td>JS-74951</td>
-<td>The saved Ad Hoc report fails to retain the start date filter, displaying a blank value, even though the date filters appear correctly in the live Ad Hoc view.</td>
-</tr>
-<tr>
-<td>JS-75448</td>
-<td>Dashboard performance degrades severely when interacting with linked dashlets, with response time increasing.</td>
-</tr>
-<tr>
-<td>JS-75476</td>
-<td>A Null Pointer Exception occurs when users attempt to open a domain topic for editing, specifically if that topic was built using a table found in the JasperServer database.</td>
-</tr>
-<tr>
-<td>JS-76100</td>
-<td>The Indian number format is not rendering correctly when applied through conditional formatting in a table.</td>
-</tr>
-<tr>
-<td>JS-76329</td>
-<td>Attributes are not being passed through to Ad Hoc reports generated from topics.</td>
-</tr>
-<tr>
-<td>JS-76713</td>
-<td>Scheduler is creating duplicate Job IDs in JasperReports® Server 9.0.0.</td>
-</tr>
-<tr>
-<td>JS-76731</td>
-<td>The dashboard numeric input control fails (errors out) when all values are deselected by the user.</td>
-</tr>
-<tr>
-<td>JS-77028</td>
-<td><p>Using a tenant alias for login requires both the alias and the username to be case-sensitive.</p></td>
-</tr>
-<tr>
-<td>JRWS-141</td>
-<td>The spacing functionality for TextFieled/StaticText does not work properly.</td>
-</tr>
-<tr>
-<td>JRWS-1015</td>
-<td>When there are multiple Detail bands, JasperReports® Web Studio generates incorrect JRXML with multiple Detail tags.</td>
-</tr>
-<tr>
-<td>JRWS-1016</td>
-<td>When an image is set as Lazy, the URL used to render it as div background is invalid.</td>
-</tr>
-<tr>
-<td>JRWS-1047</td>
-<td>When you create a report, a new style, and add a conditional expression to edit the style, the designer crashes.</td>
-</tr>
-<tr>
-<td>JRWS-1057</td>
-<td>The alignment of text in Text elements is wrong.</td>
-</tr>
-<tr>
-<td>JRWS-1061</td>
-<td>When you drag a frame, the content in it also moves, but appears like it does not move. On performing some action, the page is refreshed and the content is repositioned properly.</td>
-</tr>
-<tr>
-<td>JRWS-1064</td>
-<td>When previewing an unsaved report, you can view it correctly. However, on previewing the report after saving it, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1076</td>
-<td>When you open the Source Editor of a report and use Ctrl+F multiple times, the JasperReports® Web Studio specific search box is not displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1080</td>
-<td>The zoom coefficient is stored in the source, but it is not automatically saved when exiting.</td>
-</tr>
-<tr>
-<td>JRWS-1081</td>
-<td>There is a lag in the color selector when selecting a color to fill a shape.</td>
-</tr>
-<tr>
-<td>JRWS-1082</td>
-<td>On changing the zoom percentage, the Design Area border width changes.</td>
-</tr>
-<tr>
-<td>JRWS-1101</td>
-<td>While previewing a report with 2 parameters that point to .txt files, Preview does not work and the report freezes.</td>
-</tr>
-<tr>
-<td>JRWS-1102</td>
-<td>Even when you delete a Text field caption from the expression editor and exit the editor, the caption is still restored.</td>
-</tr>
-<tr>
-<td>JRWS-1103</td>
-<td>While changing the Spacing parameters, the selected/deselected Static Text editor preview changes. Also, it looks different when the report is previewed.</td>
-</tr>
-<tr>
-<td>JRWS-1105</td>
-<td>When using the support for columns, when you open an existing report, the first columns are grayed out instead of the last.</td>
-</tr>
-<tr>
-<td>JRWS-1109</td>
-<td>On resizing an element in a document with margins, the element does not snap to the right margin of the document and there is no line indicating a possible snap.</td>
-</tr>
-<tr>
-<td>JRWS-1112</td>
-<td>.gif files are not displayed while browsing for images. However, when you add the .gif image path directly in the image Expression text box, you can use it. But the image is displayed in the editor only after previewing the report.</td>
-</tr>
-<tr>
-<td>JRWS-1114</td>
-<td>When you change the Before spacing in a Text field, the text is not displayed properly.</td>
-</tr>
-<tr>
-<td>JRWS-1115</td>
-<td>While adding sections in a report from the Outline view, and previewing the report, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1121</td>
-<td>While logging in to JasperReports® Web Studio using any of the options, a blank page is displayed and the user is not able to navigate to the Home page.</td>
-</tr>
-<tr>
-<td>JRWS-1127</td>
-<td>The user is unable to edit a Static Text element. While editing the caption, the previous characters are automatically selected (highlighted) and replaced with the newly typed text.</td>
-</tr>
-<tr>
-<td>JRWS-1131</td>
-<td>There is an issue preventing the proper configuration of data adapters while working in JasperReports® Web Studio.</td>
-</tr>
-<tr>
-<td>JRWS-1134</td>
-<td>When you change the Before spacing in a Static Text element, the element is not displayed properly.</td>
-</tr>
-<tr>
-<td>JRWS-1135</td>
-<td>When you change the Before spacing in a Text element, the text is not displayed properly.</td>
-</tr>
-<tr>
-<td>JRWS-1137</td>
-<td>At first, the font of the Text field is correctly displayed as SansSerif. But, it changes to Times New Roman immediately (even when it is set as SansSerif in Properties). The same happens in Serif font too.</td>
-</tr>
-<tr>
-<td>JRWS-1143</td>
-<td>When you delete a resource, it is still displayed on the page. Only when the page is refreshed, the deleted resource is removed from the page.</td>
-</tr>
-<tr>
-<td>JRWS-1147</td>
-<td>There is a difference between the way Static Text and text field elements are displayed in the Editor and in the Preview.</td>
-</tr>
-<tr>
-<td>JRWS-1148</td>
-<td>Metadata for the selected data adapter is displayed only on selecting the Read fields option.</td>
-</tr>
-<tr>
-<td>JRWS-1152</td>
-<td>When you double-click the Duplicate and Delete options multiple times in a Table element, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1158</td>
-<td>When you change the cell border color in the table editor, there is no change reflected in the table editor as well as the report editor.</td>
-</tr>
-<tr>
-<td>JRWS-1166</td>
-<td>After you change the Width or Height of a cell in a table, you cannot select any cell in the table.</td>
-</tr>
-<tr>
-<td>JRWS-1167</td>
-<td>When you resize a cell in a row, there is a difference in the size of the resized cell and the other cells in the row.</td>
-</tr>
-<tr>
-<td>JRWS-1170</td>
-<td>When you use Separate Cells, the cells below the selected group disappear.</td>
-</tr>
-<tr>
-<td>JRWS-1171</td>
-<td>On clicking outside the Width and Height text boxes, the numerical values automatically change to NaN.</td>
-</tr>
-<tr>
-<td>JRWS-1174</td>
-<td>On trying to change the Height and Width of a column from Outline, the values are reset to 0 every time you click outside the text box.</td>
-</tr>
-<tr>
-<td>JRWS-1176</td>
-<td>When you add a row with merged cells, and try to Separate Cells, the row disappears.</td>
-</tr>
-<tr>
-<td>JRWS-1177</td>
-<td>When you expand the Table Row from Outline view, the Table Group Column names are ambiguous.</td>
-</tr>
-<tr>
-<td>JRWS-1180</td>
-<td>When you select a cell and Add Column to its left and right, the added columns are wider.</td>
-</tr>
-<tr>
-<td>JRWS-1181</td>
-<td>When you add a row from the Table Header in the Outline, and delete the group from the editor, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1188</td>
-<td>When there is a merged/grouped row, even when there are no columns, the Outline displays Table Group Column 1-0. Also, when the cells are separated, their Height is 0 and cannot be modified, and the style is not preserved.</td>
-</tr>
-<tr>
-<td>JRWS-1189</td>
-<td><p>When multiple Table Rows are added in a Group Header:</p>
-<ul>
-<li>Some Table Rows provide the Delete Group option while others provide the Separate Cells option.</li>
-<li>When the Separate Cells option is clicked, the row disappears from the Group Header Outline and is moved to Group Footer. And, the original content of Group Footer is replaced.</li>
-</ul></td>
-</tr>
-<tr>
-<td>JRWS-1190</td>
-<td>When you open a Table element in the editor, and resize the grid, there is inconsistency in resizing it.</td>
-</tr>
-<tr>
-<td>JRWS-1191</td>
-<td>When you open two reports and delete a cell from a report, the Height of the deleted cell is not correct.</td>
-</tr>
-<tr>
-<td>JRWS-1192</td>
-<td>When you open a table in the editor, and use the vertical scroll bar, the table moves to the right and the horizontal scroll bar cannot be used to view the table. You can view the table only when you decrease the zoom coefficient.</td>
-</tr>
-<tr>
-<td>JRWS-1193</td>
-<td>When you add multiple columns to a table, you can use the horizontal scroll bar to view the table. However, the right border of the table is next to the Properties pane.</td>
-</tr>
-<tr>
-<td>JRWS-1194</td>
-<td>When you select adjacent cells in a table, depending on the order of the selection, there is inconsistency in the cell borders highlighted and the Merge Cells option displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1195</td>
-<td>When you Merge Cells with a colored border, the colored border appears only on one side of the merged cell. When you Separate Cells, the colored border is applied to all the sides.</td>
-</tr>
-<tr>
-<td>JRWS-1196</td>
-<td>When you use the Shift key to select the cells in a row, from the last cell to the first cell, it provides an illusion that all the cells in the row are selected.</td>
-</tr>
-<tr>
-<td>JRWS-1197</td>
-<td>When you resize the first row of a table, the direction in which the row resizes is unpredictable.</td>
-</tr>
-<tr>
-<td>JRWS-1198</td>
-<td>When you open the Table element in the editor, select a cell, and use the arrow keys to move the cell, the cell moves beyond the editor area. However, when you resize the cell, its position is restored.</td>
-</tr>
-<tr>
-<td>JRWS-1199</td>
-<td>While trying to change the Styles of any Table Group Column section, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1200</td>
-<td>The Ctrl key can be used to select multiple cells, but cannot be used to deselect cells.</td>
-</tr>
-<tr>
-<td>JRWS-1201</td>
-<td>When you select 7 or more cells in a Table, and select Delete, JasperReports® Web Studio freezes and stops responding.</td>
-</tr>
-<tr>
-<td>JRWS-1205</td>
-<td>The Merge Cells option is displayed for the merged cells and JasperReports® Web Studio stops responding.</td>
-</tr>
-<tr>
-<td>JRWS-1206</td>
-<td>You can only drag the fields into a table from the Dataset pane but not drop them in the table.</td>
-</tr>
-<tr>
-<td>JRWS-1207</td>
-<td>When you resize the cells in a table vertically, they are not evenly resized.</td>
-</tr>
-<tr>
-<td>JRWS-1208</td>
-<td>When you select multiple cells in a table and change their Height of Properties pane, the cells are not resized evenly.</td>
-</tr>
-<tr>
-<td>JRWS-1209</td>
-<td>When you select more than 2 cells in a table, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1210</td>
-<td>When you use the Shift key to select elements from the Outline view, it does not work.</td>
-</tr>
-<tr>
-<td>JRWS-1215</td>
-<td>When navigating from Preview to Editor, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1216</td>
-<td>While creating a report, when you switch from Dataset to Properties pane, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1217</td>
-<td>While editing a report, on navigating from the Dataset to the Properties section, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1218</td>
-<td>When you select a cell in a table, and hover the mouse over the options displayed, another cell is highlighted.</td>
-</tr>
-<tr>
-<td>JRWS-1219</td>
-<td>When you Add Row in a table and then delete it, the table aspect changes.</td>
-</tr>
-<tr>
-<td>JRWS-1224</td>
-<td>When you Add Row in a table, delete the first cell in Outline, Undo the changes, and Delete the second cell in the Outline, the effect of delete is different in both the cases.</td>
-</tr>
-<tr>
-<td>JRWS-1225</td>
-<td>When you Add Row to Table Header in Outline, the names of Columns in Column Header change. Also, all the elements in the Outline are not expanded.</td>
-</tr>
-<tr>
-<td>JRWS-1227</td>
-<td>When you select multiple cells in a table and click Merge Cells, all table columns disappear.</td>
-</tr>
-<tr>
-<td>JRWS-1231</td>
-<td>When you Merge Cells and then Separate Cells, the position of a cell in the Detail band changes.</td>
-</tr>
-<tr>
-<td>JRWS-1232</td>
-<td>When you create a report, the Merge Cells option does not work.</td>
-</tr>
-<tr>
-<td>JRWS-1234</td>
-<td>On adding an Ellipse in a new report, the outline looks different than usual. However, on changing the Width of the Ellipse the outline appears fine.</td>
-</tr>
-<tr>
-<td>JRWS-1235</td>
-<td>When you Merge Cells, and select some cells in Table Header and inspect the Outline, the selected cells are missing form the Outline.</td>
-</tr>
-<tr>
-<td>JRWS-1240</td>
-<td><p>When you create two new reports and add a Table element in the first report:</p>
-<ul>
-<li>When you copy the table to the second report, delete it and copy and paste it again, an error is displayed.</li>
-<li>When you add columns in the table in the first report, and copy and paste it in the second report, an error is displayed.</li>
-</ul></td>
-</tr>
-<tr>
-<td>JRWS-1241</td>
-<td>On clicking Separate Cells for the Group Cell in Group Footer, empty columns in Group Footer are filled with values. The Text fields in the Group Cell (in Group Footer) are preserved, but are arbitrarily distributed to different columns. Also, the columns in the Group Footer are empty and the Text field in the Group Cell (in Group Header) is deleted.</td>
-</tr>
-<tr>
-<td>JRWS-1247</td>
-<td>When you Add Row to Table Footer, for the last two cells in the row only the Delete Cell option is available in the Outline. While for the other cells, both Delete Cell and Delete Group options are available in the Outline. On trying to Merge Cells, only the cells with the Delete Group option can be merged.</td>
-</tr>
-<tr>
-<td>JRWS-1248</td>
-<td>When you Add Row to Table Footer, for the last two cells in the row only the Delete Cell option is available in the Outline. While for the other cells, both Delete Cell and Delete Group options are available in the Outline.</td>
-</tr>
-<tr>
-<td>JRWS-1259</td>
-<td>The elements added in Group Cells of a table are not displayed in the Outline.</td>
-</tr>
-<tr>
-<td>JRWS-1261</td>
-<td><p>When you add a Table element in a new report, open it in the editor and add another table element in the table, resize it, and move it to different cells:</p>
-<ul>
-<li>The new table is mostly displayed in the first cell.</li>
-<li>Sometimes, it appears in the Outline and sometimes it does not.</li>
-<li>It appears in one cell in the editor, but in a different cell in the Outline.</li>
-</ul></td>
-</tr>
-<tr>
-<td>JRWS-1276</td>
-<td>The size of some Cross tabs is too wide, obstructing the element editor.</td>
-</tr>
-<tr>
-<td>JRWS-1277</td>
-<td>While opening any JRXML file in embedded JasperReports® Web Studio, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1278</td>
-<td>When trying to search for a single character, word, or special character, it is observed that all the instances are not identified.</td>
-</tr>
-<tr>
-<td>JRWS-1284</td>
-<td>While creating a data adapter, on selecting a value from the Record Delimiter, Timezone, and Locale drop-downs, the selected field is not displayed in a single click.</td>
-</tr>
-<tr>
-<td>JRWS-1286</td>
-<td>While previewing a chart, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1288</td>
-<td>While previewing a report, an error is displayed.</td>
-</tr>
-<tr>
-<td>JRWS-1290</td>
-<td>The Properties of a chart are not saved. They are reset to the original state every time you close the preview.</td>
-</tr>
-<tr>
-<td>JRWS-1294</td>
-<td>While logging in using GitHub, and trying to test drivers (both existing and new), an error is displayed. Also, the path could not be set.</td>
-</tr>
-<tr>
-<td>JRWS-1295</td>
-<td>While trying to drag any element in the Palette in embedded JasperReports® Web Studio, an error is displayed.</td>
+<td>JRWS-1542</td>
+<td><strong>About</strong> dialog shows incorrect product details when license file is missing.</td>
 </tr>
 </tbody>
 </table>
 
 ## Security Issues
 
-The following security issues have been fixed in this release of JasperReports Server:
+The following security issues have been fixed in this release of JasperReports® Server:
 
 <table>
 <colgroup>
@@ -621,283 +347,132 @@ The following security issues have been fixed in this release of JasperReports S
 </thead>
 <tbody>
 <tr>
-<td><p>JS-70795</p></td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Vulnerability in json-20090211.jar:</p>
-<ul>
-<li><p>CVE-2023-5072</p></li>
-<li><p>CVE-2022-45688</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71174</td>
-<td>Data Sources</td>
-<td>Access to sensitive files</td>
-<td>Introduced a validation rule for data source URLs that automatically rejects any address matching localhost or 127.0.0.1.</td>
-</tr>
-<tr>
-<td>JS-71181</td>
-<td>User/Tenant Management</td>
-<td>Improve organization propagation</td>
-<td>Potential security issues allowing a user to be moved from one tenant to another, despite the option not being available in the user interface in the JasperReports® Server is addressed.</td>
-</tr>
-<tr>
-<td>JS-71262</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Vulnerability in nevado-jms-1.3.2-JS.jar:</p>
-<ul>
-<li><p>CVE-2023-31826</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71295</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Vulnerability in tiles-api JAR:</p>
-<ul>
-<li><p>CVE-2023-49735</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71389</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Vulnerability in OWASP CSRFGuard through 3.1.0:</p>
-<ul>
-<li><p>CVE-2021-28490</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71407</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Vulnerability in GzipSource:</p>
-<ul>
-<li><p>CVE-2023-3635</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71591</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Security vulnerability in elasticsearch-jdbc-8.2.0.jar:</p>
-<ul>
-<li><p>CVE-2020-28491</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71620</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded ion-java-1.0.5.jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2024-21634</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71675</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded Netty Codec to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2023-44487</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71676</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded reactor-netty-core-1.0.33.jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2023-34062</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71687</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded snowflake-jdbc-3.13.33.jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2021-22573</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71689</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded infinispan-core-10.1.8.Final.jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2021-22569</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71817</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded poi-4.1.1.jar and poi-ooxml-4.1.1.jar to resolve the following CVE:</p>
-<p>CVE-2025-31672</p></td>
-</tr>
-<tr>
-<td>JS-71847</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded ehcache-2.10.9.2.jar to resolve the following CVEs:</p>
-<ul>
-<li><p>CVE-2020-36518</p></li>
-<li><p>CVE-2023-36478</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71852</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded PostgreSQL jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2024-1597</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-71949</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded org.apache.commons:commons-compress to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2024-25710</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-72030</td>
-<td>User Management</td>
-<td>Access to sensitive files</td>
-<td>Jar file uploads should be restricted exclusively to the operating system (OS) user account.</td>
-</tr>
-<tr>
-<td>JS-72073</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded org.springframework:spring-web to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2024-22259</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-72074</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded org.springframework.security:spring-security-core to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2024-22257</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-72091</td>
-<td>User Management</td>
-<td>Access to sensitive files</td>
-<td>When superusers with expired passwords try to log in using REST API, they are able to bypass mandatory password changes and execute administrative functions.</td>
-</tr>
-<tr>
-<td>JS-72109</td>
-<td><code>eval</code> changes</td>
-<td>Access to sensitive information</td>
-<td>Potential security issues stemming from the usage of <code>eval</code> and <code>globalEval</code> in the JasperReports® Server source code are addressed.</td>
-</tr>
-<tr>
-<td>JS-72121</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded com.nimbusds:nimbus-jose-jwt to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2023-52428</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-72164</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded org.apache.commons:commons-configuration2 to resolve the following CVEs:</p>
-<ul>
-<li><p>CVE-2024-29133</p></li>
-<li><p>CVE-2024-29131</p></li>
-<li><p>CWE-787</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-72181</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded to Lucene 9.0 to resolve following CVE:</p>
-<ul>
-<li><p>WS-2021-0646</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-72209</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded the Azure CLI version to resolve following CVEs:</p>
-<ul>
-<li><p>CVE-2023-36052</p></li>
-<li><p>CVE-2023-36414</p></li>
-<li><p>CVE-2023-36415</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-72608</td>
-<td>Organization Management</td>
-<td>Improve organization propagation</td>
-<td>A brief, non-reproducible data exposure occurred where a user from one organization briefly saw another organization's data in an input control, despite all underlying security permissions being confirmed as intact and correctly configured.</td>
-</tr>
-<tr>
-<td>JS-73530</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td>Enforce a strict Content Security Policy (CSP) that prohibits all 'unsafe' directives.</td>
-</tr>
-<tr>
-<td>JS-73737</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded jasperreports-custom-visualization-6.21.0.jar to resolve the following CVEs:</p>
-<ul>
-<li><p>CVE-2024-38999</p></li>
-<li><p>CVE-2024-38998</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-74799</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded mina-core-2.1.6.jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2024-52046</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-75791</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded poi-4.1.1.jar and poi-ooxml-4.1.1.jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2025-31672</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JS-76592</td>
-<td>N/A</td>
-<td>Dependency on third-party libraries</td>
-<td><p>Upgraded httpclient5-5.4.1.jar to resolve the following CVE:</p>
-<ul>
-<li><p>CVE-2025-27820</p></li>
-</ul></td>
-</tr>
-<tr>
-<td>JSSEC-105</td>
+<td>JSSEC-163/ JRL-2103</td>
 <td>Configuration files</td>
 <td>Access to sensitive files</td>
-<td><p>Earlier, the server's improper handling of URL path components allowed attackers to bypass intended directory restrictions, enabling unauthorized access to sensitive files using manipulated URLs.</p>
-<p>The attacker was able to gain unauthorized access to restricted files, such as the crucial configuration file, <code>WEB-INF/web.xml</code>.</p></td>
+<td><p>The server's insecure handling of untrusted object serialization allowed attackers to bypass type validation restrictions, enabling remote code execution via a manipulated report file.</p>
+<p>The attacker was able to trigger arbitrary code execution by uploading a malicious JRXML report that forces the server to fetch and parse a crafted <code>.jrprint</code> file, which directly processes untrusted data through an unsafe object input stream. The following CVE was resolved:</p>
+<ul>
+<li><p>CVE-2026-6009</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-70720</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded aws-java-sdk-core-1.11.505.jar to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2022-31159</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-76514</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded jackson-core-2.13.4.jar to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2025-52999</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-76953</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded commons-lang3-3.0.jar to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2025-48924</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-77826</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded Spring JARs to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2025-41254</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-77889</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded underscore.string to resolve the following CVE:</p>
+<ul>
+<li><p>WS-2017-3772</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-78055</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded Log4j2 JARs to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2025-68161</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-78254</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded netty-codec-http-4.1.127.Final.jar to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2025-67735</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-78653</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded the Spring security JARs to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2026-22732</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-78719</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded Netty jar to 4.1.132.Final and 4.2.10.Final to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2026-33870</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JS-79040</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded Log4j2 JARs to resolve the following CVEs:</p>
+<ul>
+<li><p>CVE-2026-34477</p></li>
+<li><p>CVE-2026-34478</p></li>
+<li><p>CVE-2026-34479</p></li>
+<li><p>CVE-2026-34480</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JSS-3742</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded Log4j2 JARs to resolve the following CVEs:</p>
+<ul>
+<li><p>CVE-2026-34480</p></li>
+<li><p>CVE-2026-34478</p></li>
+</ul></td>
+</tr>
+<tr>
+<td>JRWS-1470</td>
+<td>HTTP protocol</td>
+<td>Cross-Site Request Forgery (CSRF)</td>
+<td>Verified and corrected CSRF behavior for JasperReports® Web Studio when embedded within JasperReports® Server, addressing previous integration issues.</td>
+</tr>
+<tr>
+<td>JRWS-1504</td>
+<td>N/A</td>
+<td>Dependency on third-party libraries</td>
+<td><p>Upgraded log4j2 JARs for jrws-jrio-jrs.war and jrws-repository-jrs.war to resolve the following CVE:</p>
+<ul>
+<li><p>CVE-2025-68161</p></li>
+</ul></td>
 </tr>
 </tbody>
 </table>

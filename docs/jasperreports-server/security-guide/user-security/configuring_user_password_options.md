@@ -120,7 +120,7 @@ With this configuration the Change Password link on the Login page is enabled. B
 <td colspan="3"><p>Configuration File</p></td>
 </tr>
 <tr>
-<td colspan="3"><p><code>.../WEB-INF/jasperserver-servlet.xml</code></p></td>
+<td colspan="3"><p><code>js.spring.properties</code></p></td>
 </tr>
 <tr>
 <td><p>Property</p></td>
@@ -207,6 +207,94 @@ When you enforce a password pattern, you should set the following message to inf
 </tr>
 </tbody>
 </table>
+
+## Password History Validation
+
+The password history validation feature enhances account security and ensures compliance with industry standards (for example, PCI DSS, NIST, ISO/IEC 27001) by preventing users from reusing previous credentials.
+
+By default, the feature is disabled (for backward compatibility). Administrators must explicitly enable it and define the number of previous passwords to retain via the application property file.
+
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="3"><p>Password Administration Option</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3"><p>Configuration File</p></td>
+</tr>
+<tr>
+<td colspan="3"><p><code>js.spring.properties</code></p></td>
+</tr>
+<tr>
+<td><p>Property</p></td>
+<td><p>Value</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr>
+<td><p><code>password.history.enabled</code></p></td>
+<td><p><code>false</code>&lt;default&gt;<br />
+<code>true</code></p></td>
+<td><p>Set the value to <code>true</code> to enable the password history.</p></td>
+</tr>
+<tr>
+<td><code>password.history.count</code></td>
+<td><p><code>7</code> &lt;default&gt;</p>
+<p><code>N</code></p></td>
+<td>Set the value to define the number of previous passwords to retain.</td>
+</tr>
+</tbody>
+</table>
+
+!!! note
+
+    - The password history validation only applies to internal authenticated users, not external ones using LDAP. The rule is enforced during both self-service resets on the Login page and admin resets via the Manage \> Users menu, but it doesn't trigger during regular logins, data imports, or other non-change events.
+
+    - Once it's turned on, the system blocks users from picking their current password or any of their last `N` passwords, depending on what you set for `password.history.count`. If you change this number, the new limit takes effect on the next password update, checking against the most recent entries in the log.
+
+    - If you delete a user, their entire password history is automatically wiped out.
+
+    - When you export users, their password history is not exported.
+
+If you enable password history validation, the rejection messages must be updated across all your active locales so users know why their new password wasn't accepted.
+
+<table>
+<thead>
+<tr>
+<th colspan="2"><p>Password Administration Option</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"><p>Configuration File</p></td>
+</tr>
+<tr>
+<td colspan="2"><p><code>.../WEB-INF/bundles/jasperserver_messages[_locale].properties</code></p></td>
+</tr>
+<tr>
+<td><p>Property</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr>
+<td><p><code>jsp.passwordError.passwordHistoryViolation</code></p></td>
+<td><p>Set the error message for when a user tries to change their password to a recently used one.</p></td>
+</tr>
+<tr>
+<td><code>jsp.passwordError.passwordHistoryViolation.admin</code></td>
+<td>Set the error message displayed to administrators when they try to reset a user's password to a recently used one.</td>
+</tr>
+</tbody>
+</table>
+
+### JIUserPasswordHistory Table
+
+The `JIUserPasswordHistory` table handles password reuse protection. It links right to the main `JIUser `table and keeps a running history of a user's old, encrypted password hashes and timestamps. When an administrator enables a password history limit (for example, preventing the reuse of the last 7 passwords), the server checks this table during a password reset to ensure the new password does not match any previously stored hashes.
 
 ## Limiting Failed Login Attempts
 

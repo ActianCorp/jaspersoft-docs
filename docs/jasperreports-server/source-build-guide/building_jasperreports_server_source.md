@@ -142,7 +142,7 @@ default_master.properties
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
-    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0 appServerDir = /home/&lt;user&gt;/apache-tomcat-10.0</td>
+    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0 appServerDir = /home/&lt;user&gt;/apache-tomcat-11.0</td>
     </tr>
     <tr>
     <td><p><code>dbHost</code></p></td>
@@ -233,7 +233,7 @@ default_master.properties
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
-    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0 appServerDir = /home/&lt;user&gt;/apache-tomcat-10.0</td>
+    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0 appServerDir = /home/&lt;user&gt;/apache-tomcat-11.0</td>
     </tr>
     <tr>
     <td><p><code>dbHost</code></p></td>

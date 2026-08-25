@@ -55,6 +55,8 @@ Included in the /webapp directory are configuration files, such as:
 
 `WEB-INF/js.quartz.properties`
 
+`WEB-INF/js.password-storage-config.properties`
+
 These auto-generated files are removed if you run the buildomatic target: `clean-config`. You can then regenerate the files by running the target: `gen-config`. (Also, after running `clean-config`, any subsequent target will regenerate the configuration files.)
 
 ## Buildomatic Location for JasperReports Server WAR File
@@ -81,6 +83,10 @@ Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /WEB-INF/classes/hibernate
 
 Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /WEB-INF/js.quartz.properties`
 
+- `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/js.password-storage-config.properties`
+
+Copied to `<tomcat>/webapps/jasperserver-pro/WEB-INF/js.password-storage-config.properties`
+
 - `<js-install>/buildomatic/build_conf/db/postgres/jdbc/postgresql-42.2.5.jar`
 
 Copied to `<tomcat>/lib`
@@ -102,6 +108,10 @@ For example, some key files are (same pattern for additional databases):
 `<js-install>/buildomatic/install_resources/sql/postgresql/js``-pro`` -drop.ddl`
 
 `<js-install>/buildomatic/install_resources/sql/postgresql/drop-quartz.ddl`
+
+`<js-install>/buildomatic-additional/install_resources/sql/oracle/quartz-23onwards.ddl` (available for Oracle database only)
+
+Note that there is an additional file for Oracle database. Depending on the Oracle database version used, you should run the `quartz.ddl` or `quartz-23onwards.ddl` script.
 
 !!! note
 

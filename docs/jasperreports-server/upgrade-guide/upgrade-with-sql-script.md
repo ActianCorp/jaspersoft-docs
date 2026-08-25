@@ -19,6 +19,8 @@ This chapter contains the following sections:
 
 - Back Up Your JasperReports Server Instance
 
+- Exporting Current Repository
+
 - Preparing the JasperReports Server 10.1 WAR File Distribution
 
 - Configuring Buildomatic for Your Database and Application Server
@@ -29,25 +31,29 @@ This chapter contains the following sections:
 
 - Additional Tasks to Complete the Upgrade
 
+- Old Manual Upgrade Steps
+
 ## Upgrade Steps Overview
 
 These are the general steps used in this section:
 
-1.  Identify your customizations.
+1.  Plan your upgrade.
 
 2.  Back up your current JasperReports Server instance.
 
-3.  Download and set up the new 10.1 JasperReports Server WAR file distribution zip.
+3.  Export your existing repository data. For example, export your 9.0 data.
 
-4.  Copy `../webapps/jasperserver-pro` directory from Tomcat 9.0 to Tomcat 10.1.x folder.
+4.  Download and set up the new 10.1 JasperReports Server WAR file distribution zip.
 
-5.  Run the `js-upgrade` script as described in Upgrading to JasperReports Server 10.1.
+5.  Copy `../webapps/jasperserver-pro` directory from Tomcat 9.0 to Tomcat 11.0.x folder.
+
+6.  Run the `js-upgrade` script as described in Upgrading to JasperReports Server 10.1.
 
 If your current instance of JasperReports Server has modifications or extensions, monitor these and reintegrate them into your 10.1 instance after upgrading.
 
 ## Upgrading with Customizations
 
-If your current instance of JasperReports Server has modifications or extensions, keep track of these and re-integrate them into your 10.1 instance after upgrading. See [Planning Your Upgrade](plan-upgrade-intro.md) to determine if any customizations you've made to your existing version of JasperReports Server are affected by changes to the updated version.
+If your current instance of JasperReports Server has modifications or extensions, keep track of these and re-integrate them into your 10.1 instance after upgrading. See [Planning Your Upgrade](plan-upgrade-intro.md) to determine if any customizations you have made to your existing version of JasperReports Server are affected by changes to the updated version.
 
 ## Back Up Your JasperReports Server Instance
 
@@ -102,13 +108,53 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
 
 !!! note
 
-    For MySQL, If you receive an error about packet size, see the Troubleshooting appendix of the JasperReports Server Installation Guide.
+    For MySQL, If you receive an error about packet size, see the Troubleshooting section of the JasperReports Server Installation Guide.
 
 **Back up your JasperReports Server Keystore**
 
 1.  Create a folder (if you did not do so already) where you can save your server's keystore, for example `C:\JS_BACKUP` or `/opt/JS_BACKUP`.
 
 2.  As the user who originally installed the server, copy `$HOME/.jrsks` and `$HOME/.jrsksp`  to  `<path>/JS_BACKUP`. Remember that these files contain sensitive keys for your data, so they must always be transmitted and stored securely.
+
+## Exporting Current Repository Data
+
+To export using the `js-export .bat/.sh` script, navigate to the buildomatic folder, for example, `<js‑install‑9.0>/buildomatic`. If you are using the PostgreSQL database, the `js-export` script should already be configured to run. If you are using a different database, or you have changed database passwords, you may need to update the `js‑export` configuration.
+
+Run the following commands:
+
+1.  Navigate to the buildomatic directory:
+
+    `cd <js-install-9.0>/buildomatic`
+
+2.  Run the `js-export` script:
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <thead>
+    <tr>
+    <th>Operating System</th>
+    <th>Command</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><p>Windows:</p></td>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">js-export</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">.bat</span> <span class="at">--everything</span> <span class="at">--output-zip</span> js-9.0-export.zip</span></code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Linux:</p></td>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./js-export</span></span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">.sh</span> <span class="at">--everything</span> <span class="at">--output-zip</span> js-9.0-export.zip</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
+
+!!! note
+
+    Note the location of the export file so that you can use it during the 10.1 upgrade process.
 
 ## Preparing the JasperReports Server 10.1 WAR File Distribution
 
@@ -134,11 +180,11 @@ After you unpack the WAR File Distribution, the resulting location will be known
 
 ## Configuring Buildomatic for Your Database and Application Server
 
-This upgrade procedure uses the `js-upgrade-samedb` shell script.
+This upgrade procedure uses the `js-upgrade-newdb` shell script.
 
 !!! note
 
-    For Unix, the bash shell is required for the js-upgrade scripts. If you are installing to a non-Linux Unix platform such as IBM AIX, FreeBSD or Solaris, you need to download and install the bash shell. See the Troubleshooting appendix of the JasperReports Server Installation Guide for more information.
+    For Unix, the bash shell is required for the js-upgrade scripts. If you are installing to a non-Linux Unix platform such as IBM AIX, FreeBSD or Solaris, you need to download and install the bash shell. See the Troubleshooting section of the JasperReports Server Installation Guide for more information.
 
 PostgreSQL, MySQL, and Oracle databases. Other databases are similar.
 
@@ -175,7 +221,7 @@ To configure `default_master.properties` for PostgreSQL:
 <tr>
 <td><p>PostgreSQL</p></td>
 <td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)
+appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
 dbUsername=postgres
 dbPassword=postgres
 dbHost=localhost</code></pre></td>
@@ -214,7 +260,7 @@ To configure `default_master.properties` for MySQL:
 <tr>
 <td><p>MySQL</p></td>
 <td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)
+appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
 dbUsername=root
 dbPassword=password
 dbHost=localhost</code></pre></td>
@@ -253,12 +299,13 @@ To configure `default_master.properties` for Oracle:
 <tr>
 <td><p>Oracle</p></td>
 <td><pre class="properties"><code>appServerType=tomcat (or wildfly, etc.)
-appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)
+appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)
 dbUsername=jasperserver
 dbPassword=password
 sysUsername=system
 sysPassword=password
-dbHost=localhost</code></pre></td>
+dbHost=localhost
+dbVersion=oracleDbVersion (for example, 12, 19c, 21c, 23ai, 26ai and so on)</code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -297,22 +344,24 @@ Now that your buildomatic scripts are configured, you can complete the upgrade.
 
 | Commands | Description |
 |----|----|
-| `cd <js-install-10.1>/buildomatic` |  |
-| `js-upgrade-samedb .bat` | (Windows) Upgrade `jasperserver` `-pro` war file, upgrade Jasperserver database to 10.1, add 10.1 repository resources into the database. |
-| `./js-upgrade-samedb .sh` | (Linux) Upgrade `jasperserver` `-pro` war files, upgrade Jasperserver database to 10.1, add 10.1 repository resources into the database. |
+| `cd <js-install-10.1>/buildomatic` | Change to buildomatic directory |
+| `js-upgrade-newdb.bat <path>\js-9.0-export.zip` | (Windows) Upgrade `jasperserver` `-pro` war file, drop, and recreate the database, import data files from the previous version. |
+| `./js-upgrade-newdb.sh <path>/js-9.0-export.zip` | (Linux) Upgrade `jasperserver` `-pro` war files, drop, and recreate the database, importing data files from the previous version. |
+
+!!! note
+
+    On MySQL, if you receive an error about packet size, see the Troubleshooting section of the JasperReports Server Installation Guide.
+
+    If you have auditing enabled, see the section about including audit events in the Troubleshooting section of the JasperReports Server Installation Guide.
+
+!!! note
+
+    If the upgrade is Split, the Access, Audit, and Monitoring events are imported to the `audit` database during the import process.
 
 If you are prompted to create a keystore, this means that the server's original keystore was not found in the user's home directory. Proceed with caution:
 
 - In general, it is recommended to exit the upgrade procedure and make sure that the keystore is in the proper location, then rerun the upgrade.
-- If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository, as described in [“Encryption Keys” on page 1](plan-upgrade-7.5.md).
-
-For the Split upgrade, after the upgrade is done, to transfer the data (Audit, Access, and Log monitoring data) to the `audit` database from the `Jasperserver` database, run the following command:
-
-- Windows: `transfer-audit-data.bat`
-
-- Linux and Mac OSX: `./transfer-audit-data.sh`
-
-The data is transferred to the `audit` database and the tables are deleted from the `Jasperserver` database. Rerun the command if there is any interruption in the data transfer process, it resumes the transfer process from where it was interrupted in the previous run.
+- If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository.
 
 ### js-upgrade Test Mode
 
@@ -320,21 +369,19 @@ Use the `test` option to run the `js-upgrade` script in test mode. For example, 
 
 `cd <js-install-10.1>/buildomatic`
 
-`js-upgrade-newdb .bat test <path>/js-8.0.x-export.zip`
+`js-upgrade-newdb .bat test <path>/js-9.0-export.zip`
 
-`js-upgrade-samedb .bat test`
-
-In test mode, the js-upgrade scripts check your default_master.properties settings and validate your application server location and its ability to connect to your database. Test mode can help you debug issues like an incorrect database password without altering your system.
+In test mode, the `js-upgrade` scripts check your `default_master.properties` settings and validate your application server location and its ability to connect to your database. Test mode can help you debug issues like an incorrect database password without altering your system.
 
 ### Output Log Location
 
-The js-upgrade script creates an output log that captures both standard and error output. If problems occur during script execution, or you just want to remember which options you chose, open the output log file located here:
+The `js-upgrade` script creates an output log that captures both standard and error output. If problems occur during script execution, or you just want to remember which options you chose, open the output log file located here:
 
 `<js-install-10.1>/buildomatic/logs/js-upgrade-<date>-<number>.log`
 
 ### Errors
 
-If you encounter errors running the `js-upgrade` script, first look at the output log to see if you can spot the errors. For help, refer to the Troubleshooting appendix of the JasperReports Server Installation Guide. The information in this appendix applies to both `js-upgrade` scripts and `js-install` scripts.
+If you encounter errors running the `js-upgrade` script, first look at the output log to see if you can spot the errors. For help, refer to the Troubleshooting section of the JasperReports Server Installation Guide. The information in this section applies to both `js-upgrade` scripts and `js-install` scripts.
 
 If you need to modify values in your `default_master.properties` file, you can simply edit the file. When you run the `js‑upgrade` script again, it uses the new values.
 
@@ -357,13 +404,17 @@ URL: `http://localhost:8080/``jasperserver`` ``-pro`` `
 | `superuser`   | \<your-password\> | System-wide administrator                  |
 | `jasperadmin` | \<your-password\> | Administrator for the default organization |
 
-Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting appendix of the JasperReports Server Installation Guide.
+Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting section of the JasperReports Server Installation Guide.
 
 !!! note
 
     Upgrading JasperReports Web Studio requires additional steps. For details, see [Upgrade JasperReports Web Studio](upgrade-jrws.md).
 
 ## Additional Tasks to Complete the Upgrade
+
+!!! note
+
+    Installing JasperReports Server automatically generates encryption keys that reside on the file system. These keys are stored in a dedicated Jaspersoft keystore. Make sure that this keystore is properly secured and backed up, as described in the JasperReports Server Security Guide.
 
 Perform these tasks with the application server shutdown.
 
@@ -399,3 +450,62 @@ In the `Jasperserver` database, compiled JasperReports Library resources are cac
 update JIRepositoryCache set item_reference = null;
 delete from JIRepositoryCache;
 ```
+
+## Old Manual Upgrade Steps
+
+This section describes the older, manual upgrade steps used before we implemented the `js-upgrade` shell scripts in release 4.0. They are provided here mainly as a reference for internal use.
+
+We recommend using the js-upgrade shell scripts described in the beginning of this chapter instead of these manual commands.
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th><p>Commands</p></th>
+<th><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p><code>cd &lt;js-install-10.1&gt;/buildomatic</code></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p><code>js-ant drop-js-db</code></p>
+<p><code>js-ant create-js-db</code></p>
+<p><code>js-ant init-js-db-</code><span><code>pro</code></span><code> </code></p></td>
+<td><p>Deletes and recreates your <code>jasperserver</code> db. Make sure that your original database is backed up.</p></td>
+</tr>
+<tr>
+<td><p><code>js-ant import-minimal-</code><span><code>pro</code></span><code> </code></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p>Windows:</p>
+<p><code>js-ant import-upgrade</code><br />
+<code>-DimportFile="&lt;path-and-filename&gt;"</code><br />
+<code>-DimportArgs="--include-server-settings</code><br />
+<code>--secret-key='0x1b 0xd4 0xa6 ...'"</code></p>
+<p>Linux and Mac OSX:</p>
+<p><code>js-ant import-upgrade</code><br />
+<code>-DimportFile=\"&lt;path-and-filename&gt;\"</code><br />
+<code>-DimportArgs=\"--include-server-settings</code><br />
+<code>--secret-key=\'0x1b 0xd4 0xa6 ...\'\"</code></p></td>
+<td><p>The <code>-DimportFile</code> should point to the &lt;path&gt; and &lt;filename&gt; of the <span>js-9.0-export.zip</span> file you created earlier.</p>
+<p><code>--include-server-settings --secret-key</code> specifies the key to use for the import. Use the same key that you imported into the keystore.</p>
+<p>On Windows, you must use double quotation marks (<code>"</code>) if your path or filename contains spaces. On Linux and Mac OSX, you must use double quotation marks, escaped with a backslash (<code>\"</code>) in this case. On Linux and Mac OSX, you must also escape any single quotation marks with a backslash.</p>
+<p>**Note** ."import-upgrade" imports the resources from the 9.0 instance in a "non-update" mode (so that core resources from 10.1 stay unchanged). Additionally, the "update-core-users" option is applied so that the superuser and jasperadmin users have the same password as set in the 9.0 instance.</p></td>
+</tr>
+<tr>
+<td><p><code>js-ant import-sample-data-upgrade-</code><span><code>pro</code></span><code> </code></p></td>
+<td><p>(Optional) This step is optional. It loads the new sample data. The old sample data is overwritten, so you may need to redo certain changes such as configuring the sample data sources for your database.</p></td>
+</tr>
+<tr>
+<td><p><code>js-ant deploy-webapp-</code><span><code>pro</code></span><code> </code></p></td>
+<td><p>Deletes the existing older war file, deploys the new war file.</p></td>
+</tr>
+</tbody>
+</table>

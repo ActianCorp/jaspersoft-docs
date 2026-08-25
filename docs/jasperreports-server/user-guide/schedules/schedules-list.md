@@ -1,11 +1,11 @@
 ---
 title: List of Scheduled Jobs
-description: "All scheduled jobs that you has defined appear on the View > Schedules and Alerts > Schedules tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs defined..."
+description: "All scheduled jobs that you have defined appear on the View > Schedules and Alerts > Schedules tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs..."
 ---
 
 # List of Scheduled Jobs
 
-All scheduled jobs that you has defined appear on the **View \> Schedules and Alerts \> Schedules** tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs defined by all users.
+All scheduled jobs that you have defined appear on the **View \> Schedules and Alerts \> Schedules** tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs defined by all users.
 
 The view of the Schedules page has been improved with the newly added columns and updates to existing column names.
 
@@ -16,14 +16,16 @@ The Schedules page shows the following:
 | **Job ID** | The unique identifier of a job. |
 | **Job name/Description** | Name of the scheduled job and description. |
 | **Resource/URL** | Repository URL of the job. |
-| **Status** | The status of the job in **NORMAL**, **EXECUTING**, **COMPLETE**, **PAUSED**, **ERROR**, or **UNKNOWN** state. |
+| **Current Status** | The status of the job in **NORMAL**, **EXECUTING**, **COMPLETE**, **PAUSED**, **ERROR**, or **UNKNOWN** state. |
+| **Succeeded Jobs** | The jobs that are completed successfully without any errors. |
+| **Failed Jobs** | The jobs that are triggered but encountered an error and did not complete successfully. |
 | **User** | The owner who created the job. |
 | **Next run** | Filters by date and time to view the count and list of schedules that will run next at the filtered time. |
 | **Last run** | Filters by date and time to view the count and list of schedules that was run last at the filtered time. |
 | **Pause/Activate** | Enables or disables the job. |
-| **Actions** | Edit or delete the job. |
+| **Actions** | Edit, delete, or restart the job. |
 
-![js Schedule Master new UI page](../assets/images/js-Schedule-Master-new-UI-page.png)
+![schedule alerts](../assets/images/schedule_alerts.png)
 
 *Figure 1: The Schedules Page*
 
@@ -57,6 +59,7 @@ The Schedules page includes the following controls:
 | ![js toggle icon](../assets/images/js-toggle-icon.png) | **Pause/Activate** toggle switch, when enabled, the job state is set to **ACTIVE**. When disabled, the job state is set to **PAUSED**. |
 | ![js edit icon](../assets/images/js-edit-icon.png) | Edits the scheduled job. |
 | ![js alert trash icon](../assets/images/js-alert-trash-icon.png) | Deletes the scheduled job. When the server receives a request to delete a job that is running, the server completes running the job before deleting it. |
+| ![restart](../assets/images/restart.png) | Restarts the job. |
 | ![js search previous](../assets/images/js-search-previous.png) | Displays the previous instance of the search term. |
 | ![js search next](../assets/images/js-search-next.png) | Displays the next instance of the search term. |
 | ![js rows per page](../assets/images/js-rows-per-page.png) | Displays the number of schedule records. By default, five rows per page are displayed. You can change the number of rows per page to 5, 10, 25, or 100. Based on your selection, records are displayed. The total count of records in the schedule job page is equivalent to the number of rows selected per page. |
@@ -65,7 +68,7 @@ The Schedules page includes the following controls:
 
 Scheduled jobs appear in the repository with the Schedule icon ![js Repository icon ScheduledItem](../assets/images/js-Repository-icon-ScheduledItem.png) (beside the report or dashboard's name).
 
-To view the list of scheduled jobs for a report or dashboard
+To view the list of scheduled jobs for a report or dashboard.
 
 1.  Locate the report or dashboard in the repository.
 2.  Click the Schedule icon ![js Repository icon ScheduledItem](../assets/images/js-Repository-icon-ScheduledItem.png) or right-click the report or dashboard, and select **Schedule** from the context menu. The Scheduled Jobs page is displayed. The Scheduled Jobs display information that is similar to the Schedules page.
@@ -87,7 +90,7 @@ As an Excel (.XLS) format is deprecated, old scheduled jobs that export reports 
 
 # Editing Schedules
 
-If the start date for a schedule has not yet passed, you can edit the schedule. After the start date for a schedule has passed, create a new schedule rather than changing the start date.
+If the start date for a schedule has not yet passed, you can edit the schedule. After the start date for a schedule has passed, create a schedule rather than changing the start date.
 
 To edit a schedule
 

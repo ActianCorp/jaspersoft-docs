@@ -9,13 +9,13 @@ Now that everything is configured, the cluster has been created with a node grou
 
 !!! warning
 
-    Before proceeding, make sure you have fully configured your Helm chart (values.yaml) and other cluster configuration files, as described in [“Configuring a Cluster in Kubernetes” on page 1](../configuring/intro.md).
+    Before proceeding, make sure you have fully configured your Helm chart (values.yaml) and other cluster configuration files, as described in [Configuring a Cluster in Kubernetes](../configuring/intro.md).
 
 1.  If you have not already done so, install the Helm command-line app to run Helm commands. You can download binaries or use package managers as described in <https://helm.sh/docs/intro/install/>.
-2.  Go to the home directory of the Jaspersoft IO At-Scale distribution, by default jrio-at-scale-3.0.0/ where the k8s folder is located, and run the following command:
+2.  Go to the home directory of the JasperReports IO At-Scale distribution, by default jasperreports-io-at-scale-10.1.0/ where the helm folder is located, and run the following command:
 
 ``` text
-helm install JRIOcluster ./k8s/helm
+helm install JRIOcluster ./helm
 ```
 
 Where `JRIOcluster` is the name of your AWS EKS cluster.

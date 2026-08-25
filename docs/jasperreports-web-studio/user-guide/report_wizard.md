@@ -9,7 +9,7 @@ The Report Wizard in JasperReports Web Studio is a tool that simplifies the proc
 
 Starting the Report Wizard, log into JasperReports Web Studio using a valid user account. Once you are logged in, click **New** in the upper-left menu and select **New Report** from the dropdown. This opens the **Report Wizard** dialog.
 
-1.  Select a Data Adapter
+1.  Select a **Data Adapter**.
 
     Choose a data adapter, which acts as the connection to your data.
 
@@ -19,11 +19,11 @@ Starting the Report Wizard, log into JasperReports Web Studio using a valid user
 
       ![ReportWizard1](assets/images/ReportWizard1.png)
 
-    - Click **Cancel** or **X** button to close the Report wizard, and the report editor remains open and you acn create report from scratch.
+    - Click **Cancel** or **X** button to close the Report wizard, and the report editor remains open and you can create report from scratch.
 
     - Click **Next** after selecting a dataset.
 
-2.  Query Language
+2.  Query Language.
 
     The query language displayed is based on the dataset that you have selected in the previous step. Here you can work with the data for your report.
 
@@ -35,7 +35,7 @@ Starting the Report Wizard, log into JasperReports Web Studio using a valid user
 
     - Click **Skip** or **Next** to moves to the next window, where the dataset fields are displayed.
 
-3.  Selecting Fields
+3.  Selecting Fields.
 
     The list of the fields depends on the query provided in the previous step. You can select the specific fields you want to include in your report. Use the arrows to move fields between the left and right sides of the window.
 
@@ -57,13 +57,13 @@ Starting the Report Wizard, log into JasperReports Web Studio using a valid user
 
     ![ReportWizard4](assets/images/ReportWizard4.png)
 
-    - All the fields previously selected appears on the left side of the window. The arrow functions as described in the previous step "Selecting Fields".
+    - All the fields previously selected appears on the left side of the window. The arrow functions as described in the previous step "**Selecting Fields**".
 
     - The toggle button enables you to automatically sort records according to the defined groups.
 
     - Click **Next**, to proceed.
 
-5.  Select a template
+5.  Select a template.
 
     - First select a category on the left to narrow down the template options like:
 

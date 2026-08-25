@@ -50,13 +50,13 @@ In Eclipse terminology, the initial layout of the Jaspersoft Studio interface is
 
 ## User Interface Components
 
-Jaspersoft Studio has a multi-tab editor, which includes three tabs that allow you to interact with your reports in different ways: Design, Source, and Preview:
+Jaspersoft Studio has a multi-tab editor, which includes three tabs that allow you to interact with your reports in different ways: **Design, Source**, and **Preview**:
 
-- The Design tab is the main one selected when you open a report file and it allows you to create your report graphically.
+- The **Design** tab is the main one selected when you open a report file and it allows you to create your report graphically.
 
-- The Source tab contains the JRXML source code for your report.
+- The **Source** tab contains the JRXML source code for your report.
 
-- The Preview tab lets you run the report preview after having selected a data source and output format.
+- The **Preview** tab lets you run the report preview after having selected a data source and output format.
 
 You can explore the data using the following views:
 
@@ -64,17 +64,17 @@ You can explore the data using the following views:
 
 - The Project Explorer view maintains the list of the projects in the current workspace, usually a Jaspersoft Studio project.
 
-- The Outline view shows the complete structure of the report in a tree. When the Design or Source tab is active, clicking an element in the Outline view highlights that element in the editor. The Outline tab is empty when the Preview tab is active.
+- The **Outline** view shows the complete structure of the report in a tree. When the **Design** or **Source** tab is active, clicking an element in the **Outline** view highlights that element in the editor. The **Outline** tab is empty when the Preview tab is active.
 
-- The Properties view lets you view and edit the properties of the element that is selected in the report editor or in the Outline view. The properties shown depend on the type of element. For example, the Properties view for a table shows four tabs: Appearance, Dataset, Table, and Advanced, while the Properties view for a line shows Appearance, Borders, Line, Inheritance, and Advanced. Some properties are read-only, but most are editable. When the root node of a report is selected in the Outline view, the Properties view shows the properties for the report.
+- The **Properties** view lets you view and edit the properties of the element that is selected in the report editor or in the **Outline** view. The properties shown depend on the type of element. For example, the **Properties** view for a table shows four tabs: **Appearance, Dataset, Table**, and **Advanced**, while the **Properties** view for a line shows **Appearance, Borders, Line, Inheritance**, and **Advanced**. Some properties are read-only, but most are editable. When the root node of a report is selected in the **Outline** view, the **Properties** view shows the properties for the report.
 
-Unlike many other views, you can open multiple instances of the Properties view at one time and you can pin a selection to a specific Properties view instance. This allows you to view or edit the properties for a specific element while working with other elements in your report, or with another report entirely.
+Unlike many other views, you can open multiple instances of the **Properties** view at one time and you can pin a selection to a specific Properties view instance. This allows you to view or edit the properties for a specific element while working with other elements in your report, or with another report entirely.
 
-- The Problems view shows a list of problems and errors that can, for example, block the correct compilation of a report.
+- The **Problems** view shows a list of problems and errors that can, for example, block the correct compilation of a report.
 
 - The Report state summary provides statistics on report compilation/filling/execution. Errors are shown here as well.
 
-This comparison table shows the differences in terminology between iReport and Jaspersoft Studio.
+This comparison table shows the differences in terminology between iReport and JasperReports Server.
 
 | iReport | Jaspersoft Studio |
 |----|----|

@@ -1,13 +1,13 @@
 ---
-title: Changes in 10.1.0 That May Affect Your Upgrade
+title: Changes in 10.0.0 That May Affect Your Upgrade
 description: "Starting Jaspersoft Studio 10.0.0, the underlying Eclipse platform is upgraded to version 4.36, therefore, moving to Java 21 was necessary. As a result, we now include Eclipse Temurin JRE version..."
 ---
 
-# Changes in 10.1.0 That May Affect Your Upgrade
+# Changes in 10.0.0 That May Affect Your Upgrade
 
 Starting Jaspersoft Studio 10.0.0, the underlying Eclipse platform is upgraded to version 4.36, therefore, moving to Java 21 was necessary. As a result, we now include Eclipse Temurin JRE version 21.0.7.6.
 
-With this update, Jaspersoft Studio Professional now features a new license manager and supports the latest JRXML format (version 7).
+With this update, Jaspersoft Studio Professional now features a new license manager and supports the latest JRXML format (version 7). The standard license file is renamed to `jaspersoft.jss.license`.
 
 Following are the recommendations for smooth migration and stability:
 

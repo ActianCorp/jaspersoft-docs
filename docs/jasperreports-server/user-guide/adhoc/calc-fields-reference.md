@@ -1,11 +1,11 @@
 ---
 title: Calculated Field Reference
-description: "This section lists all functions that can be used to create calculated fields and measures in Ad Hoc views. For details of the supported syntax, see section 1.0.1, “Calculated Field Syntax,” on page..."
+description: "This section lists all functions that can be used to create calculated fields and measures in Ad Hoc views. For details of the supported syntax, see Calculated Field Syntax."
 ---
 
 # Calculated Field Reference
 
-This section lists all functions that can be used to create calculated fields and measures in Ad Hoc views. For details of the supported syntax, see [section 1.0.1, “Calculated Field Syntax,” on page 1](calc-fields-syntax.md).
+This section lists all functions that can be used to create calculated fields and measures in Ad Hoc views. For details of the supported syntax, see [Calculated Field Syntax](calc-fields-syntax.md).
 
 !!! note
 
@@ -33,7 +33,7 @@ Given the name of an attribute as the first argument and an optional category as
 
 ## Average(NumericExpression\[,'Level'\])
 
-Returns the average value of a measure or numeric field, based on an optional level. Null values are not included. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the average value of a measure or numeric field, based on an optional level. Null values are not included. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -103,7 +103,7 @@ A boolean that returns true if the first string contains the second, false other
 
 ## CountAll(Expression\[,'Level')\]
 
-Returns the count of non-null items in a field or measure. Note that `CountAll` always returns a non-negative integer. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the count of non-null items in a field or measure. Note that `CountAll` always returns a non-negative integer. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -111,7 +111,7 @@ Returns the count of non-null items in a field or measure. Note that `CountAll` 
 
 ## CountDistinct(Expression\[,'Level'\])
 
-Returns the distinct count of non-null items in the input. Always returns a non-negative integer. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the distinct count of non-null items in the input. Always returns a non-negative integer. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -283,7 +283,7 @@ Given a text string, returns its length. Null values return null.
 
 ## Max (NumericExpression\|DateExpression\[,'Level'\])
 
-Returns the maximum value reached by the specified field or calculation. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the maximum value reached by the specified field or calculation. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -291,7 +291,7 @@ Returns the maximum value reached by the specified field or calculation. `Level`
 
 ## Median (NumericExpression\|DateExpression\[,'Level'\])
 
-For an odd number of values, returns the middle value after all values are listed in order. For an even number of values, returns the average of the middle two values. For example, if a field has only five instances, with values {1,1,3,10,20}, the median is 3. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+For an odd number of values, returns the middle value after all values are listed in order. For an even number of values, returns the average of the middle two values. For example, if a field has only five instances, with values {1,1,3,10,20}, the median is 3. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -307,7 +307,7 @@ Given a text string, returns the substring starting at Integer1 with length Inte
 
 ## Min (NumericExpression\|DateExpression\[,'Level'\])
 
-Returns the minimum value reached by the specified field or calculation based on an optional level. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the minimum value reached by the specified field or calculation based on an optional level. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -315,7 +315,7 @@ Returns the minimum value reached by the specified field or calculation based on
 
 ## Mode (Expression\[,'Level'\])
 
-Returns the most frequent value reached by the specified input, based on an optional level. For example, if a field has only five instances with values {1,2,2,4,5}, the mode is 2. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the most frequent value reached by the specified input, based on an optional level. For example, if a field has only five instances with values {1,2,2,4,5}, the mode is 2. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -355,7 +355,7 @@ Offset Date and Time for Now Functions
 
 ## PercentOf (NumericExpression\[,'Level'\])
 
-Returns the value as a percent of the total for the specified level. Null values are ignored. Note that possible values for `Level `are `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total` (default). See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the value as a percent of the total for the specified level. Null values are ignored. Note that possible values for `Level `are `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total` (default). See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 !!! note
 
@@ -435,7 +435,7 @@ Boolean that returns true if the first text input starts with the string specifi
 
 ## StdevP (NumericExpression\[,'Level'\])
 
-Standard deviation is based on the entire population, taken over the values at the specified (optional) level. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Standard deviation is based on the entire population, taken over the values at the specified (optional) level. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -443,7 +443,7 @@ Standard deviation is based on the entire population, taken over the values at t
 
 ## StdevS (NumericExpression\[,'Level'\])
 
-Standard deviation based on a sample, taken over the values at the specified level. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Standard deviation based on a sample, taken over the values at the specified level. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
@@ -451,11 +451,15 @@ Standard deviation based on a sample, taken over the values at the specified lev
 
 ## Sum (NumericExpression\[,'Level'\])
 
-The sum of all values in the range. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+The sum of all values in the range. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Example:**
 
 `Sum("Sales",'RowGroup')`
+
+!!! note
+
+    If an error occurs when using a calculated `Sum` field in a crosstab, ensure the processing logic is shifted to in-memory. This bypasses the query generator’s aggregate limitations and allows the application to handle the data processing.
 
 ## Time('StringExpression')
 
@@ -491,7 +495,7 @@ Calculates the date that is the specified number of days from the current system
 
 ## WeightedAverage (NumericExpression1,NumericExpression2,'Level')
 
-Returns the weighted average for the first input weighted with respect to the second input, calculated at an optional level. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+Returns the weighted average for the first input weighted with respect to the second input, calculated at an optional level. Null values are excluded. `Level` can be one of the following: `Current` (default), `ColumnGroup`, `ColumnTotal`, `RowGroup`, `RowTotal`, `Total`. See [Levels in Aggregate Functions](calc-fields-aggregates.md) for more information.
 
 **Examples:**
 

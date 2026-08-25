@@ -9,7 +9,7 @@ Before you can build Docker images to deploy the modules, you must configure the
 
 ## Installing the License File
 
-You must purchase a license from Jaspersoft to run Jaspersoft IO At-Scale. Once you recieve the license file, save a copy in the following folder:
+You must purchase a license from Jaspersoft to run JasperReports IO At-Scale. Once you recieve the license file, save a copy in the following folder:
 
 jrio-manager-docker/jrio/classes
 
@@ -33,9 +33,9 @@ The standalone repository is identical to the file-based repository in JasperRep
 
 ## Connecting to a JasperReports Server Repository
 
-In a production environment, Jaspersoft recommends using Jaspersoft IO At-Scale with a JasperReports Server instance for maximum throughput and flexibility. In this case, users create and access reports in the JasperReports Server repository, and JRIO At-Scale becomes the scalable, high-performance reporting engine for the server.
+In a production environment, Jaspersoft recommends using JasperReports IO At-Scale with a JasperReports Server instance for maximum throughput and flexibility. In this case, users create and access reports in the JasperReports Server repository, and JRIO At-Scale becomes the scalable, high-performance reporting engine for the server.
 
-When connecting to JasperReports Server, you must specify a URL (IP address or hostname) that is accessible from inside the Jaspersoft IO At-Scale cluster. If you plan to use JasperReports Server on AWS, you can specify the static IP or loadbalancer with hostname that is attached to that server instance. Be aware that you should create your Virtual Private Cloud (VPC) ahead of time, as well as your JasperReports Server instance so that the IP address is already available for the next steps. For more information, see [Deploying JasperReports Server](../deploying/deploying_the_cluster.md).
+When connecting to JasperReports Server, you must specify a URL (IP address or hostname) that is accessible from inside the JasperReports IO At-Scale cluster. If you plan to use JasperReports Server on AWS, you can specify the static IP or loadbalancer with hostname that is attached to that server instance. Be aware that you should create your Virtual Private Cloud (VPC) ahead of time, as well as your JasperReports Server instance so that the IP address is already available for the next steps. For more information, see [Deploying JasperReports Server](../deploying/deploying_the_cluster.md).
 
 !!! note
 
@@ -73,7 +73,7 @@ class="com.jaspersoft.jrio.common.repository.jrs.ServerConfiguration"</td>
 </tbody>
 </table>
 
-1.  By default, Jaspersoft IO At-Scale includes the standalone repository in the jrio-export, jrio-rest, and jrio-reporting modules. The sample repository in each module is accessible. For more information, see [Using a Local Repository](local_repository.md). Deploying the Jaspersoft IO At-Scale with a sample repository in each module will not impact the performance. If you want to disable these file repositories, open each of the following files and comment out all of the listed beans:
+1.  By default, JasperReports IO At-Scale includes the standalone repository in the jrio-export, jrio-rest, and jrio-reporting modules. The sample repository in each module is accessible. For more information, see [Using a Local Repository](local_repository.md). Deploying the JasperReports IO At-Scale with a sample repository in each module will not impact the performance. If you want to disable these file repositories, open each of the following files and comment out all of the listed beans:
 
 <table>
 <colgroup>
@@ -97,7 +97,7 @@ com.jaspersoft.jrio.common.repository.FileSystemPersistenceServiceFactory</p></t
 
 ## Setting JasperReports Properties
 
-JasperReports properties are the configuration settings for the JasperReports Library that is the reporting engine for Jaspersoft IO At-Scale. They affect the reporting and exporting modules to determine many aspects of report generation and output.
+JasperReports properties are the configuration settings for the JasperReports Library that is the reporting engine for JasperReports IO At-Scale. They affect the reporting and exporting modules to determine many aspects of report generation and output.
 
 !!! note
 
@@ -169,7 +169,7 @@ level="DEBUG"/&gt;</td>
 
 ## Setting Concurrent Threads
 
-The jrio-reporting and jrio-export modules are the workhorses of a Jaspersoft IO At-Scale cluster, usually deployed as multiple pods (module instances) to one or more nodes (physical or virtual machines). Each pod can also specify how many threads to run concurrently. This value depends on your performance needs, and it requires fine tuning based on service level requirements, user expectations, peak load, and CPUs available on each node.
+The jrio-reporting and jrio-export modules are the workhorses of a JasperReports IO At-Scale cluster, usually deployed as multiple pods (module instances) to one or more nodes (physical or virtual machines). Each pod can also specify how many threads to run concurrently. This value depends on your performance needs, and it requires fine tuning based on service level requirements, user expectations, peak load, and CPUs available on each node.
 
 !!! note
 

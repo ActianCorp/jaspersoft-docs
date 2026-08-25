@@ -20,6 +20,8 @@ This chapter has the following sections:
 
 - [Units of Measure in Jaspersoft Studio](measure_units_in_jaspersoft_studio.md)
 
+- [Revised Logging System](revised-logging-system.md)
+
 - [Cleaning Cached Data](config-clean.md)
 
 - [Disabling Usage Statistics](config-usage-stats.md)

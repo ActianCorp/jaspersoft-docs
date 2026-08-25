@@ -7,6 +7,14 @@ description: "You can easily publish your reports from Jaspersoft Studio to any 
 
 You can easily publish your reports from Jaspersoft Studio to any JasperReports Server connection. Publishing to the server uploads the JRXML for the report, along with any resources that the report needs such as images and query resources. You must also configure the data source for the report on the server.
 
+!!! note
+
+    At runtime, during the Publish process, if you encounter exceptions like `net.sf.jasperreports.engine.JRRuntimeException: Class my.customapp.package. MyClass is not visible to deserialization`, you can resolve the issue by implementing the following workaround.
+
+    Add an appropriate property under **Window \> Preferences \> Jaspersoft Studio \> Properties**. The new property for deserialization whitelisting should be in the following format: `net.sf.jasperreports.deserialization.class.whitelist.jss.<NEW_CUSTOM_CATEGORY> = my.customapp.package.MyClass`.
+
+    To streamline the configuration for complex reports involving multiple dependencies, you may whitelist full packages using the `**` wildcard notation (for example, `my.customapp.package.**`) rather than listing single classes.
+
 When you are using the latest or recent version of Jaspersoft Studio with JasperReports Library version 7 or higher, the appropriate version of JasperReports Library must be set up in the JasperReports Server configuration. A dialog with this message is shown when you are trying to publish a report to JasperReports Server.
 
 ![publishing warning](../assets/images/publishing_warning.png)

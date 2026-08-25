@@ -1,11 +1,11 @@
 ---
-title: Jaspersoft IO At-Scale Modules
-description: "Jaspersoft IO At-Scale contains several modules, also called pods, described in the following table. Each of these modules becomes a separate Docker image:"
+title: JasperReports IO At-Scale Modules
+description: "JasperReports IO At-Scale contains several modules, also called pods, described in the following table. Each of these modules becomes a separate Docker image:"
 ---
 
-# Jaspersoft IO At-Scale Modules
+# JasperReports IO At-Scale Modules
 
-Jaspersoft IO At-Scale contains several modules, also called pods, described in the following table. Each of these modules becomes a separate Docker image:
+JasperReports IO At-Scale contains several modules, also called pods, described in the following table. Each of these modules becomes a separate Docker image:
 
 | Module | Description |
 |----|----|

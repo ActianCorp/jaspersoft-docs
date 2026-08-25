@@ -19,6 +19,12 @@ The HTML5 Map component is based on the Highcharts Map library and the [Map coll
 
 The GeoJSON format contains some general information such as title and copyright information. It also contains a collection of feature elements. Each feature is related to a given region on the map. For example, in the case of the map of the United States, each feature in the GeoJSON file corresponds to the state of the United States and provides entries for the element identification like country name, region, state name, postal code, latitude and longitude.
 
+!!! note
+
+    To use a custom location for Map collection files, you must define the new location URL using the `com.jaspersoft.jasperreports.highcharts.maps.collection.base.url` property in the `jasperreports.properties` file.
+
+    Additionally, to avoid conflicts with Cross-Site Request Forgery (CSRF) protection, the hosting domain must be added to the JasperReports Server whitelist to ensure the maps load correctly. For more information, see the [Configuring CSRF Protection](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-security-guide/v1000/jasperreports-server-security-guide-_-application-security-_-configuring_csrf_protection/#top) section in the JasperReports Server Security Guide.
+
 This section describes:
 
 - Creating a Simple HTML5 Map Component

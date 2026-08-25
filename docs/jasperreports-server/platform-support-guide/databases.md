@@ -45,7 +45,6 @@ Certified
 
 MySQL
 
-- 8.0
 - 8.4
 
 <!-- -->
@@ -60,6 +59,8 @@ Certified
 Oracle RDBMS
 
 - 19c
+- 23ai
+- 26ai
 
 <!-- -->
 
@@ -135,7 +136,7 @@ Sybase ASE
 
 Data Source
 
-Certified
+Compatible
 
 Sybase SQL Anywhere
 
@@ -143,7 +144,7 @@ Sybase SQL Anywhere
 
 Data Source
 
-Certified
+Compatible
 
 
 
@@ -313,7 +314,7 @@ The following table lists JDBC Drivers that are supported for:
 <tr>
 <td><p>Salesforce</p></td>
 <td></td>
-<td><p>Certified</p></td>
+<td><p>Compatible</p></td>
 </tr>
 <tr>
 <td><p>DataStax Enterprise</p></td>

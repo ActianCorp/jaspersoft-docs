@@ -23,7 +23,7 @@ The scheduler runs reports in the background according to a user-defined schedul
 
 - [Configuring the Scheduler to Fetch Attributes](configuring_the_scheduler.md)
 
-- [Setting Properties in the jasperserver_config.properties File](configuring_the_scheduler.md)
+- [Configuring Job Persistence for Immediate Execution Schedule](configuring_the_scheduler.md)
 
 ## Configuring the Scheduler Misfire Policy
 
@@ -477,3 +477,48 @@ If properties are configured per tenant level, then SendGrid API key must be def
 !!! note
 
     If any of these mandatory parameters are missed, it creates beans using the default values mentioned in the `js.quartz.properties` file.
+
+## Configuring the Scheduler Dashboard
+
+To display execution metrics and logs in the Scheduler Dashboard, configure the following properties:
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="2"><p>Configuring the Scheduler Dashboard</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2"><p>Configuration File</p></td>
+</tr>
+<tr>
+<td colspan="2"><p><code>.../WEB-INF/js.config.properties</code></p></td>
+</tr>
+<tr>
+<td><p>Property</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr>
+<td><code>isJobsHistoricalDataEnabled</code></td>
+<td><p>Enables access to Jobs Historical Data for the Scheduler Dashboard and related APIs.</p>
+<p>By default this property is set to <code>True</code>.</p>
+<p>When<code> isJobsHistoricalDataEnabled=true</code> and the following audit properties are enabled:</p>
+<ul>
+<li><p><code>feature.audit_monitoring.enabled=true</code></p></li>
+<li><p><code>audit.records.enabled=true</code></p></li>
+</ul>
+<p>You can view the historical job execution data, including <strong>Succeeded Jobs</strong> count, <strong>Failed Jobs</strong> count, <strong>Restart</strong> action, and <strong>Execution Logs</strong> from the Admin Console Schedules and Schedules and Alerts pages.</p>
+<p>When<code> isJobsHistoricalDataEnabled=false</code>, the historical data features are hidden from the user interface, and the Jobs Historical Data API returns a 403 Forbidden response.</p>
+<p>Audit data and job metrics may continue to be collected and stored if audit configurations remain enabled, and will become available again if the property is re-enabled.</p></td>
+</tr>
+</tbody>
+</table>
+
+!!! note
+
+    To enable access to Jobs Historical Data, ensure that both `feature.audit_monitoring.enabled` and `audit.records.enabled` are set to `True`. For more information, see <a href="../diagnostics/configuring_auditing_and_monitoring.md">Configuring Auditing and Monitoring.</a>

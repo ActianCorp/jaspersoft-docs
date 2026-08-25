@@ -201,7 +201,8 @@ To enable the Jaspersoft JDBC drivers for ElasticSearch data sources
 </entry>
 ```
 
-4.  Save the file and restart JasperReports Server.
+4.  Save the file.
+5.  Upload the JDBC driver separately and restart JasperReports Server.
 
 ## JNDI Services on Apache Tomcat
 
@@ -428,3 +429,11 @@ public class MyBean {
   }
 }
 ```
+
+## Redundant JSON Data Adapter Requests During Parameter Initialization
+
+The JSON data adapter triggered multiple HTTP calls using default parameter values instead of a single call using dynamic parameters passed from input controls.
+
+To resolve this, default parameter evaluation now occurs independently of the data adapter.
+
+To restore the previous behavior where the parameter default values depend on the data adapter, the `net.sf.jasperreports.parameter.defaults.evaluator.prepares.data` property can set to `true` at the report level or globally in the `WEB-INF/classes/jasperreports.properties` file.

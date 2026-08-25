@@ -86,3 +86,5 @@ This appendix contains the following sections:
 - [PDF Output Trimmed on The Left Side](pdf-output-trimmed-on-left-side.md)
 
 - [Dashlet Data Trimmed in DOCX Export](dashlet-data-trimmed-in-docx-export.md)
+
+- [Configuring Highcharts Maps for Non-Default Server Ports](highcharts-map-error.md)

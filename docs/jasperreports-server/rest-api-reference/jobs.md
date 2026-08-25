@@ -134,13 +134,13 @@ JSON: {
               "nextFireTime": "2022-03-15T00:00:00+03:00",
               "value": "NORMAL"
             }
-          },
-          ...
+            "succeededJobsCount": 8,            "failedJobsCount": 3,           },          ...
         ]
       }
 
 XML:  <jobs>
           <jobsummary>
+              <failedJobsCount>3</failedJobsCount>
               <id>1898</id>
               <label>SampleJobName</label>
               <description>Accounts Sample Job</description>
@@ -151,8 +151,7 @@ XML:  <jobs>
                   <value>NORMAL</value>
               </state>
               <owner>jasperadmin|organization_1</owner>
-              <version>0</version>
-          </jobsummary>
+              <version>0</version>              <succeededJobsCount>8</succeededJobsCount>           </jobsummary>
           ...
       </jobs>
 ```
@@ -209,7 +208,7 @@ After searching and finding the ID of a job that is still active, use the GET me
 </tbody>
 </table>
 
-The GET method returns a descriptor that fully describes all the aspects of a scheduled job, such as recurrence, parameters, output, email notifications, and alerts, if any. All properties are included, many of which may be null if not set for the chosen job. For more information, see The job Descriptor.
+The method returns a descriptor that fully describes all the aspects of a scheduled job, such as recurrence, parameters, output, email notifications, and alerts, if any. All properties are included, many of which may be null if not set for the chosen job. For more information, see The job Descriptor.
 
 JSON:
 
@@ -500,6 +499,16 @@ A valid `job` descriptor contains the following properties:
 <td><p><code>alert</code><br />
 (optional)</p></td>
 <td><p>A container for properties that define email recipients for job success and errors. For more information, see <span>Job Status Email</span>.</p></td>
+</tr>
+<tr>
+<td>succeededJobsCount<br />
+(ignored)</td>
+<td>The total number of successful executions for the scheduled job.</td>
+</tr>
+<tr>
+<td>failedJobsCount<br />
+(ignored)</td>
+<td>The total number of failed executions for the scheduled job.</td>
 </tr>
 </tbody>
 </table>
@@ -1631,6 +1640,77 @@ XML:
           <jobId>1240</jobId>
       </jobIdList>
 ```
+
+## Viewing Jobs Historical Data
+
+The `jobsAudit/jobsHistoricalData` service provides the execution history for a scheduled job. Each log includes the run status, duration, start and end times, and any associated execution errors.
+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr>
+<th><p>Method</p></th>
+<th colspan="3"><p>URL</p></th>
+</tr>
+&#10;<tr>
+<td><p>GET</p></td>
+<td colspan="3"><p><code>http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobsAudit/jobsHistoricalData/{jobId}</code></p></td>
+</tr>
+<tr>
+<td><p>Argument</p></td>
+<td><p>Type/Value</p></td>
+<td colspan="2"><p>Description</p></td>
+</tr>
+<tr>
+<td><p><span>jobId?</span></p></td>
+<td><p>Integer</p></td>
+<td colspan="2"><p>The identifier of the scheduled job whose execution history is returned.</p></td>
+</tr>
+<tr>
+<td><p><span>sortType?</span></p></td>
+<td><p>String</p></td>
+<td colspan="2"><p>Specifies the field used to sort the returned execution history.</p>
+<p>Possible values are: NONE, SORTBY_EXECUTION_TIME, SORTBY_START_TIME, SORTBY_END_TIME, SORTBY_STATUS, SORTBY_ERROR;</p></td>
+</tr>
+<tr>
+<td colspan="4">Options</td>
+</tr>
+<tr>
+<td colspan="4"><span>accept: application/json</span></td>
+</tr>
+<tr>
+<td colspan="3"><p>Return Value on Success</p></td>
+<td><p>Typical Return Values on Failure</p></td>
+</tr>
+<tr>
+<td colspan="3"><p>200 OK - The server returns a JSON structure containing the execution history for the specified scheduled job.</p></td>
+<td><p>404 Not Found - When the specified job does not exist or the job is no longer active.</p>
+<p>403 Forbidden - When audit properties or jobsHistoricalData property not enabled.</p>
+<p>Error code: <code>feature.disabled</code></p>
+<p>Error message: Jobs Historical Data endpoint is blocked. Enable the jobs historical data and audit configurations to proceed.</p></td>
+</tr>
+</tbody>
+</table>
+
+The following example shows the response in JSON and XML:
+
+JSON:
+
+```
+{
+"historicalData": [     {          "executionTime": 492,         "status": "FAILED",         "startTime": "2026-03-29T21:26:00.011+05:30",
+         "endTime": "2026-03-29T21:26:00.503+05:30",
+         "error": "Folder not found at \"/public/Test\""      }   ] }
+```
+
+!!! note
+
+    The historical data is available only when the Jobs Historical Data and auditing properties are enabled on the server. For more information see the **Configuring the Scheduler Dashboard** section in the <a href="https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-administration-guide/v1000/jasperreports-server-admin-guide-_-overview-_-overview_intro/">JasperReports® Server Administrator Guide.</a>
 
 ## Restarting Failed Jobs
 

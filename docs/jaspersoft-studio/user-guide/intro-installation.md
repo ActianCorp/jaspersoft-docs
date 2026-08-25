@@ -7,6 +7,10 @@ description: "Jaspersoft Studio is available as an Eclipse Rich Client Package (
 
 Jaspersoft Studio is available as an Eclipse Rich Client Package (RCP), downloadable from [here](https://community.jaspersoft.com/download-jaspersoft/).
 
+!!! note
+
+    Starting Jaspersoft Studio 10.0.0, a new integrated license manager and validator is introduced. The standard license file is renamed to `jaspersoft.jss.license`. However, the application's core features and functionality remain unchanged regardless of the license type.
+
 ## Requirements
 
 ### Software Requirements

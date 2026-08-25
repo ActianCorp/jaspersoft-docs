@@ -62,8 +62,8 @@ For example, for SQL Server the driver would go here:
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
-    <td><p>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0</p>
-    <p>appServerDir = /home/&lt;user&gt;/apache-tomcat-10.0</p></td>
+    <td><p>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0</p>
+    <p>appServerDir = /home/&lt;user&gt;/apache-tomcat-11.0</p></td>
     </tr>
     <tr>
     <td><p><code>sysUsername</code></p></td>
@@ -158,7 +158,7 @@ For example, for SQL Server the driver would go here:
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
-    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0appServerDir = /home/&lt;user&gt;/apache-tomcat-10.0</td>
+    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0appServerDir = /home/&lt;user&gt;/apache-tomcat-11.0</td>
     </tr>
     <tr>
     <td><p><code>dbUsername</code></p></td>
@@ -240,7 +240,7 @@ For example, for SQL Server the driver would go here:
     </tr>
     <tr>
     <td><p><code>appServerDir</code></p></td>
-    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0appServerDir = /home/&lt;user&gt;/apache-tomcat-10.0</td>
+    <td>appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0appServerDir = /home/&lt;user&gt;/apache-tomcat-11.0</td>
     </tr>
     <tr>
     <td><p><code>dbUsername</code></p></td>

@@ -44,6 +44,7 @@ nav = [
           { "Logging In" = "jasperreports-server/user-guide/introduction/intro_login.md" },
           { "Logging into a Server with Multiple Organizations" = "jasperreports-server/user-guide/introduction/intro_login_multi_org.md" },
           { "Disabled Accounts" = "jasperreports-server/user-guide/introduction/intro_disabledaccts.md" },
+          { "Password History Validation" = "jasperreports-server/user-guide/introduction/intro-password-history-validation.md" },
         ] },
         { "The Getting Started Page" = "jasperreports-server/user-guide/introduction/intro_getting_started.md" },
         { "The Library Page" = "jasperreports-server/user-guide/introduction/intro_library_page.md" },
@@ -270,6 +271,7 @@ nav = [
           { "Adding a AWS Athena Driver" = "jasperreports-server/administrator-guide/datasources/adding-a-aws-athena-driver.md" },
           { "Adding a Cassandra Driver" = "jasperreports-server/administrator-guide/datasources/adding-a-cassandra-driver.md" },
           { "Adding a Native MongoDB Driver" = "jasperreports-server/administrator-guide/datasources/adding-a-native-mongodb-driver.md" },
+          { "Adding a MongoDB JDBC Driver" = "jasperreports-server/administrator-guide/datasources/adding-a-mongodb-jdbc-driver.md" },
           { "Adding an Autonomous REST JDBC Driver" = "jasperreports-server/administrator-guide/datasources/adding-a-auto-rest-connector.md" },
         ] },
         { "JNDI Data Sources" = "jasperreports-server/administrator-guide/datasources/jndi_data_sources.md" },
@@ -336,6 +338,7 @@ nav = [
         { "Configuring JasperReports Web Studio Access" = "jasperreports-server/administrator-guide/configuration/integrating_jrws_into_jrs.md" },
         { "Configuration for File Resource Type" = "jasperreports-server/administrator-guide/configuration/configuration_for_file_resource.md" },
         { "Configuration for Repository files" = "jasperreports-server/administrator-guide/configuration/configuration_for_repository_files.md" },
+        { "Configuring Password Storage Strategy and Password History" = "jasperreports-server/administrator-guide/configuration/configuring-password-encryption-strategy.md" },
       ] },
       { "OpenTelemetry" = [
         { "OpenTelemetry" = "jasperreports-server/administrator-guide/opentelemetry/opentelemetry.md" },
@@ -408,6 +411,7 @@ nav = [
         { "Non-alphabetical Characters not Prioritized While Sorting Fields in Reports" = "jasperreports-server/administrator-guide/troubleshooting/sorting-issue-hyphen-not-proritized.md" },
         { "Output Trimmed in PDF Export" = "jasperreports-server/administrator-guide/troubleshooting/pdf-output-trimmed-on-left-side.md" },
         { "Data Trimmed in DOCX Export" = "jasperreports-server/administrator-guide/troubleshooting/dashlet-data-trimmed-in-docx-export.md" },
+        { "Configuring Highcharts Maps for Non-Default Server Locations" = "jasperreports-server/administrator-guide/troubleshooting/highcharts-map-error.md" },
       ] },
       { "Localization" = [
         { "Localization" = "jasperreports-server/administrator-guide/localization/localization_intro.md" },
@@ -442,6 +446,7 @@ nav = [
         { "Support for Internationalization" = "jasperreports-server/installation-guide/introduction/support_for_internationalization.md" },
         { "Installation Types" = "jasperreports-server/installation-guide/introduction/installation_types.md" },
       ] },
+      { "Configuring Password Strategy" = "jasperreports-server/installation-guide/configuring-password-strategy.md" },
       { "Enabling Java Naming and Directory Interface (JNDI) Security" = "jasperreports-server/installation-guide/introduction/restricted-jndi-access.md" },
       { "Running the Binary Installer for Evaluation" = [
         { "Running the Binary Installer for Evaluation" = "jasperreports-server/installation-guide/binary-installer/binary-install-intro.md" },
@@ -501,6 +506,7 @@ nav = [
         { "Updating XML/A Connection Definitions (Optional)" = "jasperreports-server/installation-guide/weblogic/updating_xml_a_connection_definition2.md" },
         { "Troubleshooting Your JasperReports Server Configuration" = "jasperreports-server/installation-guide/weblogic/weblogic_troubleshooting_jrs.md" },
       ] },
+      { "Running Password Migration" = "jasperreports-server/installation-guide/password-migration.md" },
       { "Scalable Query Engine" = [
         { "Scalable Query Engine" = "jasperreports-server/installation-guide/queryengine/queryengine_intro.md" },
         { "Overview" = "jasperreports-server/installation-guide/queryengine/overview.md" },
@@ -553,15 +559,17 @@ nav = [
         { "Enabling Java Naming and Directory Interface (JNDI) Security" = "jasperreports-server/upgrade-guide/jrs-install-guide/introduction/restricted-jndi-access.md" },
       ] },
       { "Overlay Upgrade" = "jasperreports-server/upgrade-guide/upgrade-overlay.md" },
-      { "Upgrading from 9.0 to 10.1" = "jasperreports-server/upgrade-guide/upgrade-with-sql-script.md" },
-      { "Upgrading from 8.0.x - 8.2 to 10.1" = "jasperreports-server/upgrade-guide/upgrading.md" },
+      { "Upgrading from 10.0 to 10.1" = [
+        { "Upgrading from 10.0 to 10.1" = "jasperreports-server/upgrade-guide/upgrade-10.0-to-10.1.md" },
+        { "Upgrading from 9.0 to 10.1" = "jasperreports-server/upgrade-guide/upgrade-with-sql-script.md" },
+      ] },
       { "Migrating from Compact 10.1 to Split 10.1" = "jasperreports-server/upgrade-guide/migrate-from-compact-to-split.md" },
-      { "Upgrading JasperReports Server 6.4.x or Earlier" = "jasperreports-server/upgrade-guide/upgradenotes.md" },
       { "Upgrading from the Community Project" = "jasperreports-server/upgrade-guide/upgrade-ce-to-pro.md" },
       { "Upgrade JasperReports Web Studio" = "jasperreports-server/upgrade-guide/upgrade-jrws.md" },
       { "Planning Your Upgrade" = [
         { "Planning Your Upgrade" = "jasperreports-server/upgrade-guide/plan-upgrade-intro.md" },
-        { "Changes in 10.1 That May Affect Your Upgrade" = "jasperreports-server/upgrade-guide/plan-upgrade-10.0.md" },
+        { "Changes in 10.1 That May Affect Your Upgrade" = "jasperreports-server/upgrade-guide/plan-upgrade-10.1.md" },
+        { "Changes in 10.0 That May Affect Your Upgrade" = "jasperreports-server/upgrade-guide/plan-upgrade-10.0.md" },
         { "Changes in 9.0 That May Affect Your Upgrade" = "jasperreports-server/upgrade-guide/plan-upgrade-9.0.md" },
         { "Changes in 8.2 That May Affect Your Upgrade" = "jasperreports-server/upgrade-guide/plan-upgrade-8.2.md" },
         { "Changes in 8.1 That May Affect Your Upgrade" = "jasperreports-server/upgrade-guide/plan-upgrade-8.1.md" },
@@ -626,6 +634,8 @@ nav = [
         { "Updating XML/A Connection Definitions" = "jasperreports-server/upgrade-guide/jrs-install-guide/additional/updating_xml_a_connection_definition.md" },
         { "Updating XML/A Connection Definitions (Optional)" = "jasperreports-server/upgrade-guide/jrs-install-guide/weblogic/updating_xml_a_connection_definition2.md" },
         { "Updating XML/A Connection Definitions (Optional)" = "jasperreports-server/upgrade-guide/jrs-install-guide/websphere/websphere_xmla_connection.md" },
+        { "Upgrading JasperReports Server 6.4.x or Earlier" = "jasperreports-server/upgrade-guide/upgradenotes.md" },
+        { "Upgrading from 8.0.x - 8.2 to 10.1" = "jasperreports-server/upgrade-guide/upgrading.md" },
         { "WAR File Distribution" = "jasperreports-server/upgrade-guide/jrs-install-guide/warfileinstall/war-overview.md" },
         { "Working With JDBC Drivers" = "jasperreports-server/upgrade-guide/jrs-install-guide/additional/jdbc-driver.md" },
       ] },
@@ -685,7 +695,10 @@ nav = [
         { "User Security" = "jasperreports-server/security-guide/user-security/user_security.md" },
         { "Configuring the User Session Timeout" = "jasperreports-server/security-guide/user-security/configuring_the_user_session_timeout.md" },
         { "Invalidating Active Sessions for Deleted User" = "jasperreports-server/security-guide/user-security/invalidating-active-sessions-for-deleted-or-disabled-user.md" },
-        { "Configuring User Password Options" = "jasperreports-server/security-guide/user-security/configuring_user_password_options.md" },
+        { "Configuring User Password Options" = [
+          { "Configuring User Password Options" = "jasperreports-server/security-guide/user-security/configuring_user_password_options.md" },
+          { "Configuring Password Storage Strategy" = "jasperreports-server/security-guide/user-security/configuring-password-encryption-strategy.md" },
+        ] },
         { "Encrypting User Passwords" = "jasperreports-server/security-guide/user-security/encrypting_user_passwords.md" },
         { "Encrypting User Session Login" = "jasperreports-server/security-guide/user-security/encrypting_user_session_login.md" },
       ] },
@@ -1858,7 +1871,7 @@ nav = [
         { "Using JasperReports Extensions in Jaspersoft Studio" = "jaspersoft-studio/user-guide/using_jasperreports_extensions_in_ja.md" },
         { "A Simple Program" = "jaspersoft-studio/user-guide/concepts-simple-program.md" },
       ] },
-      { "Changes in 10.1.0 That May Affect Your Upgrade" = "jaspersoft-studio/user-guide/best-practices.md" },
+      { "Changes in 10.0.0 That May Affect Your Upgrade" = "jaspersoft-studio/user-guide/best-practices.md" },
       { "End User License Agreement and Data Governance" = "jaspersoft-studio/user-guide/eula-and-data-goverence.md" },
       { "Glossary" = "jaspersoft-studio/user-guide/bookmatter/glossary.md" },
       { "Jaspersoft Documentation and Support Services" = "jaspersoft-studio/user-guide/_templates/tibco-documentation-and-support-services.md" },
@@ -1894,7 +1907,7 @@ nav = [
     { "JasperReports Web Studio" = "jasperreports-web-studio/index.md" },
     { "JasperReports Web Studio User Guide" = [
       { "JasperReports Web Studio User Guide" = "jasperreports-web-studio/user-guide/index.md" },
-      { "Overview" = "jasperreports-web-studio/user-guide/release-notes/overview.md" },
+      { "Overview" = "jasperreports-web-studio/user-guide/overview-ug.md" },
       { "Getting Started" = "jasperreports-web-studio/user-guide/getting-started.md" },
       { "Configuration" = "jasperreports-web-studio/user-guide/configuration.md" },
       { "White Labeling" = "jasperreports-web-studio/user-guide/white_labelling.md" },
@@ -1918,10 +1931,11 @@ nav = [
         { " template-instructions-FrameMaker-to-Flare" = "jasperreports-web-studio/user-guide/_template-instructions-framemaker-to-flare.md" },
         { "Changes in Functionality" = "jasperreports-web-studio/user-guide/release-notes/changes-in-functionality.md" },
         { "Closed Issues" = "jasperreports-web-studio/user-guide/release-notes/closed-issues.md" },
-        { "Compatibility" = "jasperreports-web-studio/user-guide/release-notes/migration.md" },
         { "Deprecated Features" = "jasperreports-web-studio/user-guide/release-notes/deprecated-features.md" },
         { "Known Issues" = "jasperreports-web-studio/user-guide/release-notes/known-issues.md" },
+        { "Migration and Compatibility" = "jasperreports-web-studio/user-guide/release-notes/migration.md" },
         { "New Features" = "jasperreports-web-studio/user-guide/release-notes/new-features.md" },
+        { "Overview" = "jasperreports-web-studio/user-guide/release-notes/overview.md" },
         { "Removed Features" = "jasperreports-web-studio/user-guide/release-notes/removed-features.md" },
         { "What's New" = "jasperreports-web-studio/user-guide/_templates/whats-new.md" },
       ] },
@@ -1967,7 +1981,7 @@ nav = [
       { "Introduction" = "jasperreports-io/at-scale-user-guide/introduction/intro.md" },
       { "Building Docker Images" = [
         { "Building Docker Images" = "jasperreports-io/at-scale-user-guide/dockerimages/intro_modules.md" },
-        { "Jaspersoft IO At-Scale Modules" = "jasperreports-io/at-scale-user-guide/dockerimages/jrio-at-scale-modules.md" },
+        { "JasperReports IO At-Scale Modules" = "jasperreports-io/at-scale-user-guide/dockerimages/jrio-at-scale-modules.md" },
         { "Configuring the Modules" = "jasperreports-io/at-scale-user-guide/dockerimages/configuration.md" },
         { "Using a Local Repository" = "jasperreports-io/at-scale-user-guide/dockerimages/local_repository.md" },
         { "Using a Redis Cluster" = "jasperreports-io/at-scale-user-guide/dockerimages/rediscluster.md" },
@@ -1988,8 +2002,8 @@ nav = [
         { "Deploying JasperReports Server" = "jasperreports-io/at-scale-user-guide/deploying/deploying-jrs.md" },
         { "Deploying Your Database" = "jasperreports-io/at-scale-user-guide/deploying/deploying-your-database.md" },
       ] },
-      { "Cloud Repositories for Jaspersoft IO At-Scale" = [
-        { "Cloud Repositories for Jaspersoft IO At-Scale" = "jasperreports-io/at-scale-user-guide/cloud-repo.md" },
+      { "Cloud Repositories for JasperReports IO At-Scale" = [
+        { "Cloud Repositories for JasperReports IO At-Scale" = "jasperreports-io/at-scale-user-guide/cloud-repo.md" },
         { "OAuth2 Repositories" = "jasperreports-io/at-scale-user-guide/oauth2-repo.md" },
         { "Accessing Cloud Repositories" = "jasperreports-io/at-scale-user-guide/accessing-cloud-repo.md" },
       ] },
@@ -2231,9 +2245,12 @@ toc_depth = 4
 [project.markdown_extensions.pymdownx.betterem]
 [project.markdown_extensions.pymdownx.caret]
 [project.markdown_extensions.pymdownx.details]
-[project.markdown_extensions.pymdownx.emoji]
-emoji_generator = "zensical.extensions.emoji.to_svg"
-emoji_index = "zensical.extensions.emoji.twemoji"
+# pymdownx.emoji is deliberately NOT enabled. It reads any `:word:` as an emoji
+# shortcode, and this documentation is full of colon-delimited technical text:
+# the timestamp format `hh:mm:ss` was being rendered as a Myanmar flag image
+# fetched from a CDN, on four pages, silently changing what the format strings
+# said. Nothing here needs emoji — the landing-page icons are inlined as SVG by
+# tools/flare2md/build.py.
 [project.markdown_extensions.pymdownx.highlight]
 anchor_linenums = true
 line_spans = "__span"

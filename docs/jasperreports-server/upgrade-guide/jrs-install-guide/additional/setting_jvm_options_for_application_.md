@@ -46,7 +46,7 @@ The following tables present some typical settings of JVM options that affect Ja
 <p>set <code>JAVA_OPTS=%JAVA_OPTS% -XX:+UseG1GC</code></p></td>
 </tr>
 <tr>
-<td>Java 17</td>
+<td>Java 17/ Java 21</td>
 <td>set <code>JAVA_OPTS=%JAVA_OPTS% --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.lang.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.nio.channels.spi=ALL-UNNAMED --add-opens java.base/java.nio.channels=ALL-UNNAMED --add-opens java.base/java.nio=ALL-UNNAMED --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens java.base/java.util.concurrent=ALL-UNNAMED --add-opens java.base/java.util.regex=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/javax.security.auth.login=ALL-UNNAMED --add-opens java.base/javax.security.auth=ALL-UNNAMED --add-opens java.base/jdk.internal.access.foreign=ALL-UNNAMED --add-opens java.base/sun.net.util=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport=ALL-UNNAMED --add-opens java.base/sun.util.calendar=ALL-UNNAMED</code></td>
 </tr>
 <tr>
@@ -58,7 +58,7 @@ The following tables present some typical settings of JVM options that affect Ja
 
 !!! note
 
-    The java opts from the first line "Options for all app servers" should be added, and then an additional line is added either for Java 11 or Java 17.
+    The java opts from the first line "Options for all app servers" should be added, and then an additional line is added for Java 17 and Java 21.
 
     JasperReports Server doesn’t provide a virtual X frame buffer on Linux. If your Linux applications are graphical, set the `‑Djava.awt.headless=true` to prevent Java from trying to connect to an X Server for image processing.
 
@@ -79,11 +79,7 @@ The following tables present some typical settings of JVM options that affect Ja
 <p>export <code>JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC"</code></p></td>
 </tr>
 <tr>
-<td>Java 11</td>
-<td>export <code>JAVA_OPTS="$JAVA_OPTS -Djava.locale.providers=COMPAT"</code></td>
-</tr>
-<tr>
-<td>Java 17</td>
+<td>Java 17/ Java 21</td>
 <td>export <code>JAVA_OPTS="$JAVA_OPTS --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.lang.ref=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.nio.channels.spi=ALL-UNNAMED --add-opens java.base/java.nio.channels=ALL-UNNAMED --add-opens java.base/java.nio=ALL-UNNAMED --add-opens java.base/java.security=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens java.base/java.util.concurrent=ALL-UNNAMED --add-opens java.base/java.util.regex=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/javax.security.auth.login=ALL-UNNAMED --add-opens java.base/javax.security.auth=ALL-UNNAMED --add-opens java.base/jdk.internal.access.foreign=ALL-UNNAMED --add-opens java.base/sun.net.util=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.rmi/sun.rmi.transport=ALL-UNNAMED --add-opens java.base/sun.util.calendar=ALL-UNNAMED</code></td>
 </tr>
 <tr>
@@ -95,7 +91,7 @@ The following tables present some typical settings of JVM options that affect Ja
 
 !!! note
 
-    The java opts from the first line "Options for all app servers" should be added, and then an additional line is added either for Java 11 or Java 17.
+    The java opts from the first line "Options for all app servers" should be added, and then an additional line is added for Java 17 and Java 21.
 
 You can set JVM options multiple ways. Sections Changing JVM Options for Tomcat as a Windows Service and Setting JVM Options for Application Servers present step-by-step instructions for performing this task. Alternatively, you can add your `JAVA_OPTS` settings to any of the following files.
 

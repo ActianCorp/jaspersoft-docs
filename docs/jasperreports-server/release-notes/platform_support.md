@@ -11,65 +11,35 @@ This section describes the changes in platform support in the Jaspersoft BI Suit
 
 For JasperReports Server version 10.1, the following technologies are supported:
 
-- Microsoft SQL Server 8.4
+- Oracle 23ai
 
-- Tomcat 10.1.24 or higher
+- Oracle 26ai
 
-- Tomcat 11.0.11 or higher
+- JDK/Jakarta 21
 
-- Jboss EAP 8
-
-- OpenJDK 17
-
-- Oracle JDK 17
-
-- Wildfly 36.0.1
-
-- PostgreSQL 16, 17
-
-- Debian 11
-
-For JasperReports® Library version 10.1, JasperReports Library 7 is supported.
+For JasperReports® Library version 10.1, JasperReports Library 7.0.8 is supported.
 
 For Jaspersoft® Studio version 10.1, the following technologies are supported:
 
-- Eclipse 4.36 (2025-06) platform
+- Eclipse 4.38 (2025-12) platform
 
-- JasperReports Library 7.0.5
+- JasperReports Library Pro 10.1.0
 
-- Java 21 (minimum supported environment for shipped plug-ins)
-
-- CVC component (works only with NodeJS)
+- Eclipse Temurin JDK 21.0.10.7
 
 ## Removed
 
 Jaspersoft is in the process of ending support for these technologies:
 
-- As of version 10.1 release, JasperReports® Server no longer supports:
-
-  - Viewing of OLAP views
-
-  - PostgreSQL 12 and 13
-
-  - MySQL 5.7
-
-  - IBM WebSphere (WAS) 9.0.5.5
-
-  - Oracle WebLogic Server 14.1.1.0
-
-  - CentOS 6.x and 7.x
+- As of version 10.1 release, JasperReports® Server no longer supports MySQL 8.0.
 
 - As of version 10.1, Jaspersoft® Studio no longer supports:
-  - Bundled Subclipse plug-in for Subversion (SVN) versioning system
+  - OLAP/Mondrian data adapters
 
-  - JasperReports® IO
+  - TIBCO Maps plug-in
 
-  - Derby related jars
+  - TIBCO data virtualization driver
 
-  - Old HTML and Sort component
+  - Removed Jakarta SOAP API library 3.0.2
 
-  - Snowflake and ElasticSearch PRO connectors
-
-  - Rhino and Closure compiler
-
-For information about the changes in platform support in version 9.0.0, see [JasperReports® Server Release Notes v9.0.0](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-release-notes/v900/relnotesbody-_-overview/).
+To view the Release Notes of version 10.0.0, see [JasperReports® Server Release Notes v10.0.0](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-release-notes/v1000/relnotesbody-_-overview/).

@@ -50,4 +50,4 @@ To log in to the server
 
 2.  Click **Login**.
 
-    If you entered a valid user ID and password, the server displays the **Getting Started** page, as shown in [“Getting Started Page”](intro_getting_started.md).
+    If you entered a valid user ID and password, the server displays the **Getting Started** page, as shown in [Getting Started Page](intro_getting_started.md).

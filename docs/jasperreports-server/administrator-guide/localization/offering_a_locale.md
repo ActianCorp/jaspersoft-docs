@@ -12,7 +12,7 @@ The tasks in this section require you to edit these files:
 | File Name | Location | Purpose of Edits |
 |----|----|----|
 | `applicationContext-security.xml` | `WEB-INF` | Specifying additional locales |
-| `jasperserver-servlet.xml` | `WEB-INF` | Specifying additional time zones |
+| `applicationContext.xml` | `WEB-INF` | Specifying additional time zones |
 
 ## Specifying Additional Locales
 

@@ -1,12 +1,8 @@
 ---
 title: Changes in Functionality
-description: The following functionality and features have been changed in this release of JasperReports® Web Studio.
+description: No functionality changes have been made in this release of JasperReports® Web Studio.
 ---
 
 # Changes in Functionality
 
-The following functionality and features have been changed in this release of JasperReports® Web Studio.
-
-- JIRA summary
-
-- JIRA summary
+No functionality changes have been made in this release of JasperReports® Web Studio.

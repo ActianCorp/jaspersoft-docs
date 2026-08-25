@@ -80,7 +80,7 @@ JasperReports Server is a component of commercial offerings. It integrates the s
 <tr>
 <td><p>Overlay Upgrade zip</p></td>
 <td><p>Available only with the Commercial version of JasperReports Server.</p>
-<p>Supports upgrade to 10.0.0 from version 9.0 or later.</p>
+<p>Supports upgrade to 10.1.0 from version 10.0.0 or later.</p>
 <p>Supports only the Apache Tomcat application server.</p>
 <p>Supports all certified repository databases.</p>
 <p>Supports upgrade and rollback of upgrade changes.</p>
@@ -92,7 +92,7 @@ _overlay.zip</td>
 </tr>
 <tr>
 <td><p>WAR File Distribution Zip</p></td>
-<td><p>Supports upgrade from version 8.0 or later.</p>
+<td><p>Supports upgrade from version 9.0 or later.</p>
 <p>Supports all certified application servers.</p>
 <p>Supports all certified repository databases.</p>
 <p>Supports Windows, Linux, Mac, and other platforms.</p>
@@ -112,17 +112,20 @@ Your current version determines your upgrade path:
 | ![jrs upgrade path](assets/images/jrs-upgrade-path.png) |
 | *Figure 1: Paths for Upgrading to Version 10.1*         |
 
-If you are upgrading from 9.0, use the instructions in [Upgrading from 9.0 to 10.1](upgrade-with-sql-script.md). If you are starting from 8.0.x to 8.2, use the instructions in [Upgrading from 8.0 - 8.0.x to 10.1](upgrading.md).
+If you are upgrading from 10.0, use the instructions in [Upgrading from 10.0 to 10.1](upgrade-10.0-to-10.1.md).
+
+If you are starting from 9.0, use the instructions in [Upgrading from 9.0 to 10.1](upgrade-with-sql-script.md).
 
 If you are using the JasperReports Server Commercial edition installed with the WAR file and the Apache Tomcat application server, you can use the overlay upgrade, described in [Overlay Upgrade](upgrade-overlay.md).
 
-For upgrading other versions, see the table below. Versions prior to 6 are no longer supported and must be upgraded to version 6.3 first. You may also need to updgrade in several steps through an intermediate version. In the following table:
+You may also need to upgrade in several steps through an intermediate version. In the following table:
 
-- samedb = Follow the steps equivalent to [Upgrading from 9.0 to 10.1](upgrade-with-sql-script.md).
-- newdb = Follow the steps equivalent to [Upgrading from 8.0 - 8.0.x to 10.1](upgrading.md).
+- samedb = Follow the steps equivalent to [Upgrading from 10.0 to 10.1](upgrade-10.0-to-10.1.md).
+- newdb = Follow the steps equivalent to [](upgrading.md)[Upgrading from 9.0 to 10.1](upgrade-with-sql-script.md).
 
-<table style="width:100%;">
+<table>
 <colgroup>
+<col style="width: 6%" />
 <col style="width: 6%" />
 <col style="width: 6%" />
 <col style="width: 6%" />
@@ -157,155 +160,10 @@ From:</th>
 <th><span>8.2.0</span></th>
 <th><span>9.0</span></th>
 <th><code>10.0</code></th>
+<th><code>10.1.0</code></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>7.1.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>samedb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td><p><span>newdb</span><br />
-</p></td>
-<td><span>newdb</span></td>
-</tr>
-<tr>
-<td>7.2.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>samedb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td><p><span>newdb</span><br />
-</p></td>
-<td><span>newdb</span></td>
-</tr>
-<tr>
-<td>7.5.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>samedb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td><p><span>newdb</span><br />
-</p></td>
-<td><span>newdb</span></td>
-</tr>
-<tr>
-<td>7.8.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>newdb<br />
-samedb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td>newdb</td>
-<td><p><span>newdb</span></p></td>
-<td><span>newdb</span></td>
-</tr>
-<tr>
-<td>7.9.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>newdb<br />
-samedb</td>
-<td>newdb<br />
-</td>
-<td>newdb<br />
-</td>
-<td><p><span>newdb</span></p></td>
-<td><span>newdb</span></td>
-</tr>
-<tr>
-<td>8.0.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td>newdb<br />
-samedb</td>
-<td>newdb</td>
-<td><span>newdb</span></td>
-<td><span>newdb</span></td>
-</tr>
-<tr>
-<td>8.1.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td><p><span>newdb</span><br />
-<span>samedb</span></p></td>
-<td>newdb</td>
-<td><span>newdb</span></td>
-</tr>
-<tr>
-<td>8.2.x</td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td> </td>
-<td><p><span>newdb</span><br />
-<span>samedb</span></p></td>
-<td><span>newdb</span></td>
-</tr>
 <tr>
 <td>9.0.0</td>
 <td> </td>
@@ -323,9 +181,33 @@ samedb</td>
 <td> </td>
 <td><p><span>newdb</span><br />
 <span>samedb</span></p></td>
+<td><span>newdb</span></td>
+</tr>
+<tr>
+<td>10.0.0</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td><p><span>newdb</span></p>
+<span>samedb</span></td>
 </tr>
 </tbody>
 </table>
+
+!!! note
+
+    For details on upgrading from version 8.x or older, see the respective Upgrade Guides for those versions.
 
 ### About Bundled Apache Ant
 

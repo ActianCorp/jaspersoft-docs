@@ -1,21 +1,21 @@
 ---
 title: Deploying JasperReports Server
-description: This section describes how to connect a JasperReports Server instance with Jaspersoft IO At-Scale so that the server uses the JRIO At-Scale cluster as a scalable reporting engine. Because JRIO...
+description: This section describes how to connect a JasperReports Server instance with JasperReports IO At-Scale so that the server uses the JRIO At-Scale cluster as a scalable reporting engine. Because JRIO...
 ---
 
 # Deploying JasperReports Server
 
-This section describes how to connect a JasperReports Server instance with Jaspersoft IO At-Scale so that the server uses the JRIO At-Scale cluster as a scalable reporting engine. Because JRIO creates its own database connections using JDBC, this works only for reports that have a JDBC data source, not JNDI, or other data sources.
+This section describes how to connect a JasperReports Server instance with JasperReports IO At-Scale so that the server uses the JRIO At-Scale cluster as a scalable reporting engine. Because JRIO creates its own database connections using JDBC, this works only for reports that have a JDBC data source, not JNDI, or other data sources.
 
 1.  If you have a private setup for AWS EKS, then your JasperReports Server has to be placed into the same VPC as AWS EKS. Jaspersoft also recommends doing so in public cases. Assuming your VPC was created by CloudFormation scripts as described in [Creating a Virtual Private Cloud](setting_up_aws_eks.md), create an EC2 instance in AWS EKS VPC for your JasperReports Server. Be sure to use a static IP address assigned to the JasperReports Server instance because that address must be specified in the module configuration before creating Docker images. For JasperReports Server in a clustered setup, configure a static IP address for the load balancer.
 2.  Make sure that your JRIO At-Scale cluster does not include the jrio-client module and is configured to use the JasperReports Server instance, as described in [Connecting to a JasperReports Server Repository](../dockerimages/configuration.md).
 3.  After the server has been deployed, edit the following file:
 
-|          |                                          |
-|----------|------------------------------------------|
-| File     | /tomcat9/webapps/js.config.properties    |
-| Property | jrio.url                                 |
-| Example  | jrio.url=http://192.168.189.2:30030/jrio |
+|          |                                               |
+|----------|-----------------------------------------------|
+| File     | jasperserver-pro/WEB-INF/js.config.properties |
+| Property | jrio.url                                      |
+| Example  | jrio.url=http://192.168.189.2:30030/jrio      |
 
 1.  If your JRIO At-Scale cluster handles high throughput, the server's event logging of every repository access may slow down your pods and become a bottleneck. In this case, disable event logging as follows:
 

@@ -128,6 +128,7 @@ The body of the response contains an object defining the structure and optionall
         <visible>true</visible>
     </inputControl>
     ...
+    <caseSensitive>true</caseSensitive>
 </inputControls>
 {
     "inputControl": [
@@ -177,7 +178,8 @@ The body of the response contains an object defining the structure and optionall
             }
         },
         ...
-    ]
+    ],
+    "caseSensitive": true
 }
 ```
 
@@ -223,6 +225,7 @@ The following example shows two more JSON objects for single value number and da
         "visibilityExpression":"Birthdate==DATERANGE('DAY')",
             "masterDependencies": [],
             "slaveDependencies": [],
+        "caseSensitive": false,
             "validationRules": [
                 {
                     "dateTimeFormatValidationRule": {
@@ -242,9 +245,12 @@ The following example shows two more JSON objects for single value number and da
                 "strictMin": false
             }
         }
-    ]
+    ],
+    "caseSensitive": true
 }
 ```
+
+The `inputControl.handler.values.caseSensitive` property defines the `case-sensitive` behavior for input controls. This is defined in the `.../WEB-INF/js.config.properties` configuration file, with a default value True.
 
 ## Input Control Structure
 

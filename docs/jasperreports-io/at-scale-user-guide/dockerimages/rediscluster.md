@@ -1,17 +1,17 @@
 ---
 title: Using a Redis Cluster
-description: "By default, Jaspersoft IO At-Scale uses the redis module to deploy a single redis pod. Redis is a queue where JRIO stores report requests and reports output. In applications with high demand, the..."
+description: "By default, JasperReports IO At-Scale uses the redis module to deploy a single redis pod. Redis is a data store used by JRIO to queue report requests and to hold report output. In applications with..."
 ---
 
 # Using a Redis Cluster
 
-By default, Jaspersoft IO At-Scale uses the `redis` module to deploy a single `redis` pod. Redis is a queue where JRIO stores report requests and reports output. In applications with high demand, the Redis queue can become a bottleneck for requests. Therefore, an option for high-performance needs is to deploy Redis as a separate cluster and configure JRIO to use it instead of its own `redis` pod.
+By default, JasperReports IO At-Scale uses the `redis` module to deploy a single `redis` pod. Redis is a data store used by JRIO to queue report requests and to hold report output. In applications with high demand, Redis can become a bottleneck for requests. Therefore, an option for high-performance needs is to deploy Redis as a separate cluster and configure JRIO to use it instead of its own `redis` pod.
 
-To implement a Redis cluster, first you need to deploy and configure the cluster itself. Then you need to configure the Jaspersoft IO At-Scale modules before building the Docker images. Finally, you need to configure the JRIO Helm Chart before deploying the JRIO cluster.
+To implement a Redis cluster, first you need to deploy and configure the cluster itself. Then you need to configure the JasperReports IO At-Scale modules before building the Docker images. Finally, you need to configure the JRIO Helm Chart before deploying the JRIO cluster.
 
 ## Deploying a Redis Cluster
 
-The Redis cluster is separate from the Jaspersoft IO At-Scale product: you must obtain and install Redis from a third-party source. Jaspersoft has tested Jaspersoft IO At-Scale with the Redis cluster and Helm chart available from Bitnami, specifically the Redis 6.0.7-debian-10-r0 image, and the examples in this section are based on their product:
+The Redis cluster is separate from the JasperReports IO At-Scale product: you must obtain and install Redis from a third-party source. Jaspersoft has tested JasperReports IO At-Scale with the Redis cluster and Helm chart available from Bitnami, specifically the Redis 6.0.7-debian-10-r0 image, and the examples in this section are based on their product:
 
 <https://github.com/bitnami/charts/tree/master/bitnami/redis-cluster><br>
 <https://bitnami.com/stack/redis-cluster/helm>
@@ -27,7 +27,7 @@ Edit the values-production.yaml file as follows:
 | `cluster.nodes` | The number of nodes in the Redis cluster. Jaspersoft has successfully tested with the default of 6 nodes. |
 | `cluster.replicas` | The number of Redis replicas, tested with the default of 1. |
 | `usePassword` | Set to `true`. |
-| `password` | Set your password for accessing Redis from Jaspersoft IO At-Scale, for example `mypassword`. |
+| `password` | Set your password for accessing Redis from JasperReports IO At-Scale, for example `mypassword`. |
 
 Deploy the Bitnami Redis cluster with the additional values-production.yaml file using the following command:
 
@@ -67,7 +67,7 @@ persistentvolumeclaim "redis-data-redis-redis-cluster-5" deleted
 
 ## Configuring JRIO Modules for a Redis Cluster
 
-Before building the Docker images, you have to configure the Jaspersoft IO At-Scale modules to use your Redis cluster instead of the built-in Redis module. Edit the following files:
+Before building the Docker images, you have to configure the JasperReports IO At-Scale modules to use your Redis cluster instead of the built-in Redis module. Edit the following files:
 
 jrio-export-docker/jrio/redis-config.yaml<br>
 jrio-manager-docker/jrio/redis-config.yaml<br>
@@ -90,19 +90,19 @@ Now you can build the JRIO Docker images and put them into the Docker registry, 
 
 ## Configuring JRIO Helm Chart for a Redis Cluster
 
-Before deploying your Jaspersoft IO At-Scale cluster, you must configure its Helm chart to use the Redis cluster. Make sure the jrio-at-scale-3.0.0/k8s/helm/values.yaml file uses the new images built after updating with the Redis cluster service.
+Before deploying your JasperReports IO At-Scale cluster, you must configure its Helm chart to use the Redis cluster. Make sure the jasperreports-io-at-scale-10.1.0/helm/values.yaml file uses the new images built after updating with the Redis cluster service.
 
 Delete the following files that are no longer needed:
 
-jrio-at-scale-3.0.0/k8s/helm/templates/redis-deployment.yaml<br>
-jrio-at-scale-3.0.0/k8s/helm/templates/redis-service.yaml
+jasperreports-io-at-scale-10.1.0/helm/templates/redis-deployment.yaml<br>
+jasperreports-io-at-scale-10.1.0/helm/templates/redis-service.yaml
 
 Then edit the following files:
 
-jrio-at-scale-3.0.0/k8s/helm/templates/jrio-manager-deployment.yaml<br>
-jrio-at-scale-3.0.0/k8s/helm/templates/jrio-reporting-deployment.yaml<br>
-jrio-at-scale-3.0.0/k8s/helm/templates/jrio-export-deployment.yaml<br>
-jrio-at-scale-3.0.0/k8s/helm/templates/jrio-rest-deployment.yaml
+jasperreports-io-at-scale-10.1.0/helm/templates/jrio-manager-deployment.yaml<br>
+jasperreports-io-at-scale-10.1.0/helm/templates/jrio-reporting-deployment.yaml<br>
+jasperreports-io-at-scale-10.1.0/helm/templates/jrio-export-deployment.yaml<br>
+jasperreports-io-at-scale-10.1.0/helm/templates/jrio-rest-deployment.yaml
 
 In each of them, replace the Redis connection and initialization script with the following:
 

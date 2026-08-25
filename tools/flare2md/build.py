@@ -213,12 +213,26 @@ def prepare_guide(guide, warn):
     """
     project = REPO / guide["project"]
     content_root = project / "Content"
-    toc_path = project / "Project" / "TOCs" / guide["toc"]
 
     if guide.get("target"):
         target = f2.load_target(project / "Project" / "Targets" / guide["target"], warn)
     else:
         target = f2.synthetic_target(guide["guide_condition"], ALL_GUIDE_CONDITIONS, warn)
+
+    # The target's MasterToc wins over the one named in guides.py. A release can
+    # introduce a versioned TOC and repoint the target at it — 10.1 does exactly
+    # that for the Upgrade Guide — and following the target picks the new
+    # structure up without an edit here.
+    toc_path = project / "Project" / "TOCs" / guide["toc"]
+    if target.toc:
+        from_target = project / target.toc.lstrip("/")
+        if from_target.is_file():
+            if from_target != toc_path:
+                warn("using the target's TOC: %s (guides.py names %s)"
+                     % (target.toc.lstrip("/"), guide["toc"]))
+            toc_path = from_target
+        else:
+            warn("target names a TOC that is not on disk: %s" % target.toc)
 
     # Publish one version only: pin every version variable to it, whatever the
     # project or target happens to carry.

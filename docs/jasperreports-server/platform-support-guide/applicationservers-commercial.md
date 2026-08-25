@@ -49,10 +49,10 @@ title: Application Servers
 
 | Application Server | Version |
 |--------------------|---------|
-| Jetty              | 12.0.27 |
+| Jetty              | 12.0.35 |
 
 ## JasperReports® Server Web Studio Pro
 
 | Application Server | Version |
 |--------------------|---------|
-| Jetty              | 12.0.29 |
+| Jetty              | 12.1.10 |

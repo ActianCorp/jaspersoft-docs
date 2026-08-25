@@ -23,7 +23,7 @@ The Schedules tab in the Admin Console page is accessible to the system admins (
 
 All scheduled jobs that the user has defined appear in the Schedules tab of the **Manage\>Admin Console** page. In the **Schedules** page, you can search, sort, add filter, refresh, and download a scheduled report. For more information on these operations, see the List of Scheduled Jobs section in the JasperReports Server User Guide.
 
-![js admin console](../assets/images/js-admin-console.png)
+![AdminConsole scheduleAlert](../assets/images/AdminConsole_scheduleAlert.png)
 
 *Figure 1: Schedules Page*
 
@@ -36,12 +36,14 @@ The **Schedules** page shows the following:
 | **Job ID** | The unique identifier of a job. |
 | **Job name/Description** | Name of the scheduled job and description. |
 | **Resource/URL** | Repository URL of the job. |
-| **Status** | The status of the job in **NORMAL**, **EXECUTING**, **COMPLETE**, **PAUSED**, **ERROR**, or **UNKNOWN** state. |
+| **Current Status** | The status of the job in **NORMAL**, **EXECUTING**, **COMPLETE**, **PAUSED**, **ERROR**, or **UNKNOWN** state. |
+| **Succeeded Jobs** | The jobs that are completed successfully without any errors. |
+| **Failed Jobs** | The jobs that are triggered but encountered an error and did not complete successfully. |
 | **User** | The owner who created the job. |
 | **Next run** | Filters by date and time to view the count and list of schedules that will run next at the filtered time. |
 | **Last run** | Filters by date and time to view the count and list of schedules that was run last at the filtered time. |
 | **Pause/Activate** | Enable or disable the job. |
-| **Actions** | Edit or delete the job. |
+| **Actions** | Edit, delete, restart the job and show execution logs. |
 
 ### Editing a Schedule
 
@@ -86,6 +88,22 @@ To delete a scheduled job:
 3.  Click **Delete** to delete the scheduled job else click **Cancel** to cancel the delete action.
 
 4.  Click **Close** to close the **Scheduled** job panel.
+
+### Showing Execution Logs
+
+The execution logs shows the following:
+
+| Column Name | Description |
+|----|----|
+| **Start Time** | The exact time when the scheduled job started running. |
+| **Status** | Indicates whether the execution was successful or failed. |
+| **End Time** | The exact time when the job finished running (whether successfully or with an error). |
+| **Execution Time** | The total duration the job took to complete. |
+| **Error** | Displays the detailed failure diagnostics for failed jobs |
+
+![AdminConsole show Execution](../assets/images/AdminConsole_show_Execution.png)
+
+Execution Logs Page
 
 ## Alerts Tab
 

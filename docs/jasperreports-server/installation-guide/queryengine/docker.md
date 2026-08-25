@@ -61,7 +61,7 @@ Before building the Docker images, edit the .env file to specify the following p
 </tr>
 <tr>
 <td><p><code>JDK_BASE_IMAGE</code></p></td>
-<td><p>Docker image certified for the version of JasperReports Server being deployed, either <code>openjdk:11-jdk</code> for Debian or <code>amazoncorretto:11</code> for Amazon Linux 2.</p></td>
+<td><p>Docker image certified for the version of JasperReports Server being deployed, either <code>eclipse-temurin:17-jdk-noble </code>for Ubuntu or <code>amazoncorretto:17-al2023-jdk</code> for Amazon Linux 2023</p></td>
 </tr>
 <tr>
 <td><p><code>ks</code></p></td>

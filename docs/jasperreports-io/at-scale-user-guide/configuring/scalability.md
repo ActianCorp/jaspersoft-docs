@@ -17,7 +17,7 @@ The `cpuRequest` and `memoryRequest` values are the minimum amount of resources 
 
 Helm also has scalability settings in the following files, but Jaspersoft recommends using the settings in values.yaml:
 
-jrio-at-scale-3.0.0/k8s/helm/templates/jrio-\<module\>-deployment.yaml
+jasperreports-io-at-scale-10.1.0/helm/templates/jrio-\<module\>-deployment.yaml
 
 For example, the contents of the jrio-reporting-deployment.yaml file are as follows:
 

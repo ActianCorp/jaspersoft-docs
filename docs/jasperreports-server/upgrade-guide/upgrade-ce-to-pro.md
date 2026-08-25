@@ -179,7 +179,7 @@ This example uses PostgreSQL (the same general logic applies to other databases)
 
 4.  Edit `default_master.properties` for your database and application server. Sample property values are:
     - `appServerType=tomcat (or wildfly, and so on)`
-    - `appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)`
+    - `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
     - `dbUsername=postgres`
     - `dbPassword=postgres`
     - `dbHost=localhost`
@@ -202,7 +202,7 @@ This example uses MySQL (the same general logic applies to other databases).
 
 4.  Edit `default_master.properties` for your database and application server. Sample property values are:
     - `appServerType=tomcat (or wildfly, and so on)`
-    - `appServerDir=c:\\Apache Software Foundation\\Tomcat 10.1.x (for example)`
+    - `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
     - `dbUsername=root`
     - `dbPassword=password`
     - `dbHost=localhost`
@@ -370,7 +370,7 @@ URL: `http://localhost:8080/jasperserver-pro`
 
 Your JasperReports Server instance has now been upgraded from Community Project (CP) to commercial. If startup or login problems occur, refer to the Troubleshooting appendix of the JasperReports Server Installation Guide.
 
-## Re-Configuring XML/A Connections (Optional)
+## Re-configuring XML/A Connections (Optional)
 
 XML/A connection definitions contain a username and password for connecting the Web Services to the server. A commercial edition of JasperReports® Server supports multi-tenancy, which allows multiple organizations on a single instance. The default organization is `organization_1`. Each user (except a `superuser`) must belong to a specific organization. After upgrading to the commercial JasperReports Server, users belong to the default organization.
 

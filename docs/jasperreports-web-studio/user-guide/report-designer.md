@@ -9,6 +9,8 @@ JasperReports Web Studio's main feature is the editor for JRXML report templates
 
 - Visual report designer
 
+- Query designer
+
 - JRXML source editor
 
 - Report preview
@@ -26,6 +28,10 @@ The **Palette** contains all the elements from which the report is built. Drag a
 The **Outline** shows the structure of the layout part of the report. You can view, add, and delete the bands from here. You can also view the order of the elements in a container.
 
 The Designing Area shows the large layout composed of the bands and elements. Drag the elements to arrange them in the desired layout. Keep in mind that this is very close to the report rendered in the HTML format. Reports rendered in PDF or other formats may look a bit different.
+
+When you select any band, an option to maximize the band is displayed. Clicking the **Maximize Band** button triggers the container to expand to its maximum available height.
+
+![maximize band](assets/images/maximize-band.png)
 
 Selecting an element in the **Outline** or Designing Area automatically shows its properties in the **Properties** panel. Elements could have hundreds of properties that are organized in categories. It is possible to filter properties by name by using the search box at the bottom of the view. In the same place, there is an icon to set more filters, to show or not deprecated properties, or all JasperReports custom properties.
 
@@ -65,7 +71,7 @@ Use the context menu from the **Outline** to align and resize the elements in th
 
 - **Align in Container**: Aligns the element within the container.
 
-Whenever you select an element from **Outline**, the context menu actions that you see for the element are also available in the horizontal mini toolbar. The mini toolbar is displayed when you click an element. It provides the option to duplicate, delete, copy, and when you click the ellipses, a list of sub-menu options are shown.
+Whenever you select an element from **Outline**, the context menu actions that you see for the elements are also available in the horizontal mini toolbar. The mini toolbar is displayed when you click an element. It provides the option to duplicate, delete, copy, and when you click the ellipses, a list of sub-menu options are shown.
 
 ![contextMenu](assets/images/contextMenu.png)
 
@@ -77,13 +83,13 @@ This feature enables you to add an image to the report with ease. Drag the **Ima
 
 ![ImagePreview](assets/images/ImagePreview.png)
 
-Click the **Search** icon in **Expression** to select an image. If it a simple image, its displayed in the designer.
+Click the **Search** icon in **Expression** to select an image. If it is a simple image, it is displayed in the designer.
 
 ![ImagePreview1](assets/images/ImagePreview1.png)
 
 ![imagePreview2](assets/images/imagePreview2.png)
 
-Edit a text element or expression inline. Double-click a **Text Field** or **Static Text** element to quickly change the expression and text. Use the **Properties** panel to change element properties, such as **Color** or **Font**.
+Edit a text element or expression inline. Double-click a **Text Field** or **Static Text** element to change the expression and text quickly. Use the **Properties** panel to change element properties, such as **Color** or **Font**.
 
 ![InlineText](assets/images/InlineText.png)
 
@@ -93,10 +99,26 @@ You can also edit expressions inline. Double-click an expression, and in the **E
 
 ![InlineExpression](assets/images/InlineExpression.png)
 
+### Composite
+
+This feature enables you to add a composite element to the report with ease. A **Composite** element is a **Text Field** preconfigured with specific expressions, such as percentages, page numbering (current and total), and dynamic timestamps.
+
+![composite elements 1](assets/images/composite_elements_1.png)
+
+Drag a **Composite** element from the **Palette** to the desired location on the report page.
+
+![composite elements 2](assets/images/composite_elements_2.png)
+
+Click the **Text Field**. The **Expression** is preconfigured.
+
+![composite elements 3](assets/images/composite_elements_3.png)
+
+The page number appears in the correct format on every page during preview.
+
 ### Tables
 
 To create tables in a report, drag the **Table** element from the **Palette** to the desired location on the report page.<br>
-In the Table Wizard, you can see the **Open Dataset Tab** only if there are no subdataset defined in the report. The table element must have a subdataset to work correctly. You have to create a subdataset to have a table in the report, click **Open Datasets Tab** to navigate to the **Dataset** tab. Click **Cancel** to terminate the process.
+In the Table Wizard, you can see the **Open Dataset Tab** only if there are no sub dataset defined in the report. The table element must have a sub dataset to work correctly. You have to create a sub dataset to have a table in the report, click **Open Datasets Tab** to navigate to the **Dataset** tab. Click **Cancel** to cancel the process.
 
 ![TableWizard1](assets/images/TableWizard1.png)
 
@@ -106,61 +128,61 @@ Now you drag and drop **Table** component from **Palette** to summary band. In t
 
 Select the **Connection** from the dropdown, for how the table should connect to the datasource.
 
-Click **Next**, to navigate to the next step, or click Cancel to
+Click **Next**, to navigate to the next step, or click **Cancel** to close the dialog.
 
 ![TableWizard2](assets/images/TableWizard2.png)
 
-In the next tab, select the fields of the dataset that can be used to produce the tables column. Click **\>** to transfer the field(s) from the left side to the right. Click **\<** to move the field(s) from right to left side.
+In the next tab, select the fields of the dataset that can be used to produce the tables column. Click **\>** to transfer one or more fields from the left side to the right. Click **\<** to move one or more fields from right to left side.
 
-To move all the fields from left side to the right, Click **\>\>** or click **\<\<** to move fields from right to left side
+To move all the fields from left side to the right, click **\>\>** or click **\<\<** to move fields from right to left side.
 
 ![TableWizard3](assets/images/TableWizard3.png)
 
 Click **Next**, or click **Previous**, to navigate to the previous screens.
 
-The Table Wizard now displays the sample of the Table. The **Cell Colors**, **Borders** and **Visible Sections** can be adjusted accordingly.
+The Table Wizard now displays the sample of the table. The **Cell Colors**, **Borders** and **Visible Sections** can be adjusted accordingly.
 
 ![TablwWizard4](assets/images/TablwWizard4.png)
 
-Click **Finish**, to generate the Table. Now you can Preview the table.
+Click **Finish**, to generate the Table. Now you can preview the table.
 
-You can also edit the existing table, double-click the table to open the table editor.
+You can also edit the existing table. Double-click the table to open the table editor.
 
 ![Table1](assets/images/Table1.png)
 
-Drag a cell to resize it.
+Drag a cell to **resize** it.
 
 ![Table2](assets/images/Table2.png)
 
-Add and delete columns in the table editor using either context menu or the mini toolbar.
+Add and delete columns in the table editor using either the context menu or the mini toolbar.
 
 ![Table3](assets/images/Table3.png)
 
-Drag the Fields to the table columns to add data to the table.![Table4](assets/images/Table4.png)
+Drag the fields to the table columns to add data to the table.![Table4](assets/images/Table4.png)
 
-Save the report and Preview the data from the Report view.
+Save the report and **preview** the data from the Report view.
 
 ![Table5](assets/images/Table5.png)
 
-To add a column header, drag one of the Fields to the header row. You can also convert the field value to static text.
+To add a column header, drag one of the fields to the header row. You can also convert the field value to static text.
 
 ![Table7](assets/images/Table7.png)
 
-Select elements independently using the Shift key.
+Select elements independently using the **Shift** key.
 
-In this example, the first and second rows are selected. You can view the details in the Outline pane.
+In this example, the first and second rows are selected. You can view the details in the **Outline** pane.
 
 ![Table8](assets/images/Table8.png)
 
-To add a row, go to Outline, right-click Table Header, and from the context menu, click Add Row.
+To add a row, go to **Outline**, right-click **Table Header**, and from the context menu, click **Add Row**.
 
 ![Table9](assets/images/Table9.png)
 
-Select two or more cells to Merge Cells.
+Select two or more cells to **Merge Cells**.
 
 ![Table10](assets/images/Table10.png)
 
-You can Separate Cells too.
+You can **Separate Cells** too.
 
 ![Table11](assets/images/Table11.png)
 
@@ -170,17 +192,17 @@ In **Outline**, when you hover any section of the table, except the **Detail**, 
 
 ![Table12](assets/images/Table12.png)
 
-Similarly, if a section is not available, its is displayed in light gray with a + icon next to it. You can click the icon to add the section.
+Similarly, if a section is not available, it is displayed in light gray with a **+** icon next to it. You can click the icon to add the section.
 
 ![Table13](assets/images/Table13.png)
 
-If the dataset connected to the table contains groups, the names of the groups are displayed as additional sections in the Outline of the table.
+If the dataset connected to the table contains groups, the names of the groups are displayed as additional sections in the **Outline** of the table.
 
 Click ![cross](assets/images/cross.png) to delete the group.
 
 ![Table14](assets/images/Table14.png)
 
-Click + to create the group.
+Click **+** to create the group.
 
 ![Table15](assets/images/Table15.png)
 
@@ -198,21 +220,21 @@ You can resize and adjust the elements to fit the column space.
 
 Preview the data. The data is displayed in two-column spaces.
 
-For example, in the following screenshot, the data populated the next 2 columns once the first two were completely used.
+For example, in the following screenshot, the data populated the next two columns once the first two were used.
 
 ![SupportForColumn1](assets/images/SupportForColumn1.png)
 
 ### Crosstab
 
-This feature enables you to add a crosstab to the report with ease. Drag the Crosstab element from the Palette to the Summary section on the report page.
+This feature enables you to add a crosstab to the report with ease. Drag the **Crosstab** element from the Palette to the **Summary** section on the report page.
 
-- In the **Crosstab Wizard**, select the dataset from the Dataset dropdown.
+- In the **Crosstab Wizard**, select the dataset from the **Dataset** dropdown.
 
   ![CrosstabWizard1](assets/images/CrosstabWizard1.png)
 
-  Click **Next**, to go to the next screen or click **Cancel**, to terminate the operation
+  Click **Next**, to go to the next screen or click **Cancel**, to cancel the operation
 
-- In the next tab, to define at least one column group, select one or more fields and click **\>** to transfer the field(s) from the left side to the right. You can also move the field(s) from the right side to the left.
+- In the next tab, to define at least one-column group, select one or more fields and click **\>** to transfer one or more fields from the left side to the right. You can also move one or more fields from the right side to the left.
 
   To move all the fields from left side to the right, Click **\>\>**.
 
@@ -220,7 +242,7 @@ This feature enables you to add a crosstab to the report with ease. Drag the Cro
 
   ![CrosstabWizard2](assets/images/CrosstabWizard2.png)
 
-- In the next tab, to define at least one row group, select one or more fields and click **\<** to move the field(s) from left to the right side.
+- In the next tab, to define at least one-row group, select one or more fields and click **\<** to move one or more fields from left to the right side.
 
   To move all the fields from right side to the left, click **\<\<**.
 
@@ -240,7 +262,7 @@ This feature enables you to add a crosstab to the report with ease. Drag the Cro
 
     If a field is already selected in the column group, you cannot view the same field in the row group.
 
-- To define at least one measure, select one or more fields and click \> to move the field(s) from the left side to the right. You can also move the field(s) from the right side to the left.
+- To define at least one measure, select one or more fields and click \> to move one or more fields from the left side to the right. You can also move one or more fields from the right side to the left.
 
   Click **Next**.
 
@@ -256,13 +278,37 @@ The Crosstab is created on the **Summary** band of the report.
 
 Now you can **Preview** the report. Scroll up and down the page and navigate to any page you want.
 
+### Calculation Configuration Wizard
+
+When you drag a field into a band other than the **Detail** band, such as a **Header, Footer**, or **Summary**, the system automatically recognizes that an aggregation is likely needed.
+
+The **Calculation Configuration Wizard** appears asking you to choose a calculation type. The calculation types include, **No Calculation Function, Count**, and **Distinct Count**.
+
+![calc conf wizard 1](assets/images/calc-conf-wizard-1.png)
+
+If the field is numeric, you see an expanded list of mathematical calculation options.
+
+![calc conf wizard 2](assets/images/calc-conf-wizard-2.png)
+
+Once you make a selection, the system automatically creates all the necessary variables and expressions required to resolve the calculation, saving you from manual configuration.
+
+![calc conf wizard 3](assets/images/calc-conf-wizard-3.png)
+
 ### Dataset
 
 You can go to the **Dataset** panel to configure the report datasets from the list. Each dataset in the **Properties** panel has **Fields**, **Parameters**, **Variables**, **Groups**, and a list of other properties. Use **Show Query Editor** to show the query editor and all related tools.
 
 ![ShowQueryEditor](assets/images/ShowQueryEditor.png)
 
-The **Metadata** panel helps visualize the structure of most of the JDBC databases or CSV, XLS, XML, and JSON files. The **Parameters** panel is for setting the values for the parameters. In the query editor area, depending on the language, a text editor with syntax highlighting helps edit the query. **Query Preview** is useful to run the query and see what data it returns.
+The **Metadata** panel helps visualize the structure of most of the JDBC databases or CSV, XLS, XML, and JSON files. You can drag nodes from the **Metadata** panel into the query editor area, streamlining the query creation process and reducing manual typing.
+
+To ensure a fast and responsive experience when working with large databases, the **Metadata** panel uses "on-demand" loading. Instead of waiting for the entire schema to load at once, the system retrieves information only when you click to expand a specific folder or table. This prevents connection timeouts and allows you to begin building queries immediately, even with massive data structures.
+
+The **Parameters** panel is for setting the values for the parameters. You can drag-and-drop parameters to reorder them. Use the icon to the left of each parameter name to manage their sort order and ensure correct dependencies.
+
+![parameter reordering](assets/images/parameter-reordering.png)
+
+In the query editor area, depending on the language, a text editor with syntax highlighting helps edit the query. **Query Preview** is useful to run the query and see what data it returns.
 
 ![jrws show query editor](assets/images/jrws_show_query_editor.png)
 
@@ -270,9 +316,29 @@ The **Metadata** panel helps visualize the structure of most of the JDBC databas
 
 To simplify report creation, drag the fields from the **Dataset** panel into the report design. The designer creates a **Text Field** with the corresponding expression automatically.
 
+#### Configuring Text Field Pattern
+
+You can easily format how numeric and date-time data appears in your report using the **Pattern** property.
+
+To configure the pattern:
+
+1.  Select a **Text Field** in your report.
+
+2.  In the **Properties** panel, select **Text Field** and locate the **Pattern** field.
+
+    ![pattern 1](assets/images/pattern-1.png)
+
+3.  Click the ellipsis to open the **Pattern** selection dialog.
+
+4.  Choose from a library of predefined and commonly used formats.
+
+5.  Use the adjustment controls at the bottom of the dialog to fine-tune the pattern to your specific requirements.
+
+    ![pattern 2](assets/images/pattern-2.png)
+
 ### Validation and Refactoring
 
-Dataset objects are used as references by all kinds of elements inside the report. There is a validator of the model. In case there are problems, a red icon appears at the bottom-right corner. Click the icon to see the problems.
+Dataset objects are used as references by all kinds of elements inside the report. There is a validator of the model. In case there are problems, a red icon appears at the lower-right corner. Click the icon to see the problems.
 
 In case dataset, fields, parameters, and variables are either renamed or deleted, the designer tries to refactor expressions or other references in the model.
 
@@ -293,6 +359,133 @@ The **Expression** editor is composed from two panes. The left-hand side pane li
 ![jrws expression editor](assets/images/jrws-expression-editor.png)
 
 You can replace a selected text with an expression. To do this, edit the expression using the **Expression** editor, and select the text in the expression text area. On double-clicking the field, the selected text is replaced with the expression of the field. You can drag the elements from the left panel to the text area.
+
+## Query Designer
+
+The Query Designer provides a visual interface for creating and modifying queries for datasets. It supports both manual query editing and visual query construction using drag-and-drop functionality.
+
+![Querydesigner homepage](assets/images/Querydesigner_homepage.png)
+
+#### Accessing the Query Designer
+
+To access the Query Designer:
+
+1.  Log into JasperReports Web Studio.
+
+2.  Create a report or open an existing report.
+
+3.  Navigate to the **Dataset** section.
+
+4.  Configure or select a valid data adapter.
+
+5.  In the **Dataset** panel, enable the **Show Query Editor** toggle.
+
+    ![QueryD showEditor](assets/images/QueryD_showEditor.png)
+
+#### Query Editor Views
+
+The Query Designer provides the following two views:
+
+- **Text view:** Enables direct editing of SQL queries with syntax highlighting.
+
+- **Outline view**: Displays query components such as **SELECT**, **FROM**, **WHERE**, **GROUP BY**, and **ORDER BY** in a structured format.
+
+The changes made in any one view are automatically updated in the other view.
+
+#### Metadata Support
+
+The **Metadata** panel displays the structure of the configured data source.
+
+To load available tables and columns:
+
+1.  Click **Get Metadata**.
+
+2.  Expand the nodes to view the fields.
+
+    ![QueryD getMetadata](assets/images/QueryD_getMetadata.png)
+
+3.  Drag tables and columns directly into the query editor.
+
+If the configured data adapter is not valid, an error message is shown when you attempt to load metadata.
+
+#### Creating Queries
+
+You can create queries either by using drag-and-drop operations or by manually editing SQL.
+
+- Drag columns into the **SELECT** clause.
+
+  ![QueryD creating query](assets/images/QueryD_creating%20query.png)
+
+- Drag tables into the **FROM** clause.
+
+- Add sorting fields to **ORDER BY**.
+
+- Drag fields from the **Metadata** panel.
+
+- Drag parameters from the **Parameters** panel.
+
+The query structure is updated automatically.
+
+#### Working with Conditions
+
+To add conditions:
+
+1.  Right-click the **WHERE** clause.
+2.  Click **Add Expression**.
+3.  In the **Where Dialog**, define the specific field, operator, and associated value.
+4.  Click **Finish**.
+
+Conditions support logical operators, such as **AND** and **OR**. The same is applicable for supported clauses, such as HAVING.
+
+![QueryD where clause](assets/images/QueryD_where%20clause.png)
+
+#### Expressions and Subqueries
+
+The Expression editor allows you to add custom expressions to the **SELECT**, **FROM**, and **WHERE** clauses. To add custom expressions:
+
+- Drag fields into expressions and combine fields, constants, and operators.
+
+- Add subqueries by configuring nested queries using the **Subquery** option in the editor.
+
+![subquery queryD](assets/images/subquery_queryD.png)
+
+The changes automatically are reflected in both the **Text** and **Outline** views.
+
+#### Query Validation and Preview
+
+Click **Preview Data** to run the query and view the results.
+
+The system displays validation messages for the following errors:
+
+- Empty queries
+
+- Invalid SQL syntax
+
+- Invalid columns or expressions
+
+![Query validationerror](assets/images/Query_validationerror.png)
+
+If a validation error occurs, the query remains intact while the error message is displayed.
+
+#### Reordering Query Elements
+
+You can reorder query elements using drag-and-drop operations.
+
+The following elements can be reordered:
+
+- Fields in **SELECT** clauses.
+
+- Conditions in **WHERE** clauses.
+
+- Fields in **ORDER BY** and **GROUP BY** clauses.
+
+The changes are automatically reflected in the **Text View** and applied during execution.
+
+#### Saving Queries
+
+Queries are retained and saved automatically when you close the editor. Previously configured queries are restored on reopening the report.
+
+Additionally, switching between **Text View** and **Outline View** does not result in data loss.
 
 ## JRXML Source Editor
 

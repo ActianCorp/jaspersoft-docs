@@ -34,10 +34,6 @@ Edit the WebLogic startup script for your platform to include the settings descr
 <code>-Xss2m</code></p></td>
 </tr>
 <tr>
-<td>Java 11</td>
-<td><code>set JAVA_OPTS=%JAVA_OPTS% -Djava.locale.providers=COMPAT</code></td>
-</tr>
-<tr>
 <td><p>For Oracle (optional)</p></td>
 <td><p><code>set JAVA_OPTIONS=%JAVA_OPTIONS% -Doracle.jdbc.defaultNChar=true</code></p></td>
 </tr>
@@ -73,10 +69,6 @@ Edit the WebLogic startup script for your platform to include the settings descr
 <code>-Xms2048m</code><br />
 <code>-Xmx4096m</code><br />
 <code>-Xss2m"</code></p></td>
-</tr>
-<tr>
-<td>Java 11</td>
-<td><code>export JAVA_OPTS="$JAVA_OPTS -Djava.locale.providers=COMPAT"</code></td>
 </tr>
 <tr>
 <td><p>For Oracle (optional)</p></td>

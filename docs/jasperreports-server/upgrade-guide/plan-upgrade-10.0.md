@@ -1,13 +1,13 @@
 ---
-title: Changes in 10.1 That May Affect Your Upgrade
-description: "The migration to JasperReports Server 10.1 and the Jakarta upgrade can bring challenges, particularly with the behavior of resources. You may experience instances where, following the upgrade, the..."
+title: Changes in 10.0 That May Affect Your Upgrade
+description: "The migration to JasperReports Server 10.0.0 and the Jakarta upgrade can bring challenges, particularly with the behavior of resources. You may experience instances where, following the upgrade, the..."
 ---
 
-# Changes in 10.1 That May Affect Your Upgrade
+# Changes in 10.0 That May Affect Your Upgrade
 
 ## Jakarta Upgrade
 
-The migration to JasperReports Server 10.1 and the Jakarta upgrade can bring challenges, particularly with the behavior of resources. You may experience instances where, following the upgrade, the resources either stop functioning or display altered behaviors. This discrepancy is often caused by the variance in Apache Tomcat versions. Jakarta runs on Apache Tomcat 10.1.x, embracing the latest advancements in the Jakarta EE 10 specifications. This transition also involves updating the codebase to align with the new Jakarta namespace.
+The migration to JasperReports Server 10.0.0 and the Jakarta upgrade can bring challenges, particularly with the behavior of resources. You may experience instances where, following the upgrade, the resources either stop functioning or display altered behaviors. This discrepancy is often caused by the variance in Apache Tomcat versions. Jakarta runs on Apache Tomcat 10.1.x, embracing the latest advancements in the Jakarta EE 10 specifications. This transition also involves updating the codebase to align with the new Jakarta namespace.
 
 ## Hibernate Upgrade
 
@@ -15,7 +15,7 @@ The application is upgraded to utilize Hibernate version 6. This significant cha
 
 ## New License
 
-Upgrading to JasperReports Server 10.1 includes a new in-house license validator. The license file itself is now named `jaspersoft.jrs.license`, while the application's functionality remains the same regardless of the license. Correct permissions must be set on this new file.
+Upgrading to JasperReports Server 10.0.0 includes a new in-house license validator. The license file itself is now named `jaspersoft.jrs.license`, while the application's functionality remains the same regardless of the license. Correct permissions must be set on this new file.
 
 ## New Layout Band
 
@@ -43,15 +43,15 @@ Custom Input Controls for JasperReports Server allow you to create sophisticated
 
 ## Important Notes about Compact and Split installations
 
-- Users are able to upgrade from 9.0 Compact to 10.1 Compact using `samedb` and `newdb`.
-- Users are able to upgrade from 9.0 Split to 10.1 Split using using `samedb` and `newdb`.
+- Users are able to upgrade from 9.0 Compact to 10.0.0 Compact using `samedb` and `newdb`.
+- Users are able to upgrade from 9.0 Split to 10.0.0 Split using using `samedb` and `newdb`.
 - Users will not be able to upgrade:
-  - From 9.0 Compact to 10.1 Split.
-  - From 9.0 Split to 10.1 Compact.
+  - From 9.0 Compact to 10.0.0 Split.
+  - From 9.0 Split to 10.0.0 Compact.
 
-If users need 10.1 Split installations but they are on 9.0 Compact, the required upgrade path is to:
+If users need 10.0.0 Split installations but they are on 9.0 Compact, the required upgrade path is to:
 
-1.  Upgrade 9.0 Compact to 10.1 Compact.
-2.  Then, migrate from 10.1 Compact to 10.1 Split.
+1.  Upgrade 9.0 Compact to 10.0.0 Compact.
+2.  Then, migrate from 10.0.0 Compact to 10.0.0 Split.
 
 For more information on these installation options, see the *Installation* and *Upgrade* guides.

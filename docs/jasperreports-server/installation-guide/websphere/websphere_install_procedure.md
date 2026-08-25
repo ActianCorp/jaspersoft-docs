@@ -683,10 +683,6 @@ To configure your Java JVM options
 <td><code>-Dclient.encoding.override=UTF-8 -Xms2048m -Xmx4096m -Xss2m -XX:+UseG1GC -Dlog4j.configurationFile=WEB-INF/log4j2.properties</code></td>
 </tr>
 <tr>
-<td>Additional option for Java 11</td>
-<td><code>-Djava.locale.providers=COMPAT</code></td>
-</tr>
-<tr>
 <td><p>Additional option for Oracle</p></td>
 <td><code>-Doracle.jdbc.defaultNChar=true</code></td>
 </tr>
@@ -707,10 +703,6 @@ To configure your Java JVM options
 <tr>
 <td><p>Options for all databases</p></td>
 <td><code>-Dclient.encoding.override=UTF-8 -Xms2048m -Xmx4096m -Xss2m -XX:+UseG1GC -Dlog4j.configurationFile=WEB-INF/log4j2.properties</code></td>
-</tr>
-<tr>
-<td>Additional option for Java 11</td>
-<td><p><code>-Djava.locale.providers=COMPAT</code></p></td>
 </tr>
 <tr>
 <td><p>Additional option for Oracle</p></td>

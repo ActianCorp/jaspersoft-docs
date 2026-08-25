@@ -1,11 +1,11 @@
 ---
 title: White Labeling
-description: "This white-labeling feature allows the customization of an application's front-end appearance to align with a company's brand. The feature must be supported by the license in use. A configuration..."
+description: "This white labeling feature allows the customization of an application's front-end appearance to align with a company's brand. The feature must be supported by the license in use. A configuration..."
 ---
 
 # White Labeling
 
-This white-labeling feature allows the customization of an application's front-end appearance to align with a company's brand. The feature must be supported by the license in use. A configuration file used to specify the customization options, which include:
+This white labeling feature allows the customization of an application's front-end appearance to align with a company's brand. The feature must be supported by the license in use. A configuration file used to specify the customization options, which include:
 
 - the displayed name of the product.
 
@@ -43,7 +43,7 @@ The following table contains the list of properties that can be used for the whi
 <tr>
 <td><code> product.name</code></td>
 <td><code>string</code></td>
-<td>The product name is used in labels like "About product name".</td>
+<td>The product name is used in labels like <strong>About product name</strong>.</td>
 </tr>
 <tr>
 <td><code>company.name</code></td>
@@ -63,7 +63,7 @@ The following table contains the list of properties that can be used for the whi
 <tr>
 <td><code>about.content </code></td>
 <td><code>string</code></td>
-<td>HTML content for the "About" dialog.</td>
+<td>HTML content for the <strong>About</strong> dialog.</td>
 </tr>
 <tr>
 <td><code>css</code></td>
@@ -79,7 +79,7 @@ The following table contains the list of properties that can be used for the whi
 
 There are no specific assets required for branding, if you specify a `css` file in your branding configuration, you should make it accessible. The possible way to publish these assets is to copy your assets into the `jrws/webapps/jrws-main/assets/public/` folder.
 
-## To set a license for white labeling:
+## To set a license for white labeling
 
 1.  Go to the location where the JasperReports Web Studio zip file is extracted.
 
@@ -99,11 +99,11 @@ Steps to Enable Branding:
 
 ## To Verify the Branding Configuration
 
-If you have enabled the debug property by setting debug=1 in the branding configuration file, the properties for branding are displayed in the browser console when the home page is loaded and the front-end configuration is fetched from the server.
+If you have enabled the debug property by setting `debug=1` in the branding configuration file, the properties for branding are displayed in the browser console when the home page is loaded and the front-end configuration is fetched from the server.
 
 After verifying the branding configuration, you can see the branding results.
 
-In this example, the About ACME Report Editor dialog is shown, this About dialog and the console displays the new brand information.
+In this example, the **About ACME Report Editor** dialog is shown, this **About** dialog and the console displays the new brand information.
 
 ![about dialog](assets/images/about_dialog.png)
 

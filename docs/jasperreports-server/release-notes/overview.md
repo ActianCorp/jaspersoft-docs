@@ -15,7 +15,7 @@ In particular, see *JasperReports® Server Installation Guide* for instructions 
 
     JasperReports Server is governed by a License Agreement, the text of which is found at `<js-install>/js-jrs_10.1.0_license.txt`. Please read it before you log in to JasperReports® Server for the first time. If you installed the server using an installer binary (rather than deploying a WAR file), you have already agreed to this license.
 
-To view the Release Notes of version 9.0.0, see [JasperReports® Server Release Notes v9.0.0](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-release-notes/v900/relnotesbody-_-overview/).
+To view the Release Notes of version 10.0.0, see [JasperReports® Server Release Notes v10.0.0](https://community.jaspersoft.com/documentation/jasperreports-server/tibco-jasperreports-server-release-notes/v1000/relnotesbody-_-overview/).
 
 This release notes includes the following sections:
 

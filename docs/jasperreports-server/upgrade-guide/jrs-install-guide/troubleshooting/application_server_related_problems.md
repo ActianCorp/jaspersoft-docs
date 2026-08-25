@@ -21,37 +21,6 @@ If you encounter a Java out of memory error, try increasing your Java heap size 
 
 This Java option is set within the application server, so you must restart your application server.
 
-## JVM Crash
-
-Some combinations of application server and java builds under intense load can crash with an error like the following:
-
-```
-# A fatal error has been detected by the Java Runtime Environment:
-#
-# SIGSEGV (0xb) at pc=0x00007f408f0bf43b, pid=16819, tid=16848
-#
-# JRE version: OpenJDK Runtime Environment 18.9 (11.0.11+9) (build 11.0.11+9-LTS)
-# Java VM: OpenJDK 64-Bit Server VM 18.9 (11.0.11+9-LTS, mixed mode, sharing, tiered, compressed
-oops, g1 gc, linux-amd64)
-# Problematic frame:
-# V [libjvm.so+0x7dd43b] G1ParCopyClosure<(G1Barrier)0, (G1Mark)0>::do_oop(unsigned int*)+0x5b
-#
-# Core dump will be written. Default location: Core dumps may be processed with
-"/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h %e" (or dumping to /opt/apache-tomcat9.0.37/core.16819)
-#
-# An error report file with more information is saved as:
-# /tmp/hs_err_pid16819.log
-#
-# If you would like to submit a bug report, please visit:
-# https://bugzilla.redhat.com/enter_
-bug.cgi?product=Red%20Hat%20Enterprise%20Linux%208&component=java-11-openjdk
-```
-
-To resolve this issue, you need to set the following additional Java properties to `JAVA_OPTS` setting:<br>
-`set JAVA_OPTS=%JAVA_OPTS% -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -XX:+ParallelRefProcEnabled -XX:+UseStringDeduplication -XX:+UseCompressedClassPointers -XX:+UseCompressedOops`
-
-This Java option is applied to Java 8 and Java 11.
-
 ## Configuration File Locations
 
 You find JasperReports Server configuration properties specific to your application server in the following files.
@@ -89,8 +58,8 @@ Go to the section of the `default_master.properties` that looks like this:
 
 ```
 # Tomcat app server root dir
-appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0
-# appServerDir = /home/devuser/apache-tomcat-10.0
+appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
+# appServerDir = /home/devuser/apache-tomcat-11.0
 # if linux package managed tomcat instance, set two properties below
 # CATALINA_HOME = /usr/share/tomcat9
 # CATALINA_BASE = /var/lib/tomcat9
@@ -100,8 +69,8 @@ And change which lines are commented so it looks like this:
 
 ```
 # Tomcat app server root dir
-# appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0
-# appServerDir = /home/devuser/apache-tomcat-10.0
+# appServerDir = C:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
+# appServerDir = /home/devuser/apache-tomcat-11.0
 # if linux package managed tomcat instance, set two properties below
 CATALINA_HOME = /usr/share/tomcat9
 CATALINA_BASE = /var/lib/tomcat9

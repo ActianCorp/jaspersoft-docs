@@ -74,7 +74,7 @@ For example, if your database is PostgreSQL, copy `postgresql_master.properties`
 <tr>
 <td><p>PostgreSQL</p></td>
 <td><pre class="properties"><code> appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]
-    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 10.0
+    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 dbHost=localhost
 dbUsername=postgres
 dbPassword=postgres</code></pre></td>
@@ -82,7 +82,7 @@ dbPassword=postgres</code></pre></td>
 <tr>
 <td><p>MySQL</p></td>
 <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]
-    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 10.0
+    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 dbUsername=root
 dbPassword=password
 dbHost=localhost</code></pre></td>
@@ -90,12 +90,13 @@ dbHost=localhost</code></pre></td>
 <tr>
 <td><p>Standard Oracle options</p></td>
 <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]
-    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 10.0
+    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 dbUsername=jasperserver
 dbPassword=password
 sysUsername=system
 sysPassword=password
-dbHost=hostname</code></pre></td>
+dbHost=hostname
+dbVersion=oracleDbVersion (for example, 12, 19c, 21c, 23ai, 26ai and so on)</code></pre></td>
 </tr>
 <tr>
 <td>Additional options for Oracle CDB with common users</td>
@@ -109,7 +110,7 @@ sugarcrm.dbUsername=c##sugarcrm</code></pre></td>
 <tr>
 <td><p>DB2</p></td>
 <td><pre class="properties"><code> appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]
-    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 10.0
+    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 dbUsername=db2inst1
 dbPassword=password
 dbHost=localhost</code></pre>
@@ -118,7 +119,7 @@ dbHost=localhost</code></pre>
 <tr>
 <td><p>SQL Server</p></td>
 <td><pre class="properties"><code>appServerType=tomcat [jboss-eap-8, wildfly, skipAppServerCheck]
-    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 10.0
+    &#10;appServerDir=c:\\Program Files\\Apache Software Foundation\\Tomcat 11.0
 dbUsername=sa
 dbPassword=sa
 &#10;dbHost=localhost</code></pre></td>
@@ -149,7 +150,7 @@ For the Split installation, configure the additional settings in the `default_ma
     When the property `appServerType` is set to `skipAppServerCheck`, buildomatic skips any application server validation.
 
     Backslashes in paths must be doubled in properties files, for example:<br>
-    appServerDir=C:\\Apache Software Foundation\\Tomcat 10.0.
+    appServerDir=C:\\Apache Software Foundation\\Tomcat 11.0.
 
     <span id="Oracle_dbUsername"></span>The `dbUsername` must be the same as the Oracle user name. In addition, buildomatic does with the “sys as sysdba” syntax.
 

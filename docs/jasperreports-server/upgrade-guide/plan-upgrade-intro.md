@@ -15,35 +15,15 @@ Some of the new and enhanced features in JasperReports Server can affect your de
 
 The versions and their affected functionality are:
 
+- Changes in 10.1.0 affect upgrades.
+
 - Changes in 10.0 affect upgrades.
 
 - Changes in 9.0 affect upgrades
 
-- Changes in 8.2 affect upgrades.
+!!! note
 
-- Changes in 8.1 affect upgrades. Users will not be able to upgrade from 8.0 Compact to 8.1 Split, or from 8.0 Split to 8.1 Compact. Currently, the **js-upgrade-newdb.sh/bat** script does not import the access, audit, monitoring data when upgrading.
-
-- Changes in 8.0 affect the installation and upgrades. The Split installation has been introduced from this release. The Audit, Access, and Monitoring events can be moved to a different audit database using the Split installation or upgrade, which improves the performance of JasperReports server.
-
-- Changes in 7.8 affect PhantomJS/Rhino JavaScript engine. With this release, the supported JavaScript engine is Chrome/Chromium.
-
-- Changes in 7.5 affect Simba and Impala drivers, the MongoDB query language, custom themes, and encryption keys.
-
-- Changes in 7.2 affect legacy dashboards, customizations to the login page, external authentication, and customizations to the Spring Security framework.
-
-- Changes in 7.1 affect customizations to the login page.
-
-- Changes in 6.4 affect the Impala community connector.
-
-  Changes in 6.2.1 affect the Impala community connector.
-
-  Changes in 6.2 affect the default Ad Hoc templates.
-
-- Changes in 6.1 affect themes.
-
-Changes are cumulative, so review all topics that affect you. For example, if you are upgrading from 6.1 to 7.1, you may be affected by changes in 6.1, 6.2, 6.2.1, and 6.4.
-
-For versions of the software earlier than 6.1, see earlier versions of the JasperReports Server Upgrade Guide.
+    For details on upgrading from version 8.x or older, see the respective Upgrade Guides for those versions.
 
 This section describes only those changes that can significantly impact your existing deployment. For an overview of new features, improvements, and bug fixes see the release notes in the root directory of the distribution. For information on how to use the new features, see the JasperReports Server User Guide or the JasperReports Server Administrator Guide.
 
@@ -61,26 +41,8 @@ However, once the upgrade process has completed, you can use the **JRS UI - Impo
 
 This chapter contains the following sections:
 
+- [Changes in 10.1 That May Affect Your Upgrade](plan-upgrade-10.1.md)
+
 - [Changes in 10.0 That May Affect Your Upgrade](plan-upgrade-10.0.md)
 
 - [Changes in 9.0 That May Affect Your Upgrade](plan-upgrade-9.0.md)
-
-- [Changes in 8.2 That May Affect Your Upgrade](plan-upgrade-8.2.md)
-
-- [Changes in 8.1 That May Affect Your Upgrade](plan-upgrade-8.1.md)
-
-- [Changes in 8.0 That May Affect Your Upgrade](plan-upgrade-8.0.md)
-
-- [Changes in 7.8 That May Affect Your Upgrade](plan-upgrade-7.8.md)
-
-- [Changes in 7.5 That May Affect Your Upgrade](plan-upgrade-7.5.md)
-
-- [Changes in 7.2 That May Affect Your Upgrade](plan-upgrade-72.md)
-
-- [Changes in 7.1 That May Affect Your Upgrade](plan-upgrade-7-1.md)
-
-- [Changes in 6.4 That May Affect Your Upgrade](plan-upgrade-7-1.md)
-
-  [Changes in 6.2.1 That May Affect Your Upgrade](plan-upgrade-621.md)
-
-- [Changes in 6.1 That May Affect Your Upgrade](plan-upgrade-61-landscape.md)

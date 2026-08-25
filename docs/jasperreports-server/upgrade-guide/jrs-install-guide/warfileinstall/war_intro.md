@@ -13,7 +13,7 @@ The WAR file distribution contains the JasperReports Server web archive file and
 
     JasperReports Web Studio is the visual designer for creating and editing report templates for the reporting engine and the whole Jaspersoft family of products. It uses an open-source library to produce dynamic content and rich data visualizations. It comes as a web-based alternative to Jaspersoft Studio, the desktop application, which is the most complete and powerful designer for JasperReports templates.
 
-**Important Java Development Kit (JDK) 17 note**: As of release 10.0.0, Tomcat 10.1.24 or higher and Tomcat 11.0.11 or higher are supported by JasperReports Server on a system with JDK 17. An additional installation step is required on a system with JDK 17, which requires adding the JAVA_OPTS environment variable.
+**Important Java Development Kit (JDK) 17/21 note**: As of release 10.1.0, Tomcat 11.0.x is supported by JasperReports Server on a system with JDK 17/JDK 21. An additional installation step is required on a system with JDK 17/JDK 21, which requires adding the JAVA_OPTS environment variable.
 
 This chapter describes how to install the WAR file on the Apache Tomcat and JBossEAP/Wildfly application servers. For other application servers, see [Installing the WAR File for WebLogic](../../../installation-guide/weblogic/warweblogic.md) or [Installing the WAR File for WebSphere](../../../installation-guide/websphere/websphere_intro.md). For a list of supported JDK/JVMs, application servers, databases, operating systems, and browsers, refer to the TIBCO JasperReports® Server Supported Platform Datasheet.
 

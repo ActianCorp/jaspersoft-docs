@@ -1,17 +1,17 @@
 ---
 title: OAuth2 Repositories
-description: "By default, Jaspersoft IO At-Scale comes with three preconfigured OAuth2 repositories for Google Drive, GitHub, and Dropbox. Each of these is defined in the following folders:"
+description: "By default, JasperReports IO At-Scale comes with three preconfigured OAuth2 repositories for Google Drive, GitHub, and Dropbox. Each of these is defined in the following folders:"
 ---
 
 # OAuth2 Repositories
 
-By default, Jaspersoft IO At-Scale comes with three preconfigured OAuth2 repositories for Google Drive, GitHub, and Dropbox. Each of these is defined in the following folders:
+By default, JasperReports IO At-Scale comes with three preconfigured OAuth2 repositories for Google Drive, GitHub, and Dropbox. Each of these is defined in the following folders:
 
 - `jrio-export-docker/jrio/applicationContext-google-drive.xml`
 
 - `jrio-export-docker/jrio/applicationContext-github.xml`
 
-- `[jrio-export-docker/jrio/applicationContext-dropbox.xml`
+- `jrio-export-docker/jrio/applicationContext-dropbox.xml`
 
 - `jrio-reporting-docker/jrio/applicationContext-google-drive.xml`
 
@@ -25,7 +25,7 @@ By default, Jaspersoft IO At-Scale comes with three preconfigured OAuth2 reposi
 
 - `jrio-rest-docker/jrio/WEB-INF/applicationContext-dropbox.xml`
 
-To use these repositories, each repository configuration file needs to be updated with actual `clientId` and `secretKey` values. These values are obtained from the target cloud storage providers while registering your Jaspersoft IO At-Scale instance with them.
+To use these repositories, each repository configuration file needs to be updated with actual `clientId` and `secretKey` values. These values are obtained from the target cloud storage providers while registering your JasperReports IO At-Scale instance with them.
 
 The configuration file for the Google Drive repository appears similar to the following:
 

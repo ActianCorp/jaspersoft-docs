@@ -1,11 +1,11 @@
 ---
 title: Setting up AWS ECR
-description: This deployment of Jaspersoft IO At-Scale modules uses the Amazon Elastic Container Registry (AWS ECR) to hold the container images. This section covers the steps for uploading your docker images to...
+description: This deployment of JasperReports IO At-Scale modules uses the Amazon Elastic Container Registry (AWS ECR) to hold the container images. This section covers the steps for uploading your docker images...
 ---
 
 # Setting up AWS ECR
 
-This deployment of Jaspersoft IO At-Scale modules uses the Amazon Elastic Container Registry (AWS ECR) to hold the container images. This section covers the steps for uploading your docker images to AWS ECR.
+This deployment of JasperReports IO At-Scale modules uses the Amazon Elastic Container Registry (AWS ECR) to hold the container images. This section covers the steps for uploading your docker images to AWS ECR.
 
 !!! warning
 

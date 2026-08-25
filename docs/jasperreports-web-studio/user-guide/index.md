@@ -13,7 +13,7 @@ Applies to Jaspersoft **10.1.0**.
 
 ## Contents
 
-- [Overview](release-notes/overview.md)
+- [Overview](overview-ug.md)
 - [Getting Started](getting-started.md)
 - [Configuration](configuration.md)
 - [White Labeling](white_labelling.md)

@@ -85,7 +85,7 @@ The best practice to work with Studio is to rely on the classic local machine wo
 
 For backup and co-working, the user can choose the default versioning solution shipped, based on GIT. The eGIT plug-in allows the user to share JasperReports projects, reports and other additional resources. Other versioning solutions based on SVN, Mercurial or others can be picked up once their dedicated plug-in is installed and tested.
 
-There is no proven benefit of using a network shared folder (such as, \\MY_REMOTE_MACHINE\SHARED_FOLDER\JSS_WORKSPACE in Windows) to take a backup or share work with others.
+There is no proven benefit of using a network shared folder (such as, `\\MY_REMOTE_MACHINE\SHARED_FOLDER\JSS_WORKSPACE` in Windows) to take a backup or share work with others.
 
 Although not prohibited, this practice is highly discouraged and not officially supported by the team due to the following reasons:
 

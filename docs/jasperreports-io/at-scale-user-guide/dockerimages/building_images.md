@@ -8,7 +8,7 @@ description: "After all of your configurations and customizations have been made
 After all of your configurations and customizations have been made, you can build Docker images for the modules. Go to the folder where jrio-manager-docker and the other modules are located and run the following commands:
 
 1.  If you have not already done so, install the Docker command-line app to run Docker commands. You can download the Docker app for Mac, Windows, and Linux from <https://docs.docker.com/get-docker/>.
-2.  If you plan to use minikube and not the remote Docker registry, before building the images you must poxy all docker commands to the local minikube docker registry with the following:
+2.  If you plan to use minikube and not the remote Docker registry, before building the images you must proxy all docker commands to the local minikube docker registry with the following:
 
 ``` text
 eval $(minikube docker-env)

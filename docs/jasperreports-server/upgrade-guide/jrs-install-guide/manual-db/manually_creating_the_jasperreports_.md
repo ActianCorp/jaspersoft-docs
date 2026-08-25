@@ -180,7 +180,8 @@ SQL> grant connect, resource to jasperserver; (as sys user)
 SQL> grant unlimited tablespace to jasperserver; (as sys user)
 SQL> connect jasperserver/password@ORCL (use your password, your SID)
 SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/js-pro-create.ddl
-SQL> @/opt/jasperreports-server-pro-8.0.0-bin/buildomatic/install_resources/sql/oracle/quartz.ddl
+SQL> @/opt/jasperreports-server-pro-8.0.0-
+bin/buildomatic/install_resources/sql/oracle/quartz.ddl or quartz-23onwards.ddl (depending on the oracle db version being used)
 SQL> exit
 ```
 
@@ -204,18 +205,20 @@ SQL> exit
     `sysUsername=jasperserver`<br>
     `sysPassword=password`<br>
     `dbHost=localhost`<br>
-    `dbPort=1521 sid=ORCL `<br>
-    <br>
-    `#audit props`<br>
-    `installType=split`<br>
-    `audit.dbHost=localhost`<br>
-    `audit.dbPort=1521`<br>
-    `audit.sid=ORCL`<br>
-    `audit.dbUsername=jsaudit`<br>
-    `audit.dbPassword=password`<br>
-    `audit.dbName=jsaudit`<br>
-    `audit.sysUsername=system`<br>
-    `audit.sysPassword=password`
+    `dbPort=1521 sid=ORCL `
+
+`dbVersion=oracleDbVersion` `(for example, 12, 19c, 21c, 23ai, 26ai and so on)`<br>
+<br>
+`#audit props`<br>
+`installType=split`<br>
+`audit.dbHost=localhost`<br>
+`audit.dbPort=1521`<br>
+`audit.sid=ORCL`<br>
+`audit.dbUsername=jsaudit`<br>
+`audit.dbPassword=password`<br>
+`audit.dbName=jsaudit`<br>
+`audit.sysUsername=system`<br>
+`audit.sysPassword=password`
 
 You can set sysUsername and sysPassword the same as dbUsername and dbPassword.
 

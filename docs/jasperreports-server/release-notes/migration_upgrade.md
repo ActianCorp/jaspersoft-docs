@@ -26,37 +26,16 @@ Your current version determines your upgrade path:
 | ![jrs upgrade path](assets/images/jrs-upgrade-path.png) |
 | Paths for Upgrading to Version 10.1                     |
 
-You can upgrade directly to 10.1.0 from version 9.
+You can upgrade directly to 10.1.0 from versions 9 and/or 10.
 
-|           |       |
-|-----------|-------|
-| Version 9 | 9.0.0 |
-
-!!! note
-
-    If your instance is JasperReports® Server 9.0.0 Compact, you can only upgrade to 10.1.0 Compact. If your instance is JasperReports® Server 9.0.0 Split, you can only upgrade to 10.1.0 Split.
-
-If you have any of the version 8 instances, you must first upgrade to version 9.0.0 before upgrading to 10.1.0.
-
-|           |       |       |       |
-|-----------|-------|-------|-------|
-| Version 8 | 8.0.x | 8.1.x | 8.2.x |
+|            |        |
+|------------|--------|
+| Version 9  | 9.0.x  |
+| Version 10 | 10.0.x |
 
 !!! note
 
-    If your instance is JasperReports® Server 8.2.0 Compact, you can only upgrade to 9.0 Compact. If your instance is JasperReports® Server 8.2.0 Split, you can only upgrade to 9.0 Split.
-
-If you have any of the version 7 instances, you must first upgrade to the latest version of 8.0.x before upgrading to 10.1.0.
-
-|           |       |       |       |       |       |
-|-----------|-------|-------|-------|-------|-------|
-| Version 7 | 7.1.x | 7.2.x | 7.5.x | 7.8.x | 7.9.x |
-
-If you have any of the version 6 instances, you must first upgrade to the latest version of 7.1.x, then upgrade to 8.0.x, before finally upgrading to 10.1.0.
-
-|           |       |       |       |       |       |
-|-----------|-------|-------|-------|-------|-------|
-| Version 6 | 6.0.x | 6.1.x | 6.2.x | 6.3.x | 6.4.x |
+    If your instance is JasperReports® Server 10.0.0 Compact, you can only upgrade to 10.1.0 Compact. If your instance is JasperReports® Server 10.0.0 Split, you can only upgrade to 10.1.0 Split.
 
 ## Upgrade File
 
@@ -72,7 +51,7 @@ The complete upgrade procedure is described in JasperReports® Server Upgrade Gu
 
 ## Database Changes
 
-Between certain versions of the server, we have changed the repository database to add new functionality. There are changes between 8.x.x, 9.0.0 and 10.1.0.
+Between certain versions of the server, we have changed the repository database to add new functionality. There are changes between 9.0.0, 10.0.0 and 10.1.0.
 
 ## Upgrade from Community Project
 

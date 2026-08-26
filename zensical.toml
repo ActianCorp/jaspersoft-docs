@@ -2114,6 +2114,11 @@ nav = [
 [project.extra]
 product_version = "10.1.0"
 
+# Drop the "Made with Zensical" line from the footer. The theme's
+# partials/copyright.html renders it unless this is false, leaving the footer
+# with the copyright statement alone.
+generator = false
+
 # Versions offered in the header dropdown (overrides/partials/header.html).
 # The entry whose `version` equals `product_version` is the current one and
 # needs no url; add one entry per published version, newest first.

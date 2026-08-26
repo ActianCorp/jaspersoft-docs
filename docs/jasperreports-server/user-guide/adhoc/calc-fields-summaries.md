@@ -7,16 +7,15 @@ description: Summary calculations are aggregate functions used for sub-totals an
 
 Summary calculations are aggregate functions used for sub-totals and totals. Summary calculations can be set in the Domain Designer or in the Ad Hoc view.
 
-- In Ad Hoc table views, each field can display a single summary calculation. The summary calculation is automatically applied to all groups in the table. Summaries appear at the bottom of each group, as well as at the bottom of the view. When a new group is added, it includes a summary for each column.
+-   In Ad Hoc table views, each field can display a single summary calculation. The summary calculation is automatically applied to all groups in the table. Summaries appear at the bottom of each group, as well as at the bottom of the view. When a new group is added, it includes a summary for each column.
 
-- In crosstabs, each measure displays a summarized value. Summaries determine the values of the Totals at the intersection of each row and column.
+-   In crosstabs, each measure displays a summarized value. Summaries determine the values of the Totals at the intersection of each row and column.
 
-- In charts, the type of chart determines whether measures are summarized. If summaries are used, they determine the size or location of the graphical elements that represent your data.
+-   In charts, the type of chart determines whether measures are summarized. If summaries are used, they determine the size or location of the graphical elements that represent your data.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>For dual pie charts, the summary function for the field needs to be Sum or CountAll. Dual pie charts with other summary functions may give unexpected results.</p>
-  </div>
+    !!! note
+
+        For dual pie charts, the summary function for the field needs to be Sum or CountAll. Dual pie charts with other summary functions may give unexpected results.
 
 In general, you can change the summary calculation of any measure. By default, JasperReports Server summarizes fields of each datatype as shown in the following table.
 
@@ -61,13 +60,13 @@ Select from the following options to set a measure’s summary function in any t
 
 Note the following about summaries:
 
-- If you select a summary calculation other than the default, that calculation is shown in parentheses after the field name in the fields picker.
+-   If you select a summary calculation other than the default, that calculation is shown in parentheses after the field name in the fields picker.
 
-- In Ad Hoc views, you see special behavior when you create a calculated field or measure with the following type of summary calculation:
+-   In Ad Hoc views, you see special behavior when you create a calculated field or measure with the following type of summary calculation:
 
-  - If you create a Custom summary calculation for a field or measure, **Custom** is available on the **Change Summary Calculation** menu for that field. It is not available otherwise.
-  - If you create a WeightedAverage summary calculation for a field or measure, **WeightedAverage** is available on the **Change Summary Calculation** menu for that field. It is not available otherwise.
+    -   If you create a Custom summary calculation for a field or measure, **Custom** is available on the **Change Summary Calculation** menu for that field. It is not available otherwise.
+    -   If you create a WeightedAverage summary calculation for a field or measure, **WeightedAverage** is available on the **Change Summary Calculation** menu for that field. It is not available otherwise.
 
-- You can remove summaries by setting the summary function to **None**.
+-   You can remove summaries by setting the summary function to **None**.
 
-- Only AggregateFormula, Custom, or None are supported as summary calculations for aggregate functions. Custom only appears in the **Change Summary** right-click menu if you have defined a custom function in the **Create Calculated Field** dialog box.
+-   Only AggregateFormula, Custom, or None are supported as summary calculations for aggregate functions. Custom only appears in the **Change Summary** right-click menu if you have defined a custom function in the **Create Calculated Field** dialog box.

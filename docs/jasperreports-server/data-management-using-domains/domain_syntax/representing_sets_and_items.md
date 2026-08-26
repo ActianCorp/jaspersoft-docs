@@ -203,8 +203,8 @@ When an internationalization key is defined for the label or description, the la
 
 The `items` element is a container for `item` elements, which represent items on the Data Presentation tab. `items` can be a child of `itemGroup` or `schema`.
 
-- As a child of `schema`, `items` is a container for items in a single data island that do not belong to any a set. All `item` elements in an items element must belong to the same data island. There is one `items` element in `schema` for each data island that has items that are not in a set.
-- As a child of `itemGroup`, items is a container for the `items` in the set represented by `itemGroup`.
+-   As a child of `schema`, `items` is a container for items in a single data island that do not belong to any a set. All `item` elements in an items element must belong to the same data island. There is one `items` element in `schema` for each data island that has items that are not in a set.
+-   As a child of `itemGroup`, items is a container for the `items` in the set represented by `itemGroup`.
 
 ### Child Elements
 
@@ -386,9 +386,9 @@ March 31, 2009<br />
 
 For example, suppose you have a join tree, JoinTree_1, with the following hierarchy:
 
-- A set labeled Accounts
-- A subset of Accounts, with the label Account Address
-- A single element, Account Creator, that is in the join tree, but is not in any set.
+-   A set labeled Accounts
+-   A subset of Accounts, with the label Account Address
+-   A single element, Account Creator, that is in the join tree, but is not in any set.
 
 ![js DomainSyntax JoinTree](../assets/images/js-DomainSyntax-JoinTree.png)
 

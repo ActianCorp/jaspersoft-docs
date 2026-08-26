@@ -9,7 +9,7 @@ The JasperReports Server diagnostic feature exposes a set of managed beans (MBe
 
 `.../WEB-INF/applicationContext-diagnostic.xml`
 
-- To exclude an attribute, locate the MBean where it's defined and uncomment it from the `excludedDiagnosticAttributes` property. For example, if you want to hide sensitive information about your internal database, modify the `diagnosticRepositoryDatabaseInfoCe` MBean as follows:
+-   To exclude an attribute, locate the MBean where it's defined and uncomment it from the `excludedDiagnosticAttributes` property. For example, if you want to hide sensitive information about your internal database, modify the `diagnosticRepositoryDatabaseInfoCe` MBean as follows:
 
 ``` xml
 <bean id="diagnosticRepositoryDatabaseInfoCe" class=
@@ -44,7 +44,7 @@ The JasperReports Server diagnostic feature exposes a set of managed beans (MBe
 </bean>
 ```
 
-- To exclude an entire bean, comment it out or remove it from the list of beans in the `diagnosticExportingMBeansMap`. For example, instead of excluding selected attributes, you could remove the entire repository database MBean as follows:
+-   To exclude an entire bean, comment it out or remove it from the list of beans in the `diagnosticExportingMBeansMap`. For example, instead of excluding selected attributes, you could remove the entire repository database MBean as follows:
 
 ``` xml
 <util:map id="diagnosticExportingMBeansMap" >

@@ -7,7 +7,7 @@ description: "JasperReports Server must be installed and configured before you c
 
 JasperReports Server must be installed and configured before you can use it. For information, see the JasperReports Server Installation Guide for your product edition.
 
-The directory where JasperReports Server is installed is referred to as \<js-install\> in this guide. The default installation directory is:
+The directory where JasperReports Server is installed is referred to as &lt;js-install&gt; in this guide. The default installation directory is:
 
 |          |                                              |
 |----------|----------------------------------------------|

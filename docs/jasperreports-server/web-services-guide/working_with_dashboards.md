@@ -15,14 +15,14 @@ Therefore, an application using the REST API can only manipulate the definition 
 
 The general structure of a dashboard descriptor contains:
 
-- Typical descriptor properties such as `label`, `description`, and `PROP_PARENT_FOLDER`.
+-   Typical descriptor properties such as `label`, `description`, and `PROP_PARENT_FOLDER`.
 
-- The `dashboardState` descriptor containing:
+-   The `dashboardState` descriptor containing:
 
-  - The `ADHOC_FRAMES` property that lists the reports, labels, and buttons, and gives their coordinates in the dashboard.
-  - The `ADHOC_PROPERTIES` property that gives the overall dashboard layout properties.
+    -   The `ADHOC_FRAMES` property that lists the reports, labels, and buttons, and gives their coordinates in the dashboard.
+    -   The `ADHOC_PROPERTIES` property that gives the overall dashboard layout properties.
 
-- `reference` descriptors for each of the reports included in the `ADHOC_FRAMES` property. These references ensure that the reports can’t be deleted from the repository as long as they are used in this dashboard.
+-   `reference` descriptors for each of the reports included in the `ADHOC_FRAMES` property. These references ensure that the reports can’t be deleted from the repository as long as they are used in this dashboard.
 
 The following example shows the contents of a dashboard’s resource descriptor:
 

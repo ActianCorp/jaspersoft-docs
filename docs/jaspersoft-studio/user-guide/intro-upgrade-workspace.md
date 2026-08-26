@@ -19,7 +19,7 @@ Importing projects
 
 1.  (Optional) To import a version of the MyReports project, you must first delete the existing MyReports folder from your current workspace. You can do this, for example, if you have just upgraded and have created a new empty workspace. To delete MyReports in your current workspace, navigate to the workspace location in your file system and delete or move the MyReports directory.
 
-2.  Select **File \> Import ...**
+2.  Select **File &gt; Import ...**
 
 3.  Select **Existing Projects into Workspace** from the **General** category.
 
@@ -41,7 +41,7 @@ Your workspace contains server connections, global data adapters, and your Jaspe
 
 Importing server connections
 
-1.  Select **File \> Import ...**.
+1.  Select **File &gt; Import ...**.
 
 2.  Select **External JasperReports Server Connections** from the **Jaspersoft Studio** category.
 
@@ -62,7 +62,7 @@ The selected server connections are imported into your Jaspersoft Studio instanc
 
 Importing data adapters and settings
 
-1.  Select **File \> Import ...**.
+1.  Select **File &gt; Import ...**.
 
 2.  Select **External Properties and Data Adapters** from the **Jaspersoft Studio** category.
 
@@ -92,18 +92,18 @@ There is no proven benefit of using a network shared folder (such as, `\\MY_REMO
 
 Although not prohibited, this practice is highly discouraged and not officially supported by the team due to the following reasons:
 
-- Network issues (such as, delay, latency, and so on) can affect the proper saving and storing of the workspace.
+-   Network issues (such as, delay, latency, and so on) can affect the proper saving and storing of the workspace.
 
-- Security software like the antivirus, firewall, Endpoint Detection and Response (EDR) and so on can also impact the saving of the workspace.
+-   Security software like the antivirus, firewall, Endpoint Detection and Response (EDR) and so on can also impact the saving of the workspace.
 
-- People might mistakenly believe they can use the same workspace simultaneously. This will eventually lead to the corruption of the working area.
+-   People might mistakenly believe they can use the same workspace simultaneously. This will eventually lead to the corruption of the working area.
 
 The user can choose to configure a different location for the workspace using:
 
-- Use **File \> Switch Workspace** in Jaspersoft Studio.
+-   Use **File &gt; Switch Workspace** in Jaspersoft Studio.
 
-- Modify the `.ini` configuration file and change the `-data` parameter to a custom location.
+-   Modify the `.ini` configuration file and change the `-data` parameter to a custom location.
 
-- Modify the desktop shortcut (for example, Windows) to include the `-data` parameter.
+-   Modify the desktop shortcut (for example, Windows) to include the `-data` parameter.
 
 However, as mentioned earlier, it is highly recommended to use the local machine solution.

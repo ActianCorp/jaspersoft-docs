@@ -54,13 +54,13 @@ The following data source types are pre-installed with JasperReports Server, but
 
 All of these data source types support the following:
 
-- You can use SQL queries in reports to access the data as a relational table.
+-   You can use SQL queries in reports to access the data as a relational table.
 
-- You can create a Domain based on the data source, allowing you to alter the visibility and names of the fields extracted from the database or file. On the Display tab of the Domain Designer you can also specify which fields are measures.
+-   You can create a Domain based on the data source, allowing you to alter the visibility and names of the fields extracted from the database or file. On the Display tab of the Domain Designer you can also specify which fields are measures.
 
-- You can create Ad Hoc views using the Domain based on the data source, allowing you to explore and interact with data from the database or file.
+-   You can create Ad Hoc views using the Domain based on the data source, allowing you to explore and interact with data from the database or file.
 
-- You can create virtual data sources that combine several data sources. You can then create a Domain based on the virtual data source to join the tables and access the joined data in Ad Hoc views and reports. You can even combine different formats, such as an XML file and MongoDB, as long as their data structures are compatible so the tables can be joined.
+-   You can create virtual data sources that combine several data sources. You can then create a Domain based on the virtual data source to join the tables and access the joined data in Ad Hoc views and reports. You can even combine different formats, such as an XML file and MongoDB, as long as their data structures are compatible so the tables can be joined.
 
 ## Enabling the Pre-installed Data Source Types
 
@@ -102,7 +102,7 @@ To create a data source using a query example
 
 1.  Log on as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
 
 3.  In the Type field, select a data source that you enabled, for example **JSON Data Source (Before 6.4)** or **Remote XML Data Source**. The fields on the page change to prompt for the connection information required for your data source.
 
@@ -124,10 +124,10 @@ The Java source for the pre-installed samples can be found online:
 
 The JDBC query and flat file data source types each leverage an existing data adapter class in JasperReports Library. The data adapter class used depends on the data source type. For example, the JDBC query data source type uses a `JDBCQueryDataSourceDefinition` class, based on `JdbcDataAdapterImpl`, to allow the user to enter database connection information and a JDBC query in the **New Data Source** dialog. When a user creates or views a report or Ad Hoc view based on an implementation of this data source type, JasperReports Server creates a JasperReports data source as follows:
 
-- Builds a custom data source using the JasperReports Library JDBC Data Adapter.
-- `JDBCQueryDataSourceService` creates a JDBC connection based on the driver, URL, username, and password entered by the user.
-- `JRJdbcQueryExecuterFactory` executes the user-defined query and retrieves the metadata layer necessary for Domain support.
-- `JDBCQueryDataSourceService` creates the JasperReports data source that is used by JasperReports Library to fill the report.
+-   Builds a custom data source using the JasperReports Library JDBC Data Adapter.
+-   `JDBCQueryDataSourceService` creates a JDBC connection based on the driver, URL, username, and password entered by the user.
+-   `JRJdbcQueryExecuterFactory` executes the user-defined query and retrieves the metadata layer necessary for Domain support.
+-   `JDBCQueryDataSourceService` creates the JasperReports data source that is used by JasperReports Library to fill the report.
 
 In addition, the pre-installed data sources implement Domain support using the `CustomDomainMetaData` class.
 

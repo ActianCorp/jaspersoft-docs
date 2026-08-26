@@ -58,9 +58,9 @@ service:jmx:rmi://localhost/jndi/rmi://<host>:<port>/<connectionName>
 
 where:
 
-- `<host>` is the computer where JasperReports Server is running
-- `<port>` is the JMX port, by default `10990`
-- `<connectionName>` is the name of the JMX agent, by default `jasperserver`
+-   `<host>` is the computer where JasperReports Server is running
+-   `<port>` is the JMX port, by default `10990`
+-   `<connectionName>` is the name of the JMX agent, by default `jasperserver`
 
 Therefore, the default connection string is:
 
@@ -80,9 +80,9 @@ When prompted to enter a username and password, give a user with the following r
 
 The following sections explain how to modify the default connection values for:
 
-- The connection name
-- The JMX port
-- The required roles
+-   The connection name
+-   The JMX port
+-   The required roles
 
 ## Configuring the Port and Connection Name
 
@@ -92,8 +92,8 @@ There are times you may want to change the port from default (10992) to another 
 
 To change the port or connection name, edit one of following files:
 
-- In the WAR file distribution before installation: `<js-install>/buildomatic/default_master.properties`
-- In the installed WAR file before starting the server: `.../WEB-INF/js.diagnostic.properties`
+-   In the WAR file distribution before installation: `<js-install>/buildomatic/default_master.properties`
+-   In the installed WAR file before starting the server: `.../WEB-INF/js.diagnostic.properties`
 
 Find the following lines and edit the values to the port number and connection name you want:
 
@@ -106,7 +106,7 @@ diagnostic.jmx.name = jasperserver
 
 If you want to allow other users to establish the JMX connection from a remote management console, configure JasperReports Server to allow other roles:
 
-- For commercial editions, edit the `.../WEB-INF/applicationContext-diagnostic-pro.xml` file and modify the following setting:
+-   For commercial editions, edit the `.../WEB-INF/applicationContext-diagnostic-pro.xml` file and modify the following setting:
 
 ``` xml
 <util:list id="diagnosticAllowedRolesPro">
@@ -122,10 +122,10 @@ By default, remote connections to the JMX Agent are enabled and configured as de
 
 To disable remote connections, edit the `.../WEB-INF/applicationContext-diagnostic.xml` file and make the following changes:
 
-- Comment out the entire `jMXAuthenticator` bean.
-- Comment out the entire `jMXregistry` bean.
-- Comment out the entire `jasperJMXServerConnector` bean.
-- Comment out or remove the property `depends-on="jMXregistry"` in the `jasperJMXServer` bean.
+-   Comment out the entire `jMXAuthenticator` bean.
+-   Comment out the entire `jMXregistry` bean.
+-   Comment out the entire `jasperJMXServerConnector` bean.
+-   Comment out or remove the property `depends-on="jMXregistry"` in the `jasperJMXServer` bean.
 
 To comment out a section of this XML file, surround it with `<!--` and `-->` tags.
 
@@ -133,9 +133,9 @@ To comment out a section of this XML file, surround it with `<!--` and `-->` tag
 
 Most app servers also have a JMX agent, and if configured properly, they can discover the JasperReports Server JMX agent and expose the diagnostic information. However, this connection has some significant security implications:
 
-- When the app server discovers and connects to the JMX agent, it has full access to the diagnostic information.
-- If the app server's JMX agent is configured for remote access, the remote manager also has access to the JasperReports Server JMX agent without needing to provide the JasperReports Server username and password. In other words, by trusting the app server to access the diagnostic information, you're also allowing anyone the app server trusts to connect.
-- The connection between the two JMX agents is reciprocal. If remote access is still enabled on the JasperReports Server JMX agent, a remote manager who connects to it also sees the contents of the app server JMX agent. In other words, the app server JMX agent is also trusting anyone who we trust to connect to our JMX agent (with our username and password).
+-   When the app server discovers and connects to the JMX agent, it has full access to the diagnostic information.
+-   If the app server's JMX agent is configured for remote access, the remote manager also has access to the JasperReports Server JMX agent without needing to provide the JasperReports Server username and password. In other words, by trusting the app server to access the diagnostic information, you're also allowing anyone the app server trusts to connect.
+-   The connection between the two JMX agents is reciprocal. If remote access is still enabled on the JasperReports Server JMX agent, a remote manager who connects to it also sees the contents of the app server JMX agent. In other words, the app server JMX agent is also trusting anyone who we trust to connect to our JMX agent (with our username and password).
 
 To connect automatically to the app server's JMX agent, assuming one is available, edit the `default_master.properties` file before you deploy the JasperReports Server web app, and add the following line:
 

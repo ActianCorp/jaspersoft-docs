@@ -7,15 +7,15 @@ description: "If you enter a search term and click !js Repository icon Search bl
 
 If you enter a search term and click ![js Repository icon Search blue](../assets/images/js-Repository-icon-Search-blue.png) at the top of any server page, the server does not use filters. The search uses these default settings:
 
-- Include subfolders.
+-   Include subfolders.
 
-- Start at the top-most folder visible to the user.
+-   Start at the top-most folder visible to the user.
 
-- Search for reports, report outputs, OLAP views, or other resources.
+-   Search for reports, report outputs, OLAP views, or other resources.
 
-- Sort alphabetically by name.
+-   Sort alphabetically by name.
 
-If you click **View \> Search Results** and click ![js Repository icon Search](../assets/images/js-Repository-icon-Search.png)the search results page, the server uses the filters you set in the **Filters** panel.
+If you click **View &gt; Search Results** and click ![js Repository icon Search](../assets/images/js-Repository-icon-Search.png)the search results page, the server uses the filters you set in the **Filters** panel.
 
 In Figure 1‑7, you can see the results of a search for the term “account” using the filters All available and All types.
 
@@ -29,13 +29,13 @@ In Figure 1‑7, you can see the results of a search for the term “account”
 
 You can refine a search using filters. For example, filters can help you find your most recently viewed reports. You can set each filter independently. You can set the following types of filters:
 
-- User
+-   User
 
-- Resource
+-   Resource
 
-- Access time
+-   Access time
 
-- Scheduled report
+-   Scheduled report
 
 The user filter has the following settings:
 
@@ -78,16 +78,16 @@ The scheduled report filter has the following settings:
 
 Remember these do's and don'ts when searching for resources:
 
-- Do use word fragments.
+-   Do use word fragments.
 
-- Do search for the display name or part of the display name of a resource.
+-   Do search for the display name or part of the display name of a resource.
 
-- Do search for words or fragments in the description of a resource.
+-   Do search for words or fragments in the description of a resource.
 
-- Do use multiple words.
+-   Do use multiple words.
 
-- Don’t search for folder names.
+-   Don’t search for folder names.
 
-- Don’t enter quotes around terms or symbols between terms.
+-   Don’t enter quotes around terms or symbols between terms.
 
-- Don’t worry about using upper- or lower-case letters in search terms.
+-   Don’t worry about using upper- or lower-case letters in search terms.

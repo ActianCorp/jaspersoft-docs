@@ -7,9 +7,9 @@ description: "When adding a data source to JasperReports Server, several things 
 
 When adding a data source to JasperReports Server, several things can cause errors. Start by looking at the following general connectivity issues:
 
-- Check that your database server is available and accepting TCP/IP connections from the host where JasperReports Server is installed.
-- Check in your RDBMS that the username and password you are using are correct and have access to the selected database.
-- Check for firewalls or network connectivity errors.
+-   Check that your database server is available and accepting TCP/IP connections from the host where JasperReports Server is installed.
+-   Check in your RDBMS that the username and password you are using are correct and have access to the selected database.
+-   Check for firewalls or network connectivity errors.
 
 Many databases, including MySQL, also require the user grants to include the specific host from which connections are allowed. Otherwise, when testing the JDBC connection, a connection may not be allowed even though the username and password are correct. For more information, refer to the [MySQL documentation for setting up users](http://dev.mysql.com/doc/refman/5.1/en/adding-users.html).
 
@@ -19,15 +19,15 @@ An easy way to test connectivity from the server to the database with a particul
 
 You can enable additional logging to help you find the cause of the error. Set any or all of the following loggers in the server settings interface or in the `.../WEB-INF/log4j.properties` file:
 
-- `log4j.logger.com.jaspersoft.jasperserver.api.engine.jasperreports.service.impl.JdbcDataSourceService`
-- `log4j.logger.com.jaspersoft.jasperserver.api.engine.jasperreports.service.impl.`<br>
-  `JndiJdbcDataSourceService`
-- `log4j.logger.com.jaspersoft.jasperserver.war.action.ReportDataSourceAction`
-- `log4j.logger.com.jaspersoft.commons.datarator.JdbcDataSet`
-- `log4j.logger.com.jaspersoft.jasperserver.war.common.JasperServerUtil`
-- `log4j.logger.com.jaspersoft.commons.semantic.dsimpl.JdbcDataSetFactory`
-- `log4j.logger.com.jaspersoft.commons.semantic.metaapi.impl.jdbc.BaseJdbcMetaDataFactoryImpl`
-- `log4j.logger.com.jaspersoft.jasperserver.war.validation.ReportDataSourceValidator`
+-   `log4j.logger.com.jaspersoft.jasperserver.api.engine.jasperreports.service.impl.JdbcDataSourceService`
+-   `log4j.logger.com.jaspersoft.jasperserver.api.engine.jasperreports.service.impl.`<br>
+    `JndiJdbcDataSourceService`
+-   `log4j.logger.com.jaspersoft.jasperserver.war.action.ReportDataSourceAction`
+-   `log4j.logger.com.jaspersoft.commons.datarator.JdbcDataSet`
+-   `log4j.logger.com.jaspersoft.jasperserver.war.common.JasperServerUtil`
+-   `log4j.logger.com.jaspersoft.commons.semantic.dsimpl.JdbcDataSetFactory`
+-   `log4j.logger.com.jaspersoft.commons.semantic.metaapi.impl.jdbc.BaseJdbcMetaDataFactoryImpl`
+-   `log4j.logger.com.jaspersoft.jasperserver.war.validation.ReportDataSourceValidator`
 
 ## JDBC Drivers
 
@@ -37,15 +37,16 @@ JasperReports Server ships with drivers for several databases, as listed in the 
 
 When creating database users, you must ensure that they have the appropriate privileges to access data, as well as permission to connect from the server that JasperReports Server is running on.
 
-- The database user that you specify in your data source definition needs the privileges to run `SELECT` queries on the tables used in your reports. The server blocks any `DROP, INSERT, UPDATE`, and `DELETE` SQL commands through its SQL injection protection. In some cases, additional permissions may be required to execute stored procedures, depending on your configuration and needs.
-- If you accept the defaults during installation of JasperReports Server on Linux from an RPM using apt-get, rpm, or yum, the bundled PostgreSQL allows only the user who owns PostgreSQL to connect. Enter the following commands to connect:
+-   The database user that you specify in your data source definition needs the privileges to run `SELECT` queries on the tables used in your reports. The server blocks any `DROP, INSERT, UPDATE`, and `DELETE` SQL commands through its SQL injection protection. In some cases, additional permissions may be required to execute stored procedures, depending on your configuration and needs.
 
-``` text
-su - postgres
-psql -U postgres
-```
+-   If you accept the defaults during installation of JasperReports Server on Linux from an RPM using apt-get, rpm, or yum, the bundled PostgreSQL allows only the user who owns PostgreSQL to connect. Enter the following commands to connect:
 
-- Many databases, including MySQL, also require that the user permission name the specific host from which connections are allowed. Otherwise, when testing the JDBC connection, a connection may not be allowed even though the username and password are correct. For example, see the [MySQL documentation for setting up users](http://dev.mysql.com/doc/refman/5.1/en/adding-users.html).
+    ``` text
+    su - postgres
+    psql -U postgres
+    ```
+
+-   Many databases, including MySQL, also require that the user permission name the specific host from which connections are allowed. Otherwise, when testing the JDBC connection, a connection may not be allowed even though the username and password are correct. For example, see the [MySQL documentation for setting up users](http://dev.mysql.com/doc/refman/5.1/en/adding-users.html).
 
 A fairly easy way to test permissions and connectivity is to use a tool such as SquirrelSQL or another DB query tool to connect to the database from the same host as JasperReports Server and to run typical queries against your database.
 
@@ -171,13 +172,13 @@ The ElasticSearch JDBC driver is not enabled by default due to certain limitatio
 
     Be aware of the following issues when using an ElasticSearch data source:
 
-    - It is not supported for JBoss or Wildfly app servers.
+    -   It is not supported for JBoss or Wildfly app servers.
 
-    - Table joins are not supported.
+    -   Table joins are not supported.
 
-    - There may be issues with calculated fields, including more complex aggregation functions, using `*` as a special character, and the use of calculated fields in crosstabs and charts.
+    -   There may be issues with calculated fields, including more complex aggregation functions, using `*` as a special character, and the use of calculated fields in crosstabs and charts.
 
-    - When an ElasticSearch data source is used in a virtual data source, the virtual data source only displays the Base tables of the ElasticSearch data source, not the views, when used in a domain.
+    -   When an ElasticSearch data source is used in a virtual data source, the virtual data source only displays the Base tables of the ElasticSearch data source, not the views, when used in a domain.
 
 To enable the Jaspersoft JDBC drivers for ElasticSearch data sources
 
@@ -209,7 +210,7 @@ If you have trouble with a JNDI connection, you need to look at the JNDI definit
 
 A JNDI connection on Tomcat is defined in two different files. Make sure both have the following information:
 
-- `<tomcat>/webapps/jasperserver/META-INF/context.xml`
+-   `<tomcat>/webapps/jasperserver/META-INF/context.xml`
 
 ``` xml
 <Resource name="jdbc/<db-name>" auth="Container" type="javax.sql.DataSource"
@@ -221,7 +222,7 @@ url="jdbc:mysql://<host>:3306/<database>?autoReconnect=true&amp;autoReconnect
 ForPools=true"/>
 ```
 
-- `<tomcat>/webapps/jasperserver/WEB-INF/web.xml`
+-   `<tomcat>/webapps/jasperserver/WEB-INF/web.xml`
 
 ``` xml
 <resource-ref>
@@ -234,11 +235,11 @@ ForPools=true"/>
 
 Also check the following points:
 
-- Ensure that the driver for your database connection is in the `<tomcat>/lib` folder.
-- Ensure the database user has the privileges to run `SELECT` queries on the tables used in your reports. In some cases, additional permissions may be required to execute stored procedures, depending on your configuration and needs. For more information, see [Database Permissions](working_with_data_sources.md).
-- If you installed JasperReports Server from a WAR file, Tomcat may have created a separate copy of `context.xml` in `<tomcat>/conf/Catalina/Localhost/jasperserver.xml`. See the corresponding section in the troubleshooting appendix of the JasperReports Server Installation Guide.
-- See the [Apache Tomcat documentation for JNDI data sources](http://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html).
-- For Oracle databases, you may need to specify additional parameters in the `context.xml` file. For example, to support in Oracle, add the following line:
+-   Ensure that the driver for your database connection is in the `<tomcat>/lib` folder.
+-   Ensure the database user has the privileges to run `SELECT` queries on the tables used in your reports. In some cases, additional permissions may be required to execute stored procedures, depending on your configuration and needs. For more information, see [Database Permissions](working_with_data_sources.md).
+-   If you installed JasperReports Server from a WAR file, Tomcat may have created a separate copy of `context.xml` in `<tomcat>/conf/Catalina/Localhost/jasperserver.xml`. See the corresponding section in the troubleshooting appendix of the JasperReports Server Installation Guide.
+-   See the [Apache Tomcat documentation for JNDI data sources](http://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html).
+-   For Oracle databases, you may need to specify additional parameters in the `context.xml` file. For example, to support in Oracle, add the following line:
 
 ``` properties
 driverClassName="oracle.jdbc.OracleDriver"
@@ -328,7 +329,7 @@ If your database is Microsoft SQL Server and you use Windows Authentication (als
 
 6.  Log into JasperReports Server as an administrator.
 
-7.  Select **Create \> Data Source** from the main menu.
+7.  Select **Create &gt; Data Source** from the main menu.
 
 8.  In the **Type** field, select **JDBC Data Source**. The page refreshes to show the fields necessary for a JDBC data source.
 
@@ -363,8 +364,8 @@ Dynamic proxies are a Java feature, which allows classes to be generated at run 
 
 Since proxies can only represent interfaces, existing code that tries to cast the bean to a concrete class will break. Casting is usually done to get access to methods on a more specific class or interface. As long as the code is not casting the bean to a concrete class, it will work, so there are two ways to get around this problem:
 
-- If the code needs to access methods on an existing interface, do a cast to that interface, or inject the property using the existing interface, so no cast is needed.
-- If the code needs to access methods that are not on an existing interface, simply create an interface with the methods needed, and have the target object implement that interface.
+-   If the code needs to access methods on an existing interface, do a cast to that interface, or inject the property using the existing interface, so no cast is needed.
+-   If the code needs to access methods that are not on an existing interface, simply create an interface with the methods needed, and have the target object implement that interface.
 
 For example, let us say you have a bean with id `myBean` that needs to access the `jdbcDataSourceServiceFactory`, configured as follows:
 

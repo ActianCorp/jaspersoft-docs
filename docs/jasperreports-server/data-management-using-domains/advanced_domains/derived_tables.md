@@ -33,16 +33,14 @@ To define a derived table
 
 3.  Enter a valid SQL query in **Query**. Only queries that begin with the `SELECT` statement are allowed. Stored procedures and functions are supported. Do *not* include a closing semi-colon (`;`). For Trino, the query should contain the catalog name in prefix of the table and field name. For example:
 
-    - Query for Table using non-Trino data-source: `select * from schema.table_name;`
-    - Query for Table using Trino data-source: `select * from catalog.schema.table_name;`
+-   Query for Table using non-Trino data-source: `select * from schema.table_name;`
+-   Query for Table using Trino data-source: `select * from catalog.schema.table_name;`
 
-    To use an attribute, enter `{attribute('AttributeName')}` or `{attribute('AttributeName', 'Level')}`. This must be a single-valued attribute; collections cannot be used. See [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md) for more information.
+To use an attribute, enter `{attribute('AttributeName')}` or `{attribute('AttributeName', 'Level')}`. This must be a single-valued attribute; collections cannot be used. See [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md) for more information.
 
-4.  When the query is complete, click **Run Query** to test it. If the query is successful, the resulting fields are displayed in the **Query Result** list. By default, all columns in the result are selected.
-
-5.  Ctrl-click fields in the **Query Result** list to change the selection. If you want only a few columns out of many, it may be easier to specify the column names in the `SELECT` clause of the query.
-
-6.  Click **Create Derived Table**.
+1.  When the query is complete, click **Run Query** to test it. If the query is successful, the resulting fields are displayed in the **Query Result** list. By default, all columns in the result are selected.
+2.  Ctrl-click fields in the **Query Result** list to change the selection. If you want only a few columns out of many, it may be easier to specify the column names in the `SELECT` clause of the query.
+3.  Click **Create Derived Table**.
 
 The derived table is added under the Derived Tables node in the **Data Structure** panel. A distinctive icon ![js DomainDesigner icon DerivedTable](../assets/images/js-DomainDesigner-icon-DerivedTable.png) identifies it as a derived table.
 

@@ -15,12 +15,12 @@ The WAR file distribution includes two sample databases containing data for opti
 
 This chapter contains the following sections:
 
-- [Procedure for Installing the WAR File for WebLogic](../../../installation-guide/weblogic/weblogic_install_procedure.md)
-- [Setting Java Properties](../../../installation-guide/weblogic/setting_java_properties.md)
-- [Configuring Other Database Connections](../../../installation-guide/weblogic/weblogic_database_connections.md)
-- [Starting the Server](../../../installation-guide/weblogic/weblogic_starting_jrs.md)
-- [Logging into the Server](../../../installation-guide/weblogic/logging_into_jasperreports_server3.md)
-- [Configuring Report Scheduling](../../../installation-guide/weblogic/configuring_report_scheduling2.md)
-- [Restarting the Server](../../../installation-guide/weblogic/restarting_jasperreports_server.md)
-- [Updating XML/A Connection Definitions (Optional)](../../../installation-guide/weblogic/updating_xml_a_connection_definition2.md)
-- [Troubleshooting Your JasperReports Server Configuration](../../../installation-guide/weblogic/weblogic_troubleshooting_jrs.md)
+-   [Procedure for Installing the WAR File for WebLogic](../../../installation-guide/weblogic/weblogic_install_procedure.md)
+-   [Setting Java Properties](../../../installation-guide/weblogic/setting_java_properties.md)
+-   [Configuring Other Database Connections](../../../installation-guide/weblogic/weblogic_database_connections.md)
+-   [Starting the Server](../../../installation-guide/weblogic/weblogic_starting_jrs.md)
+-   [Logging into the Server](../../../installation-guide/weblogic/logging_into_jasperreports_server3.md)
+-   [Configuring Report Scheduling](../../../installation-guide/weblogic/configuring_report_scheduling2.md)
+-   [Restarting the Server](../../../installation-guide/weblogic/restarting_jasperreports_server.md)
+-   [Updating XML/A Connection Definitions (Optional)](../../../installation-guide/weblogic/updating_xml_a_connection_definition2.md)
+-   [Troubleshooting Your JasperReports Server Configuration](../../../installation-guide/weblogic/weblogic_troubleshooting_jrs.md)

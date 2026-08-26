@@ -11,7 +11,7 @@ To add a logger to the page from the web interface
 
 1.  Log in as system administrator (`superuser` by default).
 
-2.  Select **Manage \>** **Server Settings** and choose **Log Settings** in the left-hand panel.
+2.  Select **Manage &gt;** **Server Settings** and choose **Log Settings** in the left-hand panel.
 
 3.  Scroll to the bottom of the page.
 

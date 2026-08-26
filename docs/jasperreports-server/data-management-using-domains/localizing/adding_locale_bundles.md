@@ -9,8 +9,8 @@ After you have created the locale bundle, use the **Locales** tab in the Domain 
 
 Locale bundles can be uploaded from files for use with the current Domain, or they can be stored in the repository for use with multiple Domains:
 
-- Uploading locale bundles directly to the Domain: When you upload a bundle file on the **Locales** tab, the files are uploaded from your computer and attached to the current Domain. These bundles are stored with the Domain and can't be accessed or shared by other Domains.
-- Sharing bundles from the repository: The repository can also store locale bundles as file resources. Locale bundles uploaded to the repository are not attached to a specific Domain. Instead, they can be referenced by multiple Domains, allowing you to reuse your translations across Domains. Care must be taken to ensure that the keys for labels and descriptions are consistent across all Domains that share a locale bundle.
+-   Uploading locale bundles directly to the Domain: When you upload a bundle file on the **Locales** tab, the files are uploaded from your computer and attached to the current Domain. These bundles are stored with the Domain and can't be accessed or shared by other Domains.
+-   Sharing bundles from the repository: The repository can also store locale bundles as file resources. Locale bundles uploaded to the repository are not attached to a specific Domain. Instead, they can be referenced by multiple Domains, allowing you to reuse your translations across Domains. Care must be taken to ensure that the keys for labels and descriptions are consistent across all Domains that share a locale bundle.
 
 If you need to modify the bundle, the Locales tab lets you download the bundle, upload it again, or delete it from the Domain.
 
@@ -52,9 +52,9 @@ Once locale bundles are associated with the Domain, they are active and used to 
 
 Use the following procedures to add bundles to the repository as shared resources, then use them in your Domain.
 
-1.  As an administrator, select **View \> Repository** and navigate to the folder where you want to store locale bundles.
+1.  As an administrator, select **View &gt; Repository** and navigate to the folder where you want to store locale bundles.
 
-2.  Right-click the folder, and select **Add Resource \> File \> Resource Bundle**.
+2.  Right-click the folder, and select **Add Resource &gt; File &gt; Resource Bundle**.
 
     ![js Repository AddFile ResourceBundle](../assets/images/js-Repository-AddFile-ResourceBundle.png)
 
@@ -98,16 +98,19 @@ Use the following procedures to add bundles to the repository as shared resource
 
 For each bundle listed on the Locales tab, there are two available actions represented by icons:
 
-- ![js DomainDesigner icon download resource](../assets/images/js-DomainDesigner-icon-download-resource.png) – Downloads the selected resource as a `.properties` file.
-- ![js DomainDesigner icon remove](../assets/images/js-DomainDesigner-icon-remove.png) – Removes the bundle from the Domain. Repository resources are not removed from the repository.
+-   ![js DomainDesigner icon download resource](../assets/images/js-DomainDesigner-icon-download-resource.png) – Downloads the selected resource as a `.properties` file.
 
-To modify a locale bundle, upload or add the new file with the same name. You are given a warning that the old bundle will be overwritten and can choose to proceed. When you agree, the old bundle with the same name is overwritten and no longer available in the Domain. If you replace a bundle added from the repository, the old bundle remains in the repository, but it is no longer referenced by this Domain. The new bundle is added to the Domain and takes effect.
+-   ![js DomainDesigner icon remove](../assets/images/js-DomainDesigner-icon-remove.png) – Removes the bundle from the Domain. Repository resources are not removed from the repository.
 
-There are three common cases:
+    To modify a locale bundle, upload or add the new file with the same name. You are given a warning that the old bundle will be overwritten and can choose to proceed. When you agree, the old bundle with the same name is overwritten and no longer available in the Domain. If you replace a bundle added from the repository, the old bundle remains in the repository, but it is no longer referenced by this Domain. The new bundle is added to the Domain and takes effect.
 
-- When you modify a bundle that was uploaded as a local file, you can download it from the **Locales** Tab, then modify it, and upload it again. Uploading the file with the same name will replace the old version of the bundle.
-- If you need to modify a shared bundle, you can download it from the **Locales** tab, modify it, and replace it in the repository. This will change the bundle for all Domains that use it.
-- If you change the current Domain such that it can no longer use the shared bundle, you can download the bundle from the **Locales** tab, modify it, then upload it again as an unshared bundle file.
+    There are three common cases:
+
+-   When you modify a bundle that was uploaded as a local file, you can download it from the **Locales** Tab, then modify it, and upload it again. Uploading the file with the same name will replace the old version of the bundle.
+
+-   If you need to modify a shared bundle, you can download it from the **Locales** tab, modify it, and replace it in the repository. This will change the bundle for all Domains that use it.
+
+-   If you change the current Domain such that it can no longer use the shared bundle, you can download the bundle from the **Locales** tab, modify it, then upload it again as an unshared bundle file.
 
 If you change the name of a locale bundle, remove the old one after uploading the new one.
 

@@ -15,7 +15,7 @@ The Messages page displays the list of events logged for the current user.
 
 To open the Messages page
 
-1.  On any page, click **View \> Messages**. The Messages page appears.
+1.  On any page, click **View &gt; Messages**. The Messages page appears.
 
 2.  To view a message, click its name. The message opens in the Message Detail page.
 

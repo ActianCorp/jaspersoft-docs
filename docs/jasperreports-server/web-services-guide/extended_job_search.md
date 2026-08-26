@@ -91,4 +91,4 @@ For example, you can search for all jobs that specify and output format of PDF. 
 
 And the corresponding URI, with proper encoding, is:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/jobs?example=%7b%22outputFormat%22%3a%22PDF%22%7d
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/jobs?example=%7b%22outputFormat%22%3a%22PDF%22%7d

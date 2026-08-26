@@ -13,9 +13,9 @@ A table must have at least one column, but it can have any number. A set of colu
 
 Each table is divided into sections similar to the main document bands:
 
-- **Table header and footer**: each printed only once.
-- **Column header and footer**: repeated on each page the table spans. For column groups, the table can display a group header and footer section for each group and for each column.
-- **Detail**: repeated for each record of the table. Each column contains only one detail section, and the section cannot span multiple columns.
+-   **Table header and footer**: each printed only once.
+-   **Column header and footer**: repeated on each page the table spans. For column groups, the table can display a group header and footer section for each group and for each column.
+-   **Detail**: repeated for each record of the table. Each column contains only one detail section, and the section cannot span multiple columns.
 
 |                                                       |
 |-------------------------------------------------------|
@@ -39,6 +39,6 @@ You can delete a cell by right-clicking and choosing **Delete cell**. If the cel
 
 Edit cell properties from the **Properties** tab:
 
-- The **Appearance** sub-tab allows you to set location, size, color, style, and print details.
-- You can set cell padding as well as borders from the **Properties \> Borders** tab.
-- Cell height defines the vertical dimension of a cell. When its value is changed, the new dimension is propagated to all the cells in the row.
+-   The **Appearance** sub-tab allows you to set location, size, color, style, and print details.
+-   You can set cell padding as well as borders from the **Properties &gt; Borders** tab.
+-   Cell height defines the vertical dimension of a cell. When its value is changed, the new dimension is propagated to all the cells in the row.

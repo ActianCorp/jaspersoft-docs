@@ -1,11 +1,11 @@
 ---
 title: Cassandra Reports Not Running
-description: "The Cassandra architecture introduces some restrictions that other databases do no have. Certain filters such as is-one-of (IN), <, and > cannot be used with all fields. For example, you may see the..."
+description: "The Cassandra architecture introduces some restrictions that other databases do no have. Certain filters such as is-one-of (IN), &lt;, and &gt; cannot be used with all fields. For example, you may..."
 ---
 
 # Cassandra Reports Not Running
 
-The Cassandra architecture introduces some restrictions that other databases do no have. Certain filters such as is-one-of (IN), \<, and \> cannot be used with all fields. For example, you may see the following error:
+The Cassandra architecture introduces some restrictions that other databases do no have. Certain filters such as is-one-of (IN), &lt;, and &gt; cannot be used with all fields. For example, you may see the following error:
 
 ``` text
 Caused by: com.datastax.driver.core.exceptions.InvalidQueryException: Cannot use IN operator

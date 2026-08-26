@@ -7,8 +7,8 @@ description: The GET method with a user ID (username) retrieves a single descrip
 
 The GET method with a user ID (`username`) retrieves a single descriptor containing the full list of user properties and roles.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to specify users of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to specify users of the root organization.
 
 <table>
 <colgroup>

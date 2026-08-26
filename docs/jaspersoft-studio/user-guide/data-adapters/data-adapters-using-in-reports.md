@@ -24,9 +24,9 @@ When you use a drop-down to select a data adapter for a report or dataset, you a
 
 This data adapter is internal to Jaspersoft Studio. It is stored in an internal property (`com.jaspersoft.studio.data.defaultdataadapter`) which cannot be used in JasperReports Server or JasperReports Library. Therefore, when you publish or deploy a report, you need to specify the data source you want to use in the deployed report. You can do this in the following ways:
 
-- When you publish a report to JasperReports Server, you can select a JasperReports Server data source to use. See [Publishing a Report to JasperReports Server](../jrs-server/jss2jrs-publishing.md) for more information. If you choose this method to select a data source, any subdatasets in the report must use the same data source.
+-   When you publish a report to JasperReports Server, you can select a JasperReports Server data source to use. See [Publishing a Report to JasperReports Server](../jrs-server/jss2jrs-publishing.md) for more information. If you choose this method to select a data source, any subdatasets in the report must use the same data source.
 
-- You can choose to set the default data adapter explicitly for the report and/or any subdatasets. You can set this property separately for any dataset in the report. If this property is present, you cannot choose a different adapter to preview the report.
+-   You can choose to set the default data adapter explicitly for the report and/or any subdatasets. You can set this property separately for any dataset in the report. If this property is present, you cannot choose a different adapter to preview the report.
 
 ## Default Data Adapter
 
@@ -49,14 +49,14 @@ Setting the default data adapter
 
 4.  Choose the format to use for specifying the data adapter location:
 
-    - **Workspace resource**: A file in your workspace, for example, ` value="test/sample-adapter.jrdax"/>`. This should be a file in the same project as your report. If you want to use a global adapter, you need to export it to a file first. See [Importing and Exporting Data Adapters](data-adapters-creating.md) for more information.
-    - **Absolute Path in the file system**: A file path, for example, `value="file:///C:/Adapters/sample-adapter.jrdax"`
-    - **URL**: A remote URL that hosts the data adapter file, for example, `value="http://myserver:8080/sample-adapter.jrdax"`
-    - **Custom value**: A free-form string that identifies the location of the data adapter to use. You could use this if you wanted to enter a string in the `repo:` syntax, for example, `value="repo:/reports/interactive/CustomersDataAdapter"` See [Understanding the repo Syntax](../jrs-server/jss2jrs-repo-syntax.md) for more information.
+-   **Workspace resource**: A file in your workspace, for example, ` value="test/sample-adapter.jrdax"/>`. This should be a file in the same project as your report. If you want to use a global adapter, you need to export it to a file first. See [Importing and Exporting Data Adapters](data-adapters-creating.md) for more information.
 
-5.  If you selected **Workspace resource** or **Absolute Path**, click **Browse** to locate the file in the workspace or in your file system. Otherwise, enter the URL or free-form string.
+    -   **Absolute Path in the file system**: A file path, for example, `value="file:///C:/Adapters/sample-adapter.jrdax"`
+    -   **URL**: A remote URL that hosts the data adapter file, for example, `value="http://myserver:8080/sample-adapter.jrdax"`
+    -   **Custom value**: A free-form string that identifies the location of the data adapter to use. You could use this if you wanted to enter a string in the `repo:` syntax, for example, `value="repo:/reports/interactive/CustomersDataAdapter"` See [Understanding the repo Syntax](../jrs-server/jss2jrs-repo-syntax.md) for more information.
 
-6.  Click **Finish**.
+1.  If you selected **Workspace resource** or **Absolute Path**, click **Browse** to locate the file in the workspace or in your file system. Otherwise, enter the URL or free-form string.
+2.  Click **Finish**.
 
 The default data adapter is set for the dataset. It is represented in the JRXML file using the `net.sf.jasperreports.data.adapter` property.
 

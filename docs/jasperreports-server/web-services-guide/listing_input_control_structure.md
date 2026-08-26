@@ -109,8 +109,8 @@ The following example shows a response in the JSON format:
 
 The structure includes a set of validation rules for each input control. These rules indicate what type of validation your client should perform on input control values it receives from your users, and if the validation fails, the message to display. Depending on the type of the input control, the following validations are possible:
 
-- mandatoryValidationRule – This input is required and your client should ensure the user enters a value.
-- dateTimeFormatValidation – This input must have a data time format and your client should ensure the user enters a valid date and time.
+-   mandatoryValidationRule – This input is required and your client should ensure the user enters a value.
+-   dateTimeFormatValidation – This input must have a data time format and your client should ensure the user enters a valid date and time.
 
 The following sample shows the structure of these two possible validation rules.
 

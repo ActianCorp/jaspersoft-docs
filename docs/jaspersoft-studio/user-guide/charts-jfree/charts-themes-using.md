@@ -9,7 +9,7 @@ Chart themes give you full control over the style of your JFree charts. You can 
 
 To create a JasperReports chart theme
 
-1.  Select **File \> New \> Other** to open the **Select a Wizard** window.
+1.  Select **File &gt; New &gt; Other** to open the **Select a Wizard** window.
 2.  Select the **Chart Themes** wizard and click **Next** to open the **New Chart Theme Wizard**.
 3.  Select a folder and enter a file name for your theme. The file extension must be `.jrctx`.
 4.  Click **Finish**. The **Chart Theme Designer** opens.
@@ -23,13 +23,13 @@ In the **Outline** view, expand the **Chart Theme** list to view the subsections
 | ![chart theme outline](../assets/images/chart-theme-outline.png) |
 | *Figure 1: Chart Theme Designer Outline View*                    |
 
-- **Chart**: Set properties for borders, color, background, and padding.
-- **Title**: Set properties for position, color, alignment, padding, and font.
-- **Subtitle**: Set properties for subtitles. These can be set to **INHERITED** on the **Advanced** tab.
-- **Legend**: Specify whether to show a legend and, if so, its configuration.
-- **Plot**: Set properties for label rotation, foreground, orientation, colors, image alignment, padding, grid lines, chart outline, series stroke and colors, and display and tick label fonts.
-- **Domain Axis**: Set properties for elements along the domain axis.
-- **Range Axis**: Set properties for elements along the range axis.
+-   **Chart**: Set properties for borders, color, background, and padding.
+-   **Title**: Set properties for position, color, alignment, padding, and font.
+-   **Subtitle**: Set properties for subtitles. These can be set to **INHERITED** on the **Advanced** tab.
+-   **Legend**: Specify whether to show a legend and, if so, its configuration.
+-   **Plot**: Set properties for label rotation, foreground, orientation, colors, image alignment, padding, grid lines, chart outline, series stroke and colors, and display and tick label fonts.
+-   **Domain Axis**: Set properties for elements along the domain axis.
+-   **Range Axis**: Set properties for elements along the range axis.
 
 Your settings are applied to all chart types. If you want to see one of the chart types close up, click that chart. Click the close up view to all charts.
 

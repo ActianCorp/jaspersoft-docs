@@ -20,8 +20,8 @@ This error occurs with the following configuration in the file `.../WEB-INF/appl
 
 To fix this behavior, do one of the following:
 
-- Upgrade to OpenJDK 8.
-- Or upgrade to the latest `nss` library. The error no longer occurs with the following version:
+-   Upgrade to OpenJDK 8.
+-   Or upgrade to the latest `nss` library. The error no longer occurs with the following version:
 
 ``` text
 Name        : nss

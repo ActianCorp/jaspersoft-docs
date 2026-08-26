@@ -7,15 +7,15 @@ description: "Starting version 10.0.0 , Jaspersoft Studio features a revised log
 
 Starting version 10.0.0 , Jaspersoft Studio features a revised logging mechanism. The logging process is restructured, providing a centralized system using Apache Log4j2 to capture all application events. This new architecture consolidates 'everything' happening within Jaspersoft Studio, unifying output from the various underlying Java logging frameworks that are shipped, including:
 
-- Log4j1.x
+-   Log4j1.x
 
-- Log4j2.x
+-   Log4j2.x
 
-- SLF4J
+-   SLF4J
 
-- Apache Commons Logging (1.2x, 1.3x)
+-   Apache Commons Logging (1.2x, 1.3x)
 
-- java.util.logging
+-   java.util.logging
 
 All logging behavior is now controlled by a single configuration file, `log4j2.xml`, located in the installation folder. You can easily modify this file for specific logging during debug sessions or normal use.
 
@@ -25,13 +25,13 @@ You can customize the location of this configuration file using the VM argument 
 
 The Eclipse IO Console appender in Jaspersoft Studio is refactored to handle concurrent multi-thread invocations and prevent "appender loops" common in OSGi environments, ensuring reliable log output. This ensures that simultaneous logging requests, whether triggered by UI widgets, internal libraries, or background components, are processed reliably without causing performance bottlenecks or application loops. The logging and performance improvements include:
 
-- A new default setting (`BasicContextSelector`) in the `.ini` file ensures a single `LoggerContext` is used across all bundles, reducing redundant overhead and optimizing memory usage.
+-   A new default setting (`BasicContextSelector`) in the `.ini` file ensures a single `LoggerContext` is used across all bundles, reducing redundant overhead and optimizing memory usage.
 
-- The `log4j2.xml` file now includes optimized defaults and commented snippets. It is recommended to use the Asynchronous File Appender to prevent logging tasks from slowing down the UI.
+-   The `log4j2.xml` file now includes optimized defaults and commented snippets. It is recommended to use the Asynchronous File Appender to prevent logging tasks from slowing down the UI.
 
-- You can now define a specific storage path for log files by adding the `jss.logging.tmpdir` JVM property to your Jaspersoft Studio `.ini` file.
+-   You can now define a specific storage path for log files by adding the `jss.logging.tmpdir` JVM property to your Jaspersoft Studio `.ini` file.
 
-- A new property, `jss.logging.redirectSystemStreams`, allows you to hijack `System.out` and `System.err` and route them through your defined `Log4j2` appenders for centralized error tracking.
+-   A new property, `jss.logging.redirectSystemStreams`, allows you to hijack `System.out` and `System.err` and route them through your defined `Log4j2` appenders for centralized error tracking.
 
 ## Configuration File and Appenders
 
@@ -160,27 +160,27 @@ to capture all output from System.out and System.err, including third-party libr
 
 The default logging configuration includes the following key features:
 
-- The `RollingFile` appender is included but disabled by default. To enable file-based logging, you must correctly configure the target destination and other necessary settings.
+-   The `RollingFile` appender is included but disabled by default. To enable file-based logging, you must correctly configure the target destination and other necessary settings.
 
-  If you are missing logs from external libraries, uncomment the stream redirection settings. This allows the Eclipse console and `RollingFile` appender to intercept all `System.out` and `System.err` data, even if the source library doesn't support Log4j.
+    If you are missing logs from external libraries, uncomment the stream redirection settings. This allows the Eclipse console and `RollingFile` appender to intercept all `System.out` and `System.err` data, even if the source library doesn't support Log4j.
 
-- An async appender, `AsyncRollingFile`, is used as a wrapper for the `RollingFile` appender. This configuration offloads the logging workload, preventing file-writing tasks from slowing down your application.
+-   An async appender, `AsyncRollingFile`, is used as a wrapper for the `RollingFile` appender. This configuration offloads the logging workload, preventing file-writing tasks from slowing down your application.
 
-- The default level is set to INFO to prevent console windows from being cluttered with excessive, low-priority messages.
+-   The default level is set to INFO to prevent console windows from being cluttered with excessive, low-priority messages.
 
-- Several commented-out sample sections are provided. You can use these as templates to customize the configuration, such as enabling DEBUG logging for specific operations (for example, JDBC).
+-   Several commented-out sample sections are provided. You can use these as templates to customize the configuration, such as enabling DEBUG logging for specific operations (for example, JDBC).
 
 !!! note
 
     Configuring the file location using the `-Dlog4j.configurationFile` argument in the Jaspersoft Studio `.ini` file can be tricky due to operating system differences in path handling.
 
-    - Depending on the operating system, both relative and absolute paths may behave inconsistently. There is a critical difference between forward slashes ( / ) and backslashes ( \\ ) when specifying paths across operating systems (especially Windows vs. Linux/macOS).
+    -   Depending on the operating system, both relative and absolute paths may behave inconsistently. There is a critical difference between forward slashes ( / ) and backslashes ( \\ ) when specifying paths across operating systems (especially Windows vs. Linux/macOS).
 
-    - Windows sample:
+    -   Windows sample:
 
-      - Set `-Dlog4j.configurationFile=log4j2.xml` to use the configuration file located within the standard installation folder.
+        -   Set `-Dlog4j.configurationFile=log4j2.xml` to use the configuration file located within the standard installation folder.
 
-      - Use `-Dlog4j.configurationFile=file:///C:/dev/logging/log4j2.xml` to specify a configuration file located in a specific folder on the C: drive.
+        -   Use `-Dlog4j.configurationFile=file:///C:/dev/logging/log4j2.xml` to specify a configuration file located in a specific folder on the C: drive.
 
 ## User Interface Changes
 

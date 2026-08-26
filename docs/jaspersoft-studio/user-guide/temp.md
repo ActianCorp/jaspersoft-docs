@@ -107,13 +107,13 @@ For example, to use a parameter from the main report in your subdataset:
 4.  4\. Now you have to mention the expression of the parameter for this again goes to parameter option and select the parameter which you created in Sub Dataset and whose name is the same as the parameter name of the main report input.
 5.  5\. That is it your work is done.
 
-- Name
-- Expression
-- Filter_Start_Date \$P{Filter_Start_Date}
-- Filter_End_Date \$P{Filter_End_Date}
-- Brand \$P{Brand}
+-   Name
+-   Expression
+-   Filter_Start_Date $P{Filter_Start_Date}
+-   Filter_End_Date $P{Filter_End_Date}
+-   Brand $P{Brand}
 
-Now go to your chart properties \> chart data \> dataset run and create the parameter and set the default value to be the subdataset's parameter.
+Now go to your chart properties &gt; chart data &gt; dataset run and create the parameter and set the default value to be the subdataset's parameter.
 
 For the subdataset that you use in the chart you have to "duplicate" the variables from the main report.
 
@@ -121,7 +121,7 @@ In the report designer, choose the subdataset and add a variable with the same n
 
 But the DefaultValueExpression of the subdataset variable must point to the value of the "main variable":
 
-\$P{main_variable}
+$P{main_variable}
 
 It is possible that a chart works with no further manual manipulations at the xml.
 

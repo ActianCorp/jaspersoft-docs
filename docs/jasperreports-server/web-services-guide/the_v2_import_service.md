@@ -1,11 +1,11 @@
 ---
 title: The v2/import Service
-description: "Use the following service to upload a catalog as a zip file and import it with the given options. Specify options as arguments in the format <argument>=true. Arguments that are omitted are assumed to..."
+description: "Use the following service to upload a catalog as a zip file and import it with the given options. Specify options as arguments in the format &lt;argument&gt;=true. Arguments that are omitted are..."
 ---
 
 # 1.1 The v2/import Service
 
-Use the following service to upload a catalog as a zip file and import it with the given options. Specify options as arguments in the format \<argument\>=true. Arguments that are omitted are assumed to be false. You must be authenticated as the system admin (superuser) to import into root, but organization admins may import into their organizations or suborganizations.
+Use the following service to upload a catalog as a zip file and import it with the given options. Specify options as arguments in the format &lt;argument&gt;=true. Arguments that are omitted are assumed to be false. You must be authenticated as the system admin (superuser) to import into root, but organization admins may import into their organizations or suborganizations.
 
 Jaspersoft does not recommend uploading files greater than 2 gigabytes.
 

@@ -33,4 +33,4 @@ To refine the dashboard’s layout
 
 9.  Change the value in the Country input control. The dashboard reflects the change immediately.
 
-10. Return to the Dashboard Designer and click **Save \> Save Dashboard**. The dashboard is saved to the repository.
+10. Return to the Dashboard Designer and click **Save &gt; Save Dashboard**. The dashboard is saved to the repository.

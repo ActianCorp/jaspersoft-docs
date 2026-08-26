@@ -9,8 +9,8 @@ JasperReports Server 4.7 introduced the ability to encrypt plain-text passwords 
 
 When login encryption is enabled, passwords in both HTTP Basic Authentication and using the login service must be encrypted by the client. Login encryption has two modes:
 
-- Static key encryption – The server only uses one key that never changes. The client only needs to encrypt the password once and can use it for every web service call.
-- Dynamic key encryption – The server changes the encryption key for every session. The client must request the new key and re-encrypt the password before every call using HTTP Basic Authentication or every session using the login service.
+-   Static key encryption – The server only uses one key that never changes. The client only needs to encrypt the password once and can use it for every web service call.
+-   Dynamic key encryption – The server changes the encryption key for every session. The client must request the new key and re-encrypt the password before every call using HTTP Basic Authentication or every session using the login service.
 
 The GetEncryptionKey service does not take any arguments or content input.
 

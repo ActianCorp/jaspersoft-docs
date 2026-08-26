@@ -9,9 +9,9 @@ The rest_v2/reports service has a simple API for obtaining report output, such a
 
 This chapter includes the following sections:
 
-- Running a Report
-- Finding Running Reports
-- Stopping a Running Report
+-   Running a Report
+-   Finding Running Reports
+-   Stopping a Running Report
 
 ## Running a Report
 
@@ -126,29 +126,29 @@ Prefix</span></p></td>
 
 The following examples show various combinations of formats, arguments, and input controls:
 
-- http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html (all pages)
+-   http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html (all pages)
 
-- http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html?page=43
+-   http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html?page=43
 
-- http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf (all pages)
+-   http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf (all pages)
 
-- http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf?page=1
+-   http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf?page=1
 
-- http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/EmployeeAccounts.html?<br>
-  EmployeeID=sarah_id
+-   http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/EmployeeAccounts.html?<br>
+    EmployeeID=sarah_id
 
-- http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report.html?<br>
-  Country_multi_select=USA&Cascading_state_multi_select=WA&Cascading_state_multi_select=CA
+-   http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report.html?<br>
+    Country_multi_select=USA&Cascading_state_multi_select=WA&Cascading_state_multi_select=CA
 
-- http://\<host\>:\<port\>/jrio/rest_v2/reports/samples/reports/FirstJasper.html (all pages)
+-   http://&lt;host&gt;:&lt;port&gt;/jrio/rest_v2/reports/samples/reports/FirstJasper.html (all pages)
 
-- http://\<host\>:\<port\>/jrio/rest_v2/reports/samples/reports/FirstJasper.html?page=5
+-   http://&lt;host&gt;:&lt;port&gt;/jrio/rest_v2/reports/samples/reports/FirstJasper.html?page=5
 
-- http://\<host\>:\<port\>/jrio/rest_v2/reports/samples/reports/FirstJasper.pdf (all pages)
+-   http://&lt;host&gt;:&lt;port&gt;/jrio/rest_v2/reports/samples/reports/FirstJasper.pdf (all pages)
 
-- http://\<host\>:\<port\>/jrio/rest_v2/reports/samples/reports/FirstJasper.pdf?page=5
+-   http://&lt;host&gt;:&lt;port&gt;/jrio/rest_v2/reports/samples/reports/FirstJasper.pdf?page=5
 
-- http://\<host\>:\<port\>/jrio/rest_v2/reports/samples/reports/chartthemes/ChartThemesReport.pdf?chartTheme=aegean
+-   http://&lt;host&gt;:&lt;port&gt;/jrio/rest_v2/reports/samples/reports/chartthemes/ChartThemesReport.pdf?chartTheme=aegean
 
 !!! note
 
@@ -222,9 +222,9 @@ From?</span></p></td>
 
 For security purposes, the search for running reports has the following restrictions:
 
-- The system administrator (`superuser`) can see and cancel any report running on the server.
-- An organization admin (`jasperadmin`) can see every running report. But can cancel only the reports that are started by a user of the same organization or its child organizations.
-- A regular user can see every running report, but can cancel only the reports that they initiated.
+-   The system administrator (`superuser`) can see and cancel any report running on the server.
+-   An organization admin (`jasperadmin`) can see every running report. But can cancel only the reports that are started by a user of the same organization or its child organizations.
+-   A regular user can see every running report, but can cancel only the reports that they initiated.
 
 ## Stopping a Running Report
 

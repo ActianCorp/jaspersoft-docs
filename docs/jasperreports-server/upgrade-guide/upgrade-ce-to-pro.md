@@ -15,21 +15,21 @@ This upgrade process uses the JasperReports Server commercial WAR File Distribut
 
 This chapter contains the following sections:
 
-- General Procedure
+-   General Procedure
 
-- Backing Up Your JasperReports Server CP Instance
+-   Backing Up Your JasperReports Server CP Instance
 
-- Exporting Your CP Repository Data
+-   Exporting Your CP Repository Data
 
-- Preparing the JasperReports Server 5.5 WAR File Distribution
+-   Preparing the JasperReports Server 5.5 WAR File Distribution
 
-- Configuring Buildomatic for Your Database and Application Server
+-   Configuring Buildomatic for Your Database and Application Server
 
-- Upgrading to the Commercial Version of JasperReports Server 5.5
+-   Upgrading to the Commercial Version of JasperReports Server 5.5
 
-- Starting and Logging into JasperReports Server 5.5
+-   Starting and Logging into JasperReports Server 5.5
 
-- Re-Configuring XML/A Connections (Optional)
+-   Re-Configuring XML/A Connections (Optional)
 
 ## General Procedure
 
@@ -65,24 +65,24 @@ Go to the location where you originally unpacked your CP WAR File Distribution z
 
 2.  Run one of the following commands:
 
-    - For PostgreSQL on Windows or Linux:
+    -   For PostgreSQL on Windows or Linux:
 
-      ``` bash
-      cd <js-install-cp>
-      pg_dump --username=postgres  jasperserver  >  js-db-cp-dump.sql
-      ```
+        ``` bash
+        cd <js-install-cp>
+        pg_dump --username=postgres  jasperserver  >  js-db-cp-dump.sql
+        ```
 
-    - For MySQL on Windows:
+    -   For MySQL on Windows:
 
-      ``` text
-      mysqldump --user=root --password=<password> jasperserver > js-db-cp-dump.sql
-      ```
+        ``` text
+        mysqldump --user=root --password=<password> jasperserver > js-db-cp-dump.sql
+        ```
 
-    - For MySQL on Linux:
+    -   For MySQL on Linux:
 
-      ``` text
-      mysqldump --user=root --password=<password> --host=127.0.0.1 jasperserver >js-db-cp-dump.sql
-      ```
+        ``` text
+        mysqldump --user=root --password=<password> --host=127.0.0.1 jasperserver >js-db-cp-dump.sql
+        ```
 
 !!! note
 
@@ -181,11 +181,11 @@ This example uses PostgreSQL (the same general logic applies to other databases)
 
 4.  Edit `default_master.properties` for your database and application server. Sample property values are:
 
-    - `appServerType=tomcat (or wildfly, and so on)`
-    - `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
-    - `dbUsername=postgres`
-    - `dbPassword=postgres`
-    - `dbHost=localhost`
+    -   `appServerType=tomcat (or wildfly, and so on)`
+    -   `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
+    -   `dbUsername=postgres`
+    -   `dbPassword=postgres`
+    -   `dbHost=localhost`
 
 For the Split upgrade, configure the settings in the `default_master.properties` file as described in [Additional Buildomatic Configuration for Split Installation Upgrade](jrs-install-guide/introduction/installation_types.md).
 
@@ -195,7 +195,7 @@ This example uses MySQL (the same general logic applies to other databases).
 
 1.  Copy `mysql_master.properties` from:
 
-    \<js-install-pro\>/buildomatic/sample_conf\>
+    &lt;js-install-pro&gt;/buildomatic/sample_conf&gt;
 
 2.  Paste the file to:
 
@@ -205,11 +205,11 @@ This example uses MySQL (the same general logic applies to other databases).
 
 4.  Edit `default_master.properties` for your database and application server. Sample property values are:
 
-    - `appServerType=tomcat (or wildfly, and so on)`
-    - `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
-    - `dbUsername=root`
-    - `dbPassword=password`
-    - `dbHost=localhost`
+    -   `appServerType=tomcat (or wildfly, and so on)`
+    -   `appServerDir=c:\\Apache Software Foundation\\Tomcat 11.0.x (for example)`
+    -   `dbUsername=root`
+    -   `dbPassword=password`
+    -   `dbHost=localhost`
 
 For the Split upgrade, configure the settings in the `default_master.properties` file as described in [Additional Buildomatic Configuration for Split Installation Upgrade](jrs-install-guide/introduction/installation_types.md).
 
@@ -305,9 +305,9 @@ After configuring the `default_master.properties` file, you can complete the upg
 
 If you are prompted to create a keystore, this means that the server's original keystore was not found in the user's home directory. Proceed with caution:
 
-- In general, it is recommended to exit the upgrade procedure and make sure that the keystore is in the proper location, then rerun the upgrade.
+-   In general, it is recommended to exit the upgrade procedure and make sure that the keystore is in the proper location, then rerun the upgrade.
 
-- If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export the server's repository with a custom key as described in [“Encryption Keys” on page 1](plan-upgrade-7.5.md). Then replace the `import-upgrade` commands in the table above with the following ones that specify the `secret-key` value from the export:
+-   If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export the server's repository with a custom key as described in [“Encryption Keys” on page 1](plan-upgrade-7.5.md). Then replace the `import-upgrade` commands in the table above with the following ones that specify the `secret-key` value from the export:
 
 <table>
 <colgroup>
@@ -385,20 +385,20 @@ You need to update XML/A connection definitions to include the organization the 
 
 The XML/A connection also specifies an instance URI. You need to update this URI to the commercial instance. Edit your XML/A connections as shown in the following examples:
 
-- User IDs
+-   User IDs
 
-  - Change `jasperadmin` to `jasperadmin|organization_1`
-  - Change `joeuser` to `joeuser|organization_1`
+    -   Change `jasperadmin` to `jasperadmin|organization_1`
+    -   Change `joeuser` to `joeuser|organization_1`
 
-- URI values
+-   URI values
 
-  Change:
+    Change:
 
-  `http://localhost:8080/jasperserver/xmla `
+    `http://localhost:8080/jasperserver/xmla `
 
-  to
+    to
 
-  `http://localhost:8080/jasperserver-pro/xmla`
+    `http://localhost:8080/jasperserver-pro/xmla`
 
 ## Additional Tasks to Complete the Upgrade
 

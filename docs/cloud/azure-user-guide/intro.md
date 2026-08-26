@@ -13,26 +13,30 @@ TIBCO JasperReports® Server builds on TIBCO JasperReports® Library as a compr
 
 The heart of the TIBCO Jaspersoft® BI Suite is the server, which you can use to perform the following tasks:
 
-- Easily create reports based on views designed in an intuitive, web-based, drag and drop Ad Hoc Editor.
-- Efficiently and securely manage multiple reports.
-- Interact with reports, including sorting, changing formatting, entering parameters, and drilling on data.
-- Schedule reports for distribution through email and storage in the repository.
-- Arrange reports and web content to create appealing, data-rich Jaspersoft Dashboards that quickly convey business trends.
+-   Easily create reports based on views designed in an intuitive, web-based, drag and drop Ad Hoc Editor.
 
-For users interested in multi-dimensional modeling, we offer Jaspersoft® OLAP, which runs as part of the server.
+-   Efficiently and securely manage multiple reports.
 
-While the Ad Hoc Editor lets users create simple reports, more complex reports can be created outside of the server. You can either use TIBCO Jaspersoft® Studio or manually write JRXML code to create a report that can be run on the server. We recommend that you use Jaspersoft Studio unless you have a thorough understanding of the JasperReports file structure.
+-   Interact with reports, including sorting, changing formatting, entering parameters, and drilling on data.
 
-You can use the following sources of information to learn about JasperReports Server:
+-   Schedule reports for distribution through email and storage in the repository.
 
-- Our core documentation describes how to install, administer, and use JasperReports Server and Jaspersoft Studio. Core documentation is available in PDF format on the [TIBCO Product Documentation website](https://docs.tibco.com/products/tibco-jasperreports-server). You can also access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
+-   Arrange reports and web content to create appealing, data-rich Jaspersoft Dashboards that quickly convey business trends.
 
-- Our Ultimate Guides document advanced features and configuration. They also include best practice recommendations and numerous examples. You can access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
+    For users interested in multi-dimensional modeling, we offer Jaspersoft® OLAP, which runs as part of the server.
 
-- Our [Online Learning Portal](http://www.jaspersoft.com/bi-training-center) lets you learn at your own pace, and covers topics for developers, system administrators, business users, and data integration users. The Portal is available online from the Professional Services section of our [website](http://www.jaspersoft.com/).
+    While the Ad Hoc Editor lets users create simple reports, more complex reports can be created outside of the server. You can either use TIBCO Jaspersoft® Studio or manually write JRXML code to create a report that can be run on the server. We recommend that you use Jaspersoft Studio unless you have a thorough understanding of the JasperReports file structure.
 
-- - Our free samples, which are installed with JasperReports Library, Jaspersoft Studio, and JasperReports Server, are available and documented online. Visit our [GitHub repository](https://github.com/Jaspersoft/jasperreports).
+    You can use the following sources of information to learn about JasperReports Server:
 
-- - If you have a subscription to our professional support offerings, please contact our Technical Support team when you have questions or run into difficulties. They're available on the web at and through email at [https://support.tibco.com](https://support.tibco.com/) and [support@tibco.com](mailto:js-support@tibco.com?subject=Jaspersoft%20Technical%20Support%20Request).
+-   Our core documentation describes how to install, administer, and use JasperReports Server and Jaspersoft Studio. Core documentation is available in PDF format on the [TIBCO Product Documentation website](https://docs.tibco.com/products/tibco-jasperreports-server). You can also access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
+
+-   Our Ultimate Guides document advanced features and configuration. They also include best practice recommendations and numerous examples. You can access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
+
+-   Our [Online Learning Portal](http://www.jaspersoft.com/bi-training-center) lets you learn at your own pace, and covers topics for developers, system administrators, business users, and data integration users. The Portal is available online from the Professional Services section of our [website](http://www.jaspersoft.com/).
+
+-   -   Our free samples, which are installed with JasperReports Library, Jaspersoft Studio, and JasperReports Server, are available and documented online. Visit our [GitHub repository](https://github.com/Jaspersoft/jasperreports).
+
+-   -   If you have a subscription to our professional support offerings, please contact our Technical Support team when you have questions or run into difficulties. They're available on the web at and through email at [https://support.tibco.com](https://support.tibco.com/) and [support@tibco.com](mailto:js-support@tibco.com?subject=Jaspersoft%20Technical%20Support%20Request).
 
 JasperReports Server is a component of both a community project and commercial offerings. Each integrates the standard features such as security, scheduling, a web services interface, and much more for running and sharing reports. Commercial editions provide additional features, including Ad Hoc views and reports, advanced charts, dashboards, Domains, auditing, and a multi-organization architecture for hosting large BI deployments.

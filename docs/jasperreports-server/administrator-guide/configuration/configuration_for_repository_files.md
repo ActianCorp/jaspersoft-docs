@@ -7,9 +7,9 @@ description: "A new configuration is available to control and define the behavio
 
 A new configuration is available to control and define the behavior of the "Open" repository option. The "Open" option supports the following three different behaviors:
 
-- **Open file**: Opens the file in a browser.
-- **Download file**: Downloads the file by browser instead of opening the file.
-- **Open or Download file depending on file type**: The browser decides what action needs to be taken, depending on the file type. If the browser allows opening an embedded PDF file then it opens in the browser, else it downloads the file.
+-   **Open file**: Opens the file in a browser.
+-   **Download file**: Downloads the file by browser instead of opening the file.
+-   **Open or Download file depending on file type**: The browser decides what action needs to be taken, depending on the file type. If the browser allows opening an embedded PDF file then it opens in the browser, else it downloads the file.
 
 To configure the Open action of the file in the repository:
 

@@ -163,7 +163,7 @@ The following table describes the properties you can specify in the `ReportExecu
 </tbody>
 </table>
 
-When successful, the reply from the server contains the `reportExecution` descriptor. This descriptor contains the request ID and status needed in order for the client to request the output. There are two statuses, one for the report execution itself, and one for the chosen output format. The following descriptor shows that the report is still executing (\<status\>execution\</status\>).
+When successful, the reply from the server contains the `reportExecution` descriptor. This descriptor contains the request ID and status needed in order for the client to request the output. There are two statuses, one for the report execution itself, and one for the chosen output format. The following descriptor shows that the report is still executing (&lt;status&gt;execution&lt;/status&gt;).
 
 <table>
 <colgroup>

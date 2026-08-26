@@ -11,10 +11,10 @@ Jaspersoft Studio provides a graphical interface for creating JRXML files. The l
 
 This chapter has the following sections:
 
-- Understanding Bands
-- Modifying Bands
-- Working with Groups
-- Other Group Options
+-   Understanding Bands
+-   Modifying Bands
+-   Working with Groups
+-   Other Group Options
 
 ## Understanding Bands
 

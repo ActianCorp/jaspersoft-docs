@@ -7,25 +7,25 @@ description: "Advanced uses of Domains may consider these configurations:"
 
 Advanced uses of Domains may consider these configurations:
 
-- Disabling the Domain Validation Check
+-   Disabling the Domain Validation Check
 
-- Setting the Level of Referential Integrity
+-   Setting the Level of Referential Integrity
 
-- Optimizing Snowflake Schema Joins
+-   Optimizing Snowflake Schema Joins
 
 When you use Domains with certain database constructs, you may need to configure JasperReports Server:
 
-- Enabling Oracle Synonyms
+-   Enabling Oracle Synonyms
 
-- Enabling CLOB Fields
+-   Enabling CLOB Fields
 
-- Enabling Proprietary Types
+-   Enabling Proprietary Types
 
-- Extending JDBC Type Mapping
+-   Extending JDBC Type Mapping
 
-- Accessing Materialized Views
+-   Accessing Materialized Views
 
-- Modifying Domain Calculated Field Variable Behavior
+-   Modifying Domain Calculated Field Variable Behavior
 
 ## Disabling the Domain Validation Check
 
@@ -348,8 +348,8 @@ java.util.Date</code></pre></div></td>
 
 There are two ways to create a mapping for a proprietary type, as shown in the following table:
 
-- Modify the generic mapping for `NUMERIC` types. By default, any numeric type that doesn't match one of the other types is mapped to `BigDecimal`.
-- Create a secondary mapping under the special `OTHER` key, where the secondary key can be your custom type name.
+-   Modify the generic mapping for `NUMERIC` types. By default, any numeric type that doesn't match one of the other types is mapped to `BigDecimal`.
+-   Create a secondary mapping under the special `OTHER` key, where the secondary key can be your custom type name.
 
 <table>
 <colgroup>
@@ -381,10 +381,8 @@ There are two ways to create a mapping for a proprietary type, as shown in the f
 <code>Configuration</code></p></td>
 <td><p>If your proprietary type is not already defined in this file, you can add it:</p>
 <ul>
-<li>To modify the generic mapping, edit this line:</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">entry</span> <span class="ot">key=</span><span class="st">&quot;NUMERIC&quot;</span> <span class="ot">value=</span><span class="st">&quot;java.math.BigDecimal&quot;</span>/&gt;</span></code></pre></div>
-<ul>
+<li><p>To modify the generic mapping, edit this line:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">entry</span> <span class="ot">key=</span><span class="st">&quot;NUMERIC&quot;</span> <span class="ot">value=</span><span class="st">&quot;java.math.BigDecimal&quot;</span>/&gt;</span></code></pre></div></li>
 <li>To add a secondary key to the <code>OTHER</code> key, follow this example:</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">entry</span> <span class="ot">key=</span><span class="st">&quot;OTHER&quot;</span>&gt;</span>
@@ -440,8 +438,8 @@ Some database types are not even mapped to a JDBC type. In particular, Oracle us
 
 The `applicationContext-jdbc-metadata.xml` file contains `jdbcMetaConfiguration`. It is global for all drivers and contains the following two properties, that are used to map JDBC type to Java types:
 
-- `jdbc2JavaTypeMapping`
-- `codeToJdbcTypeMapping`
+-   `jdbc2JavaTypeMapping`
+-   `codeToJdbcTypeMapping`
 
 In some cases, database or JDBC driver vendors may use the same Type Code or JDBC type for different data types. To address this, JasperReports Server allows the definition of custom mappings for specific databases while keeping the global configuration intact.
 
@@ -491,8 +489,8 @@ To resolve this difference, a specialized mapping is introduced by assigning cod
 
 In this configuration:
 
-- For columns identified as float, JasperReports Server maps the type to `java.lang.Float`.
-- For other floating-point types like double, real, or numeric, identified by the value `otherColumnTypes`, the mapping is set to `java.lang.Double`.
+-   For columns identified as float, JasperReports Server maps the type to `java.lang.Float`.
+-   For other floating-point types like double, real, or numeric, identified by the value `otherColumnTypes`, the mapping is set to `java.lang.Double`.
 
 ## Accessing Materialized Views
 

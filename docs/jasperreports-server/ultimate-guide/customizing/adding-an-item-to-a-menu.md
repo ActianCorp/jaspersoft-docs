@@ -7,9 +7,9 @@ description: "Adding menu items involves three files:"
 
 Adding menu items involves three files:
 
-- The actionModel file for the menu item.
-- The properties file that labels the menu item.
-- An action file that handles events for the menu item.
+-   The actionModel file for the menu item.
+-   The properties file that labels the menu item.
+-   An action file that handles events for the menu item.
 
 This example adds a special menu item so that MyCompany employees can easily find their accounts reports.
 
@@ -95,7 +95,7 @@ This example adds a special menu item so that MyCompany employees can easily fin
 
 10. Save the modified files and reload the web app in the app server to see the changes (see [1.0.1, “Reloading the JasperReports Server Web App,” on page 1](reloading-jrs-webapp.md)).
 
-11. When the web app has reloaded, log into JasperReports Server as `joeuser`. You'll see the **View \> MyCompany Accounts** menu item was created and, when you select it, it performs a customized search. The following figure shows both the menu item and the search results on the same page.
+11. When the web app has reloaded, log into JasperReports Server as `joeuser`. You'll see the **View &gt; MyCompany Accounts** menu item was created and, when you select it, it performs a customized search. The following figure shows both the menu item and the search results on the same page.
 
 ![js Customization ViewAccounts](../assets/images/js-Customization-ViewAccounts.png)
 

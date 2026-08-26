@@ -7,17 +7,17 @@ description: "DomEL is the primary language used inside the tags in the Domain d
 
 DomEL is the primary language used inside the tags in the Domain design file. You can use SQL in the following situations:
 
-- The `query` tag in the derived tables section of the Domain design file expects an SQL function. See [Derived Tables](../advanced_domains/derived_tables.md) for more information.
+-   The `query` tag in the derived tables section of the Domain design file expects an SQL function. See [Derived Tables](../advanced_domains/derived_tables.md) for more information.
 
-- In addition, you may use SQL functions in a DomEL expression, but only in limited circumstances:
+-   In addition, you may use SQL functions in a DomEL expression, but only in limited circumstances:
 
-  - The functions must be supported by the database. See the vendor documentation for available functions and their syntax.
+    -   The functions must be supported by the database. See the vendor documentation for available functions and their syntax.
 
-  - The functions must follow the convention of comma-separated parameters. For example, you can use `TRIM(person.name)`, but not `TRIM('Jr' FROM person.name)`
+    -   The functions must follow the convention of comma-separated parameters. For example, you can use `TRIM(person.name)`, but not `TRIM('Jr' FROM person.name)`
 
-  - The type of the return values must be appropriate, either within the expression or for the type of the calculated field.
+    -   The type of the return values must be appropriate, either within the expression or for the type of the calculated field.
 
-  - The SQL context must be appropriate for the functions. For example, you cannot use aggregation functions such as `COUNT` in a calculated field because there is no `GROUP BY` clause.
+    -   The SQL context must be appropriate for the functions. For example, you cannot use aggregation functions such as `COUNT` in a calculated field because there is no `GROUP BY` clause.
 
 Except for the comma-separated parameter pattern, the DomEL validation cannot enforce these criteria. You must ensure that any SQL functions meet these criteria, otherwise the expression causes errors when using the Domain to create a report.
 
@@ -25,13 +25,13 @@ Except for the comma-separated parameter pattern, the DomEL validation cannot en
 
 Groovy is an interpreted language for the JVM. Domains and DomEL use Groovy in the following ways:
 
-- The `<principalExpression>` tag in an access grant in the Domain Security file uses a Groovy expression to get the current authentication object and determine its access privileges, along with the user and roles associated with the object. In this case, Groovy is used directly inside the tag. See [Securing Data in a Domain](../domain_security/securing_data_in_a_domain.md) for more information.
+-   The `<principalExpression>` tag in an access grant in the Domain Security file uses a Groovy expression to get the current authentication object and determine its access privileges, along with the user and roles associated with the object. In this case, Groovy is used directly inside the tag. See [Securing Data in a Domain](../domain_security/securing_data_in_a_domain.md) for more information.
 
-- You can use the DomEL `groovy()` function as part of a DomEL expression. The DomEl `groovy` function takes a single string argument that is interpreted as Groovy code. The output of the function is a string that is put into the SQL. To include Groovy, use the following syntax:
+-   You can use the DomEL `groovy()` function as part of a DomEL expression. The DomEl `groovy` function takes a single string argument that is interpreted as Groovy code. The output of the function is a string that is put into the SQL. To include Groovy, use the following syntax:
 
 `groovy('your groovy code here')`
 
-- For example, the following simple expression could be used to set the value of the calculated field `e.groovyEval` to the SQL string corresponding to the value of 5.0/6:
+-   For example, the following simple expression could be used to set the value of the calculated field `e.groovyEval` to the SQL string corresponding to the value of 5.0/6:
 
 `<field id="e.groovyEval" dataSetExpression="groovy('(5.0/6).toString()')" type="java.lang.String" />`
 

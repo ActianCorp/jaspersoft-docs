@@ -9,8 +9,8 @@ You can add new columns to a Domain by performing calculations on other columns.
 
 You create a calculated field for a Domain in two ways:
 
-- By writing an expression that computes a value based on the data in one or more columns in a single table or join tree. All columns in the expression for a calculated field must be from the same join tree.
-- By creating a constant expression. For example, you might create an integer field named Count that has the value 1 and later has a default summary function to count all occurrences.
+-   By writing an expression that computes a value based on the data in one or more columns in a single table or join tree. All columns in the expression for a calculated field must be from the same join tree.
+-   By creating a constant expression. For example, you might create an integer field named Count that has the value 1 and later has a default summary function to count all occurrences.
 
 !!! note
 
@@ -40,19 +40,20 @@ Calculated fields appear in the **Data Structure** panel on the **Joins, Pre-fil
 
 5.  Enter an expression for the calculated field in the Formula text box:
 
-    - To insert a reference to the value of another column, find it in the **Available Fields** list and double-click the column name. The column name appears in the expression at the cursor, qualified by its table name. You can also type a column name directly in the Formula box, in the format `tablename.fieldname`.
-    - To add a supported operator, click the operator icons below the **Formula** box, or type the operator directly.
-    - To use an attribute, enter `attribute('AttributeName')` or `attribute('AttributeName', 'Level')`. This must be a single-valued attribute; collections cannot be used. See [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md) for more information.
+-   To insert a reference to the value of another column, find it in the **Available Fields** list and double-click the column name. The column name appears in the expression at the cursor, qualified by its table name. You can also type a column name directly in the Formula box, in the format `tablename.fieldname`.
 
-    !!! note
+    -   To add a supported operator, click the operator icons below the **Formula** box, or type the operator directly.
+    -   To use an attribute, enter `attribute('AttributeName')` or `attribute('AttributeName', 'Level')`. This must be a single-valued attribute; collections cannot be used. See [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md) for more information.
 
-        - Calculated field expressions use the Domain Expression Language, fully described in [Domain Expression Language (DomEL)](../domel/domain_expression_language.md).
+!!! note
 
-6.  Click **Validate** to verify the calculated field datatype and syntax. You must fix any errors before you can save; the validation error message can help you with this:
+    -   Calculated field expressions use the Domain Expression Language, fully described in [Domain Expression Language (DomEL)](../domel/domain_expression_language.md).
+
+1.  Click **Validate** to verify the calculated field datatype and syntax. You must fix any errors before you can save; the validation error message can help you with this:
 
     ![js DomainDesigner ValidateCalcField](../assets/images/js-DomainDesigner-ValidateCalcField.png)
 
-7.  Click **Create Field** to save the new calculated field.
+2.  Click **Create Field** to save the new calculated field.
 
 If the calculated field is valid, it appears in the **Data Selection** panel under the table or join tree you chose. A distinctive icon ![js DomainDesigner icon CalcField](../assets/images/js-DomainDesigner-icon-CalcField.png) identifies it as a calculated field.
 

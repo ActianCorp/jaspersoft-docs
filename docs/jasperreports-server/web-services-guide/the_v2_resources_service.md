@@ -17,19 +17,19 @@ The ID of a resource is its unique name within the folder where it resides. Reso
 
 When sending resource descriptors in requests, the URI field is ignored. The URI and ID of a created resource is determined in one of the following ways:
 
-- POST operations on the v2/resources service specify a folder. The resource descriptor in the request is created in the specified folder. The ID is created automatically from the label of the resource by replacing special characters with underscores (`_`). The URI of the new resource is returned in the server's response and consists of the target folder with the automatic ID appended to it.
-- PUT operations on the v2/resources service send a descriptor to create the resource at the URI specified in the request. The resource ID is the last element of this URI, as long as it is unique in the parent folder. The server's response should confirm that the resource was successfully created with the requested URI.
+-   POST operations on the v2/resources service specify a folder. The resource descriptor in the request is created in the specified folder. The ID is created automatically from the label of the resource by replacing special characters with underscores (`_`). The URI of the new resource is returned in the server's response and consists of the target folder with the automatic ID appended to it.
+-   PUT operations on the v2/resources service send a descriptor to create the resource at the URI specified in the request. The resource ID is the last element of this URI, as long as it is unique in the parent folder. The server's response should confirm that the resource was successfully created with the requested URI.
 
 ### Custom Media Types
 
 In order to specify all the different types of resources, the v2/resources service relies on custom media types with the following syntax:
 
-application/repository.\<resourceType\>+\<format\>
+application/repository.&lt;resourceType&gt;+&lt;format&gt;
 
 where:
 
-- \<resourceType\> is the name for each type of repository resource, such as reportUnit, dataType, or jdbcDataSource. The names of all supported types are given in V2 Resource Descriptor Types.
-- \<format\> is the representation format of the descriptor, either json or xml.
+-   &lt;resourceType&gt; is the name for each type of repository resource, such as reportUnit, dataType, or jdbcDataSource. The names of all supported types are given in V2 Resource Descriptor Types.
+-   &lt;format&gt; is the representation format of the descriptor, either json or xml.
 
 For example:
 
@@ -43,15 +43,17 @@ The custom media types should be used in Content-Type and Accept HTTP headers, a
 
 Client applications should use the Accept HTTP header in a request to specify the desired format in the server's response. Generally, regardless of the resource type, it's enough to specify:
 
-- Accept: application/json to get response in JSON format or
-- Accept: application/xml to get response in XML fomat.
+-   Accept: application/json to get response in JSON format or
 
-The server will respond with the specific custom media type for the requested resource, as described in the next section.
+-   Accept: application/xml to get response in XML fomat.
 
-However, there are some special cases where client must specify a precise resource type:
+    The server will respond with the specific custom media type for the requested resource, as described in the next section.
 
-- When requesting the resource details of the root folder, client must specify application/repository.folder+\<format\> to get its resource descriptor. Otherwise, the request is considered a search of the root folder.
-- When requesting the resource details of a file resource, as opposed to the file contents, the client must specify application/repository.file+\<format\>. Without this Accept header, the response will contain the file contents. The custom media type also distinguishes between the XML descriptor of a file and the contents of an XML file.
+    However, there are some special cases where client must specify a precise resource type:
+
+-   When requesting the resource details of the root folder, client must specify application/repository.folder+&lt;format&gt; to get its resource descriptor. Otherwise, the request is considered a search of the root folder.
+
+-   When requesting the resource details of a file resource, as opposed to the file contents, the client must specify application/repository.file+&lt;format&gt;. Without this Accept header, the response will contain the file contents. The custom media type also distinguishes between the XML descriptor of a file and the contents of an XML file.
 
 If the client specifies a custom type in the Accept header that does not match the resource being requested, the server responds with the error code 406 Not Acceptable.
 
@@ -59,33 +61,36 @@ If the client specifies a custom type in the Accept header that does not match t
 
 The Content-Type HTTP header indicates the media type being sent in the body of the request or response. For example, if the client requests a valid datatype resource, and depending on the format that the client specified in the Accept header of the request, the server's response includes:
 
-- Content-Type: application/repository.dataType+json or
-- Content-Type: application/repository.dataType+xml
+-   Content-Type: application/repository.dataType+json or
 
-When the client uploads a resource descriptor to create or update a resource, it must set the Content-Type connector accurately. For example, when uploading a datatype resource represented in XML, the client must send:
+-   Content-Type: application/repository.dataType+xml
 
-Content-Type: application/repository.dataType+xml
+    When the client uploads a resource descriptor to create or update a resource, it must set the Content-Type connector accurately. For example, when uploading a datatype resource represented in XML, the client must send:
 
-The server relies on the Content-Type header to parse the body of the request, and it will respond with the error code 400 Bad Request if there is a mismatch. In the example above, the following headers will result in an error:
+    Content-Type: application/repository.dataType+xml
 
-- Content-Type: application/xml - custom media type not included
-- Content-Type: application/repository.reportUnit+xml - media type mismatch
-- Content-Type: application/repository.dataType+json - format mismatch
+    The server relies on the Content-Type header to parse the body of the request, and it will respond with the error code 400 Bad Request if there is a mismatch. In the example above, the following headers will result in an error:
+
+-   Content-Type: application/xml - custom media type not included
+
+-   Content-Type: application/repository.reportUnit+xml - media type mismatch
+
+-   Content-Type: application/repository.dataType+json - format mismatch
 
 ### JSON Format
 
 JasperReports® Server uses the standard JSON (JavaScript Object Notation) format to send and receive representations of resources and other structures. The JSON marshalling and unmarshalling (parsing) uses the following conventions:
 
-- Attributes with no value or a null value are not transmitted in a request.
-- Unknown properties that JasperReports® Server does not recognize are ignored without error.
-- Dates should be given in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format.
+-   Attributes with no value or a null value are not transmitted in a request.
+-   Unknown properties that JasperReports® Server does not recognize are ignored without error.
+-   Dates should be given in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format.
 
 ### Nested Resources
 
 Many types of resources in the repository are defined in terms of other resources. For example, some types of input controls require a query, and the query itself requires a data source. The nested query and data source can be defined in two ways:
 
-- Referenced resources - a link to a valid resource defined elsewhere in the repository. JasperReports® Server manages the references between resources by enforcing permissions and protecting dependencies from deletion.
-- Local resources - a resource descriptor nested within the parent descriptor. The nested resource is fully defined within the parent resource and not available for being referenced from elsewhere.
+-   Referenced resources - a link to a valid resource defined elsewhere in the repository. JasperReports® Server manages the references between resources by enforcing permissions and protecting dependencies from deletion.
+-   Local resources - a resource descriptor nested within the parent descriptor. The nested resource is fully defined within the parent resource and not available for being referenced from elsewhere.
 
 Both types of nested resources are further described in the following sections.
 
@@ -254,11 +259,11 @@ Use nested descriptors such as the ones above to create resources that contain l
 
 Internally, the v2/repository service handles local resources as normal resources contained in a hidden folder. The hidden folder containing local resources has the following name:
 
-\<parentURI\>\_files/
+&lt;parentURI&gt;\_files/
 
 and local resources can be accessed at the following URI:
 
-\<parentURI\>\_files/\<resourceID\>
+&lt;parentURI&gt;\_files/&lt;resourceID&gt;
 
 In the example above, we can see that the parent query resource is a nested resource itself. Its URI shows us that it is the query resource for a query-based input-control of a topic resource:
 

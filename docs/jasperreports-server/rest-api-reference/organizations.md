@@ -17,12 +17,12 @@ Only administrative users may access the organizations service. System admins (`
 
 This chapter includes the following sections:
 
-- Searching for Organizations
-- Viewing an Organization
-- Creating an Organization
-- Modifying Organization Properties
-- Setting the Theme of an Organization
-- Deleting an Organization
+-   Searching for Organizations
+-   Viewing an Organization
+-   Creating an Organization
+-   Modifying Organization Properties
+-   Setting the Theme of an Organization
+-   Deleting an Organization
 
 ## Searching for Organizations
 

@@ -11,8 +11,8 @@ To retrieve logs:
 
     1.  To follow the logs, run this command:
 
-    `tail -f /var/log/jasperserver/jasperserver.log`
+        `tail -f /var/log/jasperserver/jasperserver.log`
 
-2.  To dump log content, run this command:
+    2.  To dump log content, run this command:
 
 `cat /var/log/jasperserver/jasperserver.log`

@@ -13,7 +13,7 @@ description: This document describes how to build from a command-line shell in L
 
 The JasperReports Server source code comes with a set of configuration and build scripts based on Apache Ant known as the buildomatic scripts. You will find these scripts in the following directory:
 
-\<js-src\>/jasperserver/buildomatic
+&lt;js-src&gt;/jasperserver/buildomatic
 
 The buildomatic scripts automate most aspects of configuring, building, and deploying the source code. Apache Ant is bundled into the source code distribution to simplify the setup.
 
@@ -106,7 +106,7 @@ default_master.properties
 
 !!! note
 
-    When specifying paths with Apache Ant and Java in Windows, a single forward slash (/) normally works the same as “escaped” double backlashes (\\).
+    When specifying paths with Apache Ant and Java in Windows, a single forward slash (/) normally works the same as “escaped” double backlashes (\\\\).
 
 ### PostgreSQL
 

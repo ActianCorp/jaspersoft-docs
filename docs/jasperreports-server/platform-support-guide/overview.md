@@ -7,17 +7,17 @@ description: "This document contains a list of platforms that are supported in e
 
 This document contains a list of platforms that are supported in editions of the Jaspersoft Version product releases:
 
-- JasperReports® Server 10.1.0
+-   JasperReports® Server 10.1.0
 
-- Jaspersoft® Studio Pro 10.1.0
+-   Jaspersoft® Studio Pro 10.1.0
 
-- JasperReports® IO Pro 10.1.0
+-   JasperReports® IO Pro 10.1.0
 
-- JasperReports® IO At-Scale 10.1.0
+-   JasperReports® IO At-Scale 10.1.0
 
-- JasperReports® Library 10.1.0
+-   JasperReports® Library 10.1.0
 
-- JasperReports® Web Studio Pro 10.1.0
+-   JasperReports® Web Studio Pro 10.1.0
 
 ## Support Policies
 

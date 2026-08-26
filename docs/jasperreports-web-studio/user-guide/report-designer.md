@@ -7,13 +7,13 @@ description: "JasperReports Web Studio's main feature is the editor for JRXML re
 
 JasperReports Web Studio's main feature is the editor for JRXML report templates. Like Jaspersoft Studio, the editor has three tabs:
 
-- Visual report designer
+-   Visual report designer
 
-- Query designer
+-   Query designer
 
-- JRXML source editor
+-   JRXML source editor
 
-- Report preview
+-   Report preview
 
 You can switch between these tabs using buttons at the upper-right corner of the application window.
 
@@ -47,29 +47,29 @@ You can use this feature to align various elements in the Designing Area. When m
 
 Use the context menu from the **Outline** to align and resize the elements in the Designing Area. Right-click on an element to use any of the following options:
 
-- **Fit Both**: Fits the element within the container in the Designing Area.
+-   **Fit Both**: Fits the element within the container in the Designing Area.
 
-- **Delete**: Deletes the element.
+-   **Delete**: Deletes the element.
 
-- **Copy**: Copies the element.
+-   **Copy**: Copies the element.
 
-- **Paste**: Pastes the element.
+-   **Paste**: Pastes the element.
 
-- **Duplicate**: Creates a copy of the element.
+-   **Duplicate**: Creates a copy of the element.
 
-- **Enclose in Frame**: Encloses the elements in a frame. Set properties for the frame to apply them to all the elements within the frame at the same time.
+-   **Enclose in Frame**: Encloses the elements in a frame. Set properties for the frame to apply them to all the elements within the frame at the same time.
 
-  - If you select an element within a frame, a new option ![SelectParentFrame](assets/images/SelectParentFrame.png) to select all the elements in the frame is available.
+    -   If you select an element within a frame, a new option ![SelectParentFrame](assets/images/SelectParentFrame.png) to select all the elements in the frame is available.
 
-  - Only when a frame is selected, the **Lock Frame** option is displayed. This action locks the elements in the frame. The elements cannot be selected or dragged and dropped. You can **Unlock Frame** to perform the actions as required.
+    -   Only when a frame is selected, the **Lock Frame** option is displayed. This action locks the elements in the frame. The elements cannot be selected or dragged and dropped. You can **Unlock Frame** to perform the actions as required.
 
-- **Center Element**: Aligns the element to the center.
+-   **Center Element**: Aligns the element to the center.
 
-- **Adapt to Container**: Aligns the element to **Fit Width**, **Fit Height**, or **Fit Both** (width and height), within the container in which it is placed.
+-   **Adapt to Container**: Aligns the element to **Fit Width**, **Fit Height**, or **Fit Both** (width and height), within the container in which it is placed.
 
-- **Arrange**: Arranges the element **To Back**, **To Front**, **Backward**, or **Forward**.
+-   **Arrange**: Arranges the element **To Back**, **To Front**, **Backward**, or **Forward**.
 
-- **Align in Container**: Aligns the element within the container.
+-   **Align in Container**: Aligns the element within the container.
 
 Whenever you select an element from **Outline**, the context menu actions that you see for the elements are also available in the horizontal mini toolbar. The mini toolbar is displayed when you click an element. It provides the option to duplicate, delete, copy, and when you click the ellipses, a list of sub-menu options are shown.
 
@@ -132,9 +132,9 @@ Click **Next**, to navigate to the next step, or click **Cancel** to close the d
 
 ![TableWizard2](assets/images/TableWizard2.png)
 
-In the next tab, select the fields of the dataset that can be used to produce the tables column. Click **\>** to transfer one or more fields from the left side to the right. Click **\<** to move one or more fields from right to left side.
+In the next tab, select the fields of the dataset that can be used to produce the tables column. Click **&gt;** to transfer one or more fields from the left side to the right. Click **&lt;** to move one or more fields from right to left side.
 
-To move all the fields from left side to the right, click **\>\>** or click **\<\<** to move fields from right to left side.
+To move all the fields from left side to the right, click **&gt;&gt;** or click **&lt;&lt;** to move fields from right to left side.
 
 ![TableWizard3](assets/images/TableWizard3.png)
 
@@ -228,51 +228,51 @@ For example, in the following screenshot, the data populated the next two column
 
 This feature enables you to add a crosstab to the report with ease. Drag the **Crosstab** element from the Palette to the **Summary** section on the report page.
 
-- In the **Crosstab Wizard**, select the dataset from the **Dataset** dropdown.
+-   In the **Crosstab Wizard**, select the dataset from the **Dataset** dropdown.
 
-  ![CrosstabWizard1](assets/images/CrosstabWizard1.png)
+    ![CrosstabWizard1](assets/images/CrosstabWizard1.png)
 
-  Click **Next**, to go to the next screen or click **Cancel**, to cancel the operation
+    Click **Next**, to go to the next screen or click **Cancel**, to cancel the operation
 
-- In the next tab, to define at least one-column group, select one or more fields and click **\>** to transfer one or more fields from the left side to the right. You can also move one or more fields from the right side to the left.
+-   In the next tab, to define at least one-column group, select one or more fields and click **&gt;** to transfer one or more fields from the left side to the right. You can also move one or more fields from the right side to the left.
 
-  To move all the fields from left side to the right, Click **\>\>**.
+    To move all the fields from left side to the right, Click **&gt;&gt;**.
 
-  Click **Next** to add the row group fields, or click **Previous** to navigate to the previous screen.
+    Click **Next** to add the row group fields, or click **Previous** to navigate to the previous screen.
 
-  ![CrosstabWizard2](assets/images/CrosstabWizard2.png)
+    ![CrosstabWizard2](assets/images/CrosstabWizard2.png)
 
-- In the next tab, to define at least one-row group, select one or more fields and click **\<** to move one or more fields from left to the right side.
+-   In the next tab, to define at least one-row group, select one or more fields and click **&lt;** to move one or more fields from left to the right side.
 
-  To move all the fields from right side to the left, click **\<\<**.
+    To move all the fields from right side to the left, click **&lt;&lt;**.
 
-  Once you select a field for a column or a row group, the following options are available on the right-hand side:
+    Once you select a field for a column or a row group, the following options are available on the right-hand side:
 
-  - **Field**: Displays the name of the field.
+    -   **Field**: Displays the name of the field.
 
-  - **Order**: Enables you to choose the option to display the details in order. You can select, Ascending, or Descending from the dropdown menu.
+    -   **Order**: Enables you to choose the option to display the details in order. You can select, Ascending, or Descending from the dropdown menu.
 
-  - **Total Position**: None, Start, End.
+    -   **Total Position**: None, Start, End.
 
-  - **Calculation**: None, Count, Sum, Average, Lowest, Highest, Standard Deviation, Variance, System, First, Distinct Count.
+    -   **Calculation**: None, Count, Sum, Average, Lowest, Highest, Standard Deviation, Variance, System, First, Distinct Count.
 
-  Click **Next**.
+    Click **Next**.
 
 !!! note
 
     If a field is already selected in the column group, you cannot view the same field in the row group.
 
-- To define at least one measure, select one or more fields and click \> to move one or more fields from the left side to the right. You can also move one or more fields from the right side to the left.
+-   To define at least one measure, select one or more fields and click &gt; to move one or more fields from the left side to the right. You can also move one or more fields from the right side to the left.
 
-  Click **Next**.
+    Click **Next**.
 
-- The **Crosstab Wizard** now displays a sample of the Crosstab. The **Cell Colors** and **Borders** can be adjusted. You can use the **Show Grid** toggle to control the display of the borders in the crosstab.
+-   The **Crosstab Wizard** now displays a sample of the Crosstab. The **Cell Colors** and **Borders** can be adjusted. You can use the **Show Grid** toggle to control the display of the borders in the crosstab.
 
-  You can change the colors by clicking the color box next to the **Total Color**, **Group Color**, **Measure Color**, **Detail Color** and **Border Color** respectively. The color changes dynamically.
+    You can change the colors by clicking the color box next to the **Total Color**, **Group Color**, **Measure Color**, **Detail Color** and **Border Color** respectively. The color changes dynamically.
 
-  ![CrosstabWizardColorBorder](assets/images/CrosstabWizardColorBorder.png)
+    ![CrosstabWizardColorBorder](assets/images/CrosstabWizardColorBorder.png)
 
-  Click **Finish**, to generate the crosstab.
+    Click **Finish**, to generate the crosstab.
 
 The Crosstab is created on the **Summary** band of the report.
 
@@ -346,11 +346,11 @@ In case dataset, fields, parameters, and variables are either renamed or deleted
 
 To copy and paste elements in the report layout designer, you can use any one of the following options:
 
-- Select the component and use the standard browser shortcut keys (Ctrl+C and Ctrl+V) from the keyboard.
+-   Select the component and use the standard browser shortcut keys (Ctrl+C and Ctrl+V) from the keyboard.
 
 OR
 
-- Right-click on the component and from the context menu, select **Copy** and then **Paste**.
+-   Right-click on the component and from the context menu, select **Copy** and then **Paste**.
 
 ### Expression Editor
 
@@ -386,9 +386,9 @@ To access the Query Designer:
 
 The Query Designer provides the following two views:
 
-- **Text view:** Enables direct editing of SQL queries with syntax highlighting.
+-   **Text view:** Enables direct editing of SQL queries with syntax highlighting.
 
-- **Outline view**: Displays query components such as **SELECT**, **FROM**, **WHERE**, **GROUP BY**, and **ORDER BY** in a structured format.
+-   **Outline view**: Displays query components such as **SELECT**, **FROM**, **WHERE**, **GROUP BY**, and **ORDER BY** in a structured format.
 
 The changes made in any one view are automatically updated in the other view.
 
@@ -412,17 +412,17 @@ If the configured data adapter is not valid, an error message is shown when you 
 
 You can create queries either by using drag-and-drop operations or by manually editing SQL.
 
-- Drag columns into the **SELECT** clause.
+-   Drag columns into the **SELECT** clause.
 
-  ![QueryD creating query](assets/images/QueryD_creating%20query.png)
+    ![QueryD creating query](assets/images/QueryD_creating%20query.png)
 
-- Drag tables into the **FROM** clause.
+-   Drag tables into the **FROM** clause.
 
-- Add sorting fields to **ORDER BY**.
+-   Add sorting fields to **ORDER BY**.
 
-- Drag fields from the **Metadata** panel.
+-   Drag fields from the **Metadata** panel.
 
-- Drag parameters from the **Parameters** panel.
+-   Drag parameters from the **Parameters** panel.
 
 The query structure is updated automatically.
 
@@ -443,9 +443,9 @@ Conditions support logical operators, such as **AND** and **OR**. The same is ap
 
 The Expression editor allows you to add custom expressions to the **SELECT**, **FROM**, and **WHERE** clauses. To add custom expressions:
 
-- Drag fields into expressions and combine fields, constants, and operators.
+-   Drag fields into expressions and combine fields, constants, and operators.
 
-- Add subqueries by configuring nested queries using the **Subquery** option in the editor.
+-   Add subqueries by configuring nested queries using the **Subquery** option in the editor.
 
 ![subquery queryD](assets/images/subquery_queryD.png)
 
@@ -457,11 +457,11 @@ Click **Preview Data** to run the query and view the results.
 
 The system displays validation messages for the following errors:
 
-- Empty queries
+-   Empty queries
 
-- Invalid SQL syntax
+-   Invalid SQL syntax
 
-- Invalid columns or expressions
+-   Invalid columns or expressions
 
 ![Query validationerror](assets/images/Query_validationerror.png)
 
@@ -473,11 +473,11 @@ You can reorder query elements using drag-and-drop operations.
 
 The following elements can be reordered:
 
-- Fields in **SELECT** clauses.
+-   Fields in **SELECT** clauses.
 
-- Conditions in **WHERE** clauses.
+-   Conditions in **WHERE** clauses.
 
-- Fields in **ORDER BY** and **GROUP BY** clauses.
+-   Fields in **ORDER BY** and **GROUP BY** clauses.
 
 The changes are automatically reflected in the **Text View** and applied during execution.
 
@@ -503,35 +503,35 @@ When a report is previewed, it is executed at the backend by JasperReports® IO.
 
 Following is the list of security-related configuration changes:
 
-- **Enabling the Java Security Manager**:
+-   **Enabling the Java Security Manager**:
 
-  In the Professional edition, the Java Security Manager can be enabled by uncommenting the following lines in:
+    In the Professional edition, the Java Security Manager can be enabled by uncommenting the following lines in:
 
-  - `start.sh` script:
+    -   `start.sh` script:
 
-    `#JRWS_SECURITY_ARGS="-Djava.security.manager -Djava.security.policy=${ROOT_PATH}/jrws/security.policy`
+        `#JRWS_SECURITY_ARGS="-Djava.security.manager -Djava.security.policy=${ROOT_PATH}/jrws/security.policy`
 
-    OR
+        OR
 
-  - `start.bat` script:
+    -   `start.bat` script:
 
-    `#rem set "JRWS_SECURITY_ARGS=-Djava.security.manager -Djava.security.policy=%~dp0\jrws\security.policy`
+        `#rem set "JRWS_SECURITY_ARGS=-Djava.security.manager -Djava.security.policy=%~dp0\jrws\security.policy`
 
-  In the Enterprise edition, set the `javaSecurityEnabled` Helm chart values flag to `true`.
+    In the Enterprise edition, set the `javaSecurityEnabled` Helm chart values flag to `true`.
 
-- **Report expression class filtering**
+-   **Report expression class filtering**
 
-  To enable report expression class filtering in the Standalone edition, set `net.sf.jasperreports.report.class.filter.enabled=true` in the `applicationContext-common.xml` file.
+    To enable report expression class filtering in the Standalone edition, set `net.sf.jasperreports.report.class.filter.enabled=true` in the `applicationContext-common.xml` file.
 
-  In the Enterprise edition, set the `reportExpressionsClassFilterEnabled` Helm chart flag to `true`.
+    In the Enterprise edition, set the `reportExpressionsClassFilterEnabled` Helm chart flag to `true`.
 
-  More classes can be allowed in report expression by setting `net.sf.jasperreports.report.class.whitelist.* properties` in `applicationContext-common.xml` or via the `jrioReporting.config.jasperReportsProperties` Helm chart values property.
+    More classes can be allowed in report expression by setting `net.sf.jasperreports.report.class.whitelist.* properties` in `applicationContext-common.xml` or via the `jrioReporting.config.jasperReportsProperties` Helm chart values property.
 
-- **Repository Jars class loading**
+-   **Repository Jars class loading**
 
-  In the Standalone edition, to disable loading classes from repository jars, set the `classLoadingEnabled` property of the `jrioContextProvider` bean to `false` in the `applicationContext-common.xml` file.
+    In the Standalone edition, to disable loading classes from repository jars, set the `classLoadingEnabled` property of the `jrioContextProvider` bean to `false` in the `applicationContext-common.xml` file.
 
-  In the Enterprise edition, set the `repositoryClassLoadingEnabled` Helm chart values flag to `false`.
+    In the Enterprise edition, set the `repositoryClassLoadingEnabled` Helm chart values flag to `false`.
 
 ## Data Adapter Editors
 

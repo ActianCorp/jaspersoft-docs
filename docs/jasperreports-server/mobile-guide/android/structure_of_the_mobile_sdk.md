@@ -19,10 +19,10 @@ The Mobile SDK client package includes all the classes to interact with JasperRe
 
 The components of the client package are:
 
-- `JsRestClient` – Provides a set of convenient methods to interact with the JasperReports Server REST API and performs the mapping of the returned data to the object model.
-- Object model – A set of classes that represent objects in the server. These classes make it simpler to work with REST data, which can be returned in JSON or XML format.
-- Asynchronous tasks mechanism – Performs expensive operations in background mode and publishes the results to the UI thread without having to manipulate threads or handlers.
-- Input controls wrapper – Simplifies the manipulation of input controls, independent of their type and UI appearance.
+-   `JsRestClient` – Provides a set of convenient methods to interact with the JasperReports Server REST API and performs the mapping of the returned data to the object model.
+-   Object model – A set of classes that represent objects in the server. These classes make it simpler to work with REST data, which can be returned in JSON or XML format.
+-   Asynchronous tasks mechanism – Performs expensive operations in background mode and publishes the results to the UI thread without having to manipulate threads or handlers.
+-   Input controls wrapper – Simplifies the manipulation of input controls, independent of their type and UI appearance.
 
 ## 1.1.2 Mobile SDK UI Package
 

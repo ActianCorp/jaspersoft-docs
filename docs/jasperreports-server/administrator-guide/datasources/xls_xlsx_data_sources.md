@@ -7,18 +7,18 @@ description: "XLS and XLSX data sources read a file in the Microsoft Excel XLS o
 
 XLS and XLSX data sources read a file in the Microsoft Excel XLS or XLSX format and allow you to query its contents as a relational table. These data sources support Domain-related features like:
 
-- Returning JDBC metadata
-- Creating derived tables
-- Supporting calculated fields
-- Domain pre-filtering
-- Joining other data sources in a virtual data source
-- Full support in the Domain Designer
+-   Returning JDBC metadata
+-   Creating derived tables
+-   Supporting calculated fields
+-   Domain pre-filtering
+-   Joining other data sources in a virtual data source
+-   Full support in the Domain Designer
 
 To create an XLS or XLSX data source
 
 1.  Log in as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is **Data Sources**. The **New Data Source** page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is **Data Sources**. The **New Data Source** page appears.
 
 3.  From the **Type** dropdown, select either the **XLS or XLSX Data Sourc**e. In this example, we create an XLSX data source.
 

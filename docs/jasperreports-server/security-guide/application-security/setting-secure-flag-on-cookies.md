@@ -7,8 +7,8 @@ description: "JasperReports Server uses cookies in several ways:"
 
 JasperReports Server uses cookies in several ways:
 
-- `userTimezone` and `userLocale` to store user settings.
-- Other UI settings such as **Recently Viewed Resources** and **Popular Resources** on the **Home** page and **Data Source** page history. The cookie names for those resources are `homePageRecentlyViewedResourcesExpandableListState`, `homePagePopularLinksExpandableListState`, and `DataSourceControllerHistory`.
+-   `userTimezone` and `userLocale` to store user settings.
+-   Other UI settings such as **Recently Viewed Resources** and **Popular Resources** on the **Home** page and **Data Source** page history. The cookie names for those resources are `homePageRecentlyViewedResourcesExpandableListState`, `homePagePopularLinksExpandableListState`, and `DataSourceControllerHistory`.
 
 The JSESSIONID cookie is managed by the application server, so its security setting depends on your app server configuration.
 

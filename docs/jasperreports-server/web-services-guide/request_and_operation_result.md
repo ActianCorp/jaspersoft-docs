@@ -28,9 +28,9 @@ The repository web services operation takes a single input parameter of type `St
 
 A request is a very simple document that contains:
 
-- The operation to execute (`list`, `get`, `put`, `delete`, or `runReport`).
-- A set of optional arguments. Each argument is a pair of a key and a value that is used to achieve very particular results; arguments are only used rarely.
-- A resource descriptor.
+-   The operation to execute (`list`, `get`, `put`, `delete`, or `runReport`).
+-   A set of optional arguments. Each argument is a pair of a key and a value that is used to achieve very particular results; arguments are only used rarely.
+-   A resource descriptor.
 
 The operation name is redundant, since the operation to execute is intrinsic in the invoked service. However, including the name can clarify the request document.
 

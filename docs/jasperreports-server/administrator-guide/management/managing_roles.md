@@ -66,7 +66,7 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 
 1.  Log in as an administrator (`jasperadmin` in the role's organization or any parent organization, or `superuser`).
 
-2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles. The Manage Roles page displays the roles defined in the server and in each organization and properties for each role.
+2.  Select **Manage &gt; Roles** or, on the Admin Home page, click **Manage** under Roles. The Manage Roles page displays the roles defined in the server and in each organization and properties for each role.
 
     ![js ManageRoles overview](../assets/images/js-ManageRoles-overview.png)
 
@@ -92,7 +92,7 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 
 1.  Log in as an administrator (`jasperadmin` in the role's intended organization or any parent organization, or `superuser`).
 
-2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles.
+2.  Select **Manage &gt; Roles** or, on the Admin Home page, click **Manage** under Roles.
 
 3.  In the Organizations panel, select the organization to which the role will belong.
 
@@ -104,7 +104,7 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 
 5.  Enter the name of the role. The role name is also the role ID and does not accept spaces or special characters.
 
-6.  Click **Add Role to \<organization\>** to create the role.
+6.  Click **Add Role to &lt;organization&gt;** to create the role.
 
     The new role is included in the Roles panel. If you want to assign users to the role, click **Edit** in the Properties panel of the new role.
 
@@ -114,7 +114,7 @@ You can assign multiple users to one role. To assign multiple roles to one user,
 
 1.  Log in as an administrator (`jasperadmin` in the role's organization or any parent organization, or `superuser`).
 
-2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles.
+2.  Select **Manage &gt; Roles** or, on the Admin Home page, click **Manage** under Roles.
 
 3.  In the Organizations panel, select the role's organization.
 
@@ -144,7 +144,7 @@ You can assign multiple users to one role. To assign multiple roles to one user,
 
 1.  Log in as an administrator (`jasperadmin` in the role's organization or any parent organization, or `superuser`).
 
-2.  Select **Manage \> Roles** or, on the Admin Home page, click **Manage** under Roles.
+2.  Select **Manage &gt; Roles** or, on the Admin Home page, click **Manage** under Roles.
 
 3.  In the Organizations panels, select the role's organization. The Roles panel is displayed.
 

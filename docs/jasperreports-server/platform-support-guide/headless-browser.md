@@ -21,8 +21,10 @@ title: Headless Browser
 </thead>
 <tbody>
 <tr>
-<td><p>Chromium</p>
-<p>Auto-detection only works for Chrome/Chromium; A different path can be specified for Chrome/Chromium in the installer; To use another browser, such as Edge, set the path in the js.config.properties file.</p></td>
+<td><p>Chromium<span class="jsd-footnote-ref"><sup>1</sup></span></p>
+<div class="jsd-footnote">
+<p>Auto-detection only works for Chrome/Chromium; A different path can be specified for Chrome/Chromium in the installer; To use another browser, such as Edge, set the path in the js.config.properties file.</p>
+</div></td>
 <td><ul>
 <li>MacOS</li>
 <li>Linux</li>

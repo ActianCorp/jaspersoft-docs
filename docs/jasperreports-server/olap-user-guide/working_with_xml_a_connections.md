@@ -15,12 +15,12 @@ JasperReports Server can act as either an XML/A provider or as an XML/A client. 
 
 The remote server must also be configured for XML/A. For instructions regarding Jaspersoft OLAP, see [Jaspersoft OLAP Administration](administration.md) and [Creating an XML/A Source](creating_an_xml_a_source.md). If you are connecting to Microsoft SQL Server Analytic Services at a high level, you must:
 
-- Configure Internet Information Services (IIS) to provide connectivity to Microsoft SQL Server Analytic Services.
+-   Configure Internet Information Services (IIS) to provide connectivity to Microsoft SQL Server Analytic Services.
 
-- Deploy and configure msmdpump.dll, which is an IIS extension that provides data connectivity via HTTP.
+-   Deploy and configure msmdpump.dll, which is an IIS extension that provides data connectivity via HTTP.
 
-- Configure security in Microsoft SQL Server Analytic Services according to your needs.
+-   Configure security in Microsoft SQL Server Analytic Services according to your needs.
 
-- Test Microsoft SQL Server Analytic Services using an XML/A client tool, such as waRehouse EXplorer (REX; <http://sourceforge.net/projects/whex>), which is an open source Java client for browsing multidimensional data sources. Testing with a third-party tool can help you troubleshoot your Microsoft SQL Server Analytic Services configuration.
+-   Test Microsoft SQL Server Analytic Services using an XML/A client tool, such as waRehouse EXplorer (REX; <http://sourceforge.net/projects/whex>), which is an open source Java client for browsing multidimensional data sources. Testing with a third-party tool can help you troubleshoot your Microsoft SQL Server Analytic Services configuration.
 
 For more information about Microsoft SQL Server Analytic Services, refer to the associated documentation.

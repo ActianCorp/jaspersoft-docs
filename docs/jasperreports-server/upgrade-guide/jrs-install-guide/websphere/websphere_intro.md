@@ -15,12 +15,12 @@ The WAR file distribution also includes two sample databases containing data for
 
 This chapter contains the following sections:
 
-- [Procedure for Installing and Deploying the WAR File in WebSphere](../../../installation-guide/websphere/websphere_install_procedure.md)
+-   [Procedure for Installing and Deploying the WAR File in WebSphere](../../../installation-guide/websphere/websphere_install_procedure.md)
 
-- [Logging into JasperReports Server](../../../installation-guide/websphere/websphere_logging_in.md)
+-   [Logging into JasperReports Server](../../../installation-guide/websphere/websphere_logging_in.md)
 
-- [Configuring Report Scheduling](../../../installation-guide/websphere/websphere_report_scheduling.md)
+-   [Configuring Report Scheduling](../../../installation-guide/websphere/websphere_report_scheduling.md)
 
-- [Updating XML/A Connection Definitions (Optional)](../../../installation-guide/websphere/websphere_xmla_connection.md)
+-   [Updating XML/A Connection Definitions (Optional)](../../../installation-guide/websphere/websphere_xmla_connection.md)
 
-- [Troubleshooting your JasperReports Server Configuration](../../../installation-guide/websphere/websphere_troubleshooting.md)
+-   [Troubleshooting your JasperReports Server Configuration](../../../installation-guide/websphere/websphere_troubleshooting.md)

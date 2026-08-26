@@ -11,15 +11,15 @@ A client session is an in-memory object that represents the user to the server a
 
 There are several types of session management in cluster design, each of which determines a different failover scenario:
 
-- Fully replicated sessions: The state of every client session is continuously communicated among all nodes and stored on every node or in a shared location. This is usually managed by the app server. Upon failure, the load balancer automatically redirects client connections to a remaining node. Because every node has access to a copy of the client session, the user can continue work from the previous state, often unaware of the failure or the change. Some load balancers can transfer sessions when a node is overloaded but hasn't failed.
+-   Fully replicated sessions: The state of every client session is continuously communicated among all nodes and stored on every node or in a shared location. This is usually managed by the app server. Upon failure, the load balancer automatically redirects client connections to a remaining node. Because every node has access to a copy of the client session, the user can continue work from the previous state, often unaware of the failure or the change. Some load balancers can transfer sessions when a node is overloaded but hasn't failed.
 
 !!! warning
 
     JasperReports Server does not support fully replicated sessions. See explanation below.
 
-- Sticky or pinned sessions: Client sessions are created and managed privately by each server instance and cannot be transferred to another node. When a failure shuts down an instance, all of its client sessions are lost. When users reconnect, the load balancer directs them to another node where they login and begin a new session on the new node.
+-   Sticky or pinned sessions: Client sessions are created and managed privately by each server instance and cannot be transferred to another node. When a failure shuts down an instance, all of its client sessions are lost. When users reconnect, the load balancer directs them to another node where they login and begin a new session on the new node.
 
-- Partially replicated sessions: In this hybrid solution, only the vital parts of the session are replicated to allow some failover, but in the absence of node failure, sessions must remain pinned to a node.
+-   Partially replicated sessions: In this hybrid solution, only the vital parts of the session are replicated to allow some failover, but in the absence of node failure, sessions must remain pinned to a node.
 
 Unlike small e-commerce sessions, JasperReports Server has larger and more complex sessions that would degrade performance if fully replicated. In particular, the JasperPrint object for an executed report is measured in megabytes and stored in the user session. To store and replicate the JasperPrint objects for all users across all nodes would impact performance significantly. Therefore, JasperReports Server uses partial replication so that user login information is replicated, but not large state objects such as JasperPrint objects.
 

@@ -34,12 +34,12 @@ A data adapter is a resource that specifies how and where to obtain data. Specif
 
 The sample repository installed with JasperReports IO contains multiple data adapters and data sources in the `<js-install>/repository/data` directory that you can use for your own reports. These data adapters include:
 
-- JDBC connection
-- CSV connection
-- Excel connection
-- Empty connection
-- JNDI connection
-- Remote XML connection
+-   JDBC connection
+-   CSV connection
+-   Excel connection
+-   Empty connection
+-   JNDI connection
+-   Remote XML connection
 
 JasperReports IO can use other types of data adapters that are not included in the sample repository. You can create your own data adapters for JasperReports IO either by using the Data Adapter Wizard in Jaspersoft Studio or by creating a custom data adapter using a JRDAX file.
 
@@ -49,13 +49,13 @@ The repository resource that aggregates all information needed to run a report i
 
 A JasperReport is a complex resource composed of other resources:
 
-- The main JRXML file that defines the report.
-- A data source that supplies data for the report.
-- A query if none is specified in the main JRXML.
-- The query may specify its own data source, which overrides the data source defined in the report.
-- Input controls for parameters that users may enter before running the report. Input controls are composed of either a datatype definition or a list of values.
-- Any additional file resources, such as images and fonts.
-- If the report includes subreports, the JRXML files for the subreports.
+-   The main JRXML file that defines the report.
+-   A data source that supplies data for the report.
+-   A query if none is specified in the main JRXML.
+-   The query may specify its own data source, which overrides the data source defined in the report.
+-   Input controls for parameters that users may enter before running the report. Input controls are composed of either a datatype definition or a list of values.
+-   Any additional file resources, such as images and fonts.
+-   If the report includes subreports, the JRXML files for the subreports.
 
 End users interact with a JasperReport as a single resource, but report creators must define all the component resources. Refer to the Jaspersoft Studio User Guide for more information on creating reports.
 

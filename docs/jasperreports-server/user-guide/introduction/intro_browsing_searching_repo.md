@@ -7,7 +7,7 @@ description: "The repository is the server’s internal storage for reports, ana
 
 The repository is the server’s internal storage for reports, analysis views, and related files. The repository is organized as a structure of folders containing resources, much like a file system. However, unlike a file system, the repository is stored as a private database that only JasperReports Server can access directly.
 
-To browse the repository, select **View \> Repository**. From the repository page, you can access the reports, themes, and other files stored on the server. You can browse the repository contents that you have permission to view by expanding the icons in **Folders**. Click a folder name to view its contents to see the Repository page as shown in Figure 1‑5.
+To browse the repository, select **View &gt; Repository**. From the repository page, you can access the reports, themes, and other files stored on the server. You can browse the repository contents that you have permission to view by expanding the icons in **Folders**. Click a folder name to view its contents to see the Repository page as shown in Figure 1‑5.
 
 ![js Repository Browse page](../assets/images/js-Repository-Browse-page.png)
 
@@ -19,7 +19,7 @@ You can search the entire repository, subject to permissions, or narrow the sear
 
 ## Searching the Entire Repository
 
-To search the repository, select **View \> Search Results**. The search results page appears. Instead of only viewing resources by folder, use intuitive search criteria, such as who modified the resource and when, to find pinpoint resources.
+To search the repository, select **View &gt; Search Results**. The search results page appears. Instead of only viewing resources by folder, use intuitive search criteria, such as who modified the resource and when, to find pinpoint resources.
 
 On the search results page, use either the **Filters** panel or **Search** field to find resources. The search results page displays results of searches and filters.
 

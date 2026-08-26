@@ -9,9 +9,9 @@ Use the `userSearch` bean to find users if they don't match a simple pattern. In
 
 To search for user entries, locate the helper bean `userSearch` in sample-applicationContext-externalAuth-LDAP\[-mt\].xml and specify the following information:
 
-- An optional branch RDN where user entries are located. If not specified, the search includes your entire LDAP directory starting from the base DN of the LDAP URL specified in [Setting the LDAP Connection Parameters](ldap-setting-connection-parameters.md).
-- An LDAP filter expression to compare any attribute or combination of attributes with the login name. JasperReports Server substitutes the login name entered by the user for the `{0}` placeholder to perform the search.
-- Whether or not the search should extend to all subtrees beneath the branch DN or, when no branch DN is specified, beneath the base DN.
+-   An optional branch RDN where user entries are located. If not specified, the search includes your entire LDAP directory starting from the base DN of the LDAP URL specified in [Setting the LDAP Connection Parameters](ldap-setting-connection-parameters.md).
+-   An LDAP filter expression to compare any attribute or combination of attributes with the login name. JasperReports Server substitutes the login name entered by the user for the `{0}` placeholder to perform the search.
+-   Whether or not the search should extend to all subtrees beneath the branch DN or, when no branch DN is specified, beneath the base DN.
 
 !!! note
 

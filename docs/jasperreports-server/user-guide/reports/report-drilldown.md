@@ -11,18 +11,18 @@ For example, a report displays the stores sales data of different cities using a
 
 A subreport can be opened in the same tab or in the new tab.
 
-- When a subreport opens in a new tab, you can see a **Close** button ![js Close icon](../assets/images/js-Close-icon.png). Using a **Close**button, you can return to the screen from where a main report is accessed.
-- When a subreport opens in the same tab, both a **Close** button ![js Close icon](../assets/images/js-Close-icon.png), and a **Back** button ![js Back icon](../assets/images/js-Back-icon.png) are displayed. Using a **Back** button, you can go back to the main report.
+-   When a subreport opens in a new tab, you can see a **Close** button ![js Close icon](../assets/images/js-Close-icon.png). Using a **Close**button, you can return to the screen from where a main report is accessed.
+-   When a subreport opens in the same tab, both a **Close** button ![js Close icon](../assets/images/js-Close-icon.png), and a **Back** button ![js Back icon](../assets/images/js-Back-icon.png) are displayed. Using a **Back** button, you can go back to the main report.
 
 For the main report with input control, you can configure input controls in the following display modes:
 
-- Pop-up window
+-   Pop-up window
 
-- Separate page
+-   Separate page
 
-- Top of page
+-   Top of page
 
-- In page
+-   In page
 
 The input control values automatically reapplied to the main report when you return from the subreport. Any report interaction through JIVE actions such as, sorting, filtering, or formatting is also restored on the main report.
 

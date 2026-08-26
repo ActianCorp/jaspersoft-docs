@@ -54,9 +54,9 @@ Administrators should organize file resources into folders in the repository to 
 
 To add a file resource
 
-1.  Log in as an administrator and select **View \> Repository**.
+1.  Log in as an administrator and select **View &gt; Repository**.
 
-2.  In the Folders panel, right-click the parent folder's name and select **Add Resource \> File** from the context menu , and select a resource type. In this example, **Font**. The **Add File** dialog appears.
+2.  In the Folders panel, right-click the parent folder's name and select **Add Resource &gt; File** from the context menu , and select a resource type. In this example, **Font**. The **Add File** dialog appears.
 
 3.  Enter the required information for the file resource. In additions to the name and ID, file resources only require you to enter the path to a file. Click **Browse** to locate a file on your file system.<br>
     The figure below shows the dialog for adding a Font file. All file resources are created by uploading a file in this way.
@@ -96,9 +96,9 @@ While the SSH private key is being used in a scheduled report or dashboard job, 
 To upload an SSH key file to the repository
 
 1.  Log into JasperReports Server as an administrator.
-2.  Click **View \> Repository** and expand the folder tree.
+2.  Click **View &gt; Repository** and expand the folder tree.
 3.  Browse to the folder where you want to save the SSH key.
-4.  Right-click the folder and select **Add Resource \> File \> Secure File** from the context menu.
+4.  Right-click the folder and select **Add Resource &gt; File &gt; Secure File** from the context menu.
 5.  Click **Choose File** to locate and upload the SSH key file.
 6.  Enter a name and resource ID for the file.
 7.  Click **Submit** to save the file to the repository.

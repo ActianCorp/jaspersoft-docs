@@ -33,16 +33,17 @@ To create a schedule
 
 6.  Choose a recurrence setting, as described in [Running a Job Repeatedly](schedules-repeated.md). If you select Simple or Calendar Recurrence, additional controls appear on the page.
 
-    - **None**: Run the job once.
+    -   **None**: Run the job once.
 
-    - **Simple**: Schedule the job to recur at a regular interval, specified in minutes, hours, days, or weeks.
+    -   **Simple**: Schedule the job to recur at a regular interval, specified in minutes, hours, days, or weeks.
 
-    - **Calendar**: Schedule the job to recur on days of the week, days of the month, specific dates, or date ranges.
+    -   **Calendar**: Schedule the job to recur on days of the week, days of the month, specific dates, or date ranges.
 
-      <div class="admonition warning">
-      <p class="admonition-title">Warning</p>
-      <p>If you set up a job with simple recurrence to start immediately, the job schedule will change after export/import or a server restart. This happens because the job does not retain the previous run history and therefore starts immediately after import or restart. If you have a large number of scheduled jobs, all scheduled jobs with simple recurrence will attempt to start at the same time after export/import or restart. This can impact server performance. In addition, some scheduled jobs may be locked out and they may continue to try to run. </p><p>To ensure a recurring schedule does not change after export/import or restart, either use a simple recurrence with a specific start time, or set up calendar recurrence.</p>
-      </div>
+        !!! warning
+
+            If you set up a job with simple recurrence to start immediately, the job schedule will change after export/import or a server restart. This happens because the job does not retain the previous run history and therefore starts immediately after import or restart. If you have a large number of scheduled jobs, all scheduled jobs with simple recurrence will attempt to start at the same time after export/import or restart. This can impact server performance. In addition, some scheduled jobs may be locked out and they may continue to try to run.
+
+            To ensure a recurring schedule does not change after export/import or restart, either use a simple recurrence with a specific start time, or set up calendar recurrence.
 
 7.  If the report or dashboard you are scheduling has input controls that prompt for user input, click the Parameters tab.
 

@@ -5,7 +5,7 @@ description: "The DELETE method of the attributes service removes attributes fro
 
 # 1.0.1 Deleting Attributes
 
-The DELETE method of the attributes service removes attributes from the specified entity (a user, an organization, or the server-level). When attributes are removed, both the name and the value of the attribute are removed, not only the value. For possible values of \<entity\> in the URL, see [1.1.2, “Entities with Attributes,” on page 1](the_v2_attributes_service.md).
+The DELETE method of the attributes service removes attributes from the specified entity (a user, an organization, or the server-level). When attributes are removed, both the name and the value of the attribute are removed, not only the value. For possible values of &lt;entity&gt; in the URL, see [1.1.2, “Entities with Attributes,” on page 1](the_v2_attributes_service.md).
 
 There are two syntaxes; the following one is for deleting multiple attributes or all attributes at once.
 

@@ -13,11 +13,11 @@ If you are using your reports with an application you have built using JasperRep
 
 To set the version of JasperReports Library to use for compiling reports
 
-1.  Select **Window \> Preferences** from the main menu (**Eclipse \> Preferences** on Mac).
+1.  Select **Window &gt; Preferences** from the main menu (**Eclipse &gt; Preferences** on Mac).
 
     The **Preferences** dialog is displayed.
 
-2.  Select **Jaspersoft Studio \> Compatibility**.
+2.  Select **Jaspersoft Studio &gt; Compatibility**.
 
     The **Compatibility** window is displayed.
 

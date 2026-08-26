@@ -31,19 +31,17 @@ To create a report
 
 7.  In the Fields window, move the following Dataset fields to the Fields panel on the right to include them in your subreport:
 
-    - **ORDERID**
-    - **CUSTOMERID**
-    - **FREIGHT**
-    - **SHIPCITY**
-    - **SHIPCOUNTRY**
+-   **ORDERID**
 
-8.  Click **Next**.
+    -   **CUSTOMERID**
+    -   **FREIGHT**
+    -   **SHIPCITY**
+    -   **SHIPCOUNTRY**
 
-9.  In the Group By window, move the **SHIPCITY** dataset field into the Fields pane.
-
-10. Click **Finish**. The **Content_Page_One.jrxml** appears in the Design tab.
-
-11. In the Project Explorer, right-click **Content_Page_One.jrxml** and select **Compile Report**. The resulting file, Content_Page_One.jasper, appears in the Project Explorer.
+1.  Click **Next**.
+2.  In the Group By window, move the **SHIPCITY** dataset field into the Fields pane.
+3.  Click **Finish**. The **Content_Page_One.jrxml** appears in the Design tab.
+4.  In the Project Explorer, right-click **Content_Page_One.jrxml** and select **Compile Report**. The resulting file, Content_Page_One.jasper, appears in the Project Explorer.
 
 ## Adding a Report to the Report Book
 

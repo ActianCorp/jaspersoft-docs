@@ -9,13 +9,13 @@ The Interactive Sales Report was designed to be run with input controls. When yo
 
 Keep these points in mind when viewing a dashboard that has input controls:
 
-- An input control may appear as a text field, a drop-down, a check box, a multi-select list box, or a calendar icon.
+-   An input control may appear as a text field, a drop-down, a check box, a multi-select list box, or a calendar icon.
 
-- If one of the dashlets in a dashboard does not refer to an input control, that dashlet does not update when you change that input control’s value. Only dashlets that use the input control reflect the change.
+-   If one of the dashlets in a dashboard does not refer to an input control, that dashlet does not update when you change that input control’s value. Only dashlets that use the input control reflect the change.
 
-- The ![js Dashboard icon Undo](../assets/images/js-Dashboard-icon-Undo.png)![js Dashboard icon Redo](../assets/images/js-Dashboard-icon-Redo.png)![js Dashboard icon UndoAll](../assets/images/js-Dashboard-icon-UndoAll.png) buttons on the toolbar allow you to undo and redo recent changes made to the dashboard, including changes using an input control.
+-   The ![js Dashboard icon Undo](../assets/images/js-Dashboard-icon-Undo.png)![js Dashboard icon Redo](../assets/images/js-Dashboard-icon-Redo.png)![js Dashboard icon UndoAll](../assets/images/js-Dashboard-icon-UndoAll.png) buttons on the toolbar allow you to undo and redo recent changes made to the dashboard, including changes using an input control.
 
-- If the ![js Dashboard icon FilterManager](../assets/images/js-Dashboard-icon-FilterManager.png) button appears on the toolbar, then the dashboard was set up to display input controls as a pop-up window instead of a dashlet. Click the button to view the controls.
+-   If the ![js Dashboard icon FilterManager](../assets/images/js-Dashboard-icon-FilterManager.png) button appears on the toolbar, then the dashboard was set up to display input controls as a pop-up window instead of a dashlet. Click the button to view the controls.
 
 To add controls as a dashlet
 
@@ -37,10 +37,10 @@ To add controls as a dashlet
 
 6.  Click in the **Country** text box to display the available countries. In this input control, you have the following options:
 
-    - The three countries: **Canada**, **Mexico**, and **USA**.
-    - ![js icon InputControl SelectAll](../assets/images/js-icon-InputControl-SelectAll.png) **All**, which selects all available values in the input control.
-    - ![js icon InputControl DeselectAll](../assets/images/js-icon-InputControl-DeselectAll.png) **None**, which deselects all available values in the input control.
-    - ![js InputControl icon invert](../assets/images/js-InputControl-icon-invert.png) **Invert**, which deselects any selected values, and selects the unselected values.
+    -   The three countries: **Canada**, **Mexico**, and **USA**.
+    -   ![js icon InputControl SelectAll](../assets/images/js-icon-InputControl-SelectAll.png) **All**, which selects all available values in the input control.
+    -   ![js icon InputControl DeselectAll](../assets/images/js-icon-InputControl-DeselectAll.png) **None**, which deselects all available values in the input control.
+    -   ![js InputControl icon invert](../assets/images/js-InputControl-icon-invert.png) **Invert**, which deselects any selected values, and selects the unselected values.
 
 7.  Use the options to select **Mexico** from the values list, and click **Apply** at the bottom of the dashlet. The data displayed in the Interactive Sales Report changes, but is not updated in the other reports, as they do not have an input control named Country.
 

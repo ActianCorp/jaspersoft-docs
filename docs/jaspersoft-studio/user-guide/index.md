@@ -41,7 +41,6 @@ Applies to Jaspersoft **10.1.0**.
 - [Concepts of JasperReports](jss-user_basicnotions.md)
 - [Changes in 10.0.0 That May Affect Your Upgrade](best-practices.md)
 - [End User License Agreement and Data Governance](eula-and-data-goverence.md)
-- [Glossary](bookmatter/glossary.md)
 - [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
 - [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
 - [Additional Topics](bookmatter/about-jaspersoft-studio-user-guide.md)

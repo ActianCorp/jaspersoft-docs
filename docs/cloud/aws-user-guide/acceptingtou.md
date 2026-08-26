@@ -7,9 +7,9 @@ description: "The Jaspersoft listing on the AWS Marketplace offers multiple Jasp
 
 The [Jaspersoft listing](https://aws.amazon.com/marketplace/search/results/ref=sp_navgno_search_box?page=1&searchTerms=jaspersoft) on the AWS Marketplace offers multiple Jaspersoft Reporting and Analytics products as subscriptions:
 
-- Jaspersoft Reporting and Analytics for AWS (Hourly)
-- Jaspersoft for AWS with Multi-Tenancy (Hourly)
-- Jaspersoft Reporting and Analytics for AWS (BYOL)
+-   Jaspersoft Reporting and Analytics for AWS (Hourly)
+-   Jaspersoft for AWS with Multi-Tenancy (Hourly)
+-   Jaspersoft Reporting and Analytics for AWS (BYOL)
 
 Subscribing to a Jaspersoft product is a single process with multiple steps, which includes accepting the terms of use for both the AWS Marketplace and Jaspersoft.
 

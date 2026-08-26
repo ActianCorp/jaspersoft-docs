@@ -19,9 +19,9 @@ To view the Release Notes of version 10.0.0, see [JasperReports® Server Release
 
 This release notes includes the following sections:
 
-- [New Features](new_features.md)
-- [Changes In Functionality](functionality.md)
-- [Changes in Platform Support](platform_support.md)
-- [Migration and Compatibility](migration_upgrade.md)
-- [Closed Issues](closed_issues.md)
-- [Known Issues](known_issues.md)
+-   [New Features](new_features.md)
+-   [Changes In Functionality](functionality.md)
+-   [Changes in Platform Support](platform_support.md)
+-   [Migration and Compatibility](migration_upgrade.md)
+-   [Closed Issues](closed_issues.md)
+-   [Known Issues](known_issues.md)

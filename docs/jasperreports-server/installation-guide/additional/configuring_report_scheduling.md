@@ -17,13 +17,13 @@ For mail server configuration, you will find an additional property setting for 
 
 The following configurations are discussed in this section:
 
-- Mail Server Configuration
-- Quartz Driver Delegate Class
-- Report Scheduler Web URI
-- Quartz Table Prefix
-- Settings for import-export
-- Setting Properties in the `default_master.properties` file
-- Settings for Skipping Calendar Job Execution Immediately After Import
+-   Mail Server Configuration
+-   Quartz Driver Delegate Class
+-   Report Scheduler Web URI
+-   Quartz Table Prefix
+-   Settings for import-export
+-   Setting Properties in the `default_master.properties` file
+-   Settings for Skipping Calendar Job Execution Immediately After Import
 
 ## Mail Server Configuration Settings
 
@@ -33,9 +33,9 @@ You can specify email addresses to be notified when a report run is complete. To
 
     By default, JasperReports Server uses mail to contact an email server. To change it to:
 
-    - Graph API: In the `js.quartz.properties` file, set `emailService.type=graph`.
+    -   Graph API: In the `js.quartz.properties` file, set `emailService.type=graph`.
 
-    - SendGrid: In the `js.quartz.properties` file, set `emailService.type=sendGrid`.
+    -   SendGrid: In the `js.quartz.properties` file, set `emailService.type=sendGrid`.
 
 ### Mail Server Configuration Settings Using E-mail
 
@@ -84,7 +84,7 @@ The following table provides the configuration information to contact an email s
 <td><p>The port number that the mail server uses. The default is typically 25 (other ports may not work in earlier JasperReports Server versions).</p></td>
 </tr>
 <tr>
-<td colspan="3"><p>**Note** - `host ,username, port` and `password` are mandatory parameters. If any of these parameters are missed, a bean is created with the default values provided in the `js.quartz.properties` file. - If `protocol` is missed, it will set to the default value, which is `SMTP`. - If the `from `address is missed, it picks the value from the `js.quartz.properties` file.</p></td>
+<td colspan="3"><p>**Note** -   `host ,username, port` and `password` are mandatory parameters. If any of these parameters are missed, a bean is created with the default values provided in the `js.quartz.properties` file. -   If `protocol` is missed, it will set to the default value, which is `SMTP`. -   If the `from `address is missed, it picks the value from the `js.quartz.properties` file.</p></td>
 </tr>
 <tr>
 <td colspan="3"><p>Configuration File</p></td>
@@ -194,7 +194,7 @@ The following table provides the configuration information to contact an email s
 <td><code>clientSecretCredentialFlow</code></td>
 <td><p>The authentication is done either by providing the <code>clientSecret</code> or by providing the username and password.</p>
 <p>Depending on the authentication you want to use, set <code>emailService.graph.clientSecretCredentialFlow</code> to <code>true </code>or <code>false</code>. If <code>emailService.graph.clientSecretCredentialFlow=true</code>, <code>clientSecret</code> is used for authentication. If set to <code>false</code>, the username and password are used for authentication.</p>
-<p>**Note** - For `clientsecretcredential` flow, `clientId, tenantid, clientsecret` and `userid `are mandatory parameters. - For `username and password` flow, `clientid, username` and `password `are mandatory parameters. If any of the mandatory parameters are missed, a bean is created using the default values mentioned in the `js.quartz.properties` file.</p></td>
+<p>**Note** -   For `clientsecretcredential` flow, `clientId, tenantid, clientsecret` and `userid `are mandatory parameters. -   For `username and password` flow, `clientid, username` and `password `are mandatory parameters. If any of the mandatory parameters are missed, a bean is created using the default values mentioned in the `js.quartz.properties` file.</p></td>
 </tr>
 <tr>
 <td><code>azureSql.resourceGroupName</code></td>
@@ -265,15 +265,15 @@ The following table provides the configuration information to schedule alerts an
 
     Following are the limitations while using the SendGrid API:
 
-    - The total size of the email, including attachments, cannot exceed 30 MB.
+    -   The total size of the email, including attachments, cannot exceed 30 MB.
 
-    - The total number of recipients cannot be more than 1,000. This includes recipients in **to, cc**, and **bcc**, and each object included in personalization.
+    -   The total number of recipients cannot be more than 1,000. This includes recipients in **to, cc**, and **bcc**, and each object included in personalization.
 
-    - The total length of custom arguments must be less than 10,000 bytes.
+    -   The total length of custom arguments must be less than 10,000 bytes.
 
-    - Unicode encoding is not supported for the **from** field.
+    -   Unicode encoding is not supported for the **from** field.
 
-    - `;` and **,** are not allowed in the `to.name` , `cc.name` , and `bcc.name` personalization.
+    -   `;` and **,** are not allowed in the `to.name` , `cc.name` , and `bcc.name` personalization.
 
 ## Database Settings for the Quartz Driver Delegate Class
 
@@ -433,13 +433,13 @@ When you run the `js-install`` .sh/bat` script (or the underlying `deploy-webapp
 
 You can set the following properties in default_master.properties file (default values are shown):
 
-- `notification.service.multiTenant.config=none`
+-   `notification.service.multiTenant.config=none`
 
-- `emailService.type=mail`
+-   `emailService.type=mail`
 
-- `calenderTrigger.resetStartTimeOnImport=false`
+-   `calenderTrigger.resetStartTimeOnImport=false`
 
-- `simpleTrigger.resetStartTimeOnImport=false`
+-   `simpleTrigger.resetStartTimeOnImport=false`
 
 ### Report Scheduler Email Properties
 
@@ -485,9 +485,9 @@ You can set the following properties to configure the Report Scheduler email usi
 
     When sending a file with email:
 
-    - If the file size is under 3 MB, graph uses single POST.
+    -   If the file size is under 3 MB, graph uses single POST.
 
-    - If the file size is in between 3MB and 150 MB it uses the largeAttachment upload flow.
+    -   If the file size is in between 3MB and 150 MB it uses the largeAttachment upload flow.
 
     For details, refer to [Outlook-Large-Attachments](https://learn.microsoft.com/en-us/graph/outlook-large-attachments).
 

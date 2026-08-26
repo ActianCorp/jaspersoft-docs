@@ -9,6 +9,6 @@ This chapter is an overview of the concepts underlying Jaspersoft OLAP. It is me
 
 The chapter has these sections:
 
-- [On-Line Analytical Processing](on_line_analytical_processing.md)
-- [Jaspersoft OLAP and the Repository](jaspersoft_olap_and_the_repository.md)
-- [Creating a Jaspersoft OLAP Environment](creating_a_jaspersoft_olap_environme.md)
+-   [On-Line Analytical Processing](on_line_analytical_processing.md)
+-   [Jaspersoft OLAP and the Repository](jaspersoft_olap_and_the_repository.md)
+-   [Creating a Jaspersoft OLAP Environment](creating_a_jaspersoft_olap_environme.md)

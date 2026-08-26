@@ -7,14 +7,13 @@ description: "If needed files are missing, as shown in Suggested Resources in th
 
 If needed files are missing, as shown in [Suggested Resources in the Resources List](repo-add-simple-report-unit.md), you need to take one of the following actions:
 
-- Upload resources that the report needs
+-   Upload resources that the report needs
 
-- Select a resource from the repository
+-   Select a resource from the repository
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>If the Controls &amp; Resources page doesn’t suggest resources, perhaps the report doesn’t reference any. However, the server can’t always detect all the referenced resources, as discussed in <a href="repo-undetected-file-resources.md">Uploading Undetected File Resources</a>.</p>
-  </div>
+    !!! note
+
+        If the Controls & Resources page doesn’t suggest resources, perhaps the report doesn’t reference any. However, the server can’t always detect all the referenced resources, as discussed in [Uploading Undetected File Resources](repo-undetected-file-resources.md).
 
 To upload a resource from the file system
 
@@ -22,7 +21,7 @@ To upload a resource from the file system
 
 2.  Choose **Upload a Local File** then click **Choose File**.
 
-3.  **Browse** to \<js-install\>/samples/images. The LogoLink file is not available, but you can use an alternate image, such as \<js-install\>/samples/images/jasperreports.png.
+3.  **Browse** to &lt;js-install&gt;/samples/images. The LogoLink file is not available, but you can use an alternate image, such as &lt;js-install&gt;/samples/images/jasperreports.png.
 
 4.  Click **Open** to return to the Locate File Resource dialog.
 
@@ -44,7 +43,7 @@ To add a resource from the repository
 
 1.  To add the second resource, click **Add Now** in the row for AllAccounts_Res2.
 
-2.  Choose **Select a resource from the Repository** and **Browse** to an image file, for example, **Public \> Samples \> Images \> Jaspersoft_logo.png**.
+2.  Choose **Select a resource from the Repository** and **Browse** to an image file, for example, **Public &gt; Samples &gt; Images &gt; Jaspersoft_logo.png**.
 
     !!! note
 

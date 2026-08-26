@@ -9,28 +9,28 @@ The `report` function runs reports on JasperReports Server and displays the resu
 
 The report function also supports more advanced customizations of hyperlinks and interactivity that are described in subsequent chapters:
 
-- [JavaScript API Usage - Hyperlinks](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/hyperlinks.md)
-- [JavaScript API Usage - Interactive Reports](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/interactive_reports.md)
+-   [JavaScript API Usage - Hyperlinks](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/hyperlinks.md)
+-   [JavaScript API Usage - Interactive Reports](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/interactive_reports.md)
 
 This chapter contains the following sections:
 
-- Report Properties
-- Report Functions
-- Report Structure
-- Rendering a Report
-- Getting the Embed Code of a Report
-- Setting Report Parameters
-- Saving a Report
-- Rendering Multiple Reports
-- Resizing a Report
-- Setting Report Pagination
-- Creating Pagination Controls (Next/Previous)
-- Creating Pagination Controls (Range)
-- Exporting From a Report
-- Exporting Data From a Report
-- Refreshing a Report
-- Canceling Report Execution
-- Discovering Available Charts and Formats
+-   Report Properties
+-   Report Functions
+-   Report Structure
+-   Rendering a Report
+-   Getting the Embed Code of a Report
+-   Setting Report Parameters
+-   Saving a Report
+-   Rendering Multiple Reports
+-   Resizing a Report
+-   Setting Report Pagination
+-   Creating Pagination Controls (Next/Previous)
+-   Creating Pagination Controls (Range)
+-   Exporting From a Report
+-   Exporting Data From a Report
+-   Refreshing a Report
+-   Canceling Report Execution
+-   Discovering Available Charts and Formats
 
 ## Report Properties
 
@@ -379,8 +379,8 @@ The Report Data structure represents the rendered report object manipulated by t
 
 The report structure also contains other components described elsewhere:
 
-- The definitions of hyperlinks and how to work with them is explained in [Customizing Links.](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/hyperlinks.md)
-- Details of the Jaspersoft Interactive Viewer and Editor (JIVE UI) are explained in [Interacting With JIVE UI Components](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/interactive_reports.md).
+-   The definitions of hyperlinks and how to work with them is explained in [Customizing Links.](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/hyperlinks.md)
+-   Details of the Jaspersoft Interactive Viewer and Editor (JIVE UI) are explained in [Interacting With JIVE UI Components](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/interactive_reports.md).
 
 ``` json
 {
@@ -557,15 +557,15 @@ The example above is trivial, but the power of Visualize.js comes from this simp
 
 Here are further guidelines for setting parameters:
 
-- If a report has required parameters, you must set them in the report object of the initial call, otherwise you will get an error. For more information, see [Catching Report Errors](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/handling_errors.md).
+-   If a report has required parameters, you must set them in the report object of the initial call, otherwise you will get an error. For more information, see [Catching Report Errors](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/handling_errors.md).
 
-- Parameters are always sent as arrays of quoted string values, even if there is only one value, such as `["USA"]` in the example above. This is also the case even for single value input such as numerical, boolean, or date/time inputs. You must also use the array syntax for single-select values as well as multi-select parameters with only one selection. No matter what the type of input, always set its value to an array of quoted strings.
+-   Parameters are always sent as arrays of quoted string values, even if there is only one value, such as `["USA"]` in the example above. This is also the case even for single value input such as numerical, boolean, or date/time inputs. You must also use the array syntax for single-select values as well as multi-select parameters with only one selection. No matter what the type of input, always set its value to an array of quoted strings.
 
-- The following values have special meanings:
+-   The following values have special meanings:
 
-  - `""`: An empty string, a valid value for a text input and some selectors.
-  - `"~NULL~"`: Indicates a NULL value (absence of any value), and matches a field that has a NULL value, for example if it has never been initialized.
-  - `"~NOTHING~"`: Indicates the lack of a selection. In multi-select parameters, this is equivalent to indicating that nothing is deselected, thus all are selected. In a single-select non-mandatory parameter, this corresponds to no selection (displayed as `---`). In a single-select mandatory parameter, the lack of selection makes it revert to its default value.
+    -   `""`: An empty string, a valid value for a text input and some selectors.
+    -   `"~NULL~"`: Indicates a NULL value (absence of any value), and matches a field that has a NULL value, for example if it has never been initialized.
+    -   `"~NOTHING~"`: Indicates the lack of a selection. In multi-select parameters, this is equivalent to indicating that nothing is deselected, thus all are selected. In a single-select non-mandatory parameter, this corresponds to no selection (displayed as `---`). In a single-select mandatory parameter, the lack of selection makes it revert to its default value.
 
 ## Saving a Report
 
@@ -685,10 +685,10 @@ When rendering a report, by default it is scaled to fit in the container you spe
 
 To set a different scaling factor when rendering a report, specify its `scale` property:
 
-- `container`: The report is scaled to fully fit within the container, both in width and height. If the container has a different aspect ratio, there will be white space in the dimension where the container is larger. This is the default scaling behavior when the `scale` property is not specified.
-- `width`: The report is scaled to fit within the width of the container. If the report is taller than the container, users will need to scroll vertically to see the entire report.
-- `height`: The report is scaled to fit within the height of the container. If the report is wider than the container, users will need to scroll horizontally to see the entire report.
-- Scale factor: A decimal value greater than 0, with 1 being equivalent to 100%. A value between 0 and 1 reduces the report from its normal size, and a value greater than 1 enlarges it. If either or both dimensions of the scaled report are larger than the container, users will need to scroll to see the entire report.
+-   `container`: The report is scaled to fully fit within the container, both in width and height. If the container has a different aspect ratio, there will be white space in the dimension where the container is larger. This is the default scaling behavior when the `scale` property is not specified.
+-   `width`: The report is scaled to fit within the width of the container. If the report is taller than the container, users will need to scroll vertically to see the entire report.
+-   `height`: The report is scaled to fit within the height of the container. If the report is wider than the container, users will need to scroll horizontally to see the entire report.
+-   Scale factor: A decimal value greater than 0, with 1 being equivalent to 100%. A value between 0 and 1 reduces the report from its normal size, and a value greater than 1 enlarges it. If either or both dimensions of the scaled report are larger than the container, users will need to scroll to see the entire report.
 
 In every case, the entire report is scaled in both directions by the same amount, you cannot change the aspect ratio of tables and crosstab elements.
 

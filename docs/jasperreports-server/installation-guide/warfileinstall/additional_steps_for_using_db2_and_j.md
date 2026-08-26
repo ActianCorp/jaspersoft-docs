@@ -32,8 +32,8 @@ The DB2 client software, db2 or db2cmd, can be used to interact with DB2.
 
 Further considerations:
 
-- If JasperReports Server is deployed on the same host as DB2, delete the following file to avoid conflicts:<br>
-  `<db2>/SQLLIB/java/db2jcc.jar`
+-   If JasperReports Server is deployed on the same host as DB2, delete the following file to avoid conflicts:<br>
+    `<db2>/SQLLIB/java/db2jcc.jar`
 
 # Additional Steps for Using JBoss EAP, JBoss Web Server or Wildfly
 
@@ -113,8 +113,8 @@ Installation for JBoss Web Server (JWS) is similar to installing Tomcat.
 
 In the `default_master.properties` file:
 
-- The *appServerType* can be left as **tomcat**.
-- The *appServerDir* should be set to the **../tomcat** directory.
+-   The *appServerType* can be left as **tomcat**.
+-   The *appServerDir* should be set to the **../tomcat** directory.
 
 For example:
 

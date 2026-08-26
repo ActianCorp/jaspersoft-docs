@@ -18,17 +18,17 @@ To open the query dialog (Query Dialog with Data Preview) right-click the name o
 
 Jaspersoft Studio does not require a query to generate a report. It can obtain data from a data source that is not defined by a query execution. JasperReports supports multiple query languages including:
 
-- JSON
+-   JSON
 
-- MongoDBQuery
+-   MongoDBQuery
 
-- PLSQL
+-   PLSQL
 
-- SQL
+-   SQL
 
-- XLS
+-   XLS
 
-- XPath
+-   XPath
 
 If the selected data source is a JDBC connection, Jaspersoft Studio tests the access connection to the data source as you define the query. This allows Jaspersoft Studio to identify the fields using the query metadata in the result set. The design tool lists the discovered fields in the bottom portion of the window. For each field, Jaspersoft Studio determines the name and Java type specified by the JDBC driver.
 

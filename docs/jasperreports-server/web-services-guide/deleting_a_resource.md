@@ -7,9 +7,9 @@ description: "The DELETE method can be used with either a folder or a resource. 
 
 The DELETE method can be used with either a folder or a resource. For the delete to succeed:
 
-- The logged in user must have read-delete, read-write-delete, or administer permission on the folder or resource.
-- The resource must not be a dependency of any other resource, for example the data source of a JasperReport. In this case, you must modify or delete the other resource first.
-- If the target is a folder, the above requirements must be satisfied for every resource and folder it contains, including any those contained recursively in subfolders to any level.
+-   The logged in user must have read-delete, read-write-delete, or administer permission on the folder or resource.
+-   The resource must not be a dependency of any other resource, for example the data source of a JasperReport. In this case, you must modify or delete the other resource first.
+-   If the target is a folder, the above requirements must be satisfied for every resource and folder it contains, including any those contained recursively in subfolders to any level.
 
 <table>
 <tbody>

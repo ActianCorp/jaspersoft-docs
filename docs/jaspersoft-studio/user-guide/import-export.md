@@ -7,17 +7,17 @@ description: "Export and import allow you to migrate configuration resources bet
 
 Export and import allow you to migrate configuration resources between instances of Jaspersoft Studio. You can export the following configuration resources:
 
-- global data adapters
+-   global data adapters
 
-- JasperReports Server configurations
+-   JasperReports Server configurations
 
-- composite elements
+-   composite elements
 
-- text, table, and crosstab styles
+-   text, table, and crosstab styles
 
-- global JasperReports properties
+-   global JasperReports properties
 
-- Jaspersoft Studio preferences
+-   Jaspersoft Studio preferences
 
 !!! note
 
@@ -27,11 +27,11 @@ You can choose to export all of these categories or only a subset of them. Howev
 
 To export configuration resources
 
-1.  Select **File \> Export**.
+1.  Select **File &gt; Export**.
 
     The **Export** dialog is displayed.
 
-2.  Select **Jaspersoft Studio \> Jaspersoft Studio Configuration** for the destination and click **Next**.
+2.  Select **Jaspersoft Studio &gt; Jaspersoft Studio Configuration** for the destination and click **Next**.
 
     The Export wizard shows the resource categories that can be exported, with the number of resources in each category. If there are no resources in a category, the category does not appear on the list.
 
@@ -48,11 +48,11 @@ A zip file is created in the location that you chose.
 
 To import configuration resources
 
-1.  Select **File \> Import**.
+1.  Select **File &gt; Import**.
 
     The **Import** dialog is displayed.
 
-2.  Select **Jaspersoft Studio \> Jaspersoft Studio Configuration** and click **Next**.
+2.  Select **Jaspersoft Studio &gt; Jaspersoft Studio Configuration** and click **Next**.
 
 3.  Enter the location and file name of the zip file that you wish to import and click **Next**.
 
@@ -67,11 +67,11 @@ To import configuration resources
 
 5.  If there is a naming conflict between an imported resource and an existing resource in your Jaspersoft Studio configuration, choose the action in you want in the displayed dialog. For resource categories other than Jaspersoft Studio properties and JasperReports Library properties, you have three choices:
 
-- **Overwrite**: Overwrites the existing resources with the imported resources of the same name.
+-   **Overwrite**: Overwrites the existing resources with the imported resources of the same name.
 
-- **Keep both**: Automatically renames the conflicting imported resources with a unique name.
+-   **Keep both**: Automatically renames the conflicting imported resources with a unique name.
 
-- **Skip**: Keeps the existing resources and discards the imported resources.
+-   **Skip**: Keeps the existing resources and discards the imported resources.
 
 For Jaspersoft Studio properties and JasperReports Library properties, which do not support multiple instances, you are prompted to choose to overwrite or not.
 

@@ -7,12 +7,12 @@ description: This section includes the list of common troubleshooting scenarios 
 
 This section includes the list of common troubleshooting scenarios that might occur when an alert is set on the report but the user does not receive any email notification.
 
-- Alert fails to trigger when the data source is modified
-- Alert fails to trigger when measure is edited from the domain designer
-- Alert fails to trigger when the visualization type is changed
-- Alert fails to trigger when data mode is changed
-- Alert fails to trigger when the summary function is removed
-- Alert fails to trigger when a user is disabled
+-   Alert fails to trigger when the data source is modified
+-   Alert fails to trigger when measure is edited from the domain designer
+-   Alert fails to trigger when the visualization type is changed
+-   Alert fails to trigger when data mode is changed
+-   Alert fails to trigger when the summary function is removed
+-   Alert fails to trigger when a user is disabled
 
 ## Alert fails to trigger when the data source is modified
 
@@ -46,6 +46,6 @@ To add or remove data summaries from all columns, see the *Summaries* section in
 
 ## Alert fails to trigger when a user is disabled
 
-The alert is not triggered when a user profile of a user who has set an alert is disabled. To re-enable the user profile on the **Admin Home** page, click **Manage \> Users**.
+The alert is not triggered when a user profile of a user who has set an alert is disabled. To re-enable the user profile on the **Admin Home** page, click **Manage &gt; Users**.
 
 For more information on users, see [Managing Users](../management/managing_users.md) section in JasperReports® Server Administrator Guide.

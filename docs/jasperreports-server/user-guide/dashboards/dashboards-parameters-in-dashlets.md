@@ -11,21 +11,21 @@ Simple parameters
 
 For the text dashlets, web links, and dashboard names, use the syntax `$P{parameter_name}` to directly pass the parameter value to the web page. Examples:
 
-- In a text dashlet, enter the parameter in the Text box:
+-   In a text dashlet, enter the parameter in the Text box:
 
-  `Product Family: $P{Product Family}`
+    `Product Family: $P{Product Family}`
 
-- In a web page dashlet or a web link in an Ad Hoc view dashlet hyperlink, enter the parameter in the **Web Page Address (URL)** text box:
+-   In a web page dashlet or a web link in an Ad Hoc view dashlet hyperlink, enter the parameter in the **Web Page Address (URL)** text box:
 
-  `http://en.wikipedia.org/wiki/$P{Store Country}`
+    `http://en.wikipedia.org/wiki/$P{Store Country}`
 
-- In a repository or web URI for an image dashlet, enter the parameter. Enter the parameter in the **Web Address/Repository URI** text box:
+-   In a repository or web URI for an image dashlet, enter the parameter. Enter the parameter in the **Web Address/Repository URI** text box:
 
-  `repo:/public/Samples/Reports/$P{Store Country}/flag.png`
+    `repo:/public/Samples/Reports/$P{Store Country}/flag.png`
 
-- Dashlet name: Enter the parameter in the **Dashlet Name** box:
+-   Dashlet name: Enter the parameter in the **Dashlet Name** box:
 
-  `Unit Sales for $P{Product Family}`
+    `Unit Sales for $P{Product Family}`
 
 For repository hyperlinks in an Ad Hoc view dashlet, use the syntax `?filter_in_target=$P{dashlet_param}`. For example, the following link sets the c_country_1 input control in the 05. Unit Sales Trend report to the value of a Store Country parameter in the dashlet.
 
@@ -39,15 +39,15 @@ Parameters in multi-valued input controls
 
 For multi-valued input controls, you can define a separator for the input control values:
 
-- For text dashlets, web links, and dashboard names, use the syntax \$P{parameter_name ? "separator"}. The following example in a text box displays results like **Product Family: Drink + Food:**
+-   For text dashlets, web links, and dashboard names, use the syntax $P{parameter_name ? "separator"}. The following example in a text box displays results like **Product Family: Drink + Food:**
 
-  `Product Family: $P{Product Family ? " + "}`
+    `Product Family: $P{Product Family ? " + "}`
 
-- For repository links in an Ad Hoc view or image dashlet, use the syntax `?$P{"filter_in_target=", dashlet_param, "&"}`.
+-   For repository links in an Ad Hoc view or image dashlet, use the syntax `?$P{"filter_in_target=", dashlet_param, "&"}`.
 
-  For example, the following link allows multi-select with the c_country_1 input control in the 05. Unit Sales Trend report:
+    For example, the following link allows multi-select with the c_country_1 input control in the 05. Unit Sales Trend report:
 
-  `repo:/public/Samples/Reports/05._Unit_Sales_Trend?$P{"c_country_1=", Store Country, "&"}`
+    `repo:/public/Samples/Reports/05._Unit_Sales_Trend?$P{"c_country_1=", Store Country, "&"}`
 
 When `Mexico` and `USA` are selected, this expands to the following link:
 
@@ -96,7 +96,7 @@ First, create the simple dashboard
 
 1.  Log in to JasperReports Server as superuser.
 
-2.  Click **Create \> Dashboard**.
+2.  Click **Create &gt; Dashboard**.
 
     The Dashboard Designer appears, displaying the list of available content and the canvas.
 

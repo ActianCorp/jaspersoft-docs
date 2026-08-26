@@ -9,17 +9,17 @@ The Data Source Selection panel contains a list of available fields in the chose
 
 Available fields may be divided into two sections in the panel, **Fields** and **Measures**. You can use the search field in each section to locate a specific field or measure.
 
-To hide this panel, click **\<** in the top-left corner. This is helpful when arranging content in a large Ad Hoc view. Click the same icon on the minimized panel to expand it.
+To hide this panel, click **&lt;** in the top-left corner. This is helpful when arranging content in a large Ad Hoc view. Click the same icon on the minimized panel to expand it.
 
 The tooltip content for the available Fields and Measures include:
 
-- **Field Path** (for example: Sales \> Stores \> Regions \> City) for Domain-based Ad Hoc
-- **Original name** (from the domains)
-- **Formula** (for calculated fields and calculated measure only)
-- **Description**
-- **Data Type** (Possible values are string, number, date, time, timestamp, boolean)
-- **Field type** (Field, Measure, Calculated Field, Calculated Measure)
-- **Default summary calculation**
+-   **Field Path** (for example: Sales &gt; Stores &gt; Regions &gt; City) for Domain-based Ad Hoc
+-   **Original name** (from the domains)
+-   **Formula** (for calculated fields and calculated measure only)
+-   **Description**
+-   **Data Type** (Possible values are string, number, date, time, timestamp, boolean)
+-   **Field type** (Field, Measure, Calculated Field, Calculated Measure)
+-   **Default summary calculation**
 
 For more information on working with fields, see [Using Fields in Tables](adhoc-tables.md), [Using Fields and Measures in Charts](adhoc-charts.md), and [Using Fields in Crosstabs](adhoc-crosstabs-standard.md).
 
@@ -149,8 +149,8 @@ The query is read-only, but can be copied onto a clipboard or other document for
 
 To view the SQL query
 
-- In the tool bar, click ![js AdHoc icon viewSQL](../assets/images/js-AdHoc-icon-viewSQL.png).<br>
-  The View Query window opens, displaying the SQL query.
+-   In the tool bar, click ![js AdHoc icon viewSQL](../assets/images/js-AdHoc-icon-viewSQL.png).<br>
+    The View Query window opens, displaying the SQL query.
 
 ## Printing Ad Hoc View
 
@@ -158,7 +158,7 @@ You can print an Ad Hoc View and save it to your computer as a PDF.
 
 To print an Ad Hoc View
 
-- Hover over the Print button, and select Print.
+-   Hover over the Print button, and select Print.
 
 ![print adhoc view](../assets/images/print-adhoc-view.png)<br>
 

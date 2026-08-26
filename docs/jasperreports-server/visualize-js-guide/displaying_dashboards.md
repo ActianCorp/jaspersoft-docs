@@ -9,18 +9,18 @@ The `dashboard` function runs dashboards on JasperReports Server and displays th
 
 This chapter contains the following sections:
 
-- Dashboard Properties
-- Dashboard Functions
-- Dashboard Structure
-- Rendering a Dashboard
-- Getting the Embed Code of a Dashboard
-- Refreshing a Dashboard
-- Tracking Completion Status
-- Using Dashboard Input Controls
-- Using the Dashboard Undo Stack
-- Setting Dashboard Hyperlink Options
-- Exporting From a Dashboard
-- Closing a Dashboard
+-   Dashboard Properties
+-   Dashboard Functions
+-   Dashboard Structure
+-   Rendering a Dashboard
+-   Getting the Embed Code of a Dashboard
+-   Refreshing a Dashboard
+-   Tracking Completion Status
+-   Using Dashboard Input Controls
+-   Using the Dashboard Undo Stack
+-   Setting Dashboard Hyperlink Options
+-   Exporting From a Dashboard
+-   Closing a Dashboard
 
 ## Dashboard Properties
 
@@ -496,15 +496,15 @@ Parameters are always sent as arrays of quoted string values, even if there is o
 
 The following values have special meanings:
 
-- `""`: An empty string, a valid value for a text input and some selectors.
+-   `""`: An empty string, a valid value for a text input and some selectors.
 
-- `"~NULL~"`: Indicates a NULL value (absence of any value), and matches a field that has a NULL value, for example if it has never been initialized.
+-   `"~NULL~"`: Indicates a NULL value (absence of any value), and matches a field that has a NULL value, for example if it has never been initialized.
 
-- `"~NOTHING~"`: Indicates the lack of a selection. The meaning depends on the type of parameter:
+-   `"~NOTHING~"`: Indicates the lack of a selection. The meaning depends on the type of parameter:
 
-  - In multi-select parameters, this is equivalent to indicating that nothing is deselected, thus all are selected.
-  - In a single-select non-mandatory parameter, this corresponds to no selection (displayed as `---`).
-  - In a single-select mandatory parameter, the lack of selection makes it revert to its default value.
+    -   In multi-select parameters, this is equivalent to indicating that nothing is deselected, thus all are selected.
+    -   In a single-select non-mandatory parameter, this corresponds to no selection (displayed as `---`).
+    -   In a single-select mandatory parameter, the lack of selection makes it revert to its default value.
 
 In the following example, a button resets the parameters to their default values by sending an empty parameter set (`params()`). First the HTML to define the container and the button:
 
@@ -621,9 +621,9 @@ Visualize.js dashboards provide undo and redo functionality. After users interac
 
 Visualize.js dashboards support the following actions:
 
-- Undo: Reverts the input controls to the next older set of values and updates the dashboard contents accordingly; available after at least one change to input controls.
-- Redo: Reverts the input controls to the next newer set of values and updates the dashboard contents accordingly; available after at least one undo action.
-- Undo All: Reverts the input controls to their initial set of values and updates the dashboard contents accordingly; available when there is an older set of values that has not been undone.
+-   Undo: Reverts the input controls to the next older set of values and updates the dashboard contents accordingly; available after at least one change to input controls.
+-   Redo: Reverts the input controls to the next newer set of values and updates the dashboard contents accordingly; available after at least one undo action.
+-   Undo All: Reverts the input controls to their initial set of values and updates the dashboard contents accordingly; available when there is an older set of values that has not been undone.
 
 To implement undo and redo actions, you must also use event listeners to know when undo and redo events become available. For example, before the user has changed input controls, no actions are possible. Redo is only possible after the user performs an undo or undo-all action.
 
@@ -738,22 +738,22 @@ visualize({
 
 Visualize.js provides several types of hyperlinks to handle most use cases:
 
-- Reference: The reference link indicates an external source that is identified by a normal URL. The only expression required is the hyperlink reference expression. It is possible to specify additional parameters for this hyperlink type.
-- LocalAnchor: To point to a local anchor means to create a link between two locations into the same document. It can be used, for example, to link the titles of a summary to the chapters to which they refer. To define the local anchor, it is necessary to specify a hyperlink anchor expression, which will have to produce a valid anchor name. It is possible to specify additional parameters for this hyperlink type.
-- LocalPage: If instead of pointing to an anchor you want to point to a specific current report page, you need to create a LocalPage link. In this case, it is necessary to specify the page number you are pointing to by means of a hyperlink page expression (the expression has to return an Integer object). It is possible to specify additional parameters for this hyperlink type.
-- RemoteAnchor: If you want to point to a particular anchor that resides in an external document, you use the RemoteAnchor link. In this case, the URL of the external file pointed to should be specified in the Hyperlink Reference Expression field, and the name of the anchor must be specified in the Hyperlink Anchor Expression field. It is possible to specify additional parameters for this hyperlink type.
-- RemotePage: This link allows you to point to a particular page of an external document. Similarly, in this case the URL of the external file pointed to, must be specified in the Hyperlink Reference Expression field, and the page number must be specified by means of the hyperlink page expression. Some export formats have no support for hypertext links. It is possible to specify additional parameters for this hyperlink type.
-- ReportExecution: This type of hyperlink is used to implement drill-down. Page and anchor can be specified for the hyperlink type as well as additional special parameters such as `_report`, `_anchor`, `_page`, `_output`.
-- AdHocExecution: This type of hyperlink represents the information about clicked point on chart reports generated from Ad Hoc Charts. It exposes names of measures and values of dimensions as parameters.
-- Custom Hyperlink Type: A type of hyperlink that you can define entirely.
+-   Reference: The reference link indicates an external source that is identified by a normal URL. The only expression required is the hyperlink reference expression. It is possible to specify additional parameters for this hyperlink type.
+-   LocalAnchor: To point to a local anchor means to create a link between two locations into the same document. It can be used, for example, to link the titles of a summary to the chapters to which they refer. To define the local anchor, it is necessary to specify a hyperlink anchor expression, which will have to produce a valid anchor name. It is possible to specify additional parameters for this hyperlink type.
+-   LocalPage: If instead of pointing to an anchor you want to point to a specific current report page, you need to create a LocalPage link. In this case, it is necessary to specify the page number you are pointing to by means of a hyperlink page expression (the expression has to return an Integer object). It is possible to specify additional parameters for this hyperlink type.
+-   RemoteAnchor: If you want to point to a particular anchor that resides in an external document, you use the RemoteAnchor link. In this case, the URL of the external file pointed to should be specified in the Hyperlink Reference Expression field, and the name of the anchor must be specified in the Hyperlink Anchor Expression field. It is possible to specify additional parameters for this hyperlink type.
+-   RemotePage: This link allows you to point to a particular page of an external document. Similarly, in this case the URL of the external file pointed to, must be specified in the Hyperlink Reference Expression field, and the page number must be specified by means of the hyperlink page expression. Some export formats have no support for hypertext links. It is possible to specify additional parameters for this hyperlink type.
+-   ReportExecution: This type of hyperlink is used to implement drill-down. Page and anchor can be specified for the hyperlink type as well as additional special parameters such as `_report`, `_anchor`, `_page`, `_output`.
+-   AdHocExecution: This type of hyperlink represents the information about clicked point on chart reports generated from Ad Hoc Charts. It exposes names of measures and values of dimensions as parameters.
+-   Custom Hyperlink Type: A type of hyperlink that you can define entirely.
 
 And there are several types of link targets:
 
-- Self: This is the default setting. It opens the link in the current window.
-- Blank: Opens the target in a new window. Used for output formats such as HTML and PDF
-- Top: Opens the target in the current window but outside any frames. Used for output formats, such as HTML and PDF.
-- Parent: Opens the target in the parent window (if available). Used for output formats, such as HTML and PDF.
-- Frame name: Always opens the target in the specified frame.
+-   Self: This is the default setting. It opens the link in the current window.
+-   Blank: Opens the target in a new window. Used for output formats such as HTML and PDF
+-   Top: Opens the target in the current window but outside any frames. Used for output formats, such as HTML and PDF.
+-   Parent: Opens the target in the parent window (if available). Used for output formats, such as HTML and PDF.
+-   Frame name: Always opens the target in the specified frame.
 
 The following table shows the new default action for each combination of link and target:
 
@@ -915,8 +915,8 @@ function showCursor(pair){
 
 Like a report, you can export a dashboard by invoking its `export` function and specifying the `outputFormat` and `detailed` property. You must wait until the dashboard's `run` action has completed and returns success before starting the export. The following export types and formats are supported:
 
-- Screenshot: `"pdf", "png", "docx", "pptx", "odt"`
-- Detailed: `"pdf", "xlsx" "csv", "docx", "rtf" "odt" "ods" " Excel" "pptx"`
+-   Screenshot: `"pdf", "png", "docx", "pptx", "odt"`
+-   Detailed: `"pdf", "xlsx" "csv", "docx", "rtf" "odt" "ods" " Excel" "pptx"`
 
 In the following examples, the HTML page has a container for the dashboard and a button for the export, and the CSS configures a simple loading animation:
 
@@ -961,8 +961,8 @@ CSS:
 
 The `detailed` property determines the export type. You can define the `detailed` property as follows:
 
-- For the detailed export type: `detailed: true`
-- For the screenshot export type: `detailed: false`
+-   For the detailed export type: `detailed: true`
+-   For the screenshot export type: `detailed: false`
 
 The default value is `false`. If you do not provide any value for the `detailed` property, it is considered false (default) and the dashboard gets exported as a screenshot.
 
@@ -1011,8 +1011,8 @@ Visualize.js also exposes the list of available export formats. The following ex
 
 To get the list of all supported export formats, use the following functions:
 
-- For the detailed export type: `v.dashboard.detailedExportFormats`
-- For the screenshot export type: `v.dashboard.exportFormats`
+-   For the detailed export type: `v.dashboard.detailedExportFormats`
+-   For the screenshot export type: `v.dashboard.exportFormats`
 
 This example uses the function for the screenshot export type. This example uses the same HTML and CSS code shown above.
 

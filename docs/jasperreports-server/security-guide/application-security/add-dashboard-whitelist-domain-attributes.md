@@ -7,7 +7,7 @@ description: We have enhanced the reliability and security of the JasperReports 
 
 We have enhanced the reliability and security of the JasperReports Server dashboard creation process. The system now includes comprehensive validation checks on all web page inputs. This critical update ensures that only safe, properly formed content can be saved, protecting users from potential Stored Cross-Site Scripting (XSS) vulnerabilities and securing their dashboards.
 
-This is achieved by adding the `dashboardWebpageDomainWhitelist` attribute on the **Server Attributes** page. It can be found under **Manage \> Server Settings**. The default value is empty.
+This is achieved by adding the `dashboardWebpageDomainWhitelist` attribute on the **Server Attributes** page. It can be found under **Manage &gt; Server Settings**. The default value is empty.
 
 This new feature strengthens dashboard security by whitelisting specific web page domains and linking them to server attributes, giving administrators more control over access. Additionally, role-based permissions are introduced to ensure that only authorized users can change these settings.
 
@@ -15,19 +15,19 @@ The Stored XSS vulnerability is addressed by implementing a new server-side mech
 
 The server is configured to authenticate users. The system now retrieves a configuration for dashboard web page whitelist values.
 
-- If a user is authenticated and has the right profile attributes, the system looks for their dashboard web page whitelist values in a hierarchical order (User \> Organization \> Server).
+-   If a user is authenticated and has the right profile attributes, the system looks for their dashboard web page whitelist values in a hierarchical order (User &gt; Organization &gt; Server).
 
-- If the user is not authenticated or if no whitelist values are found at any level, they are assigned empty values.
+-   If the user is not authenticated or if no whitelist values are found at any level, they are assigned empty values.
 
 ## Hierarchical Attribute Search
 
 The system uses a hierarchical search pattern to find the correct dashboard web page whitelist values. It checks for the whitelist in this specific order:
 
-- User level: The system first looks for the attribute directly in the user's profile.
+-   User level: The system first looks for the attribute directly in the user's profile.
 
-- Organization level: If no attribute is found there, it then searches the logged-in user's organization and any parent organizations.
+-   Organization level: If no attribute is found there, it then searches the logged-in user's organization and any parent organizations.
 
-- Server level: Finally, if the attribute is still not found, the system uses the default values set at the server level.
+-   Server level: Finally, if the attribute is still not found, the system uses the default values set at the server level.
 
 <table>
 <colgroup>
@@ -90,25 +90,25 @@ The system uses a hierarchical search pattern to find the correct dashboard web 
 
 When you add the **Web page URL** to a dashboard, the system performs a domain check:
 
-- The URL's domain must match a domain listed in the `dashboardWebpageDomainWhitelist`.
+-   The URL's domain must match a domain listed in the `dashboardWebpageDomainWhitelist`.
 
-- If the `dashboardWebpageDomainWhitelist` is empty, no domains are accepted.
+-   If the `dashboardWebpageDomainWhitelist` is empty, no domains are accepted.
 
-- If the whitelist contains an asterisk (\*) , all domains are accepted.
+-   If the whitelist contains an asterisk (\*) , all domains are accepted.
 
 If you try to add a domain that is not allowed, an error message is shown:
 
-**Invalid domain. Add the domain to the allowlist from Manage \> Server Settings \> Server Attributes.**
+**Invalid domain. Add the domain to the allowlist from Manage &gt; Server Settings &gt; Server Attributes.**
 
 ## Dashboard Import With Web Dashlet
 
 When importing a dashboard, the system handles Web dashlets differently depending on their URL status.
 
-- If the Web dashlet has a whitelisted URL, the import is successful and the dashlet loads correctly.
+-   If the Web dashlet has a whitelisted URL, the import is successful and the dashlet loads correctly.
 
-- If the Web dashlet has a non-whitelisted URL, the import is still successful, but the dashlet shows an error message instead of its content.
+-   If the Web dashlet has a non-whitelisted URL, the import is still successful, but the dashlet shows an error message instead of its content.
 
-  **Invalid domain. Add the domain to the allowlist from Manage \> Server Settings \> Server Attributes.**
+    **Invalid domain. Add the domain to the allowlist from Manage &gt; Server Settings &gt; Server Attributes.**
 
 !!! note
 

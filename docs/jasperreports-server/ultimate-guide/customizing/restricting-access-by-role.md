@@ -9,11 +9,11 @@ You can use role-based customizations to control access to many user interface c
 
 In this example, suppose end users haven’t had training in creating reports with the Ad Hoc Editor, and you want to hide it from users, but make it accessible to administrators. To hide access to the Ad Hoc Editor, you need to customize the UI in three ways:
 
-- Customize the **Create** menu to restrict access to Ad Hoc creation to administrators only
+-   Customize the **Create** menu to restrict access to Ad Hoc creation to administrators only
 
-- Customize the JSP content on the home page to hide the **Create Ad Hoc View** button from non-administrative users.
+-   Customize the JSP content on the home page to hide the **Create Ad Hoc View** button from non-administrative users.
 
-- Customize the Ad Hoc web flow to restrict access to administrators only.
+-   Customize the Ad Hoc web flow to restrict access to administrators only.
 
 The following sections show how to perform each of these actions.
 
@@ -23,7 +23,7 @@ The following sections show how to perform each of these actions.
 
 ## Restricting a Menu Item by Role
 
-1.  Edit the file `<js-webapp>/WEB-INF/actionModel-navigation.xml`. The actionModel for ****Create \> Ad Hoc View**** is near the end of the file.
+1.  Edit the file `<js-webapp>/WEB-INF/actionModel-navigation.xml`. The actionModel for ****Create &gt; Ad Hoc View**** is near the end of the file.
 
     ``` text
     ...
@@ -51,9 +51,9 @@ The following sections show how to perform each of these actions.
 
     In commercial editions, you must specify the role’s organization ID when restricting access to roles defined in an organization. Use one of these methods:
 
-    - `ORG_ROLE|orgID`: Explicitly specify a role belonging to an organization.
+    -   `ORG_ROLE|orgID`: Explicitly specify a role belonging to an organization.
 
-    - `SYSTEM_ROLE`: Explicitly specify a role defined at the root or system level, such as `ROLE_ADMINISTRATOR`.
+    -   `SYSTEM_ROLE`: Explicitly specify a role defined at the root or system level, such as `ROLE_ADMINISTRATOR`.
 
 !!! note
 
@@ -74,11 +74,11 @@ The following sections show how to perform each of these actions.
 
 You can use Spring Security’s authorization tags to set up access control on JSP pages. See the example below for how this tag is used. As described in the Spring documentation, the `authz:authorize` tag supports the following attributes:
 
-- `hasRole`: All the listed roles must be granted for the tag to output its body.
+-   `hasRole`: All the listed roles must be granted for the tag to output its body.
 
-- `hasAnyRole`: Any of the listed roles must be granted for the tag to output its body.
+-   `hasAnyRole`: Any of the listed roles must be granted for the tag to output its body.
 
-- `!hasAnyRole`: None of the listed roles must be granted for the tag to output its body.
+-   `!hasAnyRole`: None of the listed roles must be granted for the tag to output its body.
 
 The attributes take roles as values. To list multiple roles in an attribute, separate the roles using a comma.
 
@@ -202,4 +202,4 @@ To restrict Scheduler or Dashboards to administrative users:
 ## Loading Your Changes
 
 1.  Save the modified files and reload the web app in the app server to see the changes (see [1.0.1, “Reloading the JasperReports Server Web App,” on page 1](reloading-jrs-webapp.md)).
-2.  When the web app has reloaded, log into JasperReports Server as `joeuser`. You'll see that the button for creating a report is removed, and there's no ****Create \> Create Ad Hoc Report**** menu item. Log out and log back in as `jasperadmin`. Both the button and the menu item are visible to administrators.
+2.  When the web app has reloaded, log into JasperReports Server as `joeuser`. You'll see that the button for creating a report is removed, and there's no ****Create &gt; Create Ad Hoc Report**** menu item. Log out and log back in as `jasperadmin`. Both the button and the menu item are visible to administrators.

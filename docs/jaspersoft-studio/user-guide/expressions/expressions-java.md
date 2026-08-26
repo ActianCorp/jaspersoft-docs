@@ -9,13 +9,13 @@ Java was the first language supported by JasperReports and is still the most com
 
 Following are some examples of Java expressions:
 
-- `“This is an expression”`
+-   `“This is an expression”`
 
-- `new Boolean(true)`
+-   `new Boolean(true)`
 
-- `new Integer(3)`
+-   `new Integer(3)`
 
-- `(($P{MyParam}.equals("S")) ? "Yes" : "No")`
+-   `(($P{MyParam}.equals("S")) ? "Yes" : "No")`
 
 The first thing to note is that each of these expressions represents a Java Object, meaning that the result of each expression is a non-primitive value. The difference between an object and a primitive value makes sense only in Java, but it is very important: a primitive value is a pure value like the number 5 or the Boolean value true.
 
@@ -33,10 +33,10 @@ The fix creates a new object of type `Integer` representing the primitive value 
 
 So, if you use Java as the default language for your expressions, remember that expressions like the following are not valid:
 
-- `3 + 2 * 5`
+-   `3 + 2 * 5`
 
-- `true`
+-   `true`
 
-- `(($P{MyParam} == 1) ? "Yes" : "No")`
+-   `(($P{MyParam} == 1) ? "Yes" : "No")`
 
 These expressions don’t make the correct use of objects. In particular, the first and the second expressions are not valid because they are of primitive types (`integer` in the first case and `boolean` in the second case) which do not produce an object as a result. The third expression is not valid because it assumes that the `MyParam` parameter is a primitive type and that it can be compared through the == operator with an `int`, but it cannot. In fact, we said that parameters, variables, and fields are always objects and primitive values cannot be compared or used directly in a mathematical expression with an object.

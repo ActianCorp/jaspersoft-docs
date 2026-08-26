@@ -7,9 +7,9 @@ description: "The externalAuthProperties bean stores properties specific to Jasp
 
 The `externalAuthProperties` bean stores properties specific to Jaspersoft’s external authentication API. For CAS authentication, configure the `externalAuthProperties` bean to specify the following URLs for communication with the CAS server:
 
-- `ssoServerLocation` property — Specifies the HTTPS URL where tickets are validated on the CAS server.
-- `externalLoginUrl` property — Specifies the login URL for external users. Can be set relative to `ssoServerLocation`.
-- `logoutUrl` property — Specifies the logout URL for external users. Can be set relative to `ssoServerLocation`.
+-   `ssoServerLocation` property — Specifies the HTTPS URL where tickets are validated on the CAS server.
+-   `externalLoginUrl` property — Specifies the login URL for external users. Can be set relative to `ssoServerLocation`.
+-   `logoutUrl` property — Specifies the logout URL for external users. Can be set relative to `ssoServerLocation`.
 
 The following example shows how you might set these beans:
 

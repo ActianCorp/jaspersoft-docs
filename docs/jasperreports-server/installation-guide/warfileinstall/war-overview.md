@@ -13,8 +13,8 @@ The WAR file distribution comes in a file named
 
 The WAR file distribution includes `js-install` shell scripts (for Linux and Windows) that automate much of the installation using a single properties file. These scripts are:
 
-- `js-install`` ``.bat`
-- `js-install`` ``.sh`
+-   `js-install`` ``.bat`
+-   `js-install`` ``.sh`
 
 The main contents of the WAR file binary distribution are shown in the following table:
 

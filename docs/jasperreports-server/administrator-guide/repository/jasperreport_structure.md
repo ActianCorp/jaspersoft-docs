@@ -9,19 +9,19 @@ The repository resource that aggregates all information needed to run a report i
 
 A JasperReport is a complex resource composed of other resources:
 
-- The main JRXML file that defines the report
+-   The main JRXML file that defines the report
 
-- A data source that supplies data for the report.
+-   A data source that supplies data for the report.
 
-- A query if none is specified in the main JRXML.
+-   A query if none is specified in the main JRXML.
 
-  - The query may specify its own data source, which overrides the data source defined in the report.
+    -   The query may specify its own data source, which overrides the data source defined in the report.
 
-- Input controls for parameters that users may enter before running the report. Input controls are composed of either a datatype definition or a list of values.
+-   Input controls for parameters that users may enter before running the report. Input controls are composed of either a datatype definition or a list of values.
 
-- Any additional file resources, such as images, fonts, and resource bundles referenced by the report template.
+-   Any additional file resources, such as images, fonts, and resource bundles referenced by the report template.
 
-- If the report includes subreports, the JRXML files for the subreports.
+-   If the report includes subreports, the JRXML files for the subreports.
 
 The collection of all the resources referenced in a JasperReport is sometimes called a report unit. End users usually see and interact with a JasperReport as a single resource in the repository, but report creators must define all of the component resources.
 
@@ -67,8 +67,8 @@ JasperReports Server provides more flexibility and power when you use indirect r
 
 When you upload a JRXML with an indirect reference, the server prompts you to provide the resource. You have two options:
 
-- Create a new resource, in this case by uploading an image that becomes part of the JasperReport. This is called a local resource. You cannot access this resource from elsewhere in the repository, it exists only within the JasperReport.
-- Select a resource from the repository. This is called an external reference because it is external to the JasperReport. Any number of reports can link to the same external resource, and the resource can be managed independently of them.
+-   Create a new resource, in this case by uploading an image that becomes part of the JasperReport. This is called a local resource. You cannot access this resource from elsewhere in the repository, it exists only within the JasperReport.
+-   Select a resource from the repository. This is called an external reference because it is external to the JasperReport. Any number of reports can link to the same external resource, and the resource can be managed independently of them.
 
 While indirect references require slightly more work than absolute references in the JRXML, the server manages the dependency. Local resources exist as part of a JasperReport, and external references cannot be deleted until they are no longer referenced.
 
@@ -76,10 +76,10 @@ In cases where you do not want to reference existing resources, local resources 
 
 Indirect references are used implicitly in several other cases when you define a JasperReport:
 
-- The main JRXML itself is either a local resource created by uploading a file or an external reference to an existing JRXML file resource in the repository.
-- Every report must have a data source, and JasperReports Server gives you the option to either create a new local resource or use an external reference to an existing data source.
-- Every report must also have a query that matches its data source. You may choose to create a local query resource or use an external reference to an existing query.
-- Parameters in a report are implicitly handled as an indirect reference to an input control. For every parameter named in your main JRXML, you must define an input control either as a local resource or external reference.
+-   The main JRXML itself is either a local resource created by uploading a file or an external reference to an existing JRXML file resource in the repository.
+-   Every report must have a data source, and JasperReports Server gives you the option to either create a new local resource or use an external reference to an existing data source.
+-   Every report must also have a query that matches its data source. You may choose to create a local query resource or use an external reference to an existing query.
+-   Parameters in a report are implicitly handled as an indirect reference to an input control. For every parameter named in your main JRXML, you must define an input control either as a local resource or external reference.
 
 Every level of indirect referencing is independent of the other. For example, when creating a JasperReport, you may choose to create an input control as a local resource, but that input control may have an external reference to its datatype. The server still manages the dependency between the local input control and the datatype resource in the repository.
 

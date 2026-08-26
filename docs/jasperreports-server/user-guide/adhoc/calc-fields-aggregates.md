@@ -18,11 +18,11 @@ The aggregate functions are as follows:
 
 Because aggregate functions already operate on groups, their use is restricted in the following ways:
 
-- You can use aggregate functions only in calculated measures; aggregates should not be used to create non-measure fields.
-- You cannot add an aggregate function to a group.
-- You should not use an aggregate function as a filter.
-- Only Aggregate Formula, Custom, or None are supported as summary calculations for aggregate functions. Custom appears in the **Change Summary** right-click menu only if you have defined a custom function in the **Create Calculated Field** dialog box.
-- A calculated field will always be calculated in memory, if you have an aggregate expression, and the calculated field itself also has an aggregate expression. It's no longer necessary to set the **inMemory** setting to *true*.
+-   You can use aggregate functions only in calculated measures; aggregates should not be used to create non-measure fields.
+-   You cannot add an aggregate function to a group.
+-   You should not use an aggregate function as a filter.
+-   Only Aggregate Formula, Custom, or None are supported as summary calculations for aggregate functions. Custom appears in the **Change Summary** right-click menu only if you have defined a custom function in the **Create Calculated Field** dialog box.
+-   A calculated field will always be calculated in memory, if you have an aggregate expression, and the calculated field itself also has an aggregate expression. It's no longer necessary to set the **inMemory** setting to *true*.
 
 ## Levels in Aggregate Functions
 
@@ -30,12 +30,12 @@ Many aggregate functions accept an optional level to specify the grouping of the
 
 The available levels are as follows:
 
-- `Current` (default) — use the current value when at a looking at detail rows in a table view.
-- `RowGroup` — use the parent values from a row location.
-- `RowTotal` — use the grand total value from a row location.
-- `ColumnGroup` — use the parent values from a column location.
-- `ColumnTotal` — use the grand total value from a column location.
-- `Total` — use the grand total value from a cross tab and the RowTotal from a Table.
+-   `Current` (default) — use the current value when at a looking at detail rows in a table view.
+-   `RowGroup` — use the parent values from a row location.
+-   `RowTotal` — use the grand total value from a row location.
+-   `ColumnGroup` — use the parent values from a column location.
+-   `ColumnTotal` — use the grand total value from a column location.
+-   `Total` — use the grand total value from a cross tab and the RowTotal from a Table.
 
 The following example shows how RowGroup works with the PercentOf() function.
 

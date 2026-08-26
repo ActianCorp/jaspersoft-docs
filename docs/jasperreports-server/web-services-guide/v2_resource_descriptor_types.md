@@ -619,7 +619,7 @@ The following list shows the numerical code and meaning for the {inputControlTyp
 
 ## 1.0.1.14 File
 
-The repository.file+\<format\> descriptor is used to identify the file type. The content field is used only when uploading a file resource as base-64 encoded content. For other ways to upload file contents, see [Uploading File Resources](uploading_file_resources.md). The content field is absent when requesting a file resource descriptor. For more information, see [Downloading File Resources](downloading_file_resources.md).
+The repository.file+&lt;format&gt; descriptor is used to identify the file type. The content field is used only when uploading a file resource as base-64 encoded content. For other ways to upload file contents, see [Uploading File Resources](uploading_file_resources.md). The content field is absent when requesting a file resource descriptor. For more information, see [Downloading File Resources](downloading_file_resources.md).
 
 <table>
 <colgroup>
@@ -664,7 +664,7 @@ The repository.file+\<format\> descriptor is used to identify the file type. The
 
 A report unit contains mostly references to the files that make up a report within the server. A report unit is a composite resource that may contain other local resources. In this case, the URIs that it references include a URI in the following format:
 
-\<reportUnitURI\>\_files/\<localResourceID\>
+&lt;reportUnitURI&gt;\_files/&lt;localResourceID&gt;
 
 For example, the main JRXML of a sample report is referenced as follows:
 

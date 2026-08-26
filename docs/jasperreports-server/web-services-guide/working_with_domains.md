@@ -88,11 +88,11 @@ Looking carefully through the resulting descriptor, we find the relevant informa
 
 The files contained in this Domain are:
 
-- /Domains/supermartDomain_files/supermartDomain_schema
-- /Domains/supermartDomain_files/supermartDomain_domain_security
-- /Domains/supermartDomain_files/supermart_domain.properties
-- /Domains/supermartDomain_files/supermart_domain_en_US.properties
-- `...`
+-   /Domains/supermartDomain_files/supermartDomain_schema
+-   /Domains/supermartDomain_files/supermartDomain_domain_security
+-   /Domains/supermartDomain_files/supermart_domain.properties
+-   /Domains/supermartDomain_files/supermart_domain_en_US.properties
+-   `...`
 
 To download these files, use the same syntax as for downloading file resource contents:
 

@@ -9,10 +9,10 @@ Both reports and dashboards include hyperlinks (URLs) that link to websites or o
 
 This chapter contains the following sections:
 
-- [Structure of Hyperlinks](hyperlinks.md)
-- Customizing Links
-- Drill-Down in Separate Containers
-- Accessing Data in Links
+-   [Structure of Hyperlinks](hyperlinks.md)
+-   Customizing Links
+-   Drill-Down in Separate Containers
+-   Accessing Data in Links
 
 ## Structure of Hyperlinks
 
@@ -70,8 +70,8 @@ The following JSON schema describes all the parameters on links, although not a
 
 You can customize the appearance of link elements in a generated report in two ways:
 
-- The `linkOptions` exposes the `beforeRender` event to which you can add a listener with access to the links in the document as element pairs.
-- The normal click event lets you add a listener that can access to a link when it's clicked.
+-   The `linkOptions` exposes the `beforeRender` event to which you can add a listener with access to the links in the document as element pairs.
+-   The normal click event lets you add a listener that can access to a link when it's clicked.
 
 ``` javascript
 visualize({
@@ -108,8 +108,8 @@ visualize({
 
 You can customize the appearance of link elements in a generated report in two ways:
 
-- The `linkOptions` exposes the `beforeRender` event to which you can add a listener with access to the links in the document as element pairs.
-- The normal click event lets you add a listener that can access to a link when it's clicked.
+-   The `linkOptions` exposes the `beforeRender` event to which you can add a listener with access to the links in the document as element pairs.
+-   The normal click event lets you add a listener that can access to a link when it's clicked.
 
 ``` javascript
 jrio.config({

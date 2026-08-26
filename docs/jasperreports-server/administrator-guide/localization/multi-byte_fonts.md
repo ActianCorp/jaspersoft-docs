@@ -99,8 +99,8 @@ If Japanese fonts are not installed in the server machine, you can install them 
     `style name="ChartLegend" ... fontName="DejaVu Sans"`<br>
     Modify the line as follows:<br>
     `fontName="SansSerif"`
-7.  In JasperReports Server, browse to the **Public \> Templates** folder in the repository.
-8.  Right-click the **Templates** folder and select **Add Resource \> File \> JRXML** from the context menu to import the edited `actual_size.<ver>.jrxml` file as a new custom report template.
+7.  In JasperReports Server, browse to the **Public &gt; Templates** folder in the repository.
+8.  Right-click the **Templates** folder and select **Add Resource &gt; File &gt; JRXML** from the context menu to import the edited `actual_size.<ver>.jrxml` file as a new custom report template.
 
 You can use the new custom report template for charts that contain Asian characters.
 

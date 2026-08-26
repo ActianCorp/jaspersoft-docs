@@ -1,11 +1,11 @@
 ---
 title: Setting Attributes
-description: "The PUT method of the attributes service adds or replaces attributes on the specified entity (a user, an organization, or the server-level). For possible values of <entity> in the URL, see 1.1.2,..."
+description: "The PUT method of the attributes service adds or replaces attributes on the specified entity (a user, an organization, or the server-level). For possible values of &lt;entity&gt; in the URL, see..."
 ---
 
 # 1.0.1 Setting Attributes
 
-The PUT method of the attributes service adds or replaces attributes on the specified entity (a user, an organization, or the server-level). For possible values of \<entity\> in the URL, see [1.1.2, “Entities with Attributes,” on page 1](the_v2_attributes_service.md).
+The PUT method of the attributes service adds or replaces attributes on the specified entity (a user, an organization, or the server-level). For possible values of &lt;entity&gt; in the URL, see [1.1.2, “Entities with Attributes,” on page 1](the_v2_attributes_service.md).
 
 There are two syntaxes; the following one is for adding or replacing all attributes at once.
 

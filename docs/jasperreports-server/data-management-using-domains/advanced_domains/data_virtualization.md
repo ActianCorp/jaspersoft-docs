@@ -7,8 +7,8 @@ description: "There are two ways to integrate data virtually from multiple sourc
 
 There are two ways to integrate data virtually from multiple sources using Domains in JasperReports Server:
 
-- For simple data virtualization with low volumes of data and limited join complexity, create a JasperReports Server virtual data source and build your Domain on top of it. In this case, you define the relationships that connect the tables of the different data sources using the Domain Designer. See the JasperReports Server Administrator Guide for more information about virtual data sources in JasperReports Server. This is a lightweight solution that does not require any additional server or installation.
-- For more complex virtualizations, or where performance and scale are essential, use Jaspersoft Advanced Data Services to access and combine your different data sources. Once you have designed and created an integrated data source in Jaspersoft Advanced Data Services, you create a JasperReports Server JDBC data source to access it and then use the Domain Designer to choose the tables you want and create user-friendly names. Using Jaspersoft Advanced Data Services offers better performance and scaling, with management tools designed specifically for combining multiple data sources. Contact your sales representative for information about licensing for Jaspersoft Advanced Data Services. This requires a separate installation for Jaspersoft Advanced Data Services.
+-   For simple data virtualization with low volumes of data and limited join complexity, create a JasperReports Server virtual data source and build your Domain on top of it. In this case, you define the relationships that connect the tables of the different data sources using the Domain Designer. See the JasperReports Server Administrator Guide for more information about virtual data sources in JasperReports Server. This is a lightweight solution that does not require any additional server or installation.
+-   For more complex virtualizations, or where performance and scale are essential, use Jaspersoft Advanced Data Services to access and combine your different data sources. Once you have designed and created an integrated data source in Jaspersoft Advanced Data Services, you create a JasperReports Server JDBC data source to access it and then use the Domain Designer to choose the tables you want and create user-friendly names. Using Jaspersoft Advanced Data Services offers better performance and scaling, with management tools designed specifically for combining multiple data sources. Contact your sales representative for information about licensing for Jaspersoft Advanced Data Services. This requires a separate installation for Jaspersoft Advanced Data Services.
 
 ## Notes on Using Virtual Data Sources
 
@@ -16,4 +16,4 @@ Normally, you combine data sources that have relationships you want to explore. 
 
 !!! note
 
-    Domains built from virtual data sources may have additional syntax restrictions. For example, Domains built from a virtual data source do not work with table names that contain \\
+    Domains built from virtual data sources may have additional syntax restrictions. For example, Domains built from a virtual data source do not work with table names that contain \\.

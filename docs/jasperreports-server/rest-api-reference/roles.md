@@ -13,19 +13,19 @@ Because the role ID and organization ID are used in the URL, this service can op
 
 This chapter includes the following sections:
 
-- Searching for Roles
-- Viewing a Role
-- Creating a Role
-- Modifying a Role
-- Setting Role Membership
-- Deleting a Role
+-   Searching for Roles
+-   Viewing a Role
+-   Creating a Role
+-   Modifying a Role
+-   Setting Role Membership
+-   Deleting a Role
 
 ## Searching for Roles
 
 The GET method without any role ID searches for and lists role definitions. It has options to search for roles by name or by user that belongs to the role. If no search is specified, it returns all roles. The method has two forms:
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
-- In commercial editions with organizations, use the first URL to search or list all roles starting from the logged-in user’s organization (root for the system admin), and use the second URL to search or list all roles in a specified organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
+-   In commercial editions with organizations, use the first URL to search or list all roles starting from the logged-in user’s organization (root for the system admin), and use the second URL to search or list all roles in a specified organization.
 
 <table>
 <colgroup>
@@ -140,8 +140,8 @@ This method returns the set of all default system and root roles defined on a se
 
 The GET method with a role ID retrieves a single role descriptor containing the role properties.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the role’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to specify the roles of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the role’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to specify the roles of the root organization.
 
 <table>
 <colgroup>
@@ -194,8 +194,8 @@ GET http://localhost:8080/jasperserver-pro/rest_v2/organizations/Finance/roles/R
 
 To create a role, send the PUT request to the roles service with the intended role ID (name) specified in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create roles in the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create roles in the root organization.
 
 Roles do not have any properties to specify other than the role ID, but the request must include a descriptor that can be empty.
 
@@ -245,8 +245,8 @@ Roles do not have any properties to specify other than the role ID, but the requ
 
 To change the name of a role, send a PUT request to the roles service and specify the new name in the role descriptor.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to modify roles in the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to modify roles in the root organization.
 
 The only property of a role that you can modify is the role's name, which is also its roleID. After the update, all members of the role are members of the new role name, and all permissions associated with the old role name are updated to the new role name.
 
@@ -304,8 +304,8 @@ To assign role membership to a user, set the roles property on the user account 
 
 To delete a role, send the DELETE method and specify the role ID (name) in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to delete the roles of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to delete the roles of the root organization.
 
 When this method is successful, the role is permanently deleted.
 

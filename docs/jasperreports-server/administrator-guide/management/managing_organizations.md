@@ -27,7 +27,7 @@ The following figure shows the same repository as seen by the admin of Organizat
 
 1.  Log in as a user with administrative privileges for the organization you want to view.
 
-2.  Select **Manage \> Organizations**.
+2.  Select **Manage &gt; Organizations**.
 
 3.  The organization management page appears, as shown in the previous figures.
 
@@ -39,13 +39,13 @@ The following figure shows the same repository as seen by the admin of Organizat
 
 5.  Once you select an organization, the **Properties** panel on the right shows information about it:
 
-- **Name**: Display name of the organization that appears on the organization's top folder.
-- **ID**: Unique and permanent organization ID used for logging in.
-- **Alias**: Unique but editable short organization name that can also be used when logging in.
-- **Description**: Optional description that appears only in this Properties panel.
-- **Number of Users**: Count of all users, including those in any suborganizations. Click **Manage** to see the list of users on the user management page.
-- **Number of Roles**: Count all roles, including those in any suborganizations. The number of roles does not include the system roles (such as ROLE_USER) that appear at every organization level but are defined at the root level. Click **Manage** to see the list of roles on the role management page.
-- For information about attributes on the organization, see [Managing Organization Attributes](managing_attributes.md).
+-   **Name**: Display name of the organization that appears on the organization's top folder.
+-   **ID**: Unique and permanent organization ID used for logging in.
+-   **Alias**: Unique but editable short organization name that can also be used when logging in.
+-   **Description**: Optional description that appears only in this Properties panel.
+-   **Number of Users**: Count of all users, including those in any suborganizations. Click **Manage** to see the list of users on the user management page.
+-   **Number of Roles**: Count all roles, including those in any suborganizations. The number of roles does not include the system roles (such as ROLE_USER) that appear at every organization level but are defined at the root level. Click **Manage** to see the list of roles on the role management page.
+-   For information about attributes on the organization, see [Managing Organization Attributes](managing_attributes.md).
 
 !!! note
 
@@ -55,7 +55,7 @@ The following figure shows the same repository as seen by the admin of Organizat
 
 1.  Log in as a user with administrative privileges for the parent of the new organization.
 
-2.  Click **Manage \> Organizations**.
+2.  Click **Manage &gt; Organizations**.
 
 3.  In the left-Organizations panel, expand the hierarchy of organizations to select the parent organization, for example Finance, then click **Add Organization** in the middle panel.
 
@@ -67,20 +67,20 @@ The following figure shows the same repository as seen by the admin of Organizat
 
 5.  Enter the **Organization Name**. The server automatically fills in the ID and alias based on the name. You can change the ID and alias if needed before saving the organization. Once saved, the organization ID can no longer be modified. The **Description** is optional. The previous figure shows this dialog with sample values.
 
-6.  To save the new organization, click **Add Organization to \<organization\>**.
+6.  To save the new organization, click **Add Organization to &lt;organization&gt;**.
 
 The new organization appears in the **Organizations** panels. When you select it in the center panel, its properties appear in the **Properties** panel on the right.
 
 The **Properties** panel shows the number of users and roles in the organization and provides links to manage them. By default, new organizations have the following:
 
-- Two users with default passwords: the organization admin (**jasperadmin**/**jasperadmin**) and a sample user (**joeuser/joeuser**).
+-   Two users with default passwords: the organization admin (**jasperadmin**/**jasperadmin**) and a sample user (**joeuser/joeuser**).
 
 !!! warning
 
     For security reasons, always change the default passwords immediately after creating a new organization. For instructions, see [Managing Users](managing_users.md).
 
-- The new organization has no roles of its own. The default users have the system-wide roles **ROLE_USER** and **ROLE_ADMINISTRATOR**.
-- In the repository, a new folder is created in the parent's Organization folder. This new organization folder contains a copy of the parent's **Organization/Folder Template** folder. To manage the **Organization** folders, select **View \> Repository**.
+-   The new organization has no roles of its own. The default users have the system-wide roles **ROLE_USER** and **ROLE_ADMINISTRATOR**.
+-   In the repository, a new folder is created in the parent's Organization folder. This new organization folder contains a copy of the parent's **Organization/Folder Template** folder. To manage the **Organization** folders, select **View &gt; Repository**.
 
 ## Default Folders for Organizations
 
@@ -88,10 +88,10 @@ Every organization contains a special folder named Organizations where the serve
 
 The default folders in the Folder Template are:
 
-- **Ad Hoc Components\Topics** – The location where the Ad Hoc Editor looks for Topics to create new reports.
-- **Temp** – A folder visible only administrators, used by the server to store temporary files.
-- **Templates** – A folder that holds templates used when generating reports from Ad Hoc views.
-- **Themes** – A special folder managed by the system to contain CSS files that define the appearance of the user interface.
+-   **Ad Hoc Components\\Topics** – The location where the Ad Hoc Editor looks for Topics to create new reports.
+-   **Temp** – A folder visible only administrators, used by the server to store temporary files.
+-   **Templates** – A folder that holds templates used when generating reports from Ad Hoc views.
+-   **Themes** – A special folder managed by the system to contain CSS files that define the appearance of the user interface.
 
 !!! note
 
@@ -105,7 +105,7 @@ Finally, the **Folder Template** itself is copied into a new organization, so ea
 
 1.  Log in as a user with administrative privileges for the organization.
 
-2.  Click **Manage \> Organizations**.
+2.  Click **Manage &gt; Organizations**.
 
 3.  In the left-Organizations panels, select the organization's parent. In the center Organizations panel, select the **Organization**.
 
@@ -124,6 +124,6 @@ Finally, the **Folder Template** itself is copied into a new organization, so ea
 ## Deleting an Organization
 
 1.  Log in as a user with administrative privileges for the organization.
-2.  Click ****Manage \> Organizations****.
+2.  Click ****Manage &gt; Organizations****.
 3.  In the left-Organizations panels, select the organization's parent. In the center Organizations panel, select the **Organization** and click **Delete**.
 4.  Administrators cannot delete the organization to which they belong. Confirming the delete completely removes all users, roles, and folders of the organization and all of its suborganizations from JasperReports Server.

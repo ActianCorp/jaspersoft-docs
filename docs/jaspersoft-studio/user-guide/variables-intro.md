@@ -9,12 +9,12 @@ You can use variables to store partial results and do complex calculations with 
 
 This chapter contains the following sections:
 
-- [Defining or Editing a Variable](variables-defining.md)
+-   [Defining or Editing a Variable](variables-defining.md)
 
-- [Base Properties of a Variable](variables-base-attributes.md)
+-   [Base Properties of a Variable](variables-base-attributes.md)
 
-- [Other Properties of a Variable](variables-other-properties.md)
+-   [Other Properties of a Variable](variables-other-properties.md)
 
-- [Built-In Variables](variables-built-in.md)
+-   [Built-In Variables](variables-built-in.md)
 
-- [Tips & Tricks](variables-tips-tricks.md)
+-   [Tips & Tricks](variables-tips-tricks.md)

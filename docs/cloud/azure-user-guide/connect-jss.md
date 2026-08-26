@@ -33,7 +33,7 @@ description: 1. Create a data adapter (called data source in Jaspersoft Studio).
 
 ## Defining Repository Explorer Connection
 
-1.  In Jaspersoft Studio, select **Window \> Show Views \> Other**.
+1.  In Jaspersoft Studio, select **Window &gt; Show Views &gt; Other**.
 
     ![other](assets/images/other.png)
 

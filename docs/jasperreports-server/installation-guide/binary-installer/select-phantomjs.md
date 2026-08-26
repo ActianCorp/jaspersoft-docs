@@ -7,11 +7,11 @@ description: "Chrome/Chromium runs JavaScript when generating graphical reports 
 
 Chrome/Chromium runs JavaScript when generating graphical reports that are run in the background or scheduled. (When run directly in the Web UI, the browser itself renders the graphics.) You have three options:
 
-- Use an existing Chrome/Chromium.
+-   Use an existing Chrome/Chromium.
 
-- Download Chrome/Chromium.
+-   Download Chrome/Chromium.
 
-- Install without Chrome/Chromium.
+-   Install without Chrome/Chromium.
 
 ## Using an Existing Chrome/Chromium
 

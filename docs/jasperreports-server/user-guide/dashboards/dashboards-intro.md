@@ -17,20 +17,20 @@ A Jaspersoft dashboard displays several reports in a single, integrated view. A 
 
 This chapter contains the following sections:
 
-- [Viewing a Dashboard](dashboards-viewing.md)
+-   [Viewing a Dashboard](dashboards-viewing.md)
 
-- [Overview of the Dashboard Designer](dashboard-designer-overview.md)
+-   [Overview of the Dashboard Designer](dashboard-designer-overview.md)
 
-- [Creating a Dashboard](dashboards-creating-simple.md)
+-   [Creating a Dashboard](dashboards-creating-simple.md)
 
-- [Specifying Parameters in Dashlets](dashboards-parameters-in-dashlets.md)
+-   [Specifying Parameters in Dashlets](dashboards-parameters-in-dashlets.md)
 
-- [Editing a Dashboard](dashboards-editing.md)
+-   [Editing a Dashboard](dashboards-editing.md)
 
-- [Scheduling a Dashboard](dashboards-scheduling.md)
+-   [Scheduling a Dashboard](dashboards-scheduling.md)
 
-- [Getting the Embed Code for Visualize.js](dashboards-get-embed-code.md)
+-   [Getting the Embed Code for Visualize.js](dashboards-get-embed-code.md)
 
-- [Exporting Dashboards and Dashlets](dashboards-exporting.md)
+-   [Exporting Dashboards and Dashlets](dashboards-exporting.md)
 
-- [Tips for Designing Dashboards](dashboards-input-control-tips.md)
+-   [Tips for Designing Dashboards](dashboards-input-control-tips.md)

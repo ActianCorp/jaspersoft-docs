@@ -18,10 +18,10 @@ where [Time].[2012].[Q4].[12]
 
 In the example MDX:
 
-- `[Measures].[STORE SALES]` is a measure.
-- `[PRODUCT].[ALL PRODUCTS]` is a member in the PRODUCT dimension.
-- `[STORE].[ALL STORES]` is a member in the STORE dimension.
-- `[SALES BY PRODUCT BY STORE]` is a cube.
-- `[TIME].[2012]` is a member used as a filter axis in the WHERE clause.
+-   `[Measures].[STORE SALES]` is a measure.
+-   `[PRODUCT].[ALL PRODUCTS]` is a member in the PRODUCT dimension.
+-   `[STORE].[ALL STORES]` is a member in the STORE dimension.
+-   `[SALES BY PRODUCT BY STORE]` is a cube.
+-   `[TIME].[2012]` is a member used as a filter axis in the WHERE clause.
 
 Jaspersoft OLAP constructs MDX queries as you use its controls to manipulate the view. If you are not proficient with MDX, you may want your initial view to use the simplest possible MDX query. For example, you can start with one measure and one dimension, then use the tool bar buttons and navigation table to tailor the view to show the exact data you want. You can always see the MDX that underlies the current view by clicking **View MDX query** in the tool bar. You can also edit this query to change the view if you are comfortable with MDX.

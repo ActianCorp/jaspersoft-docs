@@ -36,13 +36,13 @@ Refer to the JasperReports Server User Guide to begin adding reports and other o
 
 After your initial login, you're asked to opt in to the JasperReports Server Heartbeat. The heartbeat helps Jaspersoft understand customer installation environments to improve our products. If you choose to enable the heartbeat, an HTTPS call at server startup time sends information like this to Jaspersoft:
 
-- Operating System and JVM type and version
+-   Operating System and JVM type and version
 
-- Application Server and Database type and version
+-   Application Server and Database type and version
 
-- JasperReports Server type and version
+-   JasperReports Server type and version
 
-- Unique, anonymous identifier value
+-   Unique, anonymous identifier value
 
 You can manually enable or disable the heartbeat by modifying the following property file `jasperserver`` ``-pro`` /WEB-INF/js.config.properties`. To disable the heartbeat, set the `heartbeat.enabled` property to `false`:
 

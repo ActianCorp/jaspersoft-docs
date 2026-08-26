@@ -9,9 +9,9 @@ Once you have created a custom template, you need to add it to Jaspersoft Studio
 
 To add a template to Jaspersoft Studio
 
-1.  Go to **Window \> Preferences** (**Eclipse \> Preferences** on Mac).
+1.  Go to **Window &gt; Preferences** (**Eclipse &gt; Preferences** on Mac).
 
-2.  Go to ** \> Jaspersoft Studio \> Resource Folders Locations \> Report Templates Locations**.
+2.  Go to ** &gt; Jaspersoft Studio &gt; Resource Folders Locations &gt; Report Templates Locations**.
 
     |  |
     |----|
@@ -24,4 +24,4 @@ To add a template to Jaspersoft Studio
 
 5.  Click **OK**.
 
-When you go to **File \> New \> Jasper Report**, your new template appears, along with the default templates.
+When you go to **File &gt; New &gt; Jasper Report**, your new template appears, along with the default templates.

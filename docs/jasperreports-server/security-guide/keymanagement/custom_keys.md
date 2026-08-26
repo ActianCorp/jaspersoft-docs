@@ -73,8 +73,8 @@ To create and import a custom key to multiple servers:
 
 In this example, the two custom keys were given the same alias as the keys that are created by default in the server's own keystore (`/users/jrsuser/.jrsks`). As a result, the custom keys overwrite the server's default keys, which will be used in any operation where the default keys are used. This has the following consequences:
 
-- Export catalogs can be shared between the two servers. Any passwords in the export catalog will be encrypted with the new `importExportEncSecret` on one server and decrypted with the same key on the other server. Export catalogs can be moved from the test server to the production server for deployment and vice versa for debugging, without exchanging keys or even specifying key aliases.
-- Log collectors are encrypted with a known key. For security, the diagnostic information in the log collector is encrypted with the `diagnosticDataEncSecret` key. Now when you download the log collector zip file, you need a copy of the mystore keystore file with your new `diagnosticDataEncSecret` key to decrypt it.
+-   Export catalogs can be shared between the two servers. Any passwords in the export catalog will be encrypted with the new `importExportEncSecret` on one server and decrypted with the same key on the other server. Export catalogs can be moved from the test server to the production server for deployment and vice versa for debugging, without exchanging keys or even specifying key aliases.
+-   Log collectors are encrypted with a known key. For security, the diagnostic information in the log collector is encrypted with the `diagnosticDataEncSecret` key. Now when you download the log collector zip file, you need a copy of the mystore keystore file with your new `diagnosticDataEncSecret` key to decrypt it.
 
 !!! warning
 

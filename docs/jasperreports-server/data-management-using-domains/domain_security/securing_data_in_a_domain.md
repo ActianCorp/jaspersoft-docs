@@ -25,11 +25,11 @@ For details about the basics of Domains, see [Understanding Domains](../understa
 
 This chapter includes the following sections:
 
-- [Business Case](domain-business-case.md)
-- [Process Overview](domain-process-overview.md)
-- [Sales Domain](sales-domain.md)
-- [Roles, Users, and Profile Attributes](roles-users-attributes.md)
-- [Setting Up Logging and Testing](domain-security-testing.md)
-- [Creating a Domain Security File](creating-a-security-file.md)
-- [Testing and Results](verfiying-domain-security.md)
-- [Domain and Security Recommendations](recommendations.md)
+-   [Business Case](domain-business-case.md)
+-   [Process Overview](domain-process-overview.md)
+-   [Sales Domain](sales-domain.md)
+-   [Roles, Users, and Profile Attributes](roles-users-attributes.md)
+-   [Setting Up Logging and Testing](domain-security-testing.md)
+-   [Creating a Domain Security File](creating-a-security-file.md)
+-   [Testing and Results](verfiying-domain-security.md)
+-   [Domain and Security Recommendations](recommendations.md)

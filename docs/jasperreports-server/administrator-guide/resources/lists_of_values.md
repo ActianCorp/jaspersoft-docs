@@ -11,9 +11,9 @@ To create a list of values
 
 1.  Log on as an administrator.
 
-2.  Click **View \> Repository** and locate the folder for the new list of values.
+2.  Click **View &gt; Repository** and locate the folder for the new list of values.
 
-3.  Right click the folder's name and select **Add Resource \> List of Values** from the context menu. The **Add List of Values** page appears.
+3.  Right click the folder's name and select **Add Resource &gt; List of Values** from the context menu. The **Add List of Values** page appears.
 
     ![js AddListOfValues](../assets/images/js-AddListOfValues.png)
 

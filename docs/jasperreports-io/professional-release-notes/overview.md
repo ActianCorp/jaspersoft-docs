@@ -9,22 +9,22 @@ JasperReports® IO - Professional Edition is a lightweight HTTP-based service us
 
 JasperReports® IO Professional Edition capabilities include:
 
-- **Single Instance** - For low-end reporting volume needs.
+-   **Single Instance** - For low-end reporting volume needs.
 
-- **Concurrent Report Execution** - Can be purchased in 10 concurrent report execution configurations with volume discounts.
+-   **Concurrent Report Execution** - Can be purchased in 10 concurrent report execution configurations with volume discounts.
 
-- **REST API Control** - Automatically render reports into a choice of eight output formats including HTML, PDF, XLSX, PPT, and more.
+-   **REST API Control** - Automatically render reports into a choice of eight output formats including HTML, PDF, XLSX, PPT, and more.
 
-- **Highly Formatted Reports** - Build multi-component, multi-page reports with animated charts & graphs for print or interactive online viewing.
+-   **Highly Formatted Reports** - Build multi-component, multi-page reports with animated charts & graphs for print or interactive online viewing.
 
-- **Interactive Report Viewing** - Browser-based viewer lets business users perform and save filtering, sorting, and column formatting changes.
+-   **Interactive Report Viewing** - Browser-based viewer lets business users perform and save filtering, sorting, and column formatting changes.
 
-- **Embeddable Report Viewer** - Tightly embed interactive reports within another application using Javascript.
+-   **Embeddable Report Viewer** - Tightly embed interactive reports within another application using Javascript.
 
-- **Certified Data Connectivity** - Report from any data source including relational, custom files, or big data environments.
+-   **Certified Data Connectivity** - Report from any data source including relational, custom files, or big data environments.
 
 JasperReports® IO - Professional Edition includes the following products:
 
-- JasperReports® IO - Professional Edition software
+-   JasperReports® IO - Professional Edition software
 
-- Jaspersoft® Studio software
+-   Jaspersoft® Studio software

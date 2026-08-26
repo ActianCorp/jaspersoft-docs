@@ -9,13 +9,13 @@ The WAR file installer includes several sample data source types in the `<js‑i
 
 These samples are not intended to be used in production environments. Modify and test these samples to understand how to create your own custom data source. The examples include:
 
-- Custom bean data source
+-   Custom bean data source
 
-- Webscraper data source
+-   Webscraper data source
 
-- Hibernate data source
+-   Hibernate data source
 
-- Custom data source pro with metadata support for Domains
+-   Custom data source pro with metadata support for Domains
 
 ## Prerequisites
 
@@ -40,46 +40,42 @@ If you cannot find Ant on your system, you can download it from <http://ant.apac
 
 The `<js‑install>/samples/customDataSource` and `<js‑install>/samples/customDataSource-pro` directories include:
 
-- `readme.txt`: Text file describing how to build the examples.
+-   `readme.txt`: Text file describing how to build the examples.
 
-- `build.xml`: The Ant build file.
+-   `build.xml`: The Ant build file.
 
-- `src`: Java source directory.
+-   `src`: Java source directory.
 
-- `webapp`: A directory containing other files required by the examples, such as JSPs and Spring configuration files, which are copied directly to the JasperReports Server web application directory.
+-   `webapp`: A directory containing other files required by the examples, such as JSPs and Spring configuration files, which are copied directly to the JasperReports Server web application directory.
 
-- `reports`: A directory containing example JRXML files that use the sample custom data source types.
+-   `reports`: A directory containing example JRXML files that use the sample custom data source types.
 
 To install the samples in your JasperReports Server web application
 
 1.  At the command line, change directories to the custom data source sample directory (`<js‑install>/samples/customDataSource`).
-
 2.  Edit `build.xml` and set the `webAppDir` property to the root of your JasperReports Server web application.
-
 3.  Run the Ant command (as described in Prerequisites) with no arguments. This executes the default target, which is named `deploy`. The `deploy` target initiates these actions:
 
-    - Compiles the Java source files under the src directory.
+-   Compiles the Java source files under the src directory.
 
-    - Deploys the compiled Java class files to the web application.
+-   Deploys the compiled Java class files to the web application.
 
-    - Deploys files under the webapp directory to the web application.
+-   Deploys files under the webapp directory to the web application.
 
-    !!! note
+!!! note
 
-        See [Table 1-1, “Files Used by a Custom Data Source Implementation,” on page 1](custom-data-source-creation.md) for the final locations of the files in JasperReports Server
+    See [Table 1-1, “Files Used by a Custom Data Source Implementation,” on page 1](custom-data-source-creation.md) for the final locations of the files in JasperReports Server
 
-4.  Repeat this procedure for the sample in `<js‑install>/samples/customDataSource-pro`.
-
-5.  For the webscraper report example, you must register its query executer factory as described in Webscraper Custom Data Source.
-
-6.  Restart the application server.
+1.  Repeat this procedure for the sample in `<js‑install>/samples/customDataSource-pro`.
+2.  For the webscraper report example, you must register its query executer factory as described in Webscraper Custom Data Source.
+3.  Restart the application server.
 
 The example custom data source types are now available from the New Data Source page in JasperReports Server.
 
 To test the samples and create or view reports
 
 1.  Log on to JasperReports Server as an administrator.
-2.  Open the **New Data Source** page (for example, by selecting **Create \> Data Source** for the main menu), enter the required values for the data source type you selected, and save the data source. For more information about creating data sources, see the *JasperReports Server Administrator Guide*.
+2.  Open the **New Data Source** page (for example, by selecting **Create &gt; Data Source** for the main menu), enter the required values for the data source type you selected, and save the data source. For more information about creating data sources, see the *JasperReports Server Administrator Guide*.
 3.  To test a sample, upload the associated report from the `<js‑install>/samples/customDataSource/reports` directory and view the report.
 
 Each of the examples is described in the following sections.
@@ -88,17 +84,17 @@ Each of the examples is described in the following sections.
 
 This custom data source shows how to create a data source type for a JasperReports Library data source (`JRDataSource`) implemented as a simple bean. It includes the following:
 
-- A `JRDataSource` implemented as an array of data declared in the source code.
+-   A `JRDataSource` implemented as an array of data declared in the source code.
 
-- The `ReportDataSourceService` code required by JasperReports Server to set up and tear down the `JRDataSource`.
+-   The `ReportDataSourceService` code required by JasperReports Server to set up and tear down the `JRDataSource`.
 
-- The Spring bean definition file for the custom data source type:
+-   The Spring bean definition file for the custom data source type:
 
-  `<js‑install>/samples/customDataSource/webapp/WEB-INF/applicationContext‑sampleCDS.xml`
+    `<js‑install>/samples/customDataSource/webapp/WEB-INF/applicationContext‑sampleCDS.xml`
 
-- An example report that uses this data source type
+-   An example report that uses this data source type
 
-  `<js‑install>/samples/customDataSource/reports/simpleCDS.jrxml`
+    `<js‑install>/samples/customDataSource/reports/simpleCDS.jrxml`
 
 ## Webscraper Custom Data Source
 
@@ -108,25 +104,25 @@ The webscraper custom data source fetches a web page, decodes its HTML, and extr
 
 The webscraper data source type definition includes these elements:
 
-- URL: An HTTP URL that refers to the HTML page containing the desired content.
+-   URL: An HTTP URL that refers to the HTML page containing the desired content.
 
-- DOM path: An XPath expression that locates HTML elements to be turned into rows in the data source.
+-   DOM path: An XPath expression that locates HTML elements to be turned into rows in the data source.
 
-- Field paths: XPath expressions for each field defined in the JRXML. JasperReports Server uses these paths to locate the field value in each row selected by the DOM path.
+-   Field paths: XPath expressions for each field defined in the JRXML. JasperReports Server uses these paths to locate the field value in each row selected by the DOM path.
 
 The data source takes two parameters: the URL of the web page and the XPath that determines how elements in the HTML page become rows in the data source. The parameters can either be specified by a data source definition in the repository or by a query string in the JRXML. The `<js-install>/samples/customDataSource/reports/webscrapertest.jrxml` report has no query. Instead, it relies on an instance of the custom data source that you must create in the repository. Set the URL and DOM Path according the website you are trying to access.
 
-- When a data source of this type is used in a report, dashboard, or Ad Hoc view, JasperReports Server creates a `JRDataSource` by:
+-   When a data source of this type is used in a report, dashboard, or Ad Hoc view, JasperReports Server creates a `JRDataSource` by:
 
-  Using the URL to issue a GET request for an HTML page.
+    Using the URL to issue a GET request for an HTML page.
 
-- Converting the HTML response into XML using JTidy (<http://jtidy.sourceforge.net>).
+-   Converting the HTML response into XML using JTidy (<http://jtidy.sourceforge.net>).
 
-- Using the DOM path to select XML elements from the converted response.
+-   Using the DOM path to select XML elements from the converted response.
 
-- Creating a new data source row for each selected element.
+-   Creating a new data source row for each selected element.
 
-- Determining the context for each field based on its field path.
+-   Determining the context for each field based on its field path.
 
 !!! note
 
@@ -155,15 +151,17 @@ For more information about registering query executors, see the Report Query sec
 
 The Hibernate custom data source type implementation supports Hibernate Query Language (HQL) queries in report units in JasperReports Server. The Spring bean definition file and related Java code for the Hibernate custom data source example are in the following locations in the `<js‑install>/samples/customDataSource/` directory:
 
-- `webapp/WEB-INF/applicationContext-hibernateDS.xml`: Spring bean XML to configure the Hibernate data source
-- `src/example/cds/HibernateDataSourceService.java`: implementation of ReportDataSourceService for the data source
-- `src/example/cds/HibernateSessionFactoryFinder.java`: a helper class used to locate a `SessionFactory` instance for `HibernateDataSourceService`
+-   `webapp/WEB-INF/applicationContext-hibernateDS.xml`: Spring bean XML to configure the Hibernate data source
 
-The implementation works with the JasperReports Library's support for HQL queries to create a data source. The library will use the `JRHibernateQueryExecuter` to run an HQL query in a report unit, and this query executer needs a Hibernate `Session` object. The Hibernate custom data source will create the session from a Hibernate `SessionFactory` configured as a Spring bean in JasperReports Server.
+-   `src/example/cds/HibernateDataSourceService.java`: implementation of ReportDataSourceService for the data source
 
-The Hibernate data source configuration on the data source menu in JasperReports Server includes the following element:
+-   `src/example/cds/HibernateSessionFactoryFinder.java`: a helper class used to locate a `SessionFactory` instance for `HibernateDataSourceService`
 
-- Session Factory Bean Name: A `SessionFactory` created with a named Spring bean of class `SessionFactory`, `HibernateDaoSupport`, or one of their subclasses.
+    The implementation works with the JasperReports Library's support for HQL queries to create a data source. The library will use the `JRHibernateQueryExecuter` to run an HQL query in a report unit, and this query executer needs a Hibernate `Session` object. The Hibernate custom data source will create the session from a Hibernate `SessionFactory` configured as a Spring bean in JasperReports Server.
+
+    The Hibernate data source configuration on the data source menu in JasperReports Server includes the following element:
+
+-   Session Factory Bean Name: A `SessionFactory` created with a named Spring bean of class `SessionFactory`, `HibernateDaoSupport`, or one of their subclasses.
 
 The sample Hibernate test report contains an HQL query on the JasperReports Server repository, which uses Hibernate internally.
 
@@ -180,7 +178,7 @@ To run the Hibernate data source example
 3.  Upload and configure the sample report:
 
     1.  Navigate to the repository location where you want to save the report.
-    2.  Right-click and select **Add Resource \> JasperReport**. The **Add JasperReport** page is displayed.
+    2.  Right-click and select **Add Resource &gt; JasperReport**. The **Add JasperReport** page is displayed.
     3.  On the **Set Up** page, enter a name for the report unit.
     4.  Select **Upload a Local File**, click **Browse**, select `<js‑install>/samples/customDataSource/reports/hqlTest.jrxml`, and click **OK**.
     5.  On the **Data Source** page, click **Select data source from repository** and browse to the data source created in the previous step.
@@ -194,10 +192,10 @@ The Custom Data Source Pro example works in commercial editions of JasperReports
 
 This example is located in the `<js‑install>/samples/customDataSource-pro` directory. It includes the following:
 
-- A `JRDataSource` implemented as an array of data declared in the source code.
+-   A `JRDataSource` implemented as an array of data declared in the source code.
 
-- The example implements Domain support using the `CustomDomainMetaData` class.
+-   The example implements Domain support using the `CustomDomainMetaData` class.
 
-- Its Spring bean definition file is located in:
+-   Its Spring bean definition file is located in:
 
 `<js-install>/samples/customDataSource-pro/webapp/WEB-INF/applicationContext-sampleCDSWithMetData.xml`

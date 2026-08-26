@@ -11,10 +11,12 @@ The Jaspersoft Mobile SDK for iOS includes API documention for all of its packag
 
 The Mobile SDK and the JasperMobile app for iOS are documented at:
 
-- <https://github.com/Jaspersoft/js-ios-sdk/wiki>
-- <https://github.com/Jaspersoft/js-ios-app/wiki>
+-   <https://github.com/Jaspersoft/js-ios-sdk/wiki>
 
-In addition, the following documentation is available on the Jaspersoft Community website ([http://community.jaspersoft.com/documentation](http://community.jaspersoft.com/documentation?version=15786)):
+-   <https://github.com/Jaspersoft/js-ios-app/wiki>
 
-- JasperReports Server REST API Reference (REST API)
-- JasperReports Server Mobile Developer Guide (this book)
+    In addition, the following documentation is available on the Jaspersoft Community website ([http://community.jaspersoft.com/documentation](http://community.jaspersoft.com/documentation?version=15786)):
+
+-   JasperReports Server REST API Reference (REST API)
+
+-   JasperReports Server Mobile Developer Guide (this book)

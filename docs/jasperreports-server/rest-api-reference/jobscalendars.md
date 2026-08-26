@@ -13,12 +13,12 @@ The scheduler also allows you to modify an exclusion calendar and update all the
 
 This chapter includes the following sections:
 
-- Creating an Exclusion Calendar
-- Listing All Calendar Names
-- Viewing an Exclusion Calendar
-- Updating an Exclusion Calendar
-- Deleting an Exclusion Calendar
-- Error Messages
+-   Creating an Exclusion Calendar
+-   Listing All Calendar Names
+-   Viewing an Exclusion Calendar
+-   Updating an Exclusion Calendar
+-   Deleting an Exclusion Calendar
+-   Error Messages
 
 ## Creating an Exclusion Calendar
 
@@ -62,159 +62,159 @@ application/json</span></p></td>
 
 The following examples show the types of exclusion calendars that you can add to the scheduler:
 
-- Annual calendar: A list of days that you want to exclude every year.
+-   Annual calendar: A list of days that you want to exclude every year.
 
-JSON:
+    JSON:
 
-``` json
-{
-    "calendarType":"annual",
-    "description":"Annual calendar description",
-    "excludeDays": [ "2021-03-20", "2021-03-21", "2021-03-22"],
-    "timeZone":"GMT+03:00"
-}
-```
+    ``` json
+    {
+        "calendarType":"annual",
+        "description":"Annual calendar description",
+        "excludeDays": [ "2021-03-20", "2021-03-21", "2021-03-22"],
+        "timeZone":"GMT+03:00"
+    }
+    ```
 
-XML:
+    XML:
 
-``` xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<reportJobCalendar>
-  <calendarType>annual</calendarType>
-  <description>Annual calendar description</description>
-  <timeZone>GMT+03:00</timeZone>
-    <excludeDays>
-    <excludeDay>2021-03-20</excludeDay>
-    <excludeDay>2021-03-21</excludeDay>
-    <excludeDay>2021-03-22</excludeDay>
-  </excludeDays>
-</reportJobCalendar>
-```
+    ``` xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <reportJobCalendar>
+      <calendarType>annual</calendarType>
+      <description>Annual calendar description</description>
+      <timeZone>GMT+03:00</timeZone>
+        <excludeDays>
+        <excludeDay>2021-03-20</excludeDay>
+        <excludeDay>2021-03-21</excludeDay>
+        <excludeDay>2021-03-22</excludeDay>
+      </excludeDays>
+    </reportJobCalendar>
+    ```
 
-- Cron calendar: Defines the days and times to exclude as a cron expression.
+-   Cron calendar: Defines the days and times to exclude as a cron expression.
 
-JSON:
+    JSON:
 
-``` json
-{
-    "calendarType":"cron",
-    "description":"Cron calendar description",
-    "cronExpression":"0 30 10-13 ? * WED,FRI",
-    "timeZone":"GMT+03:00"
-}
-```
+    ``` json
+    {
+        "calendarType":"cron",
+        "description":"Cron calendar description",
+        "cronExpression":"0 30 10-13 ? * WED,FRI",
+        "timeZone":"GMT+03:00"
+    }
+    ```
 
-XML:
+    XML:
 
-``` xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<reportJobCalendar>
-  <calendarType>cron</calendarType>
-  <description>Cron calendar description</description>
-  <cronExpression>0 30 10-13 ? * WED,FRI</cronExpression>
-  <timeZone>GMT+03:00</timeZone>
-</reportJobCalendar>
-```
+    ``` xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <reportJobCalendar>
+      <calendarType>cron</calendarType>
+      <description>Cron calendar description</description>
+      <cronExpression>0 30 10-13 ? * WED,FRI</cronExpression>
+      <timeZone>GMT+03:00</timeZone>
+    </reportJobCalendar>
+    ```
 
-- Daily calendar: Defines a time range to exclude every day.
+-   Daily calendar: Defines a time range to exclude every day.
 
-JSON:
+    JSON:
 
-``` json
-{
-    "calendarType":"daily",
-    "description":"Daily calendar description",
-    "invertTimeRange":false,
-    "rangeEndingCalendar":"2020-20T14:44:37.353+03:00",
-    "rangeStartingCalendar":"2020-03-20T14:43:37.353+03:00",
-    "timeZone":"GMT+03:00"
-}
-```
+    ``` json
+    {
+        "calendarType":"daily",
+        "description":"Daily calendar description",
+        "invertTimeRange":false,
+        "rangeEndingCalendar":"2020-20T14:44:37.353+03:00",
+        "rangeStartingCalendar":"2020-03-20T14:43:37.353+03:00",
+        "timeZone":"GMT+03:00"
+    }
+    ```
 
-XML:
+    XML:
 
-``` xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<reportJobCalendar>
-  <calendarType>daily</calendarType>
-  <description>Daily calendar description</description>
-  <invertTimeRange>false</invertTimeRange>
-  <rangeEndingCalendar>2020-03-20T14:44:37.353+03:00</rangeEndingCalendar>
-  <rangeStartingCalendar>2020-03-20T14:43:37.353+03:00</rangeStartingCalendar>
-  <timeZone>GMT+03:00</timeZone>
-</reportJobCalendar>
-```
+    ``` xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <reportJobCalendar>
+      <calendarType>daily</calendarType>
+      <description>Daily calendar description</description>
+      <invertTimeRange>false</invertTimeRange>
+      <rangeEndingCalendar>2020-03-20T14:44:37.353+03:00</rangeEndingCalendar>
+      <rangeStartingCalendar>2020-03-20T14:43:37.353+03:00</rangeStartingCalendar>
+      <timeZone>GMT+03:00</timeZone>
+    </reportJobCalendar>
+    ```
 
-- Holiday calendar: Defines a set of days to exclude that can be updated every year.
+-   Holiday calendar: Defines a set of days to exclude that can be updated every year.
 
-JSON:
+    JSON:
 
-``` json
-{
-    "calendarType":"holiday",
-    "description":"Holiday calendar (observed)",
-    "excludeDays": [
-        "2020-01-01",
-        "2020-01-20",
-        "2020-02-17",
-        "2020-05-25",
-        "2020-07-03",
-        "2020-09-07",
-        "2020-10-12",
-        "2020-11-11",
-        "2020-11-26",
-        "2020-12-25"
-    ],
-    "timeZone":"GMT+03:00"
-}
-```
+    ``` json
+    {
+        "calendarType":"holiday",
+        "description":"Holiday calendar (observed)",
+        "excludeDays": [
+            "2020-01-01",
+            "2020-01-20",
+            "2020-02-17",
+            "2020-05-25",
+            "2020-07-03",
+            "2020-09-07",
+            "2020-10-12",
+            "2020-11-11",
+            "2020-11-26",
+            "2020-12-25"
+        ],
+        "timeZone":"GMT+03:00"
+    }
+    ```
 
-XML:
+    XML:
 
-``` xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<reportJobCalendar>
-  <calendarType>holiday</calendarType>
-  <description>Holiday calendar (observed)</description>
-  <excludeDays>
-    <excludeDay>2021-03-20</excludeDay>
-    <excludeDay>2020-01-01</excludeDay>
-    <excludeDay>2020-01-20</excludeDay>
-    <excludeDay>2020-02-17</excludeDay>
-    <excludeDay>2020-05-25</excludeDay>
-    <excludeDay>2020-07-03</excludeDay>
-    <excludeDay>2020-09-07</excludeDay>
-    <excludeDay>2020-10-12</excludeDay>
-    <excludeDay>2020-11-11</excludeDay>
-    <excludeDay>2020-11-26</excludeDay>
-    <excludeDay>2020-12-25</excludeDay>
-  </excludeDays>
-  <timeZone>GMT+03:00</timeZone>
-</reportJobCalendar>
-```
+    ``` xml
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <reportJobCalendar>
+      <calendarType>holiday</calendarType>
+      <description>Holiday calendar (observed)</description>
+      <excludeDays>
+        <excludeDay>2021-03-20</excludeDay>
+        <excludeDay>2020-01-01</excludeDay>
+        <excludeDay>2020-01-20</excludeDay>
+        <excludeDay>2020-02-17</excludeDay>
+        <excludeDay>2020-05-25</excludeDay>
+        <excludeDay>2020-07-03</excludeDay>
+        <excludeDay>2020-09-07</excludeDay>
+        <excludeDay>2020-10-12</excludeDay>
+        <excludeDay>2020-11-11</excludeDay>
+        <excludeDay>2020-11-26</excludeDay>
+        <excludeDay>2020-12-25</excludeDay>
+      </excludeDays>
+      <timeZone>GMT+03:00</timeZone>
+    </reportJobCalendar>
+    ```
 
-- Weekly calendar: Defines a set of days to be excluded each week.
+-   Weekly calendar: Defines a set of days to be excluded each week.
 
-JSON:
+    JSON:
 
-``` json
-{
-    "calendarType": "weekly",
-    "description": "Weekly calendar description",
-    "excludeDaysFlags": [
-        true,  /*Sunday*/
-        false, /*Monday*/
-        false, /*Tuesday*/
-        false, /*Wednesday*/
-        false, /*Thursday*/
-        false, /*Friday*/
-        false  /*Saturday*/
-    ],
-    "timeZone": "GMT+03:00"
-}
-```
+    ``` json
+    {
+        "calendarType": "weekly",
+        "description": "Weekly calendar description",
+        "excludeDaysFlags": [
+            true,  /*Sunday*/
+            false, /*Monday*/
+            false, /*Tuesday*/
+            false, /*Wednesday*/
+            false, /*Thursday*/
+            false, /*Friday*/
+            false  /*Saturday*/
+        ],
+        "timeZone": "GMT+03:00"
+    }
+    ```
 
-- Monthly calendar: Defines the dates to exclude every month.
+-   Monthly calendar: Defines the dates to exclude every month.
 
 JSON:
 
@@ -337,90 +337,90 @@ The following method takes the name of an exclusion calendar and returns the def
 
 The calendar descriptor in a successful response has the following JSON format:
 
-- Annual calendar:
+-   Annual calendar:
 
-``` json
-{
-    "calendarType": "annual",
-    "description": "Annual calendar description",
-    "timeZone": "GMT+03:00",
-    "excludeDays": [
-        "2012-03-20",
-        "2012-03-21",
-        "2012-03-22"
-    ]
-}
-```
+    ``` json
+    {
+        "calendarType": "annual",
+        "description": "Annual calendar description",
+        "timeZone": "GMT+03:00",
+        "excludeDays": [
+            "2012-03-20",
+            "2012-03-21",
+            "2012-03-22"
+        ]
+    }
+    ```
 
-- Cron calendar:
+-   Cron calendar:
 
-``` json
-{
-    "calendarType": "cron",
-    "description": "Cron calendar description",
-    "timeZone": "GMT+03:00",
-    "excludeDays": null,
-    "cronExpression": "0 30 10-13 ? * WED,FRI"
-}
-```
+    ``` json
+    {
+        "calendarType": "cron",
+        "description": "Cron calendar description",
+        "timeZone": "GMT+03:00",
+        "excludeDays": null,
+        "cronExpression": "0 30 10-13 ? * WED,FRI"
+    }
+    ```
 
-- Daily calendar:
+-   Daily calendar:
 
-``` json
-{
-    "calendarType": "daily",
-    "description": "Daily calendar description",
-    "timeZone": "GMT+03:00",
-    "excludeDays": null,
-    "rangeStartingCalendar": 1332243817353,
-    "rangeEndingCalendar": 1332243877353,
-    "invertTimeRange": false
-}
-```
+    ``` json
+    {
+        "calendarType": "daily",
+        "description": "Daily calendar description",
+        "timeZone": "GMT+03:00",
+        "excludeDays": null,
+        "rangeStartingCalendar": 1332243817353,
+        "rangeEndingCalendar": 1332243877353,
+        "invertTimeRange": false
+    }
+    ```
 
-- Holiday calendar:
+-   Holiday calendar:
 
-``` json
-{
-    "calendarType": "holiday",
-    "description": "Holiday calendar (observed)",
-    "timeZone": "GMT+03:00",
-    "excludeDays": [
-        "2020-01-01",
-        "2020-01-20",
-        "2020-02-17",
-        "2020-05-25",
-        "2020-07-03",
-        "2020-09-07",
-        "2020-10-12",
-        "2020-11-11",
-        "2020-11-26",
-        "2020-12-25"
-    ]
-}
-```
+    ``` json
+    {
+        "calendarType": "holiday",
+        "description": "Holiday calendar (observed)",
+        "timeZone": "GMT+03:00",
+        "excludeDays": [
+            "2020-01-01",
+            "2020-01-20",
+            "2020-02-17",
+            "2020-05-25",
+            "2020-07-03",
+            "2020-09-07",
+            "2020-10-12",
+            "2020-11-11",
+            "2020-11-26",
+            "2020-12-25"
+        ]
+    }
+    ```
 
-- Weekly calendar (day flags are Sunday to Saturday):
+-   Weekly calendar (day flags are Sunday to Saturday):
 
-``` json
-{
-    "calendarType": "weekly",
-    "description": "Weekly calendar description",
-    "excludeDays": null,
-    "excludeDaysFlags": [
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-    ],
-    "timeZone":"GMT+03:00"
-}
-```
+    ``` json
+    {
+        "calendarType": "weekly",
+        "description": "Weekly calendar description",
+        "excludeDays": null,
+        "excludeDaysFlags": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        "timeZone":"GMT+03:00"
+    }
+    ```
 
-- Monthly calendar (day flags are dates from 1 to 31):
+-   Monthly calendar (day flags are dates from 1 to 31):
 
 ``` json
 {
@@ -603,311 +603,311 @@ Use the following method to delete a calendar by name.
 
 When creating or updating a calendar, the error messages can be expected in the following cases.
 
-- Creating an annual calendar that is missing a mandatory parameter:
+-   Creating an annual calendar that is missing a mandatory parameter:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Request</p></td>
-<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/annualCalendar
-Content-Type=application/json</code></pre></div></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;annual&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Annual calendar description&quot;</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Request</p></td>
+    <td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/annualCalendar
+    Content-Type=application/json</code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;annual&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Annual calendar description&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
+    <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-Expected Reply:
+    Expected Reply:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Response</p></td>
-<td><p>400 Bad Request</p></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.excludeDays&#39; not found&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.excludeDays&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Response</p></td>
+    <td><p>400 Bad Request</p></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.excludeDays&#39; not found&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.excludeDays&quot;</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Creating a cron calendar that is missing a mandatory parameter:
+-   Creating a cron calendar that is missing a mandatory parameter:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Request</p></td>
-<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/cronCalendar
-Content-Type=application/json</code></pre></div></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;cron&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Cron calendar description&quot;</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Request</p></td>
+    <td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/cronCalendar
+    Content-Type=application/json</code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;cron&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Cron calendar description&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
+    <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-Expected Reply:
+    Expected Reply:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Response</p></td>
-<td><p>400 Bad Request</p></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.cronExpression&#39; not found&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.cronExpression&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Response</p></td>
+    <td><p>400 Bad Request</p></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.cronExpression&#39; not found&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.cronExpression&quot;</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Creating a daily calendar that is missing the mandatory start-range parameter:
+-   Creating a daily calendar that is missing the mandatory start-range parameter:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Request</p></td>
-<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
-Content-Type=application/json</code></pre></div></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;daily&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Daily calendar description&quot;</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;invertTimeRange&quot;</span><span class="fu">:</span><span class="kw">false</span><span class="fu">,</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;rangeEndingCalendar&quot;</span><span class="fu">:</span><span class="st">&quot;2021-03-20T14:44:37.353+03:00&quot;</span><span class="fu">,</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Request</p></td>
+    <td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
+    Content-Type=application/json</code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;daily&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Daily calendar description&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;invertTimeRange&quot;</span><span class="fu">:</span><span class="kw">false</span><span class="fu">,</span></span>
+    <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;rangeEndingCalendar&quot;</span><span class="fu">:</span><span class="st">&quot;2021-03-20T14:44:37.353+03:00&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
+    <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-Expected Reply:
+    Expected Reply:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Response</p></td>
-<td><p>400 Bad Request</p></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.rangeStartingCalendar&#39; not found&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.rangeStartingCalendar&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Response</p></td>
+    <td><p>400 Bad Request</p></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.rangeStartingCalendar&#39; not found&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.rangeStartingCalendar&quot;</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Creating a daily calendar that is missing the mandatory end-range parameter:
+-   Creating a daily calendar that is missing the mandatory end-range parameter:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Request</p></td>
-<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
-Content-Type=application/json</code></pre></div></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;daily&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Daily calendar description&quot;</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;invertTimeRange&quot;</span><span class="fu">:</span><span class="kw">false</span><span class="fu">,</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;rangeStartingCalendar&quot;</span><span class="fu">:</span><span class="st">&quot;2012-03-20T14:43:37.353+03:00&quot;</span><span class="fu">,</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Request</p></td>
+    <td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/dailyCalendar
+    Content-Type=application/json</code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;daily&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Daily calendar description&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;invertTimeRange&quot;</span><span class="fu">:</span><span class="kw">false</span><span class="fu">,</span></span>
+    <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;rangeStartingCalendar&quot;</span><span class="fu">:</span><span class="st">&quot;2012-03-20T14:43:37.353+03:00&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
+    <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-Expected Reply:
+    Expected Reply:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Response</p></td>
-<td><p>400 Bad Request</p></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.rangeEndingCalendar&#39; not found&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.rangeEndingCalendar&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Response</p></td>
+    <td><p>400 Bad Request</p></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.rangeEndingCalendar&#39; not found&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.rangeEndingCalendar&quot;</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Creating a holiday calendar that is missing a mandatory parameter:
+-   Creating a holiday calendar that is missing a mandatory parameter:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Request</p></td>
-<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/holidayCalendar
-Content-Type=application/json</code></pre></div></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;holiday&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Holiday calendar description&quot;</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Request</p></td>
+    <td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/holidayCalendar
+    Content-Type=application/json</code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;holiday&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Holiday calendar description&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
+    <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-Expected Reply:
+    Expected Reply:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Response</p></td>
-<td><p>400 Bad Request</p></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.excludeDays&#39; not found&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.excludeDays&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Response</p></td>
+    <td><p>400 Bad Request</p></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.excludeDays&#39; not found&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;reportJobCalendar.excludeDays&quot;</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Creating a weekly calendar that is missing a mandatory parameter:
+-   Creating a weekly calendar that is missing a mandatory parameter:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Request</p></td>
-<td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/weeklyCalendar
-Content-Type=application/json</code></pre></div></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;weekly&quot;</span><span class="fu">,</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Weekly calendar description&quot;</span><span class="fu">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Request</p></td>
+    <td><div class="language-text highlight"><pre><code>PUT http://&lt;host&gt;:&lt;port&gt;/jasperserver[-pro]/rest_v2/jobs/calendars/weeklyCalendar
+    Content-Type=application/json</code></pre></div></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;calendarType&quot;</span><span class="fu">:</span><span class="st">&quot;weekly&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span><span class="st">&quot;Weekly calendar description&quot;</span><span class="fu">,</span></span>
+    <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;timeZone&quot;</span><span class="fu">:</span><span class="st">&quot;GMT+03:00&quot;</span></span>
+    <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-Expected Reply:
+    Expected Reply:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>Response</p></td>
-<td><p>400 Bad Request</p></td>
-</tr>
-<tr>
-<td><p>Body</p></td>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.excludeDaysFlags&#39; not found&quot;</span><span class="fu">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;reportJobCalendar.excludeDaysFlags&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><p>Response</p></td>
+    <td><p>400 Bad Request</p></td>
+    </tr>
+    <tr>
+    <td><p>Body</p></td>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory parameter &#39;reportJobCalendar.excludeDaysFlags&#39; not found&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;errorCode&quot;</span><span class="fu">:</span> <span class="st">&quot;mandatory.parameter.error&quot;</span><span class="fu">,</span></span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;parameters&quot;</span><span class="fu">:</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ot">[</span></span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;reportJobCalendar.excludeDaysFlags&quot;</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ot">]</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Creating a monthly calendar that is missing a mandatory parameter:
+-   Creating a monthly calendar that is missing a mandatory parameter:
 
 <table>
 <colgroup>

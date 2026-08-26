@@ -91,15 +91,15 @@ Follow the instructions in the Amazon document to create your Amazon EKS cluster
 
 Use the following information during the procedure:
 
-- Choose a name for your cluster, and be aware that it can't be changed later. The examples in this guide use the name `JRIOcluster`.
-- The cluster service role is the one created in “Creating a Cluster Role” on page 1, for example `eksClusterRole`.
-- No encryption is needed, click Next.
-- Select the VPC ID that you recorded at the end of the previous section.
-- Verify that all the subnet IDs from the previous section are included.
-- Verify that the security group ID is the one from the previous section that includes the control plane.
-- The cluster enpoint access has been verified to work with the Public option. If you prefer to make this private, you can experiment with setting a CIDR range or selecting the Private option, but you may need further configuration.
-- No logging or monitoring is needed.
-- Cluster creation takes some time, wait until the status becomes Active.
+-   Choose a name for your cluster, and be aware that it can't be changed later. The examples in this guide use the name `JRIOcluster`.
+-   The cluster service role is the one created in “Creating a Cluster Role” on page 1, for example `eksClusterRole`.
+-   No encryption is needed, click Next.
+-   Select the VPC ID that you recorded at the end of the previous section.
+-   Verify that all the subnet IDs from the previous section are included.
+-   Verify that the security group ID is the one from the previous section that includes the control plane.
+-   The cluster enpoint access has been verified to work with the Public option. If you prefer to make this private, you can experiment with setting a CIDR range or selecting the Private option, but you may need further configuration.
+-   No logging or monitoring is needed.
+-   Cluster creation takes some time, wait until the status becomes Active.
 
 ## Updating kubectl
 
@@ -127,19 +127,19 @@ Follow the instructions in the Amazon document to create compute with managed no
 
 Use the following information during the procedure:
 
-- Create a role for the nodes in the IAM console as described. This document uses the name EKSNodeInstanceRole.
+-   Create a role for the nodes in the IAM console as described. This document uses the name EKSNodeInstanceRole.
 
-- There is no need for a launch template.
+-   There is no need for a launch template.
 
-- On the compute and scaling configuration page:
+-   On the compute and scaling configuration page:
 
-  - AMI (Amazon Machine Image): the only supported option is Amazon Linux (Intel based), not GPU nor ARM.
-  - Disk size: select the default.
-  - Node group scaling: specify reasonable values, they can be changed later.
+    -   AMI (Amazon Machine Image): the only supported option is Amazon Linux (Intel based), not GPU nor ARM.
+    -   Disk size: select the default.
+    -   Node group scaling: specify reasonable values, they can be changed later.
 
-- On the networking page, select all the subnets you defined in the VPC. Machines in the same VPC are all able to see each other, but only the ones that have public subnets will have access to the Internet.
+-   On the networking page, select all the subnets you defined in the VPC. Machines in the same VPC are all able to see each other, but only the ones that have public subnets will have access to the Internet.
 
-- An SSH key pair is needed only if you want to ssh to one of the nodes. In most cases this is not needed because the node lifecycle is managed via Kubernetes, and most work can be performed using kubectl.
+-   An SSH key pair is needed only if you want to ssh to one of the nodes. In most cases this is not needed because the node lifecycle is managed via Kubernetes, and most work can be performed using kubectl.
 
 After you create the managed node group, wait until they are in the ready state, as given by the following command:
 

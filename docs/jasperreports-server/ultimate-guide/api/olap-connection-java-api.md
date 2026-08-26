@@ -11,13 +11,13 @@ description: This section describes functionality that is available only in Jasp
 
 OLAP interactions through the Jaspersoft OLAP user interface and web services based on XML/A are supported by the repository and dedicated APIs. The repository can contain the following OLAP-related objects:
 
-- OlapUnit: This is the data needed for an analysis view. It contains an MDX query and an OLAPClientConnection.
+-   OlapUnit: This is the data needed for an analysis view. It contains an MDX query and an OLAPClientConnection.
 
-- MondrianConnection: Implementor of OLAPClientConnection. It contains a Mondrian schema and a JDBC or JNDI connection.
+-   MondrianConnection: Implementor of OLAPClientConnection. It contains a Mondrian schema and a JDBC or JNDI connection.
 
-- XMLAConnection: Implementor of OLAPClientConnection. It contains a URL to an XML/A service and an optional data security definition.
+-   XMLAConnection: Implementor of OLAPClientConnection. It contains a URL to an XML/A service and an optional data security definition.
 
-- MondrianXMLADefinition: Jaspersoft OLAP can operate as an XML/A server on top of Mondrian connections. These objects catalog what can be accessed through XML/A.
+-   MondrianXMLADefinition: Jaspersoft OLAP can operate as an XML/A server on top of Mondrian connections. These objects catalog what can be accessed through XML/A.
 
 The OLAP Connection API provided by Jaspersoft OLAP is simple as most of the underlying functionality is within Mondrian (OLAP query engine, XML/A server) or JPivot (OLAP user interface). This call creates a JPivot-compatible OlapModel, based on the relevant OlapUnit:
 

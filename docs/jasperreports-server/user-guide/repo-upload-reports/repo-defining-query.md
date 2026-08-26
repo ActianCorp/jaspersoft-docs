@@ -13,11 +13,11 @@ First you need to upload the report and select a data source, as in the previous
 
 To locate the sample report for this example
 
-1.  Log in to the server as an administrator and select **View \> Repository**.
+1.  Log in to the server as an administrator and select **View &gt; Repository**.
 
-2.  Locate the folder where you want to add the report. For example, go to **Public \> Samples \> Reports**.
+2.  Locate the folder where you want to add the report. For example, go to **Public &gt; Samples &gt; Reports**.
 
-3.  Right-click the Reports folder and select **Add Resource \> JasperReport** from the context menu. The Set Up the Report page of the JasperReport wizard appears.
+3.  Right-click the Reports folder and select **Add Resource &gt; JasperReport** from the context menu. The Set Up the Report page of the JasperReport wizard appears.
 
     !!! note
 
@@ -25,34 +25,33 @@ To locate the sample report for this example
 
 4.  In **Naming**, enter the name and description of the new report and accept the generated Resource ID:
 
-    - Name - Display the name of the report: `Sample Query Report`.
-    - Resource ID - Permanent designation of the report object in the repository: `Sample_Query_Report`.
-    - Description - Optional description displayed in the repository: `Example of changing a query in a report`.
+    -   Name - Display the name of the report: `Sample Query Report`.
+    -   Resource ID - Permanent designation of the report object in the repository: `Sample_Query_Report`.
+    -   Description - Optional description displayed in the repository: `Example of changing a query in a report`.
 
-5.  Select **Upload a Local File** and **Browse** to \<js-install\>/samples/reports/SimpleReport.jrxml.
+5.  Select **Upload a Local File** and **Browse** to &lt;js-install&gt;/samples/reports/SimpleReport.jrxml.
 
 6.  Click **Open** to upload the file.
 
 To select a data source for the report
 
 1.  In the Add JasperReport wizard, click **Data Source**. The Link a Data Source to the Report page appears.
-2.  Choose **Select data source from the Repository** and **Browse** to **Public \> Samples \> Data sources \> JServer JNDI Data Source**.
+2.  Choose **Select data source from the Repository** and **Browse** to **Public &gt; Samples &gt; Data sources &gt; JServer JNDI Data Source**.
 3.  Click **Select**. The path to the data source appears on the page.
 
 To define a custom query for the simple report example
 
 1.  In the Add JasperReport wizard, click **Query**. The Locate Query page presents the following choices:
 
-    - **Do not link a Query** - Select this option to use the existing query already defined within the main JRXML.
+    -   **Do not link a Query** - Select this option to use the existing query already defined within the main JRXML.
 
-    - **Click here to create a new Query** - Guides you through defining a new query for this report only.
+    -   **Click here to create a new Query** - Guides you through defining a new query for this report only.
 
-    - **Select a Query from the Repository** - Select this option to use a saved query from the repository.
+    -   **Select a Query from the Repository** - Select this option to use a saved query from the repository.
 
-      <div class="admonition note">
-      <p class="admonition-title">Note</p>
-      <p>The <span>SimpleReport.jrxml</span> file already contains a query. Choosing the second or third option overrides the existing query by defining a new one.</p>
-      </div>
+        !!! note
+
+            The SimpleReport.jrxml file already contains a query. Choosing the second or third option overrides the existing query by defining a new one.
 
     ![js AddReport AddQuery](../assets/images/js-AddReport-AddQuery.png)
 
@@ -64,9 +63,9 @@ To define a custom query for the simple report example
 
 4.  Enter the name, resource ID, and description of the query. The query in this example retrieves only Mexican accounts. Enter the following values:
 
-    - Name - `MexicoAccounts`
-    - Resource ID - `MexicoAccounts`
-    - Description - `Query for example in User Guide`
+    -   Name - `MexicoAccounts`
+    -   Resource ID - `MexicoAccounts`
+    -   Description - `Query for example in User Guide`
 
     This query and its properties are visible only within the report unit.
 

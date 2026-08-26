@@ -17,9 +17,9 @@ Before you begin, configure your JasperReports Server instance for CAS, as descr
 
 Add the CAS server to your Jaspersoft Studio workspace
 
-1.  In Jaspersoft Studio, select **Window \> Preferences** (**Eclipse \> Preferences** on Mac).
+1.  In Jaspersoft Studio, select **Window &gt; Preferences** (**Eclipse &gt; Preferences** on Mac).
 
-2.  In the Preferences window, navigate to **Jaspersoft Studio \> JasperReports Server Settings \> Single Sign On Servers**.
+2.  In the Preferences window, navigate to **Jaspersoft Studio &gt; JasperReports Server Settings &gt; Single Sign On Servers**.
 
     |                                                                      |
     |----------------------------------------------------------------------|
@@ -99,11 +99,11 @@ Configure your JasperReports Server connection to use SSO in browser
 
         You will need to run through the SSO re-authentication to get a new token if:
 
-        - You close and restart Jaspersoft Studio.
+        -   You close and restart Jaspersoft Studio.
 
-        - Your session times out due to inactivity.
+        -   Your session times out due to inactivity.
 
-        - The JasperReports Server is restarted or the token becomes invalid for any other reason.
+        -   The JasperReports Server is restarted or the token becomes invalid for any other reason.
 
         If your session expires while you are working, Jaspersoft Studio identifies the communication error (HTTP 401) in the background and automatically prompts you to log back in.
 

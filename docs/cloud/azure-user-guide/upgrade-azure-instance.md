@@ -19,7 +19,7 @@ After the upgrade, reapply any customizations you made to the instance outside o
 
     You must be logged in as a `superuser` to upgrade your Azure instance.
 
-1.  Navigate to **Manage \> Server Settings**.
+1.  Navigate to **Manage &gt; Server Settings**.
 
 2.  Click **Export** in the left column. The Export window is displayed.
 
@@ -31,8 +31,8 @@ After the upgrade, reapply any customizations you made to the instance outside o
 
     !!! note
 
-        - Stop the current instance before creating the new one. From the Azure portal, select **Virtual machines** to see the status of all of your instances. Select the instance you want to shut down. Select **Stop** to shut down the instance.
-        - Using the command line js-export gives more options, such as generation of keys and passwords that can be used for importing back into JasperReports Server.
+        -   Stop the current instance before creating the new one. From the Azure portal, select **Virtual machines** to see the status of all of your instances. Select the instance you want to shut down. Select **Stop** to shut down the instance.
+        -   Using the command line js-export gives more options, such as generation of keys and passwords that can be used for importing back into JasperReports Server.
 
 5.  Back up your server keystore by copying the .jrsks & .jrsksp. files in the home directory of user.
 
@@ -46,7 +46,7 @@ After the upgrade, reapply any customizations you made to the instance outside o
 
 8.  Log in to your new instance as a superuser.
 
-9.  Navigate to **Manage \> Server** Settings.
+9.  Navigate to **Manage &gt; Server** Settings.
 
 10. Click **Import** in the left column. The Import window is displayed.
 
@@ -72,5 +72,5 @@ For log collection, run the following command:
 
 # Stopping and Restarting Tomcat
 
-- To stop Tomcat, run the following command: `sudo service tomcat stop/start`
-- To restart Tomcat, run the following command: `sudo service tomcat start`
+-   To stop Tomcat, run the following command: `sudo service tomcat stop/start`
+-   To restart Tomcat, run the following command: `sudo service tomcat start`

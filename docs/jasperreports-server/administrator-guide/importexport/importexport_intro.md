@@ -11,14 +11,14 @@ JasperReports Server provides both a user interface and command-line utilities t
 
 This chapter contains the following sections:
 
-- [Import and Export Catalogs](import_and_export_catalogs.md)
+-   [Import and Export Catalogs](import_and_export_catalogs.md)
 
-- [Dependencies During Import and Export](import_and_export_catalogs.md)
+-   [Dependencies During Import and Export](import_and_export_catalogs.md)
 
-- [The Import-Export Encryption Keys](import_and_export_catalogs.md)
+-   [The Import-Export Encryption Keys](import_and_export_catalogs.md)
 
-- [Import and Export Through the Web UI](through_the_web_ui.md)
+-   [Import and Export Through the Web UI](through_the_web_ui.md)
 
-- [Import and Export Through the Command Line](through_the_command_line.md)
+-   [Import and Export Through the Command Line](through_the_command_line.md)
 
-- [Alternate Import-Export Scripts](alternate_import-export_scripts.md)
+-   [Alternate Import-Export Scripts](alternate_import-export_scripts.md)

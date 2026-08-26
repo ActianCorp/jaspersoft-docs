@@ -58,15 +58,15 @@ For more information about Domains, refer to the JasperReports® Server User Gui
 
 The following example shows the JSON response for a Domain with:
 
-- A set named expense containing:
+-   A set named expense containing:
 
-  - An item named Exp Date of type Date
-  - An item named Amount of type BigDecimal
+    -   An item named Exp Date of type Date
+    -   An item named Amount of type BigDecimal
 
-- A set named store containing:
+-   A set named store containing:
 
-  - An item named Store Type of type String
-  - ...
+    -   An item named Store Type of type String
+    -   ...
 
 <table>
 <colgroup>
@@ -223,7 +223,7 @@ The v2/domains/metadata service returns only the display information about a Dom
 
 Currently, there is no REST service to interact with Domain schemas, but you can use the v2/resources service to retrieve the raw schema. First, retrieve the resource descriptor for the Domain. For example, to view the descriptor for the Supermart Domain, use the following request (when logged in as jasperadmin):
 
-GET http://\<host\>:\<port\>/jasperserver-pro/rest_v2/resources/Domains/supermartDomain
+GET http://&lt;host&gt;:&lt;port&gt;/jasperserver-pro/rest_v2/resources/Domains/supermartDomain
 
 This descriptor contains the Domain schema as an internal resource:
 
@@ -288,7 +288,7 @@ This descriptor contains the Domain schema as an internal resource:
 
 Use the following request to access the Domain schema file inside the Domain resource:
 
-GET http://\<host\>:\<port\>/jasperserver-pro/rest_v2/resources/Domains/supermartDomain_files/supermartDomain_schema
+GET http://&lt;host&gt;:&lt;port&gt;/jasperserver-pro/rest_v2/resources/Domains/supermartDomain_files/supermartDomain_schema
 
 The Domain schema is an XML file with a structure explained in the JasperReports® Server User Guide. If you wish to modify the schema programmatically, you must write your own parser to access its fields and definitions. You can then replace the schema file in the Domain with one of the file updating methods described in [“Uploading File Resources” on page 1](uploading_file_resources.md).
 
@@ -296,7 +296,7 @@ The Domain schema is an XML file with a structure explained in the JasperReports
 
 Once you have the descriptor of a Domain resource as shown in the previous section, you can access the other files that help define a Domain. For example, you can access the language bundles of the Supermart Domain with the following request:
 
-GET http://\<host\>:\<port\>/jasperserver-pro/rest_v2/resources/Domains/supermartDomain_files/supermart_domain\_\<locale\>.properties
+GET http://&lt;host&gt;:&lt;port&gt;/jasperserver-pro/rest_v2/resources/Domains/supermartDomain_files/supermart_domain\_&lt;locale&gt;.properties
 
 Language bundles are Java properties files that follow the language bundle naming convention, and that contain the names of the sets and fields in the language of the locale in the filename.
 
@@ -304,7 +304,7 @@ You can also retrieve the localized set and item names by specifying Accept-Lang
 
 Domains may also contain a security file that is also stored as an internal resource of the Domain descriptor. Use the following example to request the security file of the Supermart Domain in the sample data:
 
-GET http://\<host\>:\<port\>/jasperserver-pro/rest_v2/resources/Domains/supermartDomain_files/supermart_domain_security
+GET http://&lt;host&gt;:&lt;port&gt;/jasperserver-pro/rest_v2/resources/Domains/supermartDomain_files/supermart_domain_security
 
 A security file defines a complex set of access permissions to the data in the rows and columns returned by the Domain, based on the username, roles, or profile attributes of the user running a Domain-based report. As with the Domain schema file, you must write your own parser to interpret this file and modify it.
 

@@ -11,13 +11,13 @@ As of JasperReports Server version 8.2, Javascript in OLAP schemas is disabled b
 
 To upload a schema
 
-1.  Click **View \> Repository**.
+1.  Click **View &gt; Repository**.
 
     The repository appears.
 
-2.  In the Folder panel, navigate to **Analysis Components \> Analysis Schemas**.
+2.  In the Folder panel, navigate to **Analysis Components &gt; Analysis Schemas**.
 
-3.  Right-click the folder and navigate to **Add Resource \> File \> OLAP Schema**.
+3.  Right-click the folder and navigate to **Add Resource &gt; File &gt; OLAP Schema**.
 
     The **Upload a File From Your Local Computer** page appears and prompts you to select a file and set its properties.
 

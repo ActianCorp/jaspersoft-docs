@@ -11,9 +11,9 @@ This chapter assumes you have the basic knowledge of JasperReports Server. You c
 
 This chapter contains the following sections:
 
-- [Prerequisites](prerequisites.md)
-- [Accepting Terms of Use](acceptingtou.md)
-- [Launching Instances](launching.md)
-- [Using Customized Configuration Files for Server Instances](s3_customizations.md)
-- [Configuring HTTPS Access for AWS ELB and JasperReports Server](https-access-elb.md)
-- [Chrome AWS](installing-phantomjs.md)
+-   [Prerequisites](prerequisites.md)
+-   [Accepting Terms of Use](acceptingtou.md)
+-   [Launching Instances](launching.md)
+-   [Using Customized Configuration Files for Server Instances](s3_customizations.md)
+-   [Configuring HTTPS Access for AWS ELB and JasperReports Server](https-access-elb.md)
+-   [Chrome AWS](installing-phantomjs.md)

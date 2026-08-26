@@ -13,12 +13,12 @@ JasperReports is published under the LGPL license, which is a less restrictive G
 
 This chapter contains the following sections:
 
-- [JRXML Sources and Jasper Files](jrxml_sources_and_jasper_files.md)
+-   [JRXML Sources and Jasper Files](jrxml_sources_and_jasper_files.md)
 
-- [Data Sources and Print Formats](data-sources-print-formats.md)
+-   [Data Sources and Print Formats](data-sources-print-formats.md)
 
-- [Project Folder Types and Report Execution Contexts](intro-contexts.md)
+-   [Project Folder Types and Report Execution Contexts](intro-contexts.md)
 
-- [Using JasperReports Extensions in Jaspersoft Studio](using_jasperreports_extensions_in_ja.md)
+-   [Using JasperReports Extensions in Jaspersoft Studio](using_jasperreports_extensions_in_ja.md)
 
-- [A Simple Program](concepts-simple-program.md)
+-   [A Simple Program](concepts-simple-program.md)

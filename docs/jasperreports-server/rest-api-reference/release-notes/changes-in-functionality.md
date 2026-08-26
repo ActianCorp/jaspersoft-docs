@@ -7,6 +7,6 @@ description: The following functionality and features have been changed in this 
 
 The following functionality and features have been changed in this release of JasperReports® Server.
 
-- JIRA summary
+-   JIRA summary
 
-- JIRA summary
+-   JIRA summary

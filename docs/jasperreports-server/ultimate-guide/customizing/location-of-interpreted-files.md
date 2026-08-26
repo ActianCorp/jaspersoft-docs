@@ -1,11 +1,11 @@
 ---
 title: Location of Interpreted Files
-description: "Interpreted files are located in the JasperReports Server web application, known as <js‑webapp>. Depending on your deployment and your needs, there are several ways to work with the interpreted..."
+description: "Interpreted files are located in the JasperReports Server web application, known as &lt;js‑webapp&gt;. Depending on your deployment and your needs, there are several ways to work with the interpreted..."
 ---
 
 # Location of Interpreted Files
 
-Interpreted files are located in the JasperReports Server web application, known as \<js‑webapp\>. Depending on your deployment and your needs, there are several ways to work with the interpreted files, which in turn determine the definition of \<js-webapp\> that you use.
+Interpreted files are located in the JasperReports Server web application, known as &lt;js‑webapp&gt;. Depending on your deployment and your needs, there are several ways to work with the interpreted files, which in turn determine the definition of &lt;js-webapp&gt; that you use.
 
 <table>
 <colgroup>

@@ -11,10 +11,10 @@ More information on applying for a license is available on the Jaspersoft Commun
 
 Make sure you have all the prerequisites for applying for your license:
 
-- A valid license file.
-- Access to the AWS Management Console.
-- A BYOL instance or cluster already running in AWS.
-- A S3 bucket. You can find the name of the bucket on the Outputs tab of your CloudFormation stack.
+-   A valid license file.
+-   Access to the AWS Management Console.
+-   A BYOL instance or cluster already running in AWS.
+-   A S3 bucket. You can find the name of the bucket on the Outputs tab of your CloudFormation stack.
 
 !!! note
 
@@ -40,7 +40,7 @@ Make sure you have all the prerequisites for applying for your license:
 
     AWS uploads the file and stores it in the S3 bucket.
 
-7.  With the license in place, reboot your instance from the **EC2 \> Instances \> Instances** page.
+7.  With the license in place, reboot your instance from the **EC2 &gt; Instances &gt; Instances** page.
 
 ## To apply your license file on instances created using an AMI option
 

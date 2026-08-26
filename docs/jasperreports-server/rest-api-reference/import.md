@@ -9,16 +9,16 @@ Use the rest_v2/import service to upload a catalog as a zip file and import it i
 
 This chapter includes the following sections:
 
-- Launching an Import Operation
-- Polling the Import Status
-- Import Errors
-- Restarting an Import Operation
-- Canceling an Import Operation
-- Importing from a Web Form
+-   Launching an Import Operation
+-   Polling the Import Status
+-   Import Errors
+-   Restarting an Import Operation
+-   Canceling an Import Operation
+-   Importing from a Web Form
 
 ## Launching an Import Operation
 
-Typically, an application uses the rest_v2/import service to upload a catalog zip file as an attachment. Your application can specify import options as URL arguments in the format \<argument\>=true. Options that are omitted are assumed to be false. To import into root, you must be authenticated as the system admin (`superuser`), but organization admins (`jasperadmin`) may import into their organizations or suborganizations.
+Typically, an application uses the rest_v2/import service to upload a catalog zip file as an attachment. Your application can specify import options as URL arguments in the format &lt;argument&gt;=true. Options that are omitted are assumed to be false. To import into root, you must be authenticated as the system admin (`superuser`), but organization admins (`jasperadmin`) may import into their organizations or suborganizations.
 
 !!! warning
 

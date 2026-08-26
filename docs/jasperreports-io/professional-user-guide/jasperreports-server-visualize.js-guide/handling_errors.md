@@ -11,14 +11,14 @@ This chapter describes common errors and explains how to handle them with the Ja
 
 This chapter contains the following sections:
 
-- Error Properties
-- Common Errors
-- Catching Initialization and Authentication Errors
-- Catching Search Errors
-- Validating Search Properties
-- Catching Report Errors
-- Catching Input Control Errors
-- Validating Input Controls
+-   Error Properties
+-   Common Errors
+-   Catching Initialization and Authentication Errors
+-   Catching Search Errors
+-   Validating Search Properties
+-   Catching Report Errors
+-   Catching Input Control Errors
+-   Validating Input Controls
 
 ## Error Properties
 

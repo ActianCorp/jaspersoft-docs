@@ -27,14 +27,17 @@ To troubleshoot problems running js-install scripts
 
 2.  Try to find the first error encountered by the `js-install` steps.
 
-    - Go to the end of the output log.
-    - Scroll back through lines of error messages until you find the first error logged. Typically, this error causes more errors later in the log.
-    - Finding the original error is the way to understand the problem. However, this can often be tricky because Java stack traces with the Spring application component framework can make the error output quite long.
+-   Go to the end of the output log.
 
-3.  Incorrect settings in the `default_master.properties` file cause most problems, which you can correct by editing your `default_master.properties` settings. Common errors are:
+    -   Scroll back through lines of error messages until you find the first error logged. Typically, this error causes more errors later in the log.
 
-- Typos in the path for the application server
-- Misspelling the hostname or password for the database
+    -   Finding the original error is the way to understand the problem. However, this can often be tricky because Java stack traces with the Spring application component framework can make the error output quite long.
+
+        1.  Incorrect settings in the `default_master.properties` file cause most problems, which you can correct by editing your `default_master.properties` settings. Common errors are:
+
+    -   Typos in the path for the application server
+
+    -   Misspelling the hostname or password for the database
 
 To recreate your `default_master.properties` settings
 
@@ -83,7 +86,7 @@ The export of Reports, Ad Hoc Views, and Dashboards fails when Tomcat is run as 
 
 To resolve this, set the following property in the `jasperreports.properties` file:
 
-- `net.sf.jasperreports.chrome.argument.no-sandbox=true`
+-   `net.sf.jasperreports.chrome.argument.no-sandbox=true`
 
 After setting this property, restart JasperReports Server to enable it.
 

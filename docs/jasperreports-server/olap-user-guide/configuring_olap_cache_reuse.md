@@ -41,26 +41,26 @@ If you want the server to identify datasets in the OLAP cache using a checksum, 
 
 Consider this server configuration:
 
-- The JasperReports Server instance hosts two organizations: **Client1** and **Client2**.
+-   The JasperReports Server instance hosts two organizations: **Client1** and **Client2**.
 
-- Each organization has a user responsible for data analysis:
+-   Each organization has a user responsible for data analysis:
 
-  - **Client1's** data analyst is **Amber**.
-  - **Client2's** data analyst is **Huan**.
+    -   **Client1's** data analyst is **Amber**.
+    -   **Client2's** data analyst is **Huan**.
 
-- Each organization includes an OLAP-based report that uses identical OLAP schemas:
+-   Each organization includes an OLAP-based report that uses identical OLAP schemas:
 
-  - **Client1**
+    -   **Client1**
 
-    - Report: Sales Leads OLAP Report (**C1**)
-    - OLAP Schema: **SalesLeadsSchemaC1**
+        -   Report: Sales Leads OLAP Report (**C1**)
+        -   OLAP Schema: **SalesLeadsSchemaC1**
 
-  - **Client2**
+    -   **Client2**
 
-    - Report: Sales Leads OLAP Report (**C2**)
-    - OLAP Schema: **SalesLeadsSchemaC2**
+        -   Report: Sales Leads OLAP Report (**C2**)
+        -   OLAP Schema: **SalesLeadsSchemaC2**
 
-- Each OLAP schema relies on a different database with the same data structures, so that the users in each organization see their own data.
+-   Each OLAP schema relies on a different database with the same data structures, so that the users in each organization see their own data.
 
 Now consider this use case:
 

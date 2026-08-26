@@ -34,21 +34,21 @@ To create and start a log collector
 
 5.  On the `New Log Collector` page, enter a name for the collector and the following optional information:
 
-    - A user ID, in the format `username|organizationID` for commercial editions. When a user ID is specified, only logs related to that user are collected. When empty, logs for all user are included.
-    - The resource URI of a JasperReport or an Ad Hoc view. You can use the **Browse** button to select the report or Ad Hoc view in the repository. When specified, only the logs for that report or view will be collected. When empty, all logs are included.
-    - If you specified a report or view, and you have data snapshots enabled, you can select the check box to include the snapshot data from the report. The snapshot data is a separate file that can be imported to another server for verification.
-    - Set a verbosity level of low, medium or high. Low is the default.
+    -   A user ID, in the format `username|organizationID` for commercial editions. When a user ID is specified, only logs related to that user are collected. When empty, logs for all user are included.
+    -   The resource URI of a JasperReport or an Ad Hoc view. You can use the **Browse** button to select the report or Ad Hoc view in the repository. When specified, only the logs for that report or view will be collected. When empty, all logs are included.
+    -   If you specified a report or view, and you have data snapshots enabled, you can select the check box to include the snapshot data from the report. The snapshot data is a separate file that can be imported to another server for verification.
+    -   Set a verbosity level of low, medium or high. Low is the default.
 
 6.  Click **Save** to save your log collector and begin collecting the specified logs.
 
-7.  Perform the actions on the server for which you want to collect logs. If you specified a user ID, the user should log in or an administrator can log in as the user from the **Manage \> Users** page. If you specified a report or view, run it and interact with it to collect logs about it.
+7.  Perform the actions on the server for which you want to collect logs. If you specified a user ID, the user should log in or an administrator can log in as the user from the **Manage &gt; Users** page. If you specified a report or view, run it and interact with it to collect logs about it.
 
 
 
 To stop a log collector and download its output
 
 1.  Log in as system administrator (`superuser` by default).
-2.  Select **Manage \> Server Settings** and choose **Log Collectors** in the left panel.
+2.  Select **Manage &gt; Server Settings** and choose **Log Collectors** in the left panel.
 3.  On the **Log Collectors** page, locate your log collector and click the stop icon ![js LogCollectors icon stop](../assets/images/js-LogCollectors-icon-stop.png). The status for the collector shows **Stopping...**
 4.  After the log collector has stopped, the logs are ready to download in a compressed zip file. Click the download icon ![js LogCollectors icon download](../assets/images/js-LogCollectors-icon-download.png) to save the collected logs on your computer.
 5.  After downloading the logs, the log collector can be kept in case you want to download the files again. When you no longer need the log collector, click the delete icon ![js LogCollectors icon delete](../assets/images/js-LogCollectors-icon-delete.png) and confirm. If you want to run a collector again, you must delete it first and create it again.

@@ -7,32 +7,32 @@ description: "JasperReports Server includes bundles for the following languages:
 
 JasperReports Server includes bundles for the following languages:
 
-- English
+-   English
 
-- French
+-   French
 
-- German
+-   German
 
-- Spanish
+-   Spanish
 
-- Brazilian Portuguese
+-   Brazilian Portuguese
 
-- Italian
+-   Italian
 
-- Japanese
+-   Japanese
 
-- Simplified Chinese
+-   Simplified Chinese
 
 Jaspersoft Studio can be run in the following languages:
 
-- English
+-   English
 
-- Italian
+-   Italian
 
 JasperReports Web Studio can be run in the following languages:
 
-- English
+-   English
 
-- French
+-   French
 
-- Italian
+-   Italian

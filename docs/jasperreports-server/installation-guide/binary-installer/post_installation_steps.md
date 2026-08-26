@@ -59,11 +59,11 @@ The installer creates a log during installation that records information as the 
 
 The installer log file captures information such as:
 
-- Environment details such as the user that invoked the installer, host name, operating system details, and so on.
+-   Environment details such as the user that invoked the installer, host name, operating system details, and so on.
 
-- List of assemblies installed.
+-   List of assemblies installed.
 
-- Information related to the Ant scripts executed by the installer.
+-   Information related to the Ant scripts executed by the installer.
 
 You can find the installer log at `<js-install>/installation.log`.
 
@@ -95,7 +95,7 @@ After changing to a commercial license, make sure you stop the server before rep
 
 3.  Restart the server.
 
-By default, the license is in the \<js-install\> directory, but can be located elsewhere. You need to define the `‑Djs.license.directory` Java Environment Variable in the Tomcat startup scripts to point to the license location. The name of the license file is `jaspersoft.jrs.license`. Make sure that the new license file has this name.
+By default, the license is in the &lt;js-install&gt; directory, but can be located elsewhere. You need to define the `‑Djs.license.directory` Java Environment Variable in the Tomcat startup scripts to point to the license location. The name of the license file is `jaspersoft.jrs.license`. Make sure that the new license file has this name.
 
 Restart JasperReports Server and log in to see if the license grants access. For information about license errors, see the troubleshooting section [License-related Errors](../troubleshooting/license_related_errors.md).
 
@@ -107,7 +107,7 @@ If you installed JasperReports Server into an existing Tomcat installation on a 
 
 Follow the steps below to examine and update the license location:
 
-1.  Open the Tomcat configuration tool by right-clicking the Tomcat icon in your quick-launch bar (usually in the lower-right corner of your desktop) or from the Windows 10 menu, expand ****Start \> Apache Tomcat**. Right-click Configure Tomcat** and select **Run as administrator**.
+1.  Open the Tomcat configuration tool by right-clicking the Tomcat icon in your quick-launch bar (usually in the lower-right corner of your desktop) or from the Windows 10 menu, expand ****Start &gt; Apache Tomcat**. Right-click Configure Tomcat** and select **Run as administrator**.
 
 2.  Select the **Java** tab.
 

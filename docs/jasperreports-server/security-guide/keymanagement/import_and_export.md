@@ -58,21 +58,21 @@ From a different server</td>
 
 This guide documents the following operations to set up and manipulate keys:
 
-- Specifying custom keys during import and export operations.
-- Importing keys used by other servers.
-- Exporting keys for use in other servers.
-- Sharing custom keys between multiple servers.
+-   Specifying custom keys during import and export operations.
+-   Importing keys used by other servers.
+-   Exporting keys for use in other servers.
+-   Sharing custom keys between multiple servers.
 
 For the default import and export operations, including specifying import-export keys through the UI, see the JasperReports Server Administrator Guide:
 
-- Importing catalogs from older servers with legacy or custom keys.
-- Exporting catalogs with a specific key.
+-   Importing catalogs from older servers with legacy or custom keys.
+-   Exporting catalogs with a specific key.
 
 The following sections describe the three ways to import a catalog that is encrypted with a custom key:
 
-- Use the import UI, and enter the key’s hexadecimal bytes in the Key Value field. This method is simple, but the key will not be stored in the server for multiple imports.
-- Store the custom key as a secure file resource in the repository, so it can be reused. Then use the import UI with the Stored Key field.
-- Use the import command line to import the key into the keystore so that it is available for any import operation in the future.
+-   Use the import UI, and enter the key’s hexadecimal bytes in the Key Value field. This method is simple, but the key will not be stored in the server for multiple imports.
+-   Store the custom key as a secure file resource in the repository, so it can be reused. Then use the import UI with the Stored Key field.
+-   Use the import command line to import the key into the keystore so that it is available for any import operation in the future.
 
 ## Entering a Key Value in the Import UI
 
@@ -82,7 +82,7 @@ The simplest way to import a catalog with a custom key is to use the Settings UI
 
 1.  Log in as system administrator (`superuser` by default).
 
-2.  Select **Manage \> Server Settings**, then click **Import** in the left-hand panel.
+2.  Select **Manage &gt; Server Settings**, then click **Import** in the left-hand panel.
 
 3.  In the right-hand panel, browse the file system to enter the catalog file you want to import.
 
@@ -106,19 +106,17 @@ If you have multiple files to import, you can store the custom key in a secure f
 
 2.  Log in as system administrator (`superuser` by default).
 
-3.  Select **View \> Repository**, then browse the repository tree to find an appropriate folder.
+3.  Select **View &gt; Repository**, then browse the repository tree to find an appropriate folder.
 
-4.  Right-click the folder and select **Add Resource \> File\> Secure File**.
+4.  Right-click the folder and select **Add Resource &gt; File&gt; Secure File**.
 
-5.  In the **Add File** dialog, browse the file system to enter your text file with the key.
-
-    ![js Repository AddSecureFile](../assets/images/js-Repository-AddSecureFile.png)
+5.  In the **Add File** dialog, browse the file system to enter your text file with the key.![js Repository AddSecureFile](../assets/images/js-Repository-AddSecureFile.png)
 
     *Figure 2: Add Secure File Dialog*
 
 6.  Fill in the other fields and click **Submit**. The File appears in the repository.
 
-7.  Select **Manage \> Server Settings**, then click **Import** in the left-hand panel.
+7.  Select **Manage &gt; Server Settings**, then click **Import** in the left-hand panel.
 
 8.  In the right-hand panel, browse the file system to enter the catalog file you want to import.
 
@@ -136,8 +134,8 @@ If the key does not decrypt the catalog file, you will get an error message, oth
 
 Similar to the import UI, the `js-import` command-line utility has new options to specify the key needed to decrypt passwords in the catalog, for example, catalogs from older servers with different keys. There are two ways to specify the import key:
 
-- Give the hexadecimal bytes of the key.
-- Give the alias of a key in the server's keystore (`.jrsks`).
+-   Give the hexadecimal bytes of the key.
+-   Give the alias of a key in the server's keystore (`.jrsks`).
 
 <table>
 <thead>
@@ -190,9 +188,9 @@ js-import.sh --keyalias productionServerKey --input-zip myExport.zip
 
 If you have many catalogs to import from a server with a custom key, the `js-import` script has different options to import the key and add it to the local keystore (`.jrsks` by default). You can then use the example in the previous section to specify the new key by its alias when importing. There are three ways to define the key to import:
 
-- Provide the hexadecimal bytes of the key.
-- Provide a keystore and the alias (and password) of a key that it contains.
-- Request a random key to be generated and associated with an alias (and password) you provide.
+-   Provide the hexadecimal bytes of the key.
+-   Provide a keystore and the alias (and password) of a key that it contains.
+-   Request a random key to be generated and associated with an alias (and password) you provide.
 
 <table>
 <thead>
@@ -269,7 +267,7 @@ After adding custom keys to the keystore from the command line using the `--visi
 
 1.  Log in as system administrator (`superuser` by default).
 
-2.  Select **Manage \> Server Settings**, then click **Import** in the left-hand panel.
+2.  Select **Manage &gt; Server Settings**, then click **Import** in the left-hand panel.
 
 3.  In the right-hand panel, browse the file system to enter the catalog file you want to import.
 
@@ -287,9 +285,9 @@ If the key does not decrypt the catalog file, you get an error message, otherwis
 
 As with the export UI, you can specify custom keys when exporting from the command line. For example, you can create an export catalog that can be imported into another server instance that has different keys. There are three ways to specify the export key:
 
-- Provide the hexadecimal bytes of the key.
-- Give the alias of a key in the server's keystore (`.jrsks`).
-- Request a random key be generated and displayed on the console.
+-   Provide the hexadecimal bytes of the key.
+-   Give the alias of a key in the server's keystore (`.jrsks`).
+-   Request a random key be generated and displayed on the console.
 
 <table>
 <thead>

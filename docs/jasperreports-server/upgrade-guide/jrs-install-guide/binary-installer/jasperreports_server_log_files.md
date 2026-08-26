@@ -19,7 +19,7 @@ To view the log file, you must have access to the file system where JasperReport
 To set the current logging levels
 
 1.  Log in as system administrator (`superuser` by default).
-2.  Select **Manage \> Server Settings** and choose **Log Settings** in the left-panel.
+2.  Select **Manage &gt; Server Settings** and choose **Log Settings** in the left-panel.
 3.  In the **Log Settings** panel, use the drop-down selectors to change the log level for each class being logged.
 
 For more information about system logging, see the JasperReports Server Administrator Guide.

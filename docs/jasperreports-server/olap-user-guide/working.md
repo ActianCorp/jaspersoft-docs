@@ -19,10 +19,10 @@ An OLAP view consists of a client connection and an MDX query. A client connecti
 
 The following describe Jaspersoft OLAP's analysis capabilities:
 
-- [OLAP Tool Bar](olap_tool_bar.md)
+-   [OLAP Tool Bar](olap_tool_bar.md)
 
-- [Navigation Table](navigation_table.md)
+-   [Navigation Table](navigation_table.md)
 
-- [Drill-through Table](drill_through_table.md)
+-   [Drill-through Table](drill_through_table.md)
 
-- [Analyzing Data in an OLAP View](analyzing-data-in-an-olap-view.md)
+-   [Analyzing Data in an OLAP View](analyzing-data-in-an-olap-view.md)

@@ -7,9 +7,9 @@ description: "JasperReports Server requires a database. The installer is pre-con
 
 JasperReports Server requires a database. The installer is pre-configured to run with the PostgreSQL database. You may use any of the following two options:
 
-- bundled PostgreSQL
+-   bundled PostgreSQL
 
-- existing PostgreSQL
+-   existing PostgreSQL
 
 ## Choosing the Bundled PostgreSQL
 
@@ -65,7 +65,7 @@ The following table summarizes the parameters set during installation of the bun
 
 ## Choosing an Existing PostgreSQL on a Local Host
 
-If you choose to use an existing PostgreSQL database, then you are prompted for the location of PostgreSQL and the port to use. If you have an instance of PostgreSQL installed locally, accept the default, which is 127.0.0.1, the localhost. Accept the default location for the PostgreSQL \bin directory, or click **Browse** to select another location. You are also be prompted for the default administrative account password of the PostgreSQL administrative user. The database administrative user account name **postgres** is used by default. Enter the database administrative user password and click **Enter**.
+If you choose to use an existing PostgreSQL database, then you are prompted for the location of PostgreSQL and the port to use. If you have an instance of PostgreSQL installed locally, accept the default, which is 127.0.0.1, the localhost. Accept the default location for the PostgreSQL \\bin directory, or click **Browse** to select another location. You are also be prompted for the default administrative account password of the PostgreSQL administrative user. The database administrative user account name **postgres** is used by default. Enter the database administrative user password and click **Enter**.
 
 !!! note
 
@@ -97,7 +97,7 @@ For instance: `C:/Jaspersoft/PostgreSQL/9.0/bin/psql --version`
 
 To verify that, you can connect to the target remote PostgreSQL from the local installation machine
 
-- Using your local PostgreSQL client tools, enter this command:
+-   Using your local PostgreSQL client tools, enter this command:
 
 `psql -U postgres -h <remote-host> -d postgres `
 
@@ -111,9 +111,9 @@ You might also need to enable connections as described below.
 
 On most platforms, the default PostgreSQL installation does not allow remote connections for security reasons. You need to enable remote connections as described in this documentation:
 
-- The PostgreSQL configuration documentation is on the PostgreSQL website.
+-   The PostgreSQL configuration documentation is on the PostgreSQL website.
 
-- The \docs directory of your PostgreSQL installation.
+-   The \\docs directory of your PostgreSQL installation.
 
 To enable connections from the installation machine to the remote PostgreSQL server
 

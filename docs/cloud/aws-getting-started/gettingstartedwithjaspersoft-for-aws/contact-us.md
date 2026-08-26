@@ -7,17 +7,18 @@ description: "AWS Hourly subscription customers with No Support or Free Online H
 
 AWS Hourly subscription customers with No Support or Free Online Help:
 
-- Email: <js-aws-marketplace@tibco.com>
-- Community Forums with the tag \#AWS at <http://community.jaspersoft.com/answers>. This is free for those who have registered for Free Online Help for Jaspersoft for AWS at <https://www.jaspersoft.com/store/aws-support>
+-   Email: <js-aws-marketplace@tibco.com>
 
-Annual Standard and Premium subscription customers:
+-   Community Forums with the tag #AWS at <http://community.jaspersoft.com/answers>. This is free for those who have registered for Free Online Help for Jaspersoft for AWS at <https://www.jaspersoft.com/store/aws-support>
 
-- Web: <http://support.jaspersoft.com/>
+    Annual Standard and Premium subscription customers:
 
-- Email <support@jaspersoft.com>
+-   Web: <http://support.jaspersoft.com/>
 
-- Phone:
+-   Email <support@jaspersoft.com>
 
-  - Toll-free (U.S./Canada): 877-600-5767
-  - Ireland: +353 1 443 4830
-  - International: +1-415-348-2398
+-   Phone:
+
+    -   Toll-free (U.S./Canada): 877-600-5767
+    -   Ireland: +353 1 443 4830
+    -   International: +1-415-348-2398

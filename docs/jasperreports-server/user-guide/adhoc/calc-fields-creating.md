@@ -7,7 +7,7 @@ description: To create a calculated field
 
 To create a calculated field
 
-1.  First, create the Ad Hoc view to use. To do this, select **Create** \> **Ad Hoc View** from the menu. The **Select Data** wizard appears.
+1.  First, create the Ad Hoc view to use. To do this, select **Create** &gt; **Ad Hoc View** from the menu. The **Select Data** wizard appears.
 
 2.  Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Domains**.
 

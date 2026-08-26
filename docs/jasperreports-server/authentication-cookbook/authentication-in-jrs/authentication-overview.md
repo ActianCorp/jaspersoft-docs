@@ -7,17 +7,17 @@ description: "This cookbook describes how to configure JasperReports Server to u
 
 This cookbook describes how to configure JasperReports Server to use external authentication in place of the built‑in user authentication. The benefits of external authentication include:
 
-- Centralized identity management within your enterprise.
-- Single sign-on capabilities if the authentication mechanism supports it.
+-   Centralized identity management within your enterprise.
+-   Single sign-on capabilities if the authentication mechanism supports it.
 
 For deployments that include the Jaspersoft OLAP component within JasperReports Server, external authentication applies transparently to Jaspersoft OLAP users.
 
 This guide covers the following authentication mechanisms:
 
-- Lightweight Directory Access Protocol (LDAP). See [LDAP Authentication](../ldap/ldap-introduction.md).
-- Central Authentication Service (CAS). See [CAS Authentication](../cas/cas-introduction.md).
-- Authentication via an external database. See [External Database Authentication](../external-db/external-db-introduction.md).
-- Authentication when the user has already been reliably authenticated by another external system. See [Token-based Authentication](../token/tokenauth-introduction.md).
+-   Lightweight Directory Access Protocol (LDAP). See [LDAP Authentication](../ldap/ldap-introduction.md).
+-   Central Authentication Service (CAS). See [CAS Authentication](../cas/cas-introduction.md).
+-   Authentication via an external database. See [External Database Authentication](../external-db/external-db-introduction.md).
+-   Authentication when the user has already been reliably authenticated by another external system. See [Token-based Authentication](../token/tokenauth-introduction.md).
 
 You can also create custom code to run on the server after the user has been authenticated, or use custom authentication providers. See [Advanced Topics](../advanced-topics/advanced-topics.md) for an overview of these topics. Details are beyond the scope of this guide.
 
@@ -29,6 +29,6 @@ If you're setting up external authentication, you may need to understand how Jas
 
 This chapter contains the following sections:
 
-- [Locating and Working With Sample Files](sample-files.md)
-- [Default Internal Authentication](internal-authentication-steps.md)
-- [Organizations and Users in JasperReports Server](organizations-users-roles.md)
+-   [Locating and Working With Sample Files](sample-files.md)
+-   [Default Internal Authentication](internal-authentication-steps.md)
+-   [Organizations and Users in JasperReports Server](organizations-users-roles.md)

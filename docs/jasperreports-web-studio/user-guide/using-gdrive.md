@@ -15,5 +15,5 @@ In order to enable the Google Drive login button, you need to register your inst
 
 Once you have obtained the client ID and the secret key for your application at Google, you can set them in the start script of the JasperReports Web Application using the following system properties added with a *-D* flag to the command that launches the Java Virtual Machine as follows:
 
-- `-Djsw.google.client.id=[YOUR_CLIENT_ID]`
-- `-Djsw.google.secret.key=[YOUR_SECRET_KEY]`
+-   `-Djsw.google.client.id=[YOUR_CLIENT_ID]`
+-   `-Djsw.google.secret.key=[YOUR_SECRET_KEY]`

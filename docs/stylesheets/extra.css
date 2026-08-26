@@ -357,3 +357,24 @@ body {
     padding-bottom: 0.6rem;
   }
 }
+
+/* ------------------------------------------------------------------ *
+ * Flare footnotes (flare2md's mark_footnotes).
+ *
+ * `<MadCap:footnote>` carries only the note text, so the converter adds
+ * the superscript number Flare's own output shows and wraps the note
+ * itself. Nearly all of them sit in a table cell, where the note follows
+ * the value it qualifies ("Compatible¹ Other commercially supported…") —
+ * so the note needs to read as an aside rather than as a continuation of
+ * that value.
+ * ------------------------------------------------------------------ */
+.md-typeset .jsd-footnote-ref {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+  padding-right: 0.1em;
+}
+
+.md-typeset .jsd-footnote {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85em;
+}

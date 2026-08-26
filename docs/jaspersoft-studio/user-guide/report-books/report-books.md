@@ -11,14 +11,14 @@ This section provides a walkthrough of the report book creation process, using t
 
 Creating a report book has a number of separate tasks, including:
 
-- [Creating the Report Book Framework](report-books-framework.md)
+-   [Creating the Report Book Framework](report-books-framework.md)
 
-- [Creating and Adding Reports to the Report Book](report-books-creating-and-adding.md)
+-   [Creating and Adding Reports to the Report Book](report-books-creating-and-adding.md)
 
-- [Refining the Report Book](report-books-refining.md)
+-   [Refining the Report Book](report-books-refining.md)
 
-- [Configuring the Table of Contents](report-books-toc.md)
+-   [Configuring the Table of Contents](report-books-toc.md)
 
-- [Report Book Pagination](report-books-pagination.md)
+-   [Report Book Pagination](report-books-pagination.md)
 
-- [Publishing the Report Book](report-books-previewing.md)
+-   [Publishing the Report Book](report-books-previewing.md)

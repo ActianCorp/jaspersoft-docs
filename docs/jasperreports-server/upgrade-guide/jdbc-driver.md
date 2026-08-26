@@ -85,9 +85,9 @@ To:
 
 JasperReports Server no longer includes JDBC drivers for the following commercial databases:
 
-- DB2
-- Oracle
-- SQL Server
+-   DB2
+-   Oracle
+-   SQL Server
 
 You can download the driver supplied by the database vendor as described below. To do this, you must first obtain and install the driver you want, then copy that driver into buildomatic.
 

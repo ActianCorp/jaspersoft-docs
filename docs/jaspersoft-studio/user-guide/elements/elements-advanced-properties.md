@@ -11,8 +11,8 @@ Most element types support static values or expressions in properties. Some elem
 
 The steps to open the Properties dialog differ depending on the element you select. For example:
 
-- To open the **Properties** dialog for a text field, go to the **Appearance** tab in the **Properties** view and click the **Edit Properties** button.
-- To open the **Properties** dialog for a report, go to the **Advanced** tab in the **Properties** view and select **Edit Properties**, then click **...**.
+-   To open the **Properties** dialog for a text field, go to the **Appearance** tab in the **Properties** view and click the **Edit Properties** button.
+-   To open the **Properties** dialog for a report, go to the **Advanced** tab in the **Properties** view and select **Edit Properties**, then click **...**.
 
 |  |
 |----|
@@ -23,17 +23,17 @@ By default, the **Properties**dialog displays a form with available properties g
 
 The **Properties** dialog supports the following actions:
 
-- Hover to view the description of a property.
+-   Hover to view the description of a property.
 
-- Right-click on an entry box to set the property to Null or reset it to the default value (when available).
+-   Right-click on an entry box to set the property to Null or reset it to the default value (when available).
 
-- Click ![jss icon properties toggle list](../assets/images/jss-icon-properties-toggle-list.png) to switch to a summary table view. Using this view, you can manage multiple properties at the same time. For example, you can select and copy multiple properties, and then paste them into another element. To return to form view, click ![jss icon properties toggle form](../assets/images/jss-icon-properties-toggle-form.png).
+-   Click ![jss icon properties toggle list](../assets/images/jss-icon-properties-toggle-list.png) to switch to a summary table view. Using this view, you can manage multiple properties at the same time. For example, you can select and copy multiple properties, and then paste them into another element. To return to form view, click ![jss icon properties toggle form](../assets/images/jss-icon-properties-toggle-form.png).
 
-- Click ![jss icon properties set](../assets/images/jss-icon-properties-set.png) to show only properties that have already been set at element level.
+-   Click ![jss icon properties set](../assets/images/jss-icon-properties-set.png) to show only properties that have already been set at element level.
 
-- Enter a string in the Search property entry bar to search for a property by name.
+-   Enter a string in the Search property entry bar to search for a property by name.
 
-- Some properties include variables in the property names, shown with curly brackets. To use these properties, replace the entire value, including the brackets, with the name you want to use.
+-   Some properties include variables in the property names, shown with curly brackets. To use these properties, replace the entire value, including the brackets, with the name you want to use.
 
 !!! note
 
@@ -59,7 +59,7 @@ To create the report for the chart
 
     The fields are added to the detail band and headers are automatically added to the **Column Header** band.
 
-6.  Drag to select the fields in the **Detail** band, right-click, and select **Align in Container \> Align to Top Margin**. Then double-click the detail band to resize it to fit the fields.
+6.  Drag to select the fields in the **Detail** band, right-click, and select **Align in Container &gt; Align to Top Margin**. Then double-click the detail band to resize it to fit the fields.
 
 Set properties on a text field
 
@@ -151,13 +151,13 @@ and
 
 When using multiple properties with the same prefix
 
-- Properties are collected in the same order that they are declared in the report.
+-   Properties are collected in the same order that they are declared in the report.
 
-- If you have a single column name, you do not need a comma.
+-   If you have a single column name, you do not need a comma.
 
-- Each instance should have a different name, to make them distinct. If you have two instances with the same name, the second instance overwrites the first.
+-   Each instance should have a different name, to make them distinct. If you have two instances with the same name, the second instance overwrites the first.
 
-- If a column name appears in both instances of the property, it is collected twice. This behavior should be avoided.
+-   If a column name appears in both instances of the property, it is collected twice. This behavior should be avoided.
 
 ## Adding a Custom Property
 
@@ -167,28 +167,28 @@ When you create custom components using JasperReports Library, properties for th
 
 To generate accessible Excel files, you are required to configure the report elements with metadata export properties. These metadata properties tell the report engine to use the metadata exporter. So, only elements that have these properties get exported. You can set the following metadata properties in the report to activate the XLSX metadata export:
 
-- `net.sf.jasperreports.export.xls.column.names.{arbitrary_name}`(optional): Report-level property that contains a comma-separated list of column names that is exported for a report.
+-   `net.sf.jasperreports.export.xls.column.names.{arbitrary_name}`(optional): Report-level property that contains a comma-separated list of column names that is exported for a report.
 
-- `net.sf.jasperreports.export.xls.write.header`(optional): Report-level property that specifies if the column names also get exported for a report. The default value is false.
+-   `net.sf.jasperreports.export.xls.write.header`(optional): Report-level property that specifies if the column names also get exported for a report. The default value is false.
 
-- `net.sf.jasperreports.export.xls.column.name`(mandatory): Each element that is exported must contain this property that specifies the name of the column associated with the element.
+-   `net.sf.jasperreports.export.xls.column.name`(mandatory): Each element that is exported must contain this property that specifies the name of the column associated with the element.
 
-- `net.sf.jasperreports.export.xls.repeat.value`(optional): Element-level property that specifies if the value associated with the element must be repeated when it is missing.
+-   `net.sf.jasperreports.export.xls.repeat.value`(optional): Element-level property that specifies if the value associated with the element must be repeated when it is missing.
 
-- `net.sf.jasperreports.export.xls.data`(optional): Element-level property that contains the value associated with the element at export time. It is applied to text elements only.
+-   `net.sf.jasperreports.export.xls.data`(optional): Element-level property that contains the value associated with the element at export time. It is applied to text elements only.
 
-- `net.sf.jasperreports.export.xls.column.width.metadata`(optional): Element-level property that contains the width (in pixels) of the column associated with an element.
+-   `net.sf.jasperreports.export.xls.column.width.metadata`(optional): Element-level property that contains the width (in pixels) of the column associated with an element.
 
 ## Setting Properties for CSV Metadata Export
 
 To generate data-oriented CSV files, you are required to configure the report elements with metadata export properties. These metadata properties tell the report engine to use the metadata exporter. So, only elements that have these properties get exported. You can set the following metadata properties in the report to activate the CSV metadata export:
 
-- `net.sf.jasperreports.export.csv.column.names.{arbitrary_name}` (optional): Report-level property that contains a comma-separated list of column names that is exported for a report.
+-   `net.sf.jasperreports.export.csv.column.names.{arbitrary_name}` (optional): Report-level property that contains a comma-separated list of column names that is exported for a report.
 
-- `net.sf.jasperreports.export.csv.write.header` (optional): Report-level property that specifies if the column names also get exported for a report. The default value is false.
+-   `net.sf.jasperreports.export.csv.write.header` (optional): Report-level property that specifies if the column names also get exported for a report. The default value is false.
 
-- `net.sf.jasperreports.export.csv.column.name` (mandatory): Each element that is exported must contain this property that specifies the name of the column associated with the element.
+-   `net.sf.jasperreports.export.csv.column.name` (mandatory): Each element that is exported must contain this property that specifies the name of the column associated with the element.
 
-- `net.sf.jasperreports.export.csv.repeat.value` (optional): Element-level property that specifies if the value associated with the element must be repeated when it is missing.
+-   `net.sf.jasperreports.export.csv.repeat.value` (optional): Element-level property that specifies if the value associated with the element must be repeated when it is missing.
 
-- `net.sf.jasperreports.export.csv.data` (optional): Element-level property that contains the value associated with the element at export time. It is applied to text elements only.
+-   `net.sf.jasperreports.export.csv.data` (optional): Element-level property that contains the value associated with the element at export time. It is applied to text elements only.

@@ -21,5 +21,5 @@ Properties Editor
 
 You can use Properties Editor to set all properties of an element. The following features of Properties Editor are not supported for this release:
 
-- complex and custom properties editors
-- properties description and validation
+-   complex and custom properties editors
+-   properties description and validation

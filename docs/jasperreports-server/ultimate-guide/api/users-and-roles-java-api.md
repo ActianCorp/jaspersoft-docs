@@ -9,9 +9,9 @@ Access to all JasperReports Server functionality is based on assigned user-level
 
 The `com.jaspersoft.jasperserver.api.metadata.user.service.UserAuthorityService` interface has methods for creating, modifying, and removing users and roles. The API manipulates only these two types of entities for which public interfaces are available:
 
-- Users: represented by the `com.jaspersoft.jasperserver.api.metadata.user.domain.User` interface.
+-   Users: represented by the `com.jaspersoft.jasperserver.api.metadata.user.domain.User` interface.
 
-- Roles: represented by the `com.jaspersoft.jasperserver.api.metadata.user.domain.Role` interface.
+-   Roles: represented by the `com.jaspersoft.jasperserver.api.metadata.user.domain.Role` interface.
 
 You can define a new user in a few easy steps:
 
@@ -28,9 +28,9 @@ userAuthService.putUser(null, workingUser);
 
 The `setTenantId` method specifies the organization that the user belongs to. However, note the following:
 
-- If you are using commercial editions of JasperReports Server, you should use this method in most cases, but if your instance hosts only a single organization, this method should set most user’s organization to the default (organization_1).
+-   If you are using commercial editions of JasperReports Server, you should use this method in most cases, but if your instance hosts only a single organization, this method should set most user’s organization to the default (organization_1).
 
-- If you are defining a special administrative user (similar to superuser) that should not be affiliated with an organization, do not call `setTenantId`.
+-   If you are defining a special administrative user (similar to superuser) that should not be affiliated with an organization, do not call `setTenantId`.
 
 To get the user information from the database, you can call the `getUser` method by providing the username.
 

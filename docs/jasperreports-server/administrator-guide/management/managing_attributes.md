@@ -19,17 +19,17 @@ Attributes have permissions, so that system admins or organization admins can re
 
 There are several features of JasperReports Server that can read attributes and use attribute values. The following features can limit or restrict access to data or take different behavior based on the user, organization, or server-level attributes. Each feature reads or references attributes in its own syntax that is described with that feature:
 
-- Data sources - The host name, port number, database name, username, and user password can be defined through attributes. See [Attributes in Data Source Definitions](../datasources/attributes_in_data_source_definitions.md).
-- Reports - Attribute values can be referenced in the calculations as described in [Attribute-Based Parameters for Queries and Reports](../resources/query-based_input_controls.md).
-- Domain security files - Access rules for rows and columns can be defined with attributes so that users or organizations may only see data that they are allowed to access. See the JasperReports Server Data Management Using Domains and a comprehensive example in the chapter "Securing Data in a Domain" in the JasperReports Server Data Management Using Domains.
-- Domain pre-filters and calculated fields - Attribute values can be part of filters and calculated fields when creating Domains using the Domain Designer. See the chapter "Working with the Domain Designer" in the JasperReports Server Data Management Using Domains.
-- OLAP schemas - Similar to Domains, access rules can be defined with attributes so that users may only see data that they are allowed to access. See the Jaspersoft OLAP User Guide.
+-   Data sources - The host name, port number, database name, username, and user password can be defined through attributes. See [Attributes in Data Source Definitions](../datasources/attributes_in_data_source_definitions.md).
+-   Reports - Attribute values can be referenced in the calculations as described in [Attribute-Based Parameters for Queries and Reports](../resources/query-based_input_controls.md).
+-   Domain security files - Access rules for rows and columns can be defined with attributes so that users or organizations may only see data that they are allowed to access. See the JasperReports Server Data Management Using Domains and a comprehensive example in the chapter "Securing Data in a Domain" in the JasperReports Server Data Management Using Domains.
+-   Domain pre-filters and calculated fields - Attribute values can be part of filters and calculated fields when creating Domains using the Domain Designer. See the chapter "Working with the Domain Designer" in the JasperReports Server Data Management Using Domains.
+-   OLAP schemas - Similar to Domains, access rules can be defined with attributes so that users may only see data that they are allowed to access. See the Jaspersoft OLAP User Guide.
 
 Attributes are always referenced in relation to the currently logged in user who is performing an operation or running a report:
 
-- If the value of a user-level attribute is requested, it refers to the attributes of the logged in user.
-- If the value of an organization-level attribute is requested, it refers to the attributes of the logged in user's organization.
-- If the value of a server-level attribute is requested, the value depends on which server the user is logged into. For example, test and production servers may have a copy of the same repository, but different server-level attributes. For a given server, server-level attributes are shared and thus have the same value for all users in all organizations.
+-   If the value of a user-level attribute is requested, it refers to the attributes of the logged in user.
+-   If the value of an organization-level attribute is requested, it refers to the attributes of the logged in user's organization.
+-   If the value of a server-level attribute is requested, the value depends on which server the user is logged into. For example, test and production servers may have a copy of the same repository, but different server-level attributes. For a given server, server-level attributes are shared and thus have the same value for all users in all organizations.
 
 ## Attribute Hierarchy
 
@@ -37,17 +37,17 @@ An attribute is a named value that is defined on a user, organization, or root o
 
 In the places that you reference attributes (see above), there are two ways to determine the value of an attribute:
 
-- Categorical value - References the value of a named attribute at a specific level, either user level, organization level, or server level. If the attribute does not exist at the requested level, no value is returned.
+-   Categorical value - References the value of a named attribute at a specific level, either user level, organization level, or server level. If the attribute does not exist at the requested level, no value is returned.
 
-- Hierarchical value - References the value of a named attribute across all levels, starting at the user level. The server searches for an attribute with the given name in the following order, stopping and returning the first value that it finds:
+-   Hierarchical value - References the value of a named attribute across all levels, starting at the user level. The server searches for an attribute with the given name in the following order, stopping and returning the first value that it finds:
 
-  - At the user level, in the user attributes of the logged in user.
+    -   At the user level, in the user attributes of the logged in user.
 
-  - At the organization level, in the organization the attributes of the logged in user's organization and all parent organizations.
+    -   At the organization level, in the organization the attributes of the logged in user's organization and all parent organizations.
 
-  - At the server level.
+    -   At the server level.
 
-  - If the attributes do not exist at any level, no value is returned.
+    -   If the attributes do not exist at any level, no value is returned.
 
 With hierarchical values, attributes with the same name but different values may be defined at several levels and on many users or organizations. Each attribute is a distinct attribute definition, but the hierarchical value referencing takes into account the level and the presence of the definition for every given user and organization.
 
@@ -61,13 +61,13 @@ Because of the attribute hierarchy and the way that attributes are referenced, a
 
 JasperReports Server provides two mechanisms to protect sensitive attributes:
 
-- Attribute encryption - Prevents the attribute value from ever being seen. Does not prevent the attribute name from being seen or the value from being redefined at a lower level. When an attribute value is encrypted, the value stored internally is encrypted and never decrypted in the user interface. The server decrypts the attribute only when it is referenced by one of the features of the server. The decrypted value is then used for internal operations and is never visible to the user.
+-   Attribute encryption - Prevents the attribute value from ever being seen. Does not prevent the attribute name from being seen or the value from being redefined at a lower level. When an attribute value is encrypted, the value stored internally is encrypted and never decrypted in the user interface. The server decrypts the attribute only when it is referenced by one of the features of the server. The decrypted value is then used for internal operations and is never visible to the user.
 
 For example, an encrypted attribute could store the password for a database. Once typed in and saved, the UI displays \*\*\* as the value of the attribute. When a report uses that database, the server decrypts the password and sends it as part of the database protocol, so the user and the admin never see the password.
 
 Encrypted attributes are similar to user passwords in the server. Administrators can change the encrypted value to a new value, but they can never view the current value, even the system admin (`superuser`).
 
-- Attribute permissions - Prevents the attribute from being visible or redefined at a lower level. Attribute permissions are described in the next section.
+-   Attribute permissions - Prevents the attribute from being visible or redefined at a lower level. Attribute permissions are described in the next section.
 
 To properly secure an attribute, you should make it encrypted so it cannot be seen and then set permissions so it cannot be overridden.
 
@@ -81,13 +81,13 @@ Because the attribute hierarchy allows attribute values at lower levels to take 
 
 The attribute permissions and their effects are as follows:
 
-- Administer - This is the absence of any restrictions. It allows lower-level administrators to define attributes with the same name and set their permissions locally for their suborganizations. This is the default permission.
+-   Administer - This is the absence of any restrictions. It allows lower-level administrators to define attributes with the same name and set their permissions locally for their suborganizations. This is the default permission.
 
 In servers with only a single default organization, use this permission unless you want to disable an attribute with the no-access permission.
 
-- Read Only - The attribute and its value are visible to lower-level administrators, but they cannot define locally an attribute with the same name. In servers with only a single default organization, this permission has no effect.
-- Execute Only - The attribute and its value are not visible to lower-level administrators, and they see an error if they try to create an attribute with the same name. However, the attribute returns its value when properly referenced. In servers with only a single default organization, this permission has no effect.
-- No Access - The attribute and its value are not visible to lower-level administrators, and they see an error if they try to create an attribute with the same name. In addition, the attribute is disabled and its value cannot be referenced. When referenced, an attribute with no-access permission returns an error.
+-   Read Only - The attribute and its value are visible to lower-level administrators, but they cannot define locally an attribute with the same name. In servers with only a single default organization, this permission has no effect.
+-   Execute Only - The attribute and its value are not visible to lower-level administrators, and they see an error if they try to create an attribute with the same name. However, the attribute returns its value when properly referenced. In servers with only a single default organization, this permission has no effect.
+-   No Access - The attribute and its value are not visible to lower-level administrators, and they see an error if they try to create an attribute with the same name. In addition, the attribute is disabled and its value cannot be referenced. When referenced, an attribute with no-access permission returns an error.
 
 It is important to remember that attributes are always defined individually at each level. When permissions prevent a lower-level admin from "writing" an attribute, in actuality, the permission is preventing the lower-level admin from creating a new attribute at his level with the same name (regardless of its value).
 
@@ -103,7 +103,7 @@ To view, create, modify, or delete server-level attributes
 
 1.  Log in as the system admin (`superuser`).
 
-2.  Select **Manage \> Server Settings** and choose **Server Attributes** from the left-hand panel.
+2.  Select **Manage &gt; Server Settings** and choose **Server Attributes** from the left-hand panel.
 
     Each server level attribute is listed with its value, encrypted status, and permission. Holding the pointer over an attribute name shows the description associated with the attribute. When an attribute value is encrypted, its value is shown as \*\*\* symbols.
 
@@ -123,9 +123,9 @@ To view, create, modify, or delete server-level attributes
 
     When modifying an attribute, be aware of the following:
 
-    - Changing the name of an attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference the attribute, you are asked to confirm the name change.
-    - Be aware that changing the encryption or permission of an attribute can impact the visibility of an attribute and the features that might rely on referencing its value. Again, you are asked to confirm the change.
-    - Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. You should give the attribute a new value by clicking the edit icon.
+    -   Changing the name of an attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference the attribute, you are asked to confirm the name change.
+    -   Be aware that changing the encryption or permission of an attribute can impact the visibility of an attribute and the features that might rely on referencing its value. Again, you are asked to confirm the change.
+    -   Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. You should give the attribute a new value by clicking the edit icon.
 
 5.  To delete an attribute at the server level, click the delete icon ![js Attributes icon delete](../assets/images/js-Attributes-icon-delete.png) in the attribute row and confirm the operation. Because this may impact features that reference attributes, you are asked to confirm the deletion. Click **Save** to make the deletion take effect.
 
@@ -139,7 +139,7 @@ To view, create, modify, or delete organization-level attributes
 
 1.  Log in as an administrator (`jasperadmin` in the target organization or any parent organization, or `superuser`).
 
-2.  Select **Manage \> Organizations**.
+2.  Select **Manage &gt; Organizations**.
 
 3.  Select the parent organization in the left-hand column, then select the target organization in the center column.
 
@@ -151,7 +151,7 @@ To view, create, modify, or delete organization-level attributes
 
     !!! note
 
-        In the figure above, the system admin (superuser) is logged in and viewing organization attributes. The system admin can view all attributes at all levels, even inherited attributes, regardless of permissions. Also, the root organization is visible and represents the server level. Selecting root in the Manage Organizations page displays the same attributes and offers the same functionality as the **Server Attributes** page under **Manage \> Server Settings**. By definition, none of the attributes at the server level are inherited.
+        In the figure above, the system admin (superuser) is logged in and viewing organization attributes. The system admin can view all attributes at all levels, even inherited attributes, regardless of permissions. Also, the root organization is visible and represents the server level. Selecting root in the Manage Organizations page displays the same attributes and offers the same functionality as the **Server Attributes** page under **Manage &gt; Server Settings**. By definition, none of the attributes at the server level are inherited.
 
 4.  To create, modify, or delete the attributes on an organization, click **Edit** in the right-hand column, then select the **Attributes** tab. In the following figure, the Finance organization admin is logged in and does not see the `userName` and `password` attributes because they are hidden by permissions. Also, inherited attributes with the read-only permission are shown but cannot be modified.
 
@@ -171,16 +171,16 @@ To view, create, modify, or delete organization-level attributes
     You can also modify the attribute's permission and encryption by using the dropdown and checkbox in its table row. After confirming any changes, click **Save** to make them take effect.<br>
     When modifying an organization attribute, be aware of the following:
 
-    - Inherited attributes belong to a parent organization or server root and are shown at the organization level to display the hierarchical attribute values. Any modification to an inherited attribute actually creates a local attribute definition with the modified parameters. In the hierarchy for the selected organization, this new attribute takes precedence over the previously inherited attribute.
-    - Changing the name of a locally defined attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference the attribute, you are asked to confirm the name change.
-    - Be aware that changing the encryption or permission of an attribute can impact the visibility of an attribute and the features that might rely on referencing its value. Again, this may impact features that reference the attribute, and you are asked to confirm the change.
-    - Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. Click the edit icon to give the attribute a new value.
+    -   Inherited attributes belong to a parent organization or server root and are shown at the organization level to display the hierarchical attribute values. Any modification to an inherited attribute actually creates a local attribute definition with the modified parameters. In the hierarchy for the selected organization, this new attribute takes precedence over the previously inherited attribute.
+    -   Changing the name of a locally defined attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference the attribute, you are asked to confirm the name change.
+    -   Be aware that changing the encryption or permission of an attribute can impact the visibility of an attribute and the features that might rely on referencing its value. Again, this may impact features that reference the attribute, and you are asked to confirm the change.
+    -   Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. Click the edit icon to give the attribute a new value.
 
 8.  To delete an organization attribute, click the delete icon ![js Attributes icon delete](../assets/images/js-Attributes-icon-delete.png) in the attribute row and confirm the operation. Because this may impact features that reference attributes, you are asked to confirm the deletion. Click **Save** to make the deletion take effect.<br>
     When deleting an organization attribute, be aware of the following:
 
-    - On deletion, some attributes remain in the list as inherited attributes. This indicates that the local definition of the attribute was deleted, but another attribute with the same name is visible higher in the attribute hierarchy.
-    - You cannot delete an inherited attribute, because it belongs to a higher organization or server root. To remove an inherited attribute, you must find where it is defined then delete it at that level. The system admin can also change the permission of the attribute where it is defined to Execute Only or No Access so it does not appear to organization admins in the lower organization anymore.
+    -   On deletion, some attributes remain in the list as inherited attributes. This indicates that the local definition of the attribute was deleted, but another attribute with the same name is visible higher in the attribute hierarchy.
+    -   You cannot delete an inherited attribute, because it belongs to a higher organization or server root. To remove an inherited attribute, you must find where it is defined then delete it at that level. The system admin can also change the permission of the attribute where it is defined to Execute Only or No Access so it does not appear to organization admins in the lower organization anymore.
 
 ## Managing User Attributes
 
@@ -194,7 +194,7 @@ To view, create, modify, or delete user-level attributes
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
 
-2.  Click **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+2.  Click **Manage &gt; Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
 
 3.  In the Organizations panel, select the user's organization. Or select a parent organization and search for the user by name.
 
@@ -222,12 +222,12 @@ To view, create, modify, or delete user-level attributes
     You can also modify the attribute's encryption by using the check box in its table row. After confirming any changes, click **Save** to make them take effect.<br>
     When modifying a user attribute, be aware of the following:
 
-    - Inherited attributes belong to a parent organization or the server level and are shown at the user level to display the hierarchical attribute values. Any modification to an inherited attribute actually creates a local attribute definition with the modified parameters. In the hierarchy of attributes for this user, the new attribute takes precedence over the previously inherited attribute.
-    - Changing the name of a locally defined attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference attributes, you are asked to confirm the name change.
-    - Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. Click the edit icon to give the attribute a new value.
+    -   Inherited attributes belong to a parent organization or the server level and are shown at the user level to display the hierarchical attribute values. Any modification to an inherited attribute actually creates a local attribute definition with the modified parameters. In the hierarchy of attributes for this user, the new attribute takes precedence over the previously inherited attribute.
+    -   Changing the name of a locally defined attribute is equivalent to deleting the original attribute and adding a new attribute with the same value. Because this may impact features that reference attributes, you are asked to confirm the name change.
+    -   Removing encryption does not decrypt an encrypted attribute. To safeguard encrypted values, removing the encryption on an attribute also erases its value. Click the edit icon to give the attribute a new value.
 
 9.  To delete a user attribute, click the delete icon ![js Attributes icon delete](../assets/images/js-Attributes-icon-delete.png) in the attribute row and confirm the operation. Because this may impact features that reference attributes, you are asked to confirm the deletion. Click **Save** to make the deletion take effect.<br>
     When deleting a user attribute, be aware of the following:
 
-    - On deletion, some attributes remain in the list as inherited attributes. This indicates that the local definition of the attribute was deleted, but another attribute with the same name exists higher in the attribute hierarchy.
-    - You cannot delete an inherited attribute because it belongs to a parent organization or the server level. To remove an inherited attribute, you must find where it is defined, then delete it at that level. The system admin can also change the permission of the attribute where it is defined to Execute Only or No Access so it does not appear on the user anymore.
+    -   On deletion, some attributes remain in the list as inherited attributes. This indicates that the local definition of the attribute was deleted, but another attribute with the same name exists higher in the attribute hierarchy.
+    -   You cannot delete an inherited attribute because it belongs to a parent organization or the server level. To remove an inherited attribute, you must find where it is defined, then delete it at that level. The system admin can also change the permission of the attribute where it is defined to Execute Only or No Access so it does not appear on the user anymore.

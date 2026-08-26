@@ -7,8 +7,8 @@ description: "To delete a user, send the DELETE method and specify the user ID i
 
 To delete a user, send the DELETE method and specify the user ID in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to delete users of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to delete users of the root organization.
 
 When this method is successful, the user is permanently deleted.
 

@@ -13,15 +13,15 @@ You can install the app from the Google Play website:
 
 The JasperMobile app for Android uses both the client and UI packages of the Mobile SDK to implement the following features:
 
-- Thumbnails – When the thumbnail feature is enabled on the server, JasperMobile displays a small image of the report or dashboard in both list and tile layouts.
-- Library – View a list of all reports and compatible dashboards on the server.
-- Repository browser – Explore the repository of JasperReports Server and view all the resource properties. A built-in viewer lets you display image resources and text files of type JRXML, resource bundle, or CSS.
-- Repository search – Search for resources by name in the whole repository.
-- Favorites – When browsing the repository or viewing a report, any resource can be easily flagged as a 'Favorite' and then displayed in the special Favorites view.
-- Saved files – You can store report output as HTML, PDF, or XLS on your device to view at any time.
-- Running dashboards – JasperMobile can display dashboards from versions of JasperReports Server prior to 6.0 and legacyDashboard in version 6.0 and later.
-- Running reports – JasperMobile allows you to easily execute reports and interact with them.
-- Input Controls – The application introspects the report unit, identifies the input controls and then renders them in a table view based on the report parameters. The support for cascading input controls allows you to dynamically populate list items based on user selection. All input controls are rendered using native components, including Boolean check boxes, text and numeric fields, date and time selectors, and single or multiple choice lists.
+-   Thumbnails – When the thumbnail feature is enabled on the server, JasperMobile displays a small image of the report or dashboard in both list and tile layouts.
+-   Library – View a list of all reports and compatible dashboards on the server.
+-   Repository browser – Explore the repository of JasperReports Server and view all the resource properties. A built-in viewer lets you display image resources and text files of type JRXML, resource bundle, or CSS.
+-   Repository search – Search for resources by name in the whole repository.
+-   Favorites – When browsing the repository or viewing a report, any resource can be easily flagged as a 'Favorite' and then displayed in the special Favorites view.
+-   Saved files – You can store report output as HTML, PDF, or XLS on your device to view at any time.
+-   Running dashboards – JasperMobile can display dashboards from versions of JasperReports Server prior to 6.0 and legacyDashboard in version 6.0 and later.
+-   Running reports – JasperMobile allows you to easily execute reports and interact with them.
+-   Input Controls – The application introspects the report unit, identifies the input controls and then renders them in a table view based on the report parameters. The support for cascading input controls allows you to dynamically populate list items based on user selection. All input controls are rendered using native components, including Boolean check boxes, text and numeric fields, date and time selectors, and single or multiple choice lists.
 
 When you first run JasperMobile, you connect to your instance of JasperReports Server with a user name and password. You can later configure the app to remember the connection parameters for several servers.
 

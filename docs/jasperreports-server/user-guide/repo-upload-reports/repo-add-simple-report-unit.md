@@ -15,15 +15,15 @@ This procedure shows you how to set up a name for the report in the repository a
 
 To upload the main JRXML for this example
 
-1.  Log in to the server as an administrator and select **View \> Repository**.
+1.  Log in to the server as an administrator and select **View &gt; Repository**.
 
     !!! note
 
         If you log in as a user, you can upload a report unit to the server, but this example requires an administrator login to access the image resources.
 
-2.  Locate the folder where you want to add the report. For example, go to **Public \> Samples \> Reports**.
+2.  Locate the folder where you want to add the report. For example, go to **Public &gt; Samples &gt; Reports**.
 
-3.  Right-click the Reports folder and select **Add Resource \> JasperReport**from the context menu. The Set Up the Report page of the JasperReport wizard appears.
+3.  Right-click the Reports folder and select **Add Resource &gt; JasperReport**from the context menu. The Set Up the Report page of the JasperReport wizard appears.
 
     !!! note
 
@@ -31,13 +31,13 @@ To upload the main JRXML for this example
 
 4.  In **Naming**, enter the name and description of the new report and accept the generated Resource ID:
 
-    - Name - Display the name of the report: `New Simple Report`
+    -   Name - Display the name of the report: `New Simple Report`
 
-    - Resource ID - Permanent designation of the report object in the repository: `New_Simple_Report`
+    -   Resource ID - Permanent designation of the report object in the repository: `New_Simple_Report`
 
-    - Description - Optional description displayed in the repository: `This is a simple example`.
+    -   Description - Optional description displayed in the repository: `This is a simple example`.
 
-5.  Select **Upload a Local File** and **Browse** to \<js-install\>/samples/reports/AllAccounts.jrxml.
+5.  Select **Upload a Local File** and **Browse** to &lt;js-install&gt;/samples/reports/AllAccounts.jrxml.
 
     !!! note
 
@@ -59,5 +59,5 @@ To upload the main JRXML for this example
 
     A JRXML file does not embed resources, such as images. When the server uploads the JRXML, it tries to detect any missing resources. For example, the Suggested Resources in the Resources List shows that two image files are missing:
 
-    - LogoLink
-    - AllAccounts_Res2
+    -   LogoLink
+    -   AllAccounts_Res2

@@ -92,6 +92,6 @@ ResourceDescriptor rd2 = wsclnt.get(rd, null, args);</code></pre></div></td>
 
     Note the following conventions for parameter values:
 
-    - All parameter values are treated as strings; only number, string, and date/time values are allowed.
-    - Numbers cannot include punctuation for the digit grouping symbol (thousands separator) and must use a period (.) as the decimal separator (if the relative parameter is not an integer).
-    - Dates and date/times must be represented as the number of milliseconds since January 1, 1970, 00:00:00 GMT.
+    -   All parameter values are treated as strings; only number, string, and date/time values are allowed.
+    -   Numbers cannot include punctuation for the digit grouping symbol (thousands separator) and must use a period (.) as the decimal separator (if the relative parameter is not an integer).
+    -   Dates and date/times must be represented as the number of milliseconds since January 1, 1970, 00:00:00 GMT.

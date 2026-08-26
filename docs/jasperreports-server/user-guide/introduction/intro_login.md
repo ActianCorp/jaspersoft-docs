@@ -23,13 +23,13 @@ Before logging in, review the information on the login page. There are links to 
 
 You can log in as the following users:
 
-- **superuser/superuser** to manage configuration and organizations .
+-   **superuser/superuser** to manage configuration and organizations .
 
-- **jasperadmin/jasperadmin** to manage a single organization.
+-   **jasperadmin/jasperadmin** to manage a single organization.
 
-- **joeuser/joeuser** to see an end user's view.
+-   **joeuser/joeuser** to see an end user's view.
 
-- **demo/demo** to view the demo dashboard, if samples were installed.
+-   **demo/demo** to view the demo dashboard, if samples were installed.
 
 !!! warning
 
@@ -37,12 +37,17 @@ You can log in as the following users:
 
 To log in to the server
 
-- Enter your user ID and password.
+-   Enter your user ID and password.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <ul><li><p>If you installed an evaluation server with the sample data, you can log in with the sample user IDs and passwords. For more information, click <strong>Need help logging in?</strong></p></li><li><p>If the Organization field appears in the Login panel, enter the ID or alias of your organization. If you don’t know it, contact your administrator. For more information, see <a href="intro_login_multi_org.md">Logging into a Server with Multiple Organizations</a>.</p></li><li><p>The default administrator login credentials are superuser/superuser and jasperadmin/jasperadmin. </p></li><li><p>If you are logging in using the REST API and your password has expired, an error message will be displayed.</p></li></ul>
-  </div>
+    !!! note
+
+        -   If you installed an evaluation server with the sample data, you can log in with the sample user IDs and passwords. For more information, click **Need help logging in?**
+
+        -   If the Organization field appears in the Login panel, enter the ID or alias of your organization. If you don’t know it, contact your administrator. For more information, see [Logging into a Server with Multiple Organizations](intro_login_multi_org.md).
+
+        -   The default administrator login credentials are superuser/superuser and jasperadmin/jasperadmin.
+
+        -   If you are logging in using the REST API and your password has expired, an error message will be displayed.
 
 1.  If you want to use a different locale and time zone than the server uses, click **Show locale & time zone**.
 

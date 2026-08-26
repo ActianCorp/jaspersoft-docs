@@ -40,7 +40,7 @@ Once a report has been generated with the PUT request, it is possible to downloa
 
 For example, the URL to download the HTML of the report generated in the previous example is:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest/report/d7bf6c9-9077-41f7-a2d4-8682e74b637e?file=report
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest/report/d7bf6c9-9077-41f7-a2d4-8682e74b637e?file=report
 
 As a side effect of storing the report output in the user session, the UUID in the URL is visible only to the currently logged user. Other applications using different user IDs cannot access this report output.
 

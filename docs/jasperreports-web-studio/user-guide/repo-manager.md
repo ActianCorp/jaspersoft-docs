@@ -9,15 +9,19 @@ When you log into the remote storage platform, you are presented with the conten
 
 Folders and files can be created, edited, or removed, just like in any file system like a repository. To upload a file or folder, click the **New** button and select **Upload File** or **Upload Folder**. The menu also contains the following options:
 
-- New Report
-- New Data Adapter
-- New Folder
+-   New Report
 
-The following actions are available from the context menu, when you right-click on the name of a file or folder:
+-   New Data Adapter
 
-- **Delete** deletes the resource permanently.
-- **Download** downloads the resource.
-- **Resource Information** shows detailed information about the resource such as name, description, mime, ID, type, path, size, Created Date, Last Modified Date, and permissions. With the required permissions and if the repository allows, you can change the name or description.
+-   New Folder
+
+    The following actions are available from the context menu, when you right-click on the name of a file or folder:
+
+-   **Delete** deletes the resource permanently.
+
+-   **Download** downloads the resource.
+
+-   **Resource Information** shows detailed information about the resource such as name, description, mime, ID, type, path, size, Created Date, Last Modified Date, and permissions. With the required permissions and if the repository allows, you can change the name or description.
 
 ![jrws repo mgr](assets/images/jrws-repo-mgr.png)
 
@@ -29,9 +33,9 @@ To download a file or a folder, use the right-click context menu on the resource
 
 In the **New** menu on the upper-right, depending on permissions and possibility to create a resource, there are two menu items:
 
-- **Upload**
+-   **Upload**
 
-- **Upload Folder**
+-   **Upload Folder**
 
 These options allow you to upload files or folders into the repository.
 
@@ -59,17 +63,17 @@ To manage permissions for a repository resource:
 
 4.  In the **Permissions** dialog:
 
-    - Click the dropdown or type into the field to search for and select the user.
+    -   Click the dropdown or type into the field to search for and select the user.
 
-    - Now, select the appropriate permission level from the available dropdown options.
+    -   Now, select the appropriate permission level from the available dropdown options.
 
-    - Click **Share with** to add the selected user to the active list above.
+    -   Click **Share with** to add the selected user to the active list above.
 
-    - In the **Share with** list, you can see the users and the allocated permissions:
+    -   In the **Share with** list, you can see the users and the allocated permissions:
 
-      You can update the existing permissions from the dropdown.
+        You can update the existing permissions from the dropdown.
 
-      To remove the user from the permissions list, click the ![delete](assets/images/delete.png)icon.
+        To remove the user from the permissions list, click the ![delete](assets/images/delete.png)icon.
 
 5.  Click **Save** to apply the changes.
 

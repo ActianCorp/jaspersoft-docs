@@ -159,13 +159,13 @@ level="DEBUG"/&gt;</td>
 |----|----|
 | Module | jrio-reporting |
 | File | jrio-reporting-docker/jrio/classes/log4j2.xml |
-| Logger | \<Logger name="com.jaspersoft.jrio.reporting.execution.ReportExecutionPoll" level="DEBUG"/\> |
+| Logger | &lt;Logger name="com.jaspersoft.jrio.reporting.execution.ReportExecutionPoll" level="DEBUG"/&gt; |
 
-|        |                                                  |
-|--------|--------------------------------------------------|
-| Module | jrio-rest                                        |
-| File   | jrio-rest-docker\jrio\WEB-INF\classes\log4j2.xml |
-| Logger | None by default                                  |
+|        |                                                      |
+|--------|------------------------------------------------------|
+| Module | jrio-rest                                            |
+| File   | jrio-rest-docker\\jrio\\WEB-INF\\classes\\log4j2.xml |
+| Logger | None by default                                      |
 
 ## Setting Concurrent Threads
 

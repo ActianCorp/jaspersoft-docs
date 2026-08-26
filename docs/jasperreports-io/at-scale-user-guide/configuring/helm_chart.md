@@ -66,117 +66,117 @@ Before deploying the Docker images to Kubernetes, you must configure the cluster
 
 The following examples of the Helm chart for each pod assume that the Docker images are deployed on AWS EKS (Amazon Elastic Kubernetes Service).
 
-- The jrio-client module is optional, and usually only included for demonstration purposes.
+-   The jrio-client module is optional, and usually only included for demonstration purposes.
 
-``` bash
-###############################
-## jrio-client config ##
-###############################
-jrioClient:
-#  replicas: 1
-  dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-client
-  dockerTag: my-example-1.0
-#  containerPort: 8080
-#  servicePort: 8080
-```
+    ``` bash
+    ###############################
+    ## jrio-client config ##
+    ###############################
+    jrioClient:
+    #  replicas: 1
+      dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-client
+      dockerTag: my-example-1.0
+    #  containerPort: 8080
+    #  servicePort: 8080
+    ```
 
-- The jrio-manager pod has memory and CPU settings, as well as options for its JVM (Java Virtual Machine).
+-   The jrio-manager pod has memory and CPU settings, as well as options for its JVM (Java Virtual Machine).
 
-``` bash
-#########################
-## jrio-manager config ##
-#########################
-jrioManager:
-  dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-manager
-  dockerTag: my-example-1.0
-  memoryRequest: 384Mi
-  memoryLimit: 1536Mi
-  cpuRequest: 200m
-  cpuLimit: 1000m
-  javaOptions: "-Xms128m -Xmx1500m"
-```
+    ``` bash
+    #########################
+    ## jrio-manager config ##
+    #########################
+    jrioManager:
+      dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-manager
+      dockerTag: my-example-1.0
+      memoryRequest: 384Mi
+      memoryLimit: 1536Mi
+      cpuRequest: 200m
+      cpuLimit: 1000m
+      javaOptions: "-Xms128m -Xmx1500m"
+    ```
 
-- In addition to resource limits and JVM options, the jrio-reporting pod has a timeout setting and a thread setting. You can also specify the `jasperReportsProperties` property and provide a list of JasperReports Library property names and values to be used when generating reports.
+-   In addition to resource limits and JVM options, the jrio-reporting pod has a timeout setting and a thread setting. You can also specify the `jasperReportsProperties` property and provide a list of JasperReports Library property names and values to be used when generating reports.
 
-``` bash
-###########################
-## jrio-reporting config ##
-###########################
-jrioReporting:
-  replicas: 1
-  dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-reporting
-  dockerTag: my-example-1.0
-  memoryRequest: 512Mi
-  memoryLimit: 2048Mi
-  cpuRequest: 500m
-  cpuLimit: 1000m
-  javaOptions: "-Xms128m -Xmx1536m"
-  terminationWaitSeconds: 600
-  config:
-    reportExecutionThreads: 4
-    jasperReportsProperties: |
-      net.sf.jasperreports.chrome.argument.no-sandbox=true
-      #net.sf.jasperreports.second.property.example=abc
-```
+    ``` bash
+    ###########################
+    ## jrio-reporting config ##
+    ###########################
+    jrioReporting:
+      replicas: 1
+      dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-reporting
+      dockerTag: my-example-1.0
+      memoryRequest: 512Mi
+      memoryLimit: 2048Mi
+      cpuRequest: 500m
+      cpuLimit: 1000m
+      javaOptions: "-Xms128m -Xmx1536m"
+      terminationWaitSeconds: 600
+      config:
+        reportExecutionThreads: 4
+        jasperReportsProperties: |
+          net.sf.jasperreports.chrome.argument.no-sandbox=true
+          #net.sf.jasperreports.second.property.example=abc
+    ```
 
-- In addition to resource limits and JVM options, the jrio-export pod also has a timeout setting and a thread setting. You can also specify the `jasperReportsProperties` property and provide a list of JasperReports Library property names and values to be used when exporting reports.
+-   In addition to resource limits and JVM options, the jrio-export pod also has a timeout setting and a thread setting. You can also specify the `jasperReportsProperties` property and provide a list of JasperReports Library property names and values to be used when exporting reports.
 
-``` bash
-###########################
-## jrio-export config ##
-###########################
-jrioExport:
-  replicas: 1
-  dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-export
-  dockerTag: my-example-1.0
-  memoryRequest: 512Mi
-  memoryLimit: 2048Mi
-  cpuRequest: 500m
-  cpuLimit: 1000m
-  javaOptions: "-Xms128m -Xmx1536m"
-  terminationWaitSeconds: 900
-  config:
-    exportExecutionThreads: 4
-      jasperReportsProperties: |
-      net.sf.jasperreports.chrome.argument.no-sandbox=true
-      #net.sf.jasperreports.second.property.example=abc
-```
+    ``` bash
+    ###########################
+    ## jrio-export config ##
+    ###########################
+    jrioExport:
+      replicas: 1
+      dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-export
+      dockerTag: my-example-1.0
+      memoryRequest: 512Mi
+      memoryLimit: 2048Mi
+      cpuRequest: 500m
+      cpuLimit: 1000m
+      javaOptions: "-Xms128m -Xmx1536m"
+      terminationWaitSeconds: 900
+      config:
+        exportExecutionThreads: 4
+          jasperReportsProperties: |
+          net.sf.jasperreports.chrome.argument.no-sandbox=true
+          #net.sf.jasperreports.second.property.example=abc
+    ```
 
-- The jrio-rest pod has properties for resource limits, JVM options and a timeout. If you are not using the standard 8080 port, specify it here as well.
+-   The jrio-rest pod has properties for resource limits, JVM options and a timeout. If you are not using the standard 8080 port, specify it here as well.
 
-``` bash
-######################
-## jrio-rest config ##
-######################
-jrioRest:
-  replicas: 1
-  dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-rest
-  dockerTag: my-example-1.0
-  memoryRequest: 512Mi
-  memoryLimit: 2048Mi
-  cpuRequest: 500m
-  cpuLimit: 1000m
-  javaOptions: "-Xms128m -Xmx1536m"
-  terminationWaitSeconds: 900
-#  containerPort: 8080
-#  servicePort: 8080
-```
+    ``` bash
+    ######################
+    ## jrio-rest config ##
+    ######################
+    jrioRest:
+      replicas: 1
+      dockerImage: 123456789000.dkr.ecr.us-east-1.amazonaws.com/jrio-rest
+      dockerTag: my-example-1.0
+      memoryRequest: 512Mi
+      memoryLimit: 2048Mi
+      cpuRequest: 500m
+      cpuLimit: 1000m
+      javaOptions: "-Xms128m -Xmx1536m"
+      terminationWaitSeconds: 900
+    #  containerPort: 8080
+    #  servicePort: 8080
+    ```
 
-- The redis pod for the Redis queue only needs the port specified if you are not using the default (6379).
+-   The redis pod for the Redis queue only needs the port specified if you are not using the default (6379).
 
-``` bash
-##################
-## redis config ##
-##################
-redis:
-#  replicas: 1
-#  dockerImage: redis
-  dockerTag: 1-example
-#  containerPort: 6379
-#  servicePort: 6379
-```
+    ``` bash
+    ##################
+    ## redis config ##
+    ##################
+    redis:
+    #  replicas: 1
+    #  dockerImage: redis
+      dockerTag: 1-example
+    #  containerPort: 6379
+    #  servicePort: 6379
+    ```
 
-- This setting identifies the URL of the JasperReports Server instance hosting the repository that you want to use for reports and data adapters. This value overrides any repository URL defined in the docker images.
+-   This setting identifies the URL of the JasperReports Server instance hosting the repository that you want to use for reports and data adapters. This value overrides any repository URL defined in the docker images.
 
 ``` bash
 ################

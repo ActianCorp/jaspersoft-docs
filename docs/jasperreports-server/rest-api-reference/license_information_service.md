@@ -9,16 +9,16 @@ The RESTful API provides access to the feature flags tied to a JasperReports Ser
 
 | Property | Details |
 |----|----|
-| Base URL | http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/licenseFeatures |
+| Base URL | http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/licenseFeatures |
 | Authentication | HTTP Basic Auth (Only accessible to superuser and jasperadmin) |
 | Content-Type | JSON |
 | API Version | v2 |
 
-- All endpoint requires the basic authentication.
+-   All endpoint requires the basic authentication.
 
-  `Username: superuser or jasperadmin`
+    `Username: superuser or jasperadmin`
 
-  `Password: superuser or jasperadmin`
+    `Password: superuser or jasperadmin`
 
 ## Endpoints
 
@@ -26,7 +26,7 @@ The RESTful API provides access to the feature flags tied to a JasperReports Ser
 
     | Method | URL |
     |----|----|
-    | GET | http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/licenseFeatures |
+    | GET | http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/licenseFeatures |
     | **Return Value on the Success** | **Typical Return Values on Failure** |
     | 200 OK: Body described below |   |
 
@@ -76,8 +76,8 @@ The RESTful API provides access to the feature flags tied to a JasperReports Ser
 
 !!! note
 
-    - All feature flags return a boolean.
+    -   All feature flags return a boolean.
 
-    - All feature flags are case insensitive.
+    -   All feature flags are case insensitive.
 
-    - The licenseFeatures API is only accessible to `superuser` and `jasperadmin` users and for the rest of the user the API throws 401 unauthorized error.
+    -   The licenseFeatures API is only accessible to `superuser` and `jasperadmin` users and for the rest of the user the API throws 401 unauthorized error.

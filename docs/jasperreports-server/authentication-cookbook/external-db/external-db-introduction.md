@@ -11,13 +11,13 @@ This chapter assumes you have some familiarity with Spring Security filter chain
 
 This chapter contains the following sections:
 
-- [Overview of External Database Authentication](external-db-authentication-steps.md)
-- [Configuring JasperReports Server for External Database Authentication](external-db-configuring-jrs.md)
-- [Beans to Configure](external-db-beans.md)
-- [Configuring User Authentication and Authorization via Database Queries](external-db-authentication-queries.md)
-- [Setting the Password Encryption](external-db-password-encryption.md)
-- [Mapping User Roles](external-db-mapping-roles.md)
-- [Setting the User Organization](external-db-setting-user-organization.md)
-- [Setting the Database Connection Parameters](external-db-setting-connection-parameters.md)
-- [Configuring the Login Page for a Single-Organization Deployment](external-db-single-org-login.md)
-- [Restarting JasperReports Server](external-db-jrs-restart.md)
+-   [Overview of External Database Authentication](external-db-authentication-steps.md)
+-   [Configuring JasperReports Server for External Database Authentication](external-db-configuring-jrs.md)
+-   [Beans to Configure](external-db-beans.md)
+-   [Configuring User Authentication and Authorization via Database Queries](external-db-authentication-queries.md)
+-   [Setting the Password Encryption](external-db-password-encryption.md)
+-   [Mapping User Roles](external-db-mapping-roles.md)
+-   [Setting the User Organization](external-db-setting-user-organization.md)
+-   [Setting the Database Connection Parameters](external-db-setting-connection-parameters.md)
+-   [Configuring the Login Page for a Single-Organization Deployment](external-db-single-org-login.md)
+-   [Restarting JasperReports Server](external-db-jrs-restart.md)

@@ -15,9 +15,9 @@ Denver \| CO
 
 The query may still generate a list of hundreds of cities to scroll through. Even though each city is easy to identify with the state, scrolling through a long list is time consuming. With cascading input controls, this example can have two input controls, one for the state and one for the city: The city input control is empty until the user selects a state.
 
-- When input controls are displayed, the query for the state input control returns an alphabetical list of unique state names.
+-   When input controls are displayed, the query for the state input control returns an alphabetical list of unique state names.
 
-- When the user selects a state, the query for the city input control is triggered and returns the list of cities in that state. When the user selects one and submits it, the city name is passed as a parameter to the report.
+-   When the user selects a state, the query for the city input control is triggered and returns the list of cities in that state. When the user selects one and submits it, the city name is passed as a parameter to the report.
 
 For an especially large number of cities, you can use more cascading input controls, such as region of state, to reduce the list.
 
@@ -25,28 +25,28 @@ The parameter values determined by each cascading input control may or may not b
 
 ## Parameters in Input Control Queries
 
-Parameter substitution in query input controls follows the same approach as for JasperReports queries. Queries of all types of data sources can use parameter substitution, and \$P, \$P! and \$X (for SQL queries) parameters are supported. The \$X notation has two principal forms explained in the following list:
+Parameter substitution in query input controls follows the same approach as for JasperReports queries. Queries of all types of data sources can use parameter substitution, and $P, $P! and $X (for SQL queries) parameters are supported. The $X notation has two principal forms explained in the following list:
 
-- `$P{parameter_name}`<br>
-  The value of the parameter is substituted into the query. In cases where the parameter contains a string, the substitution inserts the proper escape characters to create valid SQL. Use this for single-select input controls and simple comparison operators such as greater-than or less-than. For example:<br>
-  `select name from EMPLOYEES where deals_closed > $P{DEALS}`<br>
-  Do not use \$P{parameter_name} with equality because the parameter value can be null, and `field = NULL` is not valid SQL. Instead use `$X{EQUALS, ...}` as explained below.
+-   `$P{parameter_name}`<br>
+    The value of the parameter is substituted into the query. In cases where the parameter contains a string, the substitution inserts the proper escape characters to create valid SQL. Use this for single-select input controls and simple comparison operators such as greater-than or less-than. For example:<br>
+    `select name from EMPLOYEES where deals_closed > $P{DEALS}`<br>
+    Do not use $P{parameter_name} with equality because the parameter value can be null, and `field = NULL` is not valid SQL. Instead use `$X{EQUALS, ...}` as explained below.
 
-- `$P!{parameter_name}`<br>
-  The value of the parameter is treated as raw text. The server replaces the parameter with the value of the input control without performing extra checking or value escaping. This is used in complex cases where the input control provides a piece of the query or sometimes the entire query.
+-   `$P!{parameter_name}`<br>
+    The value of the parameter is treated as raw text. The server replaces the parameter with the value of the input control without performing extra checking or value escaping. This is used in complex cases where the input control provides a piece of the query or sometimes the entire query.
 
-- `$X{EQUALS, column, parameter_name}` or `$X{NOTEQUAL, column, parameter_name}`<br>
-  This syntax performs equality verification and handles the case when the parameter value is null. Use this everywhere instead of the old `column = $P{parameter_name}` syntax. The \$X{EQUALS...} syntax performs the following substitution before submitting the query:
+-   `$X{EQUALS, column, parameter_name}` or `$X{NOTEQUAL, column, parameter_name}`<br>
+    This syntax performs equality verification and handles the case when the parameter value is null. Use this everywhere instead of the old `column = $P{parameter_name}` syntax. The $X{EQUALS...} syntax performs the following substitution before submitting the query:
 
-  `column = parameter_value -- when parameter_value is non-null`
+    `column = parameter_value -- when parameter_value is non-null`
 
-  `column IS NULL -- when parameter_value is NULL`
+    `column IS NULL -- when parameter_value is NULL`
 
-- `$X{IN, column, parameter_name}` or `$X{NOT IN, column, parameter_name}`<br>
-  Use this parameter for cascading with multiple-select input controls. The `$X{IN...}` operator is true when the field value matches any one of the multiple values of the input control. In the country/cities example, we can allow the user to pick any number of countries, and show all the cities in the selected countries. The query-based input control would have the following query:<br>
-  `select city from ACCOUNTS where $X{IN, country, COUNTRIES}`<br>
-  If the user selects the values Canada, Mexico, and USA in the COUNTRIES multi-select input control, the `$X` syntax translates into the following query for the CITIES input control:<br>
-  `select city from ACCOUNTS where country IN ('USA','Canada','Mexico')`
+-   `$X{IN, column, parameter_name}` or `$X{NOT IN, column, parameter_name}`<br>
+    Use this parameter for cascading with multiple-select input controls. The `$X{IN...}` operator is true when the field value matches any one of the multiple values of the input control. In the country/cities example, we can allow the user to pick any number of countries, and show all the cities in the selected countries. The query-based input control would have the following query:<br>
+    `select city from ACCOUNTS where $X{IN, country, COUNTRIES}`<br>
+    If the user selects the values Canada, Mexico, and USA in the COUNTRIES multi-select input control, the `$X` syntax translates into the following query for the CITIES input control:<br>
+    `select city from ACCOUNTS where country IN ('USA','Canada','Mexico')`
 
 !!! note
 
@@ -56,16 +56,16 @@ The `$X` syntax also supports the following operators. They are all designed to 
 
 | Parameter Syntax | Meaning |
 |----|----|
-| `$X{GREATER, column, parameter}` | column \> parameter |
-| `$X{[GREATER, column, parameter}` | column \>= parameter |
-| `$X{LESS, column, parameter}` | column \< parameter |
-| `$X{LESS], column, parameter}` | column \<= parameter |
-| `$X{BETWEEN, column, start_param, end_param}` | start_param \< column \< end_param |
-| `$X{BETWEEN], column, start_param, end_param}` | start_param \< column \<= end_param |
-| `$X{[BETWEEN, column, start_param, end_param}` | start_param \<= column \< end_param |
-| `$X{[BETWEEN], column, start_param, end_param}` | start_param \<= column \<= end_param |
+| `$X{GREATER, column, parameter}` | column &gt; parameter |
+| `$X{[GREATER, column, parameter}` | column &gt;= parameter |
+| `$X{LESS, column, parameter}` | column &lt; parameter |
+| `$X{LESS], column, parameter}` | column &lt;= parameter |
+| `$X{BETWEEN, column, start_param, end_param}` | start_param &lt; column &lt; end_param |
+| `$X{BETWEEN], column, start_param, end_param}` | start_param &lt; column &lt;= end_param |
+| `$X{[BETWEEN, column, start_param, end_param}` | start_param &lt;= column &lt; end_param |
+| `$X{[BETWEEN], column, start_param, end_param}` | start_param &lt;= column &lt;= end_param |
 
-For more information on using \$P, \$P! and \$X to build dynamic queries, see the JasperReports Library Ultimate Guide and the Jaspersoft Studio User Guide.
+For more information on using $P, $P! and $X to build dynamic queries, see the JasperReports Library Ultimate Guide and the Jaspersoft Studio User Guide.
 
 Any number of parameters can be used in a query, just as any number of input controls can be defined in a JasperReport. In addition to the standard input control parameters, a cascading input control query can use the built-in parameters described in [Built-in Parameters for Query-based Input Controls](query-based_input_controls.md).
 

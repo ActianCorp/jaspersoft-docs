@@ -7,36 +7,59 @@ description: This chapter provides a reference by example for every type of reso
 
 This chapter provides a reference by example for every type of resource descriptor that exists in the repository. Use the resources service to get and set resources with these descriptors. For further information, see:
 
-- [Chapter 1, “Working With Resources,” on page 1](working_with_resources.md) for general guidelines about using descriptors.
-- [Chapter 1, “The resources Service,” on page 1](resources.md) for methods to operate on resources in the repository.
+-   [Chapter 1, “Working With Resources,” on page 1](working_with_resources.md) for general guidelines about using descriptors.
 
-This chapter does not cover descriptors for objects that are not stored in the repository. Descriptors that represent jobs, calendars, organizations, roles, users, and attributes are described with the service that operates on them.
+-   [Chapter 1, “The resources Service,” on page 1](resources.md) for methods to operate on resources in the repository.
 
-This chapter includes the following sections:
+    This chapter does not cover descriptors for objects that are not stored in the repository. Descriptors that represent jobs, calendars, organizations, roles, users, and attributes are described with the service that operates on them.
 
-- Common Attributes
-- Folder
-- JNDI Data Source
-- JDBC Data Source
-- AWS Data Source
-- Virtual Data Source
-- Custom Data Source
-- Bean Data Source
-- Datatypes
-- List of Values
-- Query
-- Input Control
-- File
-- Report Unit (JRXML Report)
-- Report Options
-- Domain (semanticLayerDataSource)
-- Domain Topic
-- XML/A Connection
-- Mondrian Connection
-- Secure Mondrian Connection
-- OLAP Unit
-- Mondrian XML/A Definition
-- Other Types
+    This chapter includes the following sections:
+
+-   Common Attributes
+
+-   Folder
+
+-   JNDI Data Source
+
+-   JDBC Data Source
+
+-   AWS Data Source
+
+-   Virtual Data Source
+
+-   Custom Data Source
+
+-   Bean Data Source
+
+-   Datatypes
+
+-   List of Values
+
+-   Query
+
+-   Input Control
+
+-   File
+
+-   Report Unit (JRXML Report)
+
+-   Report Options
+
+-   Domain (semanticLayerDataSource)
+
+-   Domain Topic
+
+-   XML/A Connection
+
+-   Mondrian Connection
+
+-   Secure Mondrian Connection
+
+-   OLAP Unit
+
+-   Mondrian XML/A Definition
+
+-   Other Types
 
 ## Common Attributes
 
@@ -630,7 +653,7 @@ The following list shows the numerical code and meaning for {inputControlTypeByt
 
 ## File
 
-The repository.file+\<format\> descriptor is used to identify the file type.
+The repository.file+&lt;format&gt; descriptor is used to identify the file type.
 
 <table>
 <colgroup>
@@ -675,7 +698,7 @@ The `content` field is write-only: it is absent when requesting the file resourc
 
 A report unit contains mostly references to the files that make up a report within the server. A report unit is a composite resource that may contain other local resources (see [1.1, “Nested Resources,” on page 1](working_with_resources.md)). In this case, the URIs that it references include a URI in the following format:
 
-\<reportUnitURI\>\_files/\<localResourceID\>
+&lt;reportUnitURI&gt;\_files/&lt;localResourceID&gt;
 
 For example, the main JRXML of a sample report is referenced as follows:
 

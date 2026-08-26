@@ -23,7 +23,7 @@ In Linux, the installer is a .run file; you can run it from the command line or 
 
 \_linux_x86_64.run     (64 bit)
 
-In Mac OSX, the installer is a .zip file. After download, you should find the installer already unpacked in your \<user\>/Downloads folder. Double-click the following:
+In Mac OSX, the installer is a .zip file. After download, you should find the installer already unpacked in your &lt;user&gt;/Downloads folder. Double-click the following:
 
 `js-jrs``_10.1.0`
 

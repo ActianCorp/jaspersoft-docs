@@ -129,43 +129,47 @@ After you have created an expression to select a node set, you can create an XML
 
 1.  Create the connection globally or locally:
 
-    - To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
-    - To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
+-   To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
 
-    The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
+    -   To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
 
-2.  From the list, select an **XML document** to open the **Data Adapter** dialog.
+        The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
 
-    |                                                            |
-    |------------------------------------------------------------|
-    | ![xml data adapter](../assets/images/xml-data-adapter.png) |
-    | *Figure 1: Configuring an XML Data Adapter*                |
+        1.  From the list, select an **XML document** to open the **Data Adapter** dialog.
 
-3.  Enter a name for your adapter.
+            |                                                            |
+            |------------------------------------------------------------|
+            | ![xml data adapter](../assets/images/xml-data-adapter.png) |
+            | *Figure 1: Configuring an XML Data Adapter*                |
 
-4.  **XML file** is the only required field. Choose an XML file or enter the URL where your XML data is located.
+        2.  Enter a name for your adapter.
 
-5.  (URL only.) If you entered a URL in the **XML file** field, click the **Options** button to open the **Http Connection Options** dialog.
+        3.  **XML file** is the only required field. Choose an XML file or enter the URL where your XML data is located.
 
-    |  |
-    |----|
-    | ![jss data adapter connection options](../assets/images/jss-data-adapter-connection-options.png) |
-    | *Figure 2: HTTP Connection Options* |
+        4.  (URL only.) If you entered a URL in the **XML file** field, click the **Options** button to open the **Http Connection Options** dialog.
 
-    In this dialog you can enter the following options:
+        |  |
+        |----|
+        | ![jss data adapter connection options](../assets/images/jss-data-adapter-connection-options.png) |
+        | *Figure 2: HTTP Connection Options* |
 
-    - **Username** and **Password** (optional): The username and password to use if your XML location requires authentication.
-    - **Request Type**: Select GET (default), POST, or PUT.
-    - To add a parameter to the request URL, click **Add** in the **URL Parameters** tab. Enter the name and value of your parameters in the **Parameter** dialog and click **OK**. For multiple parameters, add each parameter separately.
-    - For a POST request, to add parameters to the body of the POST, click **Add** in the POST Parameters tab. Enter the name and value of your parameters in the Parameter dialog and click **OK**. For multiple parameters, add each parameter separately.
+        In this dialog you can enter the following options:
 
-    When you have configured your request, click **OK**.
+    -   **Username** and **Password** (optional): The username and password to use if your XML location requires authentication.
 
-    !!! note
+    -   **Request Type**: Select GET (default), POST, or PUT.
 
-        You can configure an XML data adapter to connect to a REST web service. For an example of connecting to a web service using the JSON adapter, see [Connecting to a Web Service Using a JSON Data Adapter](data-adapters-web-services.md).
+    -   To add a parameter to the request URL, click **Add** in the **URL Parameters** tab. Enter the name and value of your parameters in the **Parameter** dialog and click **OK**. For multiple parameters, add each parameter separately.
 
-6.  Choose whether to provide a set of nodes using a pre-defined static XPath expression, or set the XPath expression directly in the report.
+    -   For a POST request, to add parameters to the body of the POST, click **Add** in the POST Parameters tab. Enter the name and value of your parameters in the Parameter dialog and click **OK**. For multiple parameters, add each parameter separately.
+
+When you have configured your request, click **OK**.
+
+!!! note
+
+    You can configure an XML data adapter to connect to a REST web service. For an example of connecting to a web service using the JSON adapter, see [Connecting to a Web Service Using a JSON Data Adapter](data-adapters-web-services.md).
+
+1.  Choose whether to provide a set of nodes using a pre-defined static XPath expression, or set the XPath expression directly in the report.
 
 We recommend using a report-defined XPath expression. This enables you to use parameters inside the XPath expression, which acts like a real query on the supplied XML data.
 

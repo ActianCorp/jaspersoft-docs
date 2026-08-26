@@ -38,17 +38,17 @@ To add a field or measure to a crosstab group
 
 Measure labels are displayed in the crosstab based on their status as a row or column:
 
-- Measures included as rows appear in the crosstab below the **Measures** heading.
-- Measures included as columns appear in the crosstab to the right of the **Measures** heading.
+-   Measures included as rows appear in the crosstab below the **Measures** heading.
+-   Measures included as columns appear in the crosstab to the right of the **Measures** heading.
 
 You can right-click a measure in the crosstab to open a context menu that provides these options:<br>
 
-- **Change Summary Calculation**
-- **Change Time Balance Calculation**
-- **Change Data Format**
-- **Remove From Crosstab**
-- **Create Filter**
-- **Move Up** or **Move Down** or **Move Left** or **Move Right**
+-   **Change Summary Calculation**
+-   **Change Time Balance Calculation**
+-   **Change Data Format**
+-   **Remove From Crosstab**
+-   **Create Filter**
+-   **Move Up** or **Move Down** or **Move Left** or **Move Right**
 
 Measures are arranged in cells. You can add any number of measures. All the measures appear together in every cell. To rearrange the measures, drag them in the measure label area.
 
@@ -56,13 +56,13 @@ Measures are arranged in cells. You can add any number of measures. All the meas
 
 You can pivot a crosstab in two ways:
 
-- In Old Layout Band, Pivot the entire crosstab by clicking ![js AdHoc SwitchGroup](../assets/images/js-AdHoc-SwitchGroup.png). The row and column groups for switching places. For more information, see [Creating a View from a Domain](adhoc-create-view-from-domain.md).<br>
-  In the New Layout Band, The fields or measures in the drop areas can be swapped by clicking the Switch ![switch icon](../assets/images/switch-icon.png)icon between the two drop areas.<br>
+-   In Old Layout Band, Pivot the entire crosstab by clicking ![js AdHoc SwitchGroup](../assets/images/js-AdHoc-SwitchGroup.png). The row and column groups for switching places. For more information, see [Creating a View from a Domain](adhoc-create-view-from-domain.md).<br>
+    In the New Layout Band, The fields or measures in the drop areas can be swapped by clicking the Switch ![switch icon](../assets/images/switch-icon.png)icon between the two drop areas.<br>
 
-- Pivot a single group:
+-   Pivot a single group:
 
-  - To pivot a single row group, right-click it and select **Move To Columns**.
-  - To pivot a single column group, right-click it and select **Move To Rows**.
+    -   To pivot a single row group, right-click it and select **Move To Columns**.
+    -   To pivot a single column group, right-click it and select **Move To Rows**.
 
 !!! note
 
@@ -72,8 +72,8 @@ You can pivot a crosstab in two ways:
 
 The slice feature lets you keep or exclude group members in a crosstab. To slice, right-click a group member and select:
 
-- **Keep Only** to remove all groups except the selected one from the crosstab.
-- **Exclude** to remove this group from the crosstab.
+-   **Keep Only** to remove all groups except the selected one from the crosstab.
+-   **Exclude** to remove this group from the crosstab.
 
 Use Ctrl-click and Shift-click to select multiple groups to keep or exclude.
 
@@ -87,14 +87,15 @@ For more information about filtering, see [Using Filters and Input Controls](adh
 
 All row and column groups are summarized automatically:
 
-- To turn off a group summary, right-click any heading in the group and select **Delete Row Summary** or **Delete Column Summary** from the context menu. To reapply the summary, right-click the heading and select **Add Row Summary** or **Add Column Summary.**
+-   To turn off a group summary, right-click any heading in the group and select **Delete Row Summary** or **Delete Column Summary** from the context menu. To reapply the summary, right-click the heading and select **Add Row Summary** or **Add Column Summary.**
 
-!!! note
+    !!! note
 
-    The Delete Summary option is available only for the outermost group on either axis (that is, either the outermost row group or the outermost column group)
+        The Delete Summary option is available only for the outermost group on either axis (that is, either the outermost row group or the outermost column group)
 
-- To select the summary function and data format for a measure, right-click the measure label and select from the context menu. Note that you cannot change the summary function on custom fields that calculate percents (Percent of Total, Percent of Column Group Parent, and Percent of Row Group Parent).
-- The summary functions for numeric fields are Sum, Average, Maximum, Minimum, Distinct Count, and Count All. Distinct Count is the number of different items in the row or column. Count All is the total number of items. For instance, if there are 3 widgets of type A and 3 widgets of type B, Distinct Count is 2 and Count All is 6.
+-   To select the summary function and data format for a measure, right-click the measure label and select from the context menu. Note that you cannot change the summary function on custom fields that calculate percents (Percent of Total, Percent of Column Group Parent, and Percent of Row Group Parent).
+
+-   The summary functions for numeric fields are Sum, Average, Maximum, Minimum, Distinct Count, and Count All. Distinct Count is the number of different items in the row or column. Count All is the total number of items. For instance, if there are 3 widgets of type A and 3 widgets of type B, Distinct Count is 2 and Count All is 6.
 
 ### Collapsing and Expanding Members
 
@@ -122,12 +123,12 @@ By default, the rows and columns of crosstabs are sorted in alphabetical order o
 
 To sort your crosstab
 
-- Right-click the heading that you want to use for sorting and select one of these options:
+-   Right-click the heading that you want to use for sorting and select one of these options:
 
-  - **Sort Ascending**
-  - **Sort Descending**
-  - **Don't Sort**<br>
-    The crosstab is updated to reflect your sorting option. A blue dot appears in the context menu next to the currently applied sort option.
+    -   **Sort Ascending**
+    -   **Sort Descending**
+    -   **Don't Sort**<br>
+        The crosstab is updated to reflect your sorting option. A blue dot appears in the context menu next to the currently applied sort option.
 
 When the crosstab includes more than one row group or more than one column group, the inner groups are also sorted according to your selection. Only one measure can be used for sorting at any one time. Changing the sort order for another measure resets all others to the default.
 
@@ -137,9 +138,9 @@ You can filter the numeric data shown in a crosstab to show only the rows with t
 
 1.  Right-click the heading that you want to use for filtering and select one of these options:
 
-    - **Filter Top N Values**
-    - **Filter Bottom N Values**
-    - **Don't Filter Values**
+    -   **Filter Top N Values**
+    -   **Filter Bottom N Values**
+    -   **Don't Filter Values**
 
 2.  Enter the number of values that you want to show in the crosstab.
 
@@ -169,9 +170,9 @@ To change the total calculation using the time balance
 
 3.  Select the option that you want to use. You can select one of the following:
 
-    - Time Balance Default. This option displays the sum of all the numeric data for a period of time as the Total value.
-    - Time Balance First. This option displays the first numeric value for a period of time as the Total value. For example, if the period of time is a month, the crosstab displays the first numeric value entered for the month.
-    - Time Balance Last. The option displays the last numeric value for a period of time as the Total value. For example, if the period of time is a month, the crosstab displays the last numeric value entered for the month.
+    -   Time Balance Default. This option displays the sum of all the numeric data for a period of time as the Total value.
+    -   Time Balance First. This option displays the first numeric value for a period of time as the Total value. For example, if the period of time is a month, the crosstab displays the first numeric value entered for the month.
+    -   Time Balance Last. The option displays the last numeric value for a period of time as the Total value. For example, if the period of time is a month, the crosstab displays the last numeric value entered for the month.
 
 The crosstab is updated to show the new Total values.
 
@@ -196,6 +197,6 @@ Drill-through functionality is available for crosstab data. A drill-through tabl
 
 To view the drill-through table for a value in your crosstab
 
-- Click hyperlinked data to display additional columns from that specific fact data.
+-   Click hyperlinked data to display additional columns from that specific fact data.
 
 By default, the drill-through table opens in its own window or tab, depending on your browser settings.

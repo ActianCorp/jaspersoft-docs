@@ -9,9 +9,9 @@ To authenticate a user, JasperReports Server first queries the external database
 
 The `externalUserTenantDetailsService` bean configures this bean to define the queries needed to retrieve user, organization, and roles from the external database. This bean has the following properties:
 
-- `dataSource` property: References the `externalDataSource` bean, which configures the JDBC connection to the database. The `externalDataSource` bean is defined later in the file.
-- `usersByUsernameAndTenantNameQuery`: Property that takes as input a single `username` parameter and returns a username, encrypted password, and an organization ID. Configure this property with a database query that retrieves the information that authenticates the user, that is, username, encrypted password, and organization.
-- `authoritiesByUsernameQuery`: Property that takes as input a single `username` parameter and returns one or more records of `username`, `rolename` tuples. Configure this property with a database query that retrieves the user and roles from the external database.
+-   `dataSource` property: References the `externalDataSource` bean, which configures the JDBC connection to the database. The `externalDataSource` bean is defined later in the file.
+-   `usersByUsernameAndTenantNameQuery`: Property that takes as input a single `username` parameter and returns a username, encrypted password, and an organization ID. Configure this property with a database query that retrieves the information that authenticates the user, that is, username, encrypted password, and organization.
+-   `authoritiesByUsernameQuery`: Property that takes as input a single `username` parameter and returns one or more records of `username`, `rolename` tuples. Configure this property with a database query that retrieves the user and roles from the external database.
 
 The following example shows how to set up the `externalUserTenantDetailsService` bean queries:
 

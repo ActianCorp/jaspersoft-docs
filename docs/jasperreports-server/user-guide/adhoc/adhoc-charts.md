@@ -25,14 +25,14 @@ The initial display reflects only the measures you add. It does not change when 
 
 All available fields are listed in the Data Selection panel, as either standard fields or measures.
 
-- Standard fields can be added as:
+-   Standard fields can be added as:
 
-  - For Old Layout Band, to a column or row.
-  - For New Layout Band, to the supported drop areas according to the visualization type selected.
+    -   For Old Layout Band, to a column or row.
+    -   For New Layout Band, to the supported drop areas according to the visualization type selected.
 
-- Measures contain summarized values. They are typically numeric fields that determine the length of bars, size of pie slices, location of points (in line charts), and height of areas. They can be added to the drop areas, but must all be in the same target — that is:<br>
-  In Old Layout Band you can add one or more measures to the chart as columns, or add one or more measures to the chart as rows, but you cannot have one measure as a column and another as a row in the same chart.<br>
-  In New Layout Band, for example in **Column** chart you can add fields to Y-axis and/ or Columns, and add one or more measures to the Y-axis, but you cannot add measures to the Columns.<br>
+-   Measures contain summarized values. They are typically numeric fields that determine the length of bars, size of pie slices, location of points (in line charts), and height of areas. They can be added to the drop areas, but must all be in the same target — that is:<br>
+    In Old Layout Band you can add one or more measures to the chart as columns, or add one or more measures to the chart as rows, but you cannot have one measure as a column and another as a row in the same chart.<br>
+    In New Layout Band, for example in **Column** chart you can add fields to Y-axis and/ or Columns, and add one or more measures to the Y-axis, but you cannot add measures to the Columns.<br>
 
 When creating a chart, keep in mind that the drop areas are arranged in hierarchies, with the highest member of the hierarchy on the left. For an Ad Hoc view based on an OLAP data source, you can change the order of distinct dimensions by dragging, but you cannot change the order of levels within a dimension. For an Ad Hoc view based on a non-OLAP data source, you can drag the field headings to rearrange the hierarchy; the highest level in a group should appear to the left; the lowest level in a group should appear to the right. For example, it doesn’t make sense to group first by postal code then by country, because each postal code belongs to only one country.
 
@@ -615,7 +615,7 @@ Rows → Unused</td>
 
 To recreate this view
 
-1.  Select **Create \> Ad Hoc View**.
+1.  Select **Create &gt; Ad Hoc View**.
 
 2.  In the Select Data wizard, select **foodmart data for crosstab** and click **OK**.
 
@@ -625,67 +625,65 @@ To recreate this view
 
 5.  Drag the following from the Fields panel to the Layout Band:
 
-    - Store Sales from **Measures** to **Columns**. The view changes to show a column with the total. No slider is added for measures.
-    - Product Family from **Fields** to **Columns**. The **Data Level** area is shown in the **Filters** panel, with a **Columns** slider added.
-    - Date from **Fields** to **Rows**. A **Rows** slider is added to the **Data Level** area in the **Filters** panel.
+    -   Store Sales from **Measures** to **Columns**. The view changes to show a column with the total. No slider is added for measures.
+    -   Product Family from **Fields** to **Columns**. The **Data Level** area is shown in the **Filters** panel, with a **Columns** slider added.
+    -   Date from **Fields** to **Rows**. A **Rows** slider is added to the **Data Level** area in the **Filters** panel.
 
 6.  Use the sliders to see how the view changes.<br>
     The sliders help you explore your data visually in a number of ways:
 
-    - The slider reflects the hierarchy of the row or column groups, as determined by the order in which fields are arranged in the Layout Band.
-    - Hovering over a setting on the slider shows the name of the field or dimension corresponding to that setting.
-    - When you pivot a chart, slider settings are preserved and applied to the new target. For example, if you have the **Row** slider set to Month, the **Column** slider is set to Month when you pivot. See Pivoting a Chart for more information.
-    - When you remove the currently selected level from a row or column, the slider is reset to the total; when you remove a field that is not selected, the level remains the same. When you add a field or dimension to a row or column, the number of levels of the slider changes to reflect your addition. When you change the order of the fields in a row or column, the level on the slider changes to reflect the new level of the field corresponding to the selection.
+    -   The slider reflects the hierarchy of the row or column groups, as determined by the order in which fields are arranged in the Layout Band.
+    -   Hovering over a setting on the slider shows the name of the field or dimension corresponding to that setting.
+    -   When you pivot a chart, slider settings are preserved and applied to the new target. For example, if you have the **Row** slider set to Month, the **Column** slider is set to Month when you pivot. See Pivoting a Chart for more information.
+    -   When you remove the currently selected level from a row or column, the slider is reset to the total; when you remove a field that is not selected, the level remains the same. When you add a field or dimension to a row or column, the number of levels of the slider changes to reflect your addition. When you change the order of the fields in a row or column, the level on the slider changes to reflect the new level of the field corresponding to the selection.
 
 ### Changing Date Grouping
 
 If your chart includes data based on a date field, you can change the level of aggregation for the time data. To select the unit of time to chart:
 
-- Right-click on the date field in the Layout Band and select **Change Grouping**. Then select the time period you want from the cascading sub-menu:
+-   Right-click on the date field in the Layout Band and select **Change Grouping**. Then select the time period you want from the cascading sub-menu:
 
-  - Year
+    -   Year
 
-  - Quarter (examples: Q1, Q2, etc.)
+    -   Quarter (examples: Q1, Q2, etc.)
+
+        !!! note
+
+            Quarter groups the data by quarter through the whole selected period. For example, if the period has 2 years selected, then you will see 4 quarters (Q1, Q2, Q3, Q4) and data for each year will be grouped under these 4 quarters **regardless of the year** it belongs to. When Quarter is the only categorizer used, the sorting order will always start from the first quarter. Also, if there is no data for a specific quarter then this quarter **will still be visible** with no data.
+
+-   Quarter and Year (examples: Q1 2020, Q2 2020, etc.)
 
     !!! note
 
-        Quarter groups the data by quarter through the whole selected period. For example, if the period has 2 years selected, then you will see 4 quarters (Q1, Q2, Q3, Q4) and data for each year will be grouped under these 4 quarters **regardless of the year** it belongs to. When Quarter is the only categorizer used, the sorting order will always start from the first quarter. Also, if there is no data for a specific quarter then this quarter **will still be visible** with no data.
-
-- Quarter and Year (examples: Q1 2020, Q2 2020, etc.)
-
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>As of version 9.0, <i>Quarter</i> is renamed to <i>Quarter and Year</i>. Quarter and Year groups the data by quarter and year. For example, if the period has 2 years selected, then you will see potentially 8 quarters (for example, Q1 2020, Q2 2020, Q3 2020, Q4 2020, Q1 2021, Q2 2021, Q3 2021, Q4 2021), and data for each year will be grouped under its own quarter which will <b>take into account the year</b> as well. Also, if there is no data for a specific quarter, then this quarter <b>will not be visible</b>. </p>
-  </div>
+        As of version 9.0, *Quarter* is renamed to *Quarter and Year*. Quarter and Year groups the data by quarter and year. For example, if the period has 2 years selected, then you will see potentially 8 quarters (for example, Q1 2020, Q2 2020, Q3 2020, Q4 2020, Q1 2021, Q2 2021, Q3 2021, Q4 2021), and data for each year will be grouped under its own quarter which will **take into account the year** as well. Also, if there is no data for a specific quarter, then this quarter **will not be visible**.
 
 This date is required in order to create PeriodToPeriod (PTP) and YearToDate (YTD) charts.
 
-- Month (examples: January, February, etc.)
+-   Month (examples: January, February, etc.)
 
-- Month and Year (examples, January 2020, February 2020, etc.)
+-   Month and Year (examples, January 2020, February 2020, etc.)
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>As of version 9.0, <i>Month</i> is renamed to <i>Month and Year</i>. This date is required in order to create PeriodToPeriod (PTP) and YearToDate (YTD) charts.</p>
-  </div>
+    !!! note
 
-- Day
+        As of version 9.0, *Month* is renamed to *Month and Year*. This date is required in order to create PeriodToPeriod (PTP) and YearToDate (YTD) charts.
 
-- Hour
+-   Day
 
-- Minute
+-   Hour
 
-- Second
+-   Minute
 
-- Hour By Day
+-   Second
 
-- Minute By Day
+-   Hour By Day
 
-- Second By Day
+-   Minute By Day
 
-- Millisecond By Day
+-   Second By Day
 
-- Day of Week
+-   Millisecond By Day
+
+-   Day of Week
 
 The view updates to reflect the new date grouping.<br>
 
@@ -697,13 +695,13 @@ The view updates to reflect the new date grouping.<br>
 
 You can get a new view of your data by changing the summary function of a measure, for example, from sum to average. To select a new summary function for a measure:
 
-- Right-click on the measure in the Layout Band and select **Change Summary Function**. Then select the function you want from the cascading submenu. The view updates to reflect the new summary function.
+-   Right-click on the measure in the Layout Band and select **Change Summary Function**. Then select the function you want from the cascading submenu. The view updates to reflect the new summary function.
 
 ### Pivoting a Chart
 
 You can pivot a chart in two ways:
 
-- Pivot the entire chart by clicking ![js AdHoc SwitchGroup](../assets/images/js-AdHoc-SwitchGroup.png). The row and column groups switch places; slider levels are maintained. The following figure shows the effect of pivoting a basic column chart.
+-   Pivot the entire chart by clicking ![js AdHoc SwitchGroup](../assets/images/js-AdHoc-SwitchGroup.png). The row and column groups switch places; slider levels are maintained. The following figure shows the effect of pivoting a basic column chart.
 
 ![js AdHoc Charts Pivot](../assets/images/js-AdHoc-Charts-Pivot.png)
 
@@ -713,17 +711,16 @@ You can pivot a chart in two ways:
 
     Pivoting a chart is only possible in the Old Layout Band, the New Layout Band does not allow pivoting an entire chart.
 
-- Pivot a single group:<br>
-  For Old Layout Band
+-   Pivot a single group:<br>
+    For Old Layout Band
 
-  - To pivot a single row group, right-click it and select **Switch To Column Group**. You can also move any field or dimension by dragging. You cannot drag a measure to a different group.
-  - To pivot a single column group, right-click it and select **Switch To Row Group**. You can also move any field or dimension by dragging. You cannot drag a measure to a different group.
+    -   To pivot a single row group, right-click it and select **Switch To Column Group**. You can also move any field or dimension by dragging. You cannot drag a measure to a different group.
+    -   To pivot a single column group, right-click it and select **Switch To Row Group**. You can also move any field or dimension by dragging. You cannot drag a measure to a different group.
 
-  For New Layout Band
+    For New Layout Band
 
-  - To pivot a single group, click ![Adhoc icon ](../assets/images/Adhoc-icon-.png) icon and select **Move to \<drop_area_name\>**. You can also move any field or dimension by dragging. You cannot drag a measure to a different group.
+    -   To pivot a single group, click ![Adhoc icon ](../assets/images/Adhoc-icon-.png) icon and select **Move to &lt;drop_area_name&gt;**. You can also move any field or dimension by dragging. You cannot drag a measure to a different group.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  In the <strong>Move to &lt;drop_area_name&gt;</strong> option, the <i>drop_area_name</i> depends on the visualization type you select.
-  </div>
+    !!! note
+
+        In the **Move to &lt;drop_area_name&gt;** option, the *drop_area_name* depends on the visualization type you select.

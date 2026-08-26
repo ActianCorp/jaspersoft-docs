@@ -9,7 +9,7 @@ Using Jaspersoft Studio, you can create chart themes to give a custom look to a 
 
 To create a chart theme in Jaspersoft Studio
 
-1.  Select **File \> New \> Other**. The new wizard appears.
+1.  Select **File &gt; New &gt; Other**. The new wizard appears.
 
 2.  Expand **Jaspersoft Studio**, select **Chart Themes**, and click **Next**. The new file dialog suggests a default file name. Chart themes use the `.jrctx` file extension.
 
@@ -44,7 +44,7 @@ To create a chart theme in Jaspersoft Studio
 
 7.  To view the XML that defines the chart theme’s appearance, click the **Source** tab.
 
-8.  When you are satisfied with the chart theme, click **File \> Save** to save the chart theme. This saves the chart theme to your local hard drive.
+8.  When you are satisfied with the chart theme, click **File &gt; Save** to save the chart theme. This saves the chart theme to your local hard drive.
 
 To export your theme as a JAR File
 

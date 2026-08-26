@@ -20,7 +20,7 @@ This section gives the basic procedures for administering existing themes. To cr
 This procedure assumes you have already created and uploaded your theme
 
 1.  Log into JasperReports Server as system admin (`superuser`).
-2.  Click **View \> Repository** and expand the `root/Themes` folder if necessary.
+2.  Click **View &gt; Repository** and expand the `root/Themes` folder if necessary.
 3.  Right-click the chosen theme folder and select **Set as Active Theme**. For example, the sample data includes a theme called **jasper_dark** that you can set as active.
 
 ![js Themes SetAsActive](../assets/images/js-Themes-SetAsActive.png)
@@ -47,7 +47,7 @@ Professional edition users can give different themes to their organizations.
 
 1.  Log into JasperReports Server as system admin (`superuser`) or as the organization admin (`jasperadmin`).
 
-2.  Click **View \> Repository** and expand the Themes folder if necessary. The organization's **Theme** folder is shown in the following figure.
+2.  Click **View &gt; Repository** and expand the Themes folder if necessary. The organization's **Theme** folder is shown in the following figure.
 
     ![js Themes OrgLevel](../assets/images/js-Themes-OrgLevel.png)
 
@@ -68,7 +68,7 @@ System admins may want to restrict access to themes, so that all themes are cont
 
 1.  Log into JasperReports Server as system administrator (`superuser`).
 
-2.  Click **View \> Repository**.
+2.  Click **View &gt; Repository**.
 
 3.  Expand the **Organizations** folder.
 

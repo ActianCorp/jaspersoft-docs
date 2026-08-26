@@ -87,11 +87,11 @@ When you resize the screen, the Report Viewer reruns the report with the new `RE
 
 For example: If you define three screen size intervals:
 
-- Smaller than 1000px
+-   Smaller than 1000px
 
-- Between 1000px and 1200px
+-   Between 1000px and 1200px
 
-- Greater than 1200px
+-   Greater than 1200px
 
 Then, there will be three JRXML parts for each interval, and only the suited part appears for the current screen size, read from the built-in `REPORT_CONTAINER_WIDTH` parameter when the report is run.
 

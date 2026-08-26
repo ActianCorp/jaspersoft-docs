@@ -13,21 +13,27 @@ Jaspersoft offers BYOL (Bring Your Own License) VM on Azure. Instructions in thi
 
 The following JasperReports Server features must be turned ON.
 
-- **Chromium** - Export for dashboards and reports
-- **Diagnostic** - Diagnostic report should be present and enabled
-- Password change is enabled and prompts the user to change the password on the login page. For more information about changing the password, see [Configuring User Password Options](https://community.jaspersoft.com/documentation/tibco-jasperreports-server-administrator-guide/v60/configuring-user-password-options).
+-   **Chromium** - Export for dashboards and reports
 
-The following multi-tenant configurations are recommended:
+-   **Diagnostic** - Diagnostic report should be present and enabled
 
-- Only root organization is present.
-- Superuser - activated and password auto-generated at VM creation time
-- All other users disabled in JasperReports Server
-- Encryption - default settings
+-   Password change is enabled and prompts the user to change the password on the login page. For more information about changing the password, see [Configuring User Password Options](https://community.jaspersoft.com/documentation/tibco-jasperreports-server-administrator-guide/v60/configuring-user-password-options).
 
-The following Sample Data is available:
+    The following multi-tenant configurations are recommended:
 
-- Foodmart and SugarCRM database populated on VM
-- All standard sample repository resources deployed
+-   Only root organization is present.
+
+-   Superuser - activated and password auto-generated at VM creation time
+
+-   All other users disabled in JasperReports Server
+
+-   Encryption - default settings
+
+    The following Sample Data is available:
+
+-   Foodmart and SugarCRM database populated on VM
+
+-   All standard sample repository resources deployed
 
 !!! info "Important"
 

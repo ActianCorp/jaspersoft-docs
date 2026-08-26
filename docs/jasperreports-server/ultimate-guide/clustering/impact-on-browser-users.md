@@ -26,12 +26,12 @@ For all cases not listed in the table above, work in progress is preserved upon 
 
 Also, information for the following dialogs are part of the replicated session, and are successfully transferred to a new node in case of a failover:
 
-- Repository permissions dialog
+-   Repository permissions dialog
 
-- Add folder dialog
+-   Add folder dialog
 
-- Add resource dialogs, including adding or editing a data source, JasperReport, and other repository objects
+-   Add resource dialogs, including adding or editing a data source, JasperReport, and other repository objects
 
-- Copy, cut, and pasting resources in the repository
+-   Copy, cut, and pasting resources in the repository
 
-- Scheduling a report
+-   Scheduling a report

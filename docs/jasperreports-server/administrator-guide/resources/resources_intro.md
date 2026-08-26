@@ -13,18 +13,18 @@ For instructions on creating and uploading JasperReports to the server, see the 
 
 This chapter contains the following sections:
 
-- [Queries](queries.md)
+-   [Queries](queries.md)
 
-- [Datatypes](datatypes.md)
+-   [Datatypes](datatypes.md)
 
-- [Lists of Values](lists_of_values.md)
+-   [Lists of Values](lists_of_values.md)
 
-- [Input Controls](input_controls.md)
+-   [Input Controls](input_controls.md)
 
-- [Input Controls for Custom Functions](input_controls_for_custom_functions.md)
+-   [Input Controls for Custom Functions](input_controls_for_custom_functions.md)
 
-- [Query-based Input Controls](query-based_input_controls.md)
+-   [Query-based Input Controls](query-based_input_controls.md)
 
-- [Cascading Input Controls](cascading_input_controls.md)
+-   [Cascading Input Controls](cascading_input_controls.md)
 
-- [File Resources](file_resources.md)
+-   [File Resources](file_resources.md)

@@ -11,7 +11,7 @@ The Ad Hoc Editor provides analysis options (such as slice, pivot, and filter) t
 
 To open the Ad Hoc Editor
 
-1.  Click **Create \> Ad Hoc View**. This opens the **Select Data** dialog.
+1.  Click **Create &gt; Ad Hoc View**. This opens the **Select Data** dialog.
 2.  Choose your data source from the list and click **OK**.
 
 ![js AdHoc ChooseData](../assets/images/js-AdHoc-ChooseData.png)
@@ -20,13 +20,13 @@ To open the Ad Hoc Editor
 
 The Ad Hoc Editor contains the following panels, from left to right:
 
-- **Data Source Selection,** which contains the fields, dimensions, and measures available in the source Domain, Topic, or OLAP connection.
+-   **Data Source Selection,** which contains the fields, dimensions, and measures available in the source Domain, Topic, or OLAP connection.
 
-- **Ad Hoc View**, the main view design panel.
+-   **Ad Hoc View**, the main view design panel.
 
-- **Filters**, which defines a subset of data to retrieve from the data source.
+-   **Filters**, which defines a subset of data to retrieve from the data source.
 
-- **Format Visualization**, which displays the properties specific to the selected visualization type.
+-   **Format Visualization**, which displays the properties specific to the selected visualization type.
 
 ![js AdHoc Editor Example](../assets/images/js-AdHoc-Editor-Example.png)
 

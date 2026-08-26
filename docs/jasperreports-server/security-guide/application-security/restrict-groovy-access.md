@@ -11,8 +11,8 @@ description: "This section describes functionality that can be restricted by the
 
 JasperReports Server relies on Apache Groovy in a number of contexts, including:
 
-- When a Domain definition includes a security file that determines which users or roles have access to various data.
-- When a calculated field in an Ad Hoc view or Domain relies on a Groovy expression.
+-   When a Domain definition includes a security file that determines which users or roles have access to various data.
+-   When a calculated field in an Ad Hoc view or Domain relies on a Groovy expression.
 
 By default, Groovy is given broad access within your application server, which is a good approach to certain design, testing, and evaluation tasks. However, some production systems should be configured to restrict Groovy to more limited access by creating a whitelist that only includes the classes Groovy should access. Once configured, the server returns an error when the Groovy compiler encounters code that does not conform to the whitelist.
 

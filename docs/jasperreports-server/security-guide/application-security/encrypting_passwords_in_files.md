@@ -7,14 +7,14 @@ description: "In JasperReports Server version 5.5 or later, administrators can o
 
 In JasperReports Server version 5.5 or later, administrators can obfuscate passwords that appear in the configuration files. This satisfies security audit requirement and prevents the passwords from being seen by unauthorized individuals. Typically, the following are encrypted:
 
-- The password to JasperReports Server's internal database (`jasperserver`).
-- The passwords to the sample databases (`foodmart` and `sugarcrm`).
-- On Tomcat, passwords in JNDI resource definitions.
+-   The password to JasperReports Server's internal database (`jasperserver`).
+-   The passwords to the sample databases (`foodmart` and `sugarcrm`).
+-   On Tomcat, passwords in JNDI resource definitions.
 
 You can change the configuration to encrypt:
 
-- The password for the mail server used by the scheduler (`quartz.mail.sender.password`).
-- The password for LDAP external authentication.
+-   The password for the mail server used by the scheduler (`quartz.mail.sender.password`).
+-   The password for LDAP external authentication.
 
 Passwords in configuration files are encrypted during JasperReports Server installation. If the installation deploys to the Tomcat application server, the database password is also automatically encrypted in the JNDI configuration (in the file `context.xml`).
 
@@ -32,12 +32,12 @@ To encrypt passwords in a Tomcat installation, modify the installation procedure
 
 2.  Edit the `default_master.properties` file:
 
-    - Enter values specific to your installation.
-    - Enter your passwords in plain text.
-    - Turn on configuration file encryption by uncommenting the `encrypt=true` property. You don't have to uncomment any other encryption properties because they all have the default values shown.
-    - Unless you are using Oracle, uncomment `propsToEncrypt` and set it to `dbPassword,sysPassword`.
-    - Optionally, specify additional properties to encrypt as described in Encrypting Additional Properties in default_master.properties.
-    - Optionally, change the settings for configuration file encryption as described in Encryption Options.
+    -   Enter values specific to your installation.
+    -   Enter your passwords in plain text.
+    -   Turn on configuration file encryption by uncommenting the `encrypt=true` property. You don't have to uncomment any other encryption properties because they all have the default values shown.
+    -   Unless you are using Oracle, uncomment `propsToEncrypt` and set it to `dbPassword,sysPassword`.
+    -   Optionally, specify additional properties to encrypt as described in Encrypting Additional Properties in default_master.properties.
+    -   Optionally, change the settings for configuration file encryption as described in Encryption Options.
 
 3.  Run the buildomatic installation script (js-install) and all other installation steps according to the JasperReports® Server Installation Guide. This has the following effects:
 
@@ -47,9 +47,9 @@ To encrypt passwords in a Tomcat installation, modify the installation procedure
 
 4.  After installation, passwords are encrypted in the following locations:
 
-- In all server configuration files in `.../WEB-INF/applicationContext*.xml`.
-- In JNDI definitions in `.../META-INF/context.xml`.
-- In the `default_master.properties` files that remain after installation.
+-   In all server configuration files in `.../WEB-INF/applicationContext*.xml`.
+-   In JNDI definitions in `.../META-INF/context.xml`.
+-   In the `default_master.properties` files that remain after installation.
 
 !!! note
 

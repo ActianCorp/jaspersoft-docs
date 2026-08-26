@@ -9,9 +9,9 @@ description: "Normally, the JasperReports Server installer includes an evaluatio
 
 Normally, the JasperReports Server installer includes an evaluation license file that you replace with a commercial license file, as described in [Installing a New License File](../binary-installer/post_installation_steps.md). If JasperReports Server returns an error after you replace the license file, the most likely causes are:
 
-- You didn't clear your application server’s work directory, as explained in [Installing a New License File](../binary-installer/post_installation_steps.md). Delete the work directory, restart the application server, and try logging into JasperReports Server again.
+-   You didn't clear your application server’s work directory, as explained in [Installing a New License File](../binary-installer/post_installation_steps.md). Delete the work directory, restart the application server, and try logging into JasperReports Server again.
 
-- The `Djs.license.directory` property in your application server startup environment is incorrectly set:
+-   The `Djs.license.directory` property in your application server startup environment is incorrectly set:
 
 For example, in Windows the correct setting looks like this:
 

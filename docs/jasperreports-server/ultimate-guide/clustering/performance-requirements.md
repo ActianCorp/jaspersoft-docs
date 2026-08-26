@@ -13,15 +13,15 @@ The requirements should be based on realistic estimates of the number of users a
 
 Then estimate what kinds of operations your users perform, for example:
 
-- How many users will just run reports and save the output?
+-   How many users will just run reports and save the output?
 
-- How many users will create reports or explore data interactively?
+-   How many users will create reports or explore data interactively?
 
-- How large are your typical reports, in terms of data retrieved and processing required, and how often do they run?
+-   How large are your typical reports, in terms of data retrieved and processing required, and how often do they run?
 
-- What times of day will have the highest user load?
+-   What times of day will have the highest user load?
 
-- Will users or API clients access the repository extensively?
+-   Will users or API clients access the repository extensively?
 
 In addition to user sessions, the server instances must also process scheduled jobs, so you should estimate their volume and nature. For example, what volume of jobs are critical to run at exact times, what volume of jobs must run during business hours when user load will be high? Can you educate users to run jobs outside of business hours?
 

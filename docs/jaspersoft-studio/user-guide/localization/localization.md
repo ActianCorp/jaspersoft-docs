@@ -13,11 +13,11 @@ This chapter describes how to localize the text in your reports. You can configu
 
 This chapter has the following sections:
 
-- Using a Resource Bundle Base Name
-- Retrieving Localized Strings
-- Formatting Messages
-- Deploying Localized Reports
-- Generating a Report Using a Specific Locale and Time Zone
+-   Using a Resource Bundle Base Name
+-   Retrieving Localized Strings
+-   Formatting Messages
+-   Deploying Localized Reports
+-   Generating a Report Using a Specific Locale and Time Zone
 
 !!! note
 
@@ -27,9 +27,9 @@ This chapter has the following sections:
 
 You can configure reports to provide localized text for static text fields or text strings in expressions. To configure translations for your reports, you need to do the following:
 
-- Replace display text in your report with localization keys.
-- Create a set of related properties files that contain your translations as key-value pairs.
-- Set your report to use the properties files you have created.
+-   Replace display text in your report with localization keys.
+-   Create a set of related properties files that contain your translations as key-value pairs.
+-   Set your report to use the properties files you have created.
 
 ## Localization Keys
 
@@ -41,7 +41,7 @@ The dedicated JasperReports special syntax for keys in an expression is in the f
 
 `$R{key_name}`
 
-A \$R expression that you write in the report design triggers linguistic changes in the report output for different locales. Each \$R expression refers to a name-value pair (your translations) in a resource bundle. For example, to retrieve the text for the current locale associated with `Title.Name` in the localization files, use the following:
+A $R expression that you write in the report design triggers linguistic changes in the report output for different locales. Each $R expression refers to a name-value pair (your translations) in a resource bundle. For example, to retrieve the text for the current locale associated with `Title.Name` in the localization files, use the following:
 
 `$R{Title.Name}`
 
@@ -63,41 +63,44 @@ To localize text in your report, you must create a properties file for each loca
 
 Each .properties file is a text file containing key-value pairs for a locale:
 
-- The keys are the keys that you declared in your report using the `$R` or `str` format. For example, if you use `$R{Title.Name}` in your report, use the corresponding key `Title.Name` in your bundle files. A file can omit some of the keys.
-- The values are the labels and descriptions in the language of the target locale.
+-   The keys are the keys that you declared in your report using the `$R` or `str` format. For example, if you use `$R{Title.Name}` in your report, use the corresponding key `Title.Name` in your bundle files. A file can omit some of the keys.
+-   The values are the labels and descriptions in the language of the target locale.
 
 ### File Naming
 
 File naming follows a strict convention where all files have the same base name, with additional codes that indicate the locale of the file.
 
-- File names are of the form \<base_name\>\_\<locale\>.properties, where:
+-   File names are of the form &lt;base_name&gt;\_&lt;locale&gt;.properties, where:
 
-  - \<base_name\> is arbitrary and the same for all files.
-  - \<locale\> is a Java-compliant locale identifier, for example `fr` or `fr_CA`.
-  - You should include a default .properties file, which is used for the default locale or when a key is missing or empty in one of the other .properties files. The default properties file name is \<base_name\>.properties. It does not have a language extension.
+    -   &lt;base_name&gt; is arbitrary and the same for all files.
 
-The effective file name (that is, the file name without the file extension and the language/country code, which you see later in this section) represents the report Resource Bundle Base Name (for example, the Resource Bundle Base Name for the resource file `i18nReport.properties` is `i18nReport`). When you generate an instance of the report, the report engine looks in the classpath for a file that has the Resource Bundle Base Name plus the `.properties` extension (so, for the previous example, it looks for a file named `i18nReport.properties`). If the report engine cannot find the file, it uses the default-mapping resource defined for the report. The Resource Bundle Base Name is specified using the report property sheet as shown in Figure 16‑1.
+    -   &lt;locale&gt; is a Java-compliant locale identifier, for example `fr` or `fr_CA`.
 
-Each .properties file is also called a locale bundle or resource bundle.
+    -   You should include a default .properties file, which is used for the default locale or when a key is missing or empty in one of the other .properties files. The default properties file name is &lt;base_name&gt;.properties. It does not have a language extension.
 
-A resource bundle file is a text file that has a .properties extension. You create a resource bundle in Jaspersoft Studio or a text editor.
+        The effective file name (that is, the file name without the file extension and the language/country code, which you see later in this section) represents the report Resource Bundle Base Name (for example, the Resource Bundle Base Name for the resource file `i18nReport.properties` is `i18nReport`). When you generate an instance of the report, the report engine looks in the classpath for a file that has the Resource Bundle Base Name plus the `.properties` extension (so, for the previous example, it looks for a file named `i18nReport.properties`). If the report engine cannot find the file, it uses the default-mapping resource defined for the report. The Resource Bundle Base Name is specified using the report property sheet as shown in Figure 16‑1.
 
-You set the base name of the resource bundle in the header of the JRXML file:
+        Each .properties file is also called a locale bundle or resource bundle.
 
-\<jasperReport name=”StoreSales” pageWidth=”595” pageHeight=”842” columnWidth=”515”
+        A resource bundle file is a text file that has a .properties extension. You create a resource bundle in Jaspersoft Studio or a text editor.
 
-leftMargin=”40” rightMargin=”40” topMargin=”50” bottomMargin=”50”
+        You set the base name of the resource bundle in the header of the JRXML file:
 
-resourceBundle=”simpleTable”\>
+        &lt;jasperReport name=”StoreSales” pageWidth=”595” pageHeight=”842” columnWidth=”515”
 
-For example, simpleTable is the base name of the resource bundle file for this report. If you prefer using a graphical user interface to coding in XML, use Jaspersoft Studio to set the base name of the resource bundle.
+        leftMargin=”40” rightMargin=”40” topMargin=”50” bottomMargin=”50”
 
-Normally, you localize static text in a report.
+        resourceBundle=”simpleTable”&gt;
 
-To localize a report:
+        For example, simpleTable is the base name of the resource bundle file for this report. If you prefer using a graphical user interface to coding in XML, use Jaspersoft Studio to set the base name of the resource bundle.
 
-- Replace the static text in the report with keys.
-- Create a bundle file.
+        Normally, you localize static text in a report.
+
+        To localize a report:
+
+-   Replace the static text in the report with keys.
+
+-   Create a bundle file.
 
 These keys and the relative text translation are written in special files (one per language). Below is an example of a text localization mapping file:
 
@@ -172,8 +175,8 @@ This is just the default bundle. To add new languages or switch to the visual ed
 
 The bundle node in Favorites provides several tool features. Right-click the file node to open one of the editing tools for the resource bundle:
 
-- **Edit**. Opens a resource bundle as a text file (see Figure 16‑3)
-- **Open**. Opens the visual resource bundle editor that shows at the same time the translations for all the language you are supporting (see Figure 16‑5).
+-   **Edit**. Opens a resource bundle as a text file (see Figure 16‑3)
+-   **Open**. Opens the visual resource bundle editor that shows at the same time the translations for all the language you are supporting (see Figure 16‑5).
 
 |                                                                      |
 |----------------------------------------------------------------------|

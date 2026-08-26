@@ -7,11 +7,11 @@ description: "The following repository objects provide a prepared connection to 
 
 The following repository objects provide a prepared connection to a data source for Ad Hoc view creation:
 
-- Topics , JRMXL files are created externally and uploaded to JasperReports Server as a basis for Ad Hoc views.
+-   Topics , JRMXL files are created externally and uploaded to JasperReports Server as a basis for Ad Hoc views.
 
-- Domains , virtual views of a data source that present the data in business terms, allow for localization, and provide data-level security.
+-   Domains , virtual views of a data source that present the data in business terms, allow for localization, and provide data-level security.
 
-- OLAP Connections , multi-dimensional views of data that allow users to analyze a large number of aggregate data levels.
+-   OLAP Connections , multi-dimensional views of data that allow users to analyze a large number of aggregate data levels.
 
 You can also open and edit an existing Ad Hoc view to create a new Ad Hoc view. After editing the Ad Hoc view, if you close the Ad Hoc view without saving the changes, you are prompted to save or cancel the changes.
 
@@ -21,12 +21,12 @@ Generally, an administrator or Jaspersoft Studio user creates a Topic as a JRXML
 
 Using a Topic as your source generates an empty view, which allows you to begin adding data to your view right away, without choosing, pre-filtering, or changing display names of the data (all of which are required steps when creating a Domain-based view).
 
-The views in the /Ad Hoc Components/Topics folder populate the Topics tab that appears when users click **Create \> Ad Hoc View**.
+The views in the /Ad Hoc Components/Topics folder populate the Topics tab that appears when users click **Create &gt; Ad Hoc View**.
 
 To begin designing a Topic-based view
 
-1.  Launch the Ad Hoc Editor by clicking **Create \> Ad Hoc View.**
-2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Ad Hoc Components \> Topics**.
+1.  Launch the Ad Hoc Editor by clicking **Create &gt; Ad Hoc View.**
+2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Ad Hoc Components &gt; Topics**.
 3.  Expand the Topics folder and select a topic.
 4.  Select the type of view that you intend to create: table, chart, or crosstab. For an overview of view types, see [Ad Hoc View Types](adhoc-view-types.md).
 
@@ -40,7 +40,7 @@ Unlike Topics, which must be stored in a specific folder in the repository, Doma
 
 To begin designing a Domain-based view
 
-1.  Launch the Ad Hoc Editor by clicking **Create \> Ad Hoc View.**
+1.  Launch the Ad Hoc Editor by clicking **Create &gt; Ad Hoc View.**
 
 2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Domains**.
 
@@ -48,10 +48,10 @@ To begin designing a Domain-based view
 
 4.  Click **Choose Data...**, and click the options on the left of the window to perform the following tasks:
 
-    - Click **Fields** to select fields of data to use in the view.
-    - Click **Pre-filters** to create filters to limit the data available in the Ad Hoc Editor.
-    - Click **Display** to change the fields’ display names.
-    - Click **Save as Topic** to save the customized topic for later use.
+    -   Click **Fields** to select fields of data to use in the view.
+    -   Click **Pre-filters** to create filters to limit the data available in the Ad Hoc Editor.
+    -   Click **Display** to change the fields’ display names.
+    -   Click **Save as Topic** to save the customized topic for later use.
 
 5.  Select the type of view that you want to create: table, chart, or crosstab. For an overview of view types, see [Ad Hoc View Types](adhoc-view-types.md).
 
@@ -67,13 +67,13 @@ Administrators create OLAP client connections that expose transactional data and
 
 To begin designing an OLAP connection-based view
 
-1.  Launch the Ad Hoc Editor by clicking **Create \> Ad Hoc View.**
-2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Analysis Components \> Analysis Connections** and select a sample project and a connection.
+1.  Launch the Ad Hoc Editor by clicking **Create &gt; Ad Hoc View.**
+2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Analysis Components &gt; Analysis Connections** and select a sample project and a connection.
 
 You can now begin working on your view in the Ad Hoc Editor.
 
 For more information about OLAP-based view functionality, refer to the following sections:
 
-- [Working with OLAP Connection-based Crosstabs](adhoc-crosstabs-olap.md)
+-   [Working with OLAP Connection-based Crosstabs](adhoc-crosstabs-olap.md)
 
-- [Creating Topics](adhoc-topics.md)
+-   [Creating Topics](adhoc-topics.md)

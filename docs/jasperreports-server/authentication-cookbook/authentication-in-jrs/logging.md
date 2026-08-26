@@ -7,7 +7,7 @@ description: "If your connection is failing, for example, with an “Invalid cre
 
 If your connection is failing, for example, with an “Invalid credentials supplied” error, and you cannot find information in the JasperReports Server logs, you may want to enable logging for Spring Security or JasperReports Server external authentication.
 
-To enable logging, add the corresponding line to the \<js‑webapp\>/WEB‑INF/log4j.properties file, in the form:
+To enable logging, add the corresponding line to the &lt;js‑webapp&gt;/WEB‑INF/log4j.properties file, in the form:
 
 ``` text
   log4j.logger.<logger-classname> = <log-level>, <output-type>

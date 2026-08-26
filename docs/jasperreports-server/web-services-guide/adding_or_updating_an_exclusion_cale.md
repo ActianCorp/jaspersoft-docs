@@ -60,140 +60,140 @@ Triggers?</p></td>
 
 The following examples show the types of exclusion calendars that you can add to the scheduler:
 
-- Base calendar.
+-   Base calendar.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;base&lt;/<span class="kw">calendarType</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Base calendar description&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;base&lt;/<span class="kw">calendarType</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Base calendar description&lt;/<span class="kw">description</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Annual calendar – A list of days that you want to exclude every year.
+-   Annual calendar – A list of days that you want to exclude every year.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;annual&lt;/<span class="kw">calendarType</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Annual calendar description&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span></code></pre></div></td>
-</tr>
-<tr>
-<td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">excludeDays</span>&gt;</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-20&lt;/<span class="kw">excludeDay</span>&gt;</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-21&lt;/<span class="kw">excludeDay</span>&gt;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-22&lt;/<span class="kw">excludeDay</span>&gt;</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">excludeDays</span>&gt;</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;annual&lt;/<span class="kw">calendarType</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Annual calendar description&lt;/<span class="kw">description</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span></code></pre></div></td>
+    </tr>
+    <tr>
+    <td><div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">excludeDays</span>&gt;</span>
+    <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-20&lt;/<span class="kw">excludeDay</span>&gt;</span>
+    <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-21&lt;/<span class="kw">excludeDay</span>&gt;</span>
+    <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-22&lt;/<span class="kw">excludeDay</span>&gt;</span>
+    <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">excludeDays</span>&gt;</span>
+    <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Cron calendar – Defines the days and times to exclude as a cron expression.
+-   Cron calendar – Defines the days and times to exclude as a cron expression.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;cron&lt;/<span class="kw">calendarType</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Cron format description&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">cronExpression</span>&gt;0 30 10-13 ? * WED,FRI&lt;/<span class="kw">cronExpression</span>&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;cron&lt;/<span class="kw">calendarType</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Cron format description&lt;/<span class="kw">description</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">cronExpression</span>&gt;0 30 10-13 ? * WED,FRI&lt;/<span class="kw">cronExpression</span>&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Daily calendar – Defines a time range to exclude every day.
+-   Daily calendar – Defines a time range to exclude every day.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;daily&lt;/<span class="kw">calendarType</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Daily calendar description&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">invertTimeRange</span>&gt;false&lt;/<span class="kw">invertTimeRange</span>&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">rangeEndingCalendar</span>&gt;2012-03-20T14:44:37.353+03:00&lt;/<span class="kw">rangeEndingCalendar</span>&gt;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">rangeStartingCalendar</span>&gt;2012-03-20T14:43:37.353+03:00&lt;/<span class="kw">rangeStartingCalendar</span>&gt;</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;daily&lt;/<span class="kw">calendarType</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Daily calendar description&lt;/<span class="kw">description</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">invertTimeRange</span>&gt;false&lt;/<span class="kw">invertTimeRange</span>&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">rangeEndingCalendar</span>&gt;2012-03-20T14:44:37.353+03:00&lt;/<span class="kw">rangeEndingCalendar</span>&gt;</span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">rangeStartingCalendar</span>&gt;2012-03-20T14:43:37.353+03:00&lt;/<span class="kw">rangeStartingCalendar</span>&gt;</span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
+    <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Holiday calendar – Defines a set of days to exclude that can be updated every year.
+-   Holiday calendar – Defines a set of days to exclude that can be updated every year.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;holiday&lt;/<span class="kw">calendarType</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Holiday calendar description&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">excludeDays</span>&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-20&lt;/<span class="kw">excludeDay</span>&gt;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-21&lt;/<span class="kw">excludeDay</span>&gt;</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-22&lt;/<span class="kw">excludeDay</span>&gt;</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">excludeDays</span>&gt;</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;holiday&lt;/<span class="kw">calendarType</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;Holiday calendar description&lt;/<span class="kw">description</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">excludeDays</span>&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-20&lt;/<span class="kw">excludeDay</span>&gt;</span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-21&lt;/<span class="kw">excludeDay</span>&gt;</span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDay</span>&gt;2012-03-22&lt;/<span class="kw">excludeDay</span>&gt;</span>
+    <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">excludeDays</span>&gt;</span>
+    <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
+    <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Weekly calendar – Defines a set of days to be excluded each week.
+-   Weekly calendar – Defines a set of days to be excluded each week.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;weekly&lt;/<span class="kw">calendarType</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;test description&lt;/<span class="kw">description</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">excludeDaysFlags</span>&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt; <span class="co">&lt;!--SUNDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;true&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--MONDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--TUESDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;true&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--WEDNESDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--THURSDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;true&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--FRIDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--SATURDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">excludeDaysFlags</span>&gt;</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span> <span class="ot">version=</span><span class="st">&quot;1.0&quot;</span> <span class="ot">encoding=</span><span class="st">&quot;UTF-8&quot;</span> <span class="ot">standalone=</span><span class="st">&quot;yes&quot;</span><span class="fu">?&gt;</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">reportJobCalendar</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">calendarType</span>&gt;weekly&lt;/<span class="kw">calendarType</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">description</span>&gt;test description&lt;/<span class="kw">description</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">excludeDaysFlags</span>&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt; <span class="co">&lt;!--SUNDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;true&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--MONDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--TUESDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
+    <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;true&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--WEDNESDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
+    <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--THURSDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
+    <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;true&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--FRIDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
+    <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">excludeDayFlag</span>&gt;false&lt;/<span class="kw">excludeDayFlag</span>&gt;  <span class="co">&lt;!--SATURDAY</span><span class="er">-</span><span class="co">--&gt;</span></span>
+    <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">excludeDaysFlags</span>&gt;</span>
+    <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">timeZone</span>&gt;GMT+03:00&lt;/<span class="kw">timeZone</span>&gt;</span>
+    <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">reportJobCalendar</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Monthly calendar – Defines the dates to exclude every month.
+-   Monthly calendar – Defines the dates to exclude every month.
 
 <table>
 <colgroup>

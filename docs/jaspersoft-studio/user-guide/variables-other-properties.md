@@ -15,21 +15,21 @@ For every element using a variable in its expression, it is possible to say when
 
 The possible evaluation times are:
 
-- **Report**: The expression is evaluated at the end of the report.
+-   **Report**: The expression is evaluated at the end of the report.
 
-- **Page**: The expression is evaluated at the end of every page of the report.
+-   **Page**: The expression is evaluated at the end of every page of the report.
 
-- **Column**: The expression is evaluated at the end of each column (for a single column report, this is the same as Page).
+-   **Column**: The expression is evaluated at the end of each column (for a single column report, this is the same as Page).
 
-- **Group**: The expression is evaluated after the break of the specified group (available only if at least one group is defined).
+-   **Group**: The expression is evaluated after the break of the specified group (available only if at least one group is defined).
 
-- **Band**: The expression is evaluated after the end of the band where the element with this evaluation time is placed.
+-   **Band**: The expression is evaluated after the end of the band where the element with this evaluation time is placed.
 
-- This is a very specific case, introduced to wait until the other elements in the band are completely created. Typically the values of the variables are read at the start of the band. But suppose, for example, you have a subreport with an output parameter to print in the main report. To print this parameter, it must be read after the subreport is computed, so the value can be printed when the band is completely created. In this case, the Band evaluation time is necessary.
+-   This is a very specific case, introduced to wait until the other elements in the band are completely created. Typically the values of the variables are read at the start of the band. But suppose, for example, you have a subreport with an output parameter to print in the main report. To print this parameter, it must be read after the subreport is computed, so the value can be printed when the band is completely created. In this case, the Band evaluation time is necessary.
 
-- **Auto**: This is used when the expression contains variables and fields that need to be evaluated at different times. The variables are evaluated at a time corresponding to their Reset Type (see below for more information), instead the fields are always evaluated at time -now. This type is useful when report elements have expressions that combine values evaluated at different times (for example, percentage out of a total).
+-   **Auto**: This is used when the expression contains variables and fields that need to be evaluated at different times. The variables are evaluated at a time corresponding to their Reset Type (see below for more information), instead the fields are always evaluated at time -now. This type is useful when report elements have expressions that combine values evaluated at different times (for example, percentage out of a total).
 
-- **Now**: The value of the expression is evaluated after the read of every record, so at every iteration, this is the default behavior.
+-   **Now**: The value of the expression is evaluated after the read of every record, so at every iteration, this is the default behavior.
 
 ## Calculation Function
 
@@ -37,25 +37,25 @@ A calculation function is an attribute that specifies when a variable can be use
 
 There are many calculation functions built-in to Jaspersoft Studio:
 
-- **Sum**: At every iteration, the variable value is summed. This is one of the cases where the initial value is really important.
+-   **Sum**: At every iteration, the variable value is summed. This is one of the cases where the initial value is really important.
 
-- **Count**: At every iteration, the variable value is incremented by one unit (this is only if the expression is not null).
+-   **Count**: At every iteration, the variable value is incremented by one unit (this is only if the expression is not null).
 
-- **Distinct Count:** At every iteration, the variable value is incremented by one unit, but only if the value of the expression was never returned before.
+-   **Distinct Count:** At every iteration, the variable value is incremented by one unit, but only if the value of the expression was never returned before.
 
-- **Average**: The value of the variable is the arithmetic average of all values received in input from the expression.
+-   **Average**: The value of the variable is the arithmetic average of all values received in input from the expression.
 
-- **Lowest**: The variable takes the value of the lowest element received from the expression.
+-   **Lowest**: The variable takes the value of the lowest element received from the expression.
 
-- **Highest**: The variable takes the value of the highest element received from the expression.
+-   **Highest**: The variable takes the value of the highest element received from the expression.
 
-- **Standard Deviation**: The standard deviation of all the values received from the expression.
+-   **Standard Deviation**: The standard deviation of all the values received from the expression.
 
-- **First**: The variable takes the value from the first value returned by the expression.
+-   **First**: The variable takes the value from the first value returned by the expression.
 
-- **System**: No calculation is done and the expression is not evaluated. The value of the variable is the last value set on it. This is useful to store partial results or the final results of a computation.
+-   **System**: No calculation is done and the expression is not evaluated. The value of the variable is the last value set on it. This is useful to store partial results or the final results of a computation.
 
-- **Variance**: The variance of all values returned by evaluation of a report variable’s expression.
+-   **Variance**: The variance of all values returned by evaluation of a report variable’s expression.
 
 ## Increment Type
 
@@ -63,15 +63,15 @@ As stated above, when a calculation function is defined, the value of the expres
 
 The possible values for this attribute are:
 
-- **Report**: The Calculation Function is called only at the end of the report, passing it to the expression's value at that moment.
+-   **Report**: The Calculation Function is called only at the end of the report, passing it to the expression's value at that moment.
 
-- **Page**: The Calculation Function is called at the end of each page, passing to it expression's value at each of those moments.
+-   **Page**: The Calculation Function is called at the end of each page, passing to it expression's value at each of those moments.
 
-- **Column**: The Calculation Function is called at the end of each column (for a one-column report, this is the same as Page).
+-   **Column**: The Calculation Function is called at the end of each column (for a one-column report, this is the same as Page).
 
-- **Group**: The Calculation Function is called at the start of every occurrence of the specified group. This option is visible only if at least one group is defined.
+-   **Group**: The Calculation Function is called at the start of every occurrence of the specified group. This option is visible only if at least one group is defined.
 
-- **None**: The Calculation Function is called after the read of every record, this is the default behavior.
+-   **None**: The Calculation Function is called after the read of every record, this is the default behavior.
 
 Remember that the expression is evaluated at every record read, independent of the increment type selected, but the calculation function is used only when the times match those defined in the increment type.
 
@@ -81,15 +81,15 @@ The reset type specifies when a variable should be reset to its initial value (o
 
 The possible values for this attribute are:
 
-- **Report**: The variable is initialized only one time at the beginning of the report creation.
+-   **Report**: The variable is initialized only one time at the beginning of the report creation.
 
-- **Page**: The variable is initialized on each page.
+-   **Page**: The variable is initialized on each page.
 
-- **Column**: The variable is initialized again in each new column (for a one-column report, this is the same as Page).
+-   **Column**: The variable is initialized again in each new column (for a one-column report, this is the same as Page).
 
-- **Group**: The variable is initialized at the start of every occurrence of the specified group. This option is available only if at least one group is defined.
+-   **Group**: The variable is initialized at the start of every occurrence of the specified group. This option is available only if at least one group is defined.
 
-- **None**: The variable is never initialized, so the initial value expression is ignored.
+-   **None**: The variable is never initialized, so the initial value expression is ignored.
 
 ## Incrementer Factory Class Name
 

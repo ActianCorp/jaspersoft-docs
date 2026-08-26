@@ -45,27 +45,27 @@ To split a report using a band-based report
 
 13. To add the properties for an element that triggers the splitting, right-click the `$F{billing_address_country}` element and select **Configure Report Splitting** from the context menu. The **Report Splitting Configuration** dialog appears. Now, configure the following properties:<br>
 
-    - `net.sf.jasperreports.print.part.name`: `$F{billing_address_country}`<br>
-      Triggers the creation of a new part and provides a name to each part.<br>
-    - `net.sf.jasperreports.print.part.visible`: Provides the visibility of the part as a tab in the final output preview. The default value is true.<br>
-    - `net.sf.jasperreports.print.part.split`: Boolean. Set it to true to create a separate output for each part. This must be added to the same element on which the part name is set up.<br>
-    - `net.sf.jasperreports.print.part.{arbitrary_name}`: You can add this as an additional property.
+-   `net.sf.jasperreports.print.part.name`: `$F{billing_address_country}`<br>
+    Triggers the creation of a new part and provides a name to each part.<br>
+-   `net.sf.jasperreports.print.part.visible`: Provides the visibility of the part as a tab in the final output preview. The default value is true.<br>
+-   `net.sf.jasperreports.print.part.split`: Boolean. Set it to true to create a separate output for each part. This must be added to the same element on which the part name is set up.<br>
+-   `net.sf.jasperreports.print.part.{arbitrary_name}`: You can add this as an additional property.
 
-    You can reset these properties using the **Reset** button.
+You can reset these properties using the **Reset** button.
 
-14. Upload the report to JasperReports Server, you can see three tabs representing individual reports of Canada, Mexico, and the USA in the report viewer.
+1.  Upload the report to JasperReports Server, you can see three tabs representing individual reports of Canada, Mexico, and the USA in the report viewer.
 
     |                                                           |
     |-----------------------------------------------------------|
     | ![split three parts](assets/images/split-three-parts.png) |
     | *Figure 1: Tabs of different countries*                   |
 
-15. Run the report in the scheduler. To do this, right-click the report and select **Run in Background** from the context menu.
+2.  Run the report in the scheduler. To do this, right-click the report and select **Run in Background** from the context menu.
 
-16. On the **Output Options** tab, set the output options and click **Submit**.
+3.  On the **Output Options** tab, set the output options and click **Submit**.
 
-17. On the **Notifications** tab, enter the email address and subject of the email to be sent to each recipient. Provide dynamic values in the following text fields **To**, **CC**, and **Subject**.
+4.  On the **Notifications** tab, enter the email address and subject of the email to be sent to each recipient. Provide dynamic values in the following text fields **To**, **CC**, and **Subject**.
 
-18. Select the **Include report files as attachments** option and click **Submit**.
+5.  Select the **Include report files as attachments** option and click **Submit**.
 
 A single report is split into three separate reports and sent to the email addresses of different recipients.

@@ -30,8 +30,8 @@ A condition element invokes the specified server side test as a method on the vi
 
 If the test has a leading exclamation point (!), the condition tests for false:
 
-- `test`: The name of the java method to be invoked on the view model.
-- `testArgs`: Array of parameters to be passed to the above test, expressed as a comma-separated string.
+-   `test`: The name of the java method to be invoked on the view model.
+-   `testArgs`: Array of parameters to be passed to the above test, expressed as a comma-separated string.
 
 ## Actions
 

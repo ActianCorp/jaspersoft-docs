@@ -32,8 +32,8 @@ grant codeBase "file:/groovy/script" {  permission java.io.FilePermission "${cat
 
 After enabling the manager in catalina.policy, you should limit the packages that the JasperReports Library can access. To do so, edit `<apache-tomcat>/conf/catalina.policy`, locate the `package.access` property, and add the names of the packages that JasperReports Library should be prevented from accessing. We recommend that you block these packages:
 
-- `com.jaspersoft.jasperserver`
-- `org.springframework`
+-   `com.jaspersoft.jasperserver`
+-   `org.springframework`
 
 After editing, it should be similar to:
 

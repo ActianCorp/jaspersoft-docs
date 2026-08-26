@@ -13,10 +13,10 @@ GET http://localhost:8080/jasperserver/rest/resource/reports/samples/AllAccounts
 
 The following response in this example shows the content of the AllAccounts report:
 
-- The reportUnit, which is the container for all the resources of the report.
-- The data source, which is an external link to a data source in the repository.
-- The main JRXML, which is a file defined internally to this resource.
-- Two image files, one of which is defined internally to this resource, the other references a file resource in the repository.
+-   The reportUnit, which is the container for all the resources of the report.
+-   The data source, which is an external link to a data source in the repository.
+-   The main JRXML, which is a file defined internally to this resource.
+-   Two image files, one of which is defined internally to this resource, the other references a file resource in the repository.
 
 The structure of the JasperReport is defined through nested `resourceDescriptor` tags in XML. In the nested descriptor for each file that is part of the JasperReport, we can find its URI and use `fileData=true` to retrieve that file:
 

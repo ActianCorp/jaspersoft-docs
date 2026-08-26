@@ -19,57 +19,57 @@ The following changes configure the [Apache HTTP server](http://httpd.apache.org
 
 2.  Create the following two files in the `/conf` folder of your `httpd` server.
 
-- `mod-jk.conf`:
+-   `mod-jk.conf`:
 
-``` bash
-# Load mod_jk module
-# Specify the filename of the mod_jk lib
-LoadModule jk_module modules/mod_jk.so
+    ``` bash
+    # Load mod_jk module
+    # Specify the filename of the mod_jk lib
+    LoadModule jk_module modules/mod_jk.so
 
-# Where to find workers.properties
-JkWorkersFile conf/workers.properties
+    # Where to find workers.properties
+    JkWorkersFile conf/workers.properties
 
-# Where to put jk logs
-JkLogFile logs/mod_jk.log
+    # Where to put jk logs
+    JkLogFile logs/mod_jk.log
 
-# Set the jk log level [debug/error/info]
-JkLogLevel info
+    # Set the jk log level [debug/error/info]
+    JkLogLevel info
 
-# Select the log format
-JkLogStampFormat "[%a %b %d %H:%M:%S %Y]"
+    # Select the log format
+    JkLogStampFormat "[%a %b %d %H:%M:%S %Y]"
 
-# JkOptions indicates to send SSK KEY SIZE
-JkOptions +ForwardKeySize +ForwardURICompat -ForwardDirectories
+    # JkOptions indicates to send SSK KEY SIZE
+    JkOptions +ForwardKeySize +ForwardURICompat -ForwardDirectories
 
-# JkRequestLogFormat
-JkRequestLogFormat "%w %V %T"
+    # JkRequestLogFormat
+    JkRequestLogFormat "%w %V %T"
 
-# Mount your applications
-JkMount /* loadbalancer
+    # Mount your applications
+    JkMount /* loadbalancer
 
-# You can use external file for mount points.
-# It will be checked for updates each 60 seconds.
-# The format of the file is: /url=worker
-# /examples/*=loadbalancer
-#JkMountFile conf/uriworkermap.properties
+    # You can use external file for mount points.
+    # It will be checked for updates each 60 seconds.
+    # The format of the file is: /url=worker
+    # /examples/*=loadbalancer
+    #JkMountFile conf/uriworkermap.properties
 
-# Add shared memory.
-# This directive is present with 1.2.10 and
-# later versions of mod_jk, and is needed for
-# for load balancing to work properly
-JkShmFile logs/jk.shm
-#JkShmFile /var/log/httpd/mod_jk.shm
+    # Add shared memory.
+    # This directive is present with 1.2.10 and
+    # later versions of mod_jk, and is needed for
+    # for load balancing to work properly
+    JkShmFile logs/jk.shm
+    #JkShmFile /var/log/httpd/mod_jk.shm
 
-# Add jkstatus for managing runtime data
-<Location /jkstatus>
- JkMount status
- Order deny,allow
+    # Add jkstatus for managing runtime data
+    <Location /jkstatus>
+     JkMount status
+     Order deny,allow
 
- Allow from all
-</Location>
-```
+     Allow from all
+    </Location>
+    ```
 
-- `workers.properties`:
+    -   `workers.properties`:
 
 ``` bash
 # Define list of workers that will be used

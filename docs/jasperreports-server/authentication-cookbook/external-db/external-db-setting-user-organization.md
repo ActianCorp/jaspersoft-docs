@@ -67,11 +67,11 @@ To set up admin users
         </bean>
     ```
 
-5.  The \${...} syntax above references values configured in the following file:
+5.  The ${...} syntax above references values configured in the following file:
 
-    \<js-install\>\buildomatic\conf_source\iePro\js.config.properties file.
+    &lt;js-install&gt;\\buildomatic\\conf_source\\iePro\\js.config.properties file.
 
-    To set these values, open \<js-install\>\buildomatic\conf_source\iePro\js.config.properties and edit the entries there.
+    To set these values, open &lt;js-install&gt;\\buildomatic\\conf_source\\iePro\\js.config.properties and edit the entries there.
 
     ``` properties
     new.tenant.user.name.1=jasperadmin
@@ -122,7 +122,7 @@ The `tenantIdNotSupportedSymbols` property of the `configurationBean` bean in th
 
 If you have multiple organizations in your deployment, you can use the `externalTenantSetupProcessor``ldapExternalTenantProcessor` bean to specify a single organization assigned to all external users. To do this, set `externalTenantSetupProcessor``ldapExternalTenantProcessor`’s `defaultOrganization` property to the organization ID of the selected organization. If an organization with that ID already exists, all external users are assigned to that organization. If the organization does not exist, it's created when the first external user authenticates correctly.
 
-When specifying the `defaultOrganization` value, the organization ID must not contain the following characters: \|, &, \*, ?, \<, \>, /, \\ ~, !, \#, \$, %, ^, \[, or \].
+When specifying the `defaultOrganization` value, the organization ID must not contain the following characters: \|, &, \*, ?, &lt;, &gt;, /, \\, \~, !, #, $, %, \^, \[, or \].
 
 The following example shows how to configure `externalTenantSetupProcessor``ldapExternalTenantProcessor` to assign all users to organization_1:
 

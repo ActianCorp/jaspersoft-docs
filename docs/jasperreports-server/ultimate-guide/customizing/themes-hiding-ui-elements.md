@@ -16,12 +16,10 @@ The following example shows how to use this parameter to remove the logo or the 
 To remove the logo and/or the search box
 
 1.  Edit a theme or create one.
-
 2.  If necessary, copy the `overrides_custom.css` file from the default theme to the main folder of your theme.
-
 3.  Do one or both of the following:
 
-    - Remove the logo. Edit the `overrides_custom.css` file and add the following CSS rules:
+-   Remove the logo. Edit the `overrides_custom.css` file and add the following CSS rules:
 
     ``` bash
     #logo {
@@ -29,15 +27,15 @@ To remove the logo and/or the search box
     }
     ```
 
-    - Remove the search box. Edit the overrides_custom.css file and add the following CSS rules:
+    -   Remove the search box. Edit the overrides_custom.css file and add the following CSS rules:
 
-    ``` text
-    .searchLockup {
-    display: none
-    }
-    ```
+``` text
+.searchLockup {
+display: none
+}
+```
 
-4.  Upload and activate the new theme with your image and CSS file, then click your browser’s **Refresh** button.
+1.  Upload and activate the new theme with your image and CSS file, then click your browser’s **Refresh** button.
 
 You can also use this attribute to hide the footer in the UI. For instructions on changing the text in the footer, see [Editing decorator.jsp for Rebranding](customizing-ui-with-sitemesh.md).
 

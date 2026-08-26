@@ -7,7 +7,7 @@ description: "The Jaspersoft® listing on the Azure Marketplace offers Jaspersof
 
 The Jaspersoft® listing on the Azure Marketplace offers Jaspersoft Reporting and Analytics products as a subscription:
 
-- TIBCO Jaspersoft Reporting and Analytics for Azure (BYOL)
+-   TIBCO Jaspersoft Reporting and Analytics for Azure (BYOL)
 
 Subscribing to a Jaspersoft project is a single process with multiple steps, which include accepting the terms of use for both Azure Marketplace and Jaspersoft.
 

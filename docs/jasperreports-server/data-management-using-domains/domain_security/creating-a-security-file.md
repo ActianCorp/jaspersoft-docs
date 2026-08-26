@@ -9,9 +9,9 @@ A Domain’s security file contains item and resource access grants that specify
 
 A Domain’s security file has two types of access definitions:
 
-- Row-level access determines which rows in the data source can be displayed to a specific user.
+-   Row-level access determines which rows in the data source can be displayed to a specific user.
 
-- Column-level access determines which columns in the data source can be displayed to a specific user.
+-   Column-level access determines which columns in the data source can be displayed to a specific user.
 
 This section describes the access grant syntax and illustrates both kinds of access grant.
 
@@ -41,13 +41,13 @@ All access grants take a `principalExpression` that gets the user's attributes o
 
 You can use the following services in a `principalExpression` or `filterExpression`:
 
-- `authentication.getPrincipal().getRoles()`: Use this function to access the roles of the current user.
+-   `authentication.getPrincipal().getRoles()`: Use this function to access the roles of the current user.
 
-- `attributesService`: Use to retrieve or test for an attribute you have defined at the user, organization, or server level.
+-   `attributesService`: Use to retrieve or test for an attribute you have defined at the user, organization, or server level.
 
 The following service is only used in a `filterExpression` to filter rows:
 
-- `testProfileAttribute`: Compares a given attribute to a field in the data.
+-   `testProfileAttribute`: Compares a given attribute to a field in the data.
 
 ### The getRoles() Function
 
@@ -74,15 +74,19 @@ This function has the following syntax:
 
 where:
 
-- `AttrName`: String that specifies the attribute to check. This can be any customer-defined attribute, such as `Cities`.
-- `Level`: Category that specifies a level in the hierarchy to check for attributes. One of: `null`, `'USER'`, `'TENANT'`, or `'SERVER'`. To search for attributes hierarchically from all levels, use `null`.
-- `required` (optional):Boolean that specifies whether or not the attribute is required.
-- When set to `true`, an error message is displayed in the UI if the attribute is not present.
-- When set to `false` (default), if the attribute is not present, no error is thrown and the `filterExpression` is not performed. In this case, unfiltered information which the user is not explicitly authorized to view may be displayed.
+-   `AttrName`: String that specifies the attribute to check. This can be any customer-defined attribute, such as `Cities`.
+
+-   `Level`: Category that specifies a level in the hierarchy to check for attributes. One of: `null`, `'USER'`, `'TENANT'`, or `'SERVER'`. To search for attributes hierarchically from all levels, use `null`.
+
+-   `required` (optional):Boolean that specifies whether or not the attribute is required.
+
+-   When set to `true`, an error message is displayed in the UI if the attribute is not present.
+
+    -   When set to `false` (default), if the attribute is not present, no error is thrown and the `filterExpression` is not performed. In this case, unfiltered information which the user is not explicitly authorized to view may be displayed.
 
 !!! note
 
-    - `attributesService` is implemented in Groovy. For more information about Groovy, see [www.groovy-lang.org](http://www.groovy-lang.org/).
+    -   `attributesService` is implemented in Groovy. For more information about Groovy, see [www.groovy-lang.org](http://www.groovy-lang.org/).
 
 For example, the following expression tests whether the user has `myValue` set for `myAttribute` anywhere in the hierarchy.
 
@@ -100,9 +104,9 @@ Within a `filterExpression`, you often want to compare an attribute to a databas
 
 where:
 
-- `table_ID.field_name`: The table name and field name of a field whose value you’re comparing to an attribute.
-- `attribute`: The name of an attribute.
-- `Level` (optional): A specific level where the attribute should be defined, one of `'USER'`, `'TENANT'`, or `'SERVER'`. When this argument is omitted, the attribute value is determined hierarchically across all levels.
+-   `table_ID.field_name`: The table name and field name of a field whose value you’re comparing to an attribute.
+-   `attribute`: The name of an attribute.
+-   `Level` (optional): A specific level where the attribute should be defined, one of `'USER'`, `'TENANT'`, or `'SERVER'`. When this argument is omitted, the attribute value is determined hierarchically across all levels.
 
 Filter expression using `testProfileAttribute`
 

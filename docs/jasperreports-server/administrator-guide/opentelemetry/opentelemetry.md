@@ -9,9 +9,9 @@ OpenTelemetry (OTel) is an observability framework and toolkit designed to creat
 
 OpenTelemetry performs the following functionality:
 
-- **Instrument data** - The data is instrumented by adding [Annotations](annotations.md) or new lines in the code, which help to instrument the code. The instrumentation can be either Manual or Automated. For more information, see [Instrumentation](instrumenting_jasperreportsserver_for_tracing.md).
-- **Generate data** - The instrumented data is captured using a `javaagent` jar, which is specific to the Java language. The `javaagent` jar collects the instrumented data emitted by the code.
-- **Export data** - The collected data, which is emitted by the code is then exported and visualized using the Jaeger exporter tool.
+-   **Instrument data** - The data is instrumented by adding [Annotations](annotations.md) or new lines in the code, which help to instrument the code. The instrumentation can be either Manual or Automated. For more information, see [Instrumentation](instrumenting_jasperreportsserver_for_tracing.md).
+-   **Generate data** - The instrumented data is captured using a `javaagent` jar, which is specific to the Java language. The `javaagent` jar collects the instrumented data emitted by the code.
+-   **Export data** - The collected data, which is emitted by the code is then exported and visualized using the Jaeger exporter tool.
 
 ## Traces
 

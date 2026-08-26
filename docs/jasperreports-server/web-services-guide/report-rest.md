@@ -11,6 +11,6 @@ The RESTful report services gives responses that contain the same XML data struc
 
 This chapter includes the following sections:
 
-- [The report Service](the_report_service.md)
-- [The jobsummary Service](the_jobsummary_service.md)
-- [The job Service](the_job_service.md)
+-   [The report Service](the_report_service.md)
+-   [The jobsummary Service](the_jobsummary_service.md)
+-   [The job Service](the_job_service.md)

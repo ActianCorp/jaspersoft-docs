@@ -53,7 +53,7 @@ To allow all roles, use .\* or comment out the property. If the property is omit
 
 # Supporting Additional Characters in Role Names
 
-The default mapping from attributes in your external authentication server to roles in JasperReports Server supports only alphanumeric characters and underscores. If a role in your external authority contains unsupported characters, each sequence of unsupported characters is replaced with a single underscore. For example, ROLE\$-DEMO)EXT maps to ROLE_DEMO_EXT.
+The default mapping from attributes in your external authentication server to roles in JasperReports Server supports only alphanumeric characters and underscores. If a role in your external authority contains unsupported characters, each sequence of unsupported characters is replaced with a single underscore. For example, ROLE$-DEMO)EXT maps to ROLE_DEMO_EXT.
 
 You can extend the supported character set by modifying the `permittedExternalRoleNameRegex` property of the `externalUserSetupProcessor` bean or `mtExternalUserSetupProcessor` bean. Check the sample configuration file for your deployment to determine which bean to modify.
 
@@ -74,4 +74,4 @@ The default value of the `permittedExternalRoleNameRegex` property is the regula
 
 !!! warning
 
-    Do not allow the following in role names: spaces, periods or \|, \[ \], \`, ", ', ~, !, \#, \$, %, ^, &, \[,\], \*, +, =, ;, :, ?, \<, \>, }, {, ), (, \], \[, /, or \\ Adding these characters in the `permittedExternalRoleNameRegex` property may cause unexpected behavior, such as the inability to delete or edit roles containing those characters.
+    Do not allow the following in role names: spaces, periods or \|, \[ \], \`, ", ', \~, !, #, $, %, \^, &, \[,\], \*, +, =, ;, :, ?, &lt;, &gt;, }, {, ), (, \], \[, /, or \\. Adding these characters in the `permittedExternalRoleNameRegex` property may cause unexpected behavior, such as the inability to delete or edit roles containing those characters.

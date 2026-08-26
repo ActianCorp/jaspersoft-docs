@@ -15,7 +15,7 @@ User passwords are stored along with user profiles in JasperReports Server's pri
 
 To Configure User Password Encryption:
 
-1.  As a precaution, back up the server's private `jasperserver` database. To back up the default PostgreSQL database, go to the \<js-install\> directory and run the following command:
+1.  As a precaution, back up the server's private `jasperserver` database. To back up the default PostgreSQL database, go to the &lt;js-install&gt; directory and run the following command:
 
     `pg_dump -U postgres jasperserver > js-backup.sql`
 
@@ -107,10 +107,10 @@ To Configure User Password Encryption:
 
 5.  Next, drop your existing `jasperserver` database, where the passwords had the old encoding, and recreate an empty `jasperserver` database. Follow the instructions for your database server:
 
-    - Dropping and Recreating the Database in PostgreSQL
-    - Dropping and Recreating the Database in MySQL
-    - Dropping and Recreating the Database in Oracle
-    - Dropping and Recreating in the Database in Microsoft SQL Server
+    -   Dropping and Recreating the Database in PostgreSQL
+    -   Dropping and Recreating the Database in MySQL
+    -   Dropping and Recreating the Database in Oracle
+    -   Dropping and Recreating in the Database in Microsoft SQL Server
 
 6.  Import your exported repository contents with the following commands. The import operation restores the contents of JasperReports Server's private database, including user profiles. As the user profiles are imported, the passwords are encrypted using the new cipher settings.
 

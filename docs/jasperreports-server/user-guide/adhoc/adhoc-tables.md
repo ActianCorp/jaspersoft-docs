@@ -21,9 +21,9 @@ Insert data into your table by adding fields. All available fields are listed in
 
 The available fields are divided into two sections in the panel:
 
-- **Fields**, which can be added to the table as columns or groups.
+-   **Fields**, which can be added to the table as columns or groups.
 
-- **Measures**, which are specialized fields that contain data values.
+-   **Measures**, which are specialized fields that contain data values.
 
 To add fields and measures as columns to a table.
 
@@ -36,11 +36,11 @@ To remove a field or measure from a table
 
 For Old Layout Band
 
-- In the Layout Band, click the **x** next to the field or measure’s name.
+-   In the Layout Band, click the **x** next to the field or measure’s name.
 
 For New Layout Band
 
-- Click ![Adhoc icon ](../assets/images/Adhoc-icon-.png) **Token Context Menu** and select **Remove from Columns**. Or click **X** next to the field or measure name.
+-   Click ![Adhoc icon ](../assets/images/Adhoc-icon-.png) **Token Context Menu** and select **Remove from Columns**. Or click **X** next to the field or measure name.
 
 ## Groups
 
@@ -67,31 +67,31 @@ To remove a group
 
 For Old Layout Band
 
-- In the Layout Band, click the **X** next to the field’s name in the **Groups** box.
+-   In the Layout Band, click the **X** next to the field’s name in the **Groups** box.
 
 For New Layout Band
 
-- Click the ![Adhoc icon ](../assets/images/Adhoc-icon-.png) **Token Context Menu** and select **Remove from Groups** or click **X** next to the field name.
+-   Click the ![Adhoc icon ](../assets/images/Adhoc-icon-.png) **Token Context Menu** and select **Remove from Groups** or click **X** next to the field name.
 
 To move the grouping order up or down in a table
 
-- In the Old Layout Band, drag the name of the group you want to move into its new position.
+-   In the Old Layout Band, drag the name of the group you want to move into its new position.
 
-- In the New Layout Band
+-   In the New Layout Band
 
-  - Using Move Up or Down or use drag and drop. For more information see, [The Layout Band](the-layout-band.md).
+    -   Using Move Up or Down or use drag and drop. For more information see, [The Layout Band](the-layout-band.md).
 
 ## Summaries
 
 You can display summary data for any column in your table. Summary data may be in the form of various functions, such as:
 
-- Sum
+-   Sum
 
-- Count
+-   Count
 
-- Distinct Count
+-   Distinct Count
 
-- Average
+-   Average
 
 For example, in a table with a list of stores, grouped by City and Country, you can display the number of stores in each City, and in each Country, using this function.
 
@@ -99,22 +99,22 @@ By default, the summary function for each field is defined by the data source, O
 
 To add a summary to a specific column
 
-- In the table, right-click the column you want to calculate a summary for, and select **Add Summary**.
+-   In the table, right-click the column you want to calculate a summary for, and select **Add Summary**.
 
-- The summary information is added to the group header, or is added to the bottom of a column if no groups are included in the table.
+-   The summary information is added to the group header, or is added to the bottom of a column if no groups are included in the table.
 
 To remove a summary from a specific column
 
-- In the table, right-click the column with the summary you want to remove, and select **Remove Summary**.
+-   In the table, right-click the column with the summary you want to remove, and select **Remove Summary**.
 
-- The summary information is removed from the table.
+-   The summary information is removed from the table.
 
 To add or remove summaries from all columns
 
 In the **Format Visualization** panel, in the **Appearance** settings, click the **Data Detail** dropdown menu and select the following:
 
-- To add summaries to all columns: **Details and Totals**
-- To remove summaries from all columns: **Details**
+-   To add summaries to all columns: **Details and Totals**
+-   To remove summaries from all columns: **Details**
 
 ## Column and Header Labels
 
@@ -202,8 +202,8 @@ To sort a table
 7.  Click **OK**. The table updates to display the rows sorted by the selected fields.<br>
     You can also sort a table using the following methods:
 
-    - Right-click a field in the Fields section of the **Data Source Selection** panel, and select **Use for Sorting** from the context menu. In this case, the table is sorted by a field that is not in the table; you may want to note the sorting fields in the title.
-    - Right-click a column header on the Canvas of the **Ad Hoc View** panel, and select **Use for Sorting** from the context menu.
+    -   Right-click a field in the Fields section of the **Data Source Selection** panel, and select **Use for Sorting** from the context menu. In this case, the table is sorted by a field that is not in the table; you may want to note the sorting fields in the title.
+    -   Right-click a column header on the Canvas of the **Ad Hoc View** panel, and select **Use for Sorting** from the context menu.
 
 !!! note
 
@@ -244,14 +244,14 @@ You can control the data displayed in the table using the **Appearance** setting
 
 Your options are:
 
-- **Data Detail**:
+-   **Data Detail**:
 
-  - **Details**, which displays table detail only. For instance, in a table listing sales in dollars for all stores in a region for a given month, the amount sold by each store that month is displayed.
-  - **Totals**, which displays the table totals only. In the table described above, the total amount of all sales at all regional stores that month is displayed.
-  - **Details and Totals, which display** both the individual store sales numbers, as well as the total sales numbers at the bottom of the store sales column.
+    -   **Details**, which displays table detail only. For instance, in a table listing sales in dollars for all stores in a region for a given month, the amount sold by each store that month is displayed.
+    -   **Totals**, which displays the table totals only. In the table described above, the total amount of all sales at all regional stores that month is displayed.
+    -   **Details and Totals, which display** both the individual store sales numbers, as well as the total sales numbers at the bottom of the store sales column.
 
-- **Show Duplicate Rows**, which displays only the distinct values in your table if you choose to hide the duplicate rows. By default, the **Show Duplicate Rows** setting is on. See Showing Distinct Values for more information.<br>
-  Select the option that you want to apply to your table.
+-   **Show Duplicate Rows**, which displays only the distinct values in your table if you choose to hide the duplicate rows. By default, the **Show Duplicate Rows** setting is on. See Showing Distinct Values for more information.<br>
+    Select the option that you want to apply to your table.
 
 ## Showing Distinct Values
 

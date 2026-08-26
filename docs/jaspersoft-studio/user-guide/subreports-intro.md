@@ -17,12 +17,12 @@ Subreports also let you combine two or more child lists of data relating to a si
 
 Uses for subreports include:
 
-- Modularizing reports–You can create a subreport with your preferred data fields and layout, then use the subreport in multiple master reports.
+-   Modularizing reports–You can create a subreport with your preferred data fields and layout, then use the subreport in multiple master reports.
 
-- Combining multiple queries or data sources in a single report.
+-   Combining multiple queries or data sources in a single report.
 
 This topic contains the following sections:
 
-- [Creating a New Report via the Subreport Wizard](subreports-wizard.md)
+-   [Creating a New Report via the Subreport Wizard](subreports-wizard.md)
 
-- [Understanding Subreports](subreports-reference.md)
+-   [Understanding Subreports](subreports-reference.md)

@@ -7,12 +7,12 @@ description: "You can control some aspects of how data points, field names, and 
 
 You can control some aspects of how data points, field names, and labels are displayed on your chart, including:
 
-- Whether data points are displayed.
-- Showing a measure name on charts including only a single measure.
-- Restricting the number of labels displayed.
-- Rotating the direction of label text.
-- Selecting the colors used by the chart.
-- Defining how gauges are displayed.
+-   Whether data points are displayed.
+-   Showing a measure name on charts including only a single measure.
+-   Restricting the number of labels displayed.
+-   Rotating the direction of label text.
+-   Selecting the colors used by the chart.
+-   Defining how gauges are displayed.
 
 JasperReports Server also allows you to edit many of the chart's properties for cases when you want more control over the appearance of a chart.
 
@@ -48,14 +48,14 @@ By default, every field included in your chart has a label displayed along eithe
 
 To reduce the number of labels on your chart, in the **Format Visualization** panel, in the **Axis** settings:
 
-- For X Axis: Under **X Axis**, in the **Interval between labels** input, specify how often you want the axis label to appear.
+-   For X Axis: Under **X Axis**, in the **Interval between labels** input, specify how often you want the axis label to appear.
 
-- For Y Axis: Under **Y Axis**, in the **Interval between labels** input, specify how often you want the axis label to appear.
+-   For Y Axis: Under **Y Axis**, in the **Interval between labels** input, specify how often you want the axis label to appear.
 
-  For instance:
+    For instance:
 
-  - To display every second label, enter 2.
-  - To display every third label, enter 3, and so on.
+    -   To display every second label, enter 2.
+    -   To display every third label, enter 3, and so on.
 
 To display every label, enter **1** in the **Interval between labels** inputs.
 
@@ -65,16 +65,16 @@ By default, the labels on your chart are displayed horizontally. Multiple labels
 
 To rotate label text, in the **Format Visualization** panel, in the **Axes** settings:
 
-- For X Axis: Under the **X Axis**, in the **Rotation of labels** input, specify the degree of rotation to apply to labels.
+-   For X Axis: Under the **X Axis**, in the **Rotation of labels** input, specify the degree of rotation to apply to labels.
 
-- For Y Axis: Under the **Y Axis**, in the **Rotation of labels** input, specify the degree of rotation to apply to labels.
+-   For Y Axis: Under the **Y Axis**, in the **Rotation of labels** input, specify the degree of rotation to apply to labels.
 
-  For instance:
+    For instance:
 
-  - To rotate the labels clockwise 90 degrees, enter 90.
-  - To rotate the labels counter-clockwise 90 degrees, enter -90.
-  - To rotate the labels clockwise 45 degrees, enter 45, and so on.
-  - To return the labels to their original, horizontal position, enter **0** in the **Rotation of labels** inputs.
+    -   To rotate the labels clockwise 90 degrees, enter 90.
+    -   To rotate the labels counter-clockwise 90 degrees, enter -90.
+    -   To rotate the labels clockwise 45 degrees, enter 45, and so on.
+    -   To return the labels to their original, horizontal position, enter **0** in the **Rotation of labels** inputs.
 
 ## Changing the Chart's Colors
 
@@ -162,10 +162,10 @@ To create a pie using Old Layout Band
 
 2.  View the following sections on the page:
 
-    - **Fields** and **Measures**
-    - Chart canvas
-    - **Filters**
-    - **Format Visualization**
+    -   **Fields** and **Measures**
+    -   Chart canvas
+    -   **Filters**
+    -   **Format Visualization**
 
 3.  Drag and drop the **Fields** and **Measures** in the **Rows** and **Columns** fields. The pie according to the selected **Columns** and **Rows** is displayed.
 
@@ -231,10 +231,10 @@ To create a pie using New Layout Band
 
 2.  View the following sections on the page:
 
-    - **Fields** and **Measures**
-    - Chart canvas
-    - **Filters**
-    - **Format Visualization**
+    -   **Fields** and **Measures**
+    -   Chart canvas
+    -   **Filters**
+    -   **Format Visualization**
 
 3.  Drag and drop the **Fields** and **Measures** in the **Slices** and **Multiples** fields. The pie according to the selected **Slices** and **Multiples** is displayed.
 
@@ -302,11 +302,11 @@ To edit the chart's properties
 
 3.  In the **Name** field, enter the chart property you want to format and then enter the values for the property. For instance:<br>
 
-    - To format the chart's colors, enter colors for the property and a comma-separated list of colors in brackets for the values, such as \["red", "blue", "green", "magenta", "purple", "black", "yellow"\].
-    - To change the vertical alignment of the legend, enter legend.verticalAlign for the property and "top" or "bottom" or "center" for the value.
-    - To display data values on the chart, enter plotOptions.series.dataLabels.enabled for the property and true for the value.<br>
-      Click the **More Information** link to see a list of the properties you can edit.
-    - To ensure smaller bars or columns are visible by default, set the `plotOptions.series.minPointLength` property to a value of three or more. This is necessary because in Highcharts v11 the property's default value is 0.<br>
+    -   To format the chart's colors, enter colors for the property and a comma-separated list of colors in brackets for the values, such as \["red", "blue", "green", "magenta", "purple", "black", "yellow"\].
+    -   To change the vertical alignment of the legend, enter legend.verticalAlign for the property and "top" or "bottom" or "center" for the value.
+    -   To display data values on the chart, enter plotOptions.series.dataLabels.enabled for the property and true for the value.<br>
+        Click the **More Information** link to see a list of the properties you can edit.
+    -   To ensure smaller bars or columns are visible by default, set the `plotOptions.series.minPointLength` property to a value of three or more. This is necessary because in Highcharts v11 the property's default value is 0.<br>
 
     !!! note
 

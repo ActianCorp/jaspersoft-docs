@@ -7,7 +7,7 @@ description: "You can change the default behavior of JasperReports Server by edi
 
 You can change the default behavior of JasperReports Server by editing the system's configuration. The configuration is defined by a set of properties and their values.
 
-The properties are stored in configuration files located in various folders under the \<js-install\> directory, which is the root of your JasperReports Server installation. To change the configuration, you edit these files and then restart the server.
+The properties are stored in configuration files located in various folders under the &lt;js-install&gt; directory, which is the root of your JasperReports Server installation. To change the configuration, you edit these files and then restart the server.
 
 A few of the most commonly edited properties are available to the system admin through the user interface (UI). Changes to these properties take effect immediately, are stored in the repository, and override the equivalent values stored in files, even after the server restarts
 
@@ -15,7 +15,7 @@ This chapter describes a subset of the properties in the configuration files. Se
 
 Because the locations of files described in this chapter vary with your application server, the paths specified here are relative to the deployed WAR file for the application. For example, the applicationContext.xml file is shown as residing in the WEB-INF folder; if you use the Tomcat application server bundled with the installer, the default path to this location is:
 
-`C:\Program Files\jasperreports-server-10.1\apache-tomcat\webapps\jasperserver` -pro \WEB-INF
+`C:\Program Files\jasperreports-server-10.1\apache-tomcat\webapps\jasperserver` -pro \\WEB-INF
 
 !!! warning
 
@@ -25,44 +25,44 @@ Because the locations of files described in this chapter vary with your applicat
 
 This chapter contains the following sections:
 
-- [Configuration Settings in the User Interface](configuration_settings_in_the_ui.md)
+-   [Configuration Settings in the User Interface](configuration_settings_in_the_ui.md)
 
-- [Configuration for Using Proxies](configuration_for_using_proxies.md)
+-   [Configuration for Using Proxies](configuration_for_using_proxies.md)
 
-- [Configuration for Session Persistence](configuration_for_session_persistence.md)
+-   [Configuration for Session Persistence](configuration_for_session_persistence.md)
 
-- [Enabling Compression in Tomcat](enabling_compression_in_tomcat.md)
+-   [Enabling Compression in Tomcat](enabling_compression_in_tomcat.md)
 
-- [Configuring Ad Hoc](configuring_ad_hoc.md)
+-   [Configuring Ad Hoc](configuring_ad_hoc.md)
 
-- [Enabling Data Snapshots](enabling_data_snapshots.md)
+-   [Enabling Data Snapshots](enabling_data_snapshots.md)
 
-- [Enabling Data Staging](enabling_data_staging.md)
+-   [Enabling Data Staging](enabling_data_staging.md)
 
-- [Configuring Cloud Services](configuring_cloud_services.md)
+-   [Configuring Cloud Services](configuring_cloud_services.md)
 
-- [Configuring Domains](configuring_domains.md)
+-   [Configuring Domains](configuring_domains.md)
 
-- [Configuring JasperReports Library](configuring_jasperreports_library.md)
+-   [Configuring JasperReports Library](configuring_jasperreports_library.md)
 
-- [Disabling Open In Editor Option](disabling_open_in-editor.md)
+-   [Disabling Open In Editor Option](disabling_open_in-editor.md)
 
-- [Configuring Input Control Behavior](configuring_input_control_behavior.md)
+-   [Configuring Input Control Behavior](configuring_input_control_behavior.md)
 
-- [Configuring the Scheduler](configuring_the_scheduler.md)
+-   [Configuring the Scheduler](configuring_the_scheduler.md)
 
-- [Configuring Report Thumbnails](configuring_report_thumbnails.md)
+-   [Configuring Report Thumbnails](configuring_report_thumbnails.md)
 
-- [Show/Hide Multiple Columns in Interactive Tables](control-visibility-of-show-hide-column-in-interactive-tables.md)
+-   [Show/Hide Multiple Columns in Interactive Tables](control-visibility-of-show-hide-column-in-interactive-tables.md)
 
-- [Configuring the Heartbeat](configuring_the_heartbeat.md)
+-   [Configuring the Heartbeat](configuring_the_heartbeat.md)
 
-- [Configuring the Online Help](configuring_the_online_help.md)
+-   [Configuring the Online Help](configuring_the_online_help.md)
 
-- [Configuring JasperReports Web Studio Access](integrating_jrws_into_jrs.md)
+-   [Configuring JasperReports Web Studio Access](integrating_jrws_into_jrs.md)
 
-- [Configuration for File Resource Type](configuration_for_file_resource.md)
+-   [Configuration for File Resource Type](configuration_for_file_resource.md)
 
-- [Configuration for Repository files](configuration_for_repository_files.md)
+-   [Configuration for Repository files](configuration_for_repository_files.md)
 
-- [Configuring Password Storage Strategy and Password History](configuring-password-encryption-strategy.md)
+-   [Configuring Password Storage Strategy and Password History](configuring-password-encryption-strategy.md)

@@ -11,15 +11,15 @@ You can create data adapters using the **Data Adapter Wizard**. The exact steps 
 
 Data adapters can be created locally in projects or globally in the Repository Explorer.
 
-- Data adapters in projects are stored as jrdax files, which simplify deployment of JasperReports Server. A project-level data adapter cannot be seen from other projects, but you can easily copy it from one project to another.
+-   Data adapters in projects are stored as jrdax files, which simplify deployment of JasperReports Server. A project-level data adapter cannot be seen from other projects, but you can easily copy it from one project to another.
 
-- Global data adapters are saved as Eclipse settings and are visible to all projects.
+-   Global data adapters are saved as Eclipse settings and are visible to all projects.
 
 ### Creating a Data Adapter in a Project
 
 When you create a data adapter in a project, it is saved as an jrdax file in that project. Saving the jrdax file in the same project as your reports makes it easier to deploy the data adapter to JasperReports Server, and is required if you have set the project type to something other than JasperReports Library.
 
-1.  Click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) on the main toolbar OR right-click a project in the Project Explorer and select **New \> Data Adapter**.
+1.  Click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) on the main toolbar OR right-click a project in the Project Explorer and select **New &gt; Data Adapter**.
 
 2.  In the **DataAdapter File** window, choose the project where you want to save the data adapter file. This should be the project that contains the reports you want to use with your data adapter.
 

@@ -25,8 +25,8 @@ When working with Jaspersoft® Studio, you may find it useful to read the docume
 
 You can contact the Support team in the following ways:
 
-- To access the Support Knowledge Base and getting personalized content about products you are interested in, visit our [product Support website](https://www.jaspersoft.com/support).
-- To create a Support case, you must have a valid maintenance or support contract with a Actian entity. You also need a username and password to log in to the [product Support website](https://www.jaspersoft.com/support). If you do not have a username, you can request one by clicking **Register** on the website.
+-   To access the Support Knowledge Base and getting personalized content about products you are interested in, visit our [product Support website](https://www.jaspersoft.com/support).
+-   To create a Support case, you must have a valid maintenance or support contract with a Actian entity. You also need a username and password to log in to the [product Support website](https://www.jaspersoft.com/support). If you do not have a username, you can request one by clicking **Register** on the website.
 
 ## How to Join Jaspersoft Community
 

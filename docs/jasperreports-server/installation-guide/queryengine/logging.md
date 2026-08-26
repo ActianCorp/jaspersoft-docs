@@ -17,9 +17,9 @@ helm --set logging.level=DEBUG
 
 The scalable query engine can use Fluentd to collect logs from all running workers and make them available on the machine where JasperReports Server is running. By default, the scalable query engine uses one `fluentd` instance per physical node (or virtual machine) for collecting log messages in text format from the workers in Kubernetes. There are then two possible ways to access the logs:
 
-- Fluentbit on each physical node or VM forwards text logs to the Fluentd aggregator, and aggregate logs can be viewed on the same machine as JasperReports Server.
+-   Fluentbit on each physical node or VM forwards text logs to the Fluentd aggregator, and aggregate logs can be viewed on the same machine as JasperReports Server.
 
-- Fluentbit is set to JSON format on each physical node or VM and accessed directly by Elasticsearch and Kibana (ELK) to view logs. Alternatively, you can use ELK to view the aggregate text log file in the first case.
+-   Fluentbit is set to JSON format on each physical node or VM and accessed directly by Elasticsearch and Kibana (ELK) to view logs. Alternatively, you can use ELK to view the aggregate text log file in the first case.
 
 First you should download the Fluentd package with the following commands:
 
@@ -51,7 +51,7 @@ Jaspersoft does not support for Elasticsearch and Kibana, only a basic configura
     helm install kibana elastic/kibana --set service.type=NodePort --set resources.requests.memory=1Gi
     ```
 
-    Note that the resources value (1Gi) is an example that should be modified for your own usage. The Kibana index pattern is `scalable-adhoc-<ReleaseName>-*`, where \<ReleaseName\> is the helm release name.
+    Note that the resources value (1Gi) is an example that should be modified for your own usage. The Kibana index pattern is `scalable-adhoc-<ReleaseName>-*`, where &lt;ReleaseName&gt; is the helm release name.
 
 3.  The default output format is text. If you want to log directly to ELK, you can set the output format to JSON with the following helm setting:
 

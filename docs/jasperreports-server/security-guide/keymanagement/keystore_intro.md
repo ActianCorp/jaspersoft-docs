@@ -15,7 +15,7 @@ Because the keystore and keys are created during installation, the user account 
 
 This chapter contains the following sections:
 
-- [Managing Keys During Installation](keys_during_installation.md)
-- [Managing Keys for Import and Export](import_and_export.md)
-- [Sharing Custom Keys](custom_keys.md)
-- [Configuring Encryption](configuring_encryption.md)
+-   [Managing Keys During Installation](keys_during_installation.md)
+-   [Managing Keys for Import and Export](import_and_export.md)
+-   [Sharing Custom Keys](custom_keys.md)
+-   [Configuring Encryption](configuring_encryption.md)

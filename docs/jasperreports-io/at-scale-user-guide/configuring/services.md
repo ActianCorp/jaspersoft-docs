@@ -9,7 +9,7 @@ Services that are exposed by your cluster must be defined as type `LoadBalancer`
 
 For JasperReports IO At-Scale, there is one service that is potentially exposed in different situations:
 
-- jrio-rest: Required for a production deployment when using a JasperReports Server repository, because all communication is performed through the REST API.
+-   jrio-rest: Required for a production deployment when using a JasperReports Server repository, because all communication is performed through the REST API.
 
 To expose the jrio-rest module in a production cluster, update the service configuration file jasperreports-io-at-scale-10.1.0/helm/templates/jrio-rest-service.yaml as follows:
 

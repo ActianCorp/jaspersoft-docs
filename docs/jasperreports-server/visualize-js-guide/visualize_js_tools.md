@@ -9,8 +9,8 @@ This chapter provides two extended code examples that you can use to test variou
 
 This chapter contains the following sections:
 
-- Checking the Scope in Visualize.js
-- CSS Diagnostic Tool
+-   Checking the Scope in Visualize.js
+-   CSS Diagnostic Tool
 
 ## Checking the Scope in Visualize.js
 

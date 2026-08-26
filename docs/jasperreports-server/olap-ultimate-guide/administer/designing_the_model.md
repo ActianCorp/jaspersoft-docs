@@ -13,9 +13,9 @@ The basic premise is that we can lay our data out such that mathematics can reve
 
 In an OLAP schema:
 
-- A cube is the logical entity that holds all the facts for each measure. Cubes can contain millions of facts, which are too numerous to be analyzed individually.
-- A fact is the value of a measure for a specific member of a dimension; facts relate directly to their dimensional positions.
-- Dimensions provide the structure for slicing and dicing data. Each fact references the dimensional members that correspond to the variables defining the observation of this fact. Generally speaking, the most useful way to aggregate data reflects the domain model; for companies, the data organization should reflect their business rules.
+-   A cube is the logical entity that holds all the facts for each measure. Cubes can contain millions of facts, which are too numerous to be analyzed individually.
+-   A fact is the value of a measure for a specific member of a dimension; facts relate directly to their dimensional positions.
+-   Dimensions provide the structure for slicing and dicing data. Each fact references the dimensional members that correspond to the variables defining the observation of this fact. Generally speaking, the most useful way to aggregate data reflects the domain model; for companies, the data organization should reflect their business rules.
 
 The art of dimensional modeling lies in finding useful ways to aggregate your data.
 

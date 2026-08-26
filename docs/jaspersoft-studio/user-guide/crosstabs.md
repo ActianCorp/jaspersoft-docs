@@ -27,13 +27,13 @@ Crosstabs in JasperReports support row and column groups, totals and subtotals, 
 
 This chapter has the following sections:
 
-- Example of Creating a Crosstab
+-   Example of Creating a Crosstab
 
-- Working with Crosstab Properties
+-   Working with Crosstab Properties
 
-- Using the Crosstab Editor
+-   Using the Crosstab Editor
 
-- Working with Crosstab Parameters
+-   Working with Crosstab Parameters
 
 ## Example of Creating a Crosstab
 
@@ -72,15 +72,15 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
 
         When you have a time field in your crosstab, you can use the `Unique` aggregation function to group records having the same value, or you can aggregate it any of the following ways:
 
-        - Using a time-based aggregation function (such as `Year`, `Month`, `Week`, or `Day`) when you define the group
+        -   Using a time-based aggregation function (such as `Year`, `Month`, `Week`, or `Day`) when you define the group
 
-        In this example, this is shown in the previous step.
+            In this example, this is shown in the previous step.
 
-        - Using a dataset query when you create the crosstab.
+        -   Using a dataset query when you create the crosstab.
 
-        In this example, in the first step of the wizard, you could create a dataset that uses a query that returns the year, such as `select ORDERDATE, SHIPVIA, SHIPPOSTALCODE, SHIPCOUNTRY, SHIPPEDDATE, YEAR(SHIPPEDDATE) as SHIPPEDYEAR from orders`.
+            In this example, in the first step of the wizard, you could create a dataset that uses a query that returns the year, such as `select ORDERDATE, SHIPVIA, SHIPPOSTALCODE, SHIPCOUNTRY, SHIPPEDDATE, YEAR(SHIPPEDDATE) as SHIPPEDYEAR from orders`.
 
-        - Manually editing the element expression in the crosstab editor after the crosstab has been created, as described in Editing the expression of a group.
+        -   Manually editing the element expression in the crosstab editor after the crosstab has been created, as described in Editing the expression of a group.
 
         In this example, you could change the column element expression from `$F{SHIPPEDDATE}` to `YEAR($F{SHIPPEDDATE})`.
 
@@ -149,9 +149,9 @@ Expressions for elements in a crosstab, such as print-when expressions and text 
 
 You can edit the following crosstab-specific properties on the Crosstab tab in the properties view:
 
-- **Repeat Column Headers**: When selected, the column headers are printed on every page when the crosstab spans additional pages.
-- **Repeat Row Headers**: When selected, the row headers are printed on every page when the crosstab spans additional pages.
-- **Column Break Offset**: Specifies the vertical space between sections of a crosstab when the crosstab exceeds the page width and two sections appear on the same page.
+-   **Repeat Column Headers**: When selected, the column headers are printed on every page when the crosstab spans additional pages.
+-   **Repeat Row Headers**: When selected, the row headers are printed on every page when the crosstab spans additional pages.
+-   **Column Break Offset**: Specifies the vertical space between sections of a crosstab when the crosstab exceeds the page width and two sections appear on the same page.
 
 |                                                               |
 |---------------------------------------------------------------|
@@ -164,13 +164,13 @@ You can export a report with crosstab in the Microsoft Excel - Metadata(.xlsx) f
 
 You can edit the fields, expressions, and layout of the crosstab in the crosstab editor. Like the report editor, the crosstab editor has a design view and an outline view. Using the crosstab editor you can:
 
-- Resize rows and columns and format individual cells.
+-   Resize rows and columns and format individual cells.
 
-- Add and delete row and column groups and edit group properties.
+-   Add and delete row and column groups and edit group properties.
 
-- Add, delete, and edit measures.
+-   Add, delete, and edit measures.
 
-- Edit crosstab totals.
+-   Edit crosstab totals.
 
 To open the crosstab editor
 
@@ -212,13 +212,13 @@ Changing cell borders
 
 You can edit the following properties for a row or column group:
 
-- **Name**: Name of the group. Renaming a group using the Properties dialog renames it everywhere the group is used.
-- **Total Position**: Location of the row or column that shows subtotals. Values are None, Start, End (default).
-- **Order**: Order of the values in the group (Ascending or Descending).
-- **Order By Expression**: Optional expression to use for ordering the values.
-- **Comparator Expression**: Optional instance of `java.util.Comparator` to use for ordering the values. If no expression is present, the default ordering for the data type is used (for example, numeric or alphabetic ordering).
-- **Expression**: Bucket expression used to group the rows or columns. The default is to group by field value, for example, `$F{SHIPPOSTALCODE}`.
-- **Value Class Name**: Field type.
+-   **Name**: Name of the group. Renaming a group using the Properties dialog renames it everywhere the group is used.
+-   **Total Position**: Location of the row or column that shows subtotals. Values are None, Start, End (default).
+-   **Order**: Order of the values in the group (Ascending or Descending).
+-   **Order By Expression**: Optional expression to use for ordering the values.
+-   **Comparator Expression**: Optional instance of `java.util.Comparator` to use for ordering the values. If no expression is present, the default ordering for the data type is used (for example, numeric or alphabetic ordering).
+-   **Expression**: Bucket expression used to group the rows or columns. The default is to group by field value, for example, `$F{SHIPPOSTALCODE}`.
+-   **Value Class Name**: Field type.
 
 Editing the expression of a group
 
@@ -226,7 +226,7 @@ The following example shows how to edit the sample crosstab to group by the firs
 
 1.  Double-click the crosstab to open the crosstab editor.
 
-2.  In **Outline** view, select the group you want to edit. For this example, select **Crosstab \> Row Groups \> SHIPPOSTALCODE1**.
+2.  In **Outline** view, select the group you want to edit. For this example, select **Crosstab &gt; Row Groups &gt; SHIPPOSTALCODE1**.
 
     |  |
     |----|
@@ -273,28 +273,29 @@ Example of adding a row group
 4.  Enter the information for your group in the **Group Band** dialog. For this example:
 
     1.  Enter SHIPREGION1 for the **Group Name**.
+
     2.  Select **Create Group from a report object** and select SHIPREGION.
+
     3.  Click **Finish**.
 
-    The new group is added to the crosstab as the innermost row group.
+        The new group is added to the crosstab as the innermost row group.
 
-    |  |
-    |----|
-    | ![jss crosstabs add group band](assets/images/jss-crosstabs-add-group-band.png) |
-    | *Figure 16: Group Band dialog* |
+        |  |
+        |----|
+        | ![jss crosstabs add group band](assets/images/jss-crosstabs-add-group-band.png) |
+        | *Figure 16: Group Band dialog* |
 
 5.  To set the value class of the group, select the top-level node of the new SHIPREGION group in the outline view of the crosstab editor. Then, in the Cell tab of the properties view, enter the following value:
 
-    - **Value Class Name**: `java.lang.String`
+-   **Value Class Name**: `java.lang.String`
 
-    |  |
-    |----|
-    | ![jss crosstab row group properties](assets/images/jss-crosstab-row-group-properties.png) |
-    | *Figure 17: Setting Value Class Name of a row group* |
+|  |
+|----|
+| ![jss crosstab row group properties](assets/images/jss-crosstab-row-group-properties.png) |
+| *Figure 17: Setting Value Class Name of a row group* |
 
-6.  Change the order of the groups by selecting the top-level node of `SHIPREGION` in the outline view and dragging it above `SHIPPOSTALCODE`.
-
-7.  Preview the report.
+1.  Change the order of the groups by selecting the top-level node of `SHIPREGION` in the outline view and dragging it above `SHIPPOSTALCODE`.
+2.  Preview the report.
 
 Deleting a row or column group
 
@@ -317,13 +318,13 @@ A crosstab can have multiple measures. If you add multiple measures when you fir
 
 The following properties are available for measures that you added when you first created the crosstab:
 
-- **Name**: Name of the measure.
-- **Calculation**: Calculation to use for the measure. See [1.1.2, “Calculation Function,” on page 1](variables-other-properties.md) for more information.
-- **Percentage of Type**: Set this to **Grand Total** to display your measure as a percentage of the grand total.
-- **Value Expression**: Expression to use for calculating the measure. To edit this expression, click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png).
-- **Value Class**: Java class to use for the expression.
-- **Incrementer Factory Class Name**: Optional custom `Incrementer` class. Use this to implement your own calculation if the available calculation types are not sufficient. Class must be instantiated via a factory that implements the `net.sf.jasperreports.engine.fil.JRIncrementerFactory` interface.
-- **Percentage Calculation Class Name** – Optional custom calculator class to perform the percentage calculation. Must use the `net.sf.jasperreports.crosstabs.fill.JRPercentageCalculator` interface.
+-   **Name**: Name of the measure.
+-   **Calculation**: Calculation to use for the measure. See [1.1.2, “Calculation Function,” on page 1](variables-other-properties.md) for more information.
+-   **Percentage of Type**: Set this to **Grand Total** to display your measure as a percentage of the grand total.
+-   **Value Expression**: Expression to use for calculating the measure. To edit this expression, click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png).
+-   **Value Class**: Java class to use for the expression.
+-   **Incrementer Factory Class Name**: Optional custom `Incrementer` class. Use this to implement your own calculation if the available calculation types are not sufficient. Class must be instantiated via a factory that implements the `net.sf.jasperreports.engine.fil.JRIncrementerFactory` interface.
+-   **Percentage Calculation Class Name** – Optional custom calculator class to perform the percentage calculation. Must use the `net.sf.jasperreports.crosstabs.fill.JRPercentageCalculator` interface.
 
 To display measure properties
 
@@ -336,9 +337,9 @@ To display measure properties
 
 When you have multiple row or column groups, you can use crosstab total variables to combine data at different aggregation levels (for example, to calculate a percentage). The following built-in variables are available:
 
-- `<Measure>_<Column Group>_ALL`: The total of all the entries in the specified column group and the current row.
-- `<Measure>_<Row Group>_ALL`: The total of all the entries in the specified row group and the current column.
-- `<Measure>_<Row Group>_<Column Group>_ALL`: The combined total of all the entries in the specified row and column groups.
+-   `<Measure>_<Column Group>_ALL`: The total of all the entries in the specified column group and the current row.
+-   `<Measure>_<Row Group>_ALL`: The total of all the entries in the specified row group and the current column.
+-   `<Measure>_<Row Group>_<Column Group>_ALL`: The combined total of all the entries in the specified row and column groups.
 
 You can also select these variables from the expression editor for the **Expression** field on the **Text Field** tab of the **Properties** view for a measure.
 

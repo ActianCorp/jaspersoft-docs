@@ -13,17 +13,17 @@ The JNDI data source accesses a database connection previously defined in the ap
 
 For information about setting up a JNDI connection in your application server, see the following sections:
 
-- [JNDI Services on Apache Tomcat](../troubleshooting/working_with_data_sources.md)
+-   [JNDI Services on Apache Tomcat](../troubleshooting/working_with_data_sources.md)
 
-- [JNDI Services on JBoss](../troubleshooting/working_with_data_sources.md)
+-   [JNDI Services on JBoss](../troubleshooting/working_with_data_sources.md)
 
-- [JNDI Services on WebLogic](../troubleshooting/working_with_data_sources.md)
+-   [JNDI Services on WebLogic](../troubleshooting/working_with_data_sources.md)
 
 To create a JNDI data source
 
 1.  Log in as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The New Data Source page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The New Data Source page appears.
 
 3.  In the **Type** field, select **JNDI**. The information on the page changes to reflect what is needed to define a JNDI data source.
 

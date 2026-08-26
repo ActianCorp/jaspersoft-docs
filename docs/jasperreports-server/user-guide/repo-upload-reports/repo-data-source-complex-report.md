@@ -13,7 +13,7 @@ To select a data source and run the complex report
 
 2.  On the Locate Data Source page, choose **Select data source from repository**.
 
-3.  Click **Browse**, choose **Organization \> Data Sources \> JServerJNDI Data Source**, and lick **Select**.
+3.  Click **Browse**, choose **Organization &gt; Data Sources &gt; JServerJNDI Data Source**, and lick **Select**.
 
 4.  On Link a Data Source to the Report, click **Submit**.
 
@@ -26,15 +26,15 @@ To select a data source and run the complex report
 
 7.  Enter these input values, as shown in Figure 5‑22:
 
-    - Text Input Control: `myText`
+    -   Text Input Control: `myText`
 
-    - Checkbox Input Control: Check the checkbox.
+    -   Checkbox Input Control: Check the checkbox.
 
-    - List Input Control: Select the **Third Item**.
+    -   List Input Control: Select the **Third Item**.
 
-    - Date Input Control: Click ![js Repository icon Calendar](../assets/images/js-Repository-icon-Calendar.png) and select December 31, 2010.
+    -   Date Input Control: Click ![js Repository icon Calendar](../assets/images/js-Repository-icon-Calendar.png) and select December 31, 2010.
 
-    - Query Input Control: Select **Sarah Smith** from the dropdown.
+    -   Query Input Control: Select **Sarah Smith** from the dropdown.
 
     ![js ReportOptions InputControls queryinput](../assets/images/js-ReportOptions-InputControls-queryinput.png)
 

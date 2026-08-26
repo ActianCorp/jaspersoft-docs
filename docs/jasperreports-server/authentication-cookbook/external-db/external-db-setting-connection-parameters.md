@@ -7,8 +7,8 @@ description: "You can configure your connection to the database in one of two wa
 
 You can configure your connection to the database in one of two ways:
 
-- Configure the connection during installation of JasperReports Server by configuring the `external.jdbcDriverClass`, `external.jdbcUrl`, `external.dbUsername`, and/or `external.dbPassword` properties before installation or upgrade. You can choose to encrypt any of the database connection parameters. This is the preferred method for setting the database connection parameters. See the JasperReports Server Security Guide for more information.
-- If you have a JasperReports Server, you can configure the connection properties directly in your sample-applicationContext-externalAuth-db-mt.xml file. In this case, the properties, including the password, can't be encrypted.
+-   Configure the connection during installation of JasperReports Server by configuring the `external.jdbcDriverClass`, `external.jdbcUrl`, `external.dbUsername`, and/or `external.dbPassword` properties before installation or upgrade. You can choose to encrypt any of the database connection parameters. This is the preferred method for setting the database connection parameters. See the JasperReports Server Security Guide for more information.
+-   If you have a JasperReports Server, you can configure the connection properties directly in your sample-applicationContext-externalAuth-db-mt.xml file. In this case, the properties, including the password, can't be encrypted.
 
 ## Setting Database Connection Parameters in default_master.properties
 
@@ -30,10 +30,10 @@ To configure these properties using default_master.properties, follow these step
 
 2.  Locate and set the following properties for your LDAP server:
 
-    - `external.jdbcDriverClass` property: The name of the JDBC driver class for your database. Make sure the driver jar library is available on the classpath; for example, you can place the jar in the lib directory of your application server or in the \<js-webapp\>/lib directory.
-    - `external.jdbcUrl` property: The JDBC URL for your database server, including the hostname, port, and database you want to access.
-    - `external.dbUsername` property: The username of your database administrator.
-    - `external.dbPassword` property: The password of your database administrator.
+    -   `external.jdbcDriverClass` property: The name of the JDBC driver class for your database. Make sure the driver jar library is available on the classpath; for example, you can place the jar in the lib directory of your application server or in the &lt;js-webapp&gt;/lib directory.
+    -   `external.jdbcUrl` property: The JDBC URL for your database server, including the hostname, port, and database you want to access.
+    -   `external.dbUsername` property: The username of your database administrator.
+    -   `external.dbPassword` property: The password of your database administrator.
 
 3.  You can choose to encrypt any of the LDAP connection parameters.
 
@@ -66,10 +66,10 @@ To set the connection parameters for the external database server directly in th
 1.  In sample-applicationContext-externalAuth-db-mt.xml, locate the `externalDataSource` bean.
 2.  Specify the following information:
 
-- `driverClassName` property: The name of the JDBC driver class for your database. Make sure the driver jar library is available on the classpath. For example, you can place the jar in the lib directory of your application server or in the \<js-webapp\>/lib directory.
-- `url` property: The JDBC URL for your database server, including the hostname, port, and database you want to access.
-- `username` property: The username of your database administrator.
-- `password` property: The password of your database administrator.
+-   `driverClassName` property: The name of the JDBC driver class for your database. Make sure the driver jar library is available on the classpath. For example, you can place the jar in the lib directory of your application server or in the &lt;js-webapp&gt;/lib directory.
+-   `url` property: The JDBC URL for your database server, including the hostname, port, and database you want to access.
+-   `username` property: The username of your database administrator.
+-   `password` property: The password of your database administrator.
 
 The following is an example of the connection information for a MySQL database:
 

@@ -38,7 +38,7 @@ Use the POST method of the organization service to update the properties of an e
 
 As with organizations managed in the user interface, only certain fields may be modified in the tenant descriptor:
 
-- `alias` – Can be used for logging in, but must be unique among all organization aliases.
-- `tenantDesc` – Description of the organization, visible only to administrators.
-- `tenantName` – Display name of the organization, appearing to users on the organization’s root folder.
-- `theme` – The user interface theme that is active for all organization users.
+-   `alias` – Can be used for logging in, but must be unique among all organization aliases.
+-   `tenantDesc` – Description of the organization, visible only to administrators.
+-   `tenantName` – Display name of the organization, appearing to users on the organization’s root folder.
+-   `theme` – The user interface theme that is active for all organization users.

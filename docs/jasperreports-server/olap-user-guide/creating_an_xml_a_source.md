@@ -11,11 +11,11 @@ An XML/A source is also sometimes called an XML/A definition.
 
 To add an XML/A source
 
-1.  Click **View \> Repository**.
+1.  Click **View &gt; Repository**.
 
-2.  In the Folder panel, navigate to **Organization \> Analysis Components \> xml/a**.
+2.  In the Folder panel, navigate to **Organization &gt; Analysis Components &gt; xml/a**.
 
-3.  Right-click the folder and select **Add Resource \> Mondrian XML/A Source** from the context-menu.
+3.  Right-click the folder and select **Add Resource &gt; Mondrian XML/A Source** from the context-menu.
 
     The Set Mondrian XML/A Source Properties page appears and prompts you to enter basic information.
 

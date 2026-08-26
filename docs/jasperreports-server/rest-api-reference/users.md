@@ -13,18 +13,18 @@ Because the user ID and organization ID are used in the URL, this service can op
 
 This chapter includes the following sections:
 
-- Searching for Users
-- Viewing a User
-- Creating a User
-- Modifying User Properties
-- Deleting a User
+-   Searching for Users
+-   Viewing a User
+-   Creating a User
+-   Modifying User Properties
+-   Deleting a User
 
 ## Searching for the Users
 
 The GET method without any user ID searches for and lists user accounts. It has options to search for users by name or by role. If no search is specified, it returns all users. The method has two forms:
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
-- In commercial editions with organizations, use the first URL to list all users starting from the logged-in user’s organization (root for the system admin), and use the second URL to list all users in a specified organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
+-   In commercial editions with organizations, use the first URL to list all users starting from the logged-in user’s organization (root for the system admin), and use the second URL to list all users in a specified organization.
 
 <table>
 <colgroup>
@@ -158,8 +158,8 @@ On servers with multiple organizations, the summary user descriptors include the
 
 The GET method with a user ID (`username`) retrieves a single descriptor containing the full list of user properties and roles.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to specify users of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to specify users of the root organization.
 
 <table>
 <colgroup>
@@ -239,8 +239,8 @@ GET http://localhost:8080/jasperserver/rest_v2/organizations/Finance/users/joeus
 
 To create a user account, put all required information in a user descriptor, and include it in a PUT request to the users service, with the intended user ID (username) specified in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create users in the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create users in the root organization.
 
 To create a user, the user ID in the URL must be unique on the server or in the organization. If the user ID exists, that user account is modified, as described in 1.1, “Modifying User Properties,” on page 1.
 
@@ -313,8 +313,8 @@ The following example shows the user descriptor in JSON format:
 
 To modify the properties of a user account, put all desired information in a user descriptor, and include it in a PUT request to the users service, with the existing user ID (username) specified in the URL. See the properties of the descriptor in the table above.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to modify users of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to modify users of the root organization.
 
 To modify a user, the user ID in the URL must exist on the server or in the organization. If the user ID does not exist, a user account is created, as described in 1.1, “Creating a User,” on page 1.
 
@@ -371,8 +371,8 @@ To add a role to the user, specify the entire list of roles with the desired rol
 
 To delete a user, send the DELETE method and specify the user ID in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to delete users of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to delete users of the root organization.
 
 When this method is successful, the user is permanently deleted.
 

@@ -165,17 +165,17 @@ JasperReports Server will look for a property named `js.license.directory` and u
 
 For instance, if you want to point JasperReports Server to the license file in the root of the source package, update the following shell script:
 
-|          |                                  |
-|----------|----------------------------------|
-| Windows: | \<tomcat\>\bin\setclasspath.bat  |
-| Linux:   | \<tomcat\>/bin/setclasspath.sh   |
+|          |                                        |
+|----------|----------------------------------------|
+| Windows: | &lt;tomcat&gt;\\bin\\setclasspath.bat  |
+| Linux:   | &lt;tomcat&gt;/bin/setclasspath.sh     |
 
 And you could update the file with the following setting:
 
-|          |                                                                  |
-|----------|------------------------------------------------------------------|
-| Windows: | set JAVA_OPTS=%JAVA_OPTS% "-Djs.license.directory=\<js-src\>"    |
-| Linux:   | export JAVA_OPTS=\$JAVA_OPTS -Djs.license.directory="\<js-src\>" |
+|  |  |
+|----|----|
+| Windows: | set JAVA_OPTS=%JAVA_OPTS% "-Djs.license.directory=&lt;js-src&gt;" |
+| Linux: | export JAVA_OPTS=$JAVA_OPTS -Djs.license.directory="&lt;js-src&gt;" |
 
 The `jaspersoft.jrs.license` file can reside anywhere on the file system that's accessible from your application server. The `js.license.directory` setting should point to the folder containing the `jaspersoft.jrs.license`.
 

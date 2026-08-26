@@ -11,13 +11,13 @@ The Ant-based buildomatic scripts contain support files for the setup and config
 
 The `deploy-webapp-``pro`` ` target performs the following actions in your application server environment:
 
-- Deletes any existing `jasperserver`` ``-pro`` ` WAR file.
-- Copies the JDBC driver to the appropriate application server directory.
-- Copies additional JDBC drivers to the application server to support data source creation in the UI.
-- Adds a data source definition to the appropriate application server directory.
-- Deploys the newly built `jasperserver`` ``-pro`` ` WAR file.
-- Deletes files within the application server work directory (to clear out compiled JSP files and other cached files).
-- On Tomcat, if present, deletes the old version of `<tomcat>/conf/Catalina/Localhost/``jasperserver`` ``-pro`` .xml`.
+-   Deletes any existing `jasperserver`` ``-pro`` ` WAR file.
+-   Copies the JDBC driver to the appropriate application server directory.
+-   Copies additional JDBC drivers to the application server to support data source creation in the UI.
+-   Adds a data source definition to the appropriate application server directory.
+-   Deploys the newly built `jasperserver`` ``-pro`` ` WAR file.
+-   Deletes files within the application server work directory (to clear out compiled JSP files and other cached files).
+-   On Tomcat, if present, deletes the old version of `<tomcat>/conf/Catalina/Localhost/``jasperserver`` ``-pro`` .xml`.
 
 ## Running Ant in Debug Mode
 
@@ -62,30 +62,30 @@ If you prefer to use your own version of Apache Ant, get the file `ant-contrib-1
 
 1.  Make sure you are using Apache Ant 1.10.*latest*.
 
-2.  Copy the file ant-contrib-1.0b3.jar from the \<js-src\>/apache-ant/lib folder to your \<ant-home\>/lib folder:
+2.  Copy the file ant-contrib-1.0b3.jar from the &lt;js-src&gt;/apache-ant/lib folder to your &lt;ant-home&gt;/lib folder:
 
     From:
 
-    \<js-src\>/apache-ant/lib/ant-contrib.jar
+    &lt;js-src&gt;/apache-ant/lib/ant-contrib.jar
 
     or
 
-    \<js-src\>/jasperserver/buildomatic/install_resources/extra-jars/ant-contrib.jar
+    &lt;js-src&gt;/jasperserver/buildomatic/install_resources/extra-jars/ant-contrib.jar
 
     To:
 
-    |                                  |                   |
-    |----------------------------------|-------------------|
-    | \<ant-home\>/lib                 | (General example) |
-    | C:\apache-ant-1.10.*latest*\lib  | (Windows example) |
-    | `/usr/share/java/apache-ant/lib` | (Linux example)   |
-    | `/usr/share/ant/lib`             | (Mac example)     |
+    |                                   |                   |
+    |-----------------------------------|-------------------|
+    | &lt;ant-home&gt;/lib              | (General example) |
+    | C:\\apache-ant-1.10.*latest*\\lib | (Windows example) |
+    | `/usr/share/java/apache-ant/lib`  | (Linux example)   |
+    | `/usr/share/ant/lib`              | (Mac example)     |
 
 ## Generated Property Files
 
 Once your database and application server property values are set, run buildomatic scripts to generate the database and application server configuration files to run JasperReports Server. Generated property files are in the following directory:
 
-\<js-src\>/jasperserver/buildomatic/build_conf/default
+&lt;js-src&gt;/jasperserver/buildomatic/build_conf/default
 
 Some of the key configuration files are:
 
@@ -95,7 +95,7 @@ maven_settings.xml   -   (This is the maven settings file used by the source
 
 More generated property files are in the following directory:
 
-\<js-src\>/jasperserver/buildomatic/build_conf/default/webapp
+&lt;js-src&gt;/jasperserver/buildomatic/build_conf/default/webapp
 
 Some of the configuration files in this directory are:
 
@@ -111,20 +111,20 @@ Running `clean-config` removes these generated files. Running `gen-config` or an
 
 Buildomatic files that support various databases are located in:
 
-\<js-src\>/jasperserver/buildomatic/install_resources/sql/\<db-type\>
+&lt;js-src&gt;/jasperserver/buildomatic/install_resources/sql/&lt;db-type&gt;
 
 The source code build procedure creates the `jasperserver` repository database schema using these files:
 
-- `js-``pro`` -create.ddl`
-- `js-``pro`` -drop.ddl`
+-   `js-``pro`` -create.ddl`
+-   `js-``pro`` -drop.ddl`
 
 When you run the buildomatic target `build-js-ddl-``pro`` `, these database files are freshly generated for your specified database platform. The files are generated to the following location:
 
-\<js-src\>/`jasperserver` `-pro` /repository-hibernate/build-db/target/sql
+&lt;js-src&gt;/`jasperserver` `-pro` /repository-hibernate/build-db/target/sql
 
 Then the files are automatically copied into their buildomatic directory location:
 
-\<js-src\>/jasperserver/buildomatic/install_resources/sql/\<db-type\>
+&lt;js-src&gt;/jasperserver/buildomatic/install_resources/sql/&lt;db-type&gt;
 
 !!! note
 
@@ -134,23 +134,23 @@ Then the files are automatically copied into their buildomatic directory locatio
 
 The JasperReports Server source code build creates a `jasperserver` `-pro` WAR file. The build assembles the WAR file into the following location:
 
-\<js-src\>/`jasperserver` `-pro` /jasperserver-war/target
+&lt;js-src&gt;/`jasperserver` `-pro` /jasperserver-war/target
 
 When the `build-``pro`` ` target is run, buildomatic assembles the `jasperserver` `-pro` WAR file, and copies the file to this location for use by subsequent buildomatic targets:
 
-\<js-src\>/jasperserver/buildomatic/install_resources/war/`jasperserver` `-pro`
+&lt;js-src&gt;/jasperserver/buildomatic/install_resources/war/`jasperserver` `-pro`
 
 Later, when you run the buildomatic target `deploy-webapp-``pro`` `, the following actions take place, for example on Tomcat:
 
 |  |  |
 |----|----|
-| Files: | \<js-src\>/jasperserver/buildomatic/install_resources/war/`jasperserver` `-pro` /\* |
-| Copied to: | \<tomcat\>/webapps |
+| Files: | &lt;js-src&gt;/jasperserver/buildomatic/install_resources/war/`jasperserver` `-pro` /\* |
+| Copied to: | &lt;tomcat&gt;/webapps |
 
 |  |  |
 |----|----|
-| File: | \<js-src\>/jasperserver/buildomatic/build_conf/default/webapp/META-INF/context.xml |
-| Copied to: | \<tomcat\>/webapps/jasperserver/`jasperserver` `-pro` /META-INF |
+| File: | &lt;js-src&gt;/jasperserver/buildomatic/build_conf/default/webapp/META-INF/context.xml |
+| Copied to: | &lt;tomcat&gt;/webapps/jasperserver/`jasperserver` `-pro` /META-INF |
 
 <table>
 <colgroup>
@@ -172,34 +172,34 @@ Later, when you run the buildomatic target `deploy-webapp-``pro`` `, the followi
 
 |  |  |
 |----|----|
-| Files: | \<js-src\>/jasperserver/buildomatic/build_conf/default/webapp/WEB-INF/js.quartz.properties |
-| Copied to: | \<tomcat\>/webapps/`jasperserver` `-pro` /WEB-INF/ |
+| Files: | &lt;js-src&gt;/jasperserver/buildomatic/build_conf/default/webapp/WEB-INF/js.quartz.properties |
+| Copied to: | &lt;tomcat&gt;/webapps/`jasperserver` `-pro` /WEB-INF/ |
 
 |  |  |
 |----|----|
-| File: | \<js-src\>/jasperserver/buildomatic/build_conf/db/postgresql/jdbc/postgresql-9.2-1002.jdbc4.jar |
-| Copied to: | \<tomcat\>/lib |
+| File: | &lt;js-src&gt;/jasperserver/buildomatic/build_conf/db/postgresql/jdbc/postgresql-9.2-1002.jdbc4.jar |
+| Copied to: | &lt;tomcat&gt;/lib |
 
 |  |  |
 |----|----|
-| Files: | \<js-src\>/jasperserver/buildomatic/conf_source/db/app-srv-jdbc-drivers/\*/jar |
-| Copied to: | \<tomcat\>/lib |
+| Files: | &lt;js-src&gt;/jasperserver/buildomatic/conf_source/db/app-srv-jdbc-drivers/\*/jar |
+| Copied to: | &lt;tomcat&gt;/lib |
 
 ## Details on Database Load Build Targets
 
 The buildomatic targets shown below are used in [Building JasperReports Server Source Code](building_jasperreports_server_source.md) to create and populate the databases used with JasperReports Server. These targets consolidate and simplify the handling of the `jasperserver` database and the optional sample databases:
 
-- `create-load-js-db-``pro`` `
-- `create-load-all-dbs-``pro`` `
+-   `create-load-js-db-``pro`` `
+-   `create-load-all-dbs-``pro`` `
 
 ### create-load-js-db-pro
 
 This buildomatic target is a consolidation of the following targets:
 
-- `drop-js-db` (if necessary)
-- `create-js-db`
-- `init-js-db-``pro`` `
-- `import-minimal-``pro`` `
+-   `drop-js-db` (if necessary)
+-   `create-js-db`
+-   `init-js-db-``pro`` `
+-   `import-minimal-``pro`` `
 
 Additional functionality determines whether the `jasperserver` database exists. If so, a command-line prompt asks you if you want to delete and re-create the database.
 
@@ -207,17 +207,17 @@ Additional functionality determines whether the `jasperserver` database exists. 
 
 This buildomatic target is a consolidation of the following targets:
 
-- `drop-js-db` (if necessary)
-- `create-js-db`
-- `init-js-db-``pro`` `
-- `import-minimal-``pro`` `
-- `import-sample-data-``pro`` `
-- (`drop-foodmart-db`, if necessary)
-- `create-foodmart-db`
-- `load-foodmart-db`
-- (`drop-sugarcrm-db`, if necessary)
-- `create-sugarcrm-db`
-- `load-sugarcrm-db`
+-   `drop-js-db` (if necessary)
+-   `create-js-db`
+-   `init-js-db-``pro`` `
+-   `import-minimal-``pro`` `
+-   `import-sample-data-``pro`` `
+-   (`drop-foodmart-db`, if necessary)
+-   `create-foodmart-db`
+-   `load-foodmart-db`
+-   (`drop-sugarcrm-db`, if necessary)
+-   `create-sugarcrm-db`
+-   `load-sugarcrm-db`
 
 Additional functionality determines whether the `jasperserver` database exists. If so, a command-line prompt asks you if you want to delete and re-create the database. The same logic applies for the sample databases: foodmart and sugarcrm.
 
@@ -229,11 +229,11 @@ js-ant build-js-ddl-pro
 
 The files are generated to the following location:
 
-\<js-src\>/`jasperserver` `-pro` /repository-hibernate/build-db/target/sql
+&lt;js-src&gt;/`jasperserver` `-pro` /repository-hibernate/build-db/target/sql
 
 Then the files are automatically copied into their buildomatic directory location:
 
-\<js-src\>/jasperserver/buildomatic/install_resources/sql/\<db-type\>
+&lt;js-src&gt;/jasperserver/buildomatic/install_resources/sql/&lt;db-type&gt;
 
 ## Manual Creation of Databases
 

@@ -25,7 +25,7 @@ This section includes the steps for setting up the OpenTelemetry and Jaeger agen
 
 The below prerequisites must be satisfied before configuring OpenTelemetry and Jaeger on the JasperReports Server application:
 
-- JasperReports Server setup.
+-   JasperReports Server setup.
 
 To configure OpenTelemetry and Jaeger in the JasperReports Server:
 
@@ -35,12 +35,12 @@ To configure OpenTelemetry and Jaeger in the JasperReports Server:
 
 3.  Go to the Tomcat bin directory of each JasperReports Server node and update the following arguments in the `setenv.sh` file of the Tomcat bin:
 
-    - `export JAVA_OPTS`: Provide the correct path of the javaagent where the javaagent is placed.
-    - `export OTEL_TRACES_EXPORTER`: Provide Jaeger exporter name as we are using Jaeger exporter to visualize the trace. You can provide the name of the respective exporter that you are using to visualize the traces.
-    - `export OTEL_EXPORTER_JAEGER_ENDPOINT`: Provide the correct hostname with port number. If you are using localhost, then provide the localhost name else provide the hostname directly.
-    - `export OTEL_RESOURCE_ATTRIBUTES=service.name`: In service name, provide `jasperserver-pro` service name.
-    - `export OTEL_JAVAAGENT_DEBUG`: The default value is false for this argument and is not editable.
-    - `export OTEL_METRICS_EXPORTER`: The default value is none for this argument and is not editable.
+    -   `export JAVA_OPTS`: Provide the correct path of the javaagent where the javaagent is placed.
+    -   `export OTEL_TRACES_EXPORTER`: Provide Jaeger exporter name as we are using Jaeger exporter to visualize the trace. You can provide the name of the respective exporter that you are using to visualize the traces.
+    -   `export OTEL_EXPORTER_JAEGER_ENDPOINT`: Provide the correct hostname with port number. If you are using localhost, then provide the localhost name else provide the hostname directly.
+    -   `export OTEL_RESOURCE_ATTRIBUTES=service.name`: In service name, provide `jasperserver-pro` service name.
+    -   `export OTEL_JAVAAGENT_DEBUG`: The default value is false for this argument and is not editable.
+    -   `export OTEL_METRICS_EXPORTER`: The default value is none for this argument and is not editable.
 
     ``` text
     export JAVA_OPTS="$JAVA_OPTS -javaagent:/opt/jaeger/opentelemetry-javaagent.jar"
@@ -79,7 +79,7 @@ This section includes steps for setting up the OpenTelemetry and Jaeger agent on
 
 The below prerequisites must be satisfied before configuring OpenTelemetry and Jaeger on the JasperReports Server cluster environment:
 
-- JasperReports Server cluster setup.
+-   JasperReports Server cluster setup.
 
 To configure OpenTelemetry and Jaeger in the JasperReports Server cluster environment:
 
@@ -89,12 +89,12 @@ To configure OpenTelemetry and Jaeger in the JasperReports Server cluster enviro
 
 3.  Go to the Tomcat bin directory of each JasperReports Server node and update the following arguments in the setenv.sh file of the Tomcat bin:
 
-    - `export JAVA_OPTS`: Provide the correct path of the javaagent where the javaagent is placed.
-    - `export OTEL_TRACES_EXPORTER`: Provide Jaeger exporter name as we are using Jaeger exporter to visualize the trace. You can provide the name of the respective exporter that you are using to visualize the traces.
-    - `export OTEL_EXPORTER_JAEGER_ENDPOINT`: Provide the correct hostname with port number. If you are using localhost, then provide the localhost name else provide the hostname directly.
-    - `export OTEL_RESOURCE_ATTRIBUTES=service.name`: In service name, provide jasperserver-pro service name.
-    - `export OTEL_JAVAAGENT_DEBUG`: The default value is false for this argument and is not editable.
-    - `export OTEL_METRICS_EXPORTER`: The default value is none for this argument and is not editable.
+    -   `export JAVA_OPTS`: Provide the correct path of the javaagent where the javaagent is placed.
+    -   `export OTEL_TRACES_EXPORTER`: Provide Jaeger exporter name as we are using Jaeger exporter to visualize the trace. You can provide the name of the respective exporter that you are using to visualize the traces.
+    -   `export OTEL_EXPORTER_JAEGER_ENDPOINT`: Provide the correct hostname with port number. If you are using localhost, then provide the localhost name else provide the hostname directly.
+    -   `export OTEL_RESOURCE_ATTRIBUTES=service.name`: In service name, provide jasperserver-pro service name.
+    -   `export OTEL_JAVAAGENT_DEBUG`: The default value is false for this argument and is not editable.
+    -   `export OTEL_METRICS_EXPORTER`: The default value is none for this argument and is not editable.
 
     !!! note
 
@@ -123,11 +123,11 @@ To configure OpenTelemetry and Jaeger in the JasperReports Server cluster enviro
 
         Before setting up the javaagent and Jaeger files, ensure that the root user has setup OTel and Jaeger in the respective folders and assigned permissions for the jasperserver user. If no files are set up, then the application misbehaves. In such cases, start the service by logging as a jasperserver user.
 
-7.  Start the Tomcat service to access Jaeger using the JasperReports Server URL: http://\<hostname\>:16686 to see traces of the JasperReports Server application node. As a result, Jaeger gets successfully configured with JasperReports Server and Jaeger running in two separate tabs in the browser.
+7.  Start the Tomcat service to access Jaeger using the JasperReports Server URL: http://&lt;hostname&gt;:16686 to see traces of the JasperReports Server application node. As a result, Jaeger gets successfully configured with JasperReports Server and Jaeger running in two separate tabs in the browser.
 
     !!! note
 
-        To view traces of the Load balancer, replace the hostname (http://\<hostname\>:16686) with the load balancer URL.
+        To view traces of the Load balancer, replace the hostname (http://&lt;hostname&gt;:16686) with the load balancer URL.
 
 By default, Jaeger shows traces of all the nodes of the JasperReports Server cluster. To view the spans and traces of a specific node of the cluster, segregate the traces of the specific node using the host.name tag under the tags option in Jaeger UI.
 

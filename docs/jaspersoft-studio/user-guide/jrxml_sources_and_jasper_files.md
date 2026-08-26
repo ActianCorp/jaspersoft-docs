@@ -7,16 +7,16 @@ description: "JasperReports defines a report with an jrdax file. A jrxml file is
 
 JasperReports defines a report with an jrdax file. A `jrxml` file is composed of a set of sections:
 
-- some concerned with the report’s physical characteristics (such as the dimensions of the page, positioning of the fields, and height of the bands).
+-   some concerned with the report’s physical characteristics (such as the dimensions of the page, positioning of the fields, and height of the bands).
 
-- some concerned with the logical characteristics (such as the declaration of the parameters and variables and the definition of a query for data selection).
+-   some concerned with the logical characteristics (such as the declaration of the parameters and variables and the definition of a query for data selection).
 
 ## The Report Lifecycle
 
 The life cycle of a JasperReport is divided into two phases:
 
-- Report development: designing and planning the report, creating a JRXML file, and compiling a Jasper file from the JRXML.
-- Report execution: loading the Jasper file, filling the report, and exporting the output (a Jasper print object) in a final format.
+-   Report development: designing and planning the report, creating a JRXML file, and compiling a Jasper file from the JRXML.
+-   Report execution: loading the Jasper file, filling the report, and exporting the output (a Jasper print object) in a final format.
 
 Jaspersoft Studio is primarily focused on report development, though it is able to preview the results and export it in all the supported formats. Jaspersoft Studio supports a wide range of data sources and allows users to create custom data sources, thereby becoming a complete environment for report development and testing.
 

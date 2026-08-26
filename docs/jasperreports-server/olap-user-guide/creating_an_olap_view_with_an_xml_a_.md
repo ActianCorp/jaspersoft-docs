@@ -9,13 +9,13 @@ An OLAP view can retrieve data from an XML/A connection. An XML/A connection is 
 
 To create an OLAP view with an XML/A connection:
 
-1.  Click **View \> Repository**.
+1.  Click **View &gt; Repository**.
 
     The repository appears.
 
-2.  In the Folder panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Views**.
+2.  In the Folder panel, navigate to **Organization &gt; Organization &gt; Analysis Components &gt; Analysis Views**.
 
-3.  Right-click the **Analysis Views** folder and select **Add Resource \> OLAP View** from the context menu.
+3.  Right-click the **Analysis Views** folder and select **Add Resource &gt; OLAP View** from the context menu.
 
     The **Name the View** page appears and prompts you to enter the basic details about the new view.
 
@@ -31,12 +31,13 @@ To create an OLAP view with an XML/A connection:
 
 6.  Click either:
 
-    - **Define a XML/A Client Connection in the next step** to add a new connection.
-    - **Select a XML/A Client Connection from the Repository** to select a data source from the repository.
+-   **Define a XML/A Client Connection in the next step** to add a new connection.
 
-    Click **Browse**, navigate to the location where you want to add the file, and click **Select**. Click **Next** and skip to step 9.
+    -   **Select a XML/A Client Connection from the Repository** to select a data source from the repository.
 
-7.  If you chose to create a client connection, the **Set Connection Type and Properties** page appears and prompts you to define the connection, Enter the requested information. For details, refer to [Working with XML/A Connections](working_with_xml_a_connections.md).
+Click **Browse**, navigate to the location where you want to add the file, and click **Select**. Click **Next** and skip to step 9.
+
+1.  If you chose to create a client connection, the **Set Connection Type and Properties** page appears and prompts you to define the connection, Enter the requested information. For details, refer to [Working with XML/A Connections](working_with_xml_a_connections.md).
 
     ![ja add view setconnectiontypeandpropertiesxmla](assets/images/ja-add-view-setconnectiontypeandpropertiesxmla.png)
 
@@ -46,7 +47,7 @@ To create an OLAP view with an XML/A connection:
 
         Your XML/A provider may be another JasperReports Server instance hosting Mondrian connections. For more information, refer to sections [Working with XML/A Connections](working_with_xml_a_connections.md) and [Working with XML/A Sources](working_with_xml_a_sources.md).
 
-8.  Click **Next**.
+2.  Click **Next**.
 
     The **Define the Query** page appears and prompts you for a query string.
 
@@ -54,16 +55,16 @@ To create an OLAP view with an XML/A connection:
 
     *Figure 3: Define the Query Page*
 
-9.  In the **Query String** field, enter the MDX query. For example, type:
+3.  In the **Query String** field, enter the MDX query. For example, type:
 
     `select {[Measures].[Unit Sales], [Measures].[Store Cost], [Measures].[Store Sales]} on columns, {([Promotion Media].[All Media], [Product].[All Products])} ON rows from Sales where ([Time].[2012].[Q4].[12])`
 
     To learn more about writing MDX queries, refer to the reference material listed in [External Information Resources](external_information_resources.md).
 
-10. Click **Submit**.
+4.  Click **Submit**.
 
     If the view passes validation, it is added to the repository. If you receive an error, it is likely that the problem is a typo in your query. Carefully review the query to ensure that it is valid.
 
-11. When you have ca valid OLAP view, clicking **Submit** adds it to the repository.
+5.  When you have ca valid OLAP view, clicking **Submit** adds it to the repository.
 
 If the view passes validation, it is added to the repository.

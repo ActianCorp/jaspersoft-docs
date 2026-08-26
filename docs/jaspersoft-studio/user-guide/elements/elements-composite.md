@@ -23,7 +23,7 @@ To create a composite element
 
     For example:
 
-    1.  Go to **File \> New \> Jasper Report** or click ![jss icon new report](../assets/images/jss-icon-new-report.png) on the main toolbar.
+    1.  Go to **File &gt; New &gt; Jasper Report** or click ![jss icon new report](../assets/images/jss-icon-new-report.png) on the main toolbar.
     2.  In the New Report Wizard, select Blank A4 in the Report Templates window and click **Next**.
     3.  Select a name and location for your file (for example, Composite Element Sample Report in MyReports) and click **Next**.
     4.  Choose **One Empty Record** in the Data Source window and click **Finish**.
@@ -36,9 +36,9 @@ To create a composite element
 
     For example, to create a footer that includes your company name and the page number:
 
-    1.  Drag the Static Text element to the Title band in your report and type My Company. Then align the company name to the left by right-clicking the Static Text element and selecting **Align in Container \> Align to Left Margin**.
-    2.  Drag the Page Number element to the Title band in your report. Align the Page Number to the right by right-clicking the Page Number element and selecting **Align in Container \> Align to Right Margin**. Then, with the Page Number element selected, go to the **Text Field** tab in the Properties view and click ![jss elements align text right](../assets/images/jss-elements-align-text-right.png) to align the text right.
-    3.  Select both elements, right-click, and choose Align Components \> Align Top.
+    1.  Drag the Static Text element to the Title band in your report and type My Company. Then align the company name to the left by right-clicking the Static Text element and selecting **Align in Container &gt; Align to Left Margin**.
+    2.  Drag the Page Number element to the Title band in your report. Align the Page Number to the right by right-clicking the Page Number element and selecting **Align in Container &gt; Align to Right Margin**. Then, with the Page Number element selected, go to the **Text Field** tab in the Properties view and click ![jss elements align text right](../assets/images/jss-elements-align-text-right.png) to align the text right.
+    3.  Select both elements, right-click, and choose Align Components &gt; Align Top.
 
 3.  Select all the elements that you want in your composite.
 
@@ -62,14 +62,14 @@ To create a composite element
 
 7.  Enter the following information:
 
-    - **Name**: Enter a unique name that you want to appear in the palette.
-    - **Description** (optional): Enter a description. If the element uses text fields or expressions, it may be useful to mention these, or the expected data adapter, in the description.
-    - **Icon** (optional): Choose the icon that shows in the palette for this composite element. You can choose an icon in JPG, PNG, or GIF format. If you click Browse to locate an icon, and you want to use a PNG or a GIF, you must choose the correct format at the bottom right of the file open dialog. If you do not choose an icon, Jaspersoft Studio uses the default icon ![jss elements icon composite](../assets/images/jss-elements-icon-composite.png).
-    - **Position in Palette**: Select one of Basic Elements, Composite Elements, or Components Pro.
+-   **Name**: Enter a unique name that you want to appear in the palette.
 
-8.  Click **Finish**.
+    -   **Description** (optional): Enter a description. If the element uses text fields or expressions, it may be useful to mention these, or the expected data adapter, in the description.
+    -   **Icon** (optional): Choose the icon that shows in the palette for this composite element. You can choose an icon in JPG, PNG, or GIF format. If you click Browse to locate an icon, and you want to use a PNG or a GIF, you must choose the correct format at the bottom right of the file open dialog. If you do not choose an icon, Jaspersoft Studio uses the default icon ![jss elements icon composite](../assets/images/jss-elements-icon-composite.png).
+    -   **Position in Palette**: Select one of Basic Elements, Composite Elements, or Components Pro.
 
-9.  Click **OK** on the confirmation message.
+1.  Click **Finish**.
+2.  Click **OK** on the confirmation message.
 
 The new composite element is saved as a .jrtool file in the same location as your report. An icon is added to the bottom of the subpalette that you selected.
 

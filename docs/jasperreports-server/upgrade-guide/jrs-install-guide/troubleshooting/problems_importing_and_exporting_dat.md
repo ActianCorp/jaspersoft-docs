@@ -17,7 +17,7 @@ An Upgrade usually requires exporting your database. If you're using MySQL and g
 
 `ResourceExporter.exportResource(ResourceExporter.java:258)`
 
-Check the URL in this file in \<js-install\>buildomatic/build_conf/default/; it should look like this:
+Check the URL in this file in &lt;js-install&gt;buildomatic/build_conf/default/; it should look like this:
 
 `jdbc:mysql://localhost:3306/jasperserver?useUnicode=true&characterEncoding=UTF-8`
 

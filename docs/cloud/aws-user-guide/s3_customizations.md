@@ -35,6 +35,6 @@ To upload your customization
 
     AWS uploads the file and stores it in the S3 bucket.
 
-11. With the configuration file in place, reboot or terminate the cluster from the **EC2** **\>** **Instances** **\>** **Instances** page.
+11. With the configuration file in place, reboot or terminate the cluster from the **EC2** **&gt;** **Instances** **&gt;** **Instances** page.
 
 When the cluster is rebooted or recreated, the changes based on the configuration file can be in place.

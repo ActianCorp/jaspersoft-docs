@@ -32,18 +32,18 @@ When you set a preview format, the report is automatically regenerated in the ch
 
 If you are exporting your report to PDF, choose a report template based on the size of the output.
 
-- For most PDF exports, you can use Actual Size, which supports a maximum size of 14,400 px by 14,400 px.
+-   For most PDF exports, you can use Actual Size, which supports a maximum size of 14,400 px by 14,400 px.
 
-- For reports with an output height exceeding 14,400 px, use a paginated report template that is wide enough for your report. For example, if you have a long report with width less than 842 px, you can use the paginated A4 Landscape theme. A report designer can create additional custom templates in Jaspersoft Studio.
+-   For reports with an output height exceeding 14,400 px, use a paginated report template that is wide enough for your report. For example, if you have a long report with width less than 842 px, you can use the paginated A4 Landscape theme. A report designer can create additional custom templates in Jaspersoft Studio.
 
-- Reports with output width exceeding 14,400 px are truncated in PDF.
+-   Reports with output width exceeding 14,400 px are truncated in PDF.
 
 ## Encrypting Report Output Format
 
 You can encrypt the report output format (.docx, xls, and .pptx) by adding the following properties into the JRXML file. For example:
 
-- `<property name="net.sf.jasperreports.export.docx.encryption.password" value="ABC"/>` - Used for encrypting the Microsoft word files.
+-   `<property name="net.sf.jasperreports.export.docx.encryption.password" value="ABC"/>` - Used for encrypting the Microsoft word files.
 
-- `<property name="net.sf.jasperreports.export.xls.encryption.password" value="pqr"/>` - Used for encrypting the Excel files.
+-   `<property name="net.sf.jasperreports.export.xls.encryption.password" value="pqr"/>` - Used for encrypting the Excel files.
 
-- `<property name="net.sf.jasperreports.export.pptx.encryption.password" value="123"/>` - Used for encrypting the PowerPoint presentation files.
+-   `<property name="net.sf.jasperreports.export.pptx.encryption.password" value="123"/>` - Used for encrypting the PowerPoint presentation files.

@@ -47,10 +47,10 @@ The internal process that calculates groups, dimensions, and members are called 
 
 In addition, dimensions and groups may be nested on several levels, for example Country, Province, and City. If your row data has 100 countries, and each country has 10 provinces, and each province has 10 cities or towns, there will be 100 x 10 x 10 = 10,000 rows in your full crosstab. If you also have two column dimension, each with 10 members, there will be 100 columns in your crosstab and one million cells when all dimensions are fully expanded. This scenario has several implications:
 
-- Nested dimensions and high cardinality dimensions quickly create huge crosstabs.
-- Huge crosstabs have a performance impact and take a long time to display and update.
-- Consider whether it is possible for users to actually read and interpret such a large crosstab.
-- Avoid dimensions with more than 10 members and avoid nesting many levels on each axis.
-- Use filters as input controls instead of hiding and expanding dimensions in the crosstab.
+-   Nested dimensions and high cardinality dimensions quickly create huge crosstabs.
+-   Huge crosstabs have a performance impact and take a long time to display and update.
+-   Consider whether it is possible for users to actually read and interpret such a large crosstab.
+-   Avoid dimensions with more than 10 members and avoid nesting many levels on each axis.
+-   Use filters as input controls instead of hiding and expanding dimensions in the crosstab.
 
 For example, it is unlikely that a user can read the expanded data for more than one country at a time. The large report in this example can be replaced with two reports, one that has only the country dimension and allows the user to compare aggregate values from all countries, and another that displays all provinces and cities for a single country selected by a dropdown filter list. Both reports will run much faster than the single large report, and the user will not be blocked waiting for the report to refresh.

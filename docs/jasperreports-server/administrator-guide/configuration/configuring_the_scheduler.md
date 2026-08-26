@@ -7,23 +7,23 @@ description: "The scheduler runs reports in the background according to a user-d
 
 The scheduler runs reports in the background according to a user-defined schedule (also called a job). You can configure the following aspects of the scheduler:
 
-- Configuring the Scheduler Misfire Policy
+-   Configuring the Scheduler Misfire Policy
 
-- Configuring Scheduler Failure Notifications
+-   Configuring Scheduler Failure Notifications
 
-- Restricting File System Output
+-   Restricting File System Output
 
-- Removing Report Scheduling Interval Options
+-   Removing Report Scheduling Interval Options
 
-- Adding a Holiday Exclusion Calendar
+-   Adding a Holiday Exclusion Calendar
 
-- Changing the Default Output Folder
+-   Changing the Default Output Folder
 
-- Configuring the Scheduler for Dashboards
+-   Configuring the Scheduler for Dashboards
 
-- [Configuring the Scheduler to Fetch Attributes](configuring_the_scheduler.md)
+-   [Configuring the Scheduler to Fetch Attributes](configuring_the_scheduler.md)
 
-- [Configuring Job Persistence for Immediate Execution Schedule](configuring_the_scheduler.md)
+-   [Configuring Job Persistence for Immediate Execution Schedule](configuring_the_scheduler.md)
 
 ## Configuring the Scheduler Misfire Policy
 
@@ -398,11 +398,9 @@ You can configure the following property to enable the scheduler to fetch attrib
 <ul>
 <li><code>none</code></li>
 <li><code>tenant</code></li>
-<li><code>hierarchical</code></li>
-</ul>
+<li><p><code>hierarchical</code></p>
 <p>By default, <code>notification.service.multiTenant.config=none</code></p>
-<p>If this property is set to <code>hierarchical</code>, the attribute is referred across all levels, starting from the user level. The server searches for an attribute with the given name in the following order, stopping and returning the first value that it finds:</p>
-<ul>
+<p>If this property is set to <code>hierarchical</code>, the attribute is referred across all levels, starting from the user level. The server searches for an attribute with the given name in the following order, stopping and returning the first value that it finds:</p></li>
 <li>At the user level, the server searches the attributes of the logged-in user and creates the bean with those attributes.</li>
 <li>If attribute is not found at user level, the server searches at organization or tenant level. In the organization attributes of the logged-in user's organization. The server also searches in all parent organizations and creates the bean with those attributes.</li>
 <li>If attributes are not found at user and organization or tenant level, attributes are searched at the server level and create the bean with those attributes.</li>
@@ -459,11 +457,9 @@ You can configure the following property to enable the scheduler to fetch attrib
 <ul>
 <li><code>none</code></li>
 <li><code>tenant</code></li>
-<li><code>hierarchical</code></li>
-</ul>
+<li><p><code>hierarchical</code></p>
 <p>By default, <code>notification.service.multiTenant.config=none</code></p>
-<p>If this property is set to <code>hierarchical</code>, the attribute is referred across all levels, starting from the user level. The server searches for the SendGrid attribute, (<code>sendGrid.api</code>) with value as the API ke,y with the given name in the following order, stopping and returning the first value that it finds:</p>
-<ul>
+<p>If this property is set to <code>hierarchical</code>, the attribute is referred across all levels, starting from the user level. The server searches for the SendGrid attribute, (<code>sendGrid.api</code>) with value as the API ke,y with the given name in the following order, stopping and returning the first value that it finds:</p></li>
 <li>At the user level, the server searches the attributes of the logged-in user and creates the bean with those attributes.</li>
 <li>If attribute is not found at user level, the server searches at organization level. It searches in the organization attributes of the logged-in user's organization and all parent organizations and creates the bean with those attributes.</li>
 <li>If attributes are not found at user or tenant level, attributes are searched at the server level and create the bean with those attributes.</li>

@@ -15,7 +15,7 @@ In this first example, we create a query-based input control that returns a list
 
 2.  Browse the repository and select the folder for the query-based input control.
 
-3.  Right click the folder's name and select **Add Resource \> Input Control**. The **Add Input Control** dialog appears.
+3.  Right click the folder's name and select **Add Resource &gt; Input Control**. The **Add Input Control** dialog appears.
 
     ![js AddInputControl Create](../assets/images/js-AddInputControl-Create.png)
 

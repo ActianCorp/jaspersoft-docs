@@ -19,18 +19,18 @@ This chapter describes how to install the WAR file on the Apache Tomcat and JBos
 
 This chapter contains the following sections:
 
-- [WAR File Distribution](war-overview.md)
+-   [WAR File Distribution](war-overview.md)
 
-- [Applications Supported by the WAR File Distribution](applications_supported_by_the_war_fi.md)
+-   [Applications Supported by the WAR File Distribution](applications_supported_by_the_war_fi.md)
 
-- [Installing the WAR File Using js-install Scripts](war_install_using_js_install.md)
+-   [Installing the WAR File Using js-install Scripts](war_install_using_js_install.md)
 
-- [Additional Steps for Using DB2 and js-install Scripts](additional_steps_for_using_db2_and_j.md)
+-   [Additional Steps for Using DB2 and js-install Scripts](additional_steps_for_using_db2_and_j.md)
 
-- [Starting JasperReports Server](starting_jasperreports_server.md)
+-   [Starting JasperReports Server](starting_jasperreports_server.md)
 
-- [Logging into JasperReports Server](war_logging_into_jrs.md)
+-   [Logging into JasperReports Server](war_logging_into_jrs.md)
 
-- [Troubleshooting Your JasperReports Server Configuration](war_troubleshooting_jrs.md)
+-   [Troubleshooting Your JasperReports Server Configuration](war_troubleshooting_jrs.md)
 
-- [Installing the WAR File Manually](war_install_manually.md)
+-   [Installing the WAR File Manually](war_install_manually.md)

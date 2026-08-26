@@ -35,9 +35,10 @@ To start the JasperReports IO reporting service
 3.  Run the start script to launch the web server.
 
     1.  If you are using Windows, run the `start.bat` script.
+
     2.  If you are using Linux or macOS, run `start.sh`.
 
-    The script starts the web server. The JasperReports IO web application is ready for use.
+        The script starts the web server. The JasperReports IO web application is ready for use.
 
 4.  To test the demo web application, open a browser and go to the following URL: `http://localhost:8080`.
 

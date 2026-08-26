@@ -17,6 +17,6 @@ On the **Parameters** tab, you can view the input controls that are currently ap
 
 !!! note
 
-    - This tab contains read-only information.
-    - To modify the input control values, close the Create Alert panel, open the input controls for the report, select the required values, and apply changes.
-    - The Parameters tab is disabled when the report does not have any input controls applied.
+    -   This tab contains read-only information.
+    -   To modify the input control values, close the Create Alert panel, open the input controls for the report, select the required values, and apply changes.
+    -   The Parameters tab is disabled when the report does not have any input controls applied.

@@ -11,13 +11,13 @@ To establish the report book pagination
 
 1.  In the Project Explorer, double-click to open **Content_Page_One.jrxml**.
 
-2.  On the Design tab, double-click the text field containing the expression **" "+\$V{PAGE_NUMBER}**.
+2.  On the Design tab, double-click the text field containing the expression **" "+$V{PAGE_NUMBER}**.
 
 3.  In the Expression Editor, and click **Variables** in the left panel.
 
 4.  Update the expression to the following:
 
-    **"Page "+\$V{MASTER_CURRENT_PAGE}+" of"**
+    **"Page "+$V{MASTER_CURRENT_PAGE}+" of"**
 
 5.  Click **Finish**.
 
@@ -25,7 +25,7 @@ To establish the report book pagination
 
 7.  Use the Evaluation Time drop-down menu to select **Master**.
 
-8.  Back in the Design tab, double-click the text field containing the expression **"Page "+\$V{PAGE_NUMBER}**.
+8.  Back in the Design tab, double-click the text field containing the expression **"Page "+$V{PAGE_NUMBER}**.
 
 9.  In the Expression Editor, and click **Variables** in the left panel.
 

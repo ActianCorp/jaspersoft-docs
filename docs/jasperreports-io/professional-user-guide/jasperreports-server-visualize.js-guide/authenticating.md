@@ -9,16 +9,16 @@ The initialization of the script sets the authentication method and credentials 
 
 This chapter contains the following sections:
 
-- Authentication Properties
-- Authentication Functions
-- Login With Plain Text Credentials
-- Login With SSO Token
-- Logging Out
-- Login With Hooks
-- UI for Login/Logout
-- UI for Login/Logout With SSO Token
-- Sharing Credentials Between Calls
-- Using Visualize.js Without Authentication
+-   Authentication Properties
+-   Authentication Functions
+-   Login With Plain Text Credentials
+-   Login With SSO Token
+-   Logging Out
+-   Login With Hooks
+-   UI for Login/Logout
+-   UI for Login/Logout With SSO Token
+-   Sharing Credentials Between Calls
+-   Using Visualize.js Without Authentication
 
 ## Authentication Properties
 
@@ -237,8 +237,8 @@ If you have external authentication providers, you can invoke their login and lo
 
 The functions you define for login and logout must return a deferred object and accept two arguments:
 
-- `properties`: An object that contains all the required authentication properties.
-- `request`: A request function your function can use to perform authentication from a website.
+-   `properties`: An object that contains all the required authentication properties.
+-   `request`: A request function your function can use to perform authentication from a website.
 
 ``` javascript
 var authentication = new Authentication({

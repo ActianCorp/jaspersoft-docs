@@ -36,7 +36,7 @@ To define the jasperserver JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jasperserver** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -87,7 +87,7 @@ To define the jsSystemAnalytics JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsSystemAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -138,7 +138,7 @@ To define the jsaudit JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -154,70 +154,74 @@ To define custom properties
 
 4.  Scroll down the list of properties and select **databaseName**. Set the value to
 
-    - For Compact installation: `jasperserver`
-    - For Split installation: `jsaudit`
+-   For Compact installation: `jasperserver`
 
-5.  Create a new property called **url**. Enter the following value and save the change:
+    -   For Split installation: `jsaudit`
 
-    - For Compact installation: `jdbc:mysql://localhost/jasperserver?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
-    - For Split installation: `jdbc:mysql://localhost/jsaudit?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
+        1.  Create a new property called **url**. Enter the following value and save the change:
 
-6.  Click **Save directly to the master configuration**.
+    -   For Compact installation: `jdbc:mysql://localhost/jasperserver?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
 
-To define the jsAuditAnalytics JDBC data source and expose it through JNDI
+    -   For Split installation: `jdbc:mysql://localhost/jsaudit?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
 
-1.  Click the name of the JDBC provider that you just created. For example, **MySQL JDBC Provider**.
+        1.  Click **Save directly to the master configuration**.
 
-2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
+        To define the jsAuditAnalytics JDBC data source and expose it through JNDI
 
-3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
+        1.  Click the name of the JDBC provider that you just created. For example, **MySQL JDBC Provider**.
 
-4.  Enter the data source name:` jsAuditAnalytics`
+        2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
 
-5.  Enter the JNDI name: `jdbc/jasperserverAuditAnalytics`
+        3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
 
-6.  Click **Next**, choose **Select an existing JDBC provider**, then select **MySQL JDBC Provider** from the drop-down list.
+        4.  Enter the data source name:` jsAuditAnalytics`
 
-7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the checkbox to use this data source in container managed persistence (CMP).
+        5.  Enter the JNDI name: `jdbc/jasperserverAuditAnalytics`
 
-8.  Click **Next** and select the Setup security aliases:
+        6.  Click **Next**, choose **Select an existing JDBC provider**, then select **MySQL JDBC Provider** from the drop-down list.
 
-    | Field Name                             | MySQL Value             |
-    |----------------------------------------|-------------------------|
-    | Component-managed authentication alias | `mysql_jasperdb`        |
-    | Mapping configuration alias            | DefaultPrincipalMapping |
-    | Container-managed authentication alias | `mysql_jasperdb`        |
+        7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the checkbox to use this data source in container managed persistence (CMP).
 
-9.  Click `Next`, review the summary information, and click `Finish`.
+        8.  Click **Next** and select the Setup security aliases:
 
-To set the connection pool size
+            | Field Name                             | MySQL Value             |
+            |----------------------------------------|-------------------------|
+            | Component-managed authentication alias | `mysql_jasperdb`        |
+            | Mapping configuration alias            | DefaultPrincipalMapping |
+            | Container-managed authentication alias | `mysql_jasperdb`        |
 
-1.  In the list of JDBC data sources, click the newly created **jsAuditAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
-3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
-4.  Click **Save**.
+        9.  Click `Next`, review the summary information, and click `Finish`.
 
-To define custom properties
+        To set the connection pool size
 
-1.  In the list of JDBC data sources, select the checkbox for the newly created **jsAuditAnalytics** data source and click **Test Connection**.
+        1.  In the list of JDBC data sources, click the newly created **jsAuditAnalytics** data source to edit it.
+        2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+        3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
+        4.  Click **Save**.
 
-    In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
+        To define custom properties
 
-2.  Navigate to the **jsaudit** data sources **General Properties** page.
+        1.  In the list of JDBC data sources, select the checkbox for the newly created **jsAuditAnalytics** data source and click **Test Connection**.
 
-3.  In **Additional Properties** on the right side of the **General Properties** page, click **Custom properties**.
+            In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
 
-4.  Scroll down the list of properties and select **databaseName**. Set the value to
+        2.  Navigate to the **jsaudit** data sources **General Properties** page.
 
-    - For Compact installation: `jasperserver`
-    - For Split installation: `jsaudit`
+        3.  In **Additional Properties** on the right side of the **General Properties** page, click **Custom properties**.
 
-5.  Create a new property called **url**. Enter the following value and save the change:
+        4.  Scroll down the list of properties and select **databaseName**. Set the value to
 
-    - For Compact installation: `jdbc:mysql://localhost/jasperserver?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
-    - For Split installation: `jdbc:mysql://localhost/jsaudit?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
+    -   For Compact installation: `jasperserver`
 
-6.  Click **Save directly to the master configuration**.
+    -   For Split installation: `jsaudit`
+
+        1.  Create a new property called **url**. Enter the following value and save the change:
+
+    -   For Compact installation: `jdbc:mysql://localhost/jasperserver?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
+
+    -   For Split installation: `jdbc:mysql://localhost/jsaudit?useUnicode=true&amp;characterEncoding=UTF-8&amp;tinyInt1isBit=false&amp;allowPublicKeyRetrieval=true`
+
+1.  Click **Save directly to the master configuration**.
 
 To create optional sugarcrm and foodmart data sources
 
@@ -288,7 +292,7 @@ To define the JSPRSRVR JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **JSPRSRVR** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -348,7 +352,7 @@ To define the jsSystemAnalytics JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsSystemAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -433,7 +437,7 @@ To define the jsaudit JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -545,7 +549,7 @@ To define the jsAuditAnalytics JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsAuditAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -709,7 +713,7 @@ To define the jasperserver JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jasperserver** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -758,7 +762,7 @@ To define the jsSystemAnalytics JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsSystemAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -807,7 +811,7 @@ To define the jsaudit JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -856,7 +860,7 @@ To define the jsAuditAnalytics JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsAuditAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -954,7 +958,7 @@ To define the jasperserver JDBC provider
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jasperserver** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -991,7 +995,7 @@ To define the jsSystemAnalytics JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsSystemAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -1028,7 +1032,7 @@ To define the jsaudit JDBC provider
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 
@@ -1065,7 +1069,7 @@ To define the jsAuditAnalytics JDBC data source and expose it through JNDI
 To set the connection pool size
 
 1.  In the list of JDBC data sources, click the newly created **jsAuditAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
 3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
 4.  Click **Save**.
 

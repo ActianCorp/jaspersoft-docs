@@ -11,30 +11,30 @@ When you generate a report, chart data is collected and stored within the chart'
 
 The chart types are:
 
-- Pie
+-   Pie
 
-- Category
+-   Category
 
-- Time period
+-   Time period
 
-- Time series
+-   Time series
 
-- XY
+-   XY
 
-- XYZ
+-   XYZ
 
-- High low
+-   High low
 
-- Value
+-   Value
 
 This chapter has the following sections:
 
-- [Creating a Simple Chart](charts-creating-simple.md)
+-   [Creating a Simple Chart](charts-creating-simple.md)
 
-- [Setting Chart Properties](charts-properties.md)
+-   [Setting Chart Properties](charts-properties.md)
 
-- [Spider Charts](charts-spider.md)
+-   [Spider Charts](charts-spider.md)
 
-- [Chart Themes](charts-themes-using.md)
+-   [Chart Themes](charts-themes-using.md)
 
-- [Working with Chart Customizers](charts-customizers.md)
+-   [Working with Chart Customizers](charts-customizers.md)

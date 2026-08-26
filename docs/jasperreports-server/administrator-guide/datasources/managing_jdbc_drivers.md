@@ -7,37 +7,37 @@ description: "To access a database from JasperReports Server using JDBC, you nee
 
 To access a database from JasperReports Server using JDBC, you need an appropriate driver that is accessible in the server's classpath. The following drivers are pre-configured by default:
 
-- Snowflake (`net.snowflake.client.jdbc.SnowflakeDriver`)
+-   Snowflake (`net.snowflake.client.jdbc.SnowflakeDriver`)
 
-- Hive (`com.cloudera.hive.jdbc.HS2Driver`)
+-   Hive (`com.cloudera.hive.jdbc.HS2Driver`)
 
-- SparkSQL (`com.ddtek.jdbc.sparksql.SparkSQLDriver`)
+-   SparkSQL (`com.ddtek.jdbc.sparksql.SparkSQLDriver`)
 
-- Impala (`com.cloudera.impala.jdbc.Driver`)
+-   Impala (`com.cloudera.impala.jdbc.Driver`)
 
-- Neo4j (`com.simba.neo4j.jdbc.Driver`)
+-   Neo4j (`com.simba.neo4j.jdbc.Driver`)
 
-- Elasticsearch (`org.elasticsearch.xpack.sql.jdbc.EsDriver`)
+-   Elasticsearch (`org.elasticsearch.xpack.sql.jdbc.EsDriver`)
 
-- Cassandra (`com.simba.cassandra.jdbc42.Driver`)
+-   Cassandra (`com.simba.cassandra.jdbc42.Driver`)
 
-- Native MongoDB
+-   Native MongoDB
 
 Drivers for other databases can be downloaded from links on the [Jaspersoft community website](http://community.jaspersoft.com/wiki/downloading-and-installing-database-drivers):
 
 The system administrator (`superuser`) can add JDBC drivers for other databases in the following ways:
 
-- During installation. For more information, see the JasperReports Server Installation Guide.
+-   During installation. For more information, see the JasperReports Server Installation Guide.
 
-- Through the UI, if the setting is enabled in `js.config.properties`. As described in the following procedures, the system admin can add, replace, or remove JDBC drivers through the user interface, without needing to restart the server.
+-   Through the UI, if the setting is enabled in `js.config.properties`. As described in the following procedures, the system admin can add, replace, or remove JDBC drivers through the user interface, without needing to restart the server.
 
 By default, no one can upload or update JAR files for JDBC drivers from the UI. Only the system administrator (`superuser`) can enable the setting and then manage the JDBC drivers, but once uploaded, the JDBC drivers are available to all administrators who create data sources. For more information, see the following sections:
 
-- Enabling JDBC Driver Uploads
+-   Enabling JDBC Driver Uploads
 
-- Adding a JDBC Driver
+-   Adding a JDBC Driver
 
-- Updating a JDBC Driver
+-   Updating a JDBC Driver
 
 !!! note
 
@@ -81,9 +81,9 @@ Result: The **Select Driver** button for JAR upload should be disabled.
 
 For more information, see the following sections:
 
-- Adding a JDBC Driver
+-   Adding a JDBC Driver
 
-- Updating a JDBC Driver
+-   Updating a JDBC Driver
 
 !!! note
 
@@ -95,7 +95,7 @@ For more information, see the following sections:
 
 2.  Enable JDBC driver uploads, as described in Enabling JDBC Driver Uploads.
 
-3.  Select **View \> Repository**, right-click a folder's name, and select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page.
+3.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page.
 
 4.  In the **Type** field, select **JDBC Data Source**. The page refreshes to show the fields necessary for a JDBC data source.
 
@@ -125,7 +125,7 @@ You can replace any driver that you upload with newer versions of the same drive
 
 2.  Enable JDBC driver uploads, as described in Enabling JDBC Driver Uploads.
 
-3.  Select **View \> Repository**, right-click a folder's name, and select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page.
+3.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page.
 
 4.  In the **Type** field, select **JDBC Data Source**.
 
@@ -149,7 +149,7 @@ You can replace any driver that you upload with newer versions of the same drive
 
 1.  Log in as the system administrator (`superuser`).
 
-2.  Select **Manage \> Server Settings** and choose **Restore Defaults** from the left-hand panel.
+2.  Select **Manage &gt; Server Settings** and choose **Restore Defaults** from the left-hand panel.
 
 3.  Locate the driver you uploaded in the list of properties. The drivers with the value **\[SYSTEM\]** are the default drivers configured at installation time. Do not remove the **\[SYSTEM\]** drivers.
 

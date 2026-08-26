@@ -9,11 +9,11 @@ On-Line Analytical Processing (OLAP) entails analyzing quantitative and categori
 
 Generally, the people most interested in OLAP applications are technical business analysts with in-depth knowledge of their data and basic capability in analysis. From their perspective, OLAP systems answer five questions:
 
-- Who buys the product?
-- What products are they buying?
-- Where are the most successful stores?
-- When are sales being made?
-- Why are certain products are sold, and under which promotional conditions?
+-   Who buys the product?
+-   What products are they buying?
+-   Where are the most successful stores?
+-   When are sales being made?
+-   Why are certain products are sold, and under which promotional conditions?
 
 You can derive the answers to these questions from a special data structure known as a cube. A cube contains all the data pertaining to a single business context, such as sales activities and customer demographics. To analyze the data in the cube, use the Jaspersoft OLAP web interface to slice and dice, expand and collapse, zoom in and out, and drill-through. For more information on these operations, see [Using the OLAP View Tools](../analyze-data/using_the_olap_view_tools.md).
 

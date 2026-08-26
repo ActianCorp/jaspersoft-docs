@@ -5,11 +5,11 @@ description: This section describes start and stop procedures that vary dependin
 
 # Starting and Stopping the Server
 
-- Start/Stop Menu — Windows
+-   Start/Stop Menu — Windows
 
-- Start/Stop Scripts — Linux
+-   Start/Stop Scripts — Linux
 
-- Start/Stop Apps — Mac OSX
+-   Start/Stop Apps — Mac OSX
 
 ## Start/Stop Menu—Windows
 
@@ -19,15 +19,15 @@ This section describes start and stop procedures that vary depending on whether 
 
 If you installed the bundled Tomcat and PostgreSQL, use the Windows Start menu to start and stop JasperReports Server.
 
-- Click **Start \> JasperReports Server \> Start Service**.
+-   Click **Start &gt; JasperReports Server &gt; Start Service**.
 
-- Click **Start \> JasperReports Server \> Stop Service.**
+-   Click **Start &gt; JasperReports Server &gt; Stop Service.**
 
 ### Additional Information about the Bundled Tomcat and PostgreSQL
 
 The Windows installer installs PostgreSQL and Tomcat as Windows Services. You can manage these services in the Windows Control Panel:
 
-**Control Panel \> System and Security \> Administrative Tools \> Services**
+**Control Panel &gt; System and Security &gt; Administrative Tools &gt; Services**
 
 You can also start JasperReports Server from the Windows Start menu or by using the Desktop icon. You can shut down using the Desktop icon.
 
@@ -35,21 +35,21 @@ You can also start JasperReports Server from the Windows Start menu or by using 
 
 PostgreSQL and Tomcat, installed as Windows Services, are listed in the Windows Services Panel as:
 
-- `jasperreportsPostgreSQL`
+-   `jasperreportsPostgreSQL`
 
-- `jasperreportsTomcat`
+-   `jasperreportsTomcat`
 
 #### Preventing JasperReports Server from starting up automatically
 
 By default, the bundled services start automatically on a reboot, which also starts JasperReports Server. To change the startup mode for the services from automatic to manual:
 
-- In the Windows Services Panel, select `jasperreportsTomcat`.
+-   In the Windows Services Panel, select `jasperreportsTomcat`.
 
-- Right-click the `jasperreportsTomcat` service, and select Properties.
+-   Right-click the `jasperreportsTomcat` service, and select Properties.
 
-- Change the Startup type dropdown setting from Automatic to Manual.
+-   Change the Startup type dropdown setting from Automatic to Manual.
 
-- Follow the same steps for `jasperreportsPostgreSQL` service.
+-   Follow the same steps for `jasperreportsPostgreSQL` service.
 
 To start JasperReports Server from the Windows Services Panel:
 
@@ -61,7 +61,7 @@ To start JasperReports Server from the CMD Shell:
 
 1.  Open a Windows CMD Shell.
 
-2.  Navigate to the root of the \<js-install\> folder (for example, C:\Jaspersoft\\10.1.0)
+2.  Navigate to the root of the &lt;js-install&gt; folder (for example, C:\\Jaspersoft\\10.1.0)
 
     1.  To start JasperReports Server, run the following command:
 
@@ -75,9 +75,9 @@ Running Processes
 
 When JasperReports Server is running, the Windows Task Manager lists information about the processes running under the SYSTEM username, for example:
 
-- `postgres.exe`
+-   `postgres.exe`
 
-- `tomcat9.exe`
+-   `tomcat9.exe`
 
 ### Start/Stop Scripts—No Bundled Applications
 
@@ -100,17 +100,17 @@ This section describes start and stop procedures that vary depending on whether 
 
 You typically start and stop JasperReports Server at the Linux command line. Run the following commands in a Linux shell.
 
-- To start JasperReports Server, enter:
+-   To start JasperReports Server, enter:
 
-  `cd <js-install>`
+    `cd <js-install>`
 
-  `./ctlscript.sh start`
+    `./ctlscript.sh start`
 
-- To stop JasperReports Server, enter:
+-   To stop JasperReports Server, enter:
 
-  `cd <js-install>`
+    `cd <js-install>`
 
-  `./ctlscript.sh stop`
+    `./ctlscript.sh stop`
 
 To start and stop individual components:
 
@@ -153,39 +153,39 @@ After you complete the Mac OSX installation, you typically find JasperReports Se
 
 When JasperReports Server is running, you can see the names of the Java and PostgreSQL processes in the Activity Monitor.
 
-- To start JasperReports Server, locate this folder in the Finder and double-click the following app:
+-   To start JasperReports Server, locate this folder in the Finder and double-click the following app:
 
 `jasperServerStart.app`
 
-- To stop JasperReports Server, locate this folder in the Finder and double-click the following app:
+-   To stop JasperReports Server, locate this folder in the Finder and double-click the following app:
 
 `jasperServerStop.app`
 
 The Mac lists the following information in the Activity Monitor:
 
-- Java
+-   Java
 
 Or
 
 `org.apache.catalina.startup.Bootstrap`
 
-- PostgreSQL
+-   PostgreSQL
 
 ### Start/Stop Apps—Mac Dock
 
 Using Finder, move the following apps into the Mac Dock to start, stop, and log in to JasperReports Server:
 
-- `jasperServerStart.app`
+-   `jasperServerStart.app`
 
-- `jasperServerStop.app`
+-   `jasperServerStop.app`
 
-- `jasperServerLogin.app`
+-   `jasperServerLogin.app`
 
 ### Start/Stop JasperReports Server — Mac Terminal Shell
 
 To start and stop JasperReports Server using the Mac terminal shell:
 
-1.  Open a Terminal shell (**Finder \> Go \> Utilities \> Terminal Icon**).
+1.  Open a Terminal shell (**Finder &gt; Go &gt; Utilities &gt; Terminal Icon**).
 
 2.  Navigate to the `<js-install>` folder. For instance: `/Applications/`10.1.0
 

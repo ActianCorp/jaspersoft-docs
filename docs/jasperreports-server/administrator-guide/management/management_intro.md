@@ -15,7 +15,7 @@ Attributes are name-value pairs that can be defined on users, organizations, and
 
 This chapter contains the following sections:
 
-- [Managing Organizations](managing_organizations.md)
-- [Managing Users](managing_users.md)
-- [Managing Roles](managing_roles.md)
-- [Managing Attributes](managing_attributes.md)
+-   [Managing Organizations](managing_organizations.md)
+-   [Managing Users](managing_users.md)
+-   [Managing Roles](managing_roles.md)
+-   [Managing Attributes](managing_attributes.md)

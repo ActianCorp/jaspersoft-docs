@@ -19,7 +19,6 @@ Applies to Jaspersoft **10.1.0**.
 - [JasperReports Server APIs](api/api.md)
 - [Customizing the User Interface](customizing/customizing-the-user-interface.md)
 - [Designing a Cluster](clustering/clustering.md)
-- [Glossary](glossary/glossary.md)
-- [TIBCO Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
+- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
 - [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
 - [Additional Topics](customizing/adding-custom-export-channels.md)

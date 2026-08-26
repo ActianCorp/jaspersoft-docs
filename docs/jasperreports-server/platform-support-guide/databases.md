@@ -7,13 +7,13 @@ description: "The following table lists databases that are supported for:"
 
 The following table lists databases that are supported for:
 
-- JasperReports® Server 10.1.0
+-   JasperReports® Server 10.1.0
 
-- Jaspersoft® Studio Pro 10.1.0
+-   Jaspersoft® Studio Pro 10.1.0
 
-- JasperReports® IO Pro 10.1.0
+-   JasperReports® IO Pro 10.1.0
 
-- JasperReports® Web Studio Pro 10.1.0
+-   JasperReports® Web Studio Pro 10.1.0
 
 Database
 
@@ -45,12 +45,12 @@ Certified
 
 MySQL
 
-- 8.4
+-   8.4
 
 <!-- -->
 
-- Data Source
-- Repository
+-   Data Source
+-   Repository
 
 Certified
 
@@ -58,14 +58,14 @@ Certified
 
 Oracle RDBMS
 
-- 19c
-- 23ai
-- 26ai
+-   19c
+-   23ai
+-   26ai
 
 <!-- -->
 
-- Data Source
-- Repository
+-   Data Source
+-   Repository
 
 Certified
 
@@ -73,15 +73,15 @@ Certified
 
 PostgreSQL
 
-- 14
-- 15
-- 16
-- 17
+-   14
+-   15
+-   16
+-   17
 
 <!-- -->
 
-- Data Source
-- Repository
+-   Data Source
+-   Repository
 
 Certified
 
@@ -89,12 +89,12 @@ Certified
 
 IBM DB2
 
-- 11.5
+-   11.5
 
 <!-- -->
 
-- Data Source
-- Repository
+-   Data Source
+-   Repository
 
 Certified
 
@@ -102,15 +102,15 @@ Certified
 
 Microsoft SQL Server
 
-- 2016
-- 2017
-- 2019
-- 2022
+-   2016
+-   2017
+-   2019
+-   2022
 
 <!-- -->
 
-- Data Source
-- Repository
+-   Data Source
+-   Repository
 
 Certified
 
@@ -118,7 +118,7 @@ Certified
 
 Microsoft SQL Azure
 
-- Latest
+-   Latest
 
 Data Source
 
@@ -132,7 +132,7 @@ Compatible
 
 Sybase ASE
 
-- 15.7
+-   15.7
 
 Data Source
 
@@ -140,7 +140,7 @@ Compatible
 
 Sybase SQL Anywhere
 
-- 17
+-   17
 
 Data Source
 
@@ -148,9 +148,9 @@ Compatible
 
 
 
-ElasticSearchRefer to the JasperReports® Server Release Notes for limitations with ElasticSearch.
+ElasticSearch<span class="jsd-footnote-ref">^1^</span> <span class="jsd-footnote">Refer to the JasperReports® Server Release Notes for limitations with ElasticSearch.</span>
 
-- 8.12.1
+-   8.12.1
 
 Data Source
 
@@ -158,7 +158,7 @@ Certified
 
 Neo4j
 
-- 4.0.4
+-   4.0.4
 
 Data Source
 
@@ -172,18 +172,22 @@ Certified
 
 TIBCO Data Virtualization
 
-- 8.8.x
+-   8.8.x
 
 Data Source
 
 Certified
 
-AWS Athena
+AWS Athena<span class="jsd-footnote-ref">^2^</span>
+
+<div class="jsd-footnote">
 
 Only databases under the default catalog (AwsDataCatalog) will be displayed.
 
-- 2
-- 3
+</div>
+
+-   2
+-   3
 
 Data Source
 
@@ -197,18 +201,22 @@ Certified
 
 AWS RDS - PostgreSQL
 
-- 12
-- 13
-- 14
-- 15
+-   12
+-   13
+-   14
+-   15
 
 Data Source
 
 Certified
 
-REST API
+REST API<span class="jsd-footnote-ref">^3^</span>
+
+<div class="jsd-footnote">
 
 It is Compatible and tested only for Progress driver.
+
+</div>
 
 Data Source
 
@@ -256,13 +264,13 @@ Compatible only if the database complies to JDBC 2.1 and later standard.
 
 The following table lists JDBC Drivers that are supported for:
 
-- JasperReports® Server 10.1.0
+-   JasperReports® Server 10.1.0
 
-- Jaspersoft® Studio Pro 10.1.0
+-   Jaspersoft® Studio Pro 10.1.0
 
-- JasperReports® IO Pro 10.1.0
+-   JasperReports® IO Pro 10.1.0
 
-- JasperReports® Web Studio Pro 10.1.0
+-   JasperReports® Web Studio Pro 10.1.0
 
 !!! note
 
@@ -329,31 +337,31 @@ The following table lists JDBC Drivers that are supported for:
 
 The following data sources are tested for Progress Driver replacement:
 
-- Elasticsearch
+-   Elasticsearch
 
-- Neo4j
+-   Neo4j
 
-- MongoDB
+-   MongoDB
 
-- Apache Hive
+-   Apache Hive
 
-- Impala
+-   Impala
 
-- Cassandra
+-   Cassandra
 
-- Spark SQL
+-   Spark SQL
 
-- Apache Spark
+-   Apache Spark
 
-- Snowflake
+-   Snowflake
 
-- Mongo DB native
+-   Mongo DB native
 
-- Azure SQL
+-   Azure SQL
 
-- Google BigQuery
+-   Google BigQuery
 
-- Autonomous REST JDBC
+-   Autonomous REST JDBC
 
 For details, see the JasperReports Server Administrator Guide.
 

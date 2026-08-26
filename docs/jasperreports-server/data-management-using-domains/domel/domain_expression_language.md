@@ -7,23 +7,23 @@ description: "A DomEL expression is a shorthand way of writing a complex query. 
 
 A DomEL expression is a shorthand way of writing a complex query. Many components of a Domain need to compute values based on some expression involving constants, field values, and environment variables. The Domain Expression Language (DomEL) was created to fill this need. Currently, the following features in XML design files are expressed in DomEL:
 
-- The `IN` clause for custom joins
-- Calculated fields
-- Filter expressions in Domains and Domain topics (equivalent to `where` clauses)
-- Server attribute values (see [Using Server Attributes in Design Files](../domain_syntax/using_server_attributes.md))
-- Row-level security (see [Securing Data in a Domain](../domain_security/securing_data_in_a_domain.md))
+-   The `IN` clause for custom joins
+-   Calculated fields
+-   Filter expressions in Domains and Domain topics (equivalent to `where` clauses)
+-   Server attribute values (see [Using Server Attributes in Design Files](../domain_syntax/using_server_attributes.md))
+-   Row-level security (see [Securing Data in a Domain](../domain_security/securing_data_in_a_domain.md))
 
 When processing a report based on a Domain, the server interprets DomEL expressions to generate parts of the SQL expression that perform the desired query. Depending on the data policy, either the augmented SQL is passed to the data source, or the server performs a simpler query and applies the DomEL expressions to the full dataset in memory.
 
 This chapter contains the following sections:
 
-- Datatypes
-- [Field References](field_references.md)
-- [Operators and Functions](operators_and_functions.md)
-- [SQL Functions](sql_functions.md)
-- [The groovy() Function](sql_functions.md)
-- [Complex Expressions](sql_functions.md)
-- [Return Types](return_types.md)
+-   Datatypes
+-   [Field References](field_references.md)
+-   [Operators and Functions](operators_and_functions.md)
+-   [SQL Functions](sql_functions.md)
+-   [The groovy() Function](sql_functions.md)
+-   [Complex Expressions](sql_functions.md)
+-   [Return Types](return_types.md)
 
 ## Datatypes
 

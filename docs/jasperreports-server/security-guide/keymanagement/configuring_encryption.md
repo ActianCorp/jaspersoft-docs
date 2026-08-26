@@ -13,15 +13,15 @@ However, the specifics of configuring encryption in JasperReports Server are bey
 
 Before you consider modifying the encryption configuration, keep in mind the following:
 
-- Always make a backup of the server and original keystore files before configuring encryption. The keystore files are unique to every installation and the server is inaccessible without them.
-- If you need to modify the encryption settings, do it before provisioning your server with production data.
-- Even if the server has no production data, you should export the entire repository along with the export key before proceeding. Default accounts such as superuser and jasperadmin must be reimported later to work with your new encryption settings.
-- You must be familiar with the cryptographic concepts and details of the keystore APIs. For more information, see the Java Cryptography Architecture (JCA) Reference Guide and its section on [key management](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#KeyManagement).
-- Encryption may be configured in the .jrsksp file and also in beans and properties in other configuration files. This may create a complex configuration where values override other settings, and what appears in the keystore properties file may not be the final configuration at runtime. While this may be desirable or necessary for your configuration, it creates complex dependencies and risk.
-- Be sure to document your new configuration, including any secondary configuration file dependencies.
-- Incorrect configuration of the keystore or importing with the wrong keys may corrupt your data or make it impossible to access the server. Therefore, it is critical to know and test your encryption configuration and import procedure. Testing on an isolated and empty evaluation server instance is recommended.
-- Be sure to securely delete any draft copies of your encryption configuration and wipe any test servers to ensure the security of your production server.
-- After configuring the encryption, importing your export catalog, and testing your server, remember to back up your new keystore files, including any other configuration files that may contribute to the encryption settings.
+-   Always make a backup of the server and original keystore files before configuring encryption. The keystore files are unique to every installation and the server is inaccessible without them.
+-   If you need to modify the encryption settings, do it before provisioning your server with production data.
+-   Even if the server has no production data, you should export the entire repository along with the export key before proceeding. Default accounts such as superuser and jasperadmin must be reimported later to work with your new encryption settings.
+-   You must be familiar with the cryptographic concepts and details of the keystore APIs. For more information, see the Java Cryptography Architecture (JCA) Reference Guide and its section on [key management](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#KeyManagement).
+-   Encryption may be configured in the .jrsksp file and also in beans and properties in other configuration files. This may create a complex configuration where values override other settings, and what appears in the keystore properties file may not be the final configuration at runtime. While this may be desirable or necessary for your configuration, it creates complex dependencies and risk.
+-   Be sure to document your new configuration, including any secondary configuration file dependencies.
+-   Incorrect configuration of the keystore or importing with the wrong keys may corrupt your data or make it impossible to access the server. Therefore, it is critical to know and test your encryption configuration and import procedure. Testing on an isolated and empty evaluation server instance is recommended.
+-   Be sure to securely delete any draft copies of your encryption configuration and wipe any test servers to ensure the security of your production server.
+-   After configuring the encryption, importing your export catalog, and testing your server, remember to back up your new keystore files, including any other configuration files that may contribute to the encryption settings.
 
 For security, the .jrsksp file is Base64 encoded so that it is not a plain text file. To read and modify the file, the system user who installed the server must decode the file, for example:
 
@@ -85,8 +85,8 @@ In previous releases of the server, encryption was often defined in configuratio
 
 The following sections describe legacy encryption configurations that have been replaced by the keystore functionality, but could be used as documentation for advanced encryption configuration. In general, if you configure a key through a configuration file, it is used instead of the key from the keystore:
 
-- [Static Key Encryption](../user-security/encrypting_user_session_login.md) for HTTP parameters.
+-   [Static Key Encryption](../user-security/encrypting_user_session_login.md) for HTTP parameters.
 
-- [Encrypting User Passwords](../user-security/encrypting_user_passwords.md) in the internal database.
+-   [Encrypting User Passwords](../user-security/encrypting_user_passwords.md) in the internal database.
 
-- [Encryption Options](../application-security/encrypting_passwords_in_files.md) for encrypting passwords in configuration files.
+-   [Encryption Options](../application-security/encrypting_passwords_in_files.md) for encrypting passwords in configuration files.

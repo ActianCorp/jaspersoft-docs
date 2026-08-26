@@ -11,22 +11,29 @@ JasperReports Server also includes a native Cassandra driver, which has been dep
 
 The native driver for the Cassandra data source has certain limitations on how your data can be structured and accessed:
 
-- The current version of Cassandra does not support NULL values in the data. All required fields must have non-NULL default values. This also means that input controls cannot be null and must be given a value.
-- The current version of the driver does not support aggregate functions (sum, min, max).
-- For query parameters, the current version of the driver supports \$X(IN...), but no other \$X functions.
+-   The current version of Cassandra does not support NULL values in the data. All required fields must have non-NULL default values. This also means that input controls cannot be null and must be given a value.
 
-The Cassandra data source supports queries in the Cassandra Query Language 3 (CQL3). To improve performance, design your Cassandra data using the following guidelines:
+-   The current version of the driver does not support aggregate functions (sum, min, max).
 
-- Specify the `ALLOW FILTERING` suffix to speed up queries.
-- All fields referenced in `WHERE` clauses of a query should be indexed.
+-   For query parameters, the current version of the driver supports $X(IN...), but no other $X functions.
 
-As with all big data stores, Cassandra data sources have the following limitations and usage guidelines within JasperReports Server:
+    The Cassandra data source supports queries in the Cassandra Query Language 3 (CQL3). To improve performance, design your Cassandra data using the following guidelines:
 
-- Cassandra data sources are not supported for OLAP connections.
-- Cassandra data sources cannot be used directly in Domains unless you are using the JDBC driver. To use a Cassandra data source with a native driver in a Domain, see [Creating Cassandra Data Connectors](virtual_data_sources.md).
-- Cassandra data sources can be used in Ad Hoc Topics, but they do not support query optimization.
-- You must configure your query limits to handle big data (see [“Ad Hoc Data Policies for Big Data” on page 1](../configuration/configuring_ad_hoc.md)).
-- You must configure your JVM memory to handle the expected amount of data (see the JasperReports Server Installation Guide).
+-   Specify the `ALLOW FILTERING` suffix to speed up queries.
+
+-   All fields referenced in `WHERE` clauses of a query should be indexed.
+
+    As with all big data stores, Cassandra data sources have the following limitations and usage guidelines within JasperReports Server:
+
+-   Cassandra data sources are not supported for OLAP connections.
+
+-   Cassandra data sources cannot be used directly in Domains unless you are using the JDBC driver. To use a Cassandra data source with a native driver in a Domain, see [Creating Cassandra Data Connectors](virtual_data_sources.md).
+
+-   Cassandra data sources can be used in Ad Hoc Topics, but they do not support query optimization.
+
+-   You must configure your query limits to handle big data (see [“Ad Hoc Data Policies for Big Data” on page 1](../configuration/configuring_ad_hoc.md)).
+
+-   You must configure your JVM memory to handle the expected amount of data (see the JasperReports Server Installation Guide).
 
 !!! note
 
@@ -38,7 +45,7 @@ For more information about Cassandra, see <http://cassandra.apache.org/>.
 
 1.  Log on as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The New Data Source page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The New Data Source page appears.
 
 3.  In the Type field, select **Cassandra Data Source**. The information on the page changes to reflect what's needed to define a Cassandra data source.
 

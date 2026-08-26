@@ -11,8 +11,8 @@ This example shows how to create font extensions for two fonts and then combine 
 
 To access the Fonts page
 
-1.  Select **Window \> Preferences** (**Eclipse \> Preferences** on Mac). The **Preferences** dialog is displayed.
-2.  In the **Preferences** dialog, select **Jaspersoft Studio \> Fonts**.
+1.  Select **Window &gt; Preferences** (**Eclipse &gt; Preferences** on Mac). The **Preferences** dialog is displayed.
+2.  In the **Preferences** dialog, select **Jaspersoft Studio &gt; Fonts**.
 
 The **Fonts** page is displayed:
 
@@ -104,43 +104,46 @@ Create a report with a local data adapter
 
     1.  In the **Repository Explorer**, right-click the **One Empty Record** adapter and select **Export to File**.
 
-    |                                                                       |
-    |-----------------------------------------------------------------------|
-    | ![jss data adapter export](assets/images/jss-data-adapter-export.png) |
-    | *Figure 7: Exporting a global data adapter*                           |
+        |                                                                       |
+        |-----------------------------------------------------------------------|
+        | ![jss data adapter export](assets/images/jss-data-adapter-export.png) |
+        | *Figure 7: Exporting a global data adapter*                           |
 
-2.  Select the project that you want and click **OK**.
+    2.  Select the project that you want and click **OK**.
 
-    A data adapter file is created in your project.
+        A data adapter file is created in your project.
 
-3.  Go to **File \> New \> Jasper Report** or click ![jss icon new report](assets/images/jss-icon-new-report.png) on the main toolbar.
+2.  Go to **File &gt; New &gt; Jasper Report** or click ![jss icon new report](assets/images/jss-icon-new-report.png) on the main toolbar.
 
-4.  In the **New Report Wizard** window, select a blank template, such as the **Blank A4** template, then click **Next**.
+3.  In the **New Report Wizard** window, select a blank template, such as the **Blank A4** template, then click **Next**.
 
-5.  Select the project folder with the data adapter file you just created, give the report a name, and click **Next**.
+4.  Select the project folder with the data adapter file you just created, give the report a name, and click **Next**.
 
-6.  On the **Data Source** page, select the **One Empty Record - \[OneEmptyRecord.jrdax\]** adapter. Make sure to select this adapter, which is local, and not the **One Empty Record** adapter that is selected by default.
+5.  On the **Data Source** page, select the **One Empty Record - \[OneEmptyRecord.jrdax\]** adapter. Make sure to select this adapter, which is local, and not the **One Empty Record** adapter that is selected by default.
 
     |                                                                     |
     |---------------------------------------------------------------------|
     | ![jss data adapter local](assets/images/jss-data-adapter-local.png) |
     | *Figure 8: Selecting the local data adapter*                        |
 
-7.  Click **Finish**.
+6.  Click **Finish**.
 
-8.  Set the default data adapter for the report:
+7.  Set the default data adapter for the report:
 
     1.  Select the report node in the **Outline** view.
-    2.  In the **Properties** view for the report, on the **Report** tab, scroll down to **Dataset \> Default Data Adapter** and click **...**
+
+    2.  In the **Properties** view for the report, on the **Report** tab, scroll down to **Dataset &gt; Default Data Adapter** and click **...**
+
     3.  In the **Open Data Adapter** dialog, select **Custom Value**.
+
     4.  Enter **OneEmptyRecord.jrdax** in the **Path** entry box.
 
-    |                                                                         |
-    |-------------------------------------------------------------------------|
-    | ![jss data adapter default](assets/images/jss-data-adapter-default.png) |
-    | *Figure 9: Default Data Adapter*                                        |
+        |                                                                         |
+        |-------------------------------------------------------------------------|
+        | ![jss data adapter default](assets/images/jss-data-adapter-default.png) |
+        | *Figure 9: Default Data Adapter*                                        |
 
-9.  Click **Finish**.
+    5.  Click **Finish**.
 
 Create a report with multi-lingual text
 
@@ -186,7 +189,7 @@ When you use font extensions in a report, the font extensions are not automatica
 Deploy the report to JasperReports Server
 
 1.  Click ![jss icon publish report](assets/images/jss-icon-publish-report.png) on the main menu bar.
-2.  In the **Publish To JasperReports Server** dialog, select the JasperReports Server instance you want and choose a location for the report. This example uses **Public \> Samples \> Reports**.
+2.  In the **Publish To JasperReports Server** dialog, select the JasperReports Server instance you want and choose a location for the report. This example uses **Public &gt; Samples &gt; Reports**.
 3.  Enter a name for the report on JasperReports Server. This example uses **SampleFontSetReport**.
 4.  Click **Next**.
 5.  Verify that OneEmptyRecord appears as a resource to publish on the next page, then click **Next**.
@@ -206,7 +209,7 @@ You see that the report does not use the correct fonts. You need to export the f
 
 Export the font set in Jaspersoft Studio
 
-1.  In **Window \> Preferences \> Jaspersoft Studio \> Fonts**, select the font set and the fonts within it and click **Export**. For this example, select Amaranth, Lobster, and SampleFontSet.
+1.  In **Window &gt; Preferences &gt; Jaspersoft Studio &gt; Fonts**, select the font set and the fonts within it and click **Export**. For this example, select Amaranth, Lobster, and SampleFontSet.
 2.  In the **Export Font to Jar** dialog, select a name and location for the exported file and click **Save**. For this example, use SampleFontSet.jar.
 
 The font set is exported as a jar in the location that you chose. This is not a regular font jar. It is a jar file that includes additional information used by Jaspersoft.
@@ -229,7 +232,7 @@ Upload the font set as a resource
 
 You can attach the resource directly to the report, or you can upload it to another location, for example the report directory and link the report to it. Uploading a resource to another location makes it easier to reuse the resource.
 
-1.  In the Repository Explorer in Jaspersoft Studio, navigate to the folder on your JasperReports Server instance where you want to add this resource. For this example, it is the **Public \> Samples \> Resources** folder.
+1.  In the Repository Explorer in Jaspersoft Studio, navigate to the folder on your JasperReports Server instance where you want to add this resource. For this example, it is the **Public &gt; Samples &gt; Resources** folder.
 
 2.  Right-click the folder and select **New** from the cascading menu.
 

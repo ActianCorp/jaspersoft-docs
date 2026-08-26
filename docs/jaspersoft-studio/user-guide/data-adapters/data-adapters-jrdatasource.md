@@ -11,9 +11,9 @@ All data adapters implement the `JRDataSource` interface. Some data adapters, su
 
 Data supplied by a `JRDataSource` is ideally organized into records as in a table. Every `JRDataSource` must implement the following two methods:
 
-- `public boolean next()`: Returns true if the cursor is positioned correctly in the subsequent record, false if no more records are available.
+-   `public boolean next()`: Returns true if the cursor is positioned correctly in the subsequent record, false if no more records are available.
 
-- `public Object getFieldValue(JRField jrField)`: Moves a virtual cursor to the next record
+-   `public Object getFieldValue(JRField jrField)`: Moves a virtual cursor to the next record
 
 Every time JasperReports runs the `public boolean next()` method, all the fields declared in the report are filled and all the expressions (starting from those associated with the variables) are calculated again. Subsequently, JasperReports determines whether to print the header of a new group, to go to a new page, and so on. When the `next` returns false, the report is ended by printing all final bands (Group Footer, Column Footer, Last Page Footer, and Summary). The method can be called as many times as there are records present (or represented) from the data source instance.
 
@@ -58,9 +58,9 @@ Now try writing your personalized data source. You have to write a data source t
 
 Your data source should have two constructors:
 
-- The first receives the directory to scan as a parameter.
+-   The first receives the directory to scan as a parameter.
 
-- The second has no parameters and uses the current directory to scan.
+-   The second has no parameters and uses the current directory to scan.
 
 Once instantiated, the data source looks for the files and the directories present in the way you indicate and fills the array files.
 

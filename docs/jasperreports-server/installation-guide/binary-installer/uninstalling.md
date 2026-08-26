@@ -11,11 +11,11 @@ If you install JasperReports Server using the installer executable, you can unin
 
 To uninstall JasperReports Server on Windows 10
 
-Click **Start \> TIBCO \>** **JasperReports Server \>** **Uninstall**.
+Click **Start &gt; TIBCO &gt;** **JasperReports Server &gt;** **Uninstall**.
 
 ## Linux
 
-On Linux, the \<js-install\> folder includes an executable that removes JasperReports Server from the host.
+On Linux, the &lt;js-install&gt; folder includes an executable that removes JasperReports Server from the host.
 
 To uninstall JasperReports Server
 

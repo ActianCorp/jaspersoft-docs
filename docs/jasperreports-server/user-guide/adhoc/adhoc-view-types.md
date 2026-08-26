@@ -7,15 +7,15 @@ description: "The Ad Hoc Editor allows you to select from three view types:"
 
 The Ad Hoc Editor allows you to select from three view types:
 
-- Tables , which are used to view values in the database and to summarize the values in columns.
-- Charts , which compare one or more measures across multiple sets of related fields.
-- Crosstabs , which aggregate data across multiple dimensions.
+-   Tables , which are used to view values in the database and to summarize the values in columns.
+-   Charts , which compare one or more measures across multiple sets of related fields.
+-   Crosstabs , which aggregate data across multiple dimensions.
 
 This section provides an overview of each view type. The design and content tasks for working with each type of view are discussed in more detail in the following sections:
 
-- For more information on table views, see .
-- For more information on chart views, see [Working with Charts](adhoc-charts.md).
-- For more information on crosstab views, see [Working with Standard Crosstabs](adhoc-crosstabs-standard.md).
+-   For more information on table views, see .
+-   For more information on chart views, see [Working with Charts](adhoc-charts.md).
+-   For more information on crosstab views, see [Working with Standard Crosstabs](adhoc-crosstabs-standard.md).
 
 ## Tables
 

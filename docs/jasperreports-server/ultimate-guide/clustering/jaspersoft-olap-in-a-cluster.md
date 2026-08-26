@@ -9,9 +9,9 @@ Jaspersoft OLAP (On Line Analytical Processing) is a module of JasperReports Ser
 
 However, Jaspersoft OLAP is composed of two parts: an XML/A client that displays data and an XML/A provider or server that retrieves and processes the data. As described in the Jaspersoft OLAP User Guide, these two parts can run on separate instances of JasperReports Server. Different behaviors result depending on how define the XML/A connection in a cluster:
 
-- In the default case, the definition of the XML/A provider points to the `localhost`, so the same node that receives the user request will both perform the analysis and display it.
+-   In the default case, the definition of the XML/A provider points to the `localhost`, so the same node that receives the user request will both perform the analysis and display it.
 
-- You can change the definition of the provider so that it points to the URL of the load balancer for the cluster. In this case, the node that receives the user request will ask another node to retrieve the data for it, and the results will be sent back to the first node for display.
+-   You can change the definition of the provider so that it points to the URL of the load balancer for the cluster. In this case, the node that receives the user request will ask another node to retrieve the data for it, and the results will be sent back to the first node for display.
 
 !!! note
 
@@ -19,7 +19,7 @@ However, Jaspersoft OLAP is composed of two parts: an XML/A client that displays
 
     On the other hand, if your nodes are occasionally idle or if your load balancer detects real-time load on each node, this configuration will spread the analysis load and optimize performance for all users.
 
-- You can set the connection to the URL of a specific XML/A provider. This could be a dedicated instance of JasperReports Server running Jaspersoft OLAP that's not connected to the cluster. You would need to size this instance to handle your expected analysis load and possibly implement two nodes as a cluster for availability. The advantage of having a dedicated XML/A provider instance is that it would centralize the cache for XML/A connections, thereby increasing cache hits.
+-   You can set the connection to the URL of a specific XML/A provider. This could be a dedicated instance of JasperReports Server running Jaspersoft OLAP that's not connected to the cluster. You would need to size this instance to handle your expected analysis load and possibly implement two nodes as a cluster for availability. The advantage of having a dedicated XML/A provider instance is that it would centralize the cache for XML/A connections, thereby increasing cache hits.
 
 Factors such as the size of your data and the ratio of JasperReports load to OLAP load can help you determine how to configure your XML/A connections in a cluster. If you don’t perform much analysis, use the default configuration with `localhost` for your connections. If you have many analysis requests to the same data, a dedicated instance of Jaspersoft OLAP could provide a central cache and increase performance. Remember that connection behavior is determined by the XML/A connection defined in the repository, not by the nodes.
 

@@ -7,14 +7,14 @@ description: "To design a Domain Topic or a view based on a domain, use the Data
 
 To design a Domain Topic or a view based on a domain, use the Data Chooser wizard. To open the Data Chooser wizard:
 
-1.  Click **Create** \> **Ad Hoc View**.
+1.  Click **Create** &gt; **Ad Hoc View**.
 
 2.  Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and browse to a Domain, then click **Choose Data** to access the following pages of the Data Chooser:
 
-    - The Select Fields Page – Choose the fields to make available in the Ad Hoc Editor.
-    - The Pre-filters Page – Define a filter on any field, with the option of prompting for user input, or to compare fields.
-    - The Display Page – Change the order and names of fields that appear in the Ad Hoc Editor.
-    - The Save as Topic Page – Save the settings as a Domain Topic.
+    -   The Select Fields Page – Choose the fields to make available in the Ad Hoc Editor.
+    -   The Pre-filters Page – Define a filter on any field, with the option of prompting for user input, or to compare fields.
+    -   The Display Page – Change the order and names of fields that appear in the Ad Hoc Editor.
+    -   The Save as Topic Page – Save the settings as a Domain Topic.
 
 Start by selecting some fields on the Select Fields page, but the other three pages are optional and can be completed in any order. Click **Table, Chart,** or **Crosstab** at any time to begin designing a view based on the chosen data.
 
@@ -26,16 +26,16 @@ Use this page to choose fields and sets of fields to use in the view or make ava
 
 *Figure 1: The Fields Page of the Data Chooser*
 
-- The Source panel displays the sets of fields in the Domain. Use ![js AdHoc icon hide filter detail](../assets/images/js-AdHoc-icon-hide-filter-detail.png) and ![js AdHoc icon show filter detail](../assets/images/js-AdHoc-icon-show-filter-detail.png) to collapse or expand each set.
+-   The Source panel displays the sets of fields in the Domain. Use ![js AdHoc icon hide filter detail](../assets/images/js-AdHoc-icon-hide-filter-detail.png) and ![js AdHoc icon show filter detail](../assets/images/js-AdHoc-icon-show-filter-detail.png) to collapse or expand each set.
 
-- The Selected Fields panel shows the items that you selected. You can move a field or set back and forth between the panels by dragging, double-clicking, or selecting the item and clicking an arrow button, such as ![js AdHoc icon Sort On Arrow](../assets/images/js-AdHoc-icon-Sort-On-Arrow.png).
+-   The Selected Fields panel shows the items that you selected. You can move a field or set back and forth between the panels by dragging, double-clicking, or selecting the item and clicking an arrow button, such as ![js AdHoc icon Sort On Arrow](../assets/images/js-AdHoc-icon-Sort-On-Arrow.png).
 
-- When you select any field from a set in the Source panel, the set name appears with the field in the Selected Fields panel. If you do not want sets, then use the settings on the Display page.
+-   When you select any field from a set in the Source panel, the set name appears with the field in the Selected Fields panel. If you do not want sets, then use the settings on the Display page.
 
-- Some Domains define sets that are not joined, also called data islands. When you select a field from such a set, the behavior on the Select Fields page depends on how the joins were created in the Domain:
+-   Some Domains define sets that are not joined, also called data islands. When you select a field from such a set, the behavior on the Select Fields page depends on how the joins were created in the Domain:
 
-  - If the Domain uses basic joins, the unjoined sets are not available. The Domain Designer only creates basic joins.
-  - If the Domain uses advanced joins, all joins are available regardless of the join set of the fields you add. In this case, you must manually make sure that you do not add fields that are in different data islands to a single Ad Hoc view. Otherwise you receive errors when attempting to work with the view.
+    -   If the Domain uses basic joins, the unjoined sets are not available. The Domain Designer only creates basic joins.
+    -   If the Domain uses advanced joins, all joins are available regardless of the join set of the fields you add. In this case, you must manually make sure that you do not add fields that are in different data islands to a single Ad Hoc view. Otherwise you receive errors when attempting to work with the view.
 
 ## The Pre-filters Page
 
@@ -88,15 +88,17 @@ To define a filter
 
 Use the Display page to change the default label and order of the fields as they should appear in the list of fields in the Ad Hoc Editor. You can always change the field labels and order in the Ad Hoc Editor, but setting them here makes them available in a Domain Topic. The page includes these options:
 
-- To change the order of fields, click once anywhere in a field’s row and use the **Move to top**, **Move up**, **Move down**, or **Move to bottom** buttons:
+-   To change the order of fields, click once anywhere in a field’s row and use the **Move to top**, **Move up**, **Move down**, or **Move to bottom** buttons:
 
-![js AdHoc icon Move top](../assets/images/js-AdHoc-icon-Move-top.png), ![js AdHoc icon Move up](../assets/images/js-AdHoc-icon-Move-up.png), ![js AdHoc icon Move down](../assets/images/js-AdHoc-icon-Move-down.png), and ![js AdHoc icon Move bottom](../assets/images/js-AdHoc-icon-Move-bottom.png)
+    ![js AdHoc icon Move top](../assets/images/js-AdHoc-icon-Move-top.png), ![js AdHoc icon Move up](../assets/images/js-AdHoc-icon-Move-up.png), ![js AdHoc icon Move down](../assets/images/js-AdHoc-icon-Move-down.png), and ![js AdHoc icon Move bottom](../assets/images/js-AdHoc-icon-Move-bottom.png)
 
-Fields may be moved only within their set, but sets as a whole may also be moved.
+    Fields may be moved only within their set, but sets as a whole may also be moved.
 
-- By default, the field name becomes the display label for the row, column, or measure that you create from it. To change the default display label of a field or set, double-click anywhere in the row and type the new label in the text box.
-- Sets and the fields they contain appear in the list of fields in the Ad Hoc Editor. Sets are not used in views, but can be used to add all their fields at once, expediting view creation.
-- If you do not want to use sets in the Ad Hoc Editor, select **Flat List** at the top of the Data Source Selection panel. You can now relabel the fields and reorder them.
+-   By default, the field name becomes the display label for the row, column, or measure that you create from it. To change the default display label of a field or set, double-click anywhere in the row and type the new label in the text box.
+
+-   Sets and the fields they contain appear in the list of fields in the Ad Hoc Editor. Sets are not used in views, but can be used to add all their fields at once, expediting view creation.
+
+-   If you do not want to use sets in the Ad Hoc Editor, select **Flat List** at the top of the Data Source Selection panel. You can now relabel the fields and reorder them.
 
 ## The Save as Topic Page
 
@@ -104,5 +106,5 @@ Here you can enter a name and a description to save the Data Chooser settings as
 
 If an administrator has enabled the Data Staging feature, you can turn data staging on for your domain topic. With data staging, the entire dataset for a Domain Topic is indefinitely cached in the server's Ad Hoc cache. Ad Hoc views and reports from that Domain Topic run faster because they fetch data from the local cache, not by querying the production database. To keep data fresh, you can specify a refresh interval, and the server will periodically access the database in the background to reload the entire dataset.
 
-- By default, Domain Topics are saved in the standard Topics folder. This corresponds to the **Ad Hoc Components \> Topics** location in the repository; JRXML Topics and Domain Topics in this folder appear on the **Topics** tab when you start a view. Do not modify this folder name.
-- The description text appears with the Domain Topic in the repository and at the bottom of the **Topics** tab on the Ad Hoc Source dialog. Enter an informative description that helps users understand the nature and purpose of this Domain Topic.
+-   By default, Domain Topics are saved in the standard Topics folder. This corresponds to the **Ad Hoc Components &gt; Topics** location in the repository; JRXML Topics and Domain Topics in this folder appear on the **Topics** tab when you start a view. Do not modify this folder name.
+-   The description text appears with the Domain Topic in the repository and at the bottom of the **Topics** tab on the Ad Hoc Source dialog. Enter an informative description that helps users understand the nature and purpose of this Domain Topic.

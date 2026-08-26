@@ -80,7 +80,7 @@ The following settings apply to most file upload dialogs in the UI, such as uplo
 </tbody>
 </table>
 
-The following setting restricts the extension of the uploaded file for the sub flows, when adding files to a composite resource like reports, for example, **Add Resource \> JasperReport**. The upload dialog searches for files with the given extensions only.
+The following setting restricts the extension of the uploaded file for the sub flows, when adding files to a composite resource like reports, for example, **Add Resource &gt; JasperReport**. The upload dialog searches for files with the given extensions only.
 
 <table>
 <colgroup>
@@ -114,7 +114,7 @@ The following setting restricts the extension of the uploaded file for the sub f
 </tbody>
 </table>
 
-The following setting restricts the extension of the uploaded file for adding individual files to the repository (for example, **Add Resource \> File \> JRXML**). The upload dialog browses only for files with the extensions that are mapped to resource types.
+The following setting restricts the extension of the uploaded file for adding individual files to the repository (for example, **Add Resource &gt; File &gt; JRXML**). The upload dialog browses only for files with the extensions that are mapped to resource types.
 
 <table>
 <colgroup>

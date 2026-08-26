@@ -105,8 +105,8 @@ If `key` is set to `defaultSchema`, the `entry` element is used to define the de
 
 The `string` element in the `schemaMap` hierarchy is a string defining the database schema to be used in the Domain. The string can be one of the following:
 
-- The exact name of a schema in the database.
-- A JasperReports Server attribute. Not supported for `defaultSchema`. See [Using Server Attributes in Design Files](using_server_attributes.md) for more information.
+-   The exact name of a schema in the database.
+-   A JasperReports Server attribute. Not supported for `defaultSchema`. See [Using Server Attributes in Design Files](using_server_attributes.md) for more information.
 
 ### Default Schema
 

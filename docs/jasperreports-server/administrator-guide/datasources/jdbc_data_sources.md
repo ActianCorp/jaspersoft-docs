@@ -13,7 +13,7 @@ To create a JDBC data source
 
 1.  Log on as an administrator.
 
-2.  Select **View \> Repository**, right-click a folder's name, and select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
+2.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
 
 3.  In the **Type** field, select **JDBC**. The page refreshes to show the fields required for a JDBC data source.
 
@@ -29,8 +29,8 @@ To create a JDBC data source
 
 5.  Enter the **Hostname, Port**, and **Database** name for your database. The default hostname is localhost, and the default port is the typical port for the specified database vendor. The three fields are combined automatically to create the JDBC URL where the server will access the database. When specifying values for your JDBC data source:
 
-    - The JDBC drivers for some databases have their own unique fields and optional URL parameters. These are described in [Unique JDBC Data Source Fields](../troubleshooting/working_with_data_sources.md) and [JDBC Database URLs](../troubleshooting/working_with_data_sources.md).
-    - You have the option to use attributes in the values of data source parameters. See [Attributes in Data Source Definitions](attributes_in_data_source_definitions.md).
+    -   The JDBC drivers for some databases have their own unique fields and optional URL parameters. These are described in [Unique JDBC Data Source Fields](../troubleshooting/working_with_data_sources.md) and [JDBC Database URLs](../troubleshooting/working_with_data_sources.md).
+    -   You have the option to use attributes in the values of data source parameters. See [Attributes in Data Source Definitions](attributes_in_data_source_definitions.md).
 
 6.  Fill in the **Database, User Name** and **Password**. These are the credentials the server will use to access the database.
 

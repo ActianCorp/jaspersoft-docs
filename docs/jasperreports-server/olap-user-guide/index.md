@@ -16,6 +16,5 @@ Applies to Jaspersoft **10.1.0**.
 - [Introduction to Jaspersoft® OLAP](introduction.md)
 - [Working with OLAP Views](working.md)
 - [Jaspersoft OLAP Administration](administration.md)
-- [Glossary](glossary/glossary.md)
-- [TIBCO Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
+- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
 - [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)

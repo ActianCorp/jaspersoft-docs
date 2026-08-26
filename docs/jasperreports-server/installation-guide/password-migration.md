@@ -9,9 +9,9 @@ You can upgrade old, legacy passwords to secure one-way hashing (Password-Based 
 
 System administrators may need to run a password migration in scenarios such as:
 
-- If you upgrade to a newer version of JasperReports Server using samedb upgrade script and switch from the legacy to the modern password strategy at the same time, new users automatically use the modern strategy. However, you will need to run a migration to convert your existing users with legacy passwords.
+-   If you upgrade to a newer version of JasperReports Server using samedb upgrade script and switch from the legacy to the modern password strategy at the same time, new users automatically use the modern strategy. However, you will need to run a migration to convert your existing users with legacy passwords.
 
-- If you initially chose the legacy strategy during installation or upgrade but later decide to switch to the modern one, a password migration is required to convert all existing legacy user passwords over to the new strategy.
+-   If you initially chose the legacy strategy during installation or upgrade but later decide to switch to the modern one, a password migration is required to convert all existing legacy user passwords over to the new strategy.
 
 Before enabling modern password storage in your production environment, complete this pre-migration checklist to ensure a smooth transition and prevent data loss.
 
@@ -19,33 +19,33 @@ Before enabling modern password storage in your production environment, complete
 
 Following is the checklist:
 
-- Password migration is a permanent, one-way process, take a full database backup before proceeding. If you need to roll back, a database restore is the only option.
+-   Password migration is a permanent, one-way process, take a full database backup before proceeding. If you need to roll back, a database restore is the only option.
 
-- Always run and verify the migration on a non-production system first to catch any performance bottlenecks or configuration issues.
+-   Always run and verify the migration on a non-production system first to catch any performance bottlenecks or configuration issues.
 
-- Ensure that all of your core database upgrade scripts have successfully finished running before starting the password utility.
+-   Ensure that all of your core database upgrade scripts have successfully finished running before starting the password utility.
 
-- Manually check your database to verify that the `password_strategy` column exists in the `JIUser` table.
+-   Manually check your database to verify that the `password_strategy` column exists in the `JIUser` table.
 
 !!! note
 
-    - Once passwords are upgraded to the modern format, you can not automatically flip a switch to change them back to the legacy format.
+    -   Once passwords are upgraded to the modern format, you can not automatically flip a switch to change them back to the legacy format.
 
-    - The only way to undo this migration and return to the old format is to restore your database from a backup.
+    -   The only way to undo this migration and return to the old format is to restore your database from a backup.
 
-    - Because this change is permanent, make sure to plan your migration carefully before running it in production.
+    -   Because this change is permanent, make sure to plan your migration carefully before running it in production.
 
 ## Migration Process Details
 
 The password migration process includes:
 
-- Detect (optional, `migrate-passwords-dry-run`): The script scans the database to see what it's working with. It automatically figures out the database type, counts the total number of users, and flags everyone who is still using an old, legacy password format. This creates a clean baseline before any data actually changes.
+-   Detect (optional, `migrate-passwords-dry-run`): The script scans the database to see what it's working with. It automatically figures out the database type, counts the total number of users, and flags everyone who is still using an old, legacy password format. This creates a clean baseline before any data actually changes.
 
-- Migrate (`migrate-passwords`): The system converts legacy passwords to the modern hashed format. To avoid overloading the database, users are processed in configurable batches (`password.migration.batch.size`). For every eligible internal user, the utility decrypts the existing legacy password, generates a new unique salt, re-hashes the password with the configured algorithm, and updates the `password`, `password_strategy`, and `password_algorithm` columns in the `JIUser` table. The progress is shown in the console logs. The `anonymousUser` account and externally authenticated users are skipped by design.
+-   Migrate (`migrate-passwords`): The system converts legacy passwords to the modern hashed format. To avoid overloading the database, users are processed in configurable batches (`password.migration.batch.size`). For every eligible internal user, the utility decrypts the existing legacy password, generates a new unique salt, re-hashes the password with the configured algorithm, and updates the `password`, `password_strategy`, and `password_algorithm` columns in the `JIUser` table. The progress is shown in the console logs. The `anonymousUser` account and externally authenticated users are skipped by design.
 
-- Verify (optional, `detect-password-strategy`): The system performs a read-only check that reports the current distribution of modern versus legacy passwords across the database. When the legacy count is one (`anonymousUser`) and the modern count matches the total number of users, migration is complete. (The per-run counts of migrated, skipped, and failed accounts are reported in the `migrate-passwords` Migration Summary output.)
+-   Verify (optional, `detect-password-strategy`): The system performs a read-only check that reports the current distribution of modern versus legacy passwords across the database. When the legacy count is one (`anonymousUser`) and the modern count matches the total number of users, migration is complete. (The per-run counts of migrated, skipped, and failed accounts are reported in the `migrate-passwords` Migration Summary output.)
 
-- Clean up migration tracking (optional, `cleanup-password-migration`): After a successful migration, you can remove completed records from the `JIPasswordMigration` tracking table to keep the database tidy. This affects only the tracking table, it does not change any passwords. Only records with a completed status are removed. In-progress, partial, and failed records are retained for troubleshooting.
+-   Clean up migration tracking (optional, `cleanup-password-migration`): After a successful migration, you can remove completed records from the `JIPasswordMigration` tracking table to keep the database tidy. This affects only the tracking table, it does not change any passwords. Only records with a completed status are removed. In-progress, partial, and failed records are retained for troubleshooting.
 
 With the bulk migration method, you can upgrade all passwords at once during a scheduled maintenance window. The migration utility `./js-ant migrate-passwords` reads its configuration from the `WEB-INF/js.password-storage-config.properties` file located in the deployed webapp.
 
@@ -121,11 +121,11 @@ Only records with a completed status are removed. In-progress, partial, and fail
 
 The final report groups accounts into three categories:
 
-- `Successfully Migrated`: The number of accounts safely upgraded from legacy encryption to the new hashing format.
+-   `Successfully Migrated`: The number of accounts safely upgraded from legacy encryption to the new hashing format.
 
-- `Skipped`: Accounts bypassed on purpose (like the `anonymousUser` with an empty password or external users). These are not errors.
+-   `Skipped`: Accounts bypassed on purpose (like the `anonymousUser` with an empty password or external users). These are not errors.
 
-- `Failed`: Unexpected errors during the migration that an admin needs to look into.
+-   `Failed`: Unexpected errors during the migration that an admin needs to look into.
 
 !!! note
 

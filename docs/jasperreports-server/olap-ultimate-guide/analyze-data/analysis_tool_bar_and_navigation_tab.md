@@ -7,10 +7,10 @@ description: "In the tool bar, the buttons are grouped by function: display, cub
 
 In the tool bar, the buttons are grouped by function: display, cube, chart, output, and save:
 
-- The Display buttons configure dimension and navigation options.
-- The Cube buttons mainly change cube contents.
-- The Chart and Output buttons let you add a chart to the view and export the view to specific file formats.
-- The Save buttons let you save your changes to the view.
+-   The Display buttons configure dimension and navigation options.
+-   The Cube buttons mainly change cube contents.
+-   The Chart and Output buttons let you add a chart to the view and export the view to specific file formats.
+-   The Save buttons let you save your changes to the view.
 
 ![ja OLAP view with callouts](../assets/images/ja-OLAP-view-with-callouts.png)
 

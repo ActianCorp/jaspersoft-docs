@@ -17,15 +17,15 @@ In the 7.5 release, the Simba JDBC drivers for Spark and Impala have been update
 
 If you want to continue using the Impala driver that was previously available from the community website, modify the install as described below.
 
-Add the following files to the \<js-install\>/WEB-INF/lib directory:
+Add the following files to the &lt;js-install&gt;/WEB-INF/lib directory:
 
-- Curator-client-2.6.0.jar
-- Curator-framework-2.6.0.jar
-- Curator-recipes-2.6.0.jar
-- Hive-metastore-1.2.2.jar
-- Hive-service-1.2.2.jar
-- Impala-jdbc4-1.0.44.1055.jar
-- Libfb303-0.9.3.jar
+-   Curator-client-2.6.0.jar
+-   Curator-framework-2.6.0.jar
+-   Curator-recipes-2.6.0.jar
+-   Hive-metastore-1.2.2.jar
+-   Hive-service-1.2.2.jar
+-   Impala-jdbc4-1.0.44.1055.jar
+-   Libfb303-0.9.3.jar
 
 If you do not add the files listed, data sources that use the old Impala driver causes errors when running reports that rely on them.
 
@@ -33,15 +33,15 @@ If you do not add the files listed, data sources that use the old Impala driver 
 
 If you want to continue using the Spark driver that was previously available from the community website, modify the install as described below.
 
-Add the following files to the \<js-install\>/WEB-INF/lib directory:
+Add the following files to the &lt;js-install&gt;/WEB-INF/lib directory:
 
-- Curator-client-2.6.0.jar
-- Curator-framework-2.6.0.jar
-- Curator-recipes-2.6.0.jar
-- Hive-metastore-1.2.2.jar
-- Hive-service-1.2.2.jar
-- Spark-jdbc4-1.1.1.1001.jar
-- Libfb303-0.9.3.jar
+-   Curator-client-2.6.0.jar
+-   Curator-framework-2.6.0.jar
+-   Curator-recipes-2.6.0.jar
+-   Hive-metastore-1.2.2.jar
+-   Hive-service-1.2.2.jar
+-   Spark-jdbc4-1.1.1.1001.jar
+-   Libfb303-0.9.3.jar
 
 If you do not add the files listed, data sources that use the old Spark driver causes errors when running reports that rely on them.
 
@@ -49,9 +49,9 @@ If you do not add the files listed, data sources that use the old Spark driver c
 
 The Jaspersoft MongoDB Query Language has been updated to reflect changes in the MongoDB driver:
 
-- All aggregate commands must be updated to the new API-driven query syntax.
+-   All aggregate commands must be updated to the new API-driven query syntax.
 
-- All other command-driven queries (queries that use `runCommand`) are deprecated. If you want to use your queries in a future release, you should update them to the new syntax.
+-   All other command-driven queries (queries that use `runCommand`) are deprecated. If you want to use your queries in a future release, you should update them to the new syntax.
 
 See the [language reference](http://community.jaspersoft.com/wiki/jaspersoft-mongodb-query-language) for more information.
 

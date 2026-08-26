@@ -20,11 +20,11 @@ Like standard crosstabs, the rows and columns of an OLAP crosstab are sorted in 
 
 To change the sorting of your OLAP crosstab
 
-- Right-click the heading you want to use for sorting and select one of these options:
+-   Right-click the heading you want to use for sorting and select one of these options:
 
-  - **Sort Ascending**
-  - **Sort Descending**
-  - **Don't Sort**
+    -   **Sort Ascending**
+    -   **Sort Descending**
+    -   **Don't Sort**
 
 The crosstab is updated to reflect your sorting option. A blue dot appears in the context menu next to the currently applied sort option.
 
@@ -38,7 +38,7 @@ The query is read-only, but can be copied to a document for review.
 
 To view the MDX query
 
-- In the tool bar, click ![js AdHoc icon viewSQL](../assets/images/js-AdHoc-icon-viewSQL.png). The View Query window opens, displaying the query.
+-   In the tool bar, click ![js AdHoc icon viewSQL](../assets/images/js-AdHoc-icon-viewSQL.png). The View Query window opens, displaying the query.
 
 # Working with Microsoft SSAS
 

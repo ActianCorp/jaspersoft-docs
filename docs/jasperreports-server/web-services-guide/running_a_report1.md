@@ -75,17 +75,17 @@ type</td>
 
 The follow examples show various combinations of formats, arguments, and input controls:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html (all pages)
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html (all pages)
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html?page=43
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.html?page=43
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf (all pages)
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf (all pages)
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf?page=1
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/AllAccounts.pdf?page=1
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/EmployeeAccounts.html?EmployeeID=sarah_id
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/EmployeeAccounts.html?EmployeeID=sarah_id
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report.html?<br>
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report.html?<br>
 Country_multi_select=USA&Cascading_state_multi_select=WA&Cascading_state_multi_select=CA
 
 !!! note

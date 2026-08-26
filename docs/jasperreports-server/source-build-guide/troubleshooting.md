@@ -24,15 +24,15 @@ Action: Check that any <presetdef>/<macrodef> declarations have taken place.
 
 Solution
 
-The buildomatic scripts require Ant version 1.10.7 or higher, and the ant-contrib.jar file needs to be included in your ant/lib directory. We recommend Ant version 1.10.*latest*. If you are running with your own Ant version, you can copy this jar to your \<ant-home\>/lib directory:
+The buildomatic scripts require Ant version 1.10.7 or higher, and the ant-contrib.jar file needs to be included in your ant/lib directory. We recommend Ant version 1.10.*latest*. If you are running with your own Ant version, you can copy this jar to your &lt;ant-home&gt;/lib directory:
 
 From:
 
-\<js-src\>/apache-ant/lib/ant-contrib.jar
+&lt;js-src&gt;/apache-ant/lib/ant-contrib.jar
 
 or
 
-\<js-src\>/jasperserver/buildomatic/extra-jars/ant-contrib.jar
+&lt;js-src&gt;/jasperserver/buildomatic/extra-jars/ant-contrib.jar
 
 To:
 
@@ -143,6 +143,6 @@ Embedded error: Source file does not exist!
 
 The most likely problem is that your .m2/settings.xml file does not point to the correct source location, and the build step did not find the Quartz scripts. The settings.xml file should contain the path to the quartz script corresponding to your database, for example:
 
-\<js.quartz.script\>/home/\<user\>/\<js-src\>/jasperserver/scripts/quartz/tables\_\<database\>.sql\</js.quartz.script\>
+&lt;js.quartz.script&gt;/home/&lt;user&gt;/&lt;js-src&gt;/jasperserver/scripts/quartz/tables\_&lt;database&gt;.sql&lt;/js.quartz.script&gt;
 
 If you use the buildomatic script, you should not get this kind of error.

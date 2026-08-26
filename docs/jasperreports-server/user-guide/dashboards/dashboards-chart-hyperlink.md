@@ -52,18 +52,19 @@ Add a parameter
 
 2.  Modify the URL to add a parameter that provides a value for an input control in the target report:
 
-    - You need to know the correct name of the input control in your target report. In this case, it is `sales__store__store_contact__store_country_1` in the 04. Product Results by Store Type Report.
+    -   You need to know the correct name of the input control in your target report. In this case, it is `sales__store__store_contact__store_country_1` in the 04. Product Results by Store Type Report.
 
-    - Create a parameter. If you create a parameter name, it is helpful to use a name that is not used in Parameter Mapping. In this example, use `LinkCountry`. For more information about parameters, see [Specifying Parameters in Dashlets](dashboards-parameters-in-dashlets.md).
+    -   Create a parameter. If you create a parameter name, it is helpful to use a name that is not used in Parameter Mapping. In this example, use `LinkCountry`. For more information about parameters, see [Specifying Parameters in Dashlets](dashboards-parameters-in-dashlets.md).
 
-      The link is as follows:
+        The link is as follows:
 
-      `repo:/public/Samples/Reports/04._Product_Results_by_Store_Type_Report?sales__store__store_contact__store_country_1=$P{LinkCountry}`
+        `repo:/public/Samples/Reports/04._Product_Results_by_Store_Type_Report?sales__store__store_contact__store_country_1=$P{LinkCountry}`
 
-      <div class="admonition note">
-      <p class="admonition-title">Note</p>
-      <p>If you use one of the names in the Available Parameters list, the mapping to the parameter is created for you. In this example, if you use <code>Store Country</code> instead of <code>LinkCountry</code>, you do not need to create links in Parameter Mapping.</p><p>This example does not show how to add support when more than one country is selected. For more information, see <a href="dashboards-parameters-in-dashlets.md">Parameters in Dashlets</a>.</p>
-      </div>
+        !!! note
+
+            If you use one of the names in the Available Parameters list, the mapping to the parameter is created for you. In this example, if you use `Store Country` instead of `LinkCountry`, you do not need to create links in Parameter Mapping.
+
+            This example does not show how to add support when more than one country is selected. For more information, see [Parameters in Dashlets](dashboards-parameters-in-dashlets.md).
 
 3.  Click **Map Parameters**. Parameter Mapping is displayed.<br>
 

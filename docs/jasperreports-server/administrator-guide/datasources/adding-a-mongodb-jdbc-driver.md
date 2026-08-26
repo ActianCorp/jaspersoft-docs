@@ -15,7 +15,7 @@ Procedure:
 
 1.  Log in as the system administrator (superuser).
 
-2.  Select **View \> Repository**, right-click a folder's name, and select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page.
+2.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page.
 
 3.  From the **Type** drop-down, select **MongoDB JDBC**.
 
@@ -51,8 +51,8 @@ To create a schema with the schema tool:
 
 To upload a schema to the repository:
 
-1.  Click **View \> Repository** and expand the folder tree.
+1.  Click **View &gt; Repository** and expand the folder tree.
 
-2.  Right-click a folder and from the context menu, select **Add Resource \> File \> MongoDB JDBC Schema**.
+2.  Right-click a folder and from the context menu, select **Add Resource &gt; File &gt; MongoDB JDBC Schema**.
 
 3.  Use **Upload File From Your Local Computer** page to locate and upload your schema file.

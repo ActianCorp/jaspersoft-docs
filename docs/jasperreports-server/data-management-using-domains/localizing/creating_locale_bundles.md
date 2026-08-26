@@ -23,23 +23,27 @@ The Domain Designer lets you download a template with all keys currently defined
 
 3.  In the **File Options** dialog box, select which keys to export:
 
-    - **Generate missing label keys**: Automatically generates label key names for any elements where **Label Key** is not defined.
-    - **Generate missing description keys**: Automatically generates description key names for any elements where **Description Key** is not defined.
-    - When both options are deselected, keys are not generated automatically. Only keys explicitly defined as **Label Key** or **Descriptions Key** are exported.
+-   **Generate missing label keys**: Automatically generates label key names for any elements where **Label Key** is not defined.
 
-    ![js DomainDesigner DownloadTemplate options](../assets/images/js-DomainDesigner-DownloadTemplate-options.png)
+    -   **Generate missing description keys**: Automatically generates description key names for any elements where **Description Key** is not defined.
 
-    *Figure 2: File Options for Downloading a .properties Template*
+    -   When both options are deselected, keys are not generated automatically. Only keys explicitly defined as **Label Key** or **Descriptions Key** are exported.
 
-4.  Click **OK**.
+        ![js DomainDesigner DownloadTemplate options](../assets/images/js-DomainDesigner-DownloadTemplate-options.png)
 
-The bundle is exported with a generated file name such as "domain `name.properties`". You can change the name to match the name you want to use for your properties files.
+        *Figure 2: File Options for Downloading a .properties Template*
 
-The file contains the following:
+        1.  Click **OK**.
 
-- All explicitly defined keys.
-- Optional generated keys, if selected. For the format of generated keys, see [Key Names](properties_file_syntax.md).
-- Any values that are explicitly defined as the **Label** or **Description** field for an element on the Presentation tab, or the `labelId` or `descriptionId` attributes on an `itemGroup` or `item` element in the XML design file.
+        The bundle is exported with a generated file name such as "domain `name.properties`". You can change the name to match the name you want to use for your properties files.
+
+        The file contains the following:
+
+    -   All explicitly defined keys.
+
+    -   Optional generated keys, if selected. For the format of generated keys, see [Key Names](properties_file_syntax.md).
+
+    -   Any values that are explicitly defined as the **Label** or **Description** field for an element on the Presentation tab, or the `labelId` or `descriptionId` attributes on an `itemGroup` or `item` element in the XML design file.
 
 The exported file is a Java properties file in the proper format containing the selected keys. If you did not set any label or descriptions in the Domain Designer or XML design file, then the file contains blank values and is ready for translation.
 
@@ -49,11 +53,11 @@ The exported file is a Java properties file in the proper format containing the 
 
 ## Properties File Names
 
-The file names of a locale bundle is of the form \<any_name\>\_\<locale\>.properties, where:
+The file names of a locale bundle is of the form &lt;any_name&gt;\_&lt;locale&gt;.properties, where:
 
-- \<any_name\> is arbitrary and should be the same for all bundle files in a Domain.
-- \<locale\> is any Java-compliant locale identifier, for example `fr` or `fr_CA`.
-- You can optionally include a default .properties file, which is used for the default locale or when a key is missing or empty in one of the other .properties files. The default properties file name is \<any_name\>.properties. It does not have a locale identifier.
+-   &lt;any_name&gt; is arbitrary and should be the same for all bundle files in a Domain.
+-   &lt;locale&gt; is any Java-compliant locale identifier, for example `fr` or `fr_CA`.
+-   You can optionally include a default .properties file, which is used for the default locale or when a key is missing or empty in one of the other .properties files. The default properties file name is &lt;any_name&gt;.properties. It does not have a locale identifier.
 
 The following table shows an example relationship between file names, key names, and values in two files, a default file in English and a file of French translations.
 

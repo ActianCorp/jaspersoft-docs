@@ -7,10 +7,10 @@ description: "This chapter includes the following sections:"
 
 This chapter includes the following sections:
 
-- MIME Types
-- Downloading File Resources
-- Uploading File Resources
-- Updating File Resources
+-   MIME Types
+-   Downloading File Resources
+-   Uploading File Resources
+-   Updating File Resources
 
 ## MIME Types
 
@@ -115,14 +115,14 @@ document</span></p></td>
 </tbody>
 </table>
 
-<sup>\*</sup> For the font and img file types when using the HTTP URL, MIME types of font/\* and image/\* respectively continues to work. However, for the HTTPS URL the MIME type must be explicitly specified based on the type of font or image file used. For example, font/ttf, image/png.
+^\*^ For the font and img file types when using the HTTP URL, MIME types of font/\* and image/\* respectively continues to work. However, for the HTTPS URL the MIME type must be explicitly specified based on the type of font or image file used. For example, font/ttf, image/png.
 
 ## Downloading File Resources
 
 There are two read operations on file resources:
 
-- Viewing the file resource details to determine the file format.
-- Downloading the binary file contents
+-   Viewing the file resource details to determine the file format.
+-   Downloading the binary file contents
 
 To view the file resource details, specify the URL and the file descriptor type as follows:
 

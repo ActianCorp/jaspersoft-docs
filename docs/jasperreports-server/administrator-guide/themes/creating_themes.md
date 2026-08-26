@@ -7,9 +7,9 @@ description: "There are three ways to create the folders and files that make up 
 
 There are three ways to create the folders and files that make up a theme:
 
-- Creating Theme Folders and File Resources – Create them individually as resources in the repository.
-- Downloading and Uploading Theme ZIP Files – Copy and modify existing themes as ZIP (archive) files.
-- Placing Themes in the Folder Template – Initialize themes automatically in multi-organization deployments.
+-   Creating Theme Folders and File Resources – Create them individually as resources in the repository.
+-   Downloading and Uploading Theme ZIP Files – Copy and modify existing themes as ZIP (archive) files.
+-   Placing Themes in the Folder Template – Initialize themes automatically in multi-organization deployments.
 
 This section explains only how to store CSS files in the repository. For information about creating CSS file contents, see [Working With CSS Files](working_with_css_files.md).
 
@@ -21,7 +21,7 @@ To create theme folders and file resources
 
 1.  Log in as an administrator with access to the location where you want to place the theme.
 
-2.  Click **View \> Repository** and expand the folder tree to view the **Themes** folder where you want to place the theme.
+2.  Click **View &gt; Repository** and expand the folder tree to view the **Themes** folder where you want to place the theme.
 
 3.  Right-click the **Themes** folder and select **Add Folder**. Give your folder a name and optional description as you would when creating any folder. The folder name is used as the name of the theme.
 
@@ -29,9 +29,9 @@ To create theme folders and file resources
 
         Theme folders and files can be created, copied or moved anywhere in the repository, but they can only be made active, uploaded, or downloaded when properly placed in a Themes folder.
 
-4.  Right-click your new folder and select **Add Resource \> File \> CSS**, and use the dialog to upload an individual CSS file. In order to be used as part of a theme, it must be one of the file names shown in [Contents of the Root default Theme](how_themes_work.md).
+4.  Right-click your new folder and select **Add Resource &gt; File &gt; CSS**, and use the dialog to upload an individual CSS file. In order to be used as part of a theme, it must be one of the file names shown in [Contents of the Root default Theme](how_themes_work.md).
 
-5.  To add images to your theme, create any image folders and upload image files with **Add Resource \> File \> Image**.
+5.  To add images to your theme, create any image folders and upload image files with **Add Resource &gt; File &gt; Image**.
 
 6.  Repeat Step 4 and Step 5 to create all the files and images you need. If several themes use the same files or images, you can copy-paste the file resources or entire image folders from one theme to another.
 
@@ -52,7 +52,7 @@ Because a theme is composed of any number of files and folders, JasperReports Se
 To download a theme ZIP file
 
 1.  Log in as an administrator with access to the theme you want to download.
-2.  Click **View \> Repository** and expand the **Themes** folder if necessary.
+2.  Click **View &gt; Repository** and expand the **Themes** folder if necessary.
 3.  Right-click the theme folder you want to download and select **Download the Theme**. This menu selection appears only on theme folders inside the **Themes** folder.
 4.  The server prompts you to save the file named `<theme-name>.zip`. Save it anywhere on your computer.
 5.  Use an archiving or compression utility to extract the files from the ZIP file and save them on your computer.
@@ -73,7 +73,7 @@ To upload a ZIP file as a theme
 
 3.  Log in as an administrator with access to the location where you want to upload the theme.
 
-4.  Click **View \> Repository** and expand the **Themes** folder if necessary.
+4.  Click **View &gt; Repository** and expand the **Themes** folder if necessary.
 
 5.  Right-click the **Themes** folder and select **Upload a Theme**.
 

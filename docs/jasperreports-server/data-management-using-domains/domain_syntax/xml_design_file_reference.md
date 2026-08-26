@@ -15,7 +15,7 @@ This section explains each of the XML elements and attributes in a design file a
 
     The following symbols can't be entered directly; they must be escaped using their HTML encoding:
 
-    & = `&amp;`           " = `&quot;`           \< = `&lt;`           \> = `&gt;`
+    & = `&amp;`           " = `&quot;`           &lt; = `&lt;`           &gt; = `&gt;`
 
 ## The schema Element
 
@@ -41,9 +41,9 @@ The following hierarchy is used for the `schema` element:
 
 When you export a file from the Domain Designer, these elements appear alphabetically in the file. In this reference, they are presented in the following order, based on their function in the Domain:
 
-- Data sources and database schemas (`dataSources` element).
-- Domain tables and rows (`resources` element); includes tables, derived tables, calculated fields, joins, and pre-filters.
-- Domain presentation (`dataIslands`, `itemGroups`, and `items` elements).
+-   Data sources and database schemas (`dataSources` element).
+-   Domain tables and rows (`resources` element); includes tables, derived tables, calculated fields, joins, and pre-filters.
+-   Domain presentation (`dataIslands`, `itemGroups`, and `items` elements).
 
 #### Child Elements
 

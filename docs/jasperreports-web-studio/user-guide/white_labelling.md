@@ -7,13 +7,13 @@ description: "This white labeling feature allows the customization of an applica
 
 This white labeling feature allows the customization of an application's front-end appearance to align with a company's brand. The feature must be supported by the license in use. A configuration file used to specify the customization options, which include:
 
-- the displayed name of the product.
+-   the displayed name of the product.
 
-- the displayed company name.
+-   the displayed company name.
 
-- the whole content of the About dialog.
+-   the whole content of the About dialog.
 
-- the ability to provide a Cascading Stylesheet file (`css`) to override the look and feel, such as colors, fonts, backgrounds used by each page of the application.
+-   the ability to provide a Cascading Stylesheet file (`css`) to override the look and feel, such as colors, fonts, backgrounds used by each page of the application.
 
 ## To create the Property file:
 

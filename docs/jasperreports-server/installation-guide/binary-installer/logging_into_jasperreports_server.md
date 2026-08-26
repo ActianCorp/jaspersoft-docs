@@ -8,19 +8,18 @@ description: To log into JasperReports Server on any operating system
 To log into JasperReports Server on any operating system
 
 1.  Start JasperReports Server.
-
 2.  Open a supported browser: Firefox, Internet Explorer, Chrome, or Safari.
-
 3.  Log into JasperReports Server by entering the startup URL in your browser’s address field. The URL depends upon your application server. If you installed the default, bundled Tomcat use:
 
-    `http://<hostname>:8080/``jasperserver`` ``-pro`` `
+`http://<hostname>:8080/``jasperserver`` ``-pro`` `
 
-    - `<hostname>` is the name or IP address of the computer hosting JasperReports Server.
-    - 8080 is the default port number for the Apache Tomcat application server. If you used a different port when installing your application server, specify its port number instead of 8080.
+-   `<hostname>` is the name or IP address of the computer hosting JasperReports Server.
 
-    The login page appears.
+    -   8080 is the default port number for the Apache Tomcat application server. If you used a different port when installing your application server, specify its port number instead of 8080.
 
-4.  Log in using the following credentials:
+The login page appears.
+
+1.  Log in using the following credentials:
 
 | User ID     | Password    | Description                                |
 |-------------|-------------|--------------------------------------------|
@@ -40,7 +39,7 @@ If you installed the sample data, these additional sample end-users are also cre
 
 To log into JasperReports Server on Windows
 
-On Windows, you can launch the login page from the desktop of the JasperReports Server host computer by clicking ****Start \> All Programs \> JasperReports Server\> JasperReports Server Login****.
+On Windows, you can launch the login page from the desktop of the JasperReports Server host computer by clicking ****Start &gt; All Programs &gt; JasperReports Server&gt; JasperReports Server Login****.
 
 To log into JasperReports Server on Mac OSX
 

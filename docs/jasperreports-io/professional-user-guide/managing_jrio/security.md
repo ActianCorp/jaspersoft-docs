@@ -9,14 +9,17 @@ JasperReports IO provides security for your web applications and reports through
 
 JasperReports IO comes with a preconfigured protection domain that by default gives users all permissions to the files for:
 
-- The Java Virtual Machine.
-- The web application server.
-- The JasperReports IO reporting service web applications.
+-   The Java Virtual Machine.
 
-The preconfigured protection domain restricts users' permissions to the following:
+-   The web application server.
 
-- Repository JARs.
-- Report expressions.
+-   The JasperReports IO reporting service web applications.
+
+    The preconfigured protection domain restricts users' permissions to the following:
+
+-   Repository JARs.
+
+-   Report expressions.
 
 The following shows the preconfigured protection domain settings in the `security.policy` file:
 

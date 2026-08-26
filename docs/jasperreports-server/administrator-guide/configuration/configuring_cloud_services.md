@@ -7,11 +7,11 @@ description: "The following settings control how JasperReports Server interacts 
 
 The following settings control how JasperReports Server interacts with a cloud service provider, such as AWS and Microsoft Azure:
 
-- The **Cloud Settings** page enables you to create and change firewall rules without restarting the server. For the Microsoft Azure service, these rules are called "access rules". For AWS, they are called "security groups".
+-   The **Cloud Settings** page enables you to create and change firewall rules without restarting the server. For the Microsoft Azure service, these rules are called "access rules". For AWS, they are called "security groups".
 
-- The AWS configuration file allows you to change the JDBC driver used for AWS data sources.
+-   The AWS configuration file allows you to change the JDBC driver used for AWS data sources.
 
-- The Azure configuration file allows you to change the JDBC driver and URL template used for Azure data sources.
+-   The Azure configuration file allows you to change the JDBC driver and URL template used for Azure data sources.
 
 For more information about AWS and Azure data sources, see [“AWS Data Sources” on page 1](../datasources/aws_data_sources.md) and [Azure SQL Data Sources](../datasources/azure_data_sources.md).
 
@@ -21,7 +21,7 @@ To change cloud services settings
 
 1.  Log in as a system administrator (superuser by default).
 
-2.  Click **Manage \> Server Settings**.
+2.  Click **Manage &gt; Server Settings**.
 
 3.  Click **Cloud Settings** in the left-menu.<br>
     The **Cloud Settings** panel appears.
@@ -36,15 +36,15 @@ To change cloud services settings
 
 4.  Modify the following settings and click **Change** after each modification. Changes are effective immediately on the server:
 
-    - **Automatically Set Up an Access Rule for JasperReports Server**: This checkbox is generally left checked. When checked the JasperReports Server will automatically create and update an access rule that allows connections from JasperReports Server to the database hosted by the cloud service provider. If you want to manage the access rules manually, uncheck this box.
+    -   **Automatically Set Up an Access Rule for JasperReports Server**: This checkbox is generally left checked. When checked the JasperReports Server will automatically create and update an access rule that allows connections from JasperReports Server to the database hosted by the cloud service provider. If you want to manage the access rules manually, uncheck this box.
 
-    - **Access Rule Name**: When JasperReports Server creates access rules to support cloud-based data sources on this instance, it uses this name as the basis of the access rule name. When the JasperReports Server instance is running on AWS EC2, the EC2 instance ID is appended. When running outside of AWS EC2, you must make sure that the name is unique among JasperReports Server instances (that is, each instance should have its own name), so the IP addresses are properly granted access to the appropriate database instances.
+    -   **Access Rule Name**: When JasperReports Server creates access rules to support cloud-based data sources on this instance, it uses this name as the basis of the access rule name. When the JasperReports Server instance is running on AWS EC2, the EC2 instance ID is appended. When running outside of AWS EC2, you must make sure that the name is unique among JasperReports Server instances (that is, each instance should have its own name), so the IP addresses are properly granted access to the appropriate database instances.
 
-    - `Access Rule Description`: This text is used as the description for the access rule.
+    -   `Access Rule Description`: This text is used as the description for the access rule.
 
-    - **JasperReports Server Public IP:** Enter the public IP address for JasperReports Server. Most users on AWS EC2 should leave this field empty and let JasperReports Server determine the IP address automatically. It is possible with complex EC2 topology involving Virtual Private Clouds (VPCs) that you need to provide your IP address manually.
+    -   **JasperReports Server Public IP:** Enter the public IP address for JasperReports Server. Most users on AWS EC2 should leave this field empty and let JasperReports Server determine the IP address automatically. It is possible with complex EC2 topology involving Virtual Private Clouds (VPCs) that you need to provide your IP address manually.
 
-    - **Suppress EC2 Credentials Warning**: If your JasperReports Server instance was created with no IAM role, when you go to the data source wizard to add an AWS data source with EC2 credentials there will be a warning message saying there is no proper role set. Checking this box suppresses the warning and disables the option.
+    -   **Suppress EC2 Credentials Warning**: If your JasperReports Server instance was created with no IAM role, when you go to the data source wizard to add an AWS data source with EC2 credentials there will be a warning message saying there is no proper role set. Checking this box suppresses the warning and disables the option.
 
 ## Changing the Default JDBC Driver for AWS Data Sources
 

@@ -9,9 +9,9 @@ description: "You can edit the following on the Tables tab in the Properties vie
 
 You can edit the following on the **Tables** tab in the **Properties** view:
 
-- **Name**: Enter a name for the table. The name appears in the outline view.
-- **Fit columns to table element**: Select this to have the columns automatically stretch or shrink to fit the table width.
-- **Resize the columns taking the space from the next one**: Select this to configure the table so that resizing a column by moving its border means one column grows wider and the other narrower.
+-   **Name**: Enter a name for the table. The name appears in the outline view.
+-   **Fit columns to table element**: Select this to have the columns automatically stretch or shrink to fit the table width.
+-   **Resize the columns taking the space from the next one**: Select this to configure the table so that resizing a column by moving its border means one column grows wider and the other narrower.
 
 ## Editing Table Styles
 
@@ -37,29 +37,30 @@ To delete a style, right-click it in the **Table Styles** tab and choose **Delet
 
 You can edit the content, style, and size of each cell or group of cells in your table.
 
-- To edit table content, double-click your table. The table opens in a separate tab inside the **Design** tab for your report.
+-   To edit table content, double-click your table. The table opens in a separate tab inside the **Design** tab for your report.
 
-|                                                           |
-|-----------------------------------------------------------|
-| ![table editing tab](assets/images/table-editing-tab.png) |
-| *Figure 3: Table Editing Tab*                             |
+    |                                                           |
+    |-----------------------------------------------------------|
+    | ![table editing tab](assets/images/table-editing-tab.png) |
+    | *Figure 3: Table Editing Tab*                             |
 
-- To edit the content and style of a cell, click the cell. Switch to the **Properties** view where you can edit location, size, color, style, and print details for the cell.
+-   To edit the content and style of a cell, click the cell. Switch to the **Properties** view where you can edit location, size, color, style, and print details for the cell.
 
-|  |
-|----|
-| ![jss crosstabs cell with properties](assets/images/jss-crosstabs-cell-with-properties.png) |
-| *Figure 4: Cell with Properties View* |
+    |  |
+    |----|
+    | ![jss crosstabs cell with properties](assets/images/jss-crosstabs-cell-with-properties.png) |
+    | *Figure 4: Cell with Properties View* |
 
-- To edit the size and position of a cell, or copy or delete it, right-click on the cell and select an action from the context menu.
+-   To edit the size and position of a cell, or copy or delete it, right-click on the cell and select an action from the context menu.
 
-|  |
-|----|
-| ![jss crosstabs cell right click menu](assets/images/jss-crosstabs-cell-right-click-menu.png) |
-| *Figure 5: Cell Right-Click Menu* |
+    |  |
+    |----|
+    | ![jss crosstabs cell right click menu](assets/images/jss-crosstabs-cell-right-click-menu.png) |
+    | *Figure 5: Cell Right-Click Menu* |
 
-- Use Shift-click to select all cells in a row.
-- See [Working with Columns](tables-working-with-columns.md) for information about working with columns.
+-   Use Shift-click to select all cells in a row.
+
+-   See [Working with Columns](tables-working-with-columns.md) for information about working with columns.
 
 The following figure is the table created in [Creating a Table](tables-creating.md), after formatting and editing:
 
@@ -89,7 +90,7 @@ Suppose, for instance, you have a report that displays order details in a table,
 
 You can also edit tables using the **Source** tab. In the source, the tags are labeled as follows:
 
-- `Table`: External border of the table.
-- `Table_TH`: Table header background color and cell borders.
-- `Table_CH`: Table column background.
-- `Table_TD`: Detailed cell style. `Table_TD` can be nested to display alternating background color for the detail rows.
+-   `Table`: External border of the table.
+-   `Table_TH`: Table header background color and cell borders.
+-   `Table_CH`: Table column background.
+-   `Table_TD`: Detailed cell style. `Table_TD` can be nested to display alternating background color for the detail rows.

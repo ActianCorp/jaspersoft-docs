@@ -107,16 +107,16 @@ To run optional integration tests, make sure that Chrome, Chromium, or any other
 
 Commands for Running Integration Tests
 
-- `js-ant drop-js-db`
-- `js-ant create-js-db`
-- `js-ant init-js-db-pro`
-- `js-ant run-integration-tests-pro`
+-   `js-ant drop-js-db`
+-   `js-ant create-js-db`
+-   `js-ant init-js-db-pro`
+-   `js-ant run-integration-tests-pro`
 
 ## Location of JavaScript files
 
 In the current version of JasperReports Server, the JavaScript-related files are in the following directory:
 
-\<js-pro-path\>/jasperserver-war/src/main/webapp/scripts/runtime_dependencies/jrs-ui/src
+&lt;js-pro-path&gt;/jasperserver-war/src/main/webapp/scripts/runtime_dependencies/jrs-ui/src
 
 This location may be different in earlier versions. See the JasperReports Server Source Build Guide for your version for more information.
 

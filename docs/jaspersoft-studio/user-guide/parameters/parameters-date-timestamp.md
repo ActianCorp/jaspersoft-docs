@@ -24,28 +24,29 @@ To display the date/time that the report ran
 
 4.  Set the following parameter properties:
 
-    - **Class** = java.util.Date
-    - **Is for Prompting** = unchecked
+-   **Class** = java.util.Date
 
-    |  |
-    |----|
-    | ![jss ScheduledTime Properties](../assets/images/jss-ScheduledTime-Properties.png) |
-    | *Figure 2: \_ScheduledTime Parameter Properties* |
+    -   **Is for Prompting** = unchecked
 
-5.  Drag the **\_ScheduledTime** element from the **Outline** view to a valid location, such as the **Title Band**, in the **Designer**:
+|  |
+|----|
+| ![jss ScheduledTime Properties](../assets/images/jss-ScheduledTime-Properties.png) |
+| *Figure 2: \_ScheduledTime Parameter Properties* |
+
+1.  Drag the **\_ScheduledTime** element from the **Outline** view to a valid location, such as the **Title Band**, in the **Designer**:
 
     |  |
     |----|
     | ![jss ScheduledTime Designer](../assets/images/jss-ScheduledTime-Designer.png) |
     | *Figure 3: Report Design Includes the \_ScheduledTime Parameter Element* |
 
-6.  Now you can set other properties, such as the text color of the date/time stamp. In **Properties**, check **Blank when Null** to prevent the word null from appearing on the report when it runs unscheduled.
+2.  Now you can set other properties, such as the text color of the date/time stamp. In **Properties**, check **Blank when Null** to prevent the word null from appearing on the report when it runs unscheduled.
 
-7.  Compile the report, and upload it to JasperReports Server. For more information about uploading reports to JasperReports Server, see [Accessing JasperReports Server from Jaspersoft Studio](../jrs-server/jss2jrs.md).
+3.  Compile the report, and upload it to JasperReports Server. For more information about uploading reports to JasperReports Server, see [Accessing JasperReports Server from Jaspersoft Studio](../jrs-server/jss2jrs.md).
 
-8.  In the server, schedule the report to run immediately.
+4.  In the server, schedule the report to run immediately.
 
-9.  Open the output file.
+5.  Open the output file.
 
 |  |
 |----|

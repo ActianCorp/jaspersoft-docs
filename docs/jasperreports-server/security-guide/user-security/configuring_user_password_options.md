@@ -254,13 +254,13 @@ By default, the feature is disabled (for backward compatibility). Administrators
 
 !!! note
 
-    - The password history validation only applies to internal authenticated users, not external ones using LDAP. The rule is enforced during both self-service resets on the Login page and admin resets via the Manage \> Users menu, but it doesn't trigger during regular logins, data imports, or other non-change events.
+    -   The password history validation only applies to internal authenticated users, not external ones using LDAP. The rule is enforced during both self-service resets on the Login page and admin resets via the Manage &gt; Users menu, but it doesn't trigger during regular logins, data imports, or other non-change events.
 
-    - Once it's turned on, the system blocks users from picking their current password or any of their last `N` passwords, depending on what you set for `password.history.count`. If you change this number, the new limit takes effect on the next password update, checking against the most recent entries in the log.
+    -   Once it's turned on, the system blocks users from picking their current password or any of their last `N` passwords, depending on what you set for `password.history.count`. If you change this number, the new limit takes effect on the next password update, checking against the most recent entries in the log.
 
-    - If you delete a user, their entire password history is automatically wiped out.
+    -   If you delete a user, their entire password history is automatically wiped out.
 
-    - When you export users, their password history is not exported.
+    -   When you export users, their password history is not exported.
 
 If you enable password history validation, the rejection messages must be updated across all your active locales so users know why their new password wasn't accepted.
 
@@ -344,5 +344,5 @@ The following steps, as an example, describe how to change the threshold to 2 an
 
 LDAP users can log into JasperReports Server with or without specifying an organization_id, for example, "`user_1|organization/password`" and "`user_1/password`". Internally, such users are treated as the same user, which means that locking out "`user_1|organization/password`" will also lock out "`user_1/password`". This can be a problem when you have some internally defined users with the same name in the root level organization. To avoid such situations, stick to the following rules:
 
-- If possible, avoid creating users in the root organization with a user id that can match an external user id.
-- External LDAP users should enter their organization ids along with user id and password.
+-   If possible, avoid creating users in the root organization with a user id that can match an external user id.
+-   External LDAP users should enter their organization ids along with user id and password.

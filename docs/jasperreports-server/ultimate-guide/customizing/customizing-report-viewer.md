@@ -7,11 +7,11 @@ description: "The report viewer is the UI module that displays JasperReports. It
 
 The report viewer is the UI module that displays JasperReports. It is a central part of the UI that users interact with frequently. In addition to displaying the report contents, the report viewer provides the following functionality:
 
-- Display Input controls so users can set report options, also called parameters.
+-   Display Input controls so users can set report options, also called parameters.
 
-- Enable navigation through the pages of the report.
+-   Enable navigation through the pages of the report.
 
-- Enable users to export the report in various formats.
+-   Enable users to export the report in various formats.
 
 Each of these is customizable, which allows you to control many details of the report viewing experience. The Input controls can be set either globally or on individual reports. The report viewer can be set globally.
 
@@ -163,7 +163,7 @@ To customize the Input controls
 
 4.  Restart JasperReports Server.
 
-5.  Go to **View \> Repository** and click **Edit**.
+5.  Go to **View &gt; Repository** and click **Edit**.
 
 6.  Select **Controls & Resources** from the menu and then enter `modules/inputControls/customParametersForm.jsp` in the **Optional JSP Location** field.
 

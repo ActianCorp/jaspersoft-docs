@@ -29,31 +29,38 @@ To create the report book framework
 
 9.  In the Book Sections window, make sure that all three options are selected:
 
-    - **Create Cover Section**
-    - **Create Table of Contents**
-    - **Create Back Cover Section**
+-   **Create Cover Section**
 
-10. Click **Finish**.
+    -   **Create Table of Contents**
 
-Your Report Book project opens in Jaspersoft Studio.
+    -   **Create Back Cover Section**
 
-|  |
-|----|
-| ![jss report book framework](../assets/images/jss-report-book-framework.png) |
-| *Figure 1: Report Book Framework* |
+        1.  Click **Finish**.
 
-In Jaspersoft Studio, open the Project Explorer and expand the My Reports folder. There, you can see the jrxml files you just created:
+        Your Report Book project opens in Jaspersoft Studio.
 
-- Sample_Book_backcover.jrxml
-- Sample_Book_cover.jrxml
-- Sample_Book_toc.jrxml
-- Sample_Book.jrxml
+        |  |
+        |----|
+        | ![jss report book framework](../assets/images/jss-report-book-framework.png) |
+        | *Figure 1: Report Book Framework* |
 
-Sample_Book.jrxml is open in the main Design tab. This is the file in which you organize the report parts. You notice three groups for the book part types:
+        In Jaspersoft Studio, open the Project Explorer and expand the My Reports folder. There, you can see the jrxml files you just created:
 
-- **Cover and Table of Contents** contains Sample_Book_cover.jrxml and Sample_Book_toc.jrxml.
-- **Content** is empty.
-- **Backcover** contains Sample_Book_backcover.jrxml
+-   Sample_Book_backcover.jrxml
+
+-   Sample_Book_cover.jrxml
+
+-   Sample_Book_toc.jrxml
+
+-   Sample_Book.jrxml
+
+    Sample_Book.jrxml is open in the main Design tab. This is the file in which you organize the report parts. You notice three groups for the book part types:
+
+-   **Cover and Table of Contents** contains Sample_Book_cover.jrxml and Sample_Book_toc.jrxml.
+
+-   **Content** is empty.
+
+-   **Backcover** contains Sample_Book_backcover.jrxml
 
 When you select each these book parts in the design window, you can view and edit their properties in the **Properties** View, as you can with standard reports and subreports.
 

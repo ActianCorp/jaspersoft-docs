@@ -11,7 +11,7 @@ Jaspersoft Studio templates require a flat folder structure (resources and repor
 
 You can specify one or more directories for your custom templates.
 
-1.  Go to **Window \> Preferences \> Jaspersoft Studio \>Resource Folders Locations \> Report Templates Locations**.
+1.  Go to **Window &gt; Preferences &gt; Jaspersoft Studio &gt;Resource Folders Locations &gt; Report Templates Locations**.
 
     |  |
     |----|
@@ -28,7 +28,7 @@ You can specify one or more directories for your custom templates.
 
 Save your template for future use.
 
-1.  Go to **File \> Export as Report Template**. The **Template Export** dialog opens.
+1.  Go to **File &gt; Export as Report Template**. The **Template Export** dialog opens.
 
     |                                                       |
     |-------------------------------------------------------|

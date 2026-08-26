@@ -13,25 +13,25 @@ This upgrade procedure uses the JasperReports Server WAR File Distribution ZIP r
 
 This chapter contains the following sections:
 
-- Upgrade Step
+-   Upgrade Step
 
-- Upgrading with Customizations
+-   Upgrading with Customizations
 
-- Back Up Your JasperReports Server Instance
+-   Back Up Your JasperReports Server Instance
 
-- Exporting Current Repository Data
+-   Exporting Current Repository Data
 
-- Preparing the JasperReports Server 5.6 WAR File Distribution
+-   Preparing the JasperReports Server 5.6 WAR File Distribution
 
-- Configuring Buildomatic for Your Database and Application Server
+-   Configuring Buildomatic for Your Database and Application Server
 
-- Upgrading to JasperReports Server 5.6
+-   Upgrading to JasperReports Server 5.6
 
-- Starting and Logging into JasperReports Server 5.6
+-   Starting and Logging into JasperReports Server 5.6
 
-- Additional Tasks to Complete the Upgrade
+-   Additional Tasks to Complete the Upgrade
 
-- Old Manual Upgrade Steps
+-   Old Manual Upgrade Steps
 
 ## Upgrade Steps Overview
 
@@ -70,41 +70,41 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
 
 2.  Run the following commands for PostgreSQL or MySQL:
 
-    - PostgreSQL
+    -   PostgreSQL
 
-      ``` bash
-      cd <path>/JS_BACKUP
-      pg_dump --username=postgres  jasperserver  >  js-db-dump.sql
-      ```
+        ``` bash
+        cd <path>/JS_BACKUP
+        pg_dump --username=postgres  jasperserver  >  js-db-dump.sql
+        ```
 
-    - MySQL
+    -   MySQL
 
-      ``` bash
-      cd <path>/JS_BACKUP
-      ```
+        ``` bash
+        cd <path>/JS_BACKUP
+        ```
 
-      <table>
-      <colgroup>
-      <col style="width: 50%" />
-      <col style="width: 50%" />
-      </colgroup>
-      <thead>
-      <tr>
-      <th>Operating System</th>
-      <th>Command</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td><p>Windows:</p></td>
-      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></div></td>
-      </tr>
-      <tr>
-      <td><p>Linux:</p></td>
-      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></div></td>
-      </tr>
-      </tbody>
-      </table>
+        <table>
+        <colgroup>
+        <col style="width: 50%" />
+        <col style="width: 50%" />
+        </colgroup>
+        <thead>
+        <tr>
+        <th>Operating System</th>
+        <th>Command</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><p>Windows:</p></td>
+        <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></div></td>
+        </tr>
+        <tr>
+        <td><p>Linux:</p></td>
+        <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></div></td>
+        </tr>
+        </tbody>
+        </table>
 
 !!! note
 
@@ -367,8 +367,8 @@ Now that your buildomatic scripts are configured, you can complete the upgrade.
 
 If you are prompted to create a keystore, this means that the server's original keystore was not found in the user's home directory. Proceed with caution:
 
-- In general, it is recommended to exit the upgrade procedure and make sure that the keystore is in the proper location, then rerun the upgrade.
-- If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository.
+-   In general, it is recommended to exit the upgrade procedure and make sure that the keystore is in the proper location, then rerun the upgrade.
+-   If you continue and create a keystore, then the upgrade proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository.
 
 ### js-upgrade Test Mode
 
@@ -406,10 +406,10 @@ Log in using the following URL, user IDs, and passwords:
 
 URL: `http://localhost:8080/``jasperserver`` ``-pro`` `
 
-| User ID       | Password          | Description                                |
-|---------------|-------------------|--------------------------------------------|
-| `superuser`   | \<your-password\> | System-wide administrator                  |
-| `jasperadmin` | \<your-password\> | Administrator for the default organization |
+| User ID | Password | Description |
+|----|----|----|
+| `superuser` | &lt;your-password&gt; | System-wide administrator |
+| `jasperadmin` | &lt;your-password&gt; | Administrator for the default organization |
 
 Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting section of the JasperReports Server Installation Guide.
 

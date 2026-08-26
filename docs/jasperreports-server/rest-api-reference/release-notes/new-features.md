@@ -7,6 +7,6 @@ description: The following features have been added in this release of JasperRep
 
 The following features have been added in this release of JasperReports® Server.
 
-- JIRA summary
+-   JIRA summary
 
-- JIRA summary
+-   JIRA summary

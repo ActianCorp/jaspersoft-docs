@@ -12,31 +12,29 @@ The remote server must also be configured for XML/A. For more information, inclu
 To create an XML/A Data Adapter
 
 1.  Right-click **Data Adapters** in the Repository Explorer, and select **Create Data Adapter**.
-
 2.  Select **XML/A Server** and click **Next**.
-
 3.  Enter a name for the data adapter.
-
 4.  Enter the URL for your XML/A provider. The type of server determines the value. For example:
 
-    - If the XML/A server is JasperReports Server, the URL is something like: `http://<hostname>:<port>/jasperserver-pro/xmla`
-    - If the XML/A server is Microsoft SSAS 2012, the URL is something like:
+-   If the XML/A server is JasperReports Server, the URL is something like: `http://<hostname>:<port>/jasperserver-pro/xmla`
 
-    `http://<hostname>/MSSQL_2012/msmdpump.dll`
+    -   If the XML/A server is Microsoft SSAS 2012, the URL is something like:
 
-5.  Enter a username and password of a user that has sufficient access to the report server to return your data.
+`http://<hostname>/MSSQL_2012/msmdpump.dll`
 
-6.  Click `Get Metadata`.
+1.  Enter a username and password of a user that has sufficient access to the report server to return your data.
+
+2.  Click `Get Metadata`.
 
     Jaspersoft Studio attempts to connect to the server and return information about its data sources, catalogs, and cubes. If it is successful, default values appear in the drop-downs. If the connection fails, check the URL, ensure that the remote server is available, and try again.
 
-7.  Select the data source, catalog, and cube that stores the data you want for your report.
+3.  Select the data source, catalog, and cube that stores the data you want for your report.
 
-8.  Click **Test**.
+4.  Click **Test**.
 
     Jaspersoft Studio connects to the server and read the cube you selected. If the connection fails, check the URL, ensure that the remote server is available, and try again.
 
-9.  When the test succeeds, click **OK** to close the message and click **Finish** to close the **New Data Adapter Wizard**.
+5.  When the test succeeds, click **OK** to close the message and click **Finish** to close the **New Data Adapter Wizard**.
 
 When you create a report using this data adapter, you may see a message indicating that the data adapter does not support the ability to retrieve fields. This means Jaspersoft Studio does not have enough information to preview your data. After you provide an MDX query, Jaspersoft Studio can automatically read fields and suggest their datatypes.
 

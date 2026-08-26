@@ -15,11 +15,11 @@ Domain security and translation of Domain labels and descriptions are also confi
 
 This chapter provides an overview of XML Domain design files and best practices for working with them:
 
-- [Understanding Domain Design Files](understanding.md)
-- [Requirements for XML Design Files](requirements.md)
+-   [Understanding Domain Design Files](understanding.md)
+-   [Requirements for XML Design Files](requirements.md)
 
 Details about XML design files, security files, and locale bundles are given in the following chapters:
 
-- [XML Design File Reference](../domain_syntax/xml_design_file_reference.md): The syntax of all elements in the XML design file, such as the data source, tables, joins, sets, and items.
-- [Securing Data in a Domain](../domain_security/securing_data_in_a_domain.md): A sample scenario that documents how to create a security file.
-- [Localizing Domains](../localizing/localizing_domains.md): How to create and upload locale bundles to translate labels and descriptions appearing in Domain-based reports.
+-   [XML Design File Reference](../domain_syntax/xml_design_file_reference.md): The syntax of all elements in the XML design file, such as the data source, tables, joins, sets, and items.
+-   [Securing Data in a Domain](../domain_security/securing_data_in_a_domain.md): A sample scenario that documents how to create a security file.
+-   [Localizing Domains](../localizing/localizing_domains.md): How to create and upload locale bundles to translate labels and descriptions appearing in Domain-based reports.

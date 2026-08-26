@@ -41,13 +41,13 @@ To install the WAR file for WebLogic:
     1.  Copy the JDBC jar:<br>
         From:
 
-    `<js-install>/buildomatic/conf_source/db/postgresql/jdbc`
+        `<js-install>/buildomatic/conf_source/db/postgresql/jdbc`
 
-    To:
+        To:
 
-    `<weblogic_home>/server/lib`
+        `<weblogic_home>/server/lib`
 
-    Note that the MySQL JDBC driver is included in recent versions of WebLogic.
+        Note that the MySQL JDBC driver is included in recent versions of WebLogic.
 
 4.  To ensure you have full support for import/export from the command line, copy your JDBC driver to the following location. If you are not using the command line for import/export, you can skip this step:
 
@@ -70,7 +70,7 @@ To install the WAR file for WebLogic:
 
     !!! note
 
-        When appServerType = skipAppServerCheck, buildomatic skips the application server type validation. Use this setting when installing JasperReports Server with WebLogic. Backslashes in appServerDir must be doubled, for example C:\\WL\\Application_Server. Make sure that there are no spaces in the appServerDir path.
+        When appServerType = skipAppServerCheck, buildomatic skips the application server type validation. Use this setting when installing JasperReports Server with WebLogic. Backslashes in appServerDir must be doubled, for example C:\\\\WL\\\\Application_Server. Make sure that there are no spaces in the appServerDir path.
 
     <table>
     <caption><p>Sample Values for the default_master.properties File</p></caption>
@@ -193,7 +193,7 @@ To install the WAR file for WebLogic:
     `export CLASSPATH=/opt/Oracle/Middleware/Oracle_Home/wlserver/server/lib/postgresql.jar:`<br>
     `/opt/Oracle/Middleware/Oracle_Home/wlserver/server/lib/jswlstc-1.0.jar:$CLASSPATH`
 
-11. In WebLogic, open an **Administrative Console** window and navigate to **Services \>** ****Data Sources**** or **Domain Configurations \> Services \> Data Sources**.
+11. In WebLogic, open an **Administrative Console** window and navigate to **Services &gt;** ****Data Sources**** or **Domain Configurations &gt; Services &gt; Data Sources**.
 
 12. Click **New** and then **Generic Data Source** for each of the data source columns in the following table, and enter the following values for a PostgreSQL database. You will need to click **Next** after entering the database driver and after **One-Phase Commit**.
 
@@ -318,48 +318,48 @@ To install the WAR file for WebLogic:
 
     1.  For SugarCRM and Foodmart, use the default connections:
 
-    **JDBC:postgresql://localhost:5432/sugarcrm**
+        **JDBC:postgresql://localhost:5432/sugarcrm**
 
-    **jdbc:postgresql://localhost:5432/foodmart**
+        **jdbc:postgresql://localhost:5432/foodmart**
 
-15. Change the URL for the JasperServerDataBase to:
+    2.  Change the URL for the JasperServerDataBase to:
 
-    **jdbc:postgresql://localhost:5432/jasperserver**
+        **jdbc:postgresql://localhost:5432/jasperserver**
 
-16. Change the URL for the AuditDataBase to:
+    3.  Change the URL for the AuditDataBase to:
 
-    For Compact installation: **jdbc:postgresql://localhost:5432/jasperserver**
+        For Compact installation: **jdbc:postgresql://localhost:5432/jasperserver**
 
-    For Split installation: **jdbc:postgresql://localhost:5432/jsaudit**
+        For Split installation: **jdbc:postgresql://localhost:5432/jsaudit**
 
-17. Change the URL for the JasperServerSystemDataBase to:
+    4.  Change the URL for the JasperServerSystemDataBase to:
 
-    **jdbc:postgresql://localhost:5432/jasperserver**
+        **jdbc:postgresql://localhost:5432/jasperserver**
 
-18. Change the URL for the AuditAnalyticsDataBase to:
+    5.  Change the URL for the AuditAnalyticsDataBase to:
 
-    For Compact installation: **jdbc:postgresql://localhost:5432/jasperserver**
+        For Compact installation: **jdbc:postgresql://localhost:5432/jasperserver**
 
-    For Split installation: **jdbc:postgresql://localhost:5432/jsaudit**
+        For Split installation: **jdbc:postgresql://localhost:5432/jsaudit**
 
-19. Select targets and ensure that **AdminServer** is set for all data sources.
+15. Select targets and ensure that **AdminServer** is set for all data sources.
 
-20. In WebLogic, open an **Administrative Console** window and navigate to **Services \> Data Sources** or **Domain Configurations \> Services \> Data Sources**.
+16. In WebLogic, open an **Administrative Console** window and navigate to **Services &gt; Data Sources** or **Domain Configurations &gt; Services &gt; Data Sources**.
 
-21. Select each created data source (JasperServerDataBase, AuditDataBase, FoodmartDataBase, and SugarcrmDataBase)
+17. Select each created data source (JasperServerDataBase, AuditDataBase, FoodmartDataBase, and SugarcrmDataBase)
 
-22. Select the Connection Pool tab and increase the **Maximum Capacity** setting, depending on load. For most installations, a **Maximum Capacity** in the range 50 – 100 should be sufficient. If you receive connection pool errors, increase this setting; see the documentation for WebLogic for more information.
+18. Select the Connection Pool tab and increase the **Maximum Capacity** setting, depending on load. For most installations, a **Maximum Capacity** in the range 50 – 100 should be sufficient. If you receive connection pool errors, increase this setting; see the documentation for WebLogic for more information.
 
-23. On the Connection Pool tab, expand **Advanced** and enable **Test Connections On Reserve**. Set the **Test Frequency** to 30 seconds and set the **Test Table Name** for your datasource and database type. Sample properties for a PostgreSQL database are:
+19. On the Connection Pool tab, expand **Advanced** and enable **Test Connections On Reserve**. Set the **Test Frequency** to 30 seconds and set the **Test Table Name** for your datasource and database type. Sample properties for a PostgreSQL database are:
 
     | Parameter Name | JasperReports Server | JasperReports Server Audit | JasperServerSystemDataBase | AuditAnalyticsDataBase | Foodmart | Sugar CRM |
     |----|----|----|----|----|----|----|
     | Name | JasperServerDataBase | AuditDataBase | Jasper Server System DataBase | Audit Analytics DataBase | FoodmartDataBase | SugarcrmDataBase |
     | Test Table Name | JIREPORTJOB | JIREPORTJOB | JIREPORTJOB | JIREPORTJOB | ACCOUNT | ACCOUNTS |
 
-24. Click **Save**.
+20. Click **Save**.
 
-25. Use the Java jar tool or an unzip tool to unpack the jasperserver-pro.war file. For example, using the Java jar tool, enter these commands to unpack the jasperserver-pro.war file to a folder:
+21. Use the Java jar tool or an unzip tool to unpack the jasperserver-pro.war file. For example, using the Java jar tool, enter these commands to unpack the jasperserver-pro.war file to a folder:
 
     ``` bash
     cd <js-install-dir>
@@ -368,79 +368,79 @@ To install the WAR file for WebLogic:
     "%JAVA_HOME%/bin/jar" xvf ../jasperserver-pro.war
     ```
 
-26. Search for conflicting JARs and delete them from the WAR file. If the following JARs are present in your WebLogic installation, you need to delete them from your JasperReports Server installation to avoid conflicts. To do this:
+22. Search for conflicting JARs and delete them from the WAR file. If the following JARs are present in your WebLogic installation, you need to delete them from your JasperReports Server installation to avoid conflicts. To do this:
 
     1.  Search your WebLogic installation for the following files:
 
-    `jaxb-api-<ver>.jar`
+        `jaxb-api-<ver>.jar`
 
-    `jaxb-impl-<ver>.jar`
+        `jaxb-impl-<ver>.jar`
 
-    `serializer-<ver>.jar`
+        `serializer-<ver>.jar`
 
-    `stax-api-<ver>.jar`
+        `stax-api-<ver>.jar`
 
-    `xalan-<ver>.jar`
+        `xalan-<ver>.jar`
 
-    `xercesImpl-<ver>.jar`
+        `xercesImpl-<ver>.jar`
 
-    `xml-apis-<ver>.jar`
+        `xml-apis-<ver>.jar`
 
-27. Change to the JasperReports Server WEB-INF/lib directory:
+    2.  Change to the JasperReports Server WEB-INF/lib directory:
 
-    `cd <js-install>/jasperserver-pro/WEB-INF/lib`
+        `cd <js-install>/jasperserver-pro/WEB-INF/lib`
 
-    1.  Delete any conflicting JARs.
+    3.  Delete any conflicting JARs.
 
-28. Replace the default web.xml file with the following commands:
+23. Replace the default web.xml file with the following commands:
 
     ``` bash
     cd <js-install-dir>/jasperserver-pro/WEB-INF
     mv ./web-version24.xml ./web.xml
     ```
 
-29. Update your Hibernate, Quartz, and Mail Server configuration:
+24. Update your Hibernate, Quartz, and Mail Server configuration:
 
     1.  The buildomatic logic has already configured the `hibernate.properties` and `js.quartz.properties` files for your database type. So you can copy these files to the `jasperserver-pro` file as shown below.
 
-    Copy from:
+        Copy from:
 
-    `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/classes/hibernate.properties`
+        `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/classes/hibernate.properties`
 
-    `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/js.quartz.properties`
+        `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/js.quartz.properties`
 
-    To:
+        To:
 
-    `jasperserver-pro/WEB-INF/classes`
+        `jasperserver-pro/WEB-INF/classes`
 
-30. Edit the scheduler URI port value for WebLogic in the `js.quartz.properties`:
+    2.  Edit the scheduler URI port value for WebLogic in the `js.quartz.properties`:
 
-    Edit `js.quartz.properties`:
+        Edit `js.quartz.properties`:
 
-    Set:
+        Set:
 
-    `report.scheduler.web.deployment.uri=http://localhost:8080/jasperserver-pro`
+        `report.scheduler.web.deployment.uri=http://localhost:8080/jasperserver-pro`
 
-    To:
+        To:
 
-    `report.scheduler.web.deployment.uri=http://localhost:7001/jasperserver-pro`
+        `report.scheduler.web.deployment.uri=http://localhost:7001/jasperserver-pro`
 
-31. If you want to configure JasperReports Server to automatically schedule and email reports, enter your mail server information in the `js.quartz.properties` file. Modify all `report.scheduler.mail.sender.*` properties as necessary for your mail server.
+    3.  If you want to configure JasperReports Server to automatically schedule and email reports, enter your mail server information in the `js.quartz.properties` file. Modify all `report.scheduler.mail.sender.*` properties as necessary for your mail server.
 
-    Copy the `../buildomatic/keystore.init.properties` file to the `../WEB-INF/classes` directory.
+        Copy the `../buildomatic/keystore.init.properties` file to the `../WEB-INF/classes` directory.
 
-    Also for WebLogic (for DB2, Oracle, and SQL Server):
+        Also for WebLogic (for DB2, Oracle, and SQL Server):
 
-    `progressiveStreaming=2` needs to be added to the variables.
+        `progressiveStreaming=2` needs to be added to the variables.
 
-    For more information on the progressiveStreaming variable, refer to the section "BeanDefinitionStoreException with DB2" with Vendor's Driver in [Database-related Problems](../troubleshooting/database_related_problems.md).
+        For more information on the progressiveStreaming variable, refer to the section "BeanDefinitionStoreException with DB2" with Vendor's Driver in [Database-related Problems](../troubleshooting/database_related_problems.md).
 
-32. If your mail server requires authentication, edit the `applicationContext-report-scheduling.xml` file:
+25. If your mail server requires authentication, edit the `applicationContext-report-scheduling.xml` file:
 
     1.  Open the `jasperserver-pro/WEB-INF/applicationContext-report-scheduling.xml` file for editing and locate the `reportSchedulerMailSender` bean.
     2.  Set the `javaMailProperties key=`"`mail.smtp.auth`" value to `true`.
 
-33. Now you can change to the `jasperserver-pro` folder and re-archive the `jasperserver-pro.war` file, using commands such as the following.
+26. Now you can change to the `jasperserver-pro` folder and re-archive the `jasperserver-pro.war` file, using commands such as the following.
 
     <table>
     <colgroup>
@@ -478,33 +478,33 @@ To install the WAR file for WebLogic:
 
         You now have a `jasperserver-pro.war` file that you can use for deploying to WebLogic.
 
-34. Edit your WebLogic domain configuration file `<wl-domain>/config/config.xml`:
+27. Edit your WebLogic domain configuration file `<wl-domain>/config/config.xml`:
 
     !!! note
 
-        \<wl-domain\> is the path of the domain within WebLogic that contains your JasperReports Server deployment. For example, `<weblogic>/samples/domains/wl_server`.
+        &lt;wl-domain&gt; is the path of the domain within WebLogic that contains your JasperReports Server deployment. For example, `<weblogic>/samples/domains/wl_server`.
 
-35. Locate the `server` and `security-configuration` elements, and insert the following parameters:
+    1.  Locate the `server` and `security-configuration` elements, and insert the following parameters:
 
-    ``` xml
-    <server>
-    ...
-        <stuck-thread-max-time>1200</stuck-thread-max-time>
-        <listen-address></listen-address>
-    </server>
-    <security-configuration>
+        ``` xml
+        <server>
         ...
-        <enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>
-    </security-configuration>
-    ```
+            <stuck-thread-max-time>1200</stuck-thread-max-time>
+            <listen-address></listen-address>
+        </server>
+        <security-configuration>
+            ...
+            <enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>
+        </security-configuration>
+        ```
 
-36. Check that the `stuck-thread-max-time` element appears above the `listen-address` element before the closing `</server>` tag.
+    2.  Check that the `stuck-thread-max-time` element appears above the `listen-address` element before the closing `</server>` tag.
 
-    !!! note
+        !!! note
 
-        In some cases, setting the `stuck-thread-max-time` may cause a schema validation error. Then, you can try removing this line from the configuration file.
+            In some cases, setting the `stuck-thread-max-time` may cause a schema validation error. Then, you can try removing this line from the configuration file.
 
-37. Set JVM options as described in [Setting Java Properties](setting_java_properties.md).
+28. Set JVM options as described in [Setting Java Properties](setting_java_properties.md).
 
 Deploy JasperReports Server to WebLogic:
 

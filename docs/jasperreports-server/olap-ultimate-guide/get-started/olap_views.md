@@ -11,9 +11,9 @@ The view is defined in terms of an OLAP connection and an MDX query. The OLAP co
 
 To open the sample OLAP view
 
-1.  Click “View \> Repository” to display the Repository panel.
+1.  Click “View &gt; Repository” to display the Repository panel.
 
-2.  In the Folders panel, expand the folder “Organization \> Analysis Components \> Analysis Views”.
+2.  In the Folders panel, expand the folder “Organization &gt; Analysis Components &gt; Analysis Views”.
 
     A list of OLAP views appears in the Repository panel.
 

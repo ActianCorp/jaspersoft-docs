@@ -9,15 +9,15 @@ Enabling JNDI security or restricted access provides access-control to data sou
 
 This chapter includes the following sections:
 
-- Additional Buildomatic Configuration for JNDI Security Installation Upgrade
+-   Additional Buildomatic Configuration for JNDI Security Installation Upgrade
 
-- Create Read-only Users
+-   Create Read-only Users
 
-- Websphere Installation for Enabling JNDI Security
+-   Websphere Installation for Enabling JNDI Security
 
-- Weblogic Installation for JNDI Security
+-   Weblogic Installation for JNDI Security
 
-- Enabling JNDI Security post Installing JasperReports Server
+-   Enabling JNDI Security post Installing JasperReports Server
 
 ## Additional Buildomatic Configuration for JNDI Security Upgrade
 
@@ -25,7 +25,7 @@ The `default_master.properties` file handles the configuration for the JNDI secu
 
 To configure the `default_master.properties` file for the JNDI security upgrade:
 
-- Edit the `default_master.properties` file to configure settings specific to your database and application server.
+-   Edit the `default_master.properties` file to configure settings specific to your database and application server.
 
 Look for the line **Disable Edit/Delete access to jasperserver and jasperserverAudit JNDI connections** and uncomment the settings listed in Sample Values for the default_master.properties File for JNDI Restricted Access Installation.
 
@@ -180,7 +180,7 @@ Assign read-only permissions:
 
 2.  Log in to the Websphere console `https://<ip_address>:9043/ibm/console`, using the credentials `wasadmin` and `wasadmin`.
 
-3.  Navigate to **Resources \> JDBC \> Data Sources \> Add New JNDI Data Sources**. For details, refer to [Configuring a JDBC Provider in WebSphere](../../../installation-guide/websphere/websphere_install_procedure.md).
+3.  Navigate to **Resources &gt; JDBC &gt; Data Sources &gt; Add New JNDI Data Sources**. For details, refer to [Configuring a JDBC Provider in WebSphere](../../../installation-guide/websphere/websphere_install_procedure.md).
 
     |  |
     |----|
@@ -189,7 +189,7 @@ Assign read-only permissions:
 
 4.  Restart the Websphere server.
 
-5.  Navigate to **Applications \> Application Types \> Websphere Enterprise Application \>** Select your application (for example, `jasperserver-pro_war`) **\> Stop \> Start**.
+5.  Navigate to **Applications &gt; Application Types &gt; Websphere Enterprise Application &gt;** Select your application (for example, `jasperserver-pro_war`) **&gt; Stop &gt; Start**.
 
     |  |
     |----|
@@ -224,7 +224,7 @@ Assign read-only permissions:
 
     `sudo ./startWebLogic.sh`
 
-4.  Navigate to **Domain Structure\> Services\> Data Sources\>Add AuditAnalyticsDataBase and JasperServerSystemDataBase**. For details, refer to [Procedure for Installing the WAR File for WebLogic.](../../../installation-guide/weblogic/weblogic_install_procedure.md)
+4.  Navigate to **Domain Structure&gt; Services&gt; Data Sources&gt;Add AuditAnalyticsDataBase and JasperServerSystemDataBase**. For details, refer to [Procedure for Installing the WAR File for WebLogic.](../../../installation-guide/weblogic/weblogic_install_procedure.md)
 
     |  |
     |----|
@@ -262,24 +262,24 @@ Assign read-only permissions:
 
     Based on the values used in Step 1, change the username and password for the following two resources:
 
-    - `jdbc/jasperserverSystemAnalytics`
+    -   `jdbc/jasperserverSystemAnalytics`
 
-    - `jdbc/jasperserverAuditAnalytics`
+    -   `jdbc/jasperserverAuditAnalytics`
 
 4.  Complete the changes and restart the application server.
 
 5.  Create a JNDI data source by using either of the following two connections:
 
-    - `jdbc/jasperserver`
+    -   `jdbc/jasperserver`
 
-    - `jdbc/jasperserverAudit`
+    -   `jdbc/jasperserverAudit`
 
     A message stating `If your JNDI Data Connection has Edit/Delete access disabled, jasperserver and jasperserverAudit cannot be used for creating a new data source. Please select another JNDI connection.` is displayed.
 
 6.  Create a JNDI data source by using either of the following two connections:
 
-    - `jdbc/jasperserverSystemAnalytics`
+    -   `jdbc/jasperserverSystemAnalytics`
 
-    - `jdbc/jasperserverAuditAnalytics`
+    -   `jdbc/jasperserverAuditAnalytics`
 
     You should be able to create data source using these connections.

@@ -64,14 +64,16 @@ When making a login request, the user ID and password can be pass as URL argumen
 
 The login service has several uses:
 
-- POST method – Applications should use the POST method, because it returns the session cookie to use in future requests.
-- GET method – Developers can test the login service and the user credentials from a browser, which uses the GET method.
-- Credentials in arguments – When testing the login service in a browser, credentials are passed as arguments in the URL:
+-   POST method – Applications should use the POST method, because it returns the session cookie to use in future requests.
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest/login?j_username=\<userID\>\[%7C\<organization_id\>\]<br>
-&j_password=\<password\>
+-   GET method – Developers can test the login service and the user credentials from a browser, which uses the GET method.
 
-- Credentials in content – When using the POST method, credentials can either be sent in the URL arguments as shown above, or sent in the content of the request, as shown in the second example below.
+-   Credentials in arguments – When testing the login service in a browser, credentials are passed as arguments in the URL:
+
+    http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest/login?j_username=&lt;userID&gt;\[%7C&lt;organization_id&gt;\]<br>
+    &j_password=&lt;password&gt;
+
+-   Credentials in content – When using the POST method, credentials can either be sent in the URL arguments as shown above, or sent in the content of the request, as shown in the second example below.
 
 The following example shows the HTTP request and response when testing the login service in a browser. In this case, the user credentials are passed as arguments and the browser sends a GET request. Because the GET request is meant only for testing, it does not return a cookie with the session ID.
 

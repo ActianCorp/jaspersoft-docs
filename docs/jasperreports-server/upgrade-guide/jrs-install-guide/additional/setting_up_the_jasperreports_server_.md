@@ -13,9 +13,9 @@ The license file is in the following location:
 
 The license file specifies the terms of your license, such as the following:
 
-- Expiration date, number of users, and/or number of CPUs
+-   Expiration date, number of users, and/or number of CPUs
 
-- Features licensed separately from the basic commercial license, such as multi-tenancy
+-   Features licensed separately from the basic commercial license, such as multi-tenancy
 
 Jaspersoft receives information about your system periodically. The information is used only to monitor compliance with your license. No personal information is collected or transmitted.
 
@@ -30,11 +30,11 @@ To configure the license:
 
 | Operating System |   |
 |----|----|
-| Linux | /home/\<user\>/ |
-| Mac OSX | /Users/\<user\>/ |
-| Windows 10 installed from WAR file | C:\Users\\user\>\\ |
-| Windows 10 installed from the binary installer | C:\Users\\ |
-| Windows 10 using an existing Tomcat Windows service | C:\WINDOWS\system32\config\systemprofile |
+| Linux | /home/&lt;user&gt;/ |
+| Mac OSX | /Users/&lt;user&gt;/ |
+| Windows 10 installed from WAR file | C:\\Users\\&lt;user&gt;\\ |
+| Windows 10 installed from the binary installer | C:\\Users\\ |
+| Windows 10 using an existing Tomcat Windows service | C:\\WINDOWS\\system32\\config\\systemprofile |
 
 License Locations
 
@@ -68,7 +68,7 @@ On Linux and Mac OSX:
 
     `JAVA_ENDORSED_DIRS="$BASEDIR"/common/endorsed`
 
-    Alternatively, create an empty file called \<tomcat\>/bin/setenv.sh.
+    Alternatively, create an empty file called &lt;tomcat&gt;/bin/setenv.sh.
 
 2.  Below that line or in the new file, insert the following line:
 

@@ -17,13 +17,13 @@ To move folders and resources by cutting and pasting
 
 1.  Log in to the server as a user who has these permissions:
 
-    - Read permission on the folder or resource to move
-    - Write permission on the destination folder<br>
-      For example, log in as joeuser (use the password, joeuser).
+    -   Read permission on the folder or resource to move
+    -   Write permission on the destination folder<br>
+        For example, log in as joeuser (use the password, joeuser).
 
-2.  Click **View \> Repository**.
+2.  Click **View &gt; Repository**.
 
-3.  In the **Folders** panel, right-click **Reports** \>**Samples** and select **Add Folder**.
+3.  In the **Folders** panel, right-click **Reports** &gt;**Samples** and select **Add Folder**.
 
 4.  In the **Add Folder** dialog, enter a name, such as Financial Reports, and click **Add**.
 

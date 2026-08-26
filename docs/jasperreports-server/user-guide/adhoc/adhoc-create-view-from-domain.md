@@ -13,7 +13,7 @@ For a more complete description of how to create Domains, see JasperReports Serv
 
 To begin create a basic view from a Domain
 
-1.  On the Home page, click **Create \> Ad Hoc View**. The Select Data wizard opens.
+1.  On the Home page, click **Create &gt; Ad Hoc View**. The Select Data wizard opens.
 
 2.  Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Domains**. A description of the selected Domain appears at the bottom of the Domains tab.
 
@@ -30,5 +30,5 @@ To begin create a basic view from a Domain
 
 When you create an Ad Hoc view from a Domain, the two elements are connected - the data in the view is dependent on the Domain. This relationship affects users working with the Domain and the dependent view in a number of ways:
 
-- When an item or items from the Domain are used in the dependent Ad Hoc view, removing the items from the Domain will result in a Missing Data error message when opening the Ad Hoc view in the editor. The user is prompted to remove the items from the Ad Hoc view. The removed items no longer appear in the Data Source Selection panel when the editor opens.
-- Items not used in dependent views can be removed from the Domain by the Domain's administrator; those items no longer appear in the view's Available Fields list.
+-   When an item or items from the Domain are used in the dependent Ad Hoc view, removing the items from the Domain will result in a Missing Data error message when opening the Ad Hoc view in the editor. The user is prompted to remove the items from the Ad Hoc view. The removed items no longer appear in the Data Source Selection panel when the editor opens.
+-   Items not used in dependent views can be removed from the Domain by the Domain's administrator; those items no longer appear in the view's Available Fields list.

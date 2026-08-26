@@ -9,7 +9,7 @@ An HTTP Host header attack is a type of web vulnerability where an attacker can 
 
 To enable JasperReports Server to filter requests matched by the Host header, edit the following configuration file: `applicationContext-security-web.xml`.
 
-1.  Using a text editor, open the `applicationContext-security-web.xml` file (found in \<js-install\>\apache-tomcat\webapps\jasperserver-pro\WEB-INF).
+1.  Using a text editor, open the `applicationContext-security-web.xml` file (found in &lt;js-install&gt;\\apache-tomcat\\webapps\\jasperserver-pro\\WEB-INF).
 
 2.  Locate `<bean id="authenticationAuthorizationFilterChainProxy" class="org.springframework.security.web.FilterChainProxy">`.
 

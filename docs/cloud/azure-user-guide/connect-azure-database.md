@@ -11,7 +11,7 @@ description: Run JasperReports Server and log in as a superuser.
 
 JasperReports Server can discover and connect to Azure SQL DataSource using the **Find My Azure Databases** feature. Perform the following steps to connect to Azure SQL Database.
 
-1.  From the JasperReports Server main menu, go to Create \> Data Source \> Azure SQL Data Source.
+1.  From the JasperReports Server main menu, go to Create &gt; Data Source &gt; Azure SQL Data Source.
 
     ![azure SQL data source](assets/images/azure-SQL-data%20source.png)
 
@@ -32,12 +32,12 @@ JasperReports Server can discover and connect to Azure SQL DataSource using the 
 
     ![test conn](assets/images/test-conn.png)
 
-5.  Create a Domain. The Jaspersoft metadata layer is called **Data Domains**. From the main menu, go to Create \> Domain<br>
+5.  Create a Domain. The Jaspersoft metadata layer is called **Data Domains**. From the main menu, go to Create &gt; Domain<br>
     Follow the domain creation wizard to build a domain.
 
     ![creating domain](assets/images/creating-domain.png)
 
 6.  Analyze your data.<br>
-    From the main menu, go to **Create \> Ad Hoc View**. Find your newly created domain and use the ad hoc environment to begin analyzing your data.
+    From the main menu, go to **Create &gt; Ad Hoc View**. Find your newly created domain and use the ad hoc environment to begin analyzing your data.
 
     ![adhoc view](assets/images/adhoc-view.png)<br>

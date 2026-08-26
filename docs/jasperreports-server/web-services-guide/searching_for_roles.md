@@ -7,8 +7,8 @@ description: "The GET method without any role ID searches for and lists role def
 
 The GET method without any role ID searches for and lists role definitions. It has options to search for roles by name or by user that belong to the role. If no search is specified, it returns all roles. The method has two forms:
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
-- In commercial editions with organizations, use the first URL to search or list all roles starting from the logged-in user’s organization (root for the system admin), and use the second URL to search or list all roles in a specified organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
+-   In commercial editions with organizations, use the first URL to search or list all roles starting from the logged-in user’s organization (root for the system admin), and use the second URL to search or list all roles in a specified organization.
 
 <table>
 <colgroup>

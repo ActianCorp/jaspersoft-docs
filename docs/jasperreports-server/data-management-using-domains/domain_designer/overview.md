@@ -21,17 +21,17 @@ The following image shows the UI of the Domains Designer when you select a Trino
 
 Use the tabs at the top of the Domain Designer to view and edit various aspects of the design. To navigate among tabs, click a tab name at the top of the Domain Designer:
 
-- Data Management tab: Select schemas and tables you want to use in the Domain, including tables you refer to but might not want to expose. See [The Data Management Tab](data-management.md) for more information.
-- Joins tab: Define joins between any included tables and/or derived tables. See [The Joins Tab](joins-tab.md) for more information.
-- Pre-filters tab: Set conditions on field values to limit the data accessed through the Domain. See [The Pre-filters Tab](prefilters-tab.md) for more information.
-- Data Presentation tab: Create sets that specify tables, columns, and items to expose to users. Optionally define or change display properties, such as names and descriptions. See [The Data Presentation Tab](presentation-tab.md) for more information.
-- Security tab: Create or upload files in the security file. See [The Security Tab](security-tab.md) for more information.
-- Locales tab: Upload locale bundles for translating elements of the Domain. See [The Locales Tab](locales-tab.md) for more information.
+-   Data Management tab: Select schemas and tables you want to use in the Domain, including tables you refer to but might not want to expose. See [The Data Management Tab](data-management.md) for more information.
+-   Joins tab: Define joins between any included tables and/or derived tables. See [The Joins Tab](joins-tab.md) for more information.
+-   Pre-filters tab: Set conditions on field values to limit the data accessed through the Domain. See [The Pre-filters Tab](prefilters-tab.md) for more information.
+-   Data Presentation tab: Create sets that specify tables, columns, and items to expose to users. Optionally define or change display properties, such as names and descriptions. See [The Data Presentation Tab](presentation-tab.md) for more information.
+-   Security tab: Create or upload files in the security file. See [The Security Tab](security-tab.md) for more information.
+-   Locales tab: Upload locale bundles for translating elements of the Domain. See [The Locales Tab](locales-tab.md) for more information.
 
 All tabs except the Security and Locales have at least two panels, from left to right:
 
-- **Data Structure** panel, which displays the schemas, tables, columns, and joins available on the current tab. Use the search bar at the top of the Data Structure tab to locate a Domain element. Not all elements are available on all tabs.
-- A design panel on the right, with a working area specific to the current task. In some cases, the design panel is divided into sub-panels.
+-   **Data Structure** panel, which displays the schemas, tables, columns, and joins available on the current tab. Use the search bar at the top of the Data Structure tab to locate a Domain element. Not all elements are available on all tabs.
+-   A design panel on the right, with a working area specific to the current task. In some cases, the design panel is divided into sub-panels.
 
 ## Domain Designer Tool Bar
 

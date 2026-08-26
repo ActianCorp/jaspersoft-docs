@@ -20,8 +20,10 @@ title: Jaspersoft ETL (Version 8.0.x)
 <tbody>
 <tr>
 <td><p>Apache Tomcat</p></td>
-<td><p>9.0</p>
-<p>TLS 1.2 is supported. For more information, see https://tomcat.apache.org/tomcat-9.0-doc/ssl-howto.html</p></td>
+<td><p>9.0<span class="jsd-footnote-ref"><sup>1</sup></span></p>
+<div class="jsd-footnote">
+<p>TLS 1.2 is supported. For more information, see https://tomcat.apache.org/tomcat-9.0-doc/ssl-howto.html</p>
+</div></td>
 <td><p>Recommended</p></td>
 </tr>
 <tr>

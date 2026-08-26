@@ -25,7 +25,7 @@ To create a virtual data source
 
 1.  Log in as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you have installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you have installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
 
 3.  From the **Type** dropdown, select **Virtual Data Source**.
 
@@ -54,7 +54,7 @@ You can edit a virtual data source to add or remove the data sources it uses. If
 To edit a virtual data source
 
 1.  Log in as an administrator.
-2.  Click **View \> Repository** and expand the folder tree to locate the folder containing the data source.
+2.  Click **View &gt; Repository** and expand the folder tree to locate the folder containing the data source.
 3.  Right-click the data source and select **Edit** from the context menu.
 4.  To add a data source, locate the data source in the **Available Data Sources** pane and double-click. To remove a data source, select it in the **Selected Data Sources** pane and click the left arrow.
 5.  Click **Save**. If you try to delete a data source from a virtual data source that is used by a Domain, you will receive a warning and the data source remain unchanged. Otherwise, the data source is updated in the repository.
@@ -65,11 +65,11 @@ Virtual data sources are based on the Teiid engine to handle multiple data sourc
 
 Consider these issues when designing a solution that combines several databases in a virtual data source:
 
-- When using a virtual data source in a Domain, you must select at least one of the tables from the Tables tab to appear in the Domain before using it to create a derived table. Virtual data sources are optimized to use the smallest set of metadata, but they do detect Domains that use only derived tables.
-- The virtual data source runs in JasperReports Server and must allocate memory and use processing to handle result sets.
-- The Teiid engine uses its own cache for data accessed through a virtual data source. You can clear the Teiid cache at the same time as the Ad Hoc cache, as described in [Ad Hoc Cache Management](../configuration/configuring_ad_hoc.md).
-- The virtual data source can push down certain operations (joins, filters, and aggregations) to the database, others it must perform in memory. The more it can push down, the smaller the datasets it handles in memory.
-- You should design your schema to maximize the processing pushed to the database and minimize data handled in the virtual data source in a join between data sources.
+-   When using a virtual data source in a Domain, you must select at least one of the tables from the Tables tab to appear in the Domain before using it to create a derived table. Virtual data sources are optimized to use the smallest set of metadata, but they do detect Domains that use only derived tables.
+-   The virtual data source runs in JasperReports Server and must allocate memory and use processing to handle result sets.
+-   The Teiid engine uses its own cache for data accessed through a virtual data source. You can clear the Teiid cache at the same time as the Ad Hoc cache, as described in [Ad Hoc Cache Management](../configuration/configuring_ad_hoc.md).
+-   The virtual data source can push down certain operations (joins, filters, and aggregations) to the database, others it must perform in memory. The more it can push down, the smaller the datasets it handles in memory.
+-   You should design your schema to maximize the processing pushed to the database and minimize data handled in the virtual data source in a join between data sources.
 
 For example, if you create a duplicate copy of a date dimension table in both of your data sources, they can be joined much more efficiently. If this table existed in only one database, the Teiid engine would need to retrieve all the rows from the other database and perform the join itself. With this table in both data bases, the Teiid engine can push down all of the time-dimension joins to the individual databases and perform a final join on much smaller datasets.
 
@@ -153,14 +153,17 @@ For more information about optimizing your data for use in Teiid, see <http://ww
 
 Virtual data sources can connect to Cassandra big data sources to make them available to a Domain. The virtual data source extracts the connection information from the Cassandra data source and uses an internal Teiid connector to access the data. The Teiid connectors map the various structures used in Cassandra's big data model to a relational model with tables and fields. This connector is distinct from what are called the native data sources for big data. For this reason, when a data source for big data is wrapped in a virtual data source, the resulting data source has the following limitations:
 
-- The Cassandra connector in virtual data sources does not support query parameters (`$P` and `$X`). Therefore, if you use a big data connector wrapped in a virtual data source as the data source for a stand-alone query, report or Topic, you cannot include parameters to create input controls. When used in Domains and then Ad Hoc views, you can define filters to replace this functionality.
-- The Cassandra connector for virtual data sources does not support any aggregation functions.
+-   The Cassandra connector in virtual data sources does not support query parameters (`$P` and `$X`). Therefore, if you use a big data connector wrapped in a virtual data source as the data source for a stand-alone query, report or Topic, you cannot include parameters to create input controls. When used in Domains and then Ad Hoc views, you can define filters to replace this functionality.
 
-However, there are significant advantages to accessing big data through virtual data sources:
+-   The Cassandra connector for virtual data sources does not support any aggregation functions.
 
-- When wrapped in a virtual data source, you can access Cassandra through a Domain, Domain Topic, Ad Hoc view, and Ad Hoc report.
-- A virtual data source can contain any mix of JDBC, JNDI, and Cassandra data connectors. When you define a Domain using this data source, you can access the tables from each store and define joins between compatible fields.
-- Virtual data sources that use a Cassandra data connector support query optimization, unlike the native data sources for big data. In fact, the big data connectors for virtual data sources support query optimization in Ad Hoc views and reports based on stand-alone Topics, and in Ad Ho views and reports based on Domains. The only exceptions are calculated fields, which cannot be optimized when used in Ad Hoc views or reports that are based on Topics or Domains. For more information about query optimization, see [Ad Hoc Data Policies for Big Data](../configuration/configuring_ad_hoc.md).
+    However, there are significant advantages to accessing big data through virtual data sources:
+
+-   When wrapped in a virtual data source, you can access Cassandra through a Domain, Domain Topic, Ad Hoc view, and Ad Hoc report.
+
+-   A virtual data source can contain any mix of JDBC, JNDI, and Cassandra data connectors. When you define a Domain using this data source, you can access the tables from each store and define joins between compatible fields.
+
+-   Virtual data sources that use a Cassandra data connector support query optimization, unlike the native data sources for big data. In fact, the big data connectors for virtual data sources support query optimization in Ad Hoc views and reports based on stand-alone Topics, and in Ad Ho views and reports based on Domains. The only exceptions are calculated fields, which cannot be optimized when used in Ad Hoc views or reports that are based on Topics or Domains. For more information about query optimization, see [Ad Hoc Data Policies for Big Data](../configuration/configuring_ad_hoc.md).
 
 !!! note
 

@@ -17,11 +17,11 @@ Zooming lets you view a specific area of a chart more closely. Zooming is helpfu
 
 To zoom in on an area of a chart
 
-- Click and drag or brush the area you want to zoom in on. As you are dragging or brushing a pale blue area indicates your selection. When you release the mouse button, the view zooms in on the area you selected.
+-   Click and drag or brush the area you want to zoom in on. As you are dragging or brushing a pale blue area indicates your selection. When you release the mouse button, the view zooms in on the area you selected.
 
-To view the whole chart again
+    To view the whole chart again
 
-- Click **Reset zoom** at the upper right of the canvas.
+-   Click **Reset zoom** at the upper right of the canvas.
 
 The following images show a bar chart before and after zooming:
 
@@ -37,8 +37,8 @@ The following images show a bar chart before and after zooming:
 
 Use the legends below the chart to hide or show group members.
 
-- To hide a group member, click the member name in the legend below the chart. The member is removed from the chart and the legend is grayed out.
-- To unhide a group member that has been hidden, click the grayed-out legend for the member.
+-   To hide a group member, click the member name in the legend below the chart. The member is removed from the chart and the legend is grayed out.
+-   To unhide a group member that has been hidden, click the grayed-out legend for the member.
 
 ![js AdHoc Charts Hide1](../assets/images/js-AdHoc-Charts-Hide1.png)
 
@@ -81,11 +81,11 @@ For more information on which drop area in New Layout Band corresponds to Row/ C
 
 Charts that do not support drill down include:
 
-- Time Series (all four charts in the group)
-- Dual Level Pie
-- Gauge (all three charts in the group as all fields are in the column axis)
-- Range (all five charts in the group)
-- Tree Map and Parent Tree Map (has built-in drill down)
+-   Time Series (all four charts in the group)
+-   Dual Level Pie
+-   Gauge (all three charts in the group as all fields are in the column axis)
+-   Range (all five charts in the group)
+-   Tree Map and Parent Tree Map (has built-in drill down)
 
 !!! note
 

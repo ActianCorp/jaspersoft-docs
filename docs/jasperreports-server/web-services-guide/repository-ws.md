@@ -17,13 +17,13 @@ You can retrieve the WSDL (Web Services Description Language) document that desc
 
 This chapter contains the following sections:
 
-- [Request and Operation Result](request_and_operation_result.md)
-- [List Operation](list_operation.md)
-- [Get Operation](get_operation.md)
-- [Put Operation](put_operation.md)
-- [Delete Operation](delete_operation.md)
-- [Move Operation](move_operation.md)
-- [Copy Operation](copy_operation.md)
-- [runReport Operation](runreport_operation.md)
-- [Errors](errors.md)
-- [Implementation Suggestions](implementation_suggestions.md)
+-   [Request and Operation Result](request_and_operation_result.md)
+-   [List Operation](list_operation.md)
+-   [Get Operation](get_operation.md)
+-   [Put Operation](put_operation.md)
+-   [Delete Operation](delete_operation.md)
+-   [Move Operation](move_operation.md)
+-   [Copy Operation](copy_operation.md)
+-   [runReport Operation](runreport_operation.md)
+-   [Errors](errors.md)
+-   [Implementation Suggestions](implementation_suggestions.md)

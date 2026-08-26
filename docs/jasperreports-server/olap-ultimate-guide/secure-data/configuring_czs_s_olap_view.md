@@ -21,7 +21,7 @@ CZS's measures are numeric values contained in the sales_fact_2012 fact table. T
 
 Dimensions are categorical entities used to analyze measures. The cube underlying the Sales Numbers Ad Hoc view includes two dimensions:
 
-- The geographical dimension includes these levels: country, region, state, and city.
-- The product dimension describes the merchandise being sold and includes these levels: product family, product line, and product.
+-   The geographical dimension includes these levels: country, region, state, and city.
+-   The product dimension describes the merchandise being sold and includes these levels: product family, product line, and product.
 
 For more information about how the Sales Numbers schema joins the hierarchical tables with the detail tables, refer to [OLAP Schema](reference_material.md).

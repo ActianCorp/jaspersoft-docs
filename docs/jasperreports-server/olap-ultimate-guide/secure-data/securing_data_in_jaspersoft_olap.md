@@ -19,11 +19,11 @@ For details about the basics of Jaspersoft OLAP, refer to the Jaspersoft OLAP Us
 
 This chapter has these sections:
 
-- [Securing Jaspersoft OLAP Data: A Business Case](securing_jaspersoft_olap_data__a_bus.md)
-- [Overview of CZS’s Process](overview_of_czs_s_process.md)
-- [Understanding Access Grant Definitions and Attributes](understanding_access_grant_definitio.md)
-- [Configuring CZS’s OLAP view](configuring_czs_s_olap_view.md)
-- [Reference Material](reference_material.md)
+-   [Securing Jaspersoft OLAP Data: A Business Case](securing_jaspersoft_olap_data__a_bus.md)
+-   [Overview of CZS’s Process](overview_of_czs_s_process.md)
+-   [Understanding Access Grant Definitions and Attributes](understanding_access_grant_definitio.md)
+-   [Configuring CZS’s OLAP view](configuring_czs_s_olap_view.md)
+-   [Reference Material](reference_material.md)
 
 !!! note
 

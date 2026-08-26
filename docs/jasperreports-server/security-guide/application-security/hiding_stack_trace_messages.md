@@ -124,8 +124,8 @@ Access to the error messages shown in Domain Designer when executing SQL Queries
 
 When configuring error messages, keep in mind the following:
 
-- We recommend the configuration shown above, so that users see a descriptive error message.
-- You can turn off any or all error message parts, however, when both `STACKTRACE` and `MESSAGE` are not displayed to a user, a generic message is output instead. The generic message text is defined as follows:
+-   We recommend the configuration shown above, so that users see a descriptive error message.
+-   You can turn off any or all error message parts, however, when both `STACKTRACE` and `MESSAGE` are not displayed to a user, a generic message is output instead. The generic message text is defined as follows:
 
 <table>
 <thead>
@@ -151,6 +151,6 @@ When configuring error messages, keep in mind the following:
 </tbody>
 </table>
 
-- If you remove both `STACKTRACE` and `MESSAGE` for a given role, we recommend adding back `ERROR_UID` for that role. That way, the user will see the generic message and an ID that can be sent to administrators and correlated with events in the log file.
+-   If you remove both `STACKTRACE` and `MESSAGE` for a given role, we recommend adding back `ERROR_UID` for that role. That way, the user will see the generic message and an ID that can be sent to administrators and correlated with events in the log file.
 
 If you update any of the error message configuration or bundles, restart your application server or redeploy the JasperReports Server web app.

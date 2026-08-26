@@ -7,8 +7,8 @@ description: "You can adapt reports to global audiences by localizing input cont
 
 You can adapt reports to global audiences by localizing input controls and field names:
 
-- Input controls – The server supports multi-lingual prompts and static lists of values in reports.
-- Field names – The server supports multi-lingual field names in reports.
+-   Input controls – The server supports multi-lingual prompts and static lists of values in reports.
+-   Field names – The server supports multi-lingual field names in reports.
 
 A `$R` expression that you write in the report design triggers linguistic changes in the report output for different locales. Each `$R` expression refers to a name-value pair (your translations) in a resource bundle. A resource bundle file is a text file that has a `.properties` extension. You create a resource bundle in Jaspersoft Studio or a text editor. You set the base name of the resource bundle in the header of the JRXML file:
 

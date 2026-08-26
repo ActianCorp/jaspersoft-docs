@@ -22,21 +22,16 @@ The following diagram shows the general steps involved in logging into JasperRep
 The following steps explain the interaction between the user’s browser, JasperReports Server, and an OAuth provider:
 
 1.  A user requests any page in JasperReports Server.
-
 2.  JasperReports Server redirects the user to a special, configurable OAuth endpoint that can verify the user session.
-
 3.  The OAuth provider checks if that user's browser has an existing active session in the OAuth server and:
 
-    - If no active session, then a login form on the OAuth Provider side is shown, the user provides credentials, then OAuth redirects the user's browser to JasperReports Server with an authorization code.
-    - If there is already an active session, then the user's browser is redirected to JasperReports Server with an authorization code.
+-   If no active session, then a login form on the OAuth Provider side is shown, the user provides credentials, then OAuth redirects the user's browser to JasperReports Server with an authorization code.
+-   If there is already an active session, then the user's browser is redirected to JasperReports Server with an authorization code.
 
-4.  JasperReports Server sends an authorization code to OAuth and requests access token and id token.
-
-5.  When a JWT token (JSON Web Token) is received from the OAuth provider, JasperReports Server validates and decodes it.
-
-6.  If the token is valid, then JasperReports Server synchronizes user details in the JasperReports Server repository database.
-
-7.  After synchronization is done, the user is authenticated in JasperReports Server and is authorized based on defined roles.
+1.  JasperReports Server sends an authorization code to OAuth and requests access token and id token.
+2.  When a JWT token (JSON Web Token) is received from the OAuth provider, JasperReports Server validates and decodes it.
+3.  If the token is valid, then JasperReports Server synchronizes user details in the JasperReports Server repository database.
+4.  After synchronization is done, the user is authenticated in JasperReports Server and is authorized based on defined roles.
 
 ## Configuring OAuth
 
@@ -48,19 +43,19 @@ To enable OAuth in JasperReports Server, edit the *web.xml* file.
 
 In the section:
 
-\<context-param\>
+&lt;context-param&gt;
 
-\<param-name\>spring.profiles.active\</param-name\>
+&lt;param-name&gt;spring.profiles.active&lt;/param-name&gt;
 
-\<param-value\>default,engine,jrs\</param-value\>
+&lt;param-value&gt;default,engine,jrs&lt;/param-value&gt;
 
-\</context-param\>
+&lt;/context-param&gt;
 
 Add *,oauth* after JRS.
 
 For example:
 
-\<param-value\>default,engine,jrs,oauth\</param-value\>
+&lt;param-value&gt;default,engine,jrs,oauth&lt;/param-value&gt;
 
 ### Configuring JasperReports Server to use OAuth Authentication
 
@@ -110,9 +105,9 @@ Edit `jasperserver-pro/WEB-INF/classes/oauth-clientconfig.properties` and set re
 
 spring.security.oauth2.client.registration.oidc.registration-id=oidc
 
-spring.security.oauth2.client.registration.oidc.client-id=\<application-client-id\>
+spring.security.oauth2.client.registration.oidc.client-id=&lt;application-client-id&gt;
 
-spring.security.oauth2.client.registration.oidc.client-secret=\<application-secret\>
+spring.security.oauth2.client.registration.oidc.client-secret=&lt;application-secret&gt;
 
 spring.security.oauth2.client.registration.oidc.client_authenticationMethod=client_secret_post
 
@@ -152,11 +147,11 @@ spring.security.oauth2.external.tenant.defaultOrganization=organization_1
 
 spring.security.oauth2.external.user.organizationRoleMap={\\
 
-\\jrs_admin\\: \\ROLE_ADMINISTRATOR\\,\\
+\\"jrs_admin\\": \\"ROLE_ADMINISTRATOR\\",\\
 
-\\jrs_user\\: \\ROLE_USER\\,\\
+\\"jrs_user\\": \\"ROLE_USER\\",\\
 
-\\ext_role\\: \\ROLE_SUBORG2\|\*\\\\
+\\"ext_role\\": \\"ROLE_SUBORG2\|\*\\"\\
 
 }
 
@@ -180,24 +175,24 @@ Use the variable *spring.security.oauth2.external.user.organizationRoleMap=* to 
 
 For example:
 
-spring.security.oauth2.external.user.organizationRoleMap={\\EXT_JRS_ADMINS\\: \\ROLE_ADMINISTRATOR\\,\\EXT_JRS_USERS\\: \\ROLE_USER\\,\\EXT_ROLE\\: \\ROLE_SUBORG_USER\|\*\\}
+spring.security.oauth2.external.user.organizationRoleMap={\\"EXT_JRS_ADMINS\\": \\"ROLE_ADMINISTRATOR\\",\\"EXT_JRS_USERS\\": \\"ROLE_USER\\",\\"EXT_ROLE\\": \\"ROLE_SUBORG_USER\|\*\\"}
 
 In this case:
 
-- if JWT contains *EXT_JRS_ADMINS* value in groups4roles attribute, then such a user will get ROLE_ADMINISTRATOR root level role assigned.
-- if JWT contains *EXT_ROLE* value in groups4roles attribute, then such a user will get ROLE_SUBORG_USER tenant level role assigned, because "\|\*" is passed after the role name, which indicates that tenant role will be assigned.
+-   if JWT contains *EXT_JRS_ADMINS* value in groups4roles attribute, then such a user will get ROLE_ADMINISTRATOR root level role assigned.
+-   if JWT contains *EXT_ROLE* value in groups4roles attribute, then such a user will get ROLE_SUBORG_USER tenant level role assigned, because "\|\*" is passed after the role name, which indicates that tenant role will be assigned.
 
 Note that if such a role doesn't exist in JasperReports Server, then it will be created and assigned during user synchronization.
 
-Also, note that when providing a json object for *organizationRoleMap*, then the quotes should be escaped with "\\, and also it's possible to write in multi-line with adding additional "\\ to escape line breaker, for example:
+Also, note that when providing a json object for *organizationRoleMap*, then the quotes should be escaped with "\\", and also it's possible to write in multi-line with adding additional "\\" to escape line breaker, for example:
 
 spring.security.oauth2.external.user.organizationRoleMap={\\
 
-\\EXT_JRS_ADMINS\\: \\ROLE_ADMINISTRATOR\\,\\
+\\"EXT_JRS_ADMINS\\": \\"ROLE_ADMINISTRATOR\\",\\
 
-\\EXT_JRS_USERS\\: \\ROLE_USER\\,\\
+\\"EXT_JRS_USERS\\": \\"ROLE_USER\\",\\
 
-\\EXT_ROLE\\: \\ROLE_SUBORG_USER\|\*\\\\
+\\"EXT_ROLE\\": \\"ROLE_SUBORG_USER\|\*\\"\\
 
 }
 
@@ -211,7 +206,7 @@ It is recommended to keep at least ROLE_USER, so external users can work normall
 
 OAuth configuration supports placing external users into organization, but with maintaining organization hierarchy. For example, a hierarchy could be:
 
-parent_company -\> business_unit -\> department
+parent_company -&gt; business_unit -&gt; department
 
 Let's assume in the JWT attribute responsible for this is called "org_hierarchy", and the value of that attribute is, for example "main-org \| unit1 \| department1".
 

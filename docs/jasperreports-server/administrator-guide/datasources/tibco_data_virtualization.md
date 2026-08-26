@@ -13,7 +13,7 @@ To create a TIBCO Data Virtualization data source
 
 1.  Log in as an administrator.
 
-2.  Select **View \> Repository**, right-click a folder's name, and select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The New Data Source page appears.
+2.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is Data Sources. The New Data Source page appears.
 
 3.  From the **Type** dropdown, select **JDBC** and then select **Tibco Data Virtualization** from the JDBC driver list. The page refreshes to show the fields required for the data source.
 

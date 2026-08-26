@@ -15,8 +15,8 @@ To create an input control with custom functions:
 
 2.  In the **Display Settings** section, select the custom input control options in:
 
-    - **Enable/Disable Input Control \> Conditional**
-    - **Show/Hide Input Control \> Conditional**
+    -   **Enable/Disable Input Control &gt; Conditional**
+    -   **Show/Hide Input Control &gt; Conditional**
 
     !!! note
 
@@ -24,11 +24,11 @@ To create an input control with custom functions:
 
 3.  Call the custom Javascript/Groovy functions defined in the `WEB INF/custom_functions` directory:
 
-    - HasAnyRoles('ROLE_SUPERUSER')
+    -   HasAnyRoles('ROLE_SUPERUSER')
 
-    - startsWith(Country,'M')
+    -   startsWith(Country,'M')
 
-    - contains(Country, 'ca')
+    -   contains(Country, 'ca')
 
     Following are examples of the `contains.js` and `contains.groovy` custom functions defined in the `/WEB-INF/custom_functions` directory.
 

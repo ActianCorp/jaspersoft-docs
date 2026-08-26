@@ -7,8 +7,8 @@ description: "To create a user account, put all required information in a user d
 
 To create a user account, put all required information in a user descriptor, and include it in a PUT request to the rest_v2/users service, with the intended user ID (username) specified in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create users in the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create users in the root organization.
 
 To create a user, the user ID in the URL must be unique on the server or in the organization. If the user ID already exists, that user account will be modified, as described in section [Modifying User Properties](modifying_user_properties.md).
 

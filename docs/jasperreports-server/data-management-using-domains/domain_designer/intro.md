@@ -11,11 +11,11 @@ For instructions about creating views based on Domains in the Ad Hoc Editor, see
 
 This chapter contains the following sections:
 
-- [Opening the Domain Designer](using.md)
-- [Overview of the Domain Designer](overview.md)
-- [The Data Management Tab](data-management.md)
-- [The Joins Tab](joins-tab.md)
-- [The Pre-filters Tab](prefilters-tab.md)
-- [The Data Presentation Tab](presentation-tab.md)
-- [The Security Tab](security-tab.md)
-- [The Locales Tab](locales-tab.md)
+-   [Opening the Domain Designer](using.md)
+-   [Overview of the Domain Designer](overview.md)
+-   [The Data Management Tab](data-management.md)
+-   [The Joins Tab](joins-tab.md)
+-   [The Pre-filters Tab](prefilters-tab.md)
+-   [The Data Presentation Tab](presentation-tab.md)
+-   [The Security Tab](security-tab.md)
+-   [The Locales Tab](locales-tab.md)

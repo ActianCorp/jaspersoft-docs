@@ -9,12 +9,12 @@ This section describes some issues that you may encounter once Jaspersoft OLAP i
 
 This section describes:
 
-- [Logging](logging.md)
+-   [Logging](logging.md)
 
-- [Performance](performance.md)
+-   [Performance](performance.md)
 
-- [Drill-through Behavior for Dimensions with Parent-child Hierarchies](drill_through_behavior_for_dimension.md)
+-   [Drill-through Behavior for Dimensions with Parent-child Hierarchies](drill_through_behavior_for_dimension.md)
 
-- [XML/A-based Sample Views and Reports Fail](xml_a_based_sample_views_and_reports.md)
+-   [XML/A-based Sample Views and Reports Fail](xml_a_based_sample_views_and_reports.md)
 
-- [404 Error When WebLogic Hosts Jaspersoft OLAP](404_error_when_weblogic_hosts_jasper.md)
+-   [404 Error When WebLogic Hosts Jaspersoft OLAP](404_error_when_weblogic_hosts_jasper.md)

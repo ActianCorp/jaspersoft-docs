@@ -7,57 +7,63 @@ description: "The executeDomainQueryoperation takes these parameters:"
 
 The `executeDomainQuery`operation takes these parameters:
 
-- `domainUri` - a string containing the path to the Domain on the server, for example `/domains/John/ExpenseDomain`.
-- `queryStr` - a string containing the Domain query composed of fields and a filter expression (see below for the syntax).
-- `localeStr` - a string giving the user locale, for example `en`, `en_US`, or `es_ES_Traditional_WIN`.
-- `dateFormatStr` - a string giving the date format desired in date fields, for example `MM/dd/yyyy` or `h:mm a`.
+-   `domainUri` - a string containing the path to the Domain on the server, for example `/domains/John/ExpenseDomain`.
 
-!!! note
+-   `queryStr` - a string containing the Domain query composed of fields and a filter expression (see below for the syntax).
 
-    Be sure the format has date and time portions if you expect to have both date and time fields, for example `yyyy.MM.dd G 'at' HH:mm:ss z`
+-   `localeStr` - a string giving the user locale, for example `en`, `en_US`, or `es_ES_Traditional_WIN`.
 
-The query string is composed of the following elements that create a syntax for the Domain query:
+-   `dateFormatStr` - a string giving the date format desired in date fields, for example `MM/dd/yyyy` or `h:mm a`.
 
-- `<query>` - encapsulates the whole query.
-- `<queryFields>` - contains a sequence of `<queryField>` elements. The order of fields will be preserved in the results.
-- `<queryField id="<fullyQualifiedID>" />`- an empty element where `<fullyQualifiedID>` gives the unique identifier of an item you want to appear as a column in the results. The identifier must be fully qualified, which means it includes the identifiers of the set and super-sets to which the item belongs. The fully qualified identifier is similar to the path of the item in the Domain, using a period (`.`) to separate each set identifier.
-- `<queryFilterString>` - the filter string for the query uses an application-specific syntax called Domain Expression Language (DomEL).
+    !!! note
 
-The following example shows a filter string that must match two values:
+        Be sure the format has date and time portions if you expect to have both date and time fields, for example `yyyy.MM.dd G 'at' HH:mm:ss z`
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">query</span>&gt;</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">queryFields</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_city&quot;</span> /&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_country&quot;</span> /&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_name&quot;</span> /&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_state&quot;</span> /&gt;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_street_address&quot;</span> /&gt;</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">queryFields</span>&gt;</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">queryFilterString</span>&gt;expense_join_store.ej_store_store_country == &#39;USA&#39; and </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    expense_join_store.ej_store_store_state == &#39;CA&#39;&lt;/<span class="kw">queryFilterString</span>&gt;</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">query</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    The query string is composed of the following elements that create a syntax for the Domain query:
 
-Note that when the query string appears in the SOAP example below, special characters such as `<` and `>` are converted to their corresponding character entities, `&lt;` and `&gt;` respectively.
+-   `<query>` - encapsulates the whole query.
 
-The `executeDomainQuery`operation returns results in the following objects:
+-   `<queryFields>` - contains a sequence of `<queryField>` elements. The order of fields will be preserved in the results.
 
-- `ResultSetData`. Encapsulates the results of the Domain query. It contains column names and rows of data:
+-   `<queryField id="<fullyQualifiedID>" />`- an empty element where `<fullyQualifiedID>` gives the unique identifier of an item you want to appear as a column in the results. The identifier must be fully qualified, which means it includes the identifiers of the set and super-sets to which the item belongs. The fully qualified identifier is similar to the path of the item in the Domain, using a period (`.`) to separate each set identifier.
 
-  - `names`. Array of column names in the result set. These names match the order and items in the query fields.
-  - `data`. An array of data rows.
+-   `<queryFilterString>` - the filter string for the query uses an application-specific syntax called Domain Expression Language (DomEL).
 
-- `DataRow`. Represents a record and contains values for each column in a row:
+    The following example shows a filter string that must match two values:
 
-  - `data`. An array of strings, one for the value in each column, in the same order as the names array.
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">query</span>&gt;</span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">queryFields</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_city&quot;</span> /&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_country&quot;</span> /&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_name&quot;</span> /&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_state&quot;</span> /&gt;</span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queryField</span> <span class="ot">id=</span><span class="st">&quot;expense_join_store.ej_store_store_street_address&quot;</span> /&gt;</span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">queryFields</span>&gt;</span>
+    <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">queryFilterString</span>&gt;expense_join_store.ej_store_store_country == &#39;USA&#39; and </span>
+    <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    expense_join_store.ej_store_store_state == &#39;CA&#39;&lt;/<span class="kw">queryFilterString</span>&gt;</span>
+    <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">query</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
+
+    Note that when the query string appears in the SOAP example below, special characters such as `<` and `>` are converted to their corresponding character entities, `&lt;` and `&gt;` respectively.
+
+    The `executeDomainQuery`operation returns results in the following objects:
+
+-   `ResultSetData`. Encapsulates the results of the Domain query. It contains column names and rows of data:
+
+    -   `names`. Array of column names in the result set. These names match the order and items in the query fields.
+    -   `data`. An array of data rows.
+
+-   `DataRow`. Represents a record and contains values for each column in a row:
+
+    -   `data`. An array of strings, one for the value in each column, in the same order as the names array.
 
 !!! note
 

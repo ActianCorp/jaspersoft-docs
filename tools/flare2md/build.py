@@ -80,13 +80,34 @@ def toc_link_to_rel(link: str):
     return Path(rel)
 
 
-def parse_toc(path: Path, warn):
-    """Return the TOC as a nested list of {'title', 'rel', 'children'}."""
+def parse_toc(path: Path, warn, target=None, hidden=None):
+    """Return the TOC as a nested list of {'title', 'rel', 'children'}.
+
+    A TOC entry can carry its own `conditions`, and Flare drops the entry and
+    everything under it when the target excludes one of them: that is how the
+    Upgrade Guide hides "Changes in 8.2 That May Affect Your Upgrade" and the
+    older version chapters below it. The attribute has no `MadCap:` prefix here,
+    but the expression means the same thing, so it is evaluated with the same
+    rule the topic content uses. Rels of dropped entries are collected in
+    `hidden` so they cannot come back as unreferenced topics later.
+    """
     root = f2.parse_flare(path, warn)
+
+    def collect(entry):
+        """Record the topic this entry points at, and its whole subtree."""
+        rel = toc_link_to_rel(entry.get("Link", ""))
+        if rel is not None and hidden is not None:
+            hidden.add(rel)
+        for child in entry.findall("TocEntry"):
+            collect(child)
 
     def walk(elem):
         out = []
         for entry in elem.findall("TocEntry"):
+            if target is not None and f2.condition_excluded(
+                    entry.get("conditions", ""), target):
+                collect(entry)
+                continue
             title = entry.get("Title") or ""
             if title.startswith("[%="):
                 title = ""
@@ -118,8 +139,35 @@ def project_topic_index(content_root: Path):
     return index
 
 
-def link_closure(seeds, content_root: Path, warn):
-    """TOC topics plus every topic reachable from them by a link.
+def topic_hrefs(path: Path, target, warn):
+    """Every href/src in a topic, with the target's hidden content removed.
+
+    Scanning the file text would also see links inside conditioned-out markup,
+    which is how the Upgrade Guide's hidden "Changes in 8.2" chapters kept being
+    published: their only remaining referrer was a paragraph the target hides.
+    Parsing and applying the conditions first means a link is followed only if a
+    reader could have followed it.
+    """
+    if target is None:
+        return HREF_RE.findall(path.read_text(encoding="utf-8", errors="replace"))
+    try:
+        root = f2.parse_flare(path, warn)
+        body = f2.body_of(root)
+        f2.apply_conditions(body, target)
+    except Exception as exc:                      # malformed topic: fall back
+        warn("could not filter links in %s (%s); using the raw file" % (path, exc))
+        return HREF_RE.findall(path.read_text(encoding="utf-8", errors="replace"))
+    out = []
+    for node in body.iter():
+        for attr in ("href", "src"):
+            value = node.get(attr)
+            if value:
+                out.append(value.split("#", 1)[0])
+    return out
+
+
+def link_closure(seeds, content_root: Path, warn, target=None):
+    """TOC topics plus every topic reachable from them by a visible link.
 
     Links whose relative depth is wrong in the source (Flare tolerates some of
     these) are repaired when the filename is unique in the project, so the
@@ -137,22 +185,23 @@ def link_closure(seeds, content_root: Path, warn):
             continue
         kept.add(rel)
         try:
-            text = path.read_text(encoding="utf-8", errors="replace")
+            hrefs = topic_hrefs(path, target, warn)
         except OSError as exc:
             warn("unreadable topic %s: %s" % (rel, exc))
             continue
-        for href in HREF_RE.findall(text):
+        for href in hrefs:
             if href.startswith(("http:", "https:", "mailto:", "data:", "ftp:")):
                 continue
             if not href.lower().endswith(f2.TOPIC_SUFFIXES):
                 continue
             from urllib.parse import unquote
-            target = f2._normalize(rel.parent / unquote(href))
-            if target is None or not (content_root / target).is_file():
+            # `dest`, not `target`: the build target is a parameter here now.
+            dest = f2._normalize(rel.parent / unquote(href))
+            if dest is None or not (content_root / dest).is_file():
                 matches = index.get(Path(unquote(href)).name.lower(), set())
-                target = next(iter(matches)) if len(matches) == 1 else target
-            if target is not None and target not in kept:
-                queue.append(target)
+                dest = next(iter(matches)) if len(matches) == 1 else dest
+            if dest is not None and dest not in kept:
+                queue.append(dest)
     return kept
 
 
@@ -245,10 +294,14 @@ def prepare_guide(guide, warn):
     shared = REPO / "js-shared"
     variables = f2.load_variables([project] + ([shared] if shared.is_dir() else []), warn)
 
-    toc = parse_toc(toc_path, warn)
+    toc_hidden = set()
+    toc = parse_toc(toc_path, warn, target, toc_hidden)
+    if toc_hidden:
+        warn("%d topics hidden by TOC entry conditions: %s"
+             % (len(toc_hidden), ", ".join(sorted(r.as_posix() for r in toc_hidden))))
     seeds = [rel for rel in flatten_toc(toc)
              if rel.as_posix().lower() not in SKIP_TOPICS]
-    kept = link_closure(seeds, content_root, warn)
+    kept = link_closure(seeds, content_root, warn, target)
     kept = {rel for rel in kept if rel.as_posix().lower() not in SKIP_TOPICS}
 
     return dict(
@@ -258,6 +311,7 @@ def prepare_guide(guide, warn):
         target=target,
         variables=variables,
         toc=toc,
+        toc_hidden=toc_hidden,
         seeds=set(seeds),
         kept=kept,
         main_dir=main_content_dir(set(seeds)),
@@ -356,7 +410,17 @@ def absorb_unreferenced(plans, warn):
         claimed = set()
         for plan in project_plans:
             claimed |= plan["kept"]
-        leftovers = sorted(project_topics(content_root) - claimed)
+        # A topic a TOC entry hides is hidden, not unreferenced: publishing it
+        # here would put the target's excluded chapters back under "Additional
+        # Topics". If another guide in the project shows it, that guide has
+        # already claimed it above.
+        hidden = set()
+        for plan in project_plans:
+            hidden |= plan.get("toc_hidden") or set()
+        leftovers = sorted(project_topics(content_root) - claimed - hidden)
+        if hidden:
+            warn("kept %d TOC-hidden topics out of the unreferenced set"
+                 % len(hidden & (project_topics(content_root) - claimed)))
         if not leftovers:
             continue
         # Fall back to the project's largest guide for shared directories
@@ -375,7 +439,8 @@ def absorb_unreferenced(plans, warn):
             new = extras.get(id(plan))
             if not new:
                 continue
-            added = link_closure(new, content_root, warn) - plan["kept"]
+            added = link_closure(new, content_root, warn, plan["target"]) - plan["kept"]
+            added -= hidden
             added = {rel for rel in added if rel.as_posix().lower() not in SKIP_TOPICS}
             plan["kept"] |= added
             plan["extras"] = sorted(added)
@@ -516,6 +581,7 @@ def convert_topic(rel, plan, out_root, resolver, warn):
     admonitions = f2.extract_admonitions(body)
     f2.unwrap_divs(body)
     f2.handle_autonum(body)
+    f2.mark_footnotes(body)
     f2.strip_madcap(body)
     f2.strip_presentation(body)
     f2.promote_headings(body)
@@ -547,13 +613,20 @@ def convert_topic(rel, plan, out_root, resolver, warn):
 # --------------------------------------------------------------------------- #
 # Navigation
 # --------------------------------------------------------------------------- #
-def nav_for_guide(toc, manifest, prefix, warn):
+def nav_for_guide(toc, manifest, prefix, warn, hidden=frozenset()):
     """Flare TOC -> nav items, resolving titles from the converted topics.
 
     Flare TOCs deep-link to anchors within a topic; after fragments are dropped
     those collapse onto the parent page, so such entries are folded away (the
     in-page TOC already lists them) and repeats are de-duplicated.
+
+    `hidden` names the topics a TOC entry's conditions exclude. One can still be
+    published — a topic the target hides from the TOC but a visible page links
+    to is generated by Flare too, and dropping the page would break that link —
+    but it must not come back into the navigation under "Additional Topics",
+    which is where the Upgrade Guide's hidden version chapters reappeared.
     """
+    hidden = {Path(rel).as_posix().lower() for rel in hidden}
     def build(nodes, parent_path=None):
         items = []
         for node in nodes:
@@ -585,8 +658,9 @@ def nav_for_guide(toc, manifest, prefix, warn):
     covered = set(iter_paths(items))
     extra = [
         {t: "%s/%s" % (prefix, p)}
-        for (p, t) in sorted(manifest.values(), key=lambda x: x[1])
+        for (rel, (p, t)) in sorted(manifest.items(), key=lambda x: x[1][1])
         if "%s/%s" % (prefix, p) not in covered
+        and Path(rel).as_posix().lower() not in hidden
     ]
     if extra:
         items.append({"Additional Topics": extra})
@@ -823,7 +897,8 @@ def main(argv):
                 print("--- %s (not converted yet, skipped in nav)" % prefix)
                 continue
             print("--- %s (kept from previous run)" % prefix)
-        nav_items = nav_for_guide(plan["toc"], manifest, prefix, warnings.append)
+        nav_items = nav_for_guide(plan["toc"], manifest, prefix, warnings.append,
+                                  plan.get("toc_hidden") or frozenset())
 
         write_guide_page(guide, nav_items)
         nav_by_family.setdefault(guide["family"], []).append(
@@ -856,6 +931,16 @@ def main(argv):
 
     (REPORTS / "link-repairs.log").write_text(
         "\n".join(sorted(set(link_notes))) + "\n", encoding="utf-8")
+    # What the targets' TOC conditions hide, recorded so the completeness audit
+    # can name a reason for each topic it does not publish rather than listing
+    # it as an unexplained gap.
+    (REPORTS / "toc-hidden.json").write_text(
+        json.dumps(
+            {plan["prefix"]: sorted("%s/%s" % (plan["guide"]["project"], r.as_posix())
+                                    for r in (plan.get("toc_hidden") or set()))
+             for plan in plans if plan.get("toc_hidden")},
+            indent=1, sort_keys=True),
+        encoding="utf-8")
     write_summary(summary_rows)
     print("\nnav -> %s (spliced into zensical.toml)" % (SITE / "nav.toml"))
     return 0

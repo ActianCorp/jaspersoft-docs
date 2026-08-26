@@ -13,15 +13,15 @@ JasperReports Server makes the audit data available to system admins through Dom
 
 There are two Domains and two sets of reports created for accessing audit data:
 
-- Audit Domain and Audit Reports: Use these to view the current audit data; they run against the active audit database.
+-   Audit Domain and Audit Reports: Use these to view the current audit data; they run against the active audit database.
 
-- Audit Archive Domain and Archived Audit Reports: Use these to run reports on archived data; they run against the archive database.
+-   Audit Archive Domain and Archived Audit Reports: Use these to run reports on archived data; they run against the archive database.
 
 The contents of both Domains and reports are identical. They differ only in the database tables accessed in each case.
 
 To create an Ad Hoc View based on the audit Domains:
 
-1.  Select **Create \> Ad Hoc View**
+1.  Select **Create &gt; Ad Hoc View**
 2.  Select the **Domains** tab in the **Data Chooser**, and expand the folders to select one of the audit Domains.
 
 ![js audit DataChooser](../assets/images/js-audit-DataChooser.png)
@@ -103,9 +103,9 @@ The Ad Hoc views used to create each report are also included. You can open them
 
 The following views and reports are provided:
 
-- Audit Report: Generic example of an audit report showing commonly audited events.
-- Performance Crosstab Report: A crosstab that shows average performance of reports.
-- Performance Report: Generates a list of reports, sorted by run-time to identify slow reports.
-- Repository Resources Report: Shows repository resources and their associated events.
-- Resource Execution Report: Generates a list of executed reports.
-- User Activity Report: Generates a list of reports run by a specified user.
+-   Audit Report: Generic example of an audit report showing commonly audited events.
+-   Performance Crosstab Report: A crosstab that shows average performance of reports.
+-   Performance Report: Generates a list of reports, sorted by run-time to identify slow reports.
+-   Repository Resources Report: Shows repository resources and their associated events.
+-   Resource Execution Report: Generates a list of executed reports.
+-   User Activity Report: Generates a list of reports run by a specified user.

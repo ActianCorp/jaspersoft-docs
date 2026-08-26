@@ -9,7 +9,7 @@ The drill-through operation displays detailed transaction information for a give
 
 To work with source data
 
-- Using the table created in Sorting the Display, click the number \$87,218.28 next to Store 13.
+-   Using the table created in Sorting the Display, click the number $87,218.28 next to Store 13.
 
 The drill-through table appears in a new page.
 

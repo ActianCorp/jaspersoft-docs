@@ -17,7 +17,7 @@ If we were only interested in the City level of the dimension, an access grant t
 
 |  |
 |----|
-| \<MemberGrant member="\[Geographic Area\].\[USA\].\[West\].\[CA\].\[%{Cities}\]" access="all"/\> |
+| &lt;MemberGrant member="\[Geographic Area\].\[USA\].\[West\].\[CA\].\[%{Cities}\]" access="all"/&gt; |
 
 This grant gives specific access to USA, West, and California, but uses variable substitution (represented by `[%{Cities}]`) to grant access to whichever cities are defined for the specific user.
 

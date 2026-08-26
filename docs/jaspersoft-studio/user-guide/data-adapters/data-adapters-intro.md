@@ -13,24 +13,24 @@ Usually data adapters are stored as jrdax files in the same project as the repor
 
 This chapter has the following sections:
 
-- [Working with Data Adapters](data-adapters-creating.md)
+-   [Working with Data Adapters](data-adapters-creating.md)
 
-- [Using Data Adapters in Reports and Datasets](data-adapters-using-in-reports.md)
+-   [Using Data Adapters in Reports and Datasets](data-adapters-using-in-reports.md)
 
-- [Creating and Using Database JDBC Connections](data-adapters-jdbc-connection.md)
+-   [Creating and Using Database JDBC Connections](data-adapters-jdbc-connection.md)
 
-- [Working with a Collection of JavaBeans Data Adapter](data-adapters-java-beans.md)
+-   [Working with a Collection of JavaBeans Data Adapter](data-adapters-java-beans.md)
 
-- [Working with XML Data Adapters](data-adapters-xml.md)
+-   [Working with XML Data Adapters](data-adapters-xml.md)
 
-- [Using XML/A Data Adapters](data-adapters-xmla.md)
+-   [Using XML/A Data Adapters](data-adapters-xmla.md)
 
-- [Working with CSV Data Adapters](data-adapters-csv.md)
+-   [Working with CSV Data Adapters](data-adapters-csv.md)
 
-- [Using the Empty Record Data Adapter](data-adapters-empty.md)
+-   [Using the Empty Record Data Adapter](data-adapters-empty.md)
 
-- [Using the Random Data Adapter](data-adapters-random.md)
+-   [Using the Random Data Adapter](data-adapters-random.md)
 
-- [Working with the JRDataSource Interface](data-adapters-jrdatasource.md)
+-   [Working with the JRDataSource Interface](data-adapters-jrdatasource.md)
 
-- [A Close Look at TIBCO Spotfire Information Links](data-adapters-spotfire-info-links.md)
+-   [A Close Look at TIBCO Spotfire Information Links](data-adapters-spotfire-info-links.md)

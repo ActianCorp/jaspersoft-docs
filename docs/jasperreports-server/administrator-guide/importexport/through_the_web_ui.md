@@ -66,7 +66,7 @@ To export resources from the repository
 
 1.  Log in as an administrator that has access to the resources you want to export.
 
-2.  Select **View\>Repository**.
+2.  Select **View&gt;Repository**.
 
 3.  Select one or more resources in the main panel, or select a folder in the left-panel.
 
@@ -80,32 +80,29 @@ To export resources from the repository
 
 6.  Select the import-export encryption key to protect any passwords in the export catalog. For more information, see [The Import-Export Encryption Keys](import_and_export_catalogs.md).
 
-    - Use the **Server Key** if this is a backup to be imported into the same server later.
+    -   Use the **Server Key** if this is a backup to be imported into the same server later.
 
-    - Use the **Legacy Key** if the catalog has to be imported into a different server.
+    -   Use the **Legacy Key** if the catalog has to be imported into a different server.
 
-    - If you have added custom keys to the keystore on this server, select one from the list that appears:
+    -   If you have added custom keys to the keystore on this server, select one from the list that appears:
 
-      ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
+        ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
 
 7.  Choose the export options:
 
-    - **Include report jobs**: When checked, the export includes scheduled report jobs that are associated with any reports in your repository selection.
+    -   **Include report jobs**: When checked, the export includes scheduled report jobs that are associated with any reports in your repository selection.
 
-    - **Include alerts**: When checked, the export includes scheduled report alerts that are associated with any reports in your repository selection.
+    -   **Include alerts**: When checked, the export includes scheduled report alerts that are associated with any reports in your repository selection.
 
-      <div class="admonition note">
-      <p class="admonition-title">Note</p>
+        !!! note
 
-                                  <p>The exported report includes alerts only for the reports for which the alert is turned on. If the alert is turned off for the report, then the exported report includes the alert with an empty report alerts folder.</p>
+            The exported report includes alerts only for the reports for which the alert is turned on. If the alert is turned off for the report, then the exported report includes the alert with an empty report alerts folder.
 
-      </div>
+    -   **Include repository permissions**: When checked, the export includes any explicit permissions on all items in your repository selection. When this option is cleared, the exported items inherit the permissions of the repository where they are later imported.
 
-    - **Include repository permissions**: When checked, the export includes any explicit permissions on all items in your repository selection. When this option is cleared, the exported items inherit the permissions of the repository where they are later imported.
+    -   **Include dependencies**: When checked, the export includes all dependencies for your resources, even if they are not included in your selected folders. For more information, see [Dependencies During Import and Export](import_and_export_catalogs.md).
 
-    - **Include dependencies**: When checked, the export includes all dependencies for your resources, even if they are not included in your selected folders. For more information, see [Dependencies During Import and Export](import_and_export_catalogs.md).
-
-    - **Include full resource path**: This option appears when the selected files or folders belong to an organization. When checked, the export includes the full file structure of each resource, starting with the Organizations root folder. This helps for archiving items that would be reimported later into the same organization. If you want to import the resources into a different organization, uncheck this box so the export includes only the selected items and their relative path within the organization.
+    -   **Include full resource path**: This option appears when the selected files or folders belong to an organization. When checked, the export includes the full file structure of each resource, starting with the Organizations root folder. This helps for archiving items that would be reimported later into the same organization. If you want to import the resources into a different organization, uncheck this box so the export includes only the selected items and their relative path within the organization.
 
 8.  Click **Export**. The server generates the catalog zip file. Depending on the size of the repository and the options selected, it may take several minutes to generate the catalog file.
 
@@ -113,17 +110,17 @@ To export resources from the repository
 
 For more export options, use the server settings page for system administrators. The settings export the following resources:
 
-- Everything - The entire repository, including all resources in all organizations, as well as all users, roles, and other settings stored internally. With the proper options, this creates a backup of the server.
+-   Everything - The entire repository, including all resources in all organizations, as well as all users, roles, and other settings stored internally. With the proper options, this creates a backup of the server.
 
-- Any combination of users and roles - Lets you choose from lists of users and roles, with options to include users by role or roles by user.
+-   Any combination of users and roles - Lets you choose from lists of users and roles, with options to include users by role or roles by user.
 
-- All resources of a given type - For example, all reports or all dashboards.
+-   All resources of a given type - For example, all reports or all dashboards.
 
 To export resources from the settings page
 
 1.  Log in as a system administrator (`superuser` by default).
 
-2.  Select **Manage\>Server Settings**, then click **Export** in the left-hand panel.
+2.  Select **Manage&gt;Server Settings**, then click **Export** in the left-hand panel.
 
     ![js Settings Export](../assets/images/js-Settings-Export.png)
 
@@ -133,13 +130,13 @@ To export resources from the settings page
 
 4.  Select the import-export encryption key to protect any passwords in the export catalog. For more information, see [The Import-Export Encryption Keys](import_and_export_catalogs.md).
 
-    - Use the **Server Key** if this is a backup to be imported into the same server later.
+    -   Use the **Server Key** if this is a backup to be imported into the same server later.
 
-    - Use the **Legacy Key** if the catalog has to be imported into a different server.
+    -   Use the **Legacy Key** if the catalog has to be imported into a different server.
 
-    - If you have added custom keys to the keystore on this server, select one from the list that appears:
+    -   If you have added custom keys to the keystore on this server, select one from the list that appears:
 
-      ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
+        ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
 
 5.  Use the checkboxes and radio buttons to choose the contents of your exported catalog file:
 
@@ -149,11 +146,11 @@ To export resources from the settings page
 
     1.  To export roles and users, choose one of the following radio buttons to select individual users and roles from the lists:
 
-        - **Selected roles and users** - Only the roles and users you select explicitly are exported.
+        -   **Selected roles and users** - Only the roles and users you select explicitly are exported.
 
-        - **Users with selected roles** - Select one or more roles, and all users with those roles are exported, along with the selected roles.
+        -   **Users with selected roles** - Select one or more roles, and all users with those roles are exported, along with the selected roles.
 
-        - **Roles with selected users** - Select one or more users, and all roles assigned to those users are exported, along with the selected users.
+        -   **Roles with selected users** - Select one or more users, and all roles assigned to those users are exported, along with the selected users.
 
     2.  In **Resources to Export**, perform either one of the following:
 
@@ -185,7 +182,7 @@ To export organizations
 
     For example, to move an organization, you must log in as the administrator of the parent organization.
 
-2.  Select **Manage\>Organizations** to display the hierarchy of organizations.
+2.  Select **Manage&gt;Organizations** to display the hierarchy of organizations.
 
 3.  In the left-hand panel, right-click the organization you want to export and select **Export** from the context menu.
 
@@ -197,13 +194,13 @@ To export organizations
 
 5.  Select the import-export encryption key to protect any passwords in the export catalog. For more information, see [The Import-Export Encryption Keys](import_and_export_catalogs.md).
 
-    - Use the **Server Key** if this is a backup to be imported into the same server later.
+    -   Use the **Server Key** if this is a backup to be imported into the same server later.
 
-    - Use the **Legacy Key** if the catalog has to be imported into a different server.
+    -   Use the **Legacy Key** if the catalog has to be imported into a different server.
 
-    - If you have added custom keys to the keystore on this server, select one from the list that appears:
+    -   If you have added custom keys to the keystore on this server, select one from the list that appears:
 
-      ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
+        ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
 
 6.  Use the checkboxes and radio buttons to choose the items to be exported from this organization.<br>
     Select **Export Everything** (default) to export the entire organization, including all resources, report jobs, users, and roles.
@@ -212,19 +209,19 @@ To export organizations
 
     1.  To export roles and users, choose one of the following radio buttons to select individual users and roles from the lists:
 
-        - **Selected roles and users** - Only the roles and users you select explicitly are exported.
+        -   **Selected roles and users** - Only the roles and users you select explicitly are exported.
 
-        - **Users with selected roles** - Select one or more roles, and all users with those roles are exported, along with the selected roles.
+        -   **Users with selected roles** - Select one or more roles, and all users with those roles are exported, along with the selected roles.
 
-        - **Roles with selected users** - Select one or more users, and all roles assigned to those users are exported, along with the selected users.
+        -   **Roles with selected users** - Select one or more users, and all roles assigned to those users are exported, along with the selected users.
 
     2.  In **Resources to Export**, perform either one of the following:
 
-        - If you only want users and roles, clear all checkboxes.
+        -   If you only want users and roles, clear all checkboxes.
 
-        - If you only want resources, do not select any users and roles, then select the resource types you want to export.
+        -   If you only want resources, do not select any users and roles, then select the resource types you want to export.
 
-        - Select the checkboxes under **Assets to Export** to include these various resources in your export catalog.
+        -   Select the checkboxes under **Assets to Export** to include these various resources in your export catalog.
 
 8.  Click **Export**. The server generates the catalog zip file. The server displays a message if there are any broken dependencies.
 
@@ -246,7 +243,7 @@ To import organizations
 
 1.  Log in as an administrator that has access to the destination organization.
 
-2.  Select **Manage\>Organizations** to display the hierarchy of organizations.
+2.  Select **Manage&gt;Organizations** to display the hierarchy of organizations.
 
 3.  In the left-hand panel, right-click the organization you want to import into and select **Import** from the context menu.
 
@@ -258,35 +255,35 @@ To import organizations
 
 5.  Select the key that was used to export the catalog file. For more information, see [The Import-Export Encryption Keys](import_and_export_catalogs.md).
 
-    - Use the **Server Key** if the catalog was exported from the same server with the server key.
+    -   Use the **Server Key** if the catalog was exported from the same server with the server key.
 
-    - Use the **Legacy Key** if the catalog was exported from any server with the legacy key, or if it was exported from any server prior to release 7.5.
+    -   Use the **Legacy Key** if the catalog was exported from any server with the legacy key, or if it was exported from any server prior to release 7.5.
 
-    - If you have added custom keys to the keystore on this server, select one from the list that appears:
+    -   If you have added custom keys to the keystore on this server, select one from the list that appears:
 
-      ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
+        ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
 
-    - Use the **Key Value** and enter a key in hexadecimal notation if you exported with a one-time key (the command-line `js-export --genkey` option).
+    -   Use the **Key Value** and enter a key in hexadecimal notation if you exported with a one-time key (the command-line `js-export --genkey` option).
 
-    - Use the **Stored Key** and specify its location if you saved the export key in the repository.
+    -   Use the **Stored Key** and specify its location if you saved the export key in the repository.
 
 6.  Use the checkboxes to change the behavior of the import operation:
 
-    - **Update** - When checked, it imports only resources that are newer than ones with the same URI in the current organization. The **Skip user updates** field allows you to keep the current definition of any users that also exist in the imported organization.
+    -   **Update** - When checked, it imports only resources that are newer than ones with the same URI in the current organization. The **Skip user updates** field allows you to keep the current definition of any users that also exist in the imported organization.
 
-    - **Include alerts** - When checked, it imports all alerts of any users that exist in the imported organization.
+    -   **Include alerts** - When checked, it imports all alerts of any users that exist in the imported organization.
 
-    - **Include themes** - When checked, imports any themes that exist in the imported organization.
+    -   **Include themes** - When checked, imports any themes that exist in the imported organization.
 
 7.  Click **Import**.
 
     The server uploads the catalog zip file and imports its contents into the organization. If there are any broken dependencies in the catalog, the server displays a message with three choices:
 
-    - **Skip** - Does not import the resource with the broken dependency, but continues to import other resources.
+    -   **Skip** - Does not import the resource with the broken dependency, but continues to import other resources.
 
-    - **Include** - Attempts to import the resource with the broken dependency. The import succeeds if there is already a resource in the destination that satisfies the dependency. If the dependency is not satisfied in the destination, the resource is skipped and the import continues.
+    -   **Include** - Attempts to import the resource with the broken dependency. The import succeeds if there is already a resource in the destination that satisfies the dependency. If the dependency is not satisfied in the destination, the resource is skipped and the import continues.
 
-    - **Cancel** - Stops the import operation.
+    -   **Cancel** - Stops the import operation.
 
     !!! note
 
@@ -306,7 +303,7 @@ To import data from the Settings page
 
 1.  Log in as a system administrator (`superuser` by default).
 
-2.  Select **Manage\>Server Settings** and choose **Import** in the left-hand panel.
+2.  Select **Manage&gt;Server Settings** and choose **Import** in the left-hand panel.
 
     ![js Settings Import](../assets/images/js-Settings-Import.png)
 
@@ -316,44 +313,41 @@ To import data from the Settings page
 
 4.  Select the key that was used to export the catalog file. For more information, see [The Import-Export Encryption Keys](import_and_export_catalogs.md).
 
-    - Use the **Server Key** if the catalog was exported from the same server with the server key.
+    -   Use the **Server Key** if the catalog was exported from the same server with the server key.
 
-    - Use the **Legacy Key** if the catalog was exported from any server with the legacy key, or if it was exported from any server prior to release 7.5.
+    -   Use the **Legacy Key** if the catalog was exported from any server with the legacy key, or if it was exported from any server prior to release 7.5.
 
-    - If you have added custom keys to the keystore on this server, select one from the list that appears:
+    -   If you have added custom keys to the keystore on this server, select one from the list that appears:
 
-      ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
+        ![js Export CustomKeys](../assets/images/js-Export-CustomKeys.png)
 
-    - Use the **Key Value** and enter a key in hexadecimal notation if you exported with a one-time key (the command-line `js-export --genkey` option).
+    -   Use the **Key Value** and enter a key in hexadecimal notation if you exported with a one-time key (the command-line `js-export --genkey` option).
 
-    - Use the **Stored Key** and specify its location if you saved the export key in the repository.
+    -   Use the **Stored Key** and specify its location if you saved the export key in the repository.
 
 5.  Use the checkboxes to change the behavior of the import operation:
 
-    - **Update** - When checked, it imports only resources that are newer than ones with the same URI in the current repository. The **Skip user updates** field allows you to keep the current definition of any users that also exist in the imported catalog.
+    -   **Update** - When checked, it imports only resources that are newer than ones with the same URI in the current repository. The **Skip user updates** field allows you to keep the current definition of any users that also exist in the imported catalog.
 
-    - **Include access events** - When checked, it imports the modification times of resources from the catalog. When cleared, resources keep their existing access times if they already exist.
+    -   **Include access events** - When checked, it imports the modification times of resources from the catalog. When cleared, resources keep their existing access times if they already exist.
 
-    - **Include alerts** - When checked, the import includes scheduled report alerts that are associated with any reports in your repository selection.
+    -   **Include alerts** - When checked, the import includes scheduled report alerts that are associated with any reports in your repository selection.
 
-      <div class="admonition note">
-      <p class="admonition-title">Note</p>
+        !!! note
 
-                                  <p>Importing alert details for a single report is comparatively quicker than importing alert details for the report having multiple alerts. As including multiple alerts in the report results in downgrading the performance of the server.</p>
+            Importing alert details for a single report is comparatively quicker than importing alert details for the report having multiple alerts. As including multiple alerts in the report results in downgrading the performance of the server.
 
-      </div>
+    -   **Include audit events** and **Include monitoring events** - These fields determine whether access and monitoring events from the catalog, if any, are imported.
 
-    - **Include audit events** and **Include monitoring events** - These fields determine whether access and monitoring events from the catalog, if any, are imported.
+    -   **Include server settings** - This field determines whether the system configuration is updated from the catalog. There are two prerequisites for the catalog to contain configuration settings:
 
-    - **Include server settings** - This field determines whether the system configuration is updated from the catalog. There are two prerequisites for the catalog to contain configuration settings:
+        -   The originating server settings must be modified through the UI. Thus, only **Log Settings**, **Ad Hoc Settings,** and **Cloud Settings** are affected. For more information, see [Configuration Settings in the User Interface](../configuration/configuration_settings_in_the_ui.md)
 
-      - The originating server settings must be modified through the UI. Thus, only **Log Settings**, **Ad Hoc Settings,** and **Cloud Settings** are affected. For more information, see [Configuration Settings in the User Interface](../configuration/configuration_settings_in_the_ui.md)
+        -   The catalog must be exported with the "everything" option or the specific **Server Settings** option.
 
-      - The catalog must be exported with the "everything" option or the specific **Server Settings** option.
+            When server settings are imported, they take effect immediately and appear in the Settings UI.
 
-        When server settings are imported, they take effect immediately and appear in the Settings UI.
-
-    - **Include themes** - This field determines whether you want to import themes from the catalog.
+    -   **Include themes** - This field determines whether you want to import themes from the catalog.
 
 6.  Click **Import**.
 

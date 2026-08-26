@@ -7,232 +7,238 @@ description: "This section describes how to create an Ad Hoc report that prompts
 
 This section describes how to create an Ad Hoc report that prompts for input in multiple languages. The tasks are:
 
-- Set the base name of the resource bundles in the JRXML Topic.
-- Create resource bundles that contain translations for the prompts.
-- Create an Ad Hoc report based on the JRXML Topic.
-- Edit an input control to make prompts multi-lingual.
-- Upload the resource bundles.
-- Run the report and use the localized input control.
+-   Set the base name of the resource bundles in the JRXML Topic.
 
-The order of these tasks is important: Set the base name of the resource bundle in the JRXML Topic first, then create the Ad Hoc report. If you open the JRXML Topic after creating an Ad Hoc report, Jaspersoft Studio removes grouping or sorting of data if there is any.
+-   Create resource bundles that contain translations for the prompts.
 
-To set the base name of the resource bundles in the JRXML Topic
+-   Create an Ad Hoc report based on the JRXML Topic.
 
-1.  Start Jaspersoft Studio. In Jaspersoft Studio, click **Window \>JasperReports Server Repository**. The Repository Navigator appears. This is where you set up a connection to the server.
+-   Edit an input control to make prompts multi-lingual.
 
-2.  Navigate to **Ad Hoc Components \> Topics** and right-click the JRXML topic for this report: **Parametrized Report**.
+-   Upload the resource bundles.
 
-3.  Select **Copy**.
+-   Run the report and use the localized input control.
 
-4.  Navigate to the **Reports** folder, right-click and select **Paste**. The Parametrized Report topic appears in Reports.
+    The order of these tasks is important: Set the base name of the resource bundle in the JRXML Topic first, then create the Ad Hoc report. If you open the JRXML Topic after creating an Ad Hoc report, Jaspersoft Studio removes grouping or sorting of data if there is any.
 
-5.  To open the topic in the Designer tab, expand the Parametrized Report folder and double-click its main JRXML: **ParametersJRXML_label**. The Shipping Report appears in the Designer tab.
+    To set the base name of the resource bundles in the JRXML Topic
 
-6.  Click **Window \> Report Inspector**.
+    1.  Start Jaspersoft Studio. In Jaspersoft Studio, click **Window &gt;JasperReports Server Repository**. The Repository Navigator appears. This is where you set up a connection to the server.
 
-7.  In the Report Inspector, right-click the root node: **ParamMany** and choose **Properties**. In the main JRXML, ParamMany is the report name.
+    2.  Navigate to **Ad Hoc Components &gt; Topics** and right-click the JRXML topic for this report: **Parametrized Report**.
 
-    In Figure 5‑27, you can see the ParamMany root node and Properties context menu.
+    3.  Select **Copy**.
 
-    ![ir Bundle root properties](../assets/images/ir-Bundle-root-properties.png)
+    4.  Navigate to the **Reports** folder, right-click and select **Paste**. The Parametrized Report topic appears in Reports.
 
-    *Figure 1: Selecting Properties of the ParamMany report*
+    5.  To open the topic in the Designer tab, expand the Parametrized Report folder and double-click its main JRXML: **ParametersJRXML_label**. The Shipping Report appears in the Designer tab.
 
-8.  In the ParamMany Properties dialog, set the base name of the resource bundle to freight:
+    6.  Click **Window &gt; Report Inspector**.
 
-    1.  Scroll down to the **Resource bundle** property.
-    2.  Click ![ir icon ellipsis](../assets/images/ir-icon-ellipsis.png).
-    3.  Enter `freight` and click **OK** .
+    7.  In the Report Inspector, right-click the root node: **ParamMany** and choose **Properties**. In the main JRXML, ParamMany is the report name.
 
-    In Figure 5‑28, you can see the properties of the ParamMany report.
+        In Figure 5‑27, you can see the ParamMany root node and Properties context menu.
 
-    ![ir Bundle settingbasename](../assets/images/ir-Bundle-settingbasename.png)
+        ![ir Bundle root properties](../assets/images/ir-Bundle-root-properties.png)
 
-    *Figure 2: Setting the Base Name of the Resource Bundle*
+        *Figure 1: Selecting Properties of the ParamMany report*
 
-9.  Click **Close**.
+    8.  In the ParamMany Properties dialog, set the base name of the resource bundle to freight:
 
-10. Click **File \> Save** to save the resource bundle name to the JRXML.
+        1.  Scroll down to the **Resource bundle** property.
 
-11. In the Repository Navigator, right-click **ParametersJRXML_label** and choose **Replace with Current Document**.
+        2.  Click ![ir icon ellipsis](../assets/images/ir-icon-ellipsis.png).
 
-![js Bundle replace current](../assets/images/js-Bundle-replace-current.png)
+        3.  Enter `freight` and click **OK** .
 
-*Figure 3: Saving the Current Document in iReport to the Repository*
+            In Figure 5‑28, you can see the properties of the ParamMany report.
 
-The modified JRXML with a base resource bundle name overwrites the Parametrized Report Topic in the repository.
+            ![ir Bundle settingbasename](../assets/images/ir-Bundle-settingbasename.png)
 
-To create resource bundles that contain translations for prompts
+            *Figure 2: Setting the Base Name of the Resource Bundle*
 
-1.  In a text editor, create a new file for English translations.
+    9.  Click **Close**.
 
-2.  Enter these name-value pairs in the file:
+    10. Click **File &gt; Save** to save the resource bundle name to the JRXML.
 
-    <table>
-    <colgroup>
-    <col style="width: 100%" />
-    </colgroup>
-    <tbody>
-    <tr>
-    <td><div class="language-properties highlight"><pre><code><span class="na">BundleCountry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Country</span>
-<span class="w">    </span><span class="na">BundleDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Date</span>
-<span class="w">    </span><span class="na">BundleOrder</span><span class="o">=</span><span class="w"> </span><span class="s">Order</span></code></pre></div></td>
-    </tr>
-    </tbody>
-    </table>
+    11. In the Repository Navigator, right-click **ParametersJRXML_label** and choose **Replace with Current Document**.
 
-3.  Save the file as `freight.properties`.
+    ![js Bundle replace current](../assets/images/js-Bundle-replace-current.png)
+
+    *Figure 3: Saving the Current Document in iReport to the Repository*
+
+    The modified JRXML with a base resource bundle name overwrites the Parametrized Report Topic in the repository.
+
+    To create resource bundles that contain translations for prompts
+
+    1.  In a text editor, create a new file for English translations.
+
+    2.  Enter these name-value pairs in the file:
+
+        <table>
+        <colgroup>
+        <col style="width: 100%" />
+        </colgroup>
+        <tbody>
+        <tr>
+        <td><div class="language-properties highlight"><pre><code><span class="na">BundleCountry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Country</span>
+<span class="w">        </span><span class="na">BundleDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Date</span>
+<span class="w">        </span><span class="na">BundleOrder</span><span class="o">=</span><span class="w"> </span><span class="s">Order</span></code></pre></div></td>
+        </tr>
+        </tbody>
+        </table>
+
+    3.  Save the file as `freight.properties`.
+
+        !!! note
+
+            The file name of the default (English) resource bundle consists of the base name of the resource bundle and the properties extension.
+
+    4.  In a text editor, create a new file for French translations and enter these name-value pairs in the file:
+
+        <table>
+        <colgroup>
+        <col style="width: 100%" />
+        </colgroup>
+        <tbody>
+        <tr>
+        <td><div class="language-properties highlight"><pre><code><span class="na">BundleCountry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Pays</span>
+<span class="w">        </span><span class="na">BundleDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Date</span>
+<span class="w">        </span><span class="na">BundleOrder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Pour ID</span></code></pre></div></td>
+        </tr>
+        </tbody>
+        </table>
+
+    5.  Save the file as `freight_fr.properties`.
 
     !!! note
 
-        The file name of the default (English) resource bundle consists of the base name of the resource bundle and the properties extension.
+        The file name of a localized resource bundle follows this Java naming convention:
 
-4.  In a text editor, create a new file for French translations and enter these name-value pairs in the file:
+        &lt;default_file_name&gt;\_&lt;locale&gt;.properties
 
-    <table>
-    <colgroup>
-    <col style="width: 100%" />
-    </colgroup>
-    <tbody>
-    <tr>
-    <td><div class="language-properties highlight"><pre><code><span class="na">BundleCountry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Pays</span>
-<span class="w">    </span><span class="na">BundleDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Date</span>
-<span class="w">    </span><span class="na">BundleOrder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Pour ID</span></code></pre></div></td>
-    </tr>
-    </tbody>
-    </table>
+        -   &lt;default_file_name&gt; is the base name of the resource bundle
+        -   &lt;locale&gt; is a Java-compliant locale identifier
 
-5.  Save the file as `freight_fr.properties`.
+    To create an Ad Hoc View based on the JRXML Topic
 
-!!! note
+    1.  Log into the server as administrator, and choose **Create &gt; Ad Hoc View**.
+    2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Ad Hoc Components &gt; Topics** and choose **Parametrized Report**.
+    3.  Click **Table.** The Parametrized Report topic (a blank report) opens in the Ad Hoc Editor.
+    4.  In the **Measures** list, double-click these fields:
 
-    The file name of a localized resource bundle follows this Java naming convention:
+    -   Order ID
 
-    \<default_file_name\>\_\<locale\>.properties
+    -   Freight
 
-    - \<default_file_name\> is the base name of the resource bundle
-    - \<locale\> is a Java-compliant locale identifier
+        1.  In the **Fields** list, right-click **Customer Id** and select **Add as Group**.
 
-To create an Ad Hoc View based on the JRXML Topic
+        2.  Click **Click to add a title** and enter **Multi-lingual Input Prompts View.**
 
-1.  Log into the server as administrator, and choose **Create \> Ad Hoc View**.
+            ![js AdHoc localize IC](../assets/images/js-AdHoc-localize-IC.png)
 
-2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and navigate to **Ad Hoc Components \> Topics** and choose **Parametrized Report**.
+            *Figure 4: Creating an Ad Hoc View*
 
-3.  Click **Table.** The Parametrized Report topic (a blank report) opens in the Ad Hoc Editor.
+        3.  Click ![js AdHoc icon SaveReport](../assets/images/js-AdHoc-icon-SaveReport.png) and select **Save Ad Hoc view As and Create Report**. In the Save As dialog, select the **Ad Hoc Reports** folder, and enter:
 
-4.  In the **Measures** list, double-click these fields:
+    -   Data View Name: `Multi-lingual Input Prompts View`
 
-    - Order ID
-    - Freight
+    -   Data View Description: `A report that prompts for input in French and English.`
 
-5.  In the **Fields** list, right-click **Customer Id** and select **Add as Group**.
+    -   Report Name: `Multi-lingual Input Prompts View Report`
 
-6.  Click **Click to add a title** and enter **Multi-lingual Input Prompts View.**
+        1.  Browse to a location to save both the view and report.
+        2.  Click **Default Report Template**.
+        3.  Click **Save**.
 
-    ![js AdHoc localize IC](../assets/images/js-AdHoc-localize-IC.png)
+        To edit an input control to make prompts multi-lingual
 
-    *Figure 4: Creating an Ad Hoc View*
+        1.  In the server, click **View &gt; Repository.**
+        2.  Locate the Multi-lingual Input Prompts View Report, right-click it, and choose **Edit**. The JasperReport wizard appears.
+        3.  Click **Controls & Resources**. The Controls & Resources page lists these input controls:
 
-7.  Click ![js AdHoc icon SaveReport](../assets/images/js-AdHoc-icon-SaveReport.png) and select **Save Ad Hoc view As and Create Report**. In the Save As dialog, select the **Ad Hoc Reports** folder, and enter:
+    -   Country
 
-    - Data View Name: `Multi-lingual Input Prompts View`
-    - Data View Description: `A report that prompts for input in French and English.`
-    - Report Name: `Multi-lingual Input Prompts View Report`
+    -   RequestDate
 
-8.  Browse to a location to save both the view and report.
+    -   OrderID
 
-9.  Click **Default Report Template**.
+        1.  Click the **Country** input control.
 
-10. Click **Save**.
+        2.  On the Locate Input Control page, click **Next** to define an input control in the next step.
 
-To edit an input control to make prompts multi-lingual
+        3.  On the Create Input Control page, change the prompt text from `Country` to this expression:
 
-1.  In the server, click **View \> Repository.**
+            `$R{BundleCountry}`
 
-2.  Locate the Multi-lingual Input Prompts View Report, right-click it, and choose **Edit**. The JasperReport wizard appears.
+            In Figure 5‑31 this expression is entered in the prompt text field.
 
-3.  Click **Controls & Resources**. The Controls & Resources page lists these input controls:
+            ![js AddJasperReport localize createIC](../assets/images/js-AddJasperReport-localize-createIC.png)
 
-    - Country
-    - RequestDate
-    - OrderID
+            *Figure 5: Entering a $R Expression in the Prompt Text Field*
 
-4.  Click the **Country** input control.
+        4.  Click **Next**.
 
-5.  On the Locate Input Control page, click **Next** to define an input control in the next step.
+        5.  Accept the default settings on subsequent pages by clicking **Next** and **Save:**
 
-6.  On the Create Input Control page, change the prompt text from `Country` to this expression:
+            1.  On the Locate Query page, click **Next**.
+            2.  On the Name the Query page, click **Next**.
+            3.  On the Link a Data Source to the Query page, click **Next**.
+            4.  On the Define the Query page, click **Save**.
 
-    `$R{BundleCountry}`
+        6.  On the Set Parameter Values page, click **Submit**.
 
-    In Figure 5‑31 this expression is entered in the prompt text field.
+            The Controls & Resources page now shows the `$R{BundleCountry}` expression instead of Country at the top of the list of input controls.
 
-    ![js AddJasperReport localize createIC](../assets/images/js-AddJasperReport-localize-createIC.png)
+            ![js AddJasperReport localize ctrl resources2](../assets/images/js-AddJasperReport-localize-ctrl-resources2.png)
 
-    *Figure 5: Entering a \$R Expression in the Prompt Text Field*
+            *Figure 6: Input Controls Include One Multi-lingual Input Control*
 
-7.  Click **Next**.
+        7.  Change the prompt text of the other input controls in a similar manner:
 
-8.  Accept the default settings on subsequent pages by clicking **Next** and **Save:**
+            1.  Repeat step 4 through step 6 to change the RequestDate and OrderID input controls to these expressions:
 
-    1.  On the Locate Query page, click **Next**.
-    2.  On the Name the Query page, click **Next**.
-    3.  On the Link a Data Source to the Query page, click **Next**.
-    4.  On the Define the Query page, click **Save**.
+                RequestDate: `$R{BundleDate}`
 
-9.  On the Set Parameter Values page, click **Submit**.
+                OrderID: `$R{BundleOrder}`
 
-    The Controls & Resources page now shows the `$R{BundleCountry}` expression instead of Country at the top of the list of input controls.
+            2.  Accept the default settings on subsequent pages of the JasperReport wizard by clicking **Next** and **Save**. The Controls & Resources page now shows the `$R` expressions for all three input controls.
 
-    ![js AddJasperReport localize ctrl resources2](../assets/images/js-AddJasperReport-localize-ctrl-resources2.png)
+        To upload the resource bundles
 
-    *Figure 6: Input Controls Include One Multi-lingual Input Control*
+        1.  On the **Controls & Resources** page, click **Add Resource**. The Locate File Resource page appears.
 
-10. Change the prompt text of the other input controls in a similar manner:
+        2.  Select **Upload a Local File.**
 
-    1.  Repeat step 4 through step 6 to change the RequestDate and OrderID input controls to these expressions:
+        3.  **Browse** to the freight.properties file, and click **Open**.
 
-    RequestDate: `$R{BundleDate}`
+        4.  On the Locate File Resource page, click **Next**.
 
-    OrderID: `$R{BundleOrder}`
+            On the Add a Report Resource page, freight.properties appears as the Selected Resource, indicating that the server automatically detected it as a resource bundle.
 
-11. Accept the default settings on subsequent pages of the JasperReport wizard by clicking **Next** and **Save**. The Controls & Resources page now shows the `$R` expressions for all three input controls.
+        5.  On the Add a Report Resource page, enter these properties:
 
-To upload the resource bundles
+    -   Name – `freight.properties`
 
-1.  On the **Controls & Resources** page, click **Add Resource**. The Locate File Resource page appears.
+    -   Resource ID – `freight.properties`
 
-2.  Select **Upload a Local File.**
+    -   Description – `Default English resource bundle`
 
-3.  **Browse** to the freight.properties file, and click **Open**.
+        1.  Click **Next**. The list of resources on the Controls & Resources page now includes the resource bundle freight.properties.
 
-4.  On the Locate File Resource page, click **Next**.
+        2.  On Controls & Resources, click **Add Resource** again, but this time upload the French resource bundle:
 
-    On the Add a Report Resource page, freight.properties appears as the Selected Resource, indicating that the server automatically detected it as a resource bundle.
+            1.  On the Controls & Resources page, click **Add Resource** again.
+            2.  Select **Upload a Local File**, **Browse** to the freight_fr.properties file you created, and click **Open**.
+            3.  In Locate File Resource click **Next**. The **Add a Report Resource** page appears.
+            4.  Enter the following information:
 
-5.  On the Add a Report Resource page, enter these properties:
+        -   Name – `freight_fr.properties`
+        -   Resource ID – `freight_fr.properties`
+        -   Description – `French resource bundle`
 
-    - Name – `freight.properties`
-    - Resource ID – `freight.properties`
-    - Description – `Default English resource bundle`
-
-6.  Click **Next**. The list of resources on the Controls & Resources page now includes the resource bundle freight.properties.
-
-7.  On Controls & Resources, click **Add Resource** again, but this time upload the French resource bundle:
-
-    1.  On the Controls & Resources page, click **Add Resource** again.
-    2.  Select **Upload a Local File**, **Browse** to the freight_fr.properties file you created, and click **Open**.
-    3.  In Locate File Resource click **Next**. The **Add a Report Resource** page appears.
-    4.  Enter the following information:
-
-    - Name – `freight_fr.properties`
-    - Resource ID – `freight_fr.properties`
-    - Description – `French resource bundle`
-
-8.  Click **Next**. The Controls & Resources page shows the English and French resource bundles in the resources list.
-
-9.  Click **Submit**.
+1.  Click **Next**. The Controls & Resources page shows the English and French resource bundles in the resources list.
+2.  Click **Submit**.
 
 To run the report and use the localized input control
 

@@ -13,13 +13,13 @@ This deployment is based on a licensed installation of the JasperReports Server 
 
 You will also need the following third-party software for this deployment:
 
-- git
+-   git
 
-- Docker engine (20.x+) including Docker Compose V2 (3.9+)
+-   Docker engine (20.x+) including Docker Compose V2 (3.9+)
 
-- Kubernetes (1.25+) including kubectl
+-   Kubernetes (1.25+) including kubectl
 
-- Helm 3.5
+-   Helm 3.5
 
 This manual assumes that this software is installed and available in your path. You should be proficient with the concepts and commands for these tools.
 

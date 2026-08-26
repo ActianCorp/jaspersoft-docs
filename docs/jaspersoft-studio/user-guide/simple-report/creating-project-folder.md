@@ -9,7 +9,7 @@ Project folders help you organize your reports.
 
 To create a project folder
 
-1.  Choose **File \> New \> Project**. The **Select a wizard** dialog is displayed.
+1.  Choose **File &gt; New &gt; Project**. The **Select a wizard** dialog is displayed.
 
     |                                                      |
     |------------------------------------------------------|

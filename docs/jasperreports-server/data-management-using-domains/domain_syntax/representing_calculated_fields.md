@@ -11,14 +11,14 @@ Calculated fields are defined as `field` elements with an additional XML attribu
 
 The `field` element is a child of the `fieldList` element. The location of the `fieldList` element for calculated fields depends on the location of the fields used in the calculation:
 
-- Calculated fields where all the columns in the calculation come from a single table appear twice in the design file:
+-   Calculated fields where all the columns in the calculation come from a single table appear twice in the design file:
 
-  - Under the `jdbcTable` element for the join tree that contains the table.
-  - Under the `jdbcTable` or `jdbcQuery` element for that table.
+    -   Under the `jdbcTable` element for the join tree that contains the table.
+    -   Under the `jdbcTable` or `jdbcQuery` element for that table.
 
-- Calculated fields that use columns from different tables appear only once, under the `jdbcTable` element for the join tree contains both tables. Remember, it is not possible to create calculated fields from columns in different join trees.
+-   Calculated fields that use columns from different tables appear only once, under the `jdbcTable` element for the join tree contains both tables. Remember, it is not possible to create calculated fields from columns in different join trees.
 
-- Constant fields appear under `resources` as a `null` element.
+-   Constant fields appear under `resources` as a `null` element.
 
 Constant fields are calculated fields that do not reference any column names. Constant fields are defined as `field` elements in a `fieldList` under the `null` element. Because constant fields are not dependent on any column values, they may be used in any join tree or data island. They can also be used in other calculated fields and pre-filters.
 
@@ -48,11 +48,15 @@ Constant fields are calculated fields that do not reference any column names. Co
 <td>String</td>
 <td><p>(Required) Identifier for the calculated field. The format of the <code>id</code> depends on how the calculated field appears in the design file:</p>
 <ol>
-<li><p>If all columns used in the expression are from the same table, and the table appears in a join, there are two <code>field</code> elements for the calculated field, with different ids:</p>
+<li>If all columns used in the expression are from the same table, and the table appears in a join, there are two <code>field</code> elements for the calculated field, with different ids:</li>
+</ol>
 <ul>
-<li>When the field appears under the <code>jdbcTable</code> or <code>jdbcQuery</code> element for the table, the <code>id</code> is a simple column name <code>field_name</code>.</li>
+<li><p>When the field appears under the <code>jdbcTable</code> or <code>jdbcQuery</code> element for the table, the <code>id</code> is a simple column name <code>field_name</code>.</p>
+<ul>
 <li>When the field appears under the <code>jdbcTable</code> element for the join tree that uses the table, the <code>id</code> has the form <code>table_ID.field_name</code>.</li>
 </ul></li>
+</ul>
+<ol>
 <li>If the expression references columns from different tables, the field appears only in the join tree that contains those tables and the <code>id</code> has the form <code>jointree_ID.field_name</code>.</li>
 <li>If the expression is a constant value, the field appears in the <code>null</code> element under <code>resources</code> and the <code>id</code> is <code>constant_fields_level.field_name</code>.</li>
 </ol>

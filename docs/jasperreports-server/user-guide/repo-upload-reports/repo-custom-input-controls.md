@@ -7,31 +7,31 @@ description: "You can add custom Input Controls from the following sections on t
 
 You can add custom Input Controls from the following sections on the **Create Input Control** page:
 
-- **Name and Description**:
+-   **Name and Description**:
 
-  - **Custom Prompt Text**: This is an optional field and can be used to explain users how to use the Input Control. It can also be used to provide a customized label for the input control instead of **Prompt Text**. It enables you to write an expression or call custom function to change the Input Control title dynamically.
+    -   **Custom Prompt Text**: This is an optional field and can be used to explain users how to use the Input Control. It can also be used to provide a customized label for the input control instead of **Prompt Text**. It enables you to write an expression or call custom function to change the Input Control title dynamically.
 
-    For example:
+        For example:
 
-    Simple label for string: `‘String’`
+        Simple label for string: `‘String’`
 
-    Custom label: `$P` or `$R`
+        Custom label: `$P` or `$R`
 
-    A tooltip appears when you hover over the question mark icon.
+        A tooltip appears when you hover over the question mark icon.
 
-    ![custom ic custom prompt tooltip](../assets/images/custom-ic-custom-prompt-tooltip.png)
+        ![custom ic custom prompt tooltip](../assets/images/custom-ic-custom-prompt-tooltip.png)
 
-- **Display Settings**:
+-   **Display Settings**:
 
-  - **Enable/Disable Input Control \> Conditional**: This section enables you to control editing the value of the Input Control. Based on the condition defined, you may or may not be able to edit the value of the Input Control. When selected, the associated **Custom Expression** input is enabled.
+    -   **Enable/Disable Input Control &gt; Conditional**: This section enables you to control editing the value of the Input Control. Based on the condition defined, you may or may not be able to edit the value of the Input Control. When selected, the associated **Custom Expression** input is enabled.
 
-    A tooltip appears when you hover over the question mark icon next to the **Conditional \> Custom Expression** input field.
+        A tooltip appears when you hover over the question mark icon next to the **Conditional &gt; Custom Expression** input field.
 
-    ![custom ic conditional tooltip](../assets/images/custom-ic-conditional-tooltip.png)
+        ![custom ic conditional tooltip](../assets/images/custom-ic-conditional-tooltip.png)
 
-  - **Show/Hide Input Control \> Conditional**: This section determines the visibility of the Input Control. Based on the condition defined, the Input Control may be shown or hidden. When selected, the associated **Custom Expression** input field is enabled.
+    -   **Show/Hide Input Control &gt; Conditional**: This section determines the visibility of the Input Control. Based on the condition defined, the Input Control may be shown or hidden. When selected, the associated **Custom Expression** input field is enabled.
 
-    The tooltip is also displayed when you hover over the question mark icon next to the **Conditional \> Custom Expression** input field.
+        The tooltip is also displayed when you hover over the question mark icon next to the **Conditional &gt; Custom Expression** input field.
 
 Following are the expression formats for **Custom Expression**:
 
@@ -48,15 +48,15 @@ Following are the expression formats for **Custom Expression**:
 
 The supported expressions include:
 
-- Comparisons: \<, \>, \<=, \>=, ==
+-   Comparisons: &lt;, &gt;, &lt;=, &gt;=, ==
 
-- Addition, Subtraction: +, -
+-   Addition, Subtraction: +, -
 
-- Multiplication, Division: \*, /
+-   Multiplication, Division: \*, /
 
-- Function call
+-   Function call
 
-- Relative dates
+-   Relative dates
 
 ### Expression Formats Accepted
 
@@ -125,14 +125,14 @@ The supported expressions include:
 
 Users can change titles by using expressions, calling custom functions, or utilizing keys from a resource bundle. If you choose to use resource bundle keys, you must first add the corresponding bundle on the **Controls & Resources** page and specify the resource bundle file name using the `resourceBundle` attribute within the `<jasperReport>` tag of the JRXML file. For example, `resourceBundle = 'testbundle'`.
 
-- 'StoreId for \$P{Country} '
+-   'StoreId for $P{Country} '
 
-- ‘\$R{sales.key} record’
+-   ‘$R{sales.key} record’
 
-- str(‘country.key’)
+-   str(‘country.key’)
 
-- ‘\$R{country.key} some other text’
+-   ‘$R{country.key} some other text’
 
-- '\$R{country.key}' == 'This is country title from bundle'
+-   '$R{country.key}' == 'This is country title from bundle'
 
 For information about Input Controls for Custom Functions, see the JasperReports Server Administrator Guide.

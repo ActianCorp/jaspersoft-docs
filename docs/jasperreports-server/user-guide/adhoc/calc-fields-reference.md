@@ -219,7 +219,7 @@ Calculates the number of weeks elapsed between two date fields that contain time
 
 !!! note
 
-    This replaces the two-date custom field operation **Date Difference \> Weeks** available in Ad Hoc views created in Server 5.5 or earlier.
+    This replaces the two-date custom field operation **Date Difference &gt; Weeks** available in Ad Hoc views created in Server 5.5 or earlier.
 
 ## ElapsedYears (DateExpression1,DateExpression2)
 
@@ -245,7 +245,7 @@ Given a Boolean field or calculation as the first argument, returns the second a
 
 !!! note
 
-    You can create a `BooleanExpression` using the comparison operators(“==”, “!=”, “\>”, “\>=”, “\<”, “\<=”); any functions that return Boolean values (`StartsWith`, `EndsWith`, `IsNull`, `Contains`) and logical operators (`and`, `or`, `not`).
+    You can create a `BooleanExpression` using the comparison operators(“==”, “!=”, “&gt;”, “&gt;=”, “&lt;”, “&lt;=”); any functions that return Boolean values (`StartsWith`, `EndsWith`, `IsNull`, `Contains`) and logical operators (`and`, `or`, `not`).
 
 !!! note
 

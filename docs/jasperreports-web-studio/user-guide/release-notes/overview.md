@@ -11,8 +11,8 @@ It comes as a web-based alternative to Jaspersoft Studio, the desktop applicatio
 
 This release notes includes the following:
 
-- [New Features](new-features.md)
-- [Changes in Functionality](changes-in-functionality.md)
-- [Migration and Compatibility](migration.md)
-- [Closed Issues](closed-issues.md)
-- [Known Issues](known-issues.md)
+-   [New Features](new-features.md)
+-   [Changes in Functionality](changes-in-functionality.md)
+-   [Migration and Compatibility](migration.md)
+-   [Closed Issues](closed-issues.md)
+-   [Known Issues](known-issues.md)

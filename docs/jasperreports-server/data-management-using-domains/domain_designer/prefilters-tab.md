@@ -15,9 +15,9 @@ You can define a pre-filter on a column you do not plan to expose in the Domain.
 
 You have two options for defining parameters for a pre-filter:
 
-- Define the parameters statically, so they are the same for every user. For example, you could create a static filter that filters out data for every country except the USA.
+-   Define the parameters statically, so they are the same for every user. For example, you could create a static filter that filters out data for every country except the USA.
 
-- Have the server derive the parameter of the filter at run time based on attributes you provide. For example, you can create a filter that only shows data for the logged-in user's country, based on a Country attribute set in your users' profiles. If the specified attribute has not been defined anywhere on the server, the filter will fail. If the attributes are NULL, the filter will not retrieve any data.
+-   Have the server derive the parameter of the filter at run time based on attributes you provide. For example, you can create a filter that only shows data for the logged-in user's country, based on a Country attribute set in your users' profiles. If the specified attribute has not been defined anywhere on the server, the filter will fail. If the attributes are NULL, the filter will not retrieve any data.
 
 !!! note
 

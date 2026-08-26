@@ -65,8 +65,8 @@ The resources service is a read only service. Requests for PUT, POST, and DELETE
 
 The XML content in the result consists of resourceDescriptors described in section [Syntax of resourceDescriptor](syntax_of_resourcedescriptor.md). However, the list may be empty in the following conditions:
 
-- If the specified URI is a resource instead of a folder.
-- If the folder is empty or the search returns no results.
+-   If the specified URI is a resource instead of a folder.
+-   If the folder is empty or the search returns no results.
 
 The following example shows the request to list the resources in the /reports folder:
 

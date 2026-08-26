@@ -5,15 +5,15 @@ description: "The Report Viewer allows you to format column headings and fields,
 
 # Conditional Formatting
 
-The Report Viewer allows you to format column headings and fields, to highlight data that meets specific criteria. For instance, if you want to call out fields for store sales above \$100,000, you can do so by applying text and background formatting to those stores that meet those numbers.
+The Report Viewer allows you to format column headings and fields, to highlight data that meets specific criteria. For instance, if you want to call out fields for store sales above $100,000, you can do so by applying text and background formatting to those stores that meet those numbers.
 
 With conditional formatting, you can apply the formatting options listed in [Column Formatting](reports-column-formatting.md). However, it is a slightly more complex process than applying formatting options to entire columns. This section describes those complexities, including:
 
-- Condition hierarchy
+-   Condition hierarchy
 
-- Condition button states
+-   Condition button states
 
-- Applying conditional formatting
+-   Applying conditional formatting
 
 ## Condition Hierarchy
 
@@ -46,11 +46,11 @@ For example, imagine you have more than one condition applied to the same format
 
 Because conditions higher up in the hierarchy can affect those below, the font style selection buttons each have three states:
 
-- **Unchanged**, which means it inherits the previous condition-based style, if any.
+-   **Unchanged**, which means it inherits the previous condition-based style, if any.
 
-- **Set**, which means the style is applied to the text that meets the condition.
+-   **Set**, which means the style is applied to the text that meets the condition.
 
-- **Not Set**, which means the style is not applied to the text that meets the condition, and is removed if a conflicting condition lower in the conditional formatting hierarchy has marked that style as “Set”.
+-   **Not Set**, which means the style is not applied to the text that meets the condition, and is removed if a conflicting condition lower in the conditional formatting hierarchy has marked that style as “Set”.
 
 By default, the buttons are in the “Unchanged” state. Clicking the buttons toggles you through the three states.
 
@@ -66,21 +66,21 @@ Style Button States
 
 The background and font color pickers have buttons for similar states, but these states behave slightly different:
 
-- **Unchanged**, which means the field inherits the previous condition-based color, if any.
+-   **Unchanged**, which means the field inherits the previous condition-based color, if any.
 
-- **Set**, which means the color is applied to the text or background of the field that meets the condition.
+-   **Set**, which means the color is applied to the text or background of the field that meets the condition.
 
-- **No Fill (background only)**, which means no color is applied to the background that meets the condition. Regardless of conditions lower in the hierarchy, the background inherits the table’s default color.
+-   **No Fill (background only)**, which means no color is applied to the background that meets the condition. Regardless of conditions lower in the hierarchy, the background inherits the table’s default color.
 
 Both have two buttons at the top of the window, along with the color selection boxes.
 
 You control these states through the background color picker and the font color picker windows, using the following buttons:
 
-- **No Fill (background only)**, which applies to the No Fill state described above.
+-   **No Fill (background only)**, which applies to the No Fill state described above.
 
-- **Reset**, which returns the text or background to the Unchanged state.
+-   **Reset**, which returns the text or background to the Unchanged state.
 
-- The **color selection boxes**, which apply to the Set state.
+-   The **color selection boxes**, which apply to the Set state.
 
 See Table 3‑4, “Color Picker Button States,” for examples of the color picker button states.
 
@@ -115,9 +115,9 @@ To create a condition
 
 7.  Fill in the following information:
 
-    - **Operator**: Use the dropdown menu to define how the condition is compared to the column data.
-    - **Condition**: Enter the condition criteria.
-    - **Format**: Select the formatting applied to fields meeting the defined condition. Take care while setting the button states, as described in Condition Button States.
+    -   **Operator**: Use the dropdown menu to define how the condition is compared to the column data.
+    -   **Condition**: Enter the condition criteria.
+    -   **Format**: Select the formatting applied to fields meeting the defined condition. Take care while setting the button states, as described in Condition Button States.
 
 8.  Repeat if needed to add multiple conditions to a column.<br>
     If you have multiple conditions, you may want to reorder them, to ensure they do not conflict with each other. Use the ![js DomainDesigner icon Move Up](../assets/images/js-DomainDesigner-icon-Move-Up.png) and ![js DomainDesigner icon Move Down](../assets/images/js-DomainDesigner-icon-Move-Down.png) to move conditions in the hierarchy.

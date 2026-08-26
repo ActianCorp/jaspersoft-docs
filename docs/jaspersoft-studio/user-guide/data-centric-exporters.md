@@ -7,17 +7,17 @@ description: "Jaspersoft Studio supports two data-oriented exports formats desig
 
 Jaspersoft Studio supports two data-oriented exports formats designed to be used programmatically when another application embeds Jaspersoft products:
 
-- CSV: exports the report's data to a list of comma-separated values (CSV).
+-   CSV: exports the report's data to a list of comma-separated values (CSV).
 
-- JSON: exports the report's data to a JavaScript Object Notation (JSON) object.
+-   JSON: exports the report's data to a JavaScript Object Notation (JSON) object.
 
 In both cases, the metadata defines the structure of the exported data.
 
 Jaspersoft Studio also supports other types of field-level metadata:
 
-- PDF 508 Tags are used to create report output in Adobe Acrobat format that provides functionality in accordance with the Americans with Disabilities 508 specification.
+-   PDF 508 Tags are used to create report output in Adobe Acrobat format that provides functionality in accordance with the Americans with Disabilities 508 specification.
 
-- XLS Tags are used to define how data is exported to the Microsoft Excel format. In addition to numerous layout settings, you can define XLSX metadata that define the structure of the data when exported.
+-   XLS Tags are used to define how data is exported to the Microsoft Excel format. In addition to numerous layout settings, you can define XLSX metadata that define the structure of the data when exported.
 
 This section describes how to work with metadata for PDF 508 Tags and for the JSON exporter.
 
@@ -31,7 +31,7 @@ You can tag text fields or static text elements as headings. You can include a r
 
 To tag a single element as a heading
 
-1.  Right-click the text field or static text and select **PDF 508 Tags \> Heading \> Heading n \> Full** from the context menu.
+1.  Right-click the text field or static text and select **PDF 508 Tags &gt; Heading &gt; Heading n &gt; Full** from the context menu.
 
 The setting is displayed in the upper left-hand corner of the element in design view. It is underlined to show the element is the full heading.
 
@@ -42,8 +42,8 @@ The setting is displayed in the upper left-hand corner of the element in design 
 
 To tag multiple elements as a heading
 
-1.  Right-click the first text field or static text element in your heading section and select **PDF 508 Tags \> Heading \> Heading n \> Start** from the context menu.
-2.  Right-click the last text field or static text element in your heading section and select **PDF 508 Tags \> Heading \> Heading n \> End** from the context menu.
+1.  Right-click the first text field or static text element in your heading section and select **PDF 508 Tags &gt; Heading &gt; Heading n &gt; Start** from the context menu.
+2.  Right-click the last text field or static text element in your heading section and select **PDF 508 Tags &gt; Heading &gt; Heading n &gt; End** from the context menu.
 
 In **Design** view, the start of a multi-element heading is shown in the upper left-hand corner of the Start element, and the end is shown in the lower right-hand corner of the End element.
 
@@ -54,7 +54,7 @@ In **Design** view, the start of a multi-element heading is shown in the upper l
 
 To remove a heading tag from an element
 
-1.  Right-click the text field or static text element in your heading section and select **PDF 508 Tags \> Heading \> Heading n \> None** from the context menu.
+1.  Right-click the text field or static text element in your heading section and select **PDF 508 Tags &gt; Heading &gt; Heading n &gt; None** from the context menu.
 
 ### Using Automatic Table Tagging
 
@@ -62,27 +62,30 @@ To have Jaspersoft Studio automatically generate tags for the tables in your rep
 
 To set this property globally
 
-1.  Select **Window \> Preferences** to open the Preferences dialog (**Eclipse \> Preferences** on Mac).
-2.  Navigate to **Jaspersoft Studio \> Properties**.
+1.  Select **Window &gt; Preferences** to open the Preferences dialog (**Eclipse &gt; Preferences** on Mac).
+2.  Navigate to **Jaspersoft Studio &gt; Properties**.
 3.  Click **Add** to open the Properties dialog.
 4.  Enter the following values:
 
-- **Property Name** – `net.sf.jasperreports.components.table.generate.pdf.tags`
-- **Value** – Enter `true` to enable table tagging or `false` to disable table tagging.
+-   **Property Name** – `net.sf.jasperreports.components.table.generate.pdf.tags`
 
-!!! note
+    -   **Value** – Enter `true` to enable table tagging or `false` to disable table tagging.
 
-    Setting the property globally inserts tags when you export a report to PDF directly from Jaspersoft Studio. If you are publishing your reports to another environment, such as JasperReports Server, you must enable this property in the jasperreports.properties file in your environment. See the JasperReports Server Administrator Guide for more information about enabling this property for JasperReports Server.
+        !!! note
 
-To set this property for a report or table
+            Setting the property globally inserts tags when you export a report to PDF directly from Jaspersoft Studio. If you are publishing your reports to another environment, such as JasperReports Server, you must enable this property in the jasperreports.properties file in your environment. See the JasperReports Server Administrator Guide for more information about enabling this property for JasperReports Server.
 
-1.  For a table, right-click in the table. For a report, right-click on the root node in the **Outline** view.
-2.  Select **PDF 508 Tags \> Autotag Table** from the context menu.
-3.  Select one of the following options:
+        To set this property for a report or table
 
-- **Default** – Inherits the property settings from a higher level. If the property has been set explicitly at a higher level, the current setting is shown on the menu, for example **Default (Enabled)**.
-- **Enabled** – Enables the property for this table or report. This setting overrides any value set at a higher level.
-- **Disabled** – Disables the property for this table or report. This setting overrides any value set at a higher level.
+        1.  For a table, right-click in the table. For a report, right-click on the root node in the **Outline** view.
+        2.  Select **PDF 508 Tags &gt; Autotag Table** from the context menu.
+        3.  Select one of the following options:
+
+    -   **Default** – Inherits the property settings from a higher level. If the property has been set explicitly at a higher level, the current setting is shown on the menu, for example **Default (Enabled)**.
+
+    -   **Enabled** – Enables the property for this table or report. This setting overrides any value set at a higher level.
+
+    -   **Disabled** – Disables the property for this table or report. This setting overrides any value set at a higher level.
 
 When the `net.sf.jasperreports.components.table.generate.pdf.tags` is set at the table level, the setting is displayed in the upper left-hand corner of the table in design view.
 
@@ -97,27 +100,27 @@ Automatic table tagging only works with table elements. If you have a table-like
 
 To manually tag a tabular arrangement of elements as a table
 
-1.  Tag the first element in your table: **PDF 508 Tags \> Table \> Start**.
+1.  Tag the first element in your table: **PDF 508 Tags &gt; Table &gt; Start**.
 
 2.  Tag the start and end of each row:
 
-    1.  Tag the first element in your row: **PDF 508 Tags \> Table Row \> Start**.
-    2.  Tag the last element in your row: **PDF 508 Tags \> Table Row \> End**.
+    1.  Tag the first element in your row: **PDF 508 Tags &gt; Table Row &gt; Start**.
+    2.  Tag the last element in your row: **PDF 508 Tags &gt; Table Row &gt; End**.
 
 3.  To make a row a header row, add header tags to the start and end:
 
-    1.  Tag the first element in each header row: **PDF 508 Tags \> Table Header \> Start**.
-    2.  Tag the last element in each header row: **PDF 508 Tags \> Table Header \> End**.
+    1.  Tag the first element in each header row: **PDF 508 Tags &gt; Table Header &gt; Start**.
+    2.  Tag the last element in each header row: **PDF 508 Tags &gt; Table Header &gt; End**.
 
-4.  Tag each detail element in each row: **PDF 508 Tags \> Table Details \> Full**.
+4.  Tag each detail element in each row: **PDF 508 Tags &gt; Table Details &gt; Full**.
 
-5.  Tag the final element in your table: **PDF 508 Tags \> Table \> End**.
+5.  Tag the final element in your table: **PDF 508 Tags &gt; Table &gt; End**.
 
 To manually tag elements as a list
 
-1.  Tag the first element in your list: **PDF 508 Tags \> List \> Start**.
-2.  Tag each list item: **PDF 508 Tags \> List Item \> Full**.
-3.  Tag the final element in your list: **PDF 508 Tags \> List \> End**.
+1.  Tag the first element in your list: **PDF 508 Tags &gt; List &gt; Start**.
+2.  Tag each list item: **PDF 508 Tags &gt; List Item &gt; Full**.
+3.  Tag the final element in your list: **PDF 508 Tags &gt; List &gt; End**.
 
 ### Setting Export Parameters
 
@@ -198,7 +201,7 @@ To define JSON export object metadata in your report
 
 1.  Open a report that includes the fields you want to export to your application.
 
-2.  Right-click a field in the **Design** tab, and select **JSON tags \> JSON Metadata Path**.
+2.  Right-click a field in the **Design** tab, and select **JSON tags &gt; JSON Metadata Path**.
 
     If the field you selected appears in a frame, you are warned that you JasperReports Library may ignore the property. This warning relates only to older versions of the library. It remains in the product for backwards-compatibility. For current versions of JasperReports Server, JasperReports Server, and Jaspersoft Studio, properties defined in frames are not ignored.
 
@@ -216,7 +219,7 @@ To define JSON export object metadata in your report
 
 8.  Select each field that you want to export to JSON and define its metadata.
 
-9.  Click **File \> Save**.
+9.  Click **File &gt; Save**.
 
 10. Click **Preview**.
 

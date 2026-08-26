@@ -92,31 +92,30 @@ Create a chart and its dataset run
 
 3.  In the dataset run section of the Chart Wizard, select the dataset you created, ExampleDataset.
 
-4.  Select **Use same JDBC connection used to fill the master report** from the drop-down menu. This causes the expression to be set automatically to the connection used by the main report (**\$P{REPORT_CONNECTION}**).
+4.  Select **Use same JDBC connection used to fill the master report** from the drop-down menu. This causes the expression to be set automatically to the connection used by the main report (**$P{REPORT_CONNECTION}**).
 
 5.  To force the expression context to update the fields, parameters, and values after the dataset run configuration, close the dialog, then reopen it by double-clicking the chart. If you do not force an update, you do not see the correct fields in the expression editor.
 
 6.  Set the chart dataset expressions (the expressions used to fill the chart):
 
-    - Click **…** next to **Series** to open the Series dialog. Then select SERIES1 and click **…** to open the expression editor and enter the following expression:
+-   Click **…** next to **Series** to open the Series dialog. Then select SERIES1 and click **…** to open the expression editor and enter the following expression:
 
     `$F{SHIPCOUNTRY}`
 
     Click **Finish**, then click **OK** to return to the Chart Wizard. Note that the **Key** field below the chart updates to show the same value as the series.
 
-    - Click **…** next to **Value** to open the expression editor. Enter the following expression:
+    -   Click **…** next to **Value** to open the expression editor. Enter the following expression:
 
-    `$$F{COUNTRY_ORDERS}}`
+`$$F{COUNTRY_ORDERS}}`
 
-    Click **Finish** to return to the Chart Wizard.
+Click **Finish** to return to the Chart Wizard.
 
-    !!! note
+!!! note
 
-        You cannot use objects from the master report dataset in an element that uses a subdataset. Only subdataset objects can be used. To use an object from the master report dataset, you must pass it as a variable or a parameter.
+    You cannot use objects from the master report dataset in an element that uses a subdataset. Only subdataset objects can be used. To use an object from the master report dataset, you must pass it as a variable or a parameter.
 
-7.  Click **Finish** to apply the expressions and return to the report.
-
-8.  When you are done, run the report.
+1.  Click **Finish** to apply the expressions and return to the report.
+2.  When you are done, run the report.
 
 |  |
 |----|

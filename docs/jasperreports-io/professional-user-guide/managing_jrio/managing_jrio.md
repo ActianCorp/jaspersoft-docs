@@ -9,28 +9,39 @@ After installing JasperReports IO, you will need to create the reports, web appl
 
 This chapter covers the basics of managing your JasperReports IO installation, including:
 
-- File directory structure
-- The web application servers and web applications
-- The repository
-- AWS S3 buckets
-- Cloud repositories
-- Security permissions
+-   File directory structure
 
-Unless noted otherwise, all references to JasperReports IO are for the standalone version, not JasperReports IO for AWS.
+-   The web application servers and web applications
 
-!!! note
+-   The repository
 
-    For JasperReports IO for AWS, the reporting service is part of an instance hosted on Amazon Web Services. Use the AWS Management Console to manage the JasperReports IO instance hosted on the service. See [Managing JasperReports IO for AWS](repository.md) for information on managing JasperReports IO for AWS.
+-   AWS S3 buckets
 
-This chapter includes the following sections:
+-   Cloud repositories
 
-- JasperReports IO Directories
-- JasperReports IO Reporting Service and Web Application Directories
-- [Web Application Server](web_app_server.md)
-- [JasperReports IO Repository](repository.md)
-- [Managing AWS for JasperReports IO](repository.md)
-- [Cloud Repositories for JasperReports IO](repository.md)
-- [Security](security.md)
+-   Security permissions
+
+    Unless noted otherwise, all references to JasperReports IO are for the standalone version, not JasperReports IO for AWS.
+
+    !!! note
+
+        For JasperReports IO for AWS, the reporting service is part of an instance hosted on Amazon Web Services. Use the AWS Management Console to manage the JasperReports IO instance hosted on the service. See [Managing JasperReports IO for AWS](repository.md) for information on managing JasperReports IO for AWS.
+
+    This chapter includes the following sections:
+
+-   JasperReports IO Directories
+
+-   JasperReports IO Reporting Service and Web Application Directories
+
+-   [Web Application Server](web_app_server.md)
+
+-   [JasperReports IO Repository](repository.md)
+
+-   [Managing AWS for JasperReports IO](repository.md)
+
+-   [Cloud Repositories for JasperReports IO](repository.md)
+
+-   [Security](security.md)
 
 ## JasperReports IO Directories
 

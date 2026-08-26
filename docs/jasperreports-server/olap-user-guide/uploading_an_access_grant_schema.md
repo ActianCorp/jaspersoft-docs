@@ -7,13 +7,13 @@ description: To upload an access grant schema (AGXML)
 
 To upload an access grant schema (AGXML)
 
-1.  Click **View\> Repository** .
+1.  Click **View&gt; Repository** .
 
     The repository page appears.
 
-2.  In the **Folders** panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Schemas**.
+2.  In the **Folders** panel, navigate to **Organization &gt; Organization &gt; Analysis Components &gt; Analysis Schemas**.
 
-3.  Right-click the folder and select **Add Resource \> File \> Access Grant Schema.**
+3.  Right-click the folder and select **Add Resource &gt; File &gt; Access Grant Schema.**
 
     The **Upload a File From Your Local Computer** page appears and prompts you to select a file and set its properties.
 

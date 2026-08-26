@@ -11,14 +11,14 @@ As of JasperReports Server 7.0, Visualize.js can render interactive Ad Hoc views
 
 This chapter contains the following sections:
 
-- Ad Hoc View Properties
-- Ad Hoc View Functions
-- Ad Hoc View Data Structure
-- Rendering an Ad Hoc View
-- Getting the Embed Code of an Ad Hoc View
-- Setting the Visualization Type
-- Setting Ad Hoc View Filters
-- Accessing Ad Hoc View Hyperlinks
+-   Ad Hoc View Properties
+-   Ad Hoc View Functions
+-   Ad Hoc View Data Structure
+-   Rendering an Ad Hoc View
+-   Getting the Embed Code of an Ad Hoc View
+-   Setting the Visualization Type
+-   Setting Ad Hoc View Filters
+-   Accessing Ad Hoc View Hyperlinks
 
 ## Ad Hoc View Properties
 

@@ -11,9 +11,10 @@ There are three steps to creating and adding a subreport:
 2.  **Create a subreport**: Create and compile a subreport. Optionally create a dynamic connection to filter the records of the subreport based on the parent’s data.
 3.  **Add the subreport to the parent report**: Insert a subreport element and specify the following:
 
-- The data adapter or data source for the subreport.
-- The location of the subreport's compiled Jasper file.
-- An optional parameters map (it can be empty) to set the report parameters used in the dynamic connection.
+-   The data adapter or data source for the subreport.
+
+    -   The location of the subreport's compiled Jasper file.
+    -   An optional parameters map (it can be empty) to set the report parameters used in the dynamic connection.
 
 ## Subreports
 
@@ -85,9 +86,9 @@ When a subreport element is selected in the master report, the following propert
 
 The following properties must be set to link the subreport to the parent report:
 
-- **Expression**: Retrieves the Jasper object that implements the subreport.
-- **Connection Expression** or **Datasource Expression**: Defines how to feed the object with data.
-- **Parameters**: Sets the values of the subreport parameters.
+-   **Expression**: Retrieves the Jasper object that implements the subreport.
+-   **Connection Expression** or **Datasource Expression**: Defines how to feed the object with data.
+-   **Parameters**: Sets the values of the subreport parameters.
 
 ## The Expression Property
 
@@ -109,9 +110,9 @@ This means that using an expression of type `String` means you are in some way t
 
 To simplify report design when loading a subreport from the file system, do one of the following:
 
-- Place the subreport file in a directory that is in the classpath. This permits you to use very simple subreport expressions, such as a string containing just the name of the subreport file (that is, “`subreport.jasper`”). Jaspersoft Studio always includes the classpath of the directory of the report that is running, so all the subreport Jasper files can be found easily if they are in the same directory.
+-   Place the subreport file in a directory that is in the classpath. This permits you to use very simple subreport expressions, such as a string containing just the name of the subreport file (that is, “`subreport.jasper`”). Jaspersoft Studio always includes the classpath of the directory of the report that is running, so all the subreport Jasper files can be found easily if they are in the same directory.
 
-- Parametrize the Jasper file location and create on-the-fly the real absolute path of the file to load. This can be achieved with a parameter containing the parent directory of the subreport (let us call it `SUBREPORT_DIRECTORY`) and an expression like this:
+-   Parametrize the Jasper file location and create on-the-fly the real absolute path of the file to load. This can be achieved with a parameter containing the parent directory of the subreport (let us call it `SUBREPORT_DIRECTORY`) and an expression like this:
 
 `$P{SUBREPORT_DIRECTORY} + "subreport.jasper"`
 
@@ -121,13 +122,13 @@ One advantage of this approach is that you can use the Jasper files’ local dir
 
 For JasperReports to retrieve data and fill the subreport, you have to set the subreport data source. The following options are available:
 
-- **Use the same connection used to fill the master report**: Select this to use the same JDBC data adapter for the master report and the subreport. The JDBC connection is passed to the subreport to run it.
+-   **Use the same connection used to fill the master report**: Select this to use the same JDBC data adapter for the master report and the subreport. The JDBC connection is passed to the subreport to run it.
 
-- **Use another connection**: Select this to specify a different JDBC data adapter for the subreport.
+-   **Use another connection**: Select this to specify a different JDBC data adapter for the subreport.
 
-- **Use a JRDataSource expression**: Select this to use a `JRDataSource` object to fill the subreport.
+-   **Use a JRDataSource expression**: Select this to use a `JRDataSource` object to fill the subreport.
 
-- **Use an empty datasource**: Select this to set the data source expression to `new JREmptyDataSource()`. That creates a special data source that provides a single record with all the field values set to `null`. This is useful when the subreport is used to display static content such as headers, footers, and backgrounds. In this case, in the subreport, set the report property `When no data type` to `All Data No Details` or `No Data Section` to ensure that at least a portion of the document is actually printed.
+-   **Use an empty datasource**: Select this to set the data source expression to `new JREmptyDataSource()`. That creates a special data source that provides a single record with all the field values set to `null`. This is useful when the subreport is used to display static content such as headers, footers, and backgrounds. In this case, in the subreport, set the report property `When no data type` to `All Data No Details` or `No Data Section` to ensure that at least a portion of the document is actually printed.
 
 JDBC connections make using subreports simple enough. A connection expression must identify a `java.sql.Connection` object (ready to be used, so a connection to the database is already opened). Typically, we run the SQL query using the same database connection as the parent report; the connection can be referenced with the `REPORT_CONNECTION` built-in parameter. It must be clear that if we pass a JDBC connection to the subreport, it is because we defined an SQL query in the subreport, a query that is used to fill it.
 
@@ -155,13 +156,13 @@ To pass parameters from the master report to a subreport, you create a set of pa
 
 To configure a parameter you want to pass to the subreport, click **Add** in the **Subreport Parameters** dialog to open the **Parameter Configuration** dialog, which lets you set the following:
 
-- **Name**: Name of the parameter. A parameter must have the same name in the master report and the subreport. Parameter names are case-sensitive.
+-   **Name**: Name of the parameter. A parameter must have the same name in the master report and the subreport. Parameter names are case-sensitive.
 
-!!! note
+    !!! note
 
-    If you make an error in typing the name or the inserted parameter has not been defined, no error is generated. In most cases, the report fails silently.
+        If you make an error in typing the name or the inserted parameter has not been defined, no error is generated. In most cases, the report fails silently.
 
-- **ValueExpression**: JasperReports expression for the parameter. To create or edit an expression, click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png) to open the expression editor. You can use fields, parameters, and variables. The return type has to be congruent with the parameter type declared in the subreport; otherwise, an exception of `ClassCastException` occurs at run time.
+-   **ValueExpression**: JasperReports expression for the parameter. To create or edit an expression, click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png) to open the expression editor. You can use fields, parameters, and variables. The return type has to be congruent with the parameter type declared in the subreport; otherwise, an exception of `ClassCastException` occurs at run time.
 
 As cited below, you have the option of directly providing a parameter map to be used with the subreport. The `Parameters Map Expression` allows you to define an expression, the result of which must be a `java.util.Map` object. It is possible, for example, to prepare a map designed for the subreport in your application, pass it to the master report using a parameter, then use that parameter as an expression (for example, `$P{myMap}`) to pass the map to the subreport. It is also possible to pass to the subreport the same parameters map that was provided to the parent by using the built-in parameter `REPORT_PARAMETERS_MAP`. In this case the expression looks like this:
 

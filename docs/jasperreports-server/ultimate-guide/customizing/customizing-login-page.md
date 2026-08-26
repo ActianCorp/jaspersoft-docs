@@ -11,11 +11,11 @@ If you want to replace the Jaspersoft branding, the login page requires changes 
 
 JasperReports Server 7.0 introduced easier CSS customization of the login page. You can remove the text sidebar and add your logo to create a login page with your own custom branding. The following example shows how to do the following:
 
-- Change the Jaspersoft logo to your own
+-   Change the Jaspersoft logo to your own
 
-- Hiding the Getting Started and What's New text
+-   Hiding the Getting Started and What's New text
 
-- Remove the background image and change the page's colors
+-   Remove the background image and change the page's colors
 
 Change the company logo and the color of the login button
 
@@ -83,9 +83,9 @@ These customizations give the login page a new appearance with all Jaspersoft br
 
 If you want to add custom text to the login page, you may need to edit a number of files that define the content. The following example shows how to do the following:
 
-- Customize CSS rules using a theme.
-- Edit JSP files for the login page and login messages.
-- Modify a string on the login page using properties files.
+-   Customize CSS rules using a theme.
+-   Edit JSP files for the login page and login messages.
+-   Modify a string on the login page using properties files.
 
 Remove the logo and add a customized welcome message
 
@@ -104,7 +104,7 @@ Remove the logo and add a customized welcome message
 
     The first CSS statement hides the logo. The second statement sets the background behind the "Welcome to Jaspersoft" to white.
 
-3.  You can replace "Welcome to Jaspersoft" with text of your own. To enable the text, edit the file \<js‑webapp\>/WEB-INF/jsp/modules/login/login.jsp and locate the `welcome` div. If the spring message line is commented out, then remove the comment code:
+3.  You can replace "Welcome to Jaspersoft" with text of your own. To enable the text, edit the file &lt;js‑webapp&gt;/WEB-INF/jsp/modules/login/login.jsp and locate the `welcome` div. If the spring message line is commented out, then remove the comment code:
 
     ``` html
     <div id="welcome" class="row">
@@ -115,7 +115,7 @@ Remove the logo and add a customized welcome message
     </div>
     ```
 
-4.  The text for messages is kept in the properties files. Edit \<js-webapp\>/WEB-INF/bundles/jasperserver_messages.properties and change the following string to customize the welcome text:
+4.  The text for messages is kept in the properties files. Edit &lt;js-webapp&gt;/WEB-INF/bundles/jasperserver_messages.properties and change the following string to customize the welcome text:
 
     ``` bash
     #Welcome Login Page
@@ -163,7 +163,7 @@ Remove the Getting Started and What's New text
     !!! note
 
         The html for the What's New and Getting Started lists is located in the following files:<br>
-        \<js-webapp\>/WEB-INF/jsp/modules/login/rotating/login_rotating_community_0.jsp (community edition) or \<js-webapp\>/WEB-INF/jsp/modules/login/rotating/login_rotating_pro_0.jsp (commercial editions).
+        &lt;js-webapp&gt;/WEB-INF/jsp/modules/login/rotating/login_rotating_community_0.jsp (community edition) or &lt;js-webapp&gt;/WEB-INF/jsp/modules/login/rotating/login_rotating_pro_0.jsp (commercial editions).
 
 2.  To place an image or logo in the area that had the lists, upload the image as part of your custom theme and set it as the background to the `rotating` div:
 

@@ -11,7 +11,7 @@ When your user request has sufficient information for your custom authentication
 
     If you're passing information in the HTTP request, as with Siteminder, it's extremely important that your external system is configured properly to prevent an attacker from forging the HTTP headers.
 
-The JasperReports Server deployment includes a sample file for custom authentication in the \<js‑install\>/samples/externalAuth-sample-config folder: the sample-applicationContext-externalAuth-template-mt.xml file (commercial editions) or sample-applicationContext-externalAuth-template.xml (community editions). This sample takes the IP address from the user’s authentication request, creates a user with the same name in JasperReports Server, and uses the JasperReports Server API to create a user folder in the JasperReports Server Repository and set permissions.
+The JasperReports Server deployment includes a sample file for custom authentication in the &lt;js‑install&gt;/samples/externalAuth-sample-config folder: the sample-applicationContext-externalAuth-template-mt.xml file (commercial editions) or sample-applicationContext-externalAuth-template.xml (community editions). This sample takes the IP address from the user’s authentication request, creates a user with the same name in JasperReports Server, and uses the JasperReports Server API to create a user folder in the JasperReports Server Repository and set permissions.
 
 ![js sso CustomSequence](../assets/images/js-sso-CustomSequence.png)
 

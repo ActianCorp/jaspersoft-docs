@@ -99,7 +99,7 @@ The installation with JBoss EAP 7.2.0 may fail with the following error: "Detect
 
 2.  Stop the JBoss app server.
 
-3.  Delete the jasperserver-pro.war objects in the \<jboss-eap-7.2\>/standalone/deployments directory.
+3.  Delete the jasperserver-pro.war objects in the &lt;jboss-eap-7.2&gt;/standalone/deployments directory.
 
 4.  Switch to the JRS buildomatic directory and redeploy the JRS war file:
 
@@ -188,7 +188,7 @@ To solve the Page Not Found Error on Login
 
 1.  Login into the WebSphere Administrative Console.
 
-2.  Navigate to **Application Servers \> \<server\> \> Web Container Settings \> Web Container \> Custom Properties**.
+2.  Navigate to **Application Servers &gt; &lt;server&gt; &gt; Web Container Settings &gt; Web Container &gt; Custom Properties**.
 
 3.  Create a new property with the following attributes:
 

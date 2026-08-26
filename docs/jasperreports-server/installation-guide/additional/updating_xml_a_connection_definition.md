@@ -11,24 +11,21 @@ If you have Jaspersoft OLAP enabled (via your license), JasperReports Server can
 
 The sample connections are:
 
-- Foodmart Sample XML/A connection
+-   Foodmart Sample XML/A connection
 
-- SugarCRM Sample XML/A connection
+-   SugarCRM Sample XML/A connection
 
 To validate and update these resources:
 
 1.  Log into JasperReports Server as an administrator (like `jasperadmin`).
-
-2.  Navigate to the Repository Management page (**View****\>** **Repository**).
-
+2.  Navigate to the Repository Management page (**View****&gt;** **Repository**).
 3.  Click to expand the **Analysis Components** folder, then the **Analysis Connections** folder. Click to highlight **Foodmart XML/A Connection**, then click **Edit**.
-
 4.  Edit the following fields:
 
-    - URI (hostname and port)
-    - Login Username
-    - Login Password
+-   URI (hostname and port)
 
-5.  Click **Next**, then **Save**.
+    -   Login Username
+    -   Login Password
 
-6.  Make the same updates for **SugarCRM XML/A Connection**.
+1.  Click **Next**, then **Save**.
+2.  Make the same updates for **SugarCRM XML/A Connection**.

@@ -35,10 +35,10 @@ The following code block shows how you might configure an `externalUserFolderPro
 
 To write a processor, extend `AbstractExternalUserProcessor` and overwrite the process method with your java code. This gives you access to the following services:
 
-- `RepositoryService`
-- `UserAuthorityService`
-- `TenantService`
-- `ProfileAttributeService`
-- `ObjectPermissionService`
+-   `RepositoryService`
+-   `UserAuthorityService`
+-   `TenantService`
+-   `ProfileAttributeService`
+-   `ObjectPermissionService`
 
 If you extend `MTAbstractExternalProcessor`, you can access the following `multiTenancyService` service:

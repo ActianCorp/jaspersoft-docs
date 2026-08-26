@@ -7,17 +7,17 @@ description: "Columns are easily moved, resized, and hidden in your report."
 
 Columns are easily moved, resized, and hidden in your report.
 
-- To move a column, click the column you want to move, then drag the column left or right into the new position. The ![js icon sizer](../assets/images/js-icon-sizer.png)indicates where the column is placed.
-- To resize a column, click the column you want to resize, then drag the ![js icon sizer](../assets/images/js-icon-sizer.png) until the column is the size you want.
-- To hide a column, click the column you want to hide, then move your mouse over the ![js icon columnOptions](../assets/images/js-icon-columnOptions.png)and select **Hide column**.
+-   To move a column, click the column you want to move, then drag the column left or right into the new position. The ![js icon sizer](../assets/images/js-icon-sizer.png)indicates where the column is placed.
+-   To resize a column, click the column you want to resize, then drag the ![js icon sizer](../assets/images/js-icon-sizer.png) until the column is the size you want.
+-   To hide a column, click the column you want to hide, then move your mouse over the ![js icon columnOptions](../assets/images/js-icon-columnOptions.png)and select **Hide column**.
 
 ## Setting Output Scale
 
 You can determine the display size for any report by using the report scaling options in the Report Viewer tool bar.
 
-- Click ![js JIVE icon ZoomIn](../assets/images/js-JIVE-icon-ZoomIn.png) to zoom in on the report.
-- Click ![js JIVE icon ZoomOut](../assets/images/js-JIVE-icon-ZoomOut.png) to zoom out on the report.
-- Click ![js JIVE icon ZoomOptions](../assets/images/js-JIVE-icon-ZoomOptions.png) to open the Zoom Options drop-down menu, and select the percentage by which you want to increase or decrease the size of the displayed report.
+-   Click ![js JIVE icon ZoomIn](../assets/images/js-JIVE-icon-ZoomIn.png) to zoom in on the report.
+-   Click ![js JIVE icon ZoomOut](../assets/images/js-JIVE-icon-ZoomOut.png) to zoom out on the report.
+-   Click ![js JIVE icon ZoomOptions](../assets/images/js-JIVE-icon-ZoomOptions.png) to open the Zoom Options drop-down menu, and select the percentage by which you want to increase or decrease the size of the displayed report.
 
 ## Using the Bookmarks Panel
 
@@ -27,8 +27,8 @@ When working with a report that contains bookmarks, they are displayed in a floa
 
 *Figure 1: The Bookmarks Panel*
 
-- To display the Bookmarks panel, click ![js AdHoc icon bookmarks](../assets/images/js-AdHoc-icon-bookmarks.png) in the Report Viewer tool bar.
-- To jump to a bookmarked section of the report, click the name of the section in the Bookmarks panel.
+-   To display the Bookmarks panel, click ![js AdHoc icon bookmarks](../assets/images/js-AdHoc-icon-bookmarks.png) in the Report Viewer tool bar.
+-   To jump to a bookmarked section of the report, click the name of the section in the Bookmarks panel.
 
 # Navigating the Report
 
@@ -36,11 +36,11 @@ If your report has multiple pages, you can use the pagination controls to move t
 
 To navigate the published report
 
-- Use ![js icon previous](../assets/images/js-icon-previous.png)at the top of the Report Viewer to navigate to the previous page.
-- Use ![js icon next](../assets/images/js-icon-next.png)to navigate to the next page.
-- Use ![js icon last](../assets/images/js-icon-last.png) to go to the end of the report.
-- Use ![js icon first](../assets/images/js-icon-first.png) to go to the beginning of the report.
-- If you know the number of the page you want to view, enter the page number in the Current Page indicator box.
+-   Use ![js icon previous](../assets/images/js-icon-previous.png)at the top of the Report Viewer to navigate to the previous page.
+-   Use ![js icon next](../assets/images/js-icon-next.png)to navigate to the next page.
+-   Use ![js icon last](../assets/images/js-icon-last.png) to go to the end of the report.
+-   Use ![js icon first](../assets/images/js-icon-first.png) to go to the beginning of the report.
+-   If you know the number of the page you want to view, enter the page number in the Current Page indicator box.
 
 # Exporting the Report
 
@@ -125,7 +125,7 @@ You can print a report and save it to your computer as a PDF.
 
 To print a report
 
-- Hover over the Print button, and select Print.
+-   Hover over the Print button, and select Print.
 
 ![print report](../assets/images/print_report.png)<br>
 

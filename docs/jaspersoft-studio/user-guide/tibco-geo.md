@@ -7,15 +7,15 @@ description: "Jaspersoft Studio uses TIBCO GeoAnalytics Maps to produce data-ric
 
 Jaspersoft Studio uses TIBCO GeoAnalytics Maps to produce data-rich maps. This section describes their set-up and configuration, including:
 
-- Configuring a Basic Map
+-   Configuring a Basic Map
 
-- Using Expressions for Properties
+-   Using Expressions for Properties
 
-- Understanding Layers
+-   Understanding Layers
 
-- Working with Markers
+-   Working with Markers
 
-- Working with Paths
+-   Working with Paths
 
 !!! info "Important"
 
@@ -46,14 +46,14 @@ To create a TIBCO Map component
 
     At a minimum, the TIBCO Map component requires the location of the area to display, which can be defined by these manually exclusive options:
 
-2.  The latitude and longitude of the location.
+    1.  The latitude and longitude of the location.
+    2.  The street address of the location (assuming you have a license for TIBCO GeoAnalytics geolocation services). To use this option, you must also provide credentials for TIBCO's geolocation service. You can either enter these in the Maparama Credentials section of the TIBCO map component's properties, or by defining them in the jasperreports.properties file so that they can share across multiple reports. These properties are:
 
-3.  The street address of the location (assuming you have a license for TIBCO GeoAnalytics geolocation services). To use this option, you must also provide credentials for TIBCO's geolocation service. You can either enter these in the Maparama Credentials section of the TIBCO map component's properties, or by defining them in the jasperreports.properties file so that they can share across multiple reports. These properties are:
+-   `com.jaspersoft.jasperreports.tibco.maps.customer`: the customer name used with TIBCO GeoAnalytics Maps
 
-    - `com.jaspersoft.jasperreports.tibco.maps.customer`: the customer name used with TIBCO GeoAnalytics Maps
-    - `com.jaspersoft.jasperreports.tibco.maps.key`: the corresponding license key for the specified user
+    -   `com.jaspersoft.jasperreports.tibco.maps.key`: the corresponding license key for the specified user
 
-4.  To define a location, edit the TIBCO Maps component's Location properties. Entering a latitude/longitude pair or address defines a static location. You can also use parameters to define the components location and all other TIBCO Map properties dynamically.
+1.  To define a location, edit the TIBCO Maps component's Location properties. Entering a latitude/longitude pair or address defines a static location. You can also use parameters to define the components location and all other TIBCO Map properties dynamically.
 
 |                                                           |
 |-----------------------------------------------------------|
@@ -94,11 +94,11 @@ Data Runs are used throughout Jaspersoft Studio and its related products when a 
 
 Each layer in the map component controls different aspects of the final map rendered in your report:
 
-- The maps layer defines the map tiles that are displayed by the component's image, which are determined by its location and zoom, the maximum and minimum zoom allowed in the component, and the image's opacity.
+-   The maps layer defines the map tiles that are displayed by the component's image, which are determined by its location and zoom, the maximum and minimum zoom allowed in the component, and the image's opacity.
 
-- The marker layer defines locations on the map that display an image you select.
+-   The marker layer defines locations on the map that display an image you select.
 
-- The path layer defines lines between locations on the map.
+-   The path layer defines lines between locations on the map.
 
 Each layer can be named uniquely. These names can be displayed in the JasperReports Server interactive report viewer in the Layers dropdown; this allows your user to select which layers to drawn.
 
@@ -113,30 +113,29 @@ Markers are points rendered on the second layer of the TIBCO Map component.
 
 This section describes:
 
-- Static Markers
+-   Static Markers
 
-- Dynamic Markers
+-   Dynamic Markers
 
 ### Static Markers
 
 1.  Edit the map component's properties.
-
 2.  On the Markers tab, click Add.
-
 3.  Define your marker by specifying a location and icon. The list of properties for a marker includes:
 
-    - target
-    - string
-    - optional
-    - \_blank
-    - The hyperlink target for the marker
+-   target
 
-    |                                                       |
-    |-------------------------------------------------------|
-    | ![tmap marker tab](assets/images/tmap-marker-tab.png) |
-    | *Figure 6: Defining a map's markers*                  |
+    -   string
+    -   optional
+    -   \_blank
+    -   The hyperlink target for the marker
 
-4.  Specify the icon as a URL that points to the image to use. It's loaded by the JavaScript API.
+|                                                       |
+|-------------------------------------------------------|
+| ![tmap marker tab](assets/images/tmap-marker-tab.png) |
+| *Figure 6: Defining a map's markers*                  |
+
+1.  Specify the icon as a URL that points to the image to use. It's loaded by the JavaScript API.
 
     Jaspersoft does not currently support loading an image directly from the repository, or as a resource local to the report.
 
@@ -147,7 +146,7 @@ This section describes:
     | ![tmap address ri](assets/images/tmap-address-ri.png) |
     | *Figure 7: A map with a marker*                       |
 
-5.  For the addresses, set each property to form the address: country, state, zip, city, street.
+2.  For the addresses, set each property to form the address: country, state, zip, city, street.
 
 |                                                                       |
 |-----------------------------------------------------------------------|
@@ -310,11 +309,11 @@ To use dynamic locations
 
 Paths are lines rendered on the third layer of the TIBCO Map component. A path is defined by:
 
-- A name that serves as a path identifier in case different paths appear on the map.
+-   A name that serves as a path identifier in case different paths appear on the map.
 
-- A style that specifies various style configuration properties, such as line and fill color, line weight, and opacity.
+-   A style that specifies various style configuration properties, such as line and fill color, line weight, and opacity.
 
-- A collection of places (points) on the map defined by latitude/longitude coordinates or addresses. These are connected to form the path.
+-   A collection of places (points) on the map defined by latitude/longitude coordinates or addresses. These are connected to form the path.
 
 To define a path in Jaspersoft Studio
 

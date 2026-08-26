@@ -9,54 +9,54 @@ The basic building block of a report is the element. An element is a graphical o
 
 Jaspersoft Studio relies on all the basic elements provided in the JasperReports library:
 
-- Line
+-   Line
 
-- Rectangle
+-   Rectangle
 
-- Ellipse
+-   Ellipse
 
-- Static text
+-   Static text
 
-- Text field (or simply field)
+-   Text field (or simply field)
 
-- Image
+-   Image
 
-- Frame
+-   Frame
 
-- Subreport
+-   Subreport
 
-- Crosstab
+-   Crosstab
 
-- Chart
+-   Chart
 
-- Break
+-   Break
 
 Combining these elements, you can produce every kind of report. JasperReports also allows developers to implement their own generic elements and custom components for which they can add support in Jaspersoft Studio to create a proper plug-in.
 
 This chapter contains the following sections:
 
-- [Basic Element Attributes](elements-basic-attributes.md)
+-   [Basic Element Attributes](elements-basic-attributes.md)
 
-- [Inserting, Selecting, and Positioning Elements](elements-inserting-selecting-postioning.md)
+-   [Inserting, Selecting, and Positioning Elements](elements-inserting-selecting-postioning.md)
 
-- [Formatting Elements](elements-formatting.md)
+-   [Formatting Elements](elements-formatting.md)
 
-- [Working with Advanced Properties](elements-advanced-properties.md)
+-   [Working with Advanced Properties](elements-advanced-properties.md)
 
-- [Graphic Elements](elements-graphic.md)
+-   [Graphic Elements](elements-graphic.md)
 
-- [Text Elements](elements-text.md)
+-   [Text Elements](elements-text.md)
 
-- [Frames](elements-frames.md)
+-   [Frames](elements-frames.md)
 
-- [Working with Spreadsheet Layout](../spreadsheet-layout.md)
+-   [Working with Spreadsheet Layout](../spreadsheet-layout.md)
 
-- [Inserting Page and Column Breaks](elements-frames.md)
+-   [Inserting Page and Column Breaks](elements-frames.md)
 
-- [Composite Elements](elements-composite.md)
+-   [Composite Elements](elements-composite.md)
 
-- [Anchors, Bookmarks, and Hyperlinks](anchors-bookmarks-hyperlinks.md)
+-   [Anchors, Bookmarks, and Hyperlinks](anchors-bookmarks-hyperlinks.md)
 
-- [Advanced Elements and Custom Components](elements-advanced-and-custom.md)
+-   [Advanced Elements and Custom Components](elements-advanced-and-custom.md)
 
-- [Custom Visualization Component](cvc-overview.md)
+-   [Custom Visualization Component](cvc-overview.md)

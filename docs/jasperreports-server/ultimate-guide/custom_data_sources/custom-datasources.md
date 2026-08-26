@@ -9,11 +9,11 @@ JasperReports Server provides out-of-the-box support for many commonly used data
 
 This chapter explains how to add new data source types from several different origins:
 
-- Pre-installed data sources: The libraries for these are installed by default, but you need to change the configuration to make them visible in the user interface.
+-   Pre-installed data sources: The libraries for these are installed by default, but you need to change the configuration to make them visible in the user interface.
 
-- Custom data source examples: The source code for these is installed by default, but you must run the included scripts to compile the libraries, copy them to the correct location, and configure the server.
+-   Custom data source examples: The source code for these is installed by default, but you must run the included scripts to compile the libraries, copy them to the correct location, and configure the server.
 
-- Your own custom data sources: You must write Java classes and compile them into JAR files, or download them from the community website, then copy them to the correct location and configure the server.
+-   Your own custom data sources: You must write Java classes and compile them into JAR files, or download them from the community website, then copy them to the correct location and configure the server.
 
 All three use the same mechanisms and files to be configured in the server. After following the appropriate steps, your custom data source types show up in the New Data Source dialog, and users can create instances of your custom data source and use them to access data. For example, the JSON and XML file data source types added in JasperReports Server 6.1 are implemented using the same patterns as for custom data source types.
 
@@ -25,10 +25,10 @@ All three use the same mechanisms and files to be configured in the server. Afte
 
 This chapter contains the following sections:
 
-- [Pre-installed Custom Data Source Types](pre-installed-data-sources.md)
+-   [Pre-installed Custom Data Source Types](pre-installed-data-sources.md)
 
-- [Custom Data Source Examples](custom-data-source-examples.md)
+-   [Custom Data Source Examples](custom-data-source-examples.md)
 
-- [Custom Data Source Architecture](custom-data-source-architecture.md)
+-   [Custom Data Source Architecture](custom-data-source-architecture.md)
 
-- [Creating a Custom Data Source](custom-data-source-creation.md)
+-   [Creating a Custom Data Source](custom-data-source-creation.md)

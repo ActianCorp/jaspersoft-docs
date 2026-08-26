@@ -186,17 +186,17 @@ This example is divided into several tasks:
 
 10. (Optional) If you want, you can rebuild the source code and view your page:
 
-    - Rebuild the source code and redeploy the web application according to the instructions in the Building JasperReports Server section in the JasperReports Server Source Build Guide within your distribution. See [Working With Source Code Files](customizing-java-classes.md) for an overview of this process.
+    -   Rebuild the source code and redeploy the web application according to the instructions in the Building JasperReports Server section in the JasperReports Server Source Build Guide within your distribution. See [Working With Source Code Files](customizing-java-classes.md) for an overview of this process.
 
-    - Log in to your JasperReports Server.
+    -   Log in to your JasperReports Server.
 
-    - Navigate to the page you created using this URL:
+    -   Navigate to the page you created using this URL:
 
-      `http://<hostname>:<port>/jasperserver-pro/flow.html?_flowId=docSampleFlow`
+        `http://<hostname>:<port>/jasperserver-pro/flow.html?_flowId=docSampleFlow`
 
-      Example:
+        Example:
 
-      `http://localhost:8080/jasperserver-pro/flow.html?_flowId=docSampleFlow`
+        `http://localhost:8080/jasperserver-pro/flow.html?_flowId=docSampleFlow`
 
     **Example of creating a menu item to call your flow**
 
@@ -311,6 +311,6 @@ This example is divided into several tasks:
 
 21. Rebuild the source code and redeploy the web application according to the instructions in the JasperReports Server Source Build Guide within your distribution. See [Working With Source Code Files](customizing-java-classes.md) for an overview of this process.
 
-22. Log in as an administrator. If your changes were successful, this example displays the ****View \> MyCompany Accounts**** menu item to users, and selecting it displays the custom page defined in the `sampleView.jsp` file:
+22. Log in as an administrator. If your changes were successful, this example displays the ****View &gt; MyCompany Accounts**** menu item to users, and selecting it displays the custom page defined in the `sampleView.jsp` file:
 
 23. The page uses the single column layout and the orange text is the `textAccent` class in CSS.

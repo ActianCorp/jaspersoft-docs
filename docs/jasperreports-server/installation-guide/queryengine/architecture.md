@@ -58,13 +58,13 @@ The redis cache is a high-performance distributed data store shared by all worke
 
 The redis cache holds the results of Ad Hoc queries, which can be huge datasets, and workers can get these results without performing the correspondingly long queries while they are held in the cache. The redis cache is actually composed of several separate caches:
 
-- The main cache for datasets resulting from queries.
+-   The main cache for datasets resulting from queries.
 
-- A cache for Ad Hoc view output that has already been processed and is ready to display.
+-   A cache for Ad Hoc view output that has already been processed and is ready to display.
 
-- A cache of the Ad Hoc view descriptors from the JasperReports Server repository.
+-   A cache of the Ad Hoc view descriptors from the JasperReports Server repository.
 
-- A cache for attributes associated with a given Ad Hoc view and user.
+-   A cache for attributes associated with a given Ad Hoc view and user.
 
 The Ad Hoc workers check each of these caches before making a request for the corresponding contents. For example, before calling the repository REST API to get the report metadata, the worker checks the descriptors cache to see if that descriptor has already been requested and is still valid.
 

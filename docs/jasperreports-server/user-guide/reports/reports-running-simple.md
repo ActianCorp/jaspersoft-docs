@@ -7,9 +7,9 @@ description: "You can view and work on a report in the Report Viewer in a number
 
 You can view and work on a report in the Report Viewer in a number of ways:
 
-- Running an instance of an existing report
+-   Running an instance of an existing report
 
-- Creating a new report from an existing Ad Hoc view
+-   Creating a new report from an existing Ad Hoc view
 
 ## Running a Simple Report
 
@@ -59,19 +59,19 @@ You can now begin working with your report. If you close the report without savi
 
 When you create a report, the Create Report wizard displays layout options for generating and exporting the report:
 
-- **Default Report Template** applies basic layout options to your report. This is usually the Actual Size template.
+-   **Default Report Template** applies basic layout options to your report. This is usually the Actual Size template.
 
-- **Custom Report Template** allows you to browse to an existing template. JasperReports Server includes a number of templates are available by default, including:
+-   **Custom Report Template** allows you to browse to an existing template. JasperReports Server includes a number of templates are available by default, including:
 
-  - A4 Landscape
-  - A4 Portrait
-  - Actual Size
-  - Letter Landscape
-  - Letter Portrait.
+    -   A4 Landscape
+    -   A4 Portrait
+    -   Actual Size
+    -   Letter Landscape
+    -   Letter Portrait.
 
 Other report templates may be available. Report templates can be created in Jaspersoft Studio and uploaded to JasperReports Server.
 
-- **Report Generator** allows you to create a highly customized report design. This option is not often enabled. See your JasperReports Server administrator for more information.
+-   **Report Generator** allows you to create a highly customized report design. This option is not often enabled. See your JasperReports Server administrator for more information.
 
 Most commonly, you choose the **Default Report Template**.
 
@@ -79,8 +79,8 @@ Most commonly, you choose the **Default Report Template**.
 
 If you are exporting your report to PDF, choose your option based on the size of the output.
 
-- For most PDF exports, you can use Actual Size, which supports a maximum size of 14400px by 14400px.
+-   For most PDF exports, you can use Actual Size, which supports a maximum size of 14400px by 14400px.
 
-- For reports with an output height exceeding 14,400 px, use a paginated report template that is wide enough for your report. For example, if you have a long report with width less than 842px, you can use the paginated A4 Landscape theme. A report designer can create additional custom templates in Jaspersoft Studio. Contact your administrator for more information.
+-   For reports with an output height exceeding 14,400 px, use a paginated report template that is wide enough for your report. For example, if you have a long report with width less than 842px, you can use the paginated A4 Landscape theme. A report designer can create additional custom templates in Jaspersoft Studio. Contact your administrator for more information.
 
-- Reports with output width exceeding 14,400 px are truncated in PDF. Redesign your report or use a different export format.
+-   Reports with output width exceeding 14,400 px are truncated in PDF. Redesign your report or use a different export format.

@@ -9,10 +9,10 @@ The Repository Explorer lets you create, view, modify, and delete reports units 
 
 This section describes these tasks:
 
-- [Adding, Modifying and Deleting Resources](jss2jrs-repo-objects-tasks.md)
+-   [Adding, Modifying and Deleting Resources](jss2jrs-repo-objects-tasks.md)
 
-- [Running a Report](jss2jrs-run-report-on-server.md)
+-   [Running a Report](jss2jrs-run-report-on-server.md)
 
-- [Editing a Report](jss2jrs-edit-report-in-repo.md)
+-   [Editing a Report](jss2jrs-edit-report-in-repo.md)
 
-- [Creating and Uploading Chart Themes](jss2jrs-uploading-chart-themes.md)
+-   [Creating and Uploading Chart Themes](jss2jrs-uploading-chart-themes.md)

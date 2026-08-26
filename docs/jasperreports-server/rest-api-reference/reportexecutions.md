@@ -7,9 +7,9 @@ description: "As described in The reports Service, synchronous report execution 
 
 As described in [The reports Service](../../jasperreports-io/professional-user-guide/jasperreports-server-rest-api-reference/reports.md), [](../../jasperreports-io/professional-user-guide/jasperreports-server-rest-api-reference/reports.md) synchronous report execution blocks the client waiting for the response. Synchronous report execution slows down or uses many threads, each waiting for a report, when:
 
-- Managing large reports that may take minutes to complete
+-   Managing large reports that may take minutes to complete
 
-- Running a large number of reports simultaneously
+-   Running a large number of reports simultaneously
 
 The rest_v2/reportExecutions service provides asynchronous report execution, so that the client does not need to wait for report output. Instead, the client obtains a request ID to check the status of the report periodically. This is also called polling. When the report is finished, the client downloads the output. Alternatively, the client can check when specific pages are finished and download available pages. The client can also send an asynchronous request for other export formats (PDF, Excel, and others) of the same report. Again the client can check the status of the export and download the result when the export has been completed.
 
@@ -17,18 +17,18 @@ Reports scheduled on the server also run asynchronously. reportExecutions allows
 
 This chapter includes the following sections:
 
-- Running a Report Asynchronously
-- Polling Report Execution
-- Requesting Page Status
-- Requesting Report Execution Details
-- Requesting Report Output
-- Requesting Report Bookmarks
-- Exporting a Report Asynchronously
-- Modifying Report Parameters
-- Polling Export Execution
-- Finding Running Reports and Jobs
-- Stopping Running Reports and Jobs
-- Removing a Report Execution
+-   Running a Report Asynchronously
+-   Polling Report Execution
+-   Requesting Page Status
+-   Requesting Report Execution Details
+-   Requesting Report Output
+-   Requesting Report Bookmarks
+-   Exporting a Report Asynchronously
+-   Modifying Report Parameters
+-   Polling Export Execution
+-   Finding Running Reports and Jobs
+-   Stopping Running Reports and Jobs
+-   Removing a Report Execution
 
 ## Running a Report Asynchronously
 
@@ -209,7 +209,7 @@ The following table describes the properties that you can specify in the `Report
 
 When successful, the reply from the server contains the `reportExecution` descriptor. This descriptor contains the request ID and status needed for the client to request the output. There are two statuses, one for the report execution itself, and one for the chosen output format.
 
-The following descriptor shows that the report is still running (\<status\>execution\</status\>).
+The following descriptor shows that the report is still running (&lt;status&gt;execution&lt;/status&gt;).
 
 ``` xml
 <reportExecution>
@@ -460,8 +460,8 @@ The `reportExecution` descriptor now contains the list of exports for the report
 
 When exporting a chart report to HTML, the image produced for the chart is a part of HTML, and can be in two formats - JavaScript or SVG:
 
-- When "interactive" is set to *true*, it is embedded as JavaScript in HTML that uses Highcharts js to render the chart.
-- When "interactive" is set to *false*, the chart image is embedded as SVG as part of HTML.
+-   When "interactive" is set to *true*, it is embedded as JavaScript in HTML that uses Highcharts js to render the chart.
+-   When "interactive" is set to *false*, the chart image is embedded as SVG as part of HTML.
 
 When the option *net.sf.jasperreports.force.html.embed.image=false in WEB-INF/classes/jasperreports.properties* in combination with *interactive=false*, this puts the SVG images into attachments instead of HTML.
 
@@ -946,9 +946,9 @@ Given the request ID, you can obtain more information about each result by downl
 
 For security purposes, the search for running reports has the following restrictions:
 
-- The system administrator (`superuser`) can see and cancel any report running on the server.
-- An organization admin (`jasperadmin`) can see every running report, but can cancel only the reports that were started by a user from the same or child organization.
-- A regular user can see every running report, but can cancel only the reports that he initiated.
+-   The system administrator (`superuser`) can see and cancel any report running on the server.
+-   An organization admin (`jasperadmin`) can see every running report, but can cancel only the reports that were started by a user from the same or child organization.
+-   A regular user can see every running report, but can cancel only the reports that he initiated.
 
 ## Stopping Running Reports and Jobs
 

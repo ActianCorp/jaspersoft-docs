@@ -13,9 +13,9 @@ Java development is not the main use case of Jaspersoft Studio. However, you can
 
 To change the JVM
 
-1.  Navigate to `General `\> `Capabilities` page. Additional pages are displayed.
+1.  Navigate to `General `&gt; `Capabilities` page. Additional pages are displayed.
 
-2.  View the `Java `\> `Installed JREs` page.
+2.  View the `Java `&gt; `Installed JREs` page.
 
 3.  Navigate to the `Execution Environments` page.
 

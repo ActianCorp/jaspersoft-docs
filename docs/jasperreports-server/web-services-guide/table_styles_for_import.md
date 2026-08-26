@@ -8,7 +8,7 @@ Cell Body Style
 
 Cell Body Center Style
 
-- Cell Bullet Style
+-   Cell Bullet Style
 
 ``` text
 Cell Code Style

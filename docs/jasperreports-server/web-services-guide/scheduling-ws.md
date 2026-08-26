@@ -17,6 +17,6 @@ The service works via XML-RPC calls that use the SOAP encoding. It uses the HTTP
 
 This chapter includes the following sections:
 
-- [Types Defined in the WSDL](types_defined_in_the_wsdl.md)
-- [Operations in the Scheduling Service](operations_in_the_scheduling_service.md)
-- [Java Client Classes](java_client_classes.md)
+-   [Types Defined in the WSDL](types_defined_in_the_wsdl.md)
+-   [Operations in the Scheduling Service](operations_in_the_scheduling_service.md)
+-   [Java Client Classes](java_client_classes.md)

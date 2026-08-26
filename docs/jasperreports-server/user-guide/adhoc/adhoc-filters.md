@@ -7,9 +7,9 @@ description: "Filters can be defined at three levels:"
 
 Filters can be defined at three levels:
 
-- In the Domain Designer.
-- When creating a view from a Domain (with the Data Chooser).
-- In the Ad Hoc Editor (even when the view is based on a JRXML Topic or OLAP connection).
+-   In the Domain Designer.
+-   When creating a view from a Domain (with the Data Chooser).
+-   In the Ad Hoc Editor (even when the view is based on a JRXML Topic or OLAP connection).
 
 In this section, we discuss how to define filters in the Ad Hoc Editor. For information on defining filters in the Domain Designer, see JasperReports Server Data Management Using Domains. For information on defining filters in the Data Chooser, see [The Pre-filters Page](adhoc-data-chooser.md).
 
@@ -45,9 +45,9 @@ For filters with multiple values, you do not need to reselect all values. After 
 
 You can filter information in your view based on a date range relative to the current system date. You can accomplish this using date-based filters, and entering a text expression describing the relative date or date span you want to display, using the format `<Keyword>+/-<Number>` where:
 
-- **Keyword**: Indicates the time span that you want to use. Options include: DAY, WEEK, MONTH, QUARTER, SEMI, and YEAR. An option used by itself (without `+/-<Number>`) gives the current value for that option.
-- **+** or **-** : Indicates whether the time span occurs before or after the chosen date.
-- **Number**: Indicates the number of the above-mentioned time spans you want to include in the filter.
+-   **Keyword**: Indicates the time span that you want to use. Options include: DAY, WEEK, MONTH, QUARTER, SEMI, and YEAR. An option used by itself (without `+/-<Number>`) gives the current value for that option.
+-   **+** or **-** : Indicates whether the time span occurs before or after the chosen date.
+-   **Number**: Indicates the number of the above-mentioned time spans you want to include in the filter.
 
 For example, if you want to look at all Sales for the prior week, your expression would be: WEEK-1.
 
@@ -77,46 +77,45 @@ However, with the custom filter functionality, you can exercise greater control 
 
 Custom filters are useful in a number of situations, including:
 
-- **When using the AND operator is not sufficient**. Consider an international company that wants to view data for stores located on the Pacific Rim; they may create a custom expression with the following criteria:
+-   **When using the AND operator is not sufficient**. Consider an international company that wants to view data for stores located on the Pacific Rim; they may create a custom expression with the following criteria:
 
-  - Country is USA
+    -   Country is USA
 
-    AND
+        AND
 
-  - State is California OR Washington OR Oregon OR Hawaii OR Alaska.
+    -   State is California OR Washington OR Oregon OR Hawaii OR Alaska.
 
-    OR
+        OR
 
-  - Country is Japan OR Indonesia
+    -   Country is Japan OR Indonesia
 
-    Using the AND operator for all of these criteria returns an empty view, as no store is located in all of those areas.
+        Using the AND operator for all of these criteria returns an empty view, as no store is located in all of those areas.
 
-- **When you need to eliminate some results in a field.** For example, if your food and beverage distribution company wants to view sales for all drinks except for high-price items, you might include the following criteria in a custom expression:
+-   **When you need to eliminate some results in a field.** For example, if your food and beverage distribution company wants to view sales for all drinks except for high-price items, you might include the following criteria in a custom expression:
 
-  - Product Group is Beverages
+    -   Product Group is Beverages
 
-    NOT
+        NOT
 
-  - Price is greater than 39.99
+    -   Price is greater than 39.99
 
-    This filter displays all items in the Beverage Product Group, but filters out those with prices over \$39.99
+        This filter displays all items in the Beverage Product Group, but filters out those with prices over $39.99
 
 These are only two scenarios where custom filters can hone your results and make your view more precise. There are, of course, many other situations where they can be applied.
 
 In this section, we take you through these tasks:
 
-- Creating a custom expression
+-   Creating a custom expression
 
-- Editing a custom expression
+-   Editing a custom expression
 
-- Removing a custom expression
+-   Removing a custom expression
 
-- Applying multiple filters to a single field
+-   Applying multiple filters to a single field
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>Custom filters are applied to views, but filter details do not appear on previews or on the report generated from that view.</p>
-  </div>
+    !!! note
+
+        Custom filters are applied to views, but filter details do not appear on previews or on the report generated from that view.
 
 To create and apply a custom filter
 
@@ -127,18 +126,17 @@ To create and apply a custom filter
 
 3.  In the text entry box, enter a filter expression using the letter designations, and including the following operators:
 
-    - **AND** narrows your results and includes only fields that meet the criteria of both filters before and after the operator.
+    -   **AND** narrows your results and includes only fields that meet the criteria of both filters before and after the operator.
 
-    - **OR** broadens your results and includes fields that meet the criteria of either filter before or after the operator.
+    -   **OR** broadens your results and includes fields that meet the criteria of either filter before or after the operator.
 
-    - **NOT** excludes results that match the criteria.
+    -   **NOT** excludes results that match the criteria.
 
-    - **Parentheses** combine multiple filters into a single item in the expression.
+    -   **Parentheses** combine multiple filters into a single item in the expression.
 
-      <div class="admonition note">
-      <p class="admonition-title">Note</p>
-      <p>Filter letter designations are case-sensitive, and must be UPPERCASE.</p>
-      </div>
+        !!! note
+
+            Filter letter designations are case-sensitive, and must be UPPERCASE.
 
 4.  Click **Apply**. Your view is updated to reflect the newly applied filter criteria.
 
@@ -171,38 +169,43 @@ To remove a custom expression from a view
 
 When you refine your custom expression, you may also want to delete unused filters from the Filters panel.
 
-- If the filter you want to remove is not part of the custom filter, hover your mouse over ![js AdHoc icon kebab](../assets/images/js-AdHoc-icon-kebab.png) in the filter’s title bar and select **Remove Filter**.
-- If you want to remove all existing filters, including the custom expression, hover your mouse over ![js AdHoc icon kebab](../assets/images/js-AdHoc-icon-kebab.png) in the upper right corner of the Filters panhandle and select **Remove All Filters**.
+-   If the filter you want to remove is not part of the custom filter, hover your mouse over ![js AdHoc icon kebab](../assets/images/js-AdHoc-icon-kebab.png) in the filter’s title bar and select **Remove Filter**.
+-   If you want to remove all existing filters, including the custom expression, hover your mouse over ![js AdHoc icon kebab](../assets/images/js-AdHoc-icon-kebab.png) in the upper right corner of the Filters panhandle and select **Remove All Filters**.
 
 You can apply multiple simple filters to a single field, if needed further to refine your custom filter results. For example, a user may want to view the data in the Shipping Cost field, but only when it meets certain criteria combinations:
 
-- When shipping costs to French cities with postal codes that begin with the number 5 are under five Euros.
+-   When shipping costs to French cities with postal codes that begin with the number 5 are under five Euros.
 
-- When shipping costs to German cities with postal codes that begin with the number 1 are under five Euros.
+-   When shipping costs to German cities with postal codes that begin with the number 1 are under five Euros.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>You can recreate the scenario below using the <strong>demo for an ad hoc</strong> topic.</p>
-  </div>
+    !!! note
+
+        You can recreate the scenario below using the **demo for an ad hoc** topic.
 
 In the following example a user has a table including the following columns:
 
-- Country
-- Postal Code
-- Shipping Charge
+-   Country
 
-To analyze the specific shipping costs described above, the user creates the following (simple) filters - including two filters each for the Country and Postal code fields:
+-   Postal Code
 
-- A. Country equals France.
-- B. Postal code starts with 5.
-- C. Country equals Germany.
-- D. Postal code starts with 1.
-- E. Shipping Charge is less than 5.
+-   Shipping Charge
 
-Then, to display only the information she needs, she creates the following custom expression:
+    To analyze the specific shipping costs described above, the user creates the following (simple) filters - including two filters each for the Country and Postal code fields:
 
-- ((A and B) or (C and D)) and E
+-   A. Country equals France.
 
-This translates to:
+-   B. Postal code starts with 5.
 
-- ((FRANCE and POSTAL CODES THAT START WITH 5) or (GERMANY and POSTAL CODES THAT START WITH 1)) and SHIPPING CHARGES LESS THAN 5 EUROS.
+-   C. Country equals Germany.
+
+-   D. Postal code starts with 1.
+
+-   E. Shipping Charge is less than 5.
+
+    Then, to display only the information she needs, she creates the following custom expression:
+
+-   ((A and B) or (C and D)) and E
+
+    This translates to:
+
+-   ((FRANCE and POSTAL CODES THAT START WITH 5) or (GERMANY and POSTAL CODES THAT START WITH 1)) and SHIPPING CHARGES LESS THAN 5 EUROS.

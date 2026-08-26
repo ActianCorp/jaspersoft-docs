@@ -50,7 +50,7 @@ title: Java Virtual Machines (JVM)
 <li>17</li>
 <li>21</li>
 </ul></td>
-<td><p>CompatibleOther commercially supported or community OpenJDK-based Java 17 and Java 21 distributions are generally expected to be compatible. However, only the distributions explicitly listed as Certified have been validated through the full certification test suite.</p></td>
+<td><p>Compatible<span class="jsd-footnote-ref"><sup>1</sup></span> <span class="jsd-footnote">Other commercially supported or community OpenJDK-based Java 17 and Java 21 distributions are generally expected to be compatible. However, only the distributions explicitly listed as Certified have been validated through the full certification test suite.</span></p></td>
 </tr>
 </tbody>
 </table>

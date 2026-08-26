@@ -11,31 +11,31 @@ description: "While upgrading from version 10.0 to JasperReports Server 10.1, th
 
 This chapter describes the overlay process for upgrading to JasperReports Server 10.1.0 and contains the following sections:
 
-- Introduction to the Overlay Upgrade
+-   Introduction to the Overlay Upgrade
 
-- Upgrade Steps Overview
+-   Upgrade Steps Overview
 
-- Plan Your Upgrade
+-   Plan Your Upgrade
 
-- Back Up Your JasperReports® Server Instance
+-   Back Up Your JasperReports® Server Instance
 
-- Unpack the Overlay Upgrade Package
+-   Unpack the Overlay Upgrade Package
 
-- Check for JDBC Driver (Oracle, SQL Server, DB2)
+-   Check for JDBC Driver (Oracle, SQL Server, DB2)
 
-- Configure the Properties in the default_master.properties File
+-   Configure the Properties in the default_master.properties File
 
-- Run the Overlay Upgrade
+-   Run the Overlay Upgrade
 
-- Rerun the Overlay Upgrade
+-   Rerun the Overlay Upgrade
 
-- Rollback Procedure
+-   Rollback Procedure
 
-- Starting and Logging into JasperReports Server 10.1
+-   Starting and Logging into JasperReports Server 10.1
 
-- Additional Tasks to Complete the Upgrade
+-   Additional Tasks to Complete the Upgrade
 
-- Running Overlay Upgrade a Second Time
+-   Running Overlay Upgrade a Second Time
 
 ## Introduction to the Overlay Upgrade
 
@@ -43,13 +43,13 @@ The overlay upgrade procedure is available only for the JasperReports Server Com
 
 !!! warning
 
-    - The **overlay upgrade supports only the Apache Tomcat application server**.
+    -   The **overlay upgrade supports only the Apache Tomcat application server**.
 
-    - The **overlay upgrade supports only JasperReports Server installations using the WAR file**. The binary installer is not supported.
+    -   The **overlay upgrade supports only JasperReports Server installations using the WAR file**. The binary installer is not supported.
 
-    - The overlay upgrade is not possible if you configured custom encryption keys in your previous server.
+    -   The overlay upgrade is not possible if you configured custom encryption keys in your previous server.
 
-    - Only the certified repository databases are supported.
+    -   Only the certified repository databases are supported.
 
 The overlay upgrade supports upgrading from JasperReports Server versions 9.0 and later to JasperReports Server 10.1.
 
@@ -100,41 +100,41 @@ This backup example is for Tomcat with the PostgreSQL or MySQL database. For oth
 
 2.  Run the following commands for PostgreSQL or MySQL:
 
-    - PostgreSQL
+    -   PostgreSQL
 
-      ``` bash
-      cd <path>/JS_BACKUP
-      pg_dump --username=postgres  jasperserver  >  js-db-dump.sql
-      ```
+        ``` bash
+        cd <path>/JS_BACKUP
+        pg_dump --username=postgres  jasperserver  >  js-db-dump.sql
+        ```
 
-    - MySQL
+    -   MySQL
 
-      ``` bash
-      cd <path>/JS_BACKUP
-      ```
+        ``` bash
+        cd <path>/JS_BACKUP
+        ```
 
-      <table>
-      <colgroup>
-      <col style="width: 50%" />
-      <col style="width: 50%" />
-      </colgroup>
-      <thead>
-      <tr>
-      <th>Operating System</th>
-      <th>Command</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td><p>Windows:</p></td>
-      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></div></td>
-      </tr>
-      <tr>
-      <td><p>Linux:</p></td>
-      <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></div></td>
-      </tr>
-      </tbody>
-      </table>
+        <table>
+        <colgroup>
+        <col style="width: 50%" />
+        <col style="width: 50%" />
+        </colgroup>
+        <thead>
+        <tr>
+        <th>Operating System</th>
+        <th>Command</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><p>Windows:</p></td>
+        <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; jasperserver &gt; js-db-dump.sql</code></pre></div></td>
+        </tr>
+        <tr>
+        <td><p>Linux:</p></td>
+        <td><div class="language-text highlight"><pre><code>mysqldump --user=root --password=&lt;password&gt; --host=127.0.0.1 jasperserver &gt;js-db-dump.sql</code></pre></div></td>
+        </tr>
+        </tbody>
+        </table>
 
 !!! note
 
@@ -186,9 +186,9 @@ Edit the `default_master.properties` file and set `appServer` directory path to 
 
 Configure the properties specific to the installation type:
 
-- For Compact upgrade: No additional configuration is required in the `default_master.properties` file.
+-   For Compact upgrade: No additional configuration is required in the `default_master.properties` file.
 
-- For Split upgrade: Edit the `default_master.properties` file to configure the settings as described in [Installation Types](jrs-install-guide/introduction/installation_types.md).
+-   For Split upgrade: Edit the `default_master.properties` file to configure the settings as described in [Installation Types](jrs-install-guide/introduction/installation_types.md).
 
 ## Run the Overlay Upgrade
 
@@ -212,25 +212,25 @@ The overlay upgrade works only with the Tomcat application server. It supports o
 
 5.  You are prompted to specify a path to a working folder:
 
-    - You can accept the default or specify an alternate folder.
-    - Press `enter` to accept the default `../overlayWorkspace`.
+    -   You can accept the default or specify an alternate folder.
+    -   Press `enter` to accept the default `../overlayWorkspace`.
 
 6.  You are prompted to take a back up of your `Jasperserver` database. If you have already backed up your database, choose `y` to continue. If you have not yet backed up your database, choose `n` to exit the overlay and create a backup.
 
 7.  You are prompted to shut down your Tomcat instance:
-    - You can stop Tomcat now if you have not already done so.
-    - Choose `y` for `yes` to continue.
+    -   You can stop Tomcat now if you have not already done so.
+    -   Choose `y` for `yes` to continue.
 
 8.  If you are prompted to create a keystore, this means that the server's original keystore was not found in the user's home directory. Proceed with caution:
-    - In general, it is recommended to exit the overlay procedure and make sure that the keystore is in the proper location, then rerun the overlay as described below.
+    -   In general, it is recommended to exit the overlay procedure and make sure that the keystore is in the proper location, then rerun the overlay as described below.
 
-    - Alternatively, update the current location of the keystore in the `keystore.init.properties` file at the following locations:
+    -   Alternatively, update the current location of the keystore in the `keystore.init.properties` file at the following locations:
 
-      - `.../WEB-INF/classes/keystore.init.properties`
-      - `.../buildomatic/keystore.init.properties`
-      - `.../buildomatic/conf_source/iePro/keystore.init.properties`
+        -   `.../WEB-INF/classes/keystore.init.properties`
+        -   `.../buildomatic/keystore.init.properties`
+        -   `.../buildomatic/conf_source/iePro/keystore.init.properties`
 
-    - If you continue and create a keystore, then the overlay proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository, as described in [Encryption Keys](plan-upgrade-7.5.md).
+    -   If you continue and create a keystore, then the overlay proceeds but your repository is corrupted and users are unable to log in. In this case, you need to export manually the server's repository with a custom key, then import the key before importing the repository, as described in [Encryption Keys](plan-upgrade-7.5.md).
 
 9.  You are prompted to specify a path to your `master.properties` file:
 
@@ -238,20 +238,20 @@ The overlay upgrade works only with the Tomcat application server. It supports o
 
 10. For final verification, the overlay prompts you for the path to your application server:
 
-    - If you have not moved it, it is located in the path to: `<tomcat>`
-    - Press `enter` to accept the default if it is correct.
+    -   If you have not moved it, it is located in the path to: `<tomcat>`
+    -   Press `enter` to accept the default if it is correct.
 
 11. The overlay begins updating your system:
 
-    - Your `jasperserver-pro` war file is automatically backed up.
-    - Potential customizations in your environment is analyzed.
+    -   Your `jasperserver-pro` war file is automatically backed up.
+    -   Potential customizations in your environment is analyzed.
 
     You are prompted to review the report on customizations if you choose to:
 
-    - Choose **y** for `yes` to continue with the upgrade.
-    - The`Jasperserver`database will be upgraded.
-    - The `jasperserver-pro` war file will be upgraded.
-    - The core data resources will be upgraded in the `Jasperserver` repository database.
+    -   Choose **y** for `yes` to continue with the upgrade.
+    -   The`Jasperserver`database will be upgraded.
+    -   The `jasperserver-pro` war file will be upgraded.
+    -   The core data resources will be upgraded in the `Jasperserver` repository database.
 
 When the overlay upgrade has finished, start Tomcat, and log in to test the upgraded JasperReports Server.
 
@@ -259,8 +259,8 @@ If the upgrade was successful, you see `BUILD SUCCESSFUL` on the command line.
 
 For the Split upgrade, after the upgrade is done, to transfer the data (Audit, Access, and Log monitoring data) to the `audit` database from the `Jasperserver` database, run the following command:
 
-- Windows: `transfer-audit-data.bat`
-- Linux and Mac OSX: `./transfer-audit-data.sh`
+-   Windows: `transfer-audit-data.bat`
+-   Linux and Mac OSX: `./transfer-audit-data.sh`
 
 The data is transferred to the `audit` database and the tables are deleted from the `Jasperserver` database. Rerun the command if there is any interruption in the data transfer process, it resumes the transfer process from where it was interrupted in the previous run.
 
@@ -353,10 +353,10 @@ Log in using the following URL, user IDs, and passwords:
 
 URL: `http://localhost:8080/``jasperserver`` ``-pro`` `
 
-| User ID       | Password          | Description                                |
-|---------------|-------------------|--------------------------------------------|
-| `superuser`   | \<your-password\> | System-wide administrator                  |
-| `jasperadmin` | \<your-password\> | Administrator for the default organization |
+| User ID | Password | Description |
+|----|----|----|
+| `superuser` | &lt;your-password&gt; | System-wide administrator |
+| `jasperadmin` | &lt;your-password&gt; | Administrator for the default organization |
 
 Your JasperReports Server instance has now been upgraded to 10.1. If you have startup or login problems, refer to the Troubleshooting section of the JasperReports Server Installation Guide.
 
@@ -415,7 +415,7 @@ The overlay procedure asks:
 "We have detected that the overlay install was already run. Do you want to resume your last run? The default is 'y' ([y], n):"
 ```
 
-- Choose `y` for yes if you do not want to change any information previously given to the overlay.
-- Choose `n` for no if you would like to enter new or different information.
+-   Choose `y` for yes if you do not want to change any information previously given to the overlay.
+-   Choose `n` for no if you would like to enter new or different information.
 
 One reason for entering `n` for no would be if you did not give a valid path to your `default_master.properties` file the first time you run the overlay.

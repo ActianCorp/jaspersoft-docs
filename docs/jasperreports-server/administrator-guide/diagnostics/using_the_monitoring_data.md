@@ -11,7 +11,7 @@ JasperReports Server makes the monitoring data available to administrators throu
 
 *Figure 1: Monitoring Reports in the Repository*
 
-To create an Ad Hoc View based on the audit Domains, select **Create \> Ad Hoc View**, select the **Domains** tab in the **Data Chooser**, and select the monitoring Domain. For instructions on using Domains in reports, see the Ad Hoc chapter in JasperReports Server User Guide. For documentation of Domains in general, see the JasperReports Server Data Management Using Domains.
+To create an Ad Hoc View based on the audit Domains, select **Create &gt; Ad Hoc View**, select the **Domains** tab in the **Data Chooser**, and select the monitoring Domain. For instructions on using Domains in reports, see the Ad Hoc chapter in JasperReports Server User Guide. For documentation of Domains in general, see the JasperReports Server Data Management Using Domains.
 
 The following sections explain the contents of the Domains and the reports provided.
 
@@ -129,13 +129,13 @@ The Ad Hoc views used to create each report are also included. You can open them
 
 The following views and reports are provided:
 
-- Report Monitoring Resources Report: Gives a list of all reports and shows their average and high-low execution times.
+-   Report Monitoring Resources Report: Gives a list of all reports and shows their average and high-low execution times.
 
-- Report Monitoring Details Report: A crosstab that shows report execution times on one axis and many dimensions on the other axis such as:
+-   Report Monitoring Details Report: A crosstab that shows report execution times on one axis and many dimensions on the other axis such as:
 
-  - A time hierarchy
-  - User and organization
-  - Event type
+    -   A time hierarchy
+    -   User and organization
+    -   Event type
 
 ![js monitoring ReportMonitoringDetailsView](../assets/images/js-monitoring-ReportMonitoringDetailsView.png)
 

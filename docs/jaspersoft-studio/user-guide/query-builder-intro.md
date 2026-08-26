@@ -11,6 +11,6 @@ It also provides a drag-and-drop query builder for easily creating SQL queries. 
 
 This chapter contains the following sections:
 
-- [Using the Dataset and Query Dialog](datasets/dataset_and_query_dialog.md)
+-   [Using the Dataset and Query Dialog](datasets/dataset_and_query_dialog.md)
 
-- [Working with the Query Builder](query-builder.md)
+-   [Working with the Query Builder](query-builder.md)

@@ -11,9 +11,9 @@ Pre-filters are defined as optional `filterString` elements inside of `jdbcTable
 
 `filterString` contains an expression that evaluates to true or false when applied to each row of values in the data source. The parent of `filterString` is one of the following:
 
-- A [`jdbcTable`](representing_tables.md) element for a table
-- A [`jdbcTable`](representing_joins.md) element for a join
-- A [`jdbcQuery`](representing_derived_tables.md) element
+-   A [`jdbcTable`](representing_tables.md) element for a table
+-   A [`jdbcTable`](representing_joins.md) element for a join
+-   A [`jdbcQuery`](representing_derived_tables.md) element
 
 The expression refers to columns using their `id` attribute. Thus, a filter on a table or derived table refers to the simple column name, but a filter on a join tree refers to the `table_ID.field_name`. The full syntax for the expression is documented in [Domain Expression Language (DomEL)](../domel/domain_expression_language.md).
 

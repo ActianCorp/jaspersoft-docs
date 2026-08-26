@@ -7,16 +7,16 @@ description: "If you have an application or portal you want to use with JasperRe
 
 If you have an application or portal you want to use with JasperReports Server, but no single sign-on environment, you can use the Jaspersoft token-based authentication and user management framework. To work with token-based authentication, your application or portal must do the following:
 
-- Authenticate the end user according to the standards of your environment or application.
-- Construct and, optionally, encrypt a token based on the authenticated user values within your application or process. The token values can include username, organization (if multi-tenancy is enabled), roles, and profile attributes. You can configure the token based on your needs for reporting and analysis within the JasperReports Server.
-- Send the token to the JasperReports Server as part of an HTTP request.
+-   Authenticate the end user according to the standards of your environment or application.
+-   Construct and, optionally, encrypt a token based on the authenticated user values within your application or process. The token values can include username, organization (if multi-tenancy is enabled), roles, and profile attributes. You can configure the token based on your needs for reporting and analysis within the JasperReports Server.
+-   Send the token to the JasperReports Server as part of an HTTP request.
 
 When JasperReports Server receives the token, it will:
 
-- Attempt to decrypt the token (if encrypted) and validate the token format.
-- If the token is successfully parsed, use the information in the token to create and update the external user within JasperReports Server automatically.
+-   Attempt to decrypt the token (if encrypted) and validate the token format.
+-   If the token is successfully parsed, use the information in the token to create and update the external user within JasperReports Server automatically.
 
-The JasperReports Server deployment includes a sample file for token-based authentication in the \<js‑install\>/samples/externalAuth-sample-config folder: the sample-applicationContext-externalAuth-preauth-mt.xml file (commercial editions) or sample-applicationContext-externalAuth-preauth.xml (community editions).
+The JasperReports Server deployment includes a sample file for token-based authentication in the &lt;js‑install&gt;/samples/externalAuth-sample-config folder: the sample-applicationContext-externalAuth-preauth-mt.xml file (commercial editions) or sample-applicationContext-externalAuth-preauth.xml (community editions).
 
 !!! warning
 
@@ -50,38 +50,38 @@ The following steps explain the interaction between the user’s browser, Jasper
 
 When comparing these steps with those in [Default Internal Authentication](../authentication-in-jrs/internal-authentication-steps.md), you'll notice three significant differences:
 
-- Token-based authentication doesn't use a login screen. Instead, it depends on the `principalParameter` in the URL or request header. As long as the `principalParameter` is present, the request is automatically authenticated.
-- The portal or other external authentication mechanism is responsible for passing the correct username, and any roles, organization, or profile attributes as part of a token in the URL or request header.
-- JasperReports Server decrypts the token, extracts the user details, and uploads the data to the internal database. The internal database is synchronized with any new information in the user’s principal object.
+-   Token-based authentication doesn't use a login screen. Instead, it depends on the `principalParameter` in the URL or request header. As long as the `principalParameter` is present, the request is automatically authenticated.
+-   The portal or other external authentication mechanism is responsible for passing the correct username, and any roles, organization, or profile attributes as part of a token in the URL or request header.
+-   JasperReports Server decrypts the token, extracts the user details, and uploads the data to the internal database. The internal database is synchronized with any new information in the user’s principal object.
 
 ## Configuring JasperReports Server for Token-based Authentication
 
-A sample file for configuring JasperReports Server to work with token-based authentication is included in the JasperReports Server distribution. Sample files are located in the \<js‑install\>/samples/externalAuth-sample-config directory of your JasperReports Server. The file included depends on your version of JasperReports Server:
+A sample file for configuring JasperReports Server to work with token-based authentication is included in the JasperReports Server distribution. Sample files are located in the &lt;js‑install&gt;/samples/externalAuth-sample-config directory of your JasperReports Server. The file included depends on your version of JasperReports Server:
 
-- sample-applicationContext-externalAuth-preauth.xml: Sample file for implementing token-based authentication for a single organization. This file is included in the community edition of JasperReports Server.
-- sample-applicationContext-externalAuth-preauth-mt.xml: Sample file for implementing token-based authentication for multiple organizations. This file is included in commercial editions of JasperReports Server. To use external authentication with a commercial version and a single organization, you need to specify your organization as described in Specifying a Single Organization.
+-   sample-applicationContext-externalAuth-preauth.xml: Sample file for implementing token-based authentication for a single organization. This file is included in the community edition of JasperReports Server.
+-   sample-applicationContext-externalAuth-preauth-mt.xml: Sample file for implementing token-based authentication for multiple organizations. This file is included in commercial editions of JasperReports Server. To use external authentication with a commercial version and a single organization, you need to specify your organization as described in Specifying a Single Organization.
 
 To configure JasperReports Server to work with your authentication method, modify and deploy the sample configuration file:
 
-1.  Make a copy of the preauth sample file in the \<js-install\>/samples/externalAuth-sample-config/ directory and rename it to remove the sample- prefix. For example, rename sample-applicationContext-externalAuth-preauth.xml to applicationContext-externalAuth-preauth.xml.
+1.  Make a copy of the preauth sample file in the &lt;js-install&gt;/samples/externalAuth-sample-config/ directory and rename it to remove the sample- prefix. For example, rename sample-applicationContext-externalAuth-preauth.xml to applicationContext-externalAuth-preauth.xml.
 2.  Edit the file you created and configure the beans correctly for your deployment, as described in the following sections.
-3.  Place the modified file in the \<js-webapp\>/WEB-INF directory.
+3.  Place the modified file in the &lt;js-webapp&gt;/WEB-INF directory.
 
 !!! note
 
-    \<js-webapp\> is the location of the JasperReports Server web application in your application server, or where you're modifying the configuration files. The rest of this chapter refers to file names alone.
+    &lt;js-webapp&gt; is the location of the JasperReports Server web application in your application server, or where you're modifying the configuration files. The rest of this chapter refers to file names alone.
 
 ## Overview of Token-based Authentication Beans
 
 The sample-applicationContext-externalAuth-preauth\[-mt\].xml file contains the beans needed to enable token-based authentication. This section summarizes the most important beans in this file, including the beans you need to modify to configure JasperReports Server to work with token-based authentication.
 
-- `proxyPreAuthenticatedProcessingFilter`: Bean that enables token-based authentication. This bean extracts and optionally decrypts the token from the request. When this proxy bean definition is present in the application context, the Spring Security filter chain processes the authentication via the proxy definitions instead of the default internal filter. See Configuring the Token for more information.
-- `preAuthenticatedManager`: Lists the available authentication providers. In token-based authentication, there's a single provider, the `JSPreAuthenticatedAuthenticationProvider`. This bean doesn't have to be configured.
-- `JSPreAuthenticatedAuthenticationProvider`: Custom authentication provider for token-based authentication. This bean has a constructor argument, `preAuthenticatedUserDetailsService`, which it uses to create the user details from the values passed in the token. See Configuring the Token.
-- `externalDataSynchronizer`: Bean whose class creates a mirror image of the external user in the internal `jasperserver` database.
-- `mtExternalUserSetupProcessor` or `externalUserSetupProcessor`: Bean that creates and configures the internal user corresponding to a successfully authenticated external user. Configure this bean to specify the roles given to external users. See User Roles.
-- `externalTenantSetupProcessor`: For multi-tenant deployments, this bean creates and configures the internal organization for a successfully authenticated external user. See Mapping the User Organization.
-- `externalProfileAttributeProcessor`: Optional processor that sets up user profile attributes. You don't need to configure this processor; the mapping is set up in the token configuration. Comment this bean out if not used.
+-   `proxyPreAuthenticatedProcessingFilter`: Bean that enables token-based authentication. This bean extracts and optionally decrypts the token from the request. When this proxy bean definition is present in the application context, the Spring Security filter chain processes the authentication via the proxy definitions instead of the default internal filter. See Configuring the Token for more information.
+-   `preAuthenticatedManager`: Lists the available authentication providers. In token-based authentication, there's a single provider, the `JSPreAuthenticatedAuthenticationProvider`. This bean doesn't have to be configured.
+-   `JSPreAuthenticatedAuthenticationProvider`: Custom authentication provider for token-based authentication. This bean has a constructor argument, `preAuthenticatedUserDetailsService`, which it uses to create the user details from the values passed in the token. See Configuring the Token.
+-   `externalDataSynchronizer`: Bean whose class creates a mirror image of the external user in the internal `jasperserver` database.
+-   `mtExternalUserSetupProcessor` or `externalUserSetupProcessor`: Bean that creates and configures the internal user corresponding to a successfully authenticated external user. Configure this bean to specify the roles given to external users. See User Roles.
+-   `externalTenantSetupProcessor`: For multi-tenant deployments, this bean creates and configures the internal organization for a successfully authenticated external user. See Mapping the User Organization.
+-   `externalProfileAttributeProcessor`: Optional processor that sets up user profile attributes. You don't need to configure this processor; the mapping is set up in the token configuration. Comment this bean out if not used.
 
 ## Configuring the Token
 
@@ -91,23 +91,23 @@ To use your authentication provider with JasperReports Server's token-based auth
 
 JasperReports Server will accept any properly formatted token; therefore, you need to protect the integrity of the token using measures such as:
 
-- Use SSL to Connect to JasperReports Server to protect against token interception.
-- Encrypt the token to protect against tampering. See Setting Token Decryption for more information.
-- Configure the token to use a timestamp to protect against replay attacks. Without a timestamp, when you include the token in a web page or REST web service URL, the URL can be copied and used by unauthorized people or systems. Setting the expire time for the token will prevent tokens/URLs from being used to authenticate beyond the indicated time. You can set the expiry time depending on your use case. For a user who is logged into the application/portal and requesting access to JasperReports Server, expiry time of a minute or less from the request time is appropriate. See the descriptions for `expireTime` and `tokenExpireTimestampFormat` in preAuthenticatedUserDetailsService.
+-   Use SSL to Connect to JasperReports Server to protect against token interception.
+-   Encrypt the token to protect against tampering. See Setting Token Decryption for more information.
+-   Configure the token to use a timestamp to protect against replay attacks. Without a timestamp, when you include the token in a web page or REST web service URL, the URL can be copied and used by unauthorized people or systems. Setting the expire time for the token will prevent tokens/URLs from being used to authenticate beyond the indicated time. You can set the expiry time depending on your use case. For a user who is logged into the application/portal and requesting access to JasperReports Server, expiry time of a minute or less from the request time is appropriate. See the descriptions for `expireTime` and `tokenExpireTimestampFormat` in preAuthenticatedUserDetailsService.
 
 ### proxyPreAuthenticatedProcessingFilter bean
 
 Some token configuration is specified in the `proxyPreAuthenticatedProcessingFilter` bean using the following properties:
 
-- `principalParameter`: A fixed string at the start of the token that triggers token-based authentication. The first time the user accesses JasperReports Server, the `principalParameter` must be present in the request. `principalParameter` can be any URL-safe string that's different from all other JasperReports Server request parameter names.
+-   `principalParameter`: A fixed string at the start of the token that triggers token-based authentication. The first time the user accesses JasperReports Server, the `principalParameter` must be present in the request. `principalParameter` can be any URL-safe string that's different from all other JasperReports Server request parameter names.
 
-- `tokenInRequestParam`: Boolean that specifies the location of `principalParameter` as follows:
+-   `tokenInRequestParam`: Boolean that specifies the location of `principalParameter` as follows:
 
-  - `true`: JasperReports Server looks for `principalParameter` in the request URL only.
-  - `false`: JasperReports Server looks for `principalParameter` in the request header only.
-  - absent: JasperReports Server checks the request header first and then the URL.
+    -   `true`: JasperReports Server looks for `principalParameter` in the request URL only.
+    -   `false`: JasperReports Server looks for `principalParameter` in the request header only.
+    -   absent: JasperReports Server checks the request header first and then the URL.
 
-- `tokenDecryptor`: Specifies the class to use to decrypt the token. For security reasons, you should encrypt the token to keep its payload from being intercepted when it's exposed in the browser's cache or when SSL is not enabled. If the token is encrypted, you must provide an implementation of Jaspersoft's token decryptor interface `CipherI`. The default assumes the token is unencrypted and passes the token through as plaintext.
+-   `tokenDecryptor`: Specifies the class to use to decrypt the token. For security reasons, you should encrypt the token to keep its payload from being intercepted when it's exposed in the browser's cache or when SSL is not enabled. If the token is encrypted, you must provide an implementation of Jaspersoft's token decryptor interface `CipherI`. The default assumes the token is unencrypted and passes the token through as plaintext.
 
 #### Setting Token Decryption
 
@@ -115,8 +115,8 @@ If you want to encrypt the token, you need to select the encryption you'll use t
 
 `CipherI` is a stub interface that allows you to define two methods:
 
-- `encrypt`: Takes a text string and returns a text string encrypted according to the specified algorithm.
-- `decrypt`: Takes a text string and returns a text string decrypted according to the specified algorithm.
+-   `encrypt`: Takes a text string and returns a text string encrypted according to the specified algorithm.
+-   `decrypt`: Takes a text string and returns a text string decrypted according to the specified algorithm.
 
 You can implement any encryption method you choose.
 
@@ -186,35 +186,33 @@ Sample Code Configuration
 
 The inline bean has the following properties:
 
-- `tokenPairSeparator`: A single character used as the separator for key-value pairs in the token, for example, pipe (\|, encoded in URLs as %7C) (default). Cannot include comma (,), question mark (?), or equals sign (=), as these are used elsewhere in the token.
+-   `tokenPairSeparator`: A single character used as the separator for key-value pairs in the token, for example, pipe (\|, encoded in URLs as %7C) (default). Cannot include comma (,), question mark (?), or equals sign (=), as these are used elsewhere in the token.
 
 !!! warning
 
     If you're passing the token in the URL, you need to encode all equal signs (=, encoded as %3D) and pipe symbols (\|, encoded as %7C) in the token to make the token URL-safe.
 
-- `tokenFormatMapping`: The mapping between parameters in the token and attributes of the principal object in JasperReports Server, like roles and profile attributes. Entries in the mapping have the format \<entry key ="JRS" value="keyintoken"\>, for example, \<entry key="username" value="u" /\>. The key, such as username, is a fixed value used in the JasperReports Server code. The value is a parameter in the token mapped to the key in JasperReports Server.
+-   `tokenFormatMapping`: The mapping between parameters in the token and attributes of the principal object in JasperReports Server, like roles and profile attributes. Entries in the mapping have the format &lt;entry key ="JRS" value="keyintoken"&gt;, for example, &lt;entry key="username" value="u" /&gt;. The key, such as username, is a fixed value used in the JasperReports Server code. The value is a parameter in the token mapped to the key in JasperReports Server.
 
-- tokenFormatMapping supports the following JasperReports Server fixed values:
+-   tokenFormatMapping supports the following JasperReports Server fixed values:
 
-  - `username`: The external user's username.
-  - `roles`: The external user's roles.
-  - `orgId`: (optional, multi-tenant implementations only) In a multi-organization deployment, the external user's organization. In a single-tenant deployment, or in a deployment that maps all users to the same organization using `defaultOrganization`, you can comment out this property.
-  - `expireTime`: The key for the token expiration time. A time formatted as configured in the `tokenExpireTimestampFormat` property.
-  - `profile.attribs`: (optional) This lets you specify a map of key-value pairs for profile attributes. Comment this out if you don't want to map profile attributes. You must also comment out the reference to `externalProfileAttributeProcessor` in the `externalUserProcessors` property of the `externalDataSynchronizer`.
+    -   `username`: The external user's username.
+    -   `roles`: The external user's roles.
+    -   `orgId`: (optional, multi-tenant implementations only) In a multi-organization deployment, the external user's organization. In a single-tenant deployment, or in a deployment that maps all users to the same organization using `defaultOrganization`, you can comment out this property.
+    -   `expireTime`: The key for the token expiration time. A time formatted as configured in the `tokenExpireTimestampFormat` property.
+    -   `profile.attribs`: (optional) This lets you specify a map of key-value pairs for profile attributes. Comment this out if you don't want to map profile attributes. You must also comment out the reference to `externalProfileAttributeProcessor` in the `externalUserProcessors` property of the `externalDataSynchronizer`.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>The user password does not appear as a standard parameter in the token format. Passwords don’t need to be passed in the token in most cases, because JasperReports Server doesn't store passwords for externally-defined users. If you want to store passwords, you can pass them in using profile attributes.</p>
-  </div>
+    !!! note
 
--  `tokenFormatMapping` also supports the following property:
+        The user password does not appear as a standard parameter in the token format. Passwords don’t need to be passed in the token in most cases, because JasperReports Server doesn't store passwords for externally-defined users. If you want to store passwords, you can pass them in using profile attributes.
 
-  - `tokenExpireTimestampFormat`: The format of the token expiration time, `expireTime`, based on the `java.text.SimpleDateFormat`. Valid patterns for timestamps can contain only letters, numbers, dashes, underscores, and periods. The default pattern is `yyyyMMddHHmmssZ`, for example `20140415060121Z`.
+-    `tokenFormatMapping` also supports the following property:
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>Z represents the UTC timezone. It denotes a UTC offset of 00:00.</p>
-  </div>
+    -   `tokenExpireTimestampFormat`: The format of the token expiration time, `expireTime`, based on the `java.text.SimpleDateFormat`. Valid patterns for timestamps can contain only letters, numbers, dashes, underscores, and periods. The default pattern is `yyyyMMddHHmmssZ`, for example `20140415060121Z`.
+
+    !!! note
+
+        Z represents the UTC timezone. It denotes a UTC offset of 00:00.
 
 For more information about the valid patterns for this field, refer to:<br>
 [http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html.](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html)
@@ -233,12 +231,12 @@ In this example, `pp` (`principalParameter`) is the name of the header attribute
 
 The key-value pairs can appear in the token in any order, but must be delineated by the separator specified in the `tokenPairSeparator` property:
 
-- `u`: Takes a single value that maps to the username in JasperReports Server.
-- `r`: Takes as values a comma separated list of roles, each mapped to a separate role in JasperReports Server. If you have defined default internal roles, this parameter is optional. See User Roles.
-- `o`: Takes as values a comma separated list that maps to an organization in the JasperReports Server. If more than one organization is listed, it's interpreted as an organization hierarchy. For example, `o=A,B` maps the user to the B suborganization of A.
-- `exp`: Takes a single time value formatted as configured in the `tokenExpireTimestampFormat` property. If `exp` is earlier than current time, authentication is denied. if `exp` is absent, the token never expires.
-- `pa1`: Profile attribute that maps to `profileAttrib1` in the JasperReports Server repository.
-- `pa2`: Profile attribute that maps to `profileAttrib2` in the JasperReports Server repository.
+-   `u`: Takes a single value that maps to the username in JasperReports Server.
+-   `r`: Takes as values a comma separated list of roles, each mapped to a separate role in JasperReports Server. If you have defined default internal roles, this parameter is optional. See User Roles.
+-   `o`: Takes as values a comma separated list that maps to an organization in the JasperReports Server. If more than one organization is listed, it's interpreted as an organization hierarchy. For example, `o=A,B` maps the user to the B suborganization of A.
+-   `exp`: Takes a single time value formatted as configured in the `tokenExpireTimestampFormat` property. If `exp` is earlier than current time, authentication is denied. if `exp` is absent, the token never expires.
+-   `pa1`: Profile attribute that maps to `profileAttrib1` in the JasperReports Server repository.
+-   `pa2`: Profile attribute that maps to `profileAttrib2` in the JasperReports Server repository.
 
 With this configuration, the following would be a valid token. The user would be placed in the Sales suborganization of the EMEA organization:
 
@@ -256,8 +254,8 @@ http://localhost:8080/jasperserver?pp=u%3DSven%7Cr%3DManager%7Co%3DEMEA,Sales%7C
 
 User roles are mapped using the `externalUserSetupProcessor` or `mtExternalUserSetupProcessor` bean. See the configuration file for your deployment to see which bean applies in your case. For token-based authentication, you can define user roles in the following ways:
 
-- Map the user roles received from the token: Define a mapping between roles in the external authority and roles in JasperReports Server. See Mapping User Roles.
-- Define user roles statically: If you don't have user roles in the token, you can define static roles for administrative and non-administrative users. See Defining Static Roles.
+-   Map the user roles received from the token: Define a mapping between roles in the external authority and roles in JasperReports Server. See Mapping User Roles.
+-   Define user roles statically: If you don't have user roles in the token, you can define static roles for administrative and non-administrative users. See Defining Static Roles.
 
 ### Mapping User Roles
 
@@ -265,8 +263,8 @@ If you have user roles in the token, you can map them to roles in JasperReports 
 
 The `organizationRoleMap` property contains key/value pairs that map external role names to internal ones. For commercial JasperReports Server deployments, you need to choose the level at which the role is assigned:
 
-- To map to an internal role at the organization level, append \|\* to the name of the internal role, for example, ROLE_USER\|\*. Roles mapped at the organization level don't have administrative privileges.
-- To map to an internal role at the system (null) level, don't modify the internal role name, for example, ROLE_ADMINISTRATOR. Roles at the system level are usually reserved for special users like the system administrator and allow access to the repository folder of all other organizations.
+-   To map to an internal role at the organization level, append \|\* to the name of the internal role, for example, ROLE_USER\|\*. Roles mapped at the organization level don't have administrative privileges.
+-   To map to an internal role at the system (null) level, don't modify the internal role name, for example, ROLE_ADMINISTRATOR. Roles at the system level are usually reserved for special users like the system administrator and allow access to the repository folder of all other organizations.
 
 The following example shows how you might configure the `externalUserSetupProcessor` bean to map roles from the external authority to roles in JasperReports Server:
 
@@ -331,7 +329,7 @@ To allow all roles, use .\* or comment out the property. If the property is omit
 
 #### Supporting Additional Characters in Role Names
 
-The default mapping from attributes in your external authentication server to roles in JasperReports Server supports only alphanumeric characters and underscores. If a role in your external authority contains unsupported characters, each sequence of unsupported characters is replaced with a single underscore. For example, ROLE\$-DEMO)EXT maps to ROLE_DEMO_EXT.
+The default mapping from attributes in your external authentication server to roles in JasperReports Server supports only alphanumeric characters and underscores. If a role in your external authority contains unsupported characters, each sequence of unsupported characters is replaced with a single underscore. For example, ROLE$-DEMO)EXT maps to ROLE_DEMO_EXT.
 
 You can extend the supported character set by modifying the `permittedExternalRoleNameRegex` property of the `externalUserSetupProcessor` bean or `mtExternalUserSetupProcessor` bean. Check the sample configuration file for your deployment to determine which bean to modify.
 
@@ -352,15 +350,15 @@ The default value of the `permittedExternalRoleNameRegex` property is the regula
 
 !!! warning
 
-    Do not allow the following in role names: spaces, periods or \|, \[ \], \`, ", ', ~, !, \#, \$, %, ^, &, \[,\], \*, +, =, ;, :, ?, \<, \>, }, {, ), (, \], \[, /, or \\ Adding these characters in the `permittedExternalRoleNameRegex` property may cause unexpected behavior, such as the inability to delete or edit roles containing those characters.
+    Do not allow the following in role names: spaces, periods or \|, \[ \], \`, ", ', \~, !, #, $, %, \^, &, \[,\], \*, +, =, ;, :, ?, &lt;, &gt;, }, {, ), (, \], \[, /, or \\. Adding these characters in the `permittedExternalRoleNameRegex` property may cause unexpected behavior, such as the inability to delete or edit roles containing those characters.
 
 ### Defining Static Roles
 
 If you're mapping all your external users to a single organization, you can assign static roles to users. This lets you specify a list of administrative users and roles, and a list of roles for non-administrative users. To define static roles, use the `externalUserSetupProcessor` or `mtExternalUserSetupProcessor` bean. To set up static roles, locate the version of the bean used in your sample file and configure the following properties:
 
-- `adminUserNames` property: A list of usernames granted internal administrator privileges in JasperReports Server. The username values must exactly match the usernames authenticated and returned by the external authority.
-- `defaultAdminRoles` property: A list of JasperReports Server internal roles. These are assigned to every user in the list of administrators.
-- `defaultInternalRoles` property: A list of JasperReports Server roles assigned to every user not in the list of administrators.
+-   `adminUserNames` property: A list of usernames granted internal administrator privileges in JasperReports Server. The username values must exactly match the usernames authenticated and returned by the external authority.
+-   `defaultAdminRoles` property: A list of JasperReports Server internal roles. These are assigned to every user in the list of administrators.
+-   `defaultInternalRoles` property: A list of JasperReports Server roles assigned to every user not in the list of administrators.
 
 The following example shows how to use the `mtExternalUserSetupProcessor` bean to define static roles. The configuration for `externalUserSetupProcessor` is similar:
 
@@ -390,8 +388,8 @@ The following example shows how to use the `mtExternalUserSetupProcessor` bean t
 
 There are two ways to set the user organization:
 
-- If you have multiple organizations in your deployment, set up the token to contain organization information as above. If you want organization names in JasperReports Server to be different from the ones in the external authority, use the organizationMap property, as described in Mapping Organization Names.
-- If your JasperReports Server has multiple organizations, but you want all users to be in the same organization, use the externalTenantSetupProcessor bean to specify the organization, as described in Specifying a Single Organization; in this case you don't need to include organization information in the token.
+-   If you have multiple organizations in your deployment, set up the token to contain organization information as above. If you want organization names in JasperReports Server to be different from the ones in the external authority, use the organizationMap property, as described in Mapping Organization Names.
+-   If your JasperReports Server has multiple organizations, but you want all users to be in the same organization, use the externalTenantSetupProcessor bean to specify the organization, as described in Specifying a Single Organization; in this case you don't need to include organization information in the token.
 
 If your JasperReports Server deployment supports only a single organization (all community deployments and some professional editions), you don't need to set organization information.
 
@@ -449,11 +447,11 @@ To set up admin users
         </bean>
     ```
 
-5.  The \${...} syntax above references values configured in the following file:
+5.  The ${...} syntax above references values configured in the following file:
 
-    \<js-install\>\buildomatic\conf_source\iePro\js.config.properties file.
+    &lt;js-install&gt;\\buildomatic\\conf_source\\iePro\\js.config.properties file.
 
-    To set these values, open \<js-install\>\buildomatic\conf_source\iePro\js.config.properties and edit the entries there.
+    To set these values, open &lt;js-install&gt;\\buildomatic\\conf_source\\iePro\\js.config.properties and edit the entries there.
 
     ``` properties
     new.tenant.user.name.1=jasperadmin
@@ -506,7 +504,7 @@ In a multi-tenant deployment, if you don't have organization information in your
 
 If you have multiple organizations in your deployment, you can use the `externalTenantSetupProcessor``ldapExternalTenantProcessor` bean to specify a single organization assigned to all external users. To do this, set `externalTenantSetupProcessor``ldapExternalTenantProcessor`’s `defaultOrganization` property to the organization ID of the selected organization. If an organization with that ID already exists, all external users are assigned to that organization. If the organization does not exist, it's created when the first external user authenticates correctly.
 
-When specifying the `defaultOrganization` value, the organization ID must not contain the following characters: \|, &, \*, ?, \<, \>, /, \\ ~, !, \#, \$, %, ^, \[, or \].
+When specifying the `defaultOrganization` value, the organization ID must not contain the following characters: \|, &, \*, ?, &lt;, &gt;, /, \\, \~, !, #, $, %, \^, \[, or \].
 
 The following example shows how to configure `externalTenantSetupProcessor``ldapExternalTenantProcessor` to assign all users to organization_1:
 

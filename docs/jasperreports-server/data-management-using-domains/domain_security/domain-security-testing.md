@@ -7,8 +7,8 @@ description: "Before creating a security file, CZS prepares for the implementati
 
 Before creating a security file, CZS prepares for the implementation by:
 
-- Enabling Logging
-- Creating a Test Report
+-   Enabling Logging
+-   Creating a Test Report
 
 ## Enabling Logging
 

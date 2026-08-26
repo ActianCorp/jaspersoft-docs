@@ -55,15 +55,15 @@ The **HTML Pro** component is a new component and is available in the **Compone
 
 The **Properties** pane, in the lower-right corner, currently allows you to view the following **HTML Pro** properties:
 
-- **HTML Content Expression**: This is where you provide the specifics of the content (either the URL or the HTML content itself) that will be rendered.
+-   **HTML Content Expression**: This is where you provide the specifics of the content (either the URL or the HTML content itself) that will be rendered.
 
-- **Allow Javascript**: The `com.jaspersoft.jasperreports.html.component.allow.javascript` is used to allow or disallow javascript in HTML. By default, javascript is not allowed, so it is set to `false`.
+-   **Allow Javascript**: The `com.jaspersoft.jasperreports.html.component.allow.javascript` is used to allow or disallow javascript in HTML. By default, javascript is not allowed, so it is set to `false`.
 
-- **Image DPI**: The `com.jaspersoft.jasperreports.html.component.image.dpi` property is used to set the resolution of the images in DPI. This is used when exporting the HTML content to formats other than PDF and HTML.
+-   **Image DPI**: The `com.jaspersoft.jasperreports.html.component.image.dpi` property is used to set the resolution of the images in DPI. This is used when exporting the HTML content to formats other than PDF and HTML.
 
-- **Allowed HTML Tags**: The `com.jaspersoft.jasperreports.html.component.allowed.elements` property is used to set the list of allowed tags in HTML. This property only works if the HTML is provided as a string. It has no effect if the HTML is loaded from a URL.
+-   **Allowed HTML Tags**: The `com.jaspersoft.jasperreports.html.component.allowed.elements` property is used to set the list of allowed tags in HTML. This property only works if the HTML is provided as a string. It has no effect if the HTML is loaded from a URL.
 
-- **Custom Policy Provider**: The `com.jaspersoft.jasperreports.html.component.policy.factory.provider` property specifies a class implementation of the `com.jaspersoft.jasperreports.html.component.policy.factory.provider.PolicyFactoryProvider` interface. It enables a more granular and detailed approach to input sanitization. It is based on customizing an `org.owasp.html.PolicyFactory`.
+-   **Custom Policy Provider**: The `com.jaspersoft.jasperreports.html.component.policy.factory.provider` property specifies a class implementation of the `com.jaspersoft.jasperreports.html.component.policy.factory.provider.PolicyFactoryProvider` interface. It enables a more granular and detailed approach to input sanitization. It is based on customizing an `org.owasp.html.PolicyFactory`.
 
 ![html pro 2](../assets/images/html-pro-2.png)
 

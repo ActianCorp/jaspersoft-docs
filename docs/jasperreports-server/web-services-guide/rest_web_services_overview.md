@@ -7,10 +7,10 @@ description: "The RESTful interface of JasperReports Server responds to HTTP req
 
 The RESTful interface of JasperReports Server responds to HTTP requests from client applications, in particular the following methods (sometimes called verbs):
 
-- GET to list, search and acquire information about repository resources.
-- POST to create new resources and execute reports.
-- PUT to modify resources (note that PUT and POST were reversed in the v1 REST API).
-- DELETE to remove resources.
+-   GET to list, search and acquire information about repository resources.
+-   POST to create new resources and execute reports.
+-   PUT to modify resources (note that PUT and POST were reversed in the v1 REST API).
+-   DELETE to remove resources.
 
 In order to introduce new features and keep backwards compatibility, Jaspersoft® has introduced a second RESTful API using the rest_v2 URL.
 
@@ -82,7 +82,7 @@ organizations *</p></td>
 
 Applications may receive the machine-readable XML description of all supported REST v2 services in Web Application Desciption Language (WADL) at the following URL:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/application.wadl
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/application.wadl
 
 The original REST (now called v1) API is being deprecated. These services are still supported but no longer include the latest features of the server.
 
@@ -136,7 +136,7 @@ organizations *</p></td>
 
 As with any RESTful service, not all methods (GET, PUT, POST, and DELETE) are supported on every service. The URLs usually include a path to the resource being acted upon, as well as any paramters that are accepted by the method. For example, to search for input control resources in the repository, your application would send the following HTTP request:
 
-GET http://\<host\>:\<port\>/jasperserver-pro/rest_v2/resources?type=inputControl
+GET http://&lt;host&gt;:&lt;port&gt;/jasperserver-pro/rest_v2/resources?type=inputControl
 
 The reference chapters in this book give the full description of the methods supported by each URL, the path or resource expected for each method, and the parameters that are required or optional. The description of each method includes a sample of the return value.
 

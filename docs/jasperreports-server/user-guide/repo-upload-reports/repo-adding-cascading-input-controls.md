@@ -17,4 +17,4 @@ select address_city from accounts where $X{EQUALS, address_country, COUNTRY}
 
 When the user selects a country from the COUNTRY input control, the value selected is used by the query of the CITY input control. The CITY input control is refreshed to show the list of cities for the chosen country. Making two selections from smaller lists is much clearer and quicker for report users. For an example of viewing a report that has cascading input controls, see [“Cascading Input Controls” on page 1](../reports/reports-cascading-input-controls.md).
 
-Note that there are other ways to use a parameter in a query. For details about the \$P and \$X syntax and an example of creating a cascading input control, see the JasperReports Server Administrator Guide.
+Note that there are other ways to use a parameter in a query. For details about the $P and $X syntax and an example of creating a cascading input control, see the JasperReports Server Administrator Guide.

@@ -13,7 +13,7 @@ To edit a JRXML file in the Repository
 
     The JRXML is stored locally in your workspace. The default location is in the user directory of your operating system. For example, in Windows, the default workspace is `C:\Users\<username>\JaspersoftWorkspace\MyReports`.
 
-2.  Edit the file, either in the **Design** tab or in the **Source** tab. For example, in the **Repository Explorer** navigate to the Images\JR Logo image resource, and drag it into to the report's Title band. The logo appears in the **Design** tab.
+2.  Edit the file, either in the **Design** tab or in the **Source** tab. For example, in the **Repository Explorer** navigate to the Images\\JR Logo image resource, and drag it into to the report's Title band. The logo appears in the **Design** tab.
 
 3.  Click **Save**. If you are prompted to publish the report, click **Yes**.
 
@@ -28,29 +28,25 @@ Click **Finish**. Your changes are saved to the repository.
 To edit a Report Unit in the Repository
 
 1.  In the **Repository Explorer**, right-click the report unit and select **Properties**.
-
 2.  On the **Resource Editor** tab, change the name and description.
-
 3.  On the **Report Unit** tab, you can change the JRXML file for the report, either by selecting one from the repository, or uploading one through Jaspersoft Studio.
-
 4.  On the **Data Source** tab, select the data source from the repository or from Jaspersoft Studio.
-
 5.  On the **Input Controls** tab, set the display properties for any input controls:
 
-    - **Pop-up Screen**: the controls are shown on-top of the report viewer.
-    - **Separate Page**: the controls are shown in a different page than the report viewer.
-    - **Top of Page**: the controls are shown at the top of the report viewer.
-    - **In Page**: the controls are shown next to the report viewer.
+-   **Pop-up Screen**: the controls are shown on-top of the report viewer.
 
-    !!! note
+    -   **Separate Page**: the controls are shown in a different page than the report viewer.
+    -   **Top of Page**: the controls are shown at the top of the report viewer.
+    -   **In Page**: the controls are shown next to the report viewer.
 
-        Input controls can be created in the JasperReports Server repository and referenced in reports. If you want to use an input control from JasperReports Server in a report, the input control must meet two conditions:
+!!! note
 
-        - The parameter name in the input control must correspond to the name of the parameter in the report. No error occurs for a mismatch, but at run time NULL is passed instead of the actual value of the parameter.
-        - The input control and its corresponding parameter must be of compatible datatypes (for example, both must be text types or date types). If there is a mismatch, the report fails and an exception is returned.
+    Input controls can be created in the JasperReports Server repository and referenced in reports. If you want to use an input control from JasperReports Server in a report, the input control must meet two conditions:
 
-        See the JasperReports Server Administrator Guide for more information.
+    -   The parameter name in the input control must correspond to the name of the parameter in the report. No error occurs for a mismatch, but at run time NULL is passed instead of the actual value of the parameter.
+    -   The input control and its corresponding parameter must be of compatible datatypes (for example, both must be text types or date types). If there is a mismatch, the report fails and an exception is returned.
 
-6.  You can also use the JSP field to modify the appearance of the controls. Specify a name of a JSP file in WEB-INF of the server's host to define the page that displays input controls.
+    See the JasperReports Server Administrator Guide for more information.
 
-7.  Click **Finish**.
+1.  You can also use the JSP field to modify the appearance of the controls. Specify a name of a JSP file in WEB-INF of the server's host to define the page that displays input controls.
+2.  Click **Finish**.

@@ -7,24 +7,23 @@ description: "By default, the server uses three fonts for reports:"
 
 By default, the server uses three fonts for reports:
 
-- DejaVu Sans
-- DejaVu Serif
-- DejaVu Sans Mono
+-   DejaVu Sans
+-   DejaVu Serif
+-   DejaVu Sans Mono
 
 Using the DejaVu fonts included, the server ensures availability of fonts in all environments. The PDF is pixel-perfected every time.
 
 The DejaVu fonts replace the Java logical fonts used in previous versions of the server:
 
-- SansSerif
+-   SansSerif
 
-- Serif
+-   Serif
 
-- Monospaced
+-   Monospaced
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>SansSerif, Serif, Monospaced can still be used, but are deprecated because these Java logical fonts map to different TTF files in different environments, and run the risk of text being cut when exported to PDF due to font metric mismatches. Also, these Java logical fonts are not recognized by some browsers, resulting in font substitutions. For example, Firefox in a Windows environment renders the SansSerif logical font as Serif.</p>
-  </div>
+    !!! note
+
+        SansSerif, Serif, Monospaced can still be used, but are deprecated because these Java logical fonts map to different TTF files in different environments, and run the risk of text being cut when exported to PDF due to font metric mismatches. Also, these Java logical fonts are not recognized by some browsers, resulting in font substitutions. For example, Firefox in a Windows environment renders the SansSerif logical font as Serif.
 
 When using the DejaVu fonts coming from font extensions, you do not need to set any other font attributes (such as the `pdfXXX` attributes) in the JRXML or specify font mapping. The font extension file that makes these fonts available sets font attributes and mapping.
 

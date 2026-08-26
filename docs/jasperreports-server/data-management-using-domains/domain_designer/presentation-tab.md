@@ -13,25 +13,27 @@ The **Data Presentation** tab is where you specify the columns and calculated fi
 
 The **Data Presentation** tab contains the following:
 
-- **Data Structure** panel: Displays available tables and fields for this Domain, including table copies, derived tables, and calculated fields. Joined tables appear as join trees. Dragging a join tree, table, or column from Data Structure to Sets and Items does not remove it from the **Data Structure** panel. This reflects the fact that you can add a resource to more than one set.
+-   **Data Structure** panel: Displays available tables and fields for this Domain, including table copies, derived tables, and calculated fields. Joined tables appear as join trees. Dragging a join tree, table, or column from Data Structure to Sets and Items does not remove it from the **Data Structure** panel. This reflects the fact that you can add a resource to more than one set.
 
-!!! note
+    !!! note
 
-    You cannot delete tables from the Domain on the **Data Presentation** tab. You must do this on the **Data Management** or **Joins** tab.
+        You cannot delete tables from the Domain on the **Data Presentation** tab. You must do this on the **Data Management** or **Joins** tab.
 
-- **Sets and Items** list: Lists resources that will appear to report creators who use the Domain.
-- **Properties** pane: Displays the properties of the associated set or item. This area can be expanded or collapsed.
+-   **Sets and Items** list: Lists resources that will appear to report creators who use the Domain.
 
-To specify which columns and calculated fields are exposed to users of the Domain, drag them from the **Data Structure** panel to the **Sets and Items** panel. The following icons show the different resources:
+-   **Properties** pane: Displays the properties of the associated set or item. This area can be expanded or collapsed.
 
-- ![js DomainDesigner icon DataIsland](../assets/images/js-DomainDesigner-icon-DataIsland.png) – A data island. Corresponds to a join tree or unjoined table, but does not necessarily have the same structure. For example, a data island does not need to contain all the tables or columns from its join tree. In addition, it can contain sets that do not correspond to any table, and it can contain the same field or table several times across different sets. However, a data island can only contain resources from a single join tree or unjoined table, and a join tree or unjoined table can correspond to at most one data island. Can contain sets and items.
+    To specify which columns and calculated fields are exposed to users of the Domain, drag them from the **Data Structure** panel to the **Sets and Items** panel. The following icons show the different resources:
 
-!!! note
+-   ![js DomainDesigner icon DataIsland](../assets/images/js-DomainDesigner-icon-DataIsland.png) – A data island. Corresponds to a join tree or unjoined table, but does not necessarily have the same structure. For example, a data island does not need to contain all the tables or columns from its join tree. In addition, it can contain sets that do not correspond to any table, and it can contain the same field or table several times across different sets. However, a data island can only contain resources from a single join tree or unjoined table, and a join tree or unjoined table can correspond to at most one data island. Can contain sets and items.
 
-    When a user creates an Ad Hoc view, they can only choose sets from the same data island.
+    !!! note
 
-- ![js DomainDesigner icon Set](../assets/images/js-DomainDesigner-icon-Set.png) – A set. A group of resources; can contain items and other sets. Sets can be created by dragging a table, in which case they can only contain items from that table; or they can be created by clicking **Add Set**, in which case they can contain items from different tables in the same join tree.
-- Item icons. An item is a column or calculated field that you want to appear in the Domain. The icon shows the data type of the item:
+        When a user creates an Ad Hoc view, they can only choose sets from the same data island.
+
+-   ![js DomainDesigner icon Set](../assets/images/js-DomainDesigner-icon-Set.png) – A set. A group of resources; can contain items and other sets. Sets can be created by dragging a table, in which case they can only contain items from that table; or they can be created by clicking **Add Set**, in which case they can contain items from different tables in the same join tree.
+
+-   Item icons. An item is a column or calculated field that you want to appear in the Domain. The icon shows the data type of the item:
 
 | Icon | Description |
 |----|----|
@@ -50,17 +52,17 @@ To specify which columns and calculated fields are exposed to users of the Domai
 
 On the **Data Presentation** tab, the **Data Structure** panel displays the tables in your Domains organized into join trees. In this view, a single join tree contains a group of tables that are all connected directly or indirectly through joins. Unjoined tables and columns appear at the top (underneath the data source node), and joined tables and their columns appear at the bottom. The following actions are available:
 
-- Expand the data source node to see the unjoined tables and columns in your Domain.
+-   Expand the data source node to see the unjoined tables and columns in your Domain.
 
-- Expand a join tree to see the tables it contains.
+-   Expand a join tree to see the tables it contains.
 
-- Expand a table or derived table to see the columns it contains.
+-   Expand a table or derived table to see the columns it contains.
 
-- Use **Ctrl-click** or **Command-click** to select multiple items. Use **Shift-click** to select a range of items.
+-   Use **Ctrl-click** or **Command-click** to select multiple items. Use **Shift-click** to select a range of items.
 
-- Drag selected items to the Sets and Items design panel to display it to the users.
+-   Drag selected items to the Sets and Items design panel to display it to the users.
 
-- Hover over an item to see its ID.
+-   Hover over an item to see its ID.
 
 !!! note
 
@@ -70,33 +72,38 @@ On the **Data Presentation** tab, the **Data Structure** panel displays the tabl
 
 The **Sets and Items** list shows the resources you want the user to see, organized into data islands, sets, and items in a nested hierarchy. If there are sets and items at the same level, items appear first. The menu bar at the top of the **Sets and Items** list shows the following:
 
-- **Add Set** – Creates a new subset of a selected set. Not available when no sets have been added.
-- ![js DomainDesigner icon Move Top](../assets/images/js-DomainDesigner-icon-Move-Top.png) ![js DomainDesigner icon Move Up](../assets/images/js-DomainDesigner-icon-Move-Up.png) ![js DomainDesigner icon Move Down](../assets/images/js-DomainDesigner-icon-Move-Down.png) ![js DomainDesigner icon Move Bottom](../assets/images/js-DomainDesigner-icon-Move-Bottom.png) – Move the current selection as follows: to the top, up, down, or to the bottom. Data islands are moved relative to other data islands; items and sets are moved within their containing set or data island.
+-   **Add Set** – Creates a new subset of a selected set. Not available when no sets have been added.
 
-You can also move a set or item by dragging. You can reorder sets and items by dragging them to another location in the same set; however, when you close and reopen a Domain, sets always appear below items. Data islands can be dragged above or below other data islands. You can move items and lower-level sets to any level in the same data island. If you drag a set or item between sets, it appears at the top of the set that it was moved to.
+-   ![js DomainDesigner icon Move Top](../assets/images/js-DomainDesigner-icon-Move-Top.png) ![js DomainDesigner icon Move Up](../assets/images/js-DomainDesigner-icon-Move-Up.png) ![js DomainDesigner icon Move Down](../assets/images/js-DomainDesigner-icon-Move-Down.png) ![js DomainDesigner icon Move Bottom](../assets/images/js-DomainDesigner-icon-Move-Bottom.png) – Move the current selection as follows: to the top, up, down, or to the bottom. Data islands are moved relative to other data islands; items and sets are moved within their containing set or data island.
 
-![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) – Controls the display of sets and items and their properties:
+    You can also move a set or item by dragging. You can reorder sets and items by dragging them to another location in the same set; however, when you close and reopen a Domain, sets always appear below items. Data islands can be dragged above or below other data islands. You can move items and lower-level sets to any level in the same data island. If you drag a set or item between sets, it appears at the top of the set that it was moved to.
 
-- The following selections control the properties you view when a set or item is collapsed. When a resource is expanded, all available properties are visible.
+    ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) – Controls the display of sets and items and their properties:
 
-| Menu Item | Description | Visible Properties |
-|----|----|----|
-| **Default Properties** | Displays an overview of the resource. | Label, Content Type, Summary Calculation, Description |
-| **Identification Properties** | Lets you view the ID and edit the label and description. | Label, ID, Description |
-| **Bundle Keys Properties** | Lets you view and edit properties related to bundle keys for localization. | Label Key, Descriptions Key |
-| **Data Properties** | Lets you select whether an item is a dimension or measure; lets you view and edit properties specific to measures. | Source, Content Type, Summary Calculation, Data Format |
+    -   The following selections control the properties you view when a set or item is collapsed. When a resource is expanded, all available properties are visible.
 
-- The following selections let you expand and collapse the list of sets and items and their properties.
+        | Menu Item | Description | Visible Properties |
+        |----|----|----|
+        | **Default Properties** | Displays an overview of the resource. | Label, Content Type, Summary Calculation, Description |
+        | **Identification Properties** | Lets you view the ID and edit the label and description. | Label, ID, Description |
+        | **Bundle Keys Properties** | Lets you view and edit properties related to bundle keys for localization. | Label Key, Descriptions Key |
+        | **Data Properties** | Lets you select whether an item is a dimension or measure; lets you view and edit properties specific to measures. | Source, Content Type, Summary Calculation, Data Format |
 
-  - **Expand All Properties**: Expands all sets and items and displays expanded properties for all.
-  - **Collapse All Properties**: Collapses all sets and items and displays collapsed properties for all. The properties shown depend on the selection you made.
+    -   The following selections let you expand and collapse the list of sets and items and their properties.
 
-The following selections are available for resources:
+        -   **Expand All Properties**: Expands all sets and items and displays expanded properties for all.
 
-- ![js DomainDesigner expanded arrow blue](../assets/images/js-DomainDesigner-expanded-arrow-blue.png), ![js DomainDesigner collapse arrow blue](../assets/images/js-DomainDesigner-collapse-arrow-blue.png) – Expands or collapses a node in the Sets and Items list.![js DomainDesigner expanded arrow blue](../assets/images/js-DomainDesigner-expanded-arrow-blue.png)
-- ![js DomainDesigner icon join expanded arrow](../assets/images/js-DomainDesigner-icon-join-expanded-arrow.png), ![js DomainDesigner icon join collapsed arrow](../assets/images/js-DomainDesigner-icon-join-collapsed-arrow.png) – Expands or collapses properties. Click in any property to start editing it.
-- ![js DomainDesigner icon remove](../assets/images/js-DomainDesigner-icon-remove.png) – Removes the associated resource.
-- ![js DomainDesigner icon search](../assets/images/js-DomainDesigner-icon-search.png) – Searches items and sets and shows matches if any of the following contain the search string: label, ID, description, label key, descriptions key. Can be used to quickly find similar items and compare and edit their properties.
+        -   **Collapse All Properties**: Collapses all sets and items and displays collapsed properties for all. The properties shown depend on the selection you made.
+
+            The following selections are available for resources:
+
+-   ![js DomainDesigner expanded arrow blue](../assets/images/js-DomainDesigner-expanded-arrow-blue.png), ![js DomainDesigner collapse arrow blue](../assets/images/js-DomainDesigner-collapse-arrow-blue.png) – Expands or collapses a node in the Sets and Items list.![js DomainDesigner expanded arrow blue](../assets/images/js-DomainDesigner-expanded-arrow-blue.png)
+
+-   ![js DomainDesigner icon join expanded arrow](../assets/images/js-DomainDesigner-icon-join-expanded-arrow.png), ![js DomainDesigner icon join collapsed arrow](../assets/images/js-DomainDesigner-icon-join-collapsed-arrow.png) – Expands or collapses properties. Click in any property to start editing it.
+
+-   ![js DomainDesigner icon remove](../assets/images/js-DomainDesigner-icon-remove.png) – Removes the associated resource.
+
+-   ![js DomainDesigner icon search](../assets/images/js-DomainDesigner-icon-search.png) – Searches items and sets and shows matches if any of the following contain the search string: label, ID, description, label key, descriptions key. Can be used to quickly find similar items and compare and edit their properties.
 
 ## Properties
 

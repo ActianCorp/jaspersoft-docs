@@ -15,9 +15,9 @@ Transitioning to modern storage requires zero downtime. Legacy password migratio
 
 JasperReports Server supports two distinct password security strategies, namely legacy and modern, to manage how user credentials are encrypted and validated in the database. The strategy must be specified in the `password.strategy` property.
 
-- The legacy strategy (`password.strategy=legacy`) uses older encryption methods and is only there for backward compatibility during system upgrades. It relies on a hardcoded, unchangeable AES encryption mechanism. Because this encryption is reversible, it creates a major security risk if your database or keys are ever compromised. This strategy completely ignores any modern configuration variables you set under the `password.modern.*` properties.
+-   The legacy strategy (`password.strategy=legacy`) uses older encryption methods and is only there for backward compatibility during system upgrades. It relies on a hardcoded, unchangeable AES encryption mechanism. Because this encryption is reversible, it creates a major security risk if your database or keys are ever compromised. This strategy completely ignores any modern configuration variables you set under the `password.modern.*` properties.
 
-- The modern strategy (`password.strategy=modern`) is the platform standard, built to meet current security frameworks and protect user data against modern attacks. It is the default, recommended setup for all new installations and upgraded environments. Instead of risky, reversible encryption, it uses secure, configurable one-way hashing algorithms so stored credentials can never be decrypted back into plain text. This strategy is also highly customizable, automatically reading and applying any fine-tuning variables you define under the `password.modern.*` application properties.
+-   The modern strategy (`password.strategy=modern`) is the platform standard, built to meet current security frameworks and protect user data against modern attacks. It is the default, recommended setup for all new installations and upgraded environments. Instead of risky, reversible encryption, it uses secure, configurable one-way hashing algorithms so stored credentials can never be decrypted back into plain text. This strategy is also highly customizable, automatically reading and applying any fine-tuning variables you define under the `password.modern.*` application properties.
 
 ## Password Storage Strategy Comparison
 
@@ -35,11 +35,11 @@ The following table lists the algorithms supported for modern password strategy:
 
 !!! info "Important"
 
-    - PBKDF2: The default choice for general use, providing NIST-approved compliance for regulatory needs.
+    -   PBKDF2: The default choice for general use, providing NIST-approved compliance for regulatory needs.
 
-    - Argon2: While this offers the highest level of security against modern threats, specific recommendations may vary depending on your target environment's security requirements and available resources.
+    -   Argon2: While this offers the highest level of security against modern threats, specific recommendations may vary depending on your target environment's security requirements and available resources.
 
-    - Every algorithm uses unique salts and configurable complexity settings to maximize protection.
+    -   Every algorithm uses unique salts and configurable complexity settings to maximize protection.
 
 ## Algorithm Selection
 
@@ -123,11 +123,11 @@ Parameters
 
 The parameters include:
 
-- Iterations: This is the only parameter that affects the security of PBKDF2. Increasing this number makes the hash stronger.
+-   Iterations: This is the only parameter that affects the security of PBKDF2. Increasing this number makes the hash stronger.
 
-- Salt Length: A standard 32-byte unique string is used for every password.
+-   Salt Length: A standard 32-byte unique string is used for every password.
 
-- The Memory Cost, CPU Cost, and Parallelism parameters have no effect when using PBKDF2, even though the same set of parameters are shared across all three algorithms.
+-   The Memory Cost, CPU Cost, and Parallelism parameters have no effect when using PBKDF2, even though the same set of parameters are shared across all three algorithms.
 
 **Configuration example:**
 
@@ -154,13 +154,13 @@ A higher number increases security at the cost of performance, while a lower num
 
 Performance Expectations
 
-- Standard Speed (100,000 iterations): Typically takes very less time to verify a password on modern hardware.
+-   Standard Speed (100,000 iterations): Typically takes very less time to verify a password on modern hardware.
 
-- Direct Scaling: If you increase the iteration count, the verification time increases proportionally (for example, doubling iterations doubles the wait time).
+-   Direct Scaling: If you increase the iteration count, the verification time increases proportionally (for example, doubling iterations doubles the wait time).
 
-- Memory usage: Very efficient, consuming only about 1–2MB per hash.
+-   Memory usage: Very efficient, consuming only about 1–2MB per hash.
 
-- CPU impact: It utilizes one full CPU core while hashing, which is standard for this process.
+-   CPU impact: It utilizes one full CPU core while hashing, which is standard for this process.
 
 #### SCrypt
 
@@ -170,15 +170,15 @@ Parameters
 
 The parameters include:
 
-- Iterations: Determines how many times the hashing process repeats, making it harder for attackers to guess passwords.
+-   Iterations: Determines how many times the hashing process repeats, making it harder for attackers to guess passwords.
 
-- Memory Cost: Sets the amount of memory (RAM) required, which forces attackers to use more expensive, memory-intensive hardware.
+-   Memory Cost: Sets the amount of memory (RAM) required, which forces attackers to use more expensive, memory-intensive hardware.
 
-- CPU Cost: Controls the block size of the hashing process to increase processing complexity.
+-   CPU Cost: Controls the block size of the hashing process to increase processing complexity.
 
-- Parallelism: Defines how many simultaneous threads can be used, helping balance strong security with faster verification for users.
+-   Parallelism: Defines how many simultaneous threads can be used, helping balance strong security with faster verification for users.
 
-- Salt Length: The recommended size for the unique random data added to each password to prevent pre-calculated attack tables (32 bytes).
+-   Salt Length: The recommended size for the unique random data added to each password to prevent pre-calculated attack tables (32 bytes).
 
 **Configuration example:**
 
@@ -202,13 +202,13 @@ Performance Impact
 
 Performance and Expectations
 
-- Standard Speed (65,536 memory cost): Verifying a password usually takes 40–80ms and uses 64 MB of memory.
+-   Standard Speed (65,536 memory cost): Verifying a password usually takes 40–80ms and uses 64 MB of memory.
 
-- Hardware Protection: Because this is a "memory-hard" algorithm, it requires significant RAM to run. This makes it much harder for attackers to use specialized, high-speed hardware (like GPUs) to guess passwords.
+-   Hardware Protection: Because this is a "memory-hard" algorithm, it requires significant RAM to run. This makes it much harder for attackers to use specialized, high-speed hardware (like GPUs) to guess passwords.
 
-- Performance Warning: Because memory cost significantly impacts speed, you should test carefully before increasing it, as even small adjustments can lead to noticeably longer wait times for users.
+-   Performance Warning: Because memory cost significantly impacts speed, you should test carefully before increasing it, as even small adjustments can lead to noticeably longer wait times for users.
 
-- Efficiency: The system can utilize multiple CPU cores to perform these tasks, helping it run smoothly on modern servers.
+-   Efficiency: The system can utilize multiple CPU cores to perform these tasks, helping it run smoothly on modern servers.
 
 #### Argon2
 
@@ -218,13 +218,13 @@ Parameters
 
 The parameters include:
 
-- Time Cost: Sets how many passes the algorithm takes. Higher values significantly increase the time required for an attacker to try and crack a password.
+-   Time Cost: Sets how many passes the algorithm takes. Higher values significantly increase the time required for an attacker to try and crack a password.
 
-- Memory Cost: Determines how much computer memory is required to calculate the hash. By requiring significant RAM, it prevents attackers from using specialized, high-speed hardware like GPUs to guess passwords.
+-   Memory Cost: Determines how much computer memory is required to calculate the hash. By requiring significant RAM, it prevents attackers from using specialized, high-speed hardware like GPUs to guess passwords.
 
-- Parallelism: Defines the number of simultaneous processing threads. This allows the system to handle complex security checks efficiently on modern multi-core servers.
+-   Parallelism: Defines the number of simultaneous processing threads. This allows the system to handle complex security checks efficiently on modern multi-core servers.
 
-- Salt Length: Defines the length of the unique, random string added to each password (16 bytes recommended). This ensures that even identical passwords result in completely different stored hashes, blocking attackers from using pre-calculated look-up tables.
+-   Salt Length: Defines the length of the unique, random string added to each password (16 bytes recommended). This ensures that even identical passwords result in completely different stored hashes, blocking attackers from using pre-calculated look-up tables.
 
 **Configuration example:**
 
@@ -246,17 +246,17 @@ Performance Impact
 
 Performance and Expectations
 
-- High Memory usage: This algorithm uses a significant amount of RAM, which makes it much harder for attackers to use specialized hardware to guess passwords.
+-   High Memory usage: This algorithm uses a significant amount of RAM, which makes it much harder for attackers to use specialized hardware to guess passwords.
 
-- Multi-threading support: It is optimized for modern multi-core processors, ensuring security checks remain fast even under high load.
+-   Multi-threading support: It is optimized for modern multi-core processors, ensuring security checks remain fast even under high load.
 
 Security Advantages
 
-- Proven Industry Standard: Winner of the Password Hashing Competition (PHC), making it one of the most trusted algorithms available.
+-   Proven Industry Standard: Winner of the Password Hashing Competition (PHC), making it one of the most trusted algorithms available.
 
-- Hardware Attack Defense: Provides superior protection against high-speed cracking attacks using GPUs, ASICs, and FPGAs.
+-   Hardware Attack Defense: Provides superior protection against high-speed cracking attacks using GPUs, ASICs, and FPGAs.
 
-- Advanced Leak Resistance: The Argon2id variant is specifically designed to protect against side-channel attacks, offering an extra layer of defense for your credentials.
+-   Advanced Leak Resistance: The Argon2id variant is specifically designed to protect against side-channel attacks, offering an extra layer of defense for your credentials.
 
 ## Configuration
 
@@ -338,13 +338,13 @@ password.migration.batch.size=1000
 
 #### What Happens?
 
-- New passwords: Any password created or changed from this point on will use the new, stricter settings.
+-   New passwords: Any password created or changed from this point on will use the new, stricter settings.
 
-- Existing passwords: Current passwords stay as they are, using the original settings.
+-   Existing passwords: Current passwords stay as they are, using the original settings.
 
-- Mixed environment: Both old and new password formats will safely coexist in your database.
+-   Mixed environment: Both old and new password formats will safely coexist in your database.
 
-- Authentication: The system automatically recognizes which format a user has and authenticates them without issues.
+-   Authentication: The system automatically recognizes which format a user has and authenticates them without issues.
 
 Example:
 
@@ -355,49 +355,49 @@ New password: modern:pbkdf2:100000:... (stronger)
 
 #### Performance Impact
 
-- Higher iterations: Logging in will take slightly longer for users with the new passwords because the system has to work harder to verify them.
+-   Higher iterations: Logging in will take slightly longer for users with the new passwords because the system has to work harder to verify them.
 
-- Higher memory cost: If you are using SCrypt, the server will use more memory during authentication.
+-   Higher memory cost: If you are using SCrypt, the server will use more memory during authentication.
 
-- Mixed load: You will see variable authentication times across your system depending on whether a user is on the old or new settings.
+-   Mixed load: You will see variable authentication times across your system depending on whether a user is on the old or new settings.
 
 ### Scenario 2: Decreasing Security Parameters
 
 #### What Happens?
 
-- New passwords: Any new or updated passwords will use the lower, faster settings.
+-   New passwords: Any new or updated passwords will use the lower, faster settings.
 
-- Existing passwords: Current passwords remain unchanged and continue to use the older, stronger settings.
+-   Existing passwords: Current passwords remain unchanged and continue to use the older, stronger settings.
 
-- Security risk: New passwords will be less secure and easier to crack. We do not recommend this unless it is absolutely necessary.
+-   Security risk: New passwords will be less secure and easier to crack. We do not recommend this unless it is absolutely necessary.
 
 #### When This Might Be Needed?
 
-- Performance bottlenecks: If high-traffic spikes are causing login delays.
+-   Performance bottlenecks: If high-traffic spikes are causing login delays.
 
-- Resource constraints: If your servers or embedded systems are running out of memory/CPU capacity.
+-   Resource constraints: If your servers or embedded systems are running out of memory/CPU capacity.
 
-- Emergency measures: As a temporary fix while troubleshooting system performance issues.
+-   Emergency measures: As a temporary fix while troubleshooting system performance issues.
 
 ### Scenario 3: Changing Algorithm
 
 #### What Happens?
 
-- New passwords: Any password created or changed from this point on will use the newly selected algorithm.
+-   New passwords: Any password created or changed from this point on will use the newly selected algorithm.
 
-- Existing passwords: Current passwords stay exactly as they are and continue to work perfectly.
+-   Existing passwords: Current passwords stay exactly as they are and continue to work perfectly.
 
-- Mixed environment: The system automatically handles multiple algorithms coexisting in the database at the same time.
+-   Mixed environment: The system automatically handles multiple algorithms coexisting in the database at the same time.
 
 #### How It Works?
 
 The system supports seamless transitions between different algorithms because:
 
-- Self-describing formats: The algorithm type is embedded directly into the stored password string.
+-   Self-describing formats: The algorithm type is embedded directly into the stored password string.
 
-- Smart verification: When a user logs in, the system reads which algorithm was used to create that specific password, rather than blindly using your current configuration.
+-   Smart verification: When a user logs in, the system reads which algorithm was used to create that specific password, rather than blindly using your current configuration.
 
-- Zero user disruption: Users can log in without issues, even right after you change the algorithm settings.
+-   Zero user disruption: Users can log in without issues, even right after you change the algorithm settings.
 
 **Example:**
 
@@ -419,21 +419,21 @@ password.modern.algorithm=scrypt
 
 ### Recommendations
 
-- OWASP recommendations:
+-   OWASP recommendations:
 
-  - PBKDF2: Minimum of 10,000 iterations
+    -   PBKDF2: Minimum of 10,000 iterations
 
-  - SCrypt: Minimum memory cost of 16,384
+    -   SCrypt: Minimum memory cost of 16,384
 
-  - Salt size: Minimum of 16 bytes (128 bits)
+    -   Salt size: Minimum of 16 bytes (128 bits)
 
-- NIST guidelines:
+-   NIST guidelines:
 
-  - Iterations: At least 10,000 iterations
+    -   Iterations: At least 10,000 iterations
 
-  - Salt size: At least 16 bytes
+    -   Salt size: At least 16 bytes
 
-  - Hash output: At least 256 bits
+    -   Hash output: At least 256 bits
 
 ## JIUser and JIPasswordMigration Tables
 
@@ -443,10 +443,10 @@ A new table, `JIPasswordMigration`, is added. This table is used to monitor your
 
 The `JIPasswordMigration` table records the date of the migration, the total number of users processed, and a count of both successful updates and failed attempts. It also tracks the migration status:
 
-- `in_progress`: The migration is currently running.
+-   `in_progress`: The migration is currently running.
 
-- `completed`: All users were updated successfully.
+-   `completed`: All users were updated successfully.
 
-- `failed`: The migration did not succeed due to errors.
+-   `failed`: The migration did not succeed due to errors.
 
-- `partial`: The migration was only partially successful. Some users were updated, while others encountered errors.
+-   `partial`: The migration was only partially successful. Some users were updated, while others encountered errors.

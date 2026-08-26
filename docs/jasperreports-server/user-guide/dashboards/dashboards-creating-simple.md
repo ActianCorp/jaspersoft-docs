@@ -13,7 +13,7 @@ This section describes the creation of a simple dashboard.
 
 To create a simple dashboard
 
-1.  Click **Create \> Dashboard**. The Dashboard Designer appears, displaying the list of available content and the canvas.
+1.  Click **Create &gt; Dashboard**. The Dashboard Designer appears, displaying the list of available content and the canvas.
 
 2.  In the **Existing Content** section of the **Available Content** panel, find report 16. Interactive Sales Report.
 

@@ -16,26 +16,26 @@ This chapter assumes you're familiar with LDAP servers and the structure of the 
 
 This chapter contains the following sections:
 
-- [Overview of External LDAP Authentication](ldap-authentication-steps.md)
+-   [Overview of External LDAP Authentication](ldap-authentication-steps.md)
 
-- [Configuring JasperReports Server for LDAP Authentication](configuring-jrs-for-ldap.md)
+-   [Configuring JasperReports Server for LDAP Authentication](configuring-jrs-for-ldap.md)
 
-- [Overview of LDAP Beans](ldap-beans.md)
+-   [Overview of LDAP Beans](ldap-beans.md)
 
-- [Setting the LDAP Connection Parameters](ldap-setting-connection-parameters.md)
+-   [Setting the LDAP Connection Parameters](ldap-setting-connection-parameters.md)
 
-- [Performing LDAP User Search](ldap-user-search.md)
+-   [Performing LDAP User Search](ldap-user-search.md)
 
-- [Mapping the User Roles](ldap-user-role-mapping.md)
+-   [Mapping the User Roles](ldap-user-role-mapping.md)
 
-- [Mapping the User Organization](ldap-setting-user-organization.md)
+-   [Mapping the User Organization](ldap-setting-user-organization.md)
 
-- [Mapping Roles to System Roles](ldap-mapping-system-roles.md)
+-   [Mapping Roles to System Roles](ldap-mapping-system-roles.md)
 
-- [Setting Up Multiple Providers](multiple-providers.md)
+-   [Setting Up Multiple Providers](multiple-providers.md)
 
-- [Troubleshooting LDAP Configurations](ldap-troubleshooting.md)
+-   [Troubleshooting LDAP Configurations](ldap-troubleshooting.md)
 
-- [Adding a Custom Processor](ldap-custom.md)
+-   [Adding a Custom Processor](ldap-custom.md)
 
-- [Restarting](ldap-jrs-restart.md)
+-   [Restarting](ldap-jrs-restart.md)

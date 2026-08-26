@@ -7,8 +7,8 @@ description: "To modify the properties of a user account, put all desired inform
 
 To modify the properties of a user account, put all desired information in a user descriptor, and include it in a PUT request to the rest_v2/users service, with the existing user ID (username) specified in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to modify users of the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to modify users of the root organization.
 
 To modify a user, the user ID in the URL must already exist on the server or in the organization. If the user ID doesn’t exist, a user account will be created, as described in section [Creating a User](creating_a_user1.md).
 

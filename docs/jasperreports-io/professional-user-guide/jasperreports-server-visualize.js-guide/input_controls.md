@@ -13,13 +13,13 @@ The previous mechanism of creating your own input control structures in JavaScri
 
 This chapter contains the following sections:
 
-- Input Control Properties
-- Input Control Functions
-- Embedding Input Controls
-- Handling Input Control Events
-- Resetting Input Control Values
-- Embedded Input Control Styles
-- Custom Input Controls
+-   Input Control Properties
+-   Input Control Functions
+-   Embedding Input Controls
+-   Handling Input Control Events
+-   Resetting Input Control Values
+-   Embedded Input Control Styles
+-   Custom Input Controls
 
 ## Input Control Properties
 

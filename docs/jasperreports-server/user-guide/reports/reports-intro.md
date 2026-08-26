@@ -13,25 +13,25 @@ JasperReports Server makes it easy to run reports. When you run a report, it ope
 
 This chapter contains the following sections:
 
-- Overview of The Report Viewer
+-   Overview of The Report Viewer
 
-- [Running or Creating a Simple Report](reports-running-simple.md)
+-   [Running or Creating a Simple Report](reports-running-simple.md)
 
-- [Getting New Perspectives on Data](reports-data-perspectives.md)
+-   [Getting New Perspectives on Data](reports-data-perspectives.md)
 
-- [Navigating the Report](reports-moving-columns.md)
+-   [Navigating the Report](reports-moving-columns.md)
 
-- [Exporting the Report](reports-moving-columns.md)
+-   [Exporting the Report](reports-moving-columns.md)
 
-- [Scheduling a Report](reports-scheduling.md)
+-   [Scheduling a Report](reports-scheduling.md)
 
-- [Getting the Embed Code for Visualizations](reports-get-embed-code.md)
+-   [Getting the Embed Code for Visualizations](reports-get-embed-code.md)
 
-- [Running a Flash Chart](reports-flash.md)
+-   [Running a Flash Chart](reports-flash.md)
 
-- [Running a Report with Input Controls or Filters](reports-input-controls.md)
+-   [Running a Report with Input Controls or Filters](reports-input-controls.md)
 
-- [Running a Report Book](report-books.md)
+-   [Running a Report Book](report-books.md)
 
 The tutorials in this chapter and throughout this guide assume you’ve installed the sample data provided with the server.
 

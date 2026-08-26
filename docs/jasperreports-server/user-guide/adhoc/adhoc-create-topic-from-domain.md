@@ -39,7 +39,7 @@ To save settings in the Data Chooser wizard as a Domain Topic
 1.  While making selections in the Data Chooser, navigate to the **Save Topic** page.
 
 2.  Enter a Topic name and description.<br>
-    Do not change the location folder. Using the default /adhoc/topics folder makes the saved Domain Topic available in the **Ad Hoc Components \> Topics** folder when you select **Create \> Ad Hoc View**.
+    Do not change the location folder. Using the default /adhoc/topics folder makes the saved Domain Topic available in the **Ad Hoc Components &gt; Topics** folder when you select **Create &gt; Ad Hoc View**.
 
 3.  If your data selections, filter definitions, and display settings are complete, click **Table**, **Chart**, or **Crosstab**.
 
@@ -47,7 +47,7 @@ To save settings in the Data Chooser wizard as a Domain Topic
 
         If settings are incomplete, navigate to the other pages to finish, then click **Table**, **Chart**, or **Crosstab**
 
-The new Topic appears in the **Ad Hoc Components \> Topics** folder.
+The new Topic appears in the **Ad Hoc Components &gt; Topics** folder.
 
 Because a Domain Topic is a type of report, it appears when the Search page is filtered to show reports:
 
@@ -57,7 +57,7 @@ You can modify a Domain Topic you created using the Data Chooser.
 
 To edit the settings in a Domain Topic
 
-1.  Select **View \> Repository** and search (or browse) for the Domain Topic you want to modify. Domain Topics are usually kept in the **Ad Hoc Components \> Topics** folder.
+1.  Select **View &gt; Repository** and search (or browse) for the Domain Topic you want to modify. Domain Topics are usually kept in the **Ad Hoc Components &gt; Topics** folder.
 
 2.  Right-click the Domain Topic and select **Open in Designer** from the context menu. The Domain Topic opens in the Data Chooser wizard.
 

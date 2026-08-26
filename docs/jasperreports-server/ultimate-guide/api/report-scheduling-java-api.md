@@ -11,17 +11,17 @@ Reports on the server can be executed asynchronously using the Report Scheduling
 
 A report job definition consists of:
 
-- Report attributes: Each job must be linked to a single JasperReport on the server. If applicable, the job must also contain values for the report input parameters.
+-   Report attributes: Each job must be linked to a single JasperReport on the server. If applicable, the job must also contain values for the report input parameters.
 
-- Scheduling attributes: Instruct the scheduler when to execute the job. A report job can be a one-time job that can be launched immediately or at a specified moment, or a recurring job that runs repeatedly at specified times.
+-   Scheduling attributes: Instruct the scheduler when to execute the job. A report job can be a one-time job that can be launched immediately or at a specified moment, or a recurring job that runs repeatedly at specified times.
 
 Two types of recurrence are supported by default:
 
-- Simple recurrence - You can schedule a job to repeat at fixed time intervals like every 4 hours, every 2 days, or every week. The job start date attribute is used to specify the moment of the first occurrence. You can specify the number of times the job should occur or an end date for the job.
+-   Simple recurrence - You can schedule a job to repeat at fixed time intervals like every 4 hours, every 2 days, or every week. The job start date attribute is used to specify the moment of the first occurrence. You can specify the number of times the job should occur or an end date for the job.
 
-- Calendar recurrence - You can schedule a job to repeat at specified calendar moments like at 8 PM every work day or on the first of every month.
+-   Calendar recurrence - You can schedule a job to repeat at specified calendar moments like at 8 PM every work day or on the first of every month.
 
-- Output attributes. Instruct the scheduling service on what to do with the report output. You specify the report output formats and the repository location where the report output is saved. You can also specify one or more addresses to which email notifications are sent. The notifications can include the report output.
+-   Output attributes. Instruct the scheduling service on what to do with the report output. You specify the report output formats and the repository location where the report output is saved. You can also specify one or more addresses to which email notifications are sent. The notifications can include the report output.
 
 A report job definition is an instance of the `com.jaspersoft.jasperserver.api.engine.scheduling.domain.ReportJob`<br>
 bean class. To instantiate a new report job definition, you would use code similar to the following:
@@ -135,7 +135,7 @@ ReportJobAlert alert = new ReportJobAlert();
 
     The ADMIN recipient is set by role. The default is ROLE_ADMINISTRATOR. The ADMIN recipient can be changed in the `administratorRole` bean in `<js-src>/jasperserver/jasperserver-war/src/main/webapp/WEB-INF/applicationContext-report-scheduling.xml`.
 
-    For example, suppose you have used Manage \> Roles in the JasperServer user interface to add the role ROLE_SCHEDULER_ADMIN. To set that user as the recipient for all ADMIN email alerts, modify the `administratorRole` bean as follows:
+    For example, suppose you have used Manage &gt; Roles in the JasperServer user interface to add the role ROLE_SCHEDULER_ADMIN. To set that user as the recipient for all ADMIN email alerts, modify the `administratorRole` bean as follows:
 
     `<entry key="administratorRole" value="ROLE_SCHEDULER_ADMIN">`
 
@@ -145,9 +145,9 @@ A report job model allows you to specify scheduling and output attributes for mu
 
 A report job model definition consists of:
 
-- Scheduling attributes. Instruct the scheduler when to execute the job. A report job model can specify a one-time job, a simple recurring job, or a calendar recurring job.
+-   Scheduling attributes. Instruct the scheduler when to execute the job. A report job model can specify a one-time job, a simple recurring job, or a calendar recurring job.
 
-- Output attributes. Instruct the scheduling service what to do with the report output.
+-   Output attributes. Instruct the scheduling service what to do with the report output.
 
 You need to define only those attributes you want to update. Empty attributes are left unchanged in the original report jobs.
 
@@ -191,11 +191,11 @@ The report scheduling service also uses `ReportJobModel` to retrieve a list of a
 
 Report job summaries hold information returned by the scheduler service. The `ReportJobSummary` class has a number of methods that allow you to retrieve specific information about the summary. Some useful methods are:
 
-- `getStateCode`: Returns the execution state of the report job, such as `STATE_COMPLETE`, `STATE_EXECUTING`, etc.
+-   `getStateCode`: Returns the execution state of the report job, such as `STATE_COMPLETE`, `STATE_EXECUTING`, etc.
 
-- `getNextFireTime`: Returns the next time the job is scheduled to run, `null` if not scheduled in the future.
+-   `getNextFireTime`: Returns the next time the job is scheduled to run, `null` if not scheduled in the future.
 
-- `getPreviousFireTime`: Returns the last time that the job was run, `null` if the job has not yet been executed.
+-   `getPreviousFireTime`: Returns the last time that the job was run, `null` if the job has not yet been executed.
 
 ## Report Job ID Holder
 
@@ -223,9 +223,9 @@ To load the full report job definition for a job, use the `getScheduledJob` meth
 
 You can alter and update a list of report jobs using the `updateScheduledJobs` service method. `updateScheduledJob` takes a `ReportJobModel` and updates the specified jobs to match the attributes in the `ReportJobModel`. Unspecified attributes remain unchanged. The trigger is handled somewhat differently from the other attributes. A Boolean parameter, `replaceTriggerIgnoreType`, specifies one of two options:
 
-- `true`: Replace the trigger in all listed report jobs with the trigger in the `ReportJobModel`.
+-   `true`: Replace the trigger in all listed report jobs with the trigger in the `ReportJobModel`.
 
-- `false`: If a trigger is present in the report job model, check that all listed report jobs have the same trigger type (`SimpleTrigger` or `CalendarTrigger`) as the report job model. If one or more report jobs have a different trigger type, the update fails for all report jobs.
+-   `false`: If a trigger is present in the report job model, check that all listed report jobs have the same trigger type (`SimpleTrigger` or `CalendarTrigger`) as the report job model. If one or more report jobs have a different trigger type, the update fails for all report jobs.
 
 For example, to update two report jobs, including the trigger, to match the parameters in a specified report job model, you should use code similar to the following:
 
@@ -245,13 +245,13 @@ updateScheduledJobs(executionContext, reportJobs, jobModel,
 
 Two methods of the scheduling service let you retrieve a list of jobs. The retrieved list consists of instances of `com.jaspersoft.jasperserver.api.engine.scheduling.domain.ReportJobSummary` that contain basic job attributes, plus runtime attributes like job status and previous/next fire times.
 
-- `getScheduledJobSummaries` can be used as follows:
+-   `getScheduledJobSummaries` can be used as follows:
 
-  - Retrieves job summaries of all active report jobs defined in the scheduler.
-  - With a `reportUnitURI`, retrieves the list of job summaries for scheduled jobs for a report unit.
-  - With a `ReportJobModel` along with other parameters, retrieves the list of scheduled job summaries that match the criteria specified by the `ReportJobModel`.
+    -   Retrieves job summaries of all active report jobs defined in the scheduler.
+    -   With a `reportUnitURI`, retrieves the list of job summaries for scheduled jobs for a report unit.
+    -   With a `ReportJobModel` along with other parameters, retrieves the list of scheduled job summaries that match the criteria specified by the `ReportJobModel`.
 
-- `getJobsByNextFireTime` retrieves the list of all jobs with a next fire time in a specified time interval.
+-   `getJobsByNextFireTime` retrieves the list of all jobs with a next fire time in a specified time interval.
 
 For example, to get all active jobs that match a report job model, you should use code similar to the following:
 

@@ -14,23 +14,21 @@ Prepare your system and the installation media before running the installer in c
 Procedure
 
 1.  Open a console window and navigate to the temporary directory where you extracted the product archive file.
-
 2.  Run the installer using one of the following commands:
 
-    - On Windows:
+-   On Windows:
 
     `Run TIBCOUniversalInstaller -console`
 
     The installer launches a second console window.
 
-    - On UNIX:
+    -   On UNIX:
 
-    `Run ./TIBCOUniversalInstaller.lnx-x86-64.bin -console`
+        `Run ./TIBCOUniversalInstaller.lnx-x86-64.bin -console`
 
-    - On Mac OS:
+    -   On Mac OS:
 
-    `Run ./TIBCOUniversalInstaller.mac.command -console`
+`Run ./TIBCOUniversalInstaller.mac.command -console`
 
-3.  Complete the installation by responding to the console window prompts, which are similar to those described in the section [Installing in GUI Mode](tibco-installation.md). The console also provides an option to return to a previous selection periodically.
-
-4.  When the installation is completed, press **Enter** to exit the installer.
+1.  Complete the installation by responding to the console window prompts, which are similar to those described in the section [Installing in GUI Mode](tibco-installation.md). The console also provides an option to return to a previous selection periodically.
+2.  When the installation is completed, press **Enter** to exit the installer.

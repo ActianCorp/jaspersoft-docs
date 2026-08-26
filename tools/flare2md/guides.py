@@ -11,9 +11,16 @@ multi-valued variables and include/exclude condition sets *per target*, so the
 target is the only place the correct product name, version and audience
 (commercial vs community) are recorded.
 
-Guides whose project has no dedicated HTML target set `guide_condition` instead:
-the converter then synthesizes the equivalent condition expression (include this
-guide's own JasperGuideConditions token, exclude every sibling guide's token).
+Every guide names its target, and it is the guide's *HTML5* target: that is the
+one the published portal builds from, and the choice matters. The sibling
+targets for the same TOC differ in what they hide — `domain-help.fltar` excludes
+ExcludeFromHelp content, `JasperReports-Server-Domains-HTML5.fltar` keeps it —
+so reading the wrong one silently drops or adds pages.
+
+A guide with no target on disk can fall back to `guide_condition`, and the
+converter then synthesizes a condition expression (include this guide's own
+JasperGuideConditions token, exclude every sibling guide's token). Nothing uses
+that path today; it is a guess, and the real target is always better.
 """
 from __future__ import annotations
 
@@ -115,7 +122,7 @@ GUIDES = [
         family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="jrs-security/JasperReports-Server-Security-Guide.fltoc",
-        guide_condition="jrs-security",
+        target="jrs-security/JasperReports-Server-Security-Guide-HTML5.fltar",
         summary="Harden a deployment: encryption, authentication, session security and known concerns.",
         icon="material/lock",
     ),
@@ -135,7 +142,7 @@ GUIDES = [
         family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="jrs-domains/jrs-domain.fltoc",
-        guide_condition="jrs-domains",
+        target="jrs-domains/JasperReports-Server-Domains-HTML5.fltar",
         summary="Design and maintain Domains, the semantic layer behind Ad Hoc views and Topics.",
         icon="material/database-cog",
     ),
@@ -185,7 +192,7 @@ GUIDES = [
         family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="jrs-ultimate/JS Ultimate Guide.fltoc",
-        guide_condition="jrs-ultimate",
+        target="jrs-ultimate/JRS-Ultimate-Guide-HTML5.fltar",
         summary="Deep-dive reference covering the server architecture, repository internals and APIs.",
         icon="material/book-open-page-variant",
     ),
@@ -209,7 +216,7 @@ GUIDES = [
         family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="Jaspersoft-platform-support-commercial-edition.fltoc",
-        guide_condition="jrs-platform-support-commercial",
+        target="jrs-platform-support-commercial/jrs-platform-support-commercial-HTML5.fltar",
         summary="Certified operating systems, application servers, databases and browsers.",
         icon="material/check-decagram",
     ),
@@ -230,7 +237,7 @@ GUIDES = [
         family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="jrs-olap-user/Jaspersoft-OLAP-User-Guide.fltoc",
-        guide_condition="jrs-olap-user",
+        target="jrs-olap-user/Jaspersoft-OLAP-User-Guide-HTML5.fltar",
         summary="Browse and analyze OLAP data: views, crosstabs, drill-through and MDX queries.",
         icon="material/cube-outline",
     ),
@@ -240,7 +247,7 @@ GUIDES = [
         family="jasperreports-server",
         project="js-jrs-JasperReportsServer",
         toc="jrs-olap-ultimate/Jaspersoft-OLAP-Ultimate-Guide.fltoc",
-        guide_condition="jrs-olap-ultimate",
+        target="jrs-olap-ultimate/Jaspersoft-OLAP-Ultimate-Guide-HTML5.fltar",
         summary="Design and tune OLAP schemas, connections and Mondrian performance.",
         icon="material/cube-scan",
     ),

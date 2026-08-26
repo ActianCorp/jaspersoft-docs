@@ -15,15 +15,15 @@ This document describes how to compile and run the Jaspersoft® Studio Professio
 
 The zip package named `js-jss_10.1.0_sources.zip` contains the following items:
 
-- `jdkPackages` folder: Contains compressed files of the JDK version shipped with Jaspersoft Studio (required during the build).
+-   `jdkPackages` folder: Contains compressed files of the JDK version shipped with Jaspersoft Studio (required during the build).
 
-- `playwrightPackages` folder: Contains compressed files of the Playwright version shipped with Jaspersoft Studio (required during the build and runtime).
+-   `playwrightPackages` folder: Contains compressed files of the Playwright version shipped with Jaspersoft Studio (required during the build and runtime).
 
-- `sources` folder: Contains the source code of the Jaspersoft Studio Professional version.
+-   `sources` folder: Contains the source code of the Jaspersoft Studio Professional version.
 
-- `targetRepoE438-10.1.0.zip` : Contains the target repository that can be used for both compiling in the Eclipse and building via Maven Tycho.
+-   `targetRepoE438-10.1.0.zip` : Contains the target repository that can be used for both compiling in the Eclipse and building via Maven Tycho.
 
-- `js-jss_10.1.0_license.txt` file: The current license file.
+-   `js-jss_10.1.0_license.txt` file: The current license file.
 
 ## Setting Up Eclipse and Your Workspace
 
@@ -38,37 +38,39 @@ To set up Eclipse and Workspace:
 
 3.  Configure the proper Java Virtual Machine (JVM) for compiling Jaspersoft Studio source code:
 
-    1.  Select **Eclipse \> Preferences \> Java \> Installed JREs**. Make sure that Java 21 is in the list of items. This is because the Jaspersoft Studio source code is compatible with version 21, also the final product runs on version 21. Therefore, it is better to set it up properly (<https://adoptium.net/download/>). You could also utilize the JDK artifact that is included in the `jdkPackages` folder.
+    1.  Select **Eclipse &gt; Preferences &gt; Java &gt; Installed JREs**. Make sure that Java 21 is in the list of items. This is because the Jaspersoft Studio source code is compatible with version 21, also the final product runs on version 21. Therefore, it is better to set it up properly (<https://adoptium.net/download/>). You could also utilize the JDK artifact that is included in the `jdkPackages` folder.
 
-    ![configuration installedJREs](../assets/images/configuration_installedJREs.png)
+        ![configuration installedJREs](../assets/images/configuration_installedJREs.png)
 
-4.  Select **Eclipse \> Preferences \> Java \> Installed JREs \> Execution Environment**. Select the best compatible JVM for each execution environment (that is, Java 21).
+    2.  Select **Eclipse &gt; Preferences &gt; Java &gt; Installed JREs &gt; Execution Environment**. Select the best compatible JVM for each execution environment (that is, Java 21).
 
-    ![configuration executionEnvironments](../assets/images/configuration_executionEnvironments.png)
+        ![configuration executionEnvironments](../assets/images/configuration_executionEnvironments.png)
 
-5.  Select **Eclipse \> Preferences \> Java \> Compiler**. Change the **Compiler compliance level** to 21. The code base is compatible with Java 21.
+    3.  Select **Eclipse &gt; Preferences &gt; Java &gt; Compiler**. Change the **Compiler compliance level** to 21. The code base is compatible with Java 21.
 
-    ![configuration compilerSettings](../assets/images/configuration_compilerSettings.png)
+        ![configuration compilerSettings](../assets/images/configuration_compilerSettings.png)
 
-6.  Configure the proper target platform for compiling Jaspersoft Studio source code:
+4.  Configure the proper target platform for compiling Jaspersoft Studio source code:
 
-    1.  Select **Eclipse \> Preferences \> Plug-in Development \> Target Platform**.
+    1.  Select **Eclipse &gt; Preferences &gt; Plug-in Development &gt; Target Platform**.
+
     2.  Add a new platform starting from the **Nothing** option, then add the `targetRepoE438-10.1.0` directory containing the plug-ins and features that are the foundation for the Jaspersoft Studio platform.
 
-    ![configuration targetPlatform](../assets/images/configuration_targetPlatform.png)
+        ![configuration targetPlatform](../assets/images/configuration_targetPlatform.png)
 
-7.  Select the newly created platform to compile the sources.
+    3.  Select the newly created platform to compile the sources.
 
-    ![configuration targetPlatformSelected](../assets/images/configuration_targetPlatformSelected.png)
+        ![configuration targetPlatformSelected](../assets/images/configuration_targetPlatformSelected.png)
 
-8.  Import the existing projects from the *sources* folder:
+5.  Import the existing projects from the *sources* folder:
 
-    1.  Select **File \> Import**.
-    2.  Select **Import (wizard) \> General \> Existing Projects into Workspace**.
+    1.  Select **File &gt; Import**.
 
-    ![import sourceprojects](../assets/images/import_sourceprojects.png)
+    2.  Select **Import (wizard) &gt; General &gt; Existing Projects into Workspace**.
 
-9.  Configure the wizard to point to the location of the downloaded `sources` directory, then click **Finish**. It is recommended to copy the projects directly into the dedicated workspace to avoid modifying the original ones.
+        ![import sourceprojects](../assets/images/import_sourceprojects.png)
+
+    3.  Configure the wizard to point to the location of the downloaded `sources` directory, then click **Finish**. It is recommended to copy the projects directly into the dedicated workspace to avoid modifying the original ones.
 
 !!! note
 
@@ -78,7 +80,7 @@ To set up Eclipse and Workspace:
 
 To run/debug a version of the Jaspersoft Studio runtime from the development environment, you can create a run/debug configuration:
 
-1.  Select **Run \> Debug Configurations \> Eclipse Application \> New** from the menu.
+1.  Select **Run &gt; Debug Configurations &gt; Eclipse Application &gt; New** from the menu.
 
 2.  Enter the name and select `com.jaspersoft.studio.pro.rcp.product` for **Run a product** option.
 
@@ -121,8 +123,8 @@ To test the way the final product looks after export, you can leverage Maven Tyc
 
 !!! note
 
-    - All the source projects must be in one single folder, for example, it could be the Eclipse workspace or you may copy the projects into a new dedicated folder.
-    - To build the Jaspersoft Studio Professional project use the `aggregator.pro` project as main location.
+    -   All the source projects must be in one single folder, for example, it could be the Eclipse workspace or you may copy the projects into a new dedicated folder.
+    -   To build the Jaspersoft Studio Professional project use the `aggregator.pro` project as main location.
 
 1.  Make sure you have correctly installed Maven.
 
@@ -130,53 +132,53 @@ To test the way the final product looks after export, you can leverage Maven Tyc
 
     **Method 1**
 
-3.  Configure your Maven `settings.xml` file. You can start from the following sample `settings.xml` file:
+    1.  Configure your Maven `settings.xml` file. You can start from the following sample `settings.xml` file:
 
-    ``` xml
-    <settings>
-        <profiles>
-            <profile>
-                <id>JSSProfile</id>
-            <repositories>
-            <repository>
-              <id>central</id>
-              <name>jaspersoft-repo</name>
-              <url>https://jaspersoft.jfrog.io/jaspersoft/jaspersoft-repo</url>
-            </repository>
-            </repositories>
-                <properties>
-            <!-- Local Repository with the target platform for building -->
-            <targetplatform.repo>/tmp/temp_building/targetRepoE438-10.1.0</targetplatform.repo>
-            <!-- JDK files location -->
-            <jre.packages.location>/tmp/temp_building/jdkPackages</jre.packages.location>
-            <!-- Playwright artifacts location -->
-            <playwright.packages.location>/tmp/temp_building/playwrightPackages</playwright.packages.location>
-            </properties>
-        </profile>
-        </profiles>
-        <activeProfiles>
-        <activeProfile>JSSProfile</activeProfile>
-        </activeProfiles>
-    </settings>
-    ```
+        ``` xml
+        <settings>
+            <profiles>
+                <profile>
+                    <id>JSSProfile</id>
+                <repositories>
+                <repository>
+                  <id>central</id>
+                  <name>jaspersoft-repo</name>
+                  <url>https://jaspersoft.jfrog.io/jaspersoft/jaspersoft-repo</url>
+                </repository>
+                </repositories>
+                    <properties>
+                <!-- Local Repository with the target platform for building -->
+                <targetplatform.repo>/tmp/temp_building/targetRepoE438-10.1.0</targetplatform.repo>
+                <!-- JDK files location -->
+                <jre.packages.location>/tmp/temp_building/jdkPackages</jre.packages.location>
+                <!-- Playwright artifacts location -->
+                <playwright.packages.location>/tmp/temp_building/playwrightPackages</playwright.packages.location>
+                </properties>
+            </profile>
+            </profiles>
+            <activeProfiles>
+            <activeProfile>JSSProfile</activeProfile>
+            </activeProfiles>
+        </settings>
+        ```
 
-4.  In the `aggregator.pro` project folder, run the following command.
+    2.  In the `aggregator.pro` project folder, run the following command.
 
-    ``` bash
-    $ mvn clean package
-    ```
+        ``` bash
+        $ mvn clean package
+        ```
 
-    **Method 2**: In the `aggregator.pro` folder, provide all the details in one single command:
+        **Method 2**: In the `aggregator.pro` folder, provide all the details in one single command:
 
-    ``` bash
-    mvn clean package <br>
-    -Dmaven.repo.remote=https://jaspersoft.jfrog.io/jaspersoft/jaspersoft-repo <br>
-    -Dtargetplatform.repo=/tmp/temp_building/targetRepoE438-10.1.0 <br>
-    -Djre.packages.location=/tmp/temp_building/jdkPackages <br>
-    -Dplaywright.packages.location=/tmp/temp_building/playwrightPackages
-    ```
+        ``` bash
+        mvn clean package <br>
+        -Dmaven.repo.remote=https://jaspersoft.jfrog.io/jaspersoft/jaspersoft-repo <br>
+        -Dtargetplatform.repo=/tmp/temp_building/targetRepoE438-10.1.0 <br>
+        -Djre.packages.location=/tmp/temp_building/jdkPackages <br>
+        -Dplaywright.packages.location=/tmp/temp_building/playwrightPackages
+        ```
 
-5.  When the build is completed, you can retrieve the product artifacts from the following location:
+3.  When the build is completed, you can retrieve the product artifacts from the following location:
 
     ``` xml
     <FULLWORKSPACE_PATH>/com.jaspersoft.studio.pro.rcp.product/target/products/ com.jaspersoft.studio.pro.rcp.product/
@@ -184,49 +186,50 @@ To test the way the final product looks after export, you can leverage Maven Tyc
 
     `FULLWORKSPACE_PATH` is the location where all the sources are located including an Eclipse workspace folder.
 
-6.  To properly package the previously created raw artifacts, perform the following steps:
+4.  To properly package the previously created raw artifacts, perform the following steps:
 
     1.  Select the subfolder `ant-scripts` from `aggregator.pro` project as a current location.
+
     2.  Run the following command using ANT:
 
-    ``` text
-    ant -buildfile packageRawDistributions.xml -Djre.packages.location=/tmp/temp_building/jdkPackages -Dplaywright.packages.location=/tmp/temp_building/playwrightPackages
-    ```
+        ``` text
+        ant -buildfile packageRawDistributions.xml -Djre.packages.location=/tmp/temp_building/jdkPackages -Dplaywright.packages.location=/tmp/temp_building/playwrightPackages
+        ```
 
-7.  The zipped artifacts are found in the `product/dist` project subfolder.
+    3.  The zipped artifacts are found in the `product/dist` project subfolder.
 
 ## Troubleshooting Jaspersoft Studio Development Environment Setup
 
 Depending on the environment configuration, you might experience these common issues:
 
-- Build errors
+-   Build errors
 
-  - Issue: Sometimes after importing sources, the two projects, `com.jaspersoft.studio.data.sql` and `com.jaspersoft.studio.editor.jrexpressions` may fail to build correctly.
+    -   Issue: Sometimes after importing sources, the two projects, `com.jaspersoft.studio.data.sql` and `com.jaspersoft.studio.editor.jrexpressions` may fail to build correctly.
 
-  - Solution: Create a new folder named `xtend-gen` inside both the project directories. This allows the compilation of these plug-in projects and their associated UI components to complete successfully.
+    -   Solution: Create a new folder named `xtend-gen` inside both the project directories. This allows the compilation of these plug-in projects and their associated UI components to complete successfully.
 
-- Workspace errors via Javadoc API references
+-   Workspace errors via Javadoc API references
 
-  - Issue: The Problems view displays numerous errors across various imported projects, mostly related to Javadoc API references.
+    -   Issue: The Problems view displays numerous errors across various imported projects, mostly related to Javadoc API references.
 
-  - Solution: Navigate to **Preferences \> Java \> Compiler \> Errors/Warnings**. Under the **Deprecated and restricted API** section, change **Forbidden reference (access rules)** to **Warning**.
+    -   Solution: Navigate to **Preferences &gt; Java &gt; Compiler &gt; Errors/Warnings**. Under the **Deprecated and restricted API** section, change **Forbidden reference (access rules)** to **Warning**.
 
-- Logging configuration and plugin startup issues
+-   Logging configuration and plugin startup issues
 
-  - Issue: Errors occur when expanding or modifying the logging setup configuration.
+    -   Issue: Errors occur when expanding or modifying the logging setup configuration.
 
-  - Solution: Manually match the plugin startup-level configurations to the final product. Update the following bundles in your dedicated runtime configuration:
+    -   Solution: Manually match the plugin startup-level configurations to the final product. Update the following bundles in your dedicated runtime configuration:
 
-    ``` text
-    - org.apache.aries.spifly.dynamic.bundle 2 / true
-    - org.apache.felix.scr 2 / true
-    - org.apache.logging.log4j.api 2 / true
-    - org.apache.logging.log4j.slf4j2.impl 2 / true
-    - org.eclipse.equinox.common 2 / true
-    - org.eclipse.equinox.event 2 / true
-    - org.eclipse.equinox.simpleconfigurator 1 / true
-    - org.eclipse.osgi 1 / true
-    ```
+        ``` text
+        - org.apache.aries.spifly.dynamic.bundle 2 / true
+        - org.apache.felix.scr 2 / true
+        - org.apache.logging.log4j.api 2 / true
+        - org.apache.logging.log4j.slf4j2.impl 2 / true
+        - org.eclipse.equinox.common 2 / true
+        - org.eclipse.equinox.event 2 / true
+        - org.eclipse.equinox.simpleconfigurator 1 / true
+        - org.eclipse.osgi 1 / true
+        ```
 
 ### Additional information
 

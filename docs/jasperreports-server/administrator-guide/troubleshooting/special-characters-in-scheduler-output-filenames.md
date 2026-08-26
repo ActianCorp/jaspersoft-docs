@@ -37,8 +37,8 @@ A new property `skip.filename.validation.unsupportedSymbols` in the `js.config.p
 
     Even when the `skip.filename.validation.unsupportedSymbols=false`, `#`, `%`, and `/` are excluded from validation as:
 
-    - `#`: breaks into a new string
+    -   `#`: breaks into a new string
 
-    - `/`: creates a sub-folder
+    -   `/`: creates a sub-folder
 
-    - `%`: expects a hexadecimal character
+    -   `%`: expects a hexadecimal character

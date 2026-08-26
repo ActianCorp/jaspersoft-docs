@@ -60,15 +60,15 @@ The sample data includes dashboards, reports, Domains, data sources, and many of
 
 Users and administrators can browse or search the repository, depending on what action they want to perform and how resources are organized. Searching the repository finds specific resources faster. For more information on browsing and searching the repository, see the JasperReports Server User Guide.
 
-- Browsing - On the Home page, click **View \> Repository**.
+-   Browsing - On the Home page, click **View &gt; Repository**.
 
-  The Folders panel on the left lists the folders in the repository and the Repository panel lists the contents of the selected folder. The tool bar in the Repository panel allows administrators to perform actions such as **Copy**, **Cut**, **Paste**, and **Delete**; select several resources with Control-click or Shift-click to perform actions in bulk.
+    The Folders panel on the left lists the folders in the repository and the Repository panel lists the contents of the selected folder. The tool bar in the Repository panel allows administrators to perform actions such as **Copy**, **Cut**, **Paste**, and **Delete**; select several resources with Control-click or Shift-click to perform actions in bulk.
 
 ![js Repository Browse](../assets/images/js-Repository-Browse.png)
 
 *Figure 3: Browsing the Repository*
 
-- Searching - Enter a search term in the search field at the top of any page, or select **View \> Search Results**.<br>
+-   Searching - Enter a search term in the search field at the top of any page, or select **View &gt; Search Results**.<br>
 
 ![js MenuBar search](../assets/images/js-MenuBar-search.png)
 

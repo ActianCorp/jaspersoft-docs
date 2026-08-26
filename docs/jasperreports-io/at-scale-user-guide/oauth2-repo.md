@@ -7,23 +7,23 @@ description: "By default, JasperReports IO At-Scale comes with three preconfigur
 
 By default, JasperReports IO At-Scale comes with three preconfigured OAuth2 repositories for Google Drive, GitHub, and Dropbox. Each of these is defined in the following folders:
 
-- `jrio-export-docker/jrio/applicationContext-google-drive.xml`
+-   `jrio-export-docker/jrio/applicationContext-google-drive.xml`
 
-- `jrio-export-docker/jrio/applicationContext-github.xml`
+-   `jrio-export-docker/jrio/applicationContext-github.xml`
 
-- `jrio-export-docker/jrio/applicationContext-dropbox.xml`
+-   `jrio-export-docker/jrio/applicationContext-dropbox.xml`
 
-- `jrio-reporting-docker/jrio/applicationContext-google-drive.xml`
+-   `jrio-reporting-docker/jrio/applicationContext-google-drive.xml`
 
-- `jrio-reporting-docker/jrio/applicationContext-github.xml`
+-   `jrio-reporting-docker/jrio/applicationContext-github.xml`
 
-- `jrio-reporting-docker/jrio/applicationContext-dropbox.xml`
+-   `jrio-reporting-docker/jrio/applicationContext-dropbox.xml`
 
-- `jrio-rest-docker/jrio/WEB-INF/applicationContext-google-drive.xml`
+-   `jrio-rest-docker/jrio/WEB-INF/applicationContext-google-drive.xml`
 
-- `jrio-rest-docker/jrio/WEB-INF/applicationContext-github.xml`
+-   `jrio-rest-docker/jrio/WEB-INF/applicationContext-github.xml`
 
-- `jrio-rest-docker/jrio/WEB-INF/applicationContext-dropbox.xml`
+-   `jrio-rest-docker/jrio/WEB-INF/applicationContext-dropbox.xml`
 
 To use these repositories, each repository configuration file needs to be updated with actual `clientId` and `secretKey` values. These values are obtained from the target cloud storage providers while registering your JasperReports IO At-Scale instance with them.
 

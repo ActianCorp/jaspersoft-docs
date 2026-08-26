@@ -11,7 +11,7 @@ To make persistent configuration changes through the JasperReports Server user i
 
 1.  Log in as system administrator (`superuser` by default).
 
-2.  Select **Manage \> Server Settings**: ![js Manage menu ServerSettings](../assets/images/js-Manage-menu-ServerSettings.png)
+2.  Select **Manage &gt; Server Settings**: ![js Manage menu ServerSettings](../assets/images/js-Manage-menu-ServerSettings.png)
 
 3.  Choose a category of settings or administrator actions from the left-hand **Settings** panel.
 
@@ -39,25 +39,25 @@ To make persistent configuration changes through the JasperReports Server user i
 
 When making changes through the Settings UI, you should understand how persistent settings made in the UI are stored internally and relate to the settings in configuration files:
 
-- The **Settings** pages display a subset of the settings available in configuration files. Therefore, all settings in the UI also exist in a configuration file.
+-   The **Settings** pages display a subset of the settings available in configuration files. Therefore, all settings in the UI also exist in a configuration file.
 
-- By default, the **Settings** pages display the values of settings that exist in the corresponding configuration file. If you modify only the files and restart the server, your new file settings take effect on the server and are visible in the UI.
+-   By default, the **Settings** pages display the values of settings that exist in the corresponding configuration file. If you modify only the files and restart the server, your new file settings take effect on the server and are visible in the UI.
 
-- When you change a value on the **Settings** pages, the new setting takes effect immediately, but the new value is *not* written to the corresponding configuration file. Instead, it's stored in the server's internal database so the value is persistent when the server is restarted.
+-   When you change a value on the **Settings** pages, the new setting takes effect immediately, but the new value is *not* written to the corresponding configuration file. Instead, it's stored in the server's internal database so the value is persistent when the server is restarted.
 
 !!! note
 
     Only configuration settings that have a value modified on the **Settings** pages of the UI are stored and made persistent in the database.
 
-- When the server restarts, any stored values take precedence over values for the same settings in the configuration files. However, each setting is independent, so a value that's not modified in the **Settings** UI is read from the configuration files.
+-   When the server restarts, any stored values take precedence over values for the same settings in the configuration files. However, each setting is independent, so a value that's not modified in the **Settings** UI is read from the configuration files.
 
-- The **Settings** pages display the values of the settings in effect on the server.
+-   The **Settings** pages display the values of the settings in effect on the server.
 
 !!! note
 
     Be aware that the configuration values that appear on the Settings pages are possibly a mixture of values loaded from configuration files and from the persistent storage.
 
-- Changing a setting that has already been modified updates its value stored internally, even if it is set to the same original value stored in a configuration file. The stored value continues to take precedence over any changes to this setting in the configuration file.
+-   Changing a setting that has already been modified updates its value stored internally, even if it is set to the same original value stored in a configuration file. The stored value continues to take precedence over any changes to this setting in the configuration file.
 
 ## Restoring Default Settings
 
@@ -67,7 +67,7 @@ To restore a default setting
 
 1.  Log in as system administrator (`superuser` by default).
 
-2.  Select **Manage \> Server Settings** and choose **Restore Defaults** from the left-hand panel.
+2.  Select **Manage &gt; Server Settings** and choose **Restore Defaults** from the left-hand panel.
 
     ![js Settings RestoreDefaults](../assets/images/js-Settings-RestoreDefaults.png)
 

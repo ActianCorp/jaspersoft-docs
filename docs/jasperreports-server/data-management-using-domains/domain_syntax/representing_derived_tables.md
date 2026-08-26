@@ -141,5 +141,5 @@ Only fields selected in the query – in this case, `exp_date`, `store_id`, `amo
 
 A derived table provides an alternate way to create joins and calculated fields. Here are some things to keep in mind when deciding how to implement the Domain:
 
-- Calculated fields created within derived tables may use any function call recognized by the RDBMS. Calculated fields created in the Domain using the `dataSetExpression` attribute of the `field` element are limited to the functions available in the DomEL language. See [Domain Expression Language (DomEL)](../domel/domain_expression_language.md) for more information.
-- The Domain mechanism applies filters, aggregation, and joins to derived tables by wrapping the SQL in a nested query, which may be less efficient on some databases than the equivalent query generated for a non-derived table.
+-   Calculated fields created within derived tables may use any function call recognized by the RDBMS. Calculated fields created in the Domain using the `dataSetExpression` attribute of the `field` element are limited to the functions available in the DomEL language. See [Domain Expression Language (DomEL)](../domel/domain_expression_language.md) for more information.
+-   The Domain mechanism applies filters, aggregation, and joins to derived tables by wrapping the SQL in a nested query, which may be less efficient on some databases than the equivalent query generated for a non-derived table.

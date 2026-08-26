@@ -9,10 +9,10 @@ A report could be as simple as a file or could be composed of multiple files, im
 
 JasperReports Web Studio can work with different repository types:
 
-- Google Drive
-- GitHub
-- Local Folder
-- JasperReports Server
+-   Google Drive
+-   GitHub
+-   Local Folder
+-   JasperReports Server
 
 Each repository could have its own exceptions. For example, you cannot save on GitHub, but you can commit your changes.
 

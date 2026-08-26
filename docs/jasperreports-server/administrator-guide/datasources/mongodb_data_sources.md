@@ -9,15 +9,15 @@ MongoDB is a big data architecture based on the NoSQL model that is not relation
 
 As with all big data stores, MongoDB data sources have the following limitations and usage guidelines within JasperReports Server:
 
-- MongoDB data sources are not supported for OLAP connections.
+-   MongoDB data sources are not supported for OLAP connections.
 
-- MongoDB data sources cannot be used directly in Domains. To use MongoDB in a Domain, see [Creating a MongoDB JDBC Data Source](mongodb_data_sources.md).
+-   MongoDB data sources cannot be used directly in Domains. To use MongoDB in a Domain, see [Creating a MongoDB JDBC Data Source](mongodb_data_sources.md).
 
-- MongoDB data sources can be used in Ad Hoc Topics, but they do not support query optimization.
+-   MongoDB data sources can be used in Ad Hoc Topics, but they do not support query optimization.
 
-- You must configure your query limits to handle big data (see [Ad Hoc Data Policies for Big Data](../configuration/configuring_ad_hoc.md)).
+-   You must configure your query limits to handle big data (see [Ad Hoc Data Policies for Big Data](../configuration/configuring_ad_hoc.md)).
 
-- You must configure your JVM memory to handle the expected amount of data (see the JasperReports Server Installation Guide).
+-   You must configure your JVM memory to handle the expected amount of data (see the JasperReports Server Installation Guide).
 
 ## Creating a MongoDB Data Source with the Native MongoDB Driver
 
@@ -31,7 +31,7 @@ Follow these steps to create a MongoDB data source with the native MongoDB drive
 
 1.  Log in as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you have installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you have installed the sample data, the suggested folder is Data Sources. The **New Data Source** page appears.
 
 3.  From the **Type** field, select **MongoDB**. The information on the page changes to reflect what is needed to define a MongoDB data source.<br>
     You have the option to use attributes in the values of data source parameters. See [Attributes in Data Source Definitions](attributes_in_data_source_definitions.md).
@@ -74,24 +74,24 @@ MongoDB is designed to be accessed through API calls in an application or a comm
 
 The Jaspersoft MongoDB Query Language is a declarative language for specifying what data to retrieve from MongoDB. The connector converts this query into the appropriate API calls and uses the MongoDB Java connector to query the MongoDB instance. The following examples give an overview of the Jaspersoft MongoDB Query Language, with the equivalent SQL terms in parentheses in the descriptions:
 
-- Retrieve all documents (rows) in the given collection (table):
+-   Retrieve all documents (rows) in the given collection (table):
 
-``` text
-{ 'collectionName' : 'accounts' }
-```
+    ``` text
+    { 'collectionName' : 'accounts' }
+    ```
 
-- From all documents in the given collection, select the named fields (columns) and sort the results:
+-   From all documents in the given collection, select the named fields (columns) and sort the results:
 
-``` text
-{
-  'collectionName' : 'accounts',
-  'findFields' : {'name':1,'phone_office':1,'billing_address_city':1,
-                  'billing_address_street':1,'billing_address_country':1},
-  'sort' : {'billing_address_country':-1,'billing_address_city':1}
-}
-```
+    ``` text
+    {
+      'collectionName' : 'accounts',
+      'findFields' : {'name':1,'phone_office':1,'billing_address_city':1,
+                      'billing_address_street':1,'billing_address_country':1},
+      'sort' : {'billing_address_country':-1,'billing_address_city':1}
+    }
+    ```
 
-- Retrieve only the documents (rows) in the given collection (table) that match the query (where clause). In this case, the date is greater-than-or-equal to the input parameter, and the name matches a string (starts with N):
+-   Retrieve only the documents (rows) in the given collection (table) that match the query (where clause). In this case, the date is greater-than-or-equal to the input parameter, and the name matches a string (starts with N):
 
 ``` text
 {

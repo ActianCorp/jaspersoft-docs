@@ -11,7 +11,7 @@ To run the Romanian version of the complex report
 
 1.  Choose the Romanian locale on the login page of the server, and login as an administrator.
 
-2.  Click **View \> Repository**, and navigate to **Organization \> Reports**.
+2.  Click **View &gt; Repository**, and navigate to **Organization &gt; Reports**.
 
 3.  Click the name of the complex report, New Complex Report. The Input Controls dialog appears.
 

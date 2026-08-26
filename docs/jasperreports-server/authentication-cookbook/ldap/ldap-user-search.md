@@ -19,13 +19,13 @@ The sample files use an unnamed bean of the `JSBindAuthenticator` class to encap
 
 There are two ways to configure `JSBindAuthenticator` to locate users:
 
-- Configure the `userDnPatterns` property in the `JSBindAuthenticator` bean to match RDN patterns based on the login name provided by the user. Use this method if the login name appears in the DN of your user entries and your user entries are in a fixed branch of your LDAP directory. See [Specifying userDnPatterns Parameters](ldap-userdnpatterns-parameters.md) for more information.
+-   Configure the `userDnPatterns` property in the `JSBindAuthenticator` bean to match RDN patterns based on the login name provided by the user. Use this method if the login name appears in the DN of your user entries and your user entries are in a fixed branch of your LDAP directory. See [Specifying userDnPatterns Parameters](ldap-userdnpatterns-parameters.md) for more information.
 
 !!! note
 
     Matching patterns is faster because it checks for a DN only in the LDAP directory, instead of a searching all users. However, it's less flexible. `userDnPatterns` is not included in the sample files by default.
 
-- Configure the `userSearch` helper bean to perform a search for the login name provided by the user. Use this method if the login name is the value of an attribute that doesn't appear in the RDN, or if your user entries are located in a more complex structure. See [Specifying userSearch Parameters](ldap-usersearch-parameters.md) for more information.
+-   Configure the `userSearch` helper bean to perform a search for the login name provided by the user. Use this method if the login name is the value of an attribute that doesn't appear in the RDN, or if your user entries are located in a more complex structure. See [Specifying userSearch Parameters](ldap-usersearch-parameters.md) for more information.
 
 You can configure pattern matching and login name search at the same time. Patterns are matched first, and login name search is done only if no match is found.
 

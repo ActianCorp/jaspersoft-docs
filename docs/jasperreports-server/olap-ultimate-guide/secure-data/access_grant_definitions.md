@@ -11,7 +11,7 @@ CZS started by securing their data along the Geographical Area dimension of the 
 
 |  |
 |----|
-| \<MemberGrant member=“\[Geographic Area\].\[USA\].\[West\].\[CA\]” access=“all”/\> |
+| &lt;MemberGrant member=“\[Geographic Area\].\[USA\].\[West\].\[CA\]” access=“all”/&gt; |
 
 This member grant gives the role in question full access to the CA (California) member of the dimension. California is at the state level of the dimension; you could just as easily grant access to all of the West region or to individual cities.
 

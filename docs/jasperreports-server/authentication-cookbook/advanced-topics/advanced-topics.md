@@ -9,8 +9,8 @@ External authentication as presented in this guide is a configuration of the def
 
 This chapter contains the following sections:
 
-- [Default Internal Authentication](internal-authentication-beans.md)
-- [External Authentication Framework](external-authentication-framework.md)
-- [Creating a Custom Processor](creating-custom-processor.md)
-- [Pre-authentication Option](header-based-authentication.md)
-- [Other Customizations](other-customizations.md)
+-   [Default Internal Authentication](internal-authentication-beans.md)
+-   [External Authentication Framework](external-authentication-framework.md)
+-   [Creating a Custom Processor](creating-custom-processor.md)
+-   [Pre-authentication Option](header-based-authentication.md)
+-   [Other Customizations](other-customizations.md)

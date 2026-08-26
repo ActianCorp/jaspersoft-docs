@@ -11,9 +11,9 @@ The calling application must supply a valid user and password with HTTP Basic Au
 
 The web services accept the same accounts and credentials as the JasperReports Server user interface.
 
-- If there is only one organization, such as in the JasperReports Server default installation, you should specify the user name only: `WSUser`. For example, `jasperadmin`.
-- In deployments with multiple organizations, the organization ID or alias must be added, in the form `WSUser|TenantId` or `WSUser|TenantAlias`. For example, you could use `jasperadmin|organization_1` (`WSUser|TenantId`) or `jasperadmin|CanadaBranch `(`WSUser|TenantAlias`).
-- See section [Organizations/Tenants](organizations_tenants.md), for explanations of `WSUser`, `TenantId`, and `TenantAlias`.
+-   If there is only one organization, such as in the JasperReports Server default installation, you should specify the user name only: `WSUser`. For example, `jasperadmin`.
+-   In deployments with multiple organizations, the organization ID or alias must be added, in the form `WSUser|TenantId` or `WSUser|TenantAlias`. For example, you could use `jasperadmin|organization_1` (`WSUser|TenantId`) or `jasperadmin|CanadaBranch `(`WSUser|TenantAlias`).
+-   See section [Organizations/Tenants](organizations_tenants.md), for explanations of `WSUser`, `TenantId`, and `TenantAlias`.
 
 If login encryption in enabled in your server, you must encrypt the password before base64-encoding it with the username. To encode the password, see section [Login Encryption](login_encryption.md).
 

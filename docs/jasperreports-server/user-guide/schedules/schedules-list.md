@@ -1,11 +1,11 @@
 ---
 title: List of Scheduled Jobs
-description: "All scheduled jobs that you have defined appear on the View > Schedules and Alerts > Schedules tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs..."
+description: "All scheduled jobs that you have defined appear on the View &gt; Schedules and Alerts &gt; Schedules tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs..."
 ---
 
 # List of Scheduled Jobs
 
-All scheduled jobs that you have defined appear on the **View \> Schedules and Alerts \> Schedules** tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs defined by all users.
+All scheduled jobs that you have defined appear on the **View &gt; Schedules and Alerts &gt; Schedules** tab. Typical users can see only the jobs that they have defined. Administrators can view the jobs defined by all users.
 
 The view of the Schedules page has been improved with the newly added columns and updates to existing column names.
 
@@ -94,7 +94,7 @@ If the start date for a schedule has not yet passed, you can edit the schedule. 
 
 To edit a schedule
 
-1.  Click **View \> Schedules and Alerts \> Schedules**.
+1.  Click **View &gt; Schedules and Alerts &gt; Schedules**.
 
 2.  Click the Edit icon ![js edit icon](../assets/images/js-edit-icon.png) in the row of the job that you want to update.
 
@@ -112,7 +112,7 @@ To stop a job from running without deleting it, disable the job.
 
 To pause a scheduled job
 
-1.  Click **View \> Schedules and Alerts \> Schedules**.
+1.  Click **View &gt; Schedules and Alerts &gt; Schedules**.
 
 2.  In the row of the job that you want to stop, disable the **Pause/Activate** toggle switch.
 
@@ -124,7 +124,7 @@ To pause a scheduled job
 
 To delete a scheduled job
 
-1.  Click **View \> Schedules and Alerts \> Schedules**.
+1.  Click **View &gt; Schedules and Alerts &gt; Schedules**.
 
 2.  Click the delete icon ![js alert trash icon](../assets/images/js-alert-trash-icon.png) in the row of the job you want to delete. A confirmation dialog with a warning message is displayed to confirm if you want to delete this job.
 

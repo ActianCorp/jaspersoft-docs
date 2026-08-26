@@ -15,25 +15,25 @@ The scalable query engine runs on virtual nodes that are separate from and in ad
 
 It is important to understand which reports are handled by the scalable query engine:
 
-- The scalable query engine applies only to embedded Ad Hoc views: those that run in dashboards and through Visualize.js.
+-   The scalable query engine applies only to embedded Ad Hoc views: those that run in dashboards and through Visualize.js.
 
-  The scalable query engine does not apply to Ad Hoc views in the designer or Ad Hoc reports in the viewer. These are always processed by the server's own Ad Hoc engine, even if they are large reports with a longer response time.
+    The scalable query engine does not apply to Ad Hoc views in the designer or Ad Hoc reports in the viewer. These are always processed by the server's own Ad Hoc engine, even if they are large reports with a longer response time.
 
-- The engine can handle the following types of data sources:
+-   The engine can handle the following types of data sources:
 
-  - JDBC data source (JdbcReportDataSource)
+    -   JDBC data source (JdbcReportDataSource)
 
-  - JNDI data source (JndiJdbcReportDataSource), requires configuration
+    -   JNDI data source (JndiJdbcReportDataSource), requires configuration
 
-  - Custom data source (CustomReportDataSource)
+    -   Custom data source (CustomReportDataSource)
 
-  - AWS data source (AwsReportDataSource)
+    -   AWS data source (AwsReportDataSource)
 
-  - Azure data source (AzureSqlReportDataSource)
+    -   Azure data source (AzureSqlReportDataSource)
 
-  Other types of data sources such as the various big data adapters are not certified for use with the scalable query engine. Embedded Ad Hoc views with unsupported data sources are again processed by the server's own Ad Hoc engine. The user doesn't see any change in behavior, the embedded Ad Hoc view is still displayed as expected, the only difference is the scalability (performance under load). Make sure your embedded Ad Hoc views use the data sources listed above to take advantage of the scalable query engine.
+    Other types of data sources such as the various big data adapters are not certified for use with the scalable query engine. Embedded Ad Hoc views with unsupported data sources are again processed by the server's own Ad Hoc engine. The user doesn't see any change in behavior, the embedded Ad Hoc view is still displayed as expected, the only difference is the scalability (performance under load). Make sure your embedded Ad Hoc views use the data sources listed above to take advantage of the scalable query engine.
 
-- The scalable query engine processes only embedded Ad Hoc views. If you want improved performance for JRXML reports, Jaspersoft provides the JasperReports IO (JRIO) At-Scale product that is also based on a Kubernetes cluster of autoscalable pods. Both JRIO At-Scale and the Scalable Query Engine can be deployed simultaneously with the same server, but they remain separate clusters with separate Helm charts.
+-   The scalable query engine processes only embedded Ad Hoc views. If you want improved performance for JRXML reports, Jaspersoft provides the JasperReports IO (JRIO) At-Scale product that is also based on a Kubernetes cluster of autoscalable pods. Both JRIO At-Scale and the Scalable Query Engine can be deployed simultaneously with the same server, but they remain separate clusters with separate Helm charts.
 
 The following diagram summarizes which Ad Hoc views can be processed by the scalable query engine:
 

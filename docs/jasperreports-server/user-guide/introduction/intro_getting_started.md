@@ -15,27 +15,27 @@ From the Getting Started page, you can quickly access the most frequently used f
 
 The Getting Started page for standard users has multiple blocks that link to the core workflows of JasperReports Server that may include some or all the following options:
 
-- **Ad Hoc Views** - Select or create a visualization for basic reporting and analysis.
+-   **Ad Hoc Views** - Select or create a visualization for basic reporting and analysis.
 
-- **Reports** – Create an interactive report from an Ad Hoc view, or select an existing report.
+-   **Reports** – Create an interactive report from an Ad Hoc view, or select an existing report.
 
-- **Dashboards** - Combine related visualizations into a single-page layout, or select from existing layouts.
+-   **Dashboards** - Combine related visualizations into a single-page layout, or select from existing layouts.
 
-- **Data Sources** - Select or define a connection to a database or other data source.
+-   **Data Sources** - Select or define a connection to a database or other data source.
 
-- **Domains** - Add structure to your data source for use in a visualization.
+-   **Domains** - Add structure to your data source for use in a visualization.
 
-- **Users and Settings** - Configure your server instance and manage user settings. This block is visible only to users with administrator privileges.
+-   **Users and Settings** - Configure your server instance and manage user settings. This block is visible only to users with administrator privileges.
 
 Each workflow block on the Getting Started page may contain buttons linking to pages or wizards to create related elements. Each workflow block links to a filtered repository list containing relevant items. Click these blocks to access the resources. Users with administrator access may have more of these options available to them.
 
 ## The Getting Started Column
 
-- On the left side of the page, there are two lists to help you locate and access relevant information and assets. **Recent Items** - Includes links to up to five recently viewed repository items, such as reports, Ad Hoc views, and dashboards.
+-   On the left side of the page, there are two lists to help you locate and access relevant information and assets. **Recent Items** - Includes links to up to five recently viewed repository items, such as reports, Ad Hoc views, and dashboards.
 
-- **Video Tutorials** - Includes links to video tutorials for various JasperReports Server features.
+-   **Video Tutorials** - Includes links to video tutorials for various JasperReports Server features.
 
-- **Popular Resources** - Includes links to educational and support resources.
+-   **Popular Resources** - Includes links to educational and support resources.
 
 ## Menu Items
 
@@ -112,15 +112,15 @@ Shortcuts include:
 
 Note that, on some pages, the Shift key can also be used with the arrow keys or Tab:
 
-- When used with the arrow keys, Shift multi-selects items, such as reports listed in the Library page.
+-   When used with the arrow keys, Shift multi-selects items, such as reports listed in the Library page.
 
-- When used with Tab, Shift changes the direction that focus moves from left to right to right to left.
+-   When used with Tab, Shift changes the direction that focus moves from left to right to right to left.
 
 In addition, the web UI has improved compatibility with screen readers, which assist visually impaired users in using computers. The implementation follows the WAI-ARIA (Web Accessibility Initiative Accessible Rich Internet Applications Suite) technical specification. WAI-ARIA has been certified for certain versions of JAWS (Job Access With Speech) with certain browsers:
 
-- Microsoft Edge with JAWS 2018 - 2021
+-   Microsoft Edge with JAWS 2018 - 2021
 
-- Google Chrome with JAWS 2018 - 2021
+-   Google Chrome with JAWS 2018 - 2021
 
 For information on the compatible versions of browsers, see the Jaspersoft Platform Support Guide.
 

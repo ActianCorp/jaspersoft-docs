@@ -7,8 +7,8 @@ description: "You can configure your connection to the LDAP server in one of two
 
 You can configure your connection to the LDAP server in one of two ways:
 
-- Configure the connection by LDAP properties in the default_master properties file before installation or upgrade. You can choose to encrypt any of the LDAP connection parameters. This is the preferred method for setting the LDAP connection parameters.
-- For an existing JasperReports Server, you can configure the connection properties directly in your sample-applicationContext-externalAuth-LDAP\[-mt\].xml file. In this case, the properties, including the password, cannot be encrypted.
+-   Configure the connection by LDAP properties in the default_master properties file before installation or upgrade. You can choose to encrypt any of the LDAP connection parameters. This is the preferred method for setting the LDAP connection parameters.
+-   For an existing JasperReports Server, you can configure the connection properties directly in your sample-applicationContext-externalAuth-LDAP\[-mt\].xml file. In this case, the properties, including the password, cannot be encrypted.
 
 ## Setting LDAP Connection Parameters in default_master.properties
 
@@ -29,9 +29,9 @@ To configure these properties using default_master.properties, follow these step
 
 2.  Locate the following properties and set them for your LDAP server as follows:
 
-    - `external.ldapUrl` property: The URL of your LDAP server, including the base DN.
-    - `external.ldapDn` property: The distinguished name (DN) of your LDAP administrator.
-    - `external.ldapPassword` property: The password of your LDAP administrator.
+    -   `external.ldapUrl` property: The URL of your LDAP server, including the base DN.
+    -   `external.ldapDn` property: The distinguished name (DN) of your LDAP administrator.
+    -   `external.ldapPassword` property: The password of your LDAP administrator.
 
 3.  You can choose to encrypt any of the LDAP connection parameters.
 
@@ -63,9 +63,9 @@ To set the connection parameters for the LDAP server directly in the application
 1.  In `sample-applicationContext-externalAuth-LDAP[-mt].xml`, locate the `ldapContextSource` bean.
 2.  Specify the following information:
 
-- `constructor-arg` value: The URL of your LDAP server, including the base DN.
-- `userDn` property: The distinguished name (DN) of your LDAP administrator.
-- `password` property: The password of your LDAP administrator.
+-   `constructor-arg` value: The URL of your LDAP server, including the base DN.
+-   `userDn` property: The distinguished name (DN) of your LDAP administrator.
+-   `password` property: The password of your LDAP administrator.
 
 !!! note
 

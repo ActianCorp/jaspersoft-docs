@@ -9,11 +9,11 @@ Some customizations require writing Java classes to perform some part of the new
 
 Customizations that involve changes to Java source code have the following requirements:
 
-- You must download the source code distribution and set up an environment where you can build it.
+-   You must download the source code distribution and set up an environment where you can build it.
 
-- All files being changed must be edited in the source code, even the interpreted files. This section gives the path to all files in \<js-src\>, which represents the root of the source code. Pay close attention to the path names, because many are similar.
+-   All files being changed must be edited in the source code, even the interpreted files. This section gives the path to all files in &lt;js-src&gt;, which represents the root of the source code. Pay close attention to the path names, because many are similar.
 
-- In order to see the changes, you must build the source code and redeploy the web application.
+-   In order to see the changes, you must build the source code and redeploy the web application.
 
 To build and deploy the source code, follow the instructions in the JasperReports Server Source Build Guide within each distribution:
 
@@ -28,11 +28,11 @@ The following procedure is an example of the steps for building and re-deploying
 
 To rebuild the source code
 
-1.  Make sure that all your file changes are saved in the \<js-src\> tree.
+1.  Make sure that all your file changes are saved in the &lt;js-src&gt; tree.
 
 2.  Stop the application server.
 
-3.  Select the ****Start Menu \> Accessories****, right-click **Command Prompt**, and select **Run as Administrator**.
+3.  Select the ****Start Menu &gt; Accessories****, right-click **Command Prompt**, and select **Run as Administrator**.
 
     !!! note
 

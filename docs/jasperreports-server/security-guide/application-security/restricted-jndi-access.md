@@ -47,12 +47,12 @@ You can enable JNDI restricted security to JasperReports Serverdata sources with
 
 When installing JasperReports Server manually or when setting `metadata.hibernate.jndi.restrictedAccess.enabled` to `true`, the user must update the data sources using the `jdbc/jasperserver` or the `jdbc/jasperserverAudit` connections to access older resources. The following list offers the sample data sources:
 
-- Audit data source: `jdbc/jasperserverAudit`
-- Jasperserver repository SQL data source: `jdbc/jasperserver`
-- Jasperserver data source: `jdbc/jasperserver`
-- Profile data source JNDI:` jdbc/jasperserver`
-- Report monitoring data source: `jdbc/jasperserverAudit`
-- Jasperserver SQL data source: `jdbc/jasperserver`
+-   Audit data source: `jdbc/jasperserverAudit`
+-   Jasperserver repository SQL data source: `jdbc/jasperserver`
+-   Jasperserver data source: `jdbc/jasperserver`
+-   Profile data source JNDI:` jdbc/jasperserver`
+-   Report monitoring data source: `jdbc/jasperserverAudit`
+-   Jasperserver SQL data source: `jdbc/jasperserver`
 
 The sample JNDI data sources must be edited to use JNDI restricted data sources.
 

@@ -41,12 +41,13 @@ To apply an existing customizer to a chart:
 
 5.  Fill in the properties as prompted by the user interface. For example, the following values for **Legend Shape** change the legend to a circle:
 
-    - **Apply to**: All Items
-    - **Shape Type**: Ellipse
-    - **Width**: 10
-    - **Height**: 10
+-   **Apply to**: All Items
 
-6.  Click **Finish**.
+    -   **Shape Type**: Ellipse
+    -   **Width**: 10
+    -   **Height**: 10
+
+1.  Click **Finish**.
 
 The customizer selection dialog is closed and the customizer is applied to your chart. Click **Preview** to view your chart.
 
@@ -63,7 +64,7 @@ You can add a customizer to a chart in an earlier version of Jaspersoft Studio u
 
 2.  Select the chart in **Design** view.
 
-3.  In the **Advanced** tab of the **Properties** view, click **…** next to **Common Chart Properties \>Customizer Class**.
+3.  In the **Advanced** tab of the **Properties** view, click **…** next to **Common Chart Properties &gt;Customizer Class**.
 
     The **Open Type** dialog is displayed.
 
@@ -215,52 +216,55 @@ The following JSON file lets the user enter values for the configurable properti
 
 A JSON file for a chart customizer has the following members:
 
-- `label`: Name for the customizer in the chart customizer selection dialog.
-- `description`: Text that appears on hover.
-- `customizerClass`: Full class name of your customizer.
-- `supportedPlot`: Array of chart types supported by the customizer. Chart types are designated by a numeric code, shown in the following table.
+-   `label`: Name for the customizer in the chart customizer selection dialog.
 
-| Chart Type              | Code in JasperReports |
-|-------------------------|-----------------------|
-| CHART_TYPE_AREA         | 1                     |
-| CHART_TYPE_BAR3D        | 2                     |
-| CHART_TYPE_BAR          | 3                     |
-| CHART_TYPE_BUBBLE       | 4                     |
-| CHART_TYPE_CANDLESTICK  | 5                     |
-| CHART_TYPE_HIGHLOW      | 6                     |
-| CHART_TYPE_LINE         | 7                     |
-| CHART_TYPE_PIE3D        | 8                     |
-| CHART_TYPE_PIE          | 9                     |
-| CHART_TYPE_SCATTER      | 10                    |
-| CHART_TYPE_STACKEDBAR3D | 11                    |
-| CHART_TYPE_STACKEDBAR   | 12                    |
-| CHART_TYPE_XYAREA       | 13                    |
-| CHART_TYPE_XYBAR        | 14                    |
-| CHART_TYPE_XYLINE       | 15                    |
-| CHART_TYPE_TIMESERIES   | 16                    |
-| CHART_TYPE_METER        | 17                    |
-| CHART_TYPE_THERMOMETER  | 18                    |
-| CHART_TYPE_MULTI_AXIS   | 19                    |
-| CHART_TYPE_STACKEDAREA  | 20                    |
-| CHART_TYPE_GANTT        | 21                    |
+-   `description`: Text that appears on hover.
 
-Chart Codes for supportedPlot in JSON Files
+-   `customizerClass`: Full class name of your customizer.
 
-- `sections`: Property that controls the display of the user interface. Has the following attributes:
+-   `supportedPlot`: Array of chart types supported by the customizer. Chart types are designated by a numeric code, shown in the following table.
 
-  - `name`: Name for the user interface dialog.
+    | Chart Type              | Code in JasperReports |
+    |-------------------------|-----------------------|
+    | CHART_TYPE_AREA         | 1                     |
+    | CHART_TYPE_BAR3D        | 2                     |
+    | CHART_TYPE_BAR          | 3                     |
+    | CHART_TYPE_BUBBLE       | 4                     |
+    | CHART_TYPE_CANDLESTICK  | 5                     |
+    | CHART_TYPE_HIGHLOW      | 6                     |
+    | CHART_TYPE_LINE         | 7                     |
+    | CHART_TYPE_PIE3D        | 8                     |
+    | CHART_TYPE_PIE          | 9                     |
+    | CHART_TYPE_SCATTER      | 10                    |
+    | CHART_TYPE_STACKEDBAR3D | 11                    |
+    | CHART_TYPE_STACKEDBAR   | 12                    |
+    | CHART_TYPE_XYAREA       | 13                    |
+    | CHART_TYPE_XYBAR        | 14                    |
+    | CHART_TYPE_XYLINE       | 15                    |
+    | CHART_TYPE_TIMESERIES   | 16                    |
+    | CHART_TYPE_METER        | 17                    |
+    | CHART_TYPE_THERMOMETER  | 18                    |
+    | CHART_TYPE_MULTI_AXIS   | 19                    |
+    | CHART_TYPE_STACKEDAREA  | 20                    |
+    | CHART_TYPE_GANTT        | 21                    |
 
-  - `expandable`: Boolean; for chart customizers, always set to `false`.
+    Chart Codes for supportedPlot in JSON Files
 
-  - `properties`: Attribute that contains sections to define each entry box in the user interface. Each entry box has the following attributes:
+-   `sections`: Property that controls the display of the user interface. Has the following attributes:
 
-    - `name`: Name of the argument to pass to the customizer class.
-    - `label`: Name that appears in the user interface.
-    - `description`: Tooltip that appears on hover.
-    - `mandatory`: Boolean. When true, the property is required. When false, the property is optional.
-    - `readOnly`: Sets attribute as read-only. Not used for chart customizers.
-    - `type`: Type of the attribute, as expected by the customizer class.
-    - `defaultValue` (optional): Default value for an optional property.
+    -   `name`: Name for the user interface dialog.
+
+    -   `expandable`: Boolean; for chart customizers, always set to `false`.
+
+    -   `properties`: Attribute that contains sections to define each entry box in the user interface. Each entry box has the following attributes:
+
+        -   `name`: Name of the argument to pass to the customizer class.
+        -   `label`: Name that appears in the user interface.
+        -   `description`: Tooltip that appears on hover.
+        -   `mandatory`: Boolean. When true, the property is required. When false, the property is optional.
+        -   `readOnly`: Sets attribute as read-only. Not used for chart customizers.
+        -   `type`: Type of the attribute, as expected by the customizer class.
+        -   `defaultValue` (optional): Default value for an optional property.
 
 !!! note
 
@@ -278,8 +282,8 @@ Chart Codes for supportedPlot in JSON Files
 
 To add a JSON UI definition file to the Report Designer
 
-1.  Select **Window \> Preferences** (**Eclipse \> Preferences** on Mac).
-2.  In the **Preferences** dialog, select **Jaspersoft Studio \> Report Designer \> Chart Customizers**.
+1.  Select **Window &gt; Preferences** (**Eclipse &gt; Preferences** on Mac).
+2.  In the **Preferences** dialog, select **Jaspersoft Studio &gt; Report Designer &gt; Chart Customizers**.
 3.  Click **Add**.
 4.  In the **Select Destination** dialog, browse to the location of your JSON file.
 5.  Click **OK**.

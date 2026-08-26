@@ -12,14 +12,17 @@ To create a blank Ad Hoc report:
 
 This automatically adds the following properties:
 
-- `<propertyname="com.jaspersoft.ji.adhoc"value="1"/>`
-- `<propertyname="com.jaspersoft.ji.adhoc.new"value="true"/>`
-- `<property name="com.jaspersoft.jasperserver.adhoc.table.flattened.data.set" value="true"/>`
+-   `<propertyname="com.jaspersoft.ji.adhoc"value="1"/>`
 
-Additionally, the following properties can also be modified for the Ad Hoc Component:
+    -   `<propertyname="com.jaspersoft.ji.adhoc.new"value="true"/>`
 
-- `<property name="com.jaspersoft.jasperserver.adhoc.display.title" value="true"/>`
-- `<property name="com.jaspersoft.jasperserver.adhoc.style.template" value="/somepath_here"/>`
+    -   `<property name="com.jaspersoft.jasperserver.adhoc.table.flattened.data.set" value="true"/>`
+
+        Additionally, the following properties can also be modified for the Ad Hoc Component:
+
+-   `<property name="com.jaspersoft.jasperserver.adhoc.display.title" value="true"/>`
+
+-   `<property name="com.jaspersoft.jasperserver.adhoc.style.template" value="/somepath_here"/>`
 
 !!! note
 

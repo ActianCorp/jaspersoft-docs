@@ -15,19 +15,19 @@ An expression is a formula that operates on some values and returns a result, li
 
 This chapter contains the following sections:
 
-- [Expression Types](expressions.md)
+-   [Expression Types](expressions.md)
 
-- [Expression Operators and Object Methods](expressions.md)
+-   [Expression Operators and Object Methods](expressions.md)
 
-- [Using an If-Else Construct in an Expression](expressions.md)
+-   [Using an If-Else Construct in an Expression](expressions.md)
 
-- [Using Unicode Characters in Expressions](../fonts-characters.md)
+-   [Using Unicode Characters in Expressions](../fonts-characters.md)
 
-- [Using Java as a Language for Expressions](expressions-java.md)
+-   [Using Java as a Language for Expressions](expressions-java.md)
 
-- [Using Groovy as a Language for Expressions](expressions-groovy.md)
+-   [Using Groovy as a Language for Expressions](expressions-groovy.md)
 
-- [Using JavaScript as a Language for Expressions](expressions-javascript.md)
+-   [Using JavaScript as a Language for Expressions](expressions-javascript.md)
 
 ## Expression Types
 
@@ -72,9 +72,9 @@ Expression operators
 
 !!! note
 
-    - Regarding the Equals operator: in Java, the `==` operator can only be used to compare two primitive values. With objects, you need to use the special method “`equals`”; for example, you cannot write an expression like `"test" == "test"`, you need to write `"test".equals("test")`.
+    -   Regarding the Equals operator: in Java, the `==` operator can only be used to compare two primitive values. With objects, you need to use the special method “`equals`”; for example, you cannot write an expression like `"test" == "test"`, you need to write `"test".equals("test")`.
 
-    - Regarding the Equals operator: In Java, the `!=` operator can only be used to compare two primitive values.
+    -   Regarding the Equals operator: In Java, the `!=` operator can only be used to compare two primitive values.
 
 Within an expression, you can use the syntax summarized in Syntax for referring to report objects to refer to the parameters, variables, and fields defined in the report.
 
@@ -115,10 +115,8 @@ Within an expression, you can use the syntax summarized in Syntax for referring 
 <td><code>$X{functionName, col_name, param1,[param2]}</code></td>
 <td><p>Syntax for complex queries, such as comparing a column value to a parameter value. Based on the function in the first argument, JasperReports constructs a SQL clause. The following functions are available:</p>
 <ul>
-<li>Functions expecting three arguments for <code>$X</code> – <code>EQUAL</code>, <code>NOTEQUAL</code>, <code>LESS</code>, <code>LESS]</code> (less than or equal to), <code>GREATER</code>, <code>[GREATER</code> (greater than or equal to), <code>IN</code>, <code>NOTIN</code>. For example:</li>
-</ul>
-<p><code>$X{EQUAL, order_date, date_parameter}</code></p>
-<ul>
+<li><p>Functions expecting three arguments for <code>$X</code> – <code>EQUAL</code>, <code>NOTEQUAL</code>, <code>LESS</code>, <code>LESS]</code> (less than or equal to), <code>GREATER</code>, <code>[GREATER</code> (greater than or equal to), <code>IN</code>, <code>NOTIN</code>. For example:</p>
+<p><code>$X{EQUAL, order_date, date_parameter}</code></p></li>
 <li>Functions expecting four arguments for <code>$X</code> –</li>
 </ul>
 <p><code>BETWEEN</code> (excludes both endpoints)</p>

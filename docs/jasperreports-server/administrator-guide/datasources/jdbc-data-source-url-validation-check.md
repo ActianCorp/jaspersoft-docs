@@ -26,8 +26,8 @@ When you create a JDBC data source, the URL that gets generated automatically af
 
 This `applicationContext-settings.xml` file contains the following checks:
 
-- URL Space Check: The `forbidWhitespacesPattern` checks if a data source URL has whitespaces or not.
-- URL String Check: The `commonUrlPattern` checks if the URL matches the pattern.
+-   URL Space Check: The `forbidWhitespacesPattern` checks if a data source URL has whitespaces or not.
+-   URL String Check: The `commonUrlPattern` checks if the URL matches the pattern.
 
 !!! note
 
@@ -50,9 +50,9 @@ This is the first check. It is taken care of by the following property, which ve
 
 Check `jdbcBasicConnectionMap` and `jdbcTibcoConnectionMap` beans in the `applicationContext-webapp.xml` file to set the following property:
 
-- If `allowSpacesInDbName` is set to `true`, then whitespace in database name is allowed and `forbidWhitespacesPattern` is ignored.
+-   If `allowSpacesInDbName` is set to `true`, then whitespace in database name is allowed and `forbidWhitespacesPattern` is ignored.
 
-- If `allowSpacesInDbName` is set to `false`, then `forbidWhitespacesPattern` regex is applied, which does not allow whitespace in the complete JDBC URL.
+-   If `allowSpacesInDbName` is set to `false`, then `forbidWhitespacesPattern` regex is applied, which does not allow whitespace in the complete JDBC URL.
 
 ## URL String Check
 
@@ -70,14 +70,14 @@ By default, it checks if the URL does not contain keywords like "java" and "java
 
 You can extend it by adding more keywords using keyword regexp construction, for example:
 
-- The following keyword regexp prevents select keyword.
+-   The following keyword regexp prevents select keyword.
 
-  ``` text
-  ^(?i)(?![\w\W](java\.|javascript|select))[\w\W]$
-  ```
+    ``` text
+    ^(?i)(?![\w\W](java\.|javascript|select))[\w\W]$
+    ```
 
-- The following keyword regexp additionally prevents any .sql file from being used.
+-   The following keyword regexp additionally prevents any .sql file from being used.
 
-  ``` xml
-  <property name="commonUrlPattern" value="^(?i)(?![\w\W](java\.|javascript*|select|\.sql*))[\w\W]$"/>
-  ```
+    ``` xml
+    <property name="commonUrlPattern" value="^(?i)(?![\w\W](java\.|javascript*|select|\.sql*))[\w\W]$"/>
+    ```

@@ -13,12 +13,12 @@ A parameter is defined by a name and a Class, which is a Java class type. For ex
 
 This chapter contains the following sections:
 
-- [Managing Parameters](parameters_managing.md)
+-   [Managing Parameters](parameters_managing.md)
 
-- [Default Parameters](parameters-built-in.md)
+-   [Default Parameters](parameters-built-in.md)
 
-- [Using Parameters in Queries](parameters_queries.md)
+-   [Using Parameters in Queries](parameters_queries.md)
 
-- [Parameters Prompt](parameters-prompt.md)
+-   [Parameters Prompt](parameters-prompt.md)
 
-- [Parameter Sets](parameters-sets.md)
+-   [Parameter Sets](parameters-sets.md)

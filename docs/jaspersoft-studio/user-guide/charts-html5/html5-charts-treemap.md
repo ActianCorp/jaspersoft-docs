@@ -55,11 +55,12 @@ To create the chart
 
 10. Enter the following to create the measure:
 
-    - **Value Expression**: `$F{FREIGHT}.doubleValue()`
-    - **Aggregation Function**: Sum
-    - **Tooltip Expression**: "Total Freight"
+-   **Value Expression**: `$F{FREIGHT}.doubleValue()`
 
-11. Click **OK**, and save and preview the chart as HTML.
+    -   **Aggregation Function**: Sum
+    -   **Tooltip Expression**: "Total Freight"
+
+1.  Click **OK**, and save and preview the chart as HTML.
 
 ## Using Advanced Formatting Properties
 
@@ -70,9 +71,9 @@ When you preview the chart as HTML, you can click a rectangle to zoom in. Howeve
 | ![jss html5 charts treemap drilldown issues](../assets/images/jss-html5-charts-treemap-drilldown-issues.png) |
 | *Figure 2: Tree Map After Drill Through, Showing Formatting Issues* |
 
-- When a country, such as the USA, is selected, the adjacent country is shown on the chart.
+-   When a country, such as the USA, is selected, the adjacent country is shown on the chart.
 
-- The label to return to a higher level reads **undefined**.
+-   The label to return to a higher level reads **undefined**.
 
 You can use advanced formatting to set these properties. For more information about advanced formatting, see [1.1, “Advanced Formatting of HTML5 Charts,” on page 1](html5-charts-advanced-formatting.md)
 
@@ -98,15 +99,17 @@ To set advanced properties for the chart
 
 5.  To prevent the names of other countries from showing on the border of the charts, enter the following, then click **OK**:
 
-    - **Property name**: `plotOptions.treemap.dataLabels.overflow`
-    - **Property value**: `none`
+-   **Property name**: `plotOptions.treemap.dataLabels.overflow`
 
-6.  To change the text of the button, click **Add**, enter the following, then click **OK**:
+    -   **Property value**: `none`
 
-    - **Property name**: `plotOptions.treemap.drillUpButton.text`
-    - **Property value**: `Back`
+        1.  To change the text of the button, click **Add**, enter the following, then click **OK**:
 
-7.  Click **OK** to apply your properties and return to **Design** view.
+    -   **Property name**: `plotOptions.treemap.drillUpButton.text`
+
+    -   **Property value**: `Back`
+
+1.  Click **OK** to apply your properties and return to **Design** view.
 
 Preview the chart in HTML to drill through and see your changes.
 

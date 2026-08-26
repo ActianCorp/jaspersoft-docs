@@ -65,73 +65,66 @@ To add introductory pages to your report
 
 6.  In the Fields window, add the following Dataset fields to the Fields panel and click **Next**.
 
-    - C
-    - SHIPCITY
+-   C
 
-7.  In the Group By window, click **Finish**. The Country_Intro.jrxml appears in the Design tab.
+    -   SHIPCITY
 
-Now you can determine what data appears on the intro pages.
+        1.  In the Group By window, click **Finish**. The Country_Intro.jrxml appears in the Design tab.
 
-To modify the data on the intro pages
+        Now you can determine what data appears on the intro pages.
 
-1.  With Country_Intro.jrxml open in the Design tab, click the **Title** band and increase its height to 350 pixels.
+        To modify the data on the intro pages
 
-2.  In the Outline view, right-click Parameters and select **Create Parameter**.
+        1.  With Country_Intro.jrxml open in the Design tab, click the **Title** band and increase its height to 350 pixels.
 
-3.  In the Properties view, change the Name from Parameter 1 to `Country`.
+        2.  In the Outline view, right-click Parameters and select **Create Parameter**.
 
-4.  In the Designer view, click ![dataset and query button](../assets/images/dataset-and-query-button.png) to open the Dataset and Query Dialog.
+        3.  In the Properties view, change the Name from Parameter 1 to `Country`.
 
-5.  Modify the query to say:
+        4.  In the Designer view, click ![dataset and query button](../assets/images/dataset-and-query-button.png) to open the Dataset and Query Dialog.
 
-    `select count(*) c, shipcity from orders where shipcountry = $P{Country} group by shipcity`
+        5.  Modify the query to say:
 
-6.  Click **OK**.
+            `select count(*) c, shipcity from orders where shipcountry = $P{Country} group by shipcity`
 
-7.  Save Country_Intro.jrxml.
+        6.  Click **OK**.
 
-8.  In the Outline view, drag **Country** from the Parameters list into the Title band.
+        7.  Save Country_Intro.jrxml.
 
-9.  Click the Country parameter (\$P{Country}).
+        8.  In the Outline view, drag **Country** from the Parameters list into the Title band.
 
-10. In the Properties view, click **Text Field**. Increase the font size to 26.
+        9.  Click the Country parameter ($P{Country}).
 
-11. Click outside the parameter element.
+        10. In the Properties view, click **Text Field**. Increase the font size to 26.
 
-Next, you can add a chart to the intro pages that provides a graphical representation of the data in the section.
+        11. Click outside the parameter element.
 
-To add a chart to the intro pages
+        Next, you can add a chart to the intro pages that provides a graphical representation of the data in the section.
 
-1.  In the Palette view, select and drag **HTML5 Charts** from the Components Pro section and place it under the parameter element in the designer view.
+        To add a chart to the intro pages
 
-2.  In the Chart type selection dialog, scroll down and select **Pie**. Click **OK**.
+        1.  In the Palette view, select and drag **HTML5 Charts** from the Components Pro section and place it under the parameter element in the designer view.
+        2.  In the Chart type selection dialog, scroll down and select **Pie**. Click **OK**.
+        3.  Resize the pie chart to fit the space. See [Creating a Simple Chart](../charts-jfree/charts-creating-simple.md) for more information.
+        4.  Double-click the chart element to open the Chart Properties.
+        5.  Click the **Chart Data** tab, then click the **Configuration** tab.
+        6.  In the Categories Levels section, double-click **Level1**.
+        7.  In the Expression text box, delete "Change Me" and click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png).
+        8.  Select Fields from the first column, and double-click **SHIPCITY Field String** to add it to the expression.
+        9.  Click **Finish**.
+        10. Update the **Name** field to **"City"** and click **OK**.
+        11. Back in the Chart Properties dialog, update the following information:
 
-3.  Resize the pie chart to fit the space. See [Creating a Simple Chart](../charts-jfree/charts-creating-simple.md) for more information.
+    -   **Name**: `Number of orders`
 
-4.  Double-click the chart element to open the Chart Properties.
+    -   **Label Expression**: `"Number of orders"`
 
-5.  Click the **Chart Data** tab, then click the **Configuration** tab.
+    -   **Calculation**: Nothing
 
-6.  In the Categories Levels section, double-click **Level1**.
+    -   Value Expression: Delete new Integer1, click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png), and double-click C Field Long, then click **Finish**.
 
-7.  In the Expression text box, delete "Change Me" and click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png).
-
-8.  Select Fields from the first column, and double-click **SHIPCITY Field String** to add it to the expression.
-
-9.  Click **Finish**.
-
-10. Update the **Name** field to **"City"** and click **OK**.
-
-11. Back in the Chart Properties dialog, update the following information:
-
-    - **Name**: `Number of orders`
-    - **Label Expression**: `"Number of orders"`
-    - **Calculation**: Nothing
-    - Value Expression: Delete new Integer1, click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png), and double-click C Field Long, then click **Finish**.
-
-12. Click **OK**, then save the report.
-
-13. Compile **Country_Intro.jrxml** to create a .jasper file.
+1.  Click **OK**, then save the report.
+2.  Compile **Country_Intro.jrxml** to create a .jasper file.
 
 Now, you can add the Country_Intro page to your book, and configure it to display the correct data.
 

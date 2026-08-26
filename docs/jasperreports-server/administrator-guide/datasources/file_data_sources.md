@@ -15,17 +15,17 @@ By default file data sources do not appear in the New Data Source dialog and mus
 
 The following file-based data sources are available:
 
-- Remote XML data source (Simple single-table support and full domain support)
+-   Remote XML data source (Simple single-table support and full domain support)
 
-- JSON data source (Simple single-table support and full domain support)
+-   JSON data source (Simple single-table support and full domain support)
 
-- JSON Series data source (Simple single-table support)
+-   JSON Series data source (Simple single-table support)
 
-- JSONQL (JSON Query Language) data source (Simple single-table support and full domain support)
+-   JSONQL (JSON Query Language) data source (Simple single-table support and full domain support)
 
-- Text (CSV) data source (Full domain support)
+-   Text (CSV) data source (Full domain support)
 
-- XMLA Query data source (Simple single-table support)
+-   XMLA Query data source (Simple single-table support)
 
 !!! note
 
@@ -70,7 +70,7 @@ To create a file data source
 
 1.  Log in as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is **Data Sources**. The **New Data Source** page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is **Data Sources**. The **New Data Source** page appears.
 
 3.  From the **Type** dropdown, select a file data source that you enabled, for example **JSON Data Source** or **Remote XML Data Source**. In this example, we create a JSON data source. The fields on the page change to reflect what is needed to define a file data source.<br>
     You have the option to use attributes in the values of data source parameters. See [Attributes in Data Source Definitions](attributes_in_data_source_definitions.md).
@@ -89,9 +89,9 @@ To create a file data source
 
     where:
 
-    \<tableName\> corresponds to an XML element or JSON structure name
+    &lt;tableName&gt; corresponds to an XML element or JSON structure name
 
-    \<fieldName\> corresponds to an XML sub-element or JSON field name
+    &lt;fieldName&gt; corresponds to an XML sub-element or JSON field name
 
 6.  Click **Save**. The **Save** dialog appears.
 
@@ -101,10 +101,10 @@ To create a file data source
 
 Once you have defined a file data source:
 
-- You can use SQL queries in reports to access the data as a relational table.
-- You can create a Domain on a file data source, allowing you to alter the visibility and names of the fields extracted from the file. On the Display tab of the Domain Designer, you can also specify which fields are measured.
-- You can create Ad Hoc views using the Domain based on your file data source, allowing you to explore and interact with data from the file.
-- You can create virtual data sources that combine several file data sources, even different file formats such as XML and JSON, as long as their data structure is compatible so the tables can be joined. You can then create a Domain based on the virtual data source to join the tables and access the joined data in Ad Hoc views and reports.
+-   You can use SQL queries in reports to access the data as a relational table.
+-   You can create a Domain on a file data source, allowing you to alter the visibility and names of the fields extracted from the file. On the Display tab of the Domain Designer, you can also specify which fields are measured.
+-   You can create Ad Hoc views using the Domain based on your file data source, allowing you to explore and interact with data from the file.
+-   You can create virtual data sources that combine several file data sources, even different file formats such as XML and JSON, as long as their data structure is compatible so the tables can be joined. You can then create a Domain based on the virtual data source to join the tables and access the joined data in Ad Hoc views and reports.
 
 ## Enabling JasperReports Server XMLA Server
 

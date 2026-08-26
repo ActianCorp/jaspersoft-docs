@@ -233,32 +233,33 @@ Each column used in the expression must come from the two tables in the current 
 
 The following expressions are supported:
 
-- Boolean operators: AND, OR, and NOT. See the other expressions for examples of how these are used.
-- Comparison operators: Supports equal to (==), less than (&lt;), less than or equal to (&lt;=), greater than (&gt;), greater than or equal to (&gt;=), and not equal to (!=). Operators other than == must be used in conjunction with ==. For example:
+-   Boolean operators: AND, OR, and NOT. See the other expressions for examples of how these are used.
 
-`expr="(store.store_id == employee.store_id) AND`<br>
-`(store.coffee_bar != store.salad_bar)"`
+-   Comparison operators: Supports equal to (==), less than (&lt;), less than or equal to (&lt;=), greater than (&gt;), greater than or equal to (&gt;=), and not equal to (!=). Operators other than == must be used in conjunction with ==. For example:
 
-`expr="(employee.employee_id == salary.employee_id) AND (salary.overtime_paid &gt; 2)`<br>
-`AND (salary.overtime_paid &lt;= 2.1)"`
+    `expr="(store.store_id == employee.store_id) AND`<br>
+    `(store.coffee_bar != store.salad_bar)"`
 
-!!! note
+    `expr="(employee.employee_id == salary.employee_id) AND (salary.overtime_paid &gt; 2)`<br>
+    `AND (salary.overtime_paid &lt;= 2.1)"`
 
-    You have to use the character entities for less than (&lt;) and greater than (&gt;).
+    !!! note
 
-- IN operator: Must be used in conjunction with ==. Supports the following:
+        You have to use the character entities for less than (&lt;) and greater than (&gt;).
 
-  - A set of strings or values, separated by commas. Strings are enclosed in single quotes. For example:
+-   IN operator: Must be used in conjunction with ==. Supports the following:
 
-`expr="(store.region_id == region.region_id) AND (store.store_city IN ('San Francisco','Portland', 'Seattle'))" `
+    -   A set of strings or values, separated by commas. Strings are enclosed in single quotes. For example:
 
-`expr="(store.store_id == employee.store_id) AND (NOT store.coffee_bar IN ('true'))"`
+        `expr="(store.region_id == region.region_id) AND (store.store_city IN ('San Francisco','Portland', 'Seattle'))" `
 
-- A range of values, separated by a colon. For example:
+        `expr="(store.store_id == employee.store_id) AND (NOT store.coffee_bar IN ('true'))"`
 
-`expr="(employee.employee_id == salary.employee_id) AND (NOT employee.salary IN (7000 : 8000))"`
+    -   A range of values, separated by a colon. For example:
 
-- Joins between a table foreign key and a constant value. Must be used in conjunction with ==. For example:
+        `expr="(employee.employee_id == salary.employee_id) AND (NOT employee.salary IN (7000 : 8000))"`
+
+-   Joins between a table foreign key and a constant value. Must be used in conjunction with ==. For example:
 
 `expr="(employee.employee_id == salary.employee_id) AND (employee.salary == 5000)"`
 
@@ -336,9 +337,9 @@ The `<tableRef>` element represents a table used in the join tree. There must be
 
 The following example shows a join tree with three joins between three tables. This example shows how you might use the following:
 
-- To avoid circular joins, `suppressCircularJoins` is set to true.
-- The join between `region` and `customer` has a join `weight` of 2. This makes it a less desirable join than the other joins in the tree.
-- `alwaysIncludeTable` is set to `true` for the `region` table.
+-   To avoid circular joins, `suppressCircularJoins` is set to true.
+-   The join between `region` and `customer` has a join `weight` of 2. This makes it a less desirable join than the other joins in the tree.
+-   `alwaysIncludeTable` is set to `true` for the `region` table.
 
 ``` xml
 <schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.3">
@@ -375,22 +376,27 @@ The following example shows a join tree with three joins between three tables. T
 
 Keep the following in mind when working with join syntax:
 
-- When you add or modify joins in the Domain design file, make sure that all tables in a join element are actually connected. If you include a table that is not actually joined to any other tables, the unjoined table is included in any Ad Hoc view that uses that data island. In this case, the fields in the unjoined table show up in the Ad Hoc view. You receive errors in your Ad Hoc view when you add unconnected fields from a poorly configured join.
-- When you use a `join` tag, the `left` table must have been defined previously in the `jdbcTable` element. You can define the table either in the `joinInfo` tag or as the `right` table in a previous join in the same `joinList`. Follow these guidelines for your joins:
-- - When you have a `join` that depends on the `right` table from another join in the `joinList`, make sure that the dependent `join` appears after the join it depends on.
-  - When you have a `join` that refers to a table that has not yet been defined, make sure that the new table is referenced as the `right` table in the join.
-- In some cases, you can start your Domain creation using the Domain Designer. To do this:
+-   When you add or modify joins in the Domain design file, make sure that all tables in a join element are actually connected. If you include a table that is not actually joined to any other tables, the unjoined table is included in any Ad Hoc view that uses that data island. In this case, the fields in the unjoined table show up in the Ad Hoc view. You receive errors in your Ad Hoc view when you add unconnected fields from a poorly configured join.
+
+-   When you use a `join` tag, the `left` table must have been defined previously in the `jdbcTable` element. You can define the table either in the `joinInfo` tag or as the `right` table in a previous join in the same `joinList`. Follow these guidelines for your joins:
+
+-   When you have a `join` that depends on the `right` table from another join in the `joinList`, make sure that the dependent `join` appears after the join it depends on.
+
+    -   When you have a `join` that refers to a table that has not yet been defined, make sure that the new table is referenced as the `right` table in the join.
+
+-   In some cases, you can start your Domain creation using the Domain Designer. To do this:
 
 1.  Set up the rest of your Domain, such as derived tables and calculated fields, in the Domain Designer.
-2.  Create a join that uses the same tables that you want to join in your Domain. This sets up the `jdbcTable` and `fieldList` tags for you.
-3.  Export the schema from the Domain Designer.
-4.  Manually edit the `tableRefList` and `joinInfo` sections of the exported design file to create the join you want.
+
+    1.  Create a join that uses the same tables that you want to join in your Domain. This sets up the `jdbcTable` and `fieldList` tags for you.
+    2.  Export the schema from the Domain Designer.
+    3.  Manually edit the `tableRefList` and `joinInfo` sections of the exported design file to create the join you want.
 
 ## Tips for Using Joins
 
-- To avoid join cycles in queries, set `<joinOptions suppressCircularJoins=true/>`. This finds the lowest weight join set.
-- To configure your Domain to use the fewest number of joins required to reach a given set of chosen fields, use `<joinOptions suppressCircularJoins=true/>` AND set all `<join weight="W">` values to be the same value. In this case, the lowest weight join set will be a set that has the minimum possible number of joins.
-- You do not have to set the join weight explicitly. If the weight is not set, it defaults to 1.
-- To give preferential treatment to joins that involve indexed columns for better join performance, assign lower join weights to the preferred joins and higher join weights to less desirable joins.
-- To make sure that one or more specific table(s) always get included in your results, set `alwaysIncludeTable=true`. For example, to make sure tableA is always included, use:<br>
-  `<tableRef tableId=tableA tableAlias=tableA alwaysIncludeTable=true/>`
+-   To avoid join cycles in queries, set `<joinOptions suppressCircularJoins=true/>`. This finds the lowest weight join set.
+-   To configure your Domain to use the fewest number of joins required to reach a given set of chosen fields, use `<joinOptions suppressCircularJoins=true/>` AND set all `<join weight="W">` values to be the same value. In this case, the lowest weight join set will be a set that has the minimum possible number of joins.
+-   You do not have to set the join weight explicitly. If the weight is not set, it defaults to 1.
+-   To give preferential treatment to joins that involve indexed columns for better join performance, assign lower join weights to the preferred joins and higher join weights to less desirable joins.
+-   To make sure that one or more specific table(s) always get included in your results, set `alwaysIncludeTable=true`. For example, to make sure tableA is always included, use:<br>
+    `<tableRef tableId=tableA tableAlias=tableA alwaysIncludeTable=true/>`

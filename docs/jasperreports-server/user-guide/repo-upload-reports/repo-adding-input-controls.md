@@ -7,11 +7,11 @@ description: "Input controls are graphical widgets that the server displays with
 
 Input controls are graphical widgets that the server displays with the report. Input controls perform the following functions:
 
-- Prompt the user for input.
+-   Prompt the user for input.
 
-- Validate the format of the input.
+-   Validate the format of the input.
 
-- Pass the input to the report.
+-   Pass the input to the report.
 
 Based on the input, the server modifies the WHERE filter clauses in SQL parametrized queries.
 
@@ -39,19 +39,19 @@ To define a datatype, set properties on the **Set the Datatype Kind and Properti
 
 After determining the list of values to be presented to the user, choose one of these widget types for the input control:
 
-- Boolean: A checkbox widget for entering a yes/no value.
+-   Boolean: A checkbox widget for entering a yes/no value.
 
-- Single value: A text, number, date, or date/time widget. Input can be constrained to a minimum value, maximum value, or both. Text input can also be constrained by a matching pattern. A text box widget for entering a value, or a calendar for selecting the date and date/time.
+-   Single value: A text, number, date, or date/time widget. Input can be constrained to a minimum value, maximum value, or both. Text input can also be constrained by a matching pattern. A text box widget for entering a value, or a calendar for selecting the date and date/time.
 
-- Multiple values: To present a static or a dynamic list of values to the user, choose one of these:
+-   Multiple values: To present a static or a dynamic list of values to the user, choose one of these:
 
-  - Drop-down list to select a single value.
+    -   Drop-down list to select a single value.
 
-  - Radio buttons to select a single value.
+    -   Radio buttons to select a single value.
 
-  - Multi-select list to select multiple values.
+    -   Multi-select list to select multiple values.
 
-  - Checkboxes to select multiple values.
+    -   Checkboxes to select multiple values.
 
 The query in the `SalesByMonth.jrxml` file has several input control parameters, one for each type of input control. These procedures show you how to add each type to the report unit.
 
@@ -74,21 +74,21 @@ To add a text input control to the complex report example
 6.  Enter the other properties for the input control:<br>
     The name is referenced in the main JRXML file, so enter it exactly as shown.
 
-    - **Prompt Text**: Displays the label the user sees next to the widget for this input: `Text Input Control`
+    -   **Prompt Text**: Displays the label the user sees next to the widget for this input: `Text Input Control`
 
-    - **Custom Prompt Text**: Allows you to write an expression or call a custom function to change the Input Control title dynamically: leave blank in this example.
+    -   **Custom Prompt Text**: Allows you to write an expression or call a custom function to change the Input Control title dynamically: leave blank in this example.
 
-    - **Parameter Name**: Displays the name of the report parameter that receives the user value: `TextInput`
+    -   **Parameter Name**: Displays the name of the report parameter that receives the user value: `TextInput`
 
-    - **Description**: Displays the description (optional) within the report wizard: leave blank in this example.
+    -   **Description**: Displays the description (optional) within the report wizard: leave blank in this example.
 
-    - **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: A setting that determines how the input control appears: Default selection in this example.
+    -   **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: A setting that determines how the input control appears: Default selection in this example.
 
     ![js ReportWizard InputControl textinput properties1](../assets/images/js-ReportWizard-InputControl-textinput-properties1.png)
 
     !!! note
 
-        To reuse an input control, add it to the repository independent of any report using **Add Resource \> Input Control**. Before using the input control in a report, check that the parameter name in the JRXML matches the name in the **Create Input Control** page. If it does not, then the server cannot run the report.
+        To reuse an input control, add it to the repository independent of any report using **Add Resource &gt; Input Control**. Before using the input control in a report, check that the parameter name in the JRXML matches the name in the **Create Input Control** page. If it does not, then the server cannot run the report.
 
 7.  Click **Next**.
 
@@ -115,15 +115,15 @@ To add a text input control to the complex report example
 
     4.  Leave these properties blank in this example:
 
-        - **Description**: An optional description that appears only within the report wizard.
+        -   **Description**: An optional description that appears only within the report wizard.
 
-        - **Minimum value**: The lower bound of the value the user may enter.
+        -   **Minimum value**: The lower bound of the value the user may enter.
 
-        - **Maximum value**: The upper bound of the value the user may enter.
+        -   **Maximum value**: The upper bound of the value the user may enter.
 
-        - **Minimum is strict**: Means the minimum value itself is not allowed.
+        -   **Minimum is strict**: Means the minimum value itself is not allowed.
 
-        - **Maximum is strict**: Means the maximum value itself is not allowed.
+        -   **Maximum is strict**: Means the maximum value itself is not allowed.
 
 10. Click **Save**.
 
@@ -147,15 +147,15 @@ To add a simple checkbox input control to the complex report example
 
 5.  Enter the other properties:
 
-    - **Prompt Text**: `Checkbox Input Control`.
+    -   **Prompt Text**: `Checkbox Input Control`.
 
-    - **Custom Prompt Text**: Leave blank in this example.
+    -   **Custom Prompt Text**: Leave blank in this example.
 
-    - **Parameter Name**: `Checkbox Input`. Enter the parameter name exactly as shown because the main JRXML file references this name.
+    -   **Parameter Name**: `Checkbox Input`. Enter the parameter name exactly as shown because the main JRXML file references this name.
 
-    - **Description**: Leave blank in this example.
+    -   **Description**: Leave blank in this example.
 
-    - **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
+    -   **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
 
 6.  Click **Submit**. The **Controls & Resources** page appears with the new checkbox input control.
 
@@ -163,11 +163,11 @@ To add a simple checkbox input control to the complex report example
 
 The drop-down input control also called a list, gives the user a pre-determined list of choices. As a report designer, you can choose a drop-down input control based on:
 
-- To present a single-select or multi-select list to the user.
+-   To present a single-select or multi-select list to the user.
 
-- To present a single choice as a drop-down list or a set of radio buttons.
+-   To present a single choice as a drop-down list or a set of radio buttons.
 
-- To present a multi-select control as a multi-select list or a set of checkboxes.
+-   To present a multi-select control as a multi-select list or a set of checkboxes.
 
 Radio buttons and checkboxes usually work well for five or fewer choices. This example shows how to create an input control that presents three choices in a drop-down list. You can create a new list of values for this input control or use a list of values in the repository.
 
@@ -183,11 +183,11 @@ To add a drop-down input control to the complex report example
 
 5.  Enter the other properties:
 
-    - **Prompt Text**: `List Input Control`.
-    - **Custom Prompt Text**: Leave blank in this example.
-    - **Parameter Name**: `ListInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
-    - **Description**: Leave blank in this example.
-    - **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
+    -   **Prompt Text**: `List Input Control`.
+    -   **Custom Prompt Text**: Leave blank in this example.
+    -   **Parameter Name**: `ListInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
+    -   **Description**: Leave blank in this example.
+    -   **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
 
 6.  Click **Next**.
 
@@ -201,22 +201,22 @@ To add a drop-down input control to the complex report example
 
 9.  On the **Add List of Values** page, provide the name, resource ID, and optional description for the list of values. These properties are not visible outside of the input control. Enter these values:
 
-    - **Name**: `list type`
-    - **Resource ID**: `list_type`
-    - **Description**: Leave blank in this example.
+    -   **Name**: `list type`
+    -   **Resource ID**: `list_type`
+    -   **Description**: Leave blank in this example.
 
 10. In the **Name Value** panel, enter names and values to present as choices to the user:
 
-    - Enter unique names. The server requires unique names to distinguish which item the user chose.
-    - Enter values of the type that match the parameter definition in the JRXML report.
+    -   Enter unique names. The server requires unique names to distinguish which item the user chose.
+    -   Enter values of the type that match the parameter definition in the JRXML report.
 
     After entering a name and value, click **Add**. If you make a mistake click **Remove**.
 
     For this example enter:
 
-    - Name **First Item** with value **1**.
-    - Name **Second Item** with value **2**.
-    - Name **Third Item** with value **3**.
+    -   Name **First Item** with value **1**.
+    -   Name **Second Item** with value **2**.
+    -   Name **Third Item** with value **3**.
 
     ![js ReportWizard ListOfValues EditValues](../assets/images/js-ReportWizard-ListOfValues-EditValues.png)
 
@@ -236,11 +236,11 @@ To add a date input control to the complex report example
 
 4.  Enter the other properties:
 
-    - **Prompt Text**: `Date Input Control`.
-    - **Custom Prompt Text**: Leave blank in this example.
-    - **Parameter Name**: `DateInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
-    - **Description**: Leave blank in this example.
-    - **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
+    -   **Prompt Text**: `Date Input Control`.
+    -   **Custom Prompt Text**: Leave blank in this example.
+    -   **Parameter Name**: `DateInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
+    -   **Description**: Leave blank in this example.
+    -   **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
 
 5.  Click **Next**.
 
@@ -258,11 +258,11 @@ To add a date input control to the complex report example
 
 A query-based input control presents a dynamically created list of choices to the user. The server performs a query whose results are used to create the list of choices. You must perform the following tasks:
 
-- Configure the query.
+-   Configure the query.
 
-- Designate how to display the results in the input control.
+-   Designate how to display the results in the input control.
 
-- Specify the value to pass as the corresponding parameter.
+-   Specify the value to pass as the corresponding parameter.
 
 To add a query-based input control to the complex report example
 
@@ -276,16 +276,16 @@ To add a query-based input control to the complex report example
 
 5.  Enter the naming properties for the input control:
 
-    - **Prompt Text**: `Query Input Control`
-    - **Custom Prompt Text**: Leave blank in this example.
-    - **Parameter Name**: `QueryInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
-    - **Description**: Leave blank in this example.
-    - **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
+    -   **Prompt Text**: `Query Input Control`
+    -   **Custom Prompt Text**: Leave blank in this example.
+    -   **Parameter Name**: `QueryInput` Enter the parameter name exactly as shown because the main JRXML file references this name.
+    -   **Description**: Leave blank in this example.
+    -   **Mandatory**, **Enable/Disable Input Control**, **Show/Hide Input Control**: Default selection in this example.
 
 6.  Click **Next**. The **Locate Query** page appears. The available options are:
 
-    - To locate a reusable query in the repository
-    - To define a new query dedicated to this input control
+    -   To locate a reusable query in the repository
+    -   To define a new query dedicated to this input control
 
 7.  For this example, select **Define a Query in the next step.**
 
@@ -297,9 +297,9 @@ To add a query-based input control to the complex report example
 
 10. Click **Next**. The **Link a Data Source to the Report** page appears. The available options include:
 
-    - To use the same data source for the input control as you use for the report.
-    - To define a new data source, dedicated to this input control.
-    - To select a reusable data source from the repository.
+    -   To use the same data source for the input control as you use for the report.
+    -   To define a new data source, dedicated to this input control.
+    -   To select a reusable data source from the repository.
 
 11. For this example, select **Do not link a data source** to use the same data source for the input control as you use for the report. You will select the data source for the report in [Selecting a Data Source for Running the Complex Report](repo-data-source-complex-report.md).
 
@@ -340,11 +340,11 @@ To configure the appearance of the input controls for the complex report example
 
         You can also select:
 
-        - **Separate page**: To display the input controls in a separate browser window.
+        -   **Separate page**: To display the input controls in a separate browser window.
 
-        - **Top of page**: To display them above the report:
+        -   **Top of page**: To display them above the report:
 
-        - **In page**: To display them on the side of the report.
+        -   **In page**: To display them on the side of the report.
 
 2.  Select **Always prompt** when you want the server to display the **Input Controls** dialog to prompt the user when the report runs.
 

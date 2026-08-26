@@ -13,17 +13,17 @@ Your permissions to access the repository may limit the content you can add and 
 
 This section includes:
 
-- The Dashboard Designer Interface
+-   The Dashboard Designer Interface
 
-- Dashlets and Dashboard Elements
+-   Dashlets and Dashboard Elements
 
-- Previewing a Dashboard
+-   Previewing a Dashboard
 
-- [Dashboard Properties](dashboard-properties.md)
+-   [Dashboard Properties](dashboard-properties.md)
 
-- [Dashlet Properties](dashboard-properties.md)
+-   [Dashlet Properties](dashboard-properties.md)
 
-- [Parameter Mapping](dashboard-properties.md)
+-   [Parameter Mapping](dashboard-properties.md)
 
 ## The Dashboard Designer Interface
 
@@ -35,15 +35,15 @@ The following figure shows the basic layout of the Dashboard Designer.
 
 The Dashboard Designer UI includes the following panels:
 
-- **Available Content**. From here, you can drag content onto the Dashboard Canvas. This panel includes the following sections:
+-   **Available Content**. From here, you can drag content onto the Dashboard Canvas. This panel includes the following sections:
 
-  - **New Content**, which lists the content elements you can create for your dashboard.
+    -   **New Content**, which lists the content elements you can create for your dashboard.
 
-  - **Existing Content**, which lists the Ad Hoc views and reports you can access from the Repository.
+    -   **Existing Content**, which lists the Ad Hoc views and reports you can access from the Repository.
 
-  - **Filters, which list** all filters associated with any resource added to the dashboard.
+    -   **Filters, which list** all filters associated with any resource added to the dashboard.
 
-- **Toolbar Buttons**. See the table below for details.
+-   **Toolbar Buttons**. See the table below for details.
 
 <table>
 <colgroup>
@@ -118,13 +118,13 @@ The Dashboard Designer UI includes the following panels:
 </tbody>
 </table>
 
-- **Dashboard Canvas**. This is where you create and edit your dashboard. It includes the following sections:
+-   **Dashboard Canvas**. This is where you create and edit your dashboard. It includes the following sections:
 
-  - **Title Bar**, which displays the name of the dashboard (in the figure above, the name is "New Dashboard"). It also includes the **Editing/Viewing** button, which allows you to switch between editing the dashboard and displaying it as viewed by the end user.
+    -   **Title Bar**, which displays the name of the dashboard (in the figure above, the name is "New Dashboard"). It also includes the **Editing/Viewing** button, which allows you to switch between editing the dashboard and displaying it as viewed by the end user.
 
-  - **Main Creation Area**, where you build your dashboard. Drag elements from the Available Content panel here to get started.
+    -   **Main Creation Area**, where you build your dashboard. Drag elements from the Available Content panel here to get started.
 
-- **Dashboard Settings**. This section displays the properties specific to the dashboard. See [Dashboard Properties](dashboard-properties.md) for more information.
+-   **Dashboard Settings**. This section displays the properties specific to the dashboard. See [Dashboard Properties](dashboard-properties.md) for more information.
 
 ## Dashlets and Dashboard Elements
 
@@ -134,29 +134,29 @@ To add a Dashlet to your dashboard, simply select a content element and drag it 
 
 Dashlets can include the following elements, which you can access from the **Available Content** panel:
 
-- **New Content**:
+-   **New Content**:
 
-  - **Chart**: It allows you to create a chart using an embedded Ad Hoc editor.
+    -   **Chart**: It allows you to create a chart using an embedded Ad Hoc editor.
 
-  - **Crosstab**: It allows you to create a crosstab using an embedded Ad Hoc editor.
+    -   **Crosstab**: It allows you to create a crosstab using an embedded Ad Hoc editor.
 
-  - **Table**: It allows you to create a table using an embedded Ad Hoc editor.
+    -   **Table**: It allows you to create a table using an embedded Ad Hoc editor.
 
-  - **Text**: A free-form text entry field. Use free text items to add titles and instructional text to the dashboard.
+    -   **Text**: A free-form text entry field. Use free text items to add titles and instructional text to the dashboard.
 
-  - **Web Page**. Any URL-addressable web content. The dashboard can point to web content.
+    -   **Web Page**. Any URL-addressable web content. The dashboard can point to web content.
 
-  - **Image**: An image from the repository or that is accessible by a web address URL. For example, you might include a dashlet that displays your corporate logo. The logo's image file can be either in your repository or on the server of your corporate website.
+    -   **Image**: An image from the repository or that is accessible by a web address URL. For example, you might include a dashlet that displays your corporate logo. The logo's image file can be either in your repository or on the server of your corporate website.
 
-- **Existing Content**: Reports and Ad Hoc views are accessible to you.
+-   **Existing Content**: Reports and Ad Hoc views are accessible to you.
 
-- **Filters**: If a dashlet you include on the dashboard is designed to use input controls or filters, you can add that capability to the dashboard. The server maps input controls to one or more dashlets.
+-   **Filters**: If a dashlet you include on the dashboard is designed to use input controls or filters, you can add that capability to the dashboard. The server maps input controls to one or more dashlets.
 
-- **Title Bar**: You can enable a title bar in the Dashlet Settings. The title bar includes the following elements:
+-   **Title Bar**: You can enable a title bar in the Dashlet Settings. The title bar includes the following elements:
 
-  - The Dashlet name, as entered in the Dashlet Settings.
+    -   The Dashlet name, as entered in the Dashlet Settings.
 
-  - Dashlet toolbar, which can contain the following:
+    -   Dashlet toolbar, which can contain the following:
 
 | Icon | Name | Description |
 |----|----|----|

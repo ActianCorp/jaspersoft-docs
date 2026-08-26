@@ -11,9 +11,9 @@ The main purpose of accessibility is to promote inclusivity among all users, inc
 
 Organizations are keen to integrate accessibility. There are international guidelines of compliance that must be followed for web accessibility including:
 
-- Web Content Accessibility Guidelines (WCAG) 2.1 also known as ISO/IEC 40500
+-   Web Content Accessibility Guidelines (WCAG) 2.1 also known as ISO/IEC 40500
 
-- Country-based accessibility guidelines, such as 508c in the U.S.A.
+-   Country-based accessibility guidelines, such as 508c in the U.S.A.
 
 Voluntary Product Accessibility Template (VPAT) is a template used to document the product's conformance with accessibility standards and guidelines.
 
@@ -23,43 +23,43 @@ WCAG is implemented on the **Login, Home, Repository, Library, and Search Result
 
 There are a few limitations of accessibility in JasperReports Server, including:
 
-- **Library**:
+-   **Library**:
 
-  - Non-text elements are not read by the NonVisual Desktop Access (NVDA) screen reader.
+    -   Non-text elements are not read by the NonVisual Desktop Access (NVDA) screen reader.
 
-  - Unable to navigate to the **Favorite** icon using the keyboard.
+    -   Unable to navigate to the **Favorite** icon using the keyboard.
 
-- **Repository**:
+-   **Repository**:
 
-  - While navigating from **Folder \> Add Folder**, the dialog name is not tagged as a heading.
+    -   While navigating from **Folder &gt; Add Folder**, the dialog name is not tagged as a heading.
 
-  - Unable to navigate to the **Favorite** icon using the keyboard.
+    -   Unable to navigate to the **Favorite** icon using the keyboard.
 
-- **Favorites**:
+-   **Favorites**:
 
-  - **Favorite** button is not accessible using the **Tab** and arrow keys.
+    -   **Favorite** button is not accessible using the **Tab** and arrow keys.
 
-  - Interactive role missing for list items.
+    -   Interactive role missing for list items.
 
-- **Search Results**:
+-   **Search Results**:
 
-  - Labels missing for the expandable/collapsible buttons in the **Filter** section.
+    -   Labels missing for the expandable/collapsible buttons in the **Filter** section.
 
-  - Interactive role missing for list items in the **Filter** section.
+    -   Interactive role missing for list items in the **Filter** section.
 
-- **Login** and **Home**:
+-   **Login** and **Home**:
 
-  - Footer content overlaps at 400%.
+    -   Footer content overlaps at 400%.
 
-- Repository tree, List, and Toolbar:
+-   Repository tree, List, and Toolbar:
 
-  - The screen reader does not provide the status message after selecting the Cut, Copy, and Paste options.
+    -   The screen reader does not provide the status message after selecting the Cut, Copy, and Paste options.
 
-- The **End** button on the keyboard does not move focus to the last cell or last row where infinite scrolling is used.
+-   The **End** button on the keyboard does not move focus to the last cell or last row where infinite scrolling is used.
 
-- Touchscreen devices and mobile devices do not support accessibility.
+-   Touchscreen devices and mobile devices do not support accessibility.
 
-- The **Favorite** icon is the last element read by the screen reader on each Repository List row, even though it is the first element.
+-   The **Favorite** icon is the last element read by the screen reader on each Repository List row, even though it is the first element.
 
 ## Report Exporter and Viewer
 

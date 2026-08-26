@@ -61,8 +61,9 @@ Both generate the same output if the parameter value is not Null: `"select * whe
 
 However, if the parameter has a Null value the output is different:
 
-- `$P`: `"select * where num_column = null"`
-- `$X`: `"select * where num_column IS null"`
+-   `$P`: `"select * where num_column = null"`
+
+    -   `$X`: `"select * where num_column IS null"`
 
 Databases do not understand the key difference between `"= null"` and `"is null"`. So if you want your query with the condition "=" to work with null values, you need to use `$X{EQUAL/NOTEQUAL, column, parameter}`.
 
@@ -80,11 +81,11 @@ The set here is defined by the countries USA, Italy, and Germany. Assuming we ar
 
 where `myCountries` is the name of the parameter that contains the set of country names. The `$X` clause recognizes three parameters:
 
-- Type of function to apply (`IN` or `NOTIN`)
+-   Type of function to apply (`IN` or `NOTIN`)
 
-- Field name to be evaluated `(SHIPCOUNTRY`)
+-   Field name to be evaluated `(SHIPCOUNTRY`)
 
-- Parameter name (`myCountries`)
+-   Parameter name (`myCountries`)
 
 JasperReports handles special characters in each value. If the parameter is `null` or contains an empty list, meaning no value has been set for the parameter, the entire `$X` clause is evaluated as the always true statement “`0 = 0`”.
 
@@ -100,9 +101,9 @@ You can create a report that filters information based on a date range relative 
 
 The text expression for the relative date must be in the format `<Keyword>+/-<N>` where:
 
-- `<Keyword>` – Specifies the time span that you want to use. Options include: `DAY`, `WEEK`, `MONTH`, `QUARTER`, `SEMI`, and `YEAR`.
-- `<+/->` – Specifies whether the time span occurs before (-) or after (+) the chosen date.
-- `<N>` – Specifies the number of the above-mentioned time spans you want to include in the filter.
+-   `<Keyword>` – Specifies the time span that you want to use. Options include: `DAY`, `WEEK`, `MONTH`, `QUARTER`, `SEMI`, and `YEAR`.
+-   `<+/->` – Specifies whether the time span occurs before (-) or after (+) the chosen date.
+-   `<N>` – Specifies the number of the above-mentioned time spans you want to include in the filter.
 
 For example, if you want to look at Sales for the prior month, your expression would be `MONTH - 1`.
 
@@ -118,12 +119,12 @@ For example, if you want to look at Sales for the prior month, your expression w
 
 The `class` attribute of a JasperReports date range parameter must have one of the following values:
 
-- `net.sf.jasperreports.types.date.DateRange` (Date only) – Accepts text strings with relative date keywords as described above and date strings in YYYY-MM-DD format. For example:
+-   `net.sf.jasperreports.types.date.DateRange` (Date only) – Accepts text strings with relative date keywords as described above and date strings in YYYY-MM-DD format. For example:
 
-`<parameter name="myParameter" class="net.sf.jasperreports.types.date.DateRange">`
+    `<parameter name="myParameter" class="net.sf.jasperreports.types.date.DateRange">`
 
-- `net.sf.jasperreports.types.date.TimestampRange` (Date and Time) – Accepts text strings with relative date keywords as described above and date strings in YYYY-MM-DD HH:mm:ss format. For example:<br>
-  `<parameter name="myParam" class="net.sf.jasperreports.types.date.TimestampRange">`
+-   `net.sf.jasperreports.types.date.TimestampRange` (Date and Time) – Accepts text strings with relative date keywords as described above and date strings in YYYY-MM-DD HH:mm:ss format. For example:<br>
+    `<parameter name="myParam" class="net.sf.jasperreports.types.date.TimestampRange">`
 
 ### Using Date Ranges in Queries
 
@@ -131,10 +132,10 @@ You must use `$X` functions with date ranges, because `$P` does not support the 
 
 To use date ranges, create a parameter with type date range and use it as the third argument in the `$X` function. To set the default value expression of a date range parameter, use the `DateRangeBuilder()` class to cast the expression to the correct type:
 
-- `new net.sf.jasperreports.types.date.DateRangeBuilder("DAY-1").toDateRange()` – casts a keyword text string to a `DateRange`.
-- `new net.sf.jasperreports.types.date.DateRangeBuilder("WEEK").set(Timestamp.class).toDateRange()` – casts a keyword text string to a `TimestampRange`.
-- `new net.sf.jasperreports.types.date.DateRangeBuilder("2012-08-01").toDateRange()`– casts a date in YYYY-MM-DD format to a `DateRange`.
-- `new net.sf.jasperreports.types.date.DateRangeBuilder("2012-08-01 12:34:56").toDateRange()`– casts a date in YYYY-MM-DD HH:mm:ss format to a `TimestampRange`.
+-   `new net.sf.jasperreports.types.date.DateRangeBuilder("DAY-1").toDateRange()` – casts a keyword text string to a `DateRange`.
+-   `new net.sf.jasperreports.types.date.DateRangeBuilder("WEEK").set(Timestamp.class).toDateRange()` – casts a keyword text string to a `TimestampRange`.
+-   `new net.sf.jasperreports.types.date.DateRangeBuilder("2012-08-01").toDateRange()`– casts a date in YYYY-MM-DD format to a `DateRange`.
+-   `new net.sf.jasperreports.types.date.DateRangeBuilder("2012-08-01 12:34:56").toDateRange()`– casts a date in YYYY-MM-DD HH:mm:ss format to a `TimestampRange`.
 
 The following JRXML example shows data from the previous day:
 
@@ -192,13 +193,13 @@ When you create an input control for a `DateRange` or `TimestampRange` parameter
 
 Use `BETWEEN` to set up input controls that allow the user to specify a range (other than a day) using either a relative date expression or actual dates. To do this:
 
-- Define two date range parameters, for example, `StartDate` and `EndDate`.
+-   Define two date range parameters, for example, `StartDate` and `EndDate`.
 
-- Optionally, set default values for one or both parameters using `defaultValueExpression`.
+-   Optionally, set default values for one or both parameters using `defaultValueExpression`.
 
-- Use a `$X` expression with a `BETWEEN` function in your query.
+-   Use a `$X` expression with a `BETWEEN` function in your query.
 
-- Create a date type input control for each parameter, for example, `StartDate` and `EndDate`.
+-   Create a date type input control for each parameter, for example, `StartDate` and `EndDate`.
 
 The following JRXML example uses the `BETWEEN` keyword in the `$X()` function to find all data from the previous 20 years:
 

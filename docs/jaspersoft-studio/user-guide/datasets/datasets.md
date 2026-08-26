@@ -11,13 +11,13 @@ To use a subdataset, you add an element that contains a dataset and define a dat
 
 This chapter has the following sections:
 
-- Understanding Datasets and Dataset Runs
+-   Understanding Datasets and Dataset Runs
 
-- Subdatasets
+-   Subdatasets
 
-- Dataset Runs
+-   Dataset Runs
 
-- [Creating an Example Subdataset](dataset-creating-tutorial.md)
+-   [Creating an Example Subdataset](dataset-creating-tutorial.md)
 
 ## Understanding Datasets and Dataset Runs
 
@@ -27,8 +27,8 @@ Datasets allow the engine to iterate through virtual records, just as data sourc
 
 A report can include two types of datasets:
 
-- Main Dataset: The main dataset is responsible for iterating through the data source records, calculating variables, filtering out records, and estimating group breaks during the report-filling process. The report data source, along with the parameters, fields, variables, and groups declared at the report level, represent the building blocks of the main dataset for the report. All report templates implicitly declare and use this main dataset.
-- Subdataset: You can use a subdataset to provide a secondary record nested within a report. A subdataset iterates through its data source records similar to a dataset. However, a dataset can use the same connection that is used to fill the master report or it can use a different connection or data source. Subdatasets can be used to iterate through data that is not the main report data source itself, for example, to gather data for a chart or perform data bucketing for a crosstab.
+-   Main Dataset: The main dataset is responsible for iterating through the data source records, calculating variables, filtering out records, and estimating group breaks during the report-filling process. The report data source, along with the parameters, fields, variables, and groups declared at the report level, represent the building blocks of the main dataset for the report. All report templates implicitly declare and use this main dataset.
+-   Subdataset: You can use a subdataset to provide a secondary record nested within a report. A subdataset iterates through its data source records similar to a dataset. However, a dataset can use the same connection that is used to fill the master report or it can use a different connection or data source. Subdatasets can be used to iterate through data that is not the main report data source itself, for example, to gather data for a chart or perform data bucketing for a crosstab.
 
 !!! note
 
@@ -67,30 +67,34 @@ You create a subdataset using the Dataset wizard. To open the Dataset wizard, ri
 
 The **Dataset** page of the Dataset wizard shows the following options:
 
-- **Dataset name**: A name for the subdataset. Must be unique in the report.
+-   **Dataset name**: A name for the subdataset. Must be unique in the report.
 
-- Dataset radio buttons:
+-   Dataset radio buttons:
 
-  - **Create new dataset from a connection or Data Source**: Select this to use a connection or data source to define the metadata for the dataset. The connection or data source introspects its associated data and suggest fields and field types for the dataset. Later, when you add an element and create a dataset run, you make the final choice on where to retrieve the data for the element. At that point, you can use the same data source/connection, or select a different one.
-  - **Create an empty dataset**: Select this to create a dataset without metadata. In this case, you need to define the metadata later, when you create a dataset run that uses this dataset.
+    -   **Create new dataset from a connection or Data Source**: Select this to use a connection or data source to define the metadata for the dataset. The connection or data source introspects its associated data and suggest fields and field types for the dataset. Later, when you add an element and create a dataset run, you make the final choice on where to retrieve the data for the element. At that point, you can use the same data source/connection, or select a different one.
 
-!!! note
+    -   **Create an empty dataset**: Select this to create a dataset without metadata. In this case, you need to define the metadata later, when you create a dataset run that uses this dataset.
 
-    A dataset that is configured to use the empty data source is *not* an empty dataset, because it still defines fields and other metadata. The empty data source just creates a number of records where each field value is set to null.
+        !!! note
 
-- **Next**: Displays the **Data Source** page (only available when **Create new dataset from a connection or Data Source** is selected).
+            A dataset that is configured to use the empty data source is *not* an empty dataset, because it still defines fields and other metadata. The empty data source just creates a number of records where each field value is set to null.
 
-|  |
-|----|
-| ![Data Source page of the Dataset wizard](../assets/images/Data%20Source%20page%20of%20the%20Dataset%20wizard.png) |
-| *Figure 2: Data Source page of the Dataset wizard* |
+-   **Next**: Displays the **Data Source** page (only available when **Create new dataset from a connection or Data Source** is selected).
 
-The **Data Source** page shows the following options:
+    |  |
+    |----|
+    | ![Data Source page of the Dataset wizard](../assets/images/Data%20Source%20page%20of%20the%20Dataset%20wizard.png) |
+    | *Figure 2: Data Source page of the Dataset wizard* |
 
-- **Data Adapter**: Drop-down that displays available data adapters you can use.
-- **New**: Button that opens the Data Adapter wizard for creating a data adapter.
-- **Query Area**: Area to enter the query for the new dataset. Only displayed for adapters that use connections.
-- **Next**: Click to display the **Fields** page.
+    The **Data Source** page shows the following options:
+
+-   **Data Adapter**: Drop-down that displays available data adapters you can use.
+
+-   **New**: Button that opens the Data Adapter wizard for creating a data adapter.
+
+-   **Query Area**: Area to enter the query for the new dataset. Only displayed for adapters that use connections.
+
+-   **Next**: Click to display the **Fields** page.
 
 The Fields page shows the fields that are retrieved using the data adapter and lets you choose fields for your dataset metadata. Click **Next** to display the **Group B**y page.
 
@@ -113,50 +117,52 @@ For example, suppose you have a parameter named MyParam of type `String` in the 
 
 The **Properties** view for a dataset shows a number of advanced options, most of which can only be understood and applied in a useful way after you become familiar with JasperReports. To see the properties for a dataset:
 
-- For a report, select the root node of the report in the outline view. The dataset properties are shown in the **Dataset** section on the **Report** tab in the **Properties** view.
-- For a subdataset, select the subdataset node in the outline view. The dataset properties are shown in the **Properties** view.
+-   For a report, select the root node of the report in the outline view. The dataset properties are shown in the **Dataset** section on the **Report** tab in the **Properties** view.
 
-|                                                                  |
-|------------------------------------------------------------------|
-| ![Dataset properties](../assets/images/Dataset%20properties.png) |
-| *Figure 4: Dataset properties*                                   |
+-   For a subdataset, select the subdataset node in the outline view. The dataset properties are shown in the **Properties** view.
 
-A dataset has the following properties:
+    |                                                                  |
+    |------------------------------------------------------------------|
+    | ![Dataset properties](../assets/images/Dataset%20properties.png) |
+    | *Figure 4: Dataset properties*                                   |
 
-- **Name** (required): A name for the subdataset. Must be unique in the report.
-- **When Resource Missing Type**: Specifies what to do when a specific resource (such as a label) is not available in the resource bundle defined below. The available options are listed in the following table.
+    A dataset has the following properties:
 
-| Option | Description |
-|----|----|
-| `Null` | Prints the "Null" string (default). |
-| `Empty` | Prints nothing. |
-| `AllSectionsNoDetails` | Prints the missing key name. |
-| `Error` | Generates an exception and stops the filling process. |
+-   **Name** (required): A name for the subdataset. Must be unique in the report.
 
-- **Filter Expression**: Boolean expression that determines whether records that are read from the data source should be used. Can use all the objects of the dataset (parameters, variables, and fields). Here are some examples of filter expressions:
+-   **When Resource Missing Type**: Specifies what to do when a specific resource (such as a label) is not available in the resource bundle defined below. The available options are listed in the following table.
 
-  - Filter only records where the field `FIRSTNAME` starts with the letter “L”:
+    | Option | Description |
+    |----|----|
+    | `Null` | Prints the "Null" string (default). |
+    | `Empty` | Prints nothing. |
+    | `AllSectionsNoDetails` | Prints the missing key name. |
+    | `Error` | Generates an exception and stops the filling process. |
 
-    - JavaScript: \$F{FIRSTNAME}.substr(0,1) == "L"
-    - Groovy: \$F{FIRSTNAME}.startsWith("L")
+-   **Filter Expression**: Boolean expression that determines whether records that are read from the data source should be used. Can use all the objects of the dataset (parameters, variables, and fields). Here are some examples of filter expressions:
 
-  - Filter only records where the length of the field `FIRSTNAME` is less than 5:
+    -   Filter only records where the field `FIRSTNAME` starts with the letter “L”:
 
-    - JavaScript: \$F{FIRSTNAME}.length \< 5
-    - Groovy: \$F{FIRSTNAME}.length() \< 5
+        -   JavaScript: $F{FIRSTNAME}.substr(0,1) == "L"
+        -   Groovy: $F{FIRSTNAME}.startsWith("L")
 
-  - Filter only records where the field `FIRSTNAME` is the one provided by the parameter `NAME:`
+    -   Filter only records where the length of the field `FIRSTNAME` is less than 5:
 
-    - JavaScript: \$F{FIRSTNAME} == \$P{NAME}
-    - Groovy: \$F{FIRSTNAME} == \$P{NAME}
+        -   JavaScript: $F{FIRSTNAME}.length &lt; 5
+        -   Groovy: $F{FIRSTNAME}.length() &lt; 5
 
-- **Scriptlet Class**: A scriptlet is a Java class whose methods are run according to specific events during report creation, such as the beginning of a new page or the end of a group. For those who are familiar with visual tools such as Microsoft Access or Microsoft Excel, a scriptlet can be compared with a module in which procedures associated with other events or functions (for example, the expression of a textfield) are inserted. The scriptlet property identifies only the main scriptlet, but other scriptlets can be added to the report by using the outline view.
+    -   Filter only records where the field `FIRSTNAME` is the one provided by the parameter `NAME:`
 
-- **Resource Bundle**: Used to internationalize a report. A resource bundle is the set of files that contain the text of the labels, sentences, and expressions used within a report in one defined language. What you set in the resource bundle property is the *resource bundle base name*, which is the prefix through which you can find the file with the correct translation. To reconstruct the file name required for a particular language, some language/country initials (for example, “\_it_IT” for Italian-Italy) are added to this prefix, as well as the `.properties` extension.
+        -   JavaScript: $F{FIRSTNAME} == $P{NAME}
+        -   Groovy: $F{FIRSTNAME} == $P{NAME}
 
-- **Default Data Adapter**: Sets the name and location of the XML data adapter resource that JasperReports should use.
+-   **Scriptlet Class**: A scriptlet is a Java class whose methods are run according to specific events during report creation, such as the beginning of a new page or the end of a group. For those who are familiar with visual tools such as Microsoft Access or Microsoft Excel, a scriptlet can be compared with a module in which procedures associated with other events or functions (for example, the expression of a textfield) are inserted. The scriptlet property identifies only the main scriptlet, but other scriptlets can be added to the report by using the outline view.
 
-- **Edit query, filter and sort options button**: Opens the Dataset and Query dialog, where you can edit the query, sorting, and filter options for the subdataset. See [Using the Dataset and Query Dialog](dataset_and_query_dialog.md) for more information.
+-   **Resource Bundle**: Used to internationalize a report. A resource bundle is the set of files that contain the text of the labels, sentences, and expressions used within a report in one defined language. What you set in the resource bundle property is the *resource bundle base name*, which is the prefix through which you can find the file with the correct translation. To reconstruct the file name required for a particular language, some language/country initials (for example, “\_it_IT” for Italian-Italy) are added to this prefix, as well as the `.properties` extension.
+
+-   **Default Data Adapter**: Sets the name and location of the XML data adapter resource that JasperReports should use.
+
+-   **Edit query, filter and sort options button**: Opens the Dataset and Query dialog, where you can edit the query, sorting, and filter options for the subdataset. See [Using the Dataset and Query Dialog](dataset_and_query_dialog.md) for more information.
 
 ## Dataset Runs
 
@@ -167,7 +173,7 @@ You create a dataset run when you insert an element that contains a dataset into
 | ![jss dataset run chart](../assets/images/jss-dataset-run-chart.png) |
 | *Figure 5: Dataset run definition for a chart*                       |
 
-- **Dataset** drop-down: Displays all available datasets.
+-   **Dataset** drop-down: Displays all available datasets.
 
 ### Connection/Data Source Expression Menu
 
@@ -180,25 +186,30 @@ The **Connection/Data Source Expression** menu lets you specify where to get the
 
 If the main report dataset uses a connection, such as a JDBC connection, you see the following options:
 
-- **Don't use any connection or Data Source**: Select this if you do not want to specify any data for the dataset run. You can set this if you have set a data adapter via the properties view, and want JasperReports Library to use that adapter. This setting can be used when you want to publish a report with multiple connections to JasperReports Server.
-- **Use another connection**: Select this and enter a connection expression to use a connection that is different from the connection in the main dataset. You can use this for any connection, such as a JDBC connection or big data connection.
-- **Use a JRDatasource expression**: Select this and enter a data source expression if you want to use a data source. Note that, even when the main report uses a data source, such as a CSV file or JSON data source, you cannot simply reuse the data source from the main report. Instead, you must define a subdataset and create a dataset run that accesses the data source. This is because, unlike a connection, a data source is consumed when JasperReports iterates through it to fill the element. This means that when you use the same data source in two different elements, you must access the data source twice.
-- **Use same JDBC connection used to fill the master report**: If the report uses a connection, such as a JDBC connection or a Hibernate connection, select this to have the dataset run use the same connection as the main report. You can optionally enter a different query from the query in the main report.
+-   **Don't use any connection or Data Source**: Select this if you do not want to specify any data for the dataset run. You can set this if you have set a data adapter via the properties view, and want JasperReports Library to use that adapter. This setting can be used when you want to publish a report with multiple connections to JasperReports Server.
 
-When **Use same JDBC connection used to fill the master report** is selected, the connection expression uses the built-in parameter for the report's JDBC connection, `$P{REPORT_CONNECTION}`.
+-   **Use another connection**: Select this and enter a connection expression to use a connection that is different from the connection in the main dataset. You can use this for any connection, such as a JDBC connection or big data connection.
 
-- **Use an empty Data Source**: Select this to fill the dataset using an instance of `JREmptyDataSource`, that is, a data source that contains a specified number of records, where the field values are all `NULL`. See [Using the Empty Record Data Adapter](../data-adapters/data-adapters-empty.md) for more information.
+-   **Use a JRDatasource expression**: Select this and enter a data source expression if you want to use a data source. Note that, even when the main report uses a data source, such as a CSV file or JSON data source, you cannot simply reuse the data source from the main report. Instead, you must define a subdataset and create a dataset run that accesses the data source. This is because, unlike a connection, a data source is consumed when JasperReports iterates through it to fill the element. This means that when you use the same data source in two different elements, you must access the data source twice.
 
-If the main report uses a data source, the menu and options are slightly different.
+-   **Use same JDBC connection used to fill the master report**: If the report uses a connection, such as a JDBC connection or a Hibernate connection, select this to have the dataset run use the same connection as the main report. You can optionally enter a different query from the query in the main report.
 
-|                                                                          |
-|--------------------------------------------------------------------------|
-| ![jss dataset run adapter](../assets/images/jss-dataset-run-adapter.png) |
-| *Figure 7: Dataset Run For a Dataset with Metadata*                      |
+    When **Use same JDBC connection used to fill the master report** is selected, the connection expression uses the built-in parameter for the report's JDBC connection, `$P{REPORT_CONNECTION}`.
 
-- **Don't use connection or data source**: Select this if you do not want to specify any data for the dataset run.
-- **Use a Connection expression**: Select this to use any connection, such as a connection to a JDBC database or a big data store.
-- **Use a DataSource expression**: Select this to connect to a non-JDBC data source, for example, a JSON or jrdax data source.
+-   **Use an empty Data Source**: Select this to fill the dataset using an instance of `JREmptyDataSource`, that is, a data source that contains a specified number of records, where the field values are all `NULL`. See [Using the Empty Record Data Adapter](../data-adapters/data-adapters-empty.md) for more information.
+
+    If the main report uses a data source, the menu and options are slightly different.
+
+    |                                                                          |
+    |--------------------------------------------------------------------------|
+    | ![jss dataset run adapter](../assets/images/jss-dataset-run-adapter.png) |
+    | *Figure 7: Dataset Run For a Dataset with Metadata*                      |
+
+-   **Don't use connection or data source**: Select this if you do not want to specify any data for the dataset run.
+
+-   **Use a Connection expression**: Select this to use any connection, such as a connection to a JDBC database or a big data store.
+
+-   **Use a DataSource expression**: Select this to connect to a non-JDBC data source, for example, a JSON or jrdax data source.
 
 ### Parameters Tab
 

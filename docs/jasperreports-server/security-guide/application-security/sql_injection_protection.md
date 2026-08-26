@@ -9,11 +9,11 @@ SQL injection is an attack that uses malicious SQL queries in reports to gain ac
 
 Whenever the server runs an SQL query, the server validates the query string with the following rules:
 
-- SQL queries must start with SELECT.
-- Queries may not contain INTO clauses.
-- Queries may call stored procedures (CALL command used by JDBC drivers).
-- Multiple queries separated by semi-colons (`;`) are also prohibited.
-- SQL comments are allowed, but will be removed before being transmitted.
+-   SQL queries must start with SELECT.
+-   Queries may not contain INTO clauses.
+-   Queries may call stored procedures (CALL command used by JDBC drivers).
+-   Multiple queries separated by semi-colons (`;`) are also prohibited.
+-   SQL comments are allowed, but will be removed before being transmitted.
 
 If your reports or Domains use such queries, you need to either change your queries or update the security configuration to allow them.
 
@@ -117,11 +117,11 @@ Query validation uses a mechanism to validate every SQL query before running it.
 
 The validation rule contains five comma-separated values:
 
-- `Alpha` – Not used for query validation.
-- `ValidSQL` – The name of the SQL validator expression in the other file.
-- `500000` – The maximum length allowed for the query.
-- `true` – Whether the query can be blank.
-- `SQL_Query_Executor_context` – Context string for log messages.
+-   `Alpha` – Not used for query validation.
+-   `ValidSQL` – The name of the SQL validator expression in the other file.
+-   `500000` – The maximum length allowed for the query.
+-   `true` – Whether the query can be blank.
+-   `SQL_Query_Executor_context` – Context string for log messages.
 
 <table>
 <thead>
@@ -154,10 +154,10 @@ The validation rule contains five comma-separated values:
 
 The validator expression is a regular expression that must match the query string. The default expression enforces the following:
 
-- Queries may only use the SELECT statement, which is read-only. The following write statements are forbidden: `DROP, INSERT, UPDATE, DELETE`
-- SELECT statements may not use the INTO clause that could copy data.
-- CALL statements for stored procedures are allowed.
-- Multiple queries separated by semi-colons (`;`) will be rejected. The following example causes a security error: `SELECT f1,f2 FROM tbl_1; SELECT f3 from tbl_2;`
+-   Queries may only use the SELECT statement, which is read-only. The following write statements are forbidden: `DROP, INSERT, UPDATE, DELETE`
+-   SELECT statements may not use the INTO clause that could copy data.
+-   CALL statements for stored procedures are allowed.
+-   Multiple queries separated by semi-colons (`;`) will be rejected. The following example causes a security error: `SELECT f1,f2 FROM tbl_1; SELECT f3 from tbl_2;`
 
 !!! warning
 

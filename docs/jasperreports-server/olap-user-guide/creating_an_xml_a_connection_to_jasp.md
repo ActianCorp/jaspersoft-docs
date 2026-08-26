@@ -9,13 +9,13 @@ When creating an XML/A connection, the type of server providing the data determi
 
 To create an XML/A connection
 
-1.  Click **View \> Repository**.
+1.  Click **View &gt; Repository**.
 
     The repository page appears.
 
-2.  In the **Folders** panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Connections**.
+2.  In the **Folders** panel, navigate to **Organization &gt; Organization &gt; Analysis Components &gt; Analysis Connections**.
 
-3.  Right-click the folder and select **Add Resource \> OLAP Client Connection**.
+3.  Right-click the folder and select **Add Resource &gt; OLAP Client Connection**.
 
     The **Set Connection Type and Properties** page appears and prompts you to define a connection.
 
@@ -29,57 +29,58 @@ To create an XML/A connection
 
     1.  Catalog: the name of the schema that defines the data cube.
     2.  Data Source:
-    3.  URI (Uniform Resource Identifier): the identifier of the XML/A provider; typically a computer name or URL.
 
-    - If you are connecting to JasperReports Server, enter the full connection string. For example: `Provider=Mondrian;DataSource=JRS`
+-   If you are connecting to JasperReports Server, enter the full connection string. For example: `Provider=Mondrian;DataSource=JRS`
 
     Note that, in previous releases, the **DataSource** portion of the connection string was the catalog name. In the current release, it is always **JRS**.
 
-    - If you are connecting to Microsoft SQL Server Analytic Services and the connection will be used by OLAP views and reports created in iReport or Jaspersoft Studio, enter the full connection string. For example: `Provider=MSOLAP.4;Data Source=172.16.254.1;Catalog=AdventureWorks`
-    - If you are connecting to Microsoft SQL Server Analytic Services and the connection can be used by Ad Hoc views and their reports, use the Microsoft SQL Server’s instance name. For example: **Win-MyHost**
+    -   If you are connecting to Microsoft SQL Server Analytic Services and the connection will be used by OLAP views and reports created in iReport or Jaspersoft Studio, enter the full connection string. For example: `Provider=MSOLAP.4;Data Source=172.16.254.1;Catalog=AdventureWorks`
 
-    !!! note
+        -   If you are connecting to Microsoft SQL Server Analytic Services and the connection can be used by Ad Hoc views and their reports, use the Microsoft SQL Server’s instance name. For example: **Win-MyHost**
 
-        When connecting to the Microsoft SQL Server Analytic Service, the form of the data source depends on the way you plan to use this XML/A connection:
+            !!! note
 
-        - If you plan to use the XML/A connection to create Ad Hoc views, use the Microsoft SQL Server’s instance name. This is typically the name of the computer hosting Microsoft SQL Server. For example, if your Microsoft SQL Server instance is installed on **Win-MyHost**, the data source is:<br>
-          **Win-MyHost**.
-        - If you plan to use the XML/A connection to create OLAP views, use the full connect string. For example, if your Microsoft SQL Server instance is installed on a computer with the IP address **172.16.254.1**, and your catalog is named AdvnetureWorks, the data source is:<br>
-          `Provider=MSOLAP.4;Data Source=172.16.254.1;Catalog=AdventureWorks`
+                When connecting to the Microsoft SQL Server Analytic Service, the form of the data source depends on the way you plan to use this XML/A connection:
 
-7.  Enter the credentials (the username and password) that Jaspersoft OLAP can pass to the remote XML/A provider to log in. If this user’s password changes, the connection fails. You can leave the **username** and **password** fields blank, so the logged in user’s credentials are passed to the remote server when the connection is accessed.
+                -   If you plan to use the XML/A connection to create Ad Hoc views, use the Microsoft SQL Server’s instance name. This is typically the name of the computer hosting Microsoft SQL Server. For example, if your Microsoft SQL Server instance is installed on **Win-MyHost**, the data source is:<br>
+                    **Win-MyHost**.
+                -   If you plan to use the XML/A connection to create OLAP views, use the full connect string. For example, if your Microsoft SQL Server instance is installed on a computer with the IP address **172.16.254.1**, and your catalog is named AdvnetureWorks, the data source is:<br>
+                    `Provider=MSOLAP.4;Data Source=172.16.254.1;Catalog=AdventureWorks`
 
-    If the name of the user includes a backslash (\\, you must escape the character by placing a backslash in front of it. For example, consider the case when the username includes a domain, such as **domain\username**. This is represented in the **username** field as **domain\\username**.
+            1.  URI (Uniform Resource Identifier): the identifier of the XML/A provider; typically a computer name or URL.
 
-    !!! warning
+            2.  Enter the credentials (the username and password) that Jaspersoft OLAP can pass to the remote XML/A provider to log in. If this user’s password changes, the connection fails. You can leave the **username** and **password** fields blank, so the logged in user’s credentials are passed to the remote server when the connection is accessed.
 
-        The credentials you define for an XML/A connection are transmitted to the XML/A provider as clear-text. Because of the security risk inherent in this approach, Jaspersoft recommends that you always specify a username and password when defining an XML/A connection to prevent your users’ passwords from being transmitted. This user should have restricted rights to the remote XML/A provider. For more information, see section [XML/A Security](xml_a_security.md).
+                If the name of the user includes a backslash (\\), you must escape the character by placing a backslash in front of it. For example, consider the case when the username includes a domain, such as **domain\\username**. This is represented in the **username** field as **domain\\\\username**.
 
-    !!! note
+                !!! warning
 
-        Your XML/A provider may be another JasperReports Server instance where local Mondrian connections have been defined. For more information, refer to the section [Working with XML/A Sources](working_with_xml_a_sources.md).
+                    The credentials you define for an XML/A connection are transmitted to the XML/A provider as clear-text. Because of the security risk inherent in this approach, Jaspersoft recommends that you always specify a username and password when defining an XML/A connection to prevent your users’ passwords from being transmitted. This user should have restricted rights to the remote XML/A provider. For more information, see section [XML/A Security](xml_a_security.md).
 
-    ![ja add xmla connection](assets/images/ja-add-xmla-connection.png)
+                !!! note
 
-    *Figure 1: Set Connection Type and Properties - XML/A Page*
+                    Your XML/A provider may be another JasperReports Server instance where local Mondrian connections have been defined. For more information, refer to the section [Working with XML/A Sources](working_with_xml_a_sources.md).
 
-8.  Click **Test Connection**.
+                ![ja add xmla connection](assets/images/ja-add-xmla-connection.png)
 
-    Jaspersoft OLAP attempts to connect to the remote server:
+                *Figure 1: Set Connection Type and Properties - XML/A Page*
 
-    - If it can connect, a message indicating success appears.
-    - If the connection fails, a message indicating the type of problem appears. For example, the message might indicate that a catalog with the specified name was not found in the data source; re-enter the catalog name and test the connection again. If a data source with the specified name is not found, the message may indicate that no data source was found; examine your remote server's data sources, update the connection's details, and click **Test Connection** again.
+            3.  Click **Test Connection**.
 
-9.  Click the **Show Details** link to learn more about the problem.
+            Jaspersoft OLAP attempts to connect to the remote server:
 
-10. When the test succeeds, click **Submit**.
+    -   If it can connect, a message indicating success appears.
 
-11. Click **Submit**.
+    -   If the connection fails, a message indicating the type of problem appears. For example, the message might indicate that a catalog with the specified name was not found in the data source; re-enter the catalog name and test the connection again. If a data source with the specified name is not found, the message may indicate that no data source was found; examine your remote server's data sources, update the connection's details, and click **Test Connection** again.
+
+1.  Click the **Show Details** link to learn more about the problem.
+2.  When the test succeeds, click **Submit**.
+3.  Click **Submit**.
 
 The new XML/A connection appears in the repository.
 
 !!! note
 
-    - If you specify an instance of JasperReports Server as your XML/A provider (in the **URI** field), and it hosts more than one organization, specify the organization name in the **username** field, separated from the account name with the pipe character (\|). For example, to connect as a user named **joeuser** in an organization named **organization_1**, specify **joeuser\|organization_1** in the **username** field.
+    -   If you specify an instance of JasperReports Server as your XML/A provider (in the **URI** field), and it hosts more than one organization, specify the organization name in the **username** field, separated from the account name with the pipe character (\|). For example, to connect as a user named **joeuser** in an organization named **organization_1**, specify **joeuser\|organization_1** in the **username** field.
 
-    - If you are logged in as a superuser, you cannot use the Ad Hoc Editor to access data exposed through an XML/A connection. Instead, Jaspersoft recommends that you log in as jasperadmin or a non-administrative user when creating Ad Hoc views from XML/A connections.
+    -   If you are logged in as a superuser, you cannot use the Ad Hoc Editor to access data exposed through an XML/A connection. Instead, Jaspersoft recommends that you log in as jasperadmin or a non-administrative user when creating Ad Hoc views from XML/A connections.

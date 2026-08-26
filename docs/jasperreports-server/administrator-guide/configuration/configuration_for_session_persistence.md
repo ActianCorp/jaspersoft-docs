@@ -13,39 +13,39 @@ Many application servers can store user sessions while a web app is offline, for
 
 JasperReports Server supports a limited form of session persistence. When session persistence is enabled in the app server, sessions can be restored in the following cases:
 
-- Browsing the repository, expanding folders in the repository tree, and viewing folder contents.
+-   Browsing the repository, expanding folders in the repository tree, and viewing folder contents.
 
-- Searching the repository, including all search filters and results.
+-   Searching the repository, including all search filters and results.
 
-- Repository permissions dialog, including state and selections.
+-   Repository permissions dialog, including state and selections.
 
-- Add folder dialog.
+-   Add folder dialog.
 
-- Add resource dialogs, including adding or editing a data source, JasperReport, and other repository objects.
+-   Add resource dialogs, including adding or editing a data source, JasperReport, and other repository objects.
 
-- Copy, cut, and paste resources in the repository.
+-   Copy, cut, and paste resources in the repository.
 
-- Scheduling a report, including all information such as a schedule and notifications.
+-   Scheduling a report, including all information such as a schedule and notifications.
 
 If the server becomes unavailable when using the pages or dialogs above, the user can see the pause only when performing an action on these pages, such as submitting. When the server has finished restarting, the user can continue interacting with these UI elements. If the user takes no action while the server is unavailable, they may not even notice the server restart.
 
 However, for other interactive dialogs in JasperReports Server, the state is too large to store in the user session. These features do not support session persistence and unsaved data can be lost:
 
-- Ad Hoc Editor - The state of the report layout and data in the Ad Hoc Editor cannot be restored.
+-   Ad Hoc Editor - The state of the report layout and data in the Ad Hoc Editor cannot be restored.
 
-- Dashboard designer - The contents and state of the canvas cannot be restored.
+-   Dashboard designer - The contents and state of the canvas cannot be restored.
 
-- Interactive report viewer - The data in the report, as well as the state of column sorting and filtering cannot be saved.
+-   Interactive report viewer - The data in the report, as well as the state of column sorting and filtering cannot be saved.
 
-- Domain designer - Any tables, joins, filters, calculated fields, and display names cannot be restored.
+-   Domain designer - Any tables, joins, filters, calculated fields, and display names cannot be restored.
 
-- Administration dialogs - When creating or editing users, organizations, or roles, the information entered in a dialog cannot be restored if it was not submitted.
+-   Administration dialogs - When creating or editing users, organizations, or roles, the information entered in a dialog cannot be restored if it was not submitted.
 
 In the cases listed above, the user's work is interrupted, and any unsaved work is lost. However, when the server restarts, the user does not have to log in again, the server displays a message about the session that could not be fully restored, and redirects the user to the home page. The user must relaunch the interactive feature and recreate any unsaved work.
 
 Session persistence also affects web service calls. The REST API supports a login to store a session ID, and with persistence enabled, that session ID will still be valid when the application server restarts. This simplifies the code when you need to handle timeouts. In general, web service calls do not support interactive work like designing an Ad Hoc view, a dashboard, a Domain, or exploring data in OLAP, so they are not affected by the lack of session persistence in most cases. However, web service calls are affected in the following case:
 
-- Report execution - All asynchronous API calls for running and exporting reports rely on the large JasperPrint object that cannot be persisted. When the server restarts, the asynchronous calls return errors because the reports could not be saved in the session. Your application needs to detect this error and include code for rerunning the report.
+-   Report execution - All asynchronous API calls for running and exporting reports rely on the large JasperPrint object that cannot be persisted. When the server restarts, the asynchronous calls return errors because the reports could not be saved in the session. Your application needs to detect this error and include code for rerunning the report.
 
 !!! note
 

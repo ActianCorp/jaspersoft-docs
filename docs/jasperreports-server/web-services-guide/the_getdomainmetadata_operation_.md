@@ -7,30 +7,31 @@ description: "The getDomainMetaDataoperation takes these parameters:"
 
 The `getDomainMetaData`operation takes these parameters:
 
-- `domainUri` - a string containing the path to the Domain on the server, for example `/domains/John/ExpenseDomain`.
-- `localeStr` - a string giving the user locale, for example `en`, `en_US`, or `es_ES_Traditional_WIN`.
+-   `domainUri` - a string containing the path to the Domain on the server, for example `/domains/John/ExpenseDomain`.
 
-The operation returns the tree structure of item sets and items in the requested Domain. The tree structure consists of levels that represent the nested sets and items that represent the items in the Domain. Levels may contain sub-levels, items, or both, thus modelling the hierarchical structure of the Domain.
+-   `localeStr` - a string giving the user locale, for example `en`, `en_US`, or `es_ES_Traditional_WIN`.
 
-The following object types are combined to create the tree structure in the return value:
+    The operation returns the tree structure of item sets and items in the requested Domain. The tree structure consists of levels that represent the nested sets and items that represent the items in the Domain. Levels may contain sub-levels, items, or both, thus modelling the hierarchical structure of the Domain.
 
-- `SimpleMetaData`. Encapsulates all the item sets and items in a Domain structure:
+    The following object types are combined to create the tree structure in the return value:
 
-  - `rootLevel`. The `SimpleMetaLevel` object that is the root of the Domain tree structure.
-  - `properties`.Tthere are currently no properties on this object.
+-   `SimpleMetaData`. Encapsulates all the item sets and items in a Domain structure:
 
-- `SimpleMetaLevel`. Represents an item set in the Domain. It has the following attributes:
+    -   `rootLevel`. The `SimpleMetaLevel` object that is the root of the Domain tree structure.
+    -   `properties`.Tthere are currently no properties on this object.
 
-  - `id` and `label`. Unique identifier and label string for this item set.
-  - `items`. An array of `SimpleMetaItem` objects representing the items in this set.
-  - `subLevels`. An array of `SimpleMetaLevel` objects representing the sub-sets of this set.
-  - `properties`. The `resourceId` key indicates the resource identifier of this item set.
+-   `SimpleMetaLevel`. Represents an item set in the Domain. It has the following attributes:
 
-- `SimpleMetaItem`. An item in the Domain. It has the following attributes:
+    -   `id` and `label`. Unique identifier and label string for this item set.
+    -   `items`. An array of `SimpleMetaItem` objects representing the items in this set.
+    -   `subLevels`. An array of `SimpleMetaLevel` objects representing the sub-sets of this set.
+    -   `properties`. The `resourceId` key indicates the resource identifier of this item set.
 
-  - `id` and `label`. Unique identifier and label string for this item.
-  - `javaType`. The Java class name of this item, for example `java.lang.String`.
-  - `properties`. The `javaType` key is identical to the `javaType` attribute, and the `resourceId` key indicates the resource identifier of this item.
+-   `SimpleMetaItem`. An item in the Domain. It has the following attributes:
+
+    -   `id` and `label`. Unique identifier and label string for this item.
+    -   `javaType`. The Java class name of this item, for example `java.lang.String`.
+    -   `properties`. The `javaType` key is identical to the `javaType` attribute, and the `resourceId` key indicates the resource identifier of this item.
 
 !!! note
 

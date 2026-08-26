@@ -15,14 +15,15 @@ You can set two preferred (default) units of measure, one at the field level, th
 
 To change the report level unit
 
-1.  Select **Window \> Preferences** to open the Preferences window (**Eclipse \> Preferences** on Mac).
+1.  Select **Window &gt; Preferences** to open the Preferences window (**Eclipse &gt; Preferences** on Mac).
 2.  Expand **Jaspersoft Studio** and select **Report Designer**.
 3.  Use the **Default Unit** drop-down menu to select one of the following units of measure:
 
-- Pixels
-- Inches
-- Millimeters
-- Centimeters
+-   Pixels
+
+    -   Inches
+    -   Millimeters
+    -   Centimeters
 
 ## Changing the Field Unit of Measure
 

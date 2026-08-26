@@ -11,20 +11,20 @@ Not only does the JIVE UI allow users to sort and filter regular reports, it als
 
 This chapter contains the following sections:
 
-- Interacting With JIVE UI Components
-- Using Floating Headers
-- Changing the Chart Type
-- Changing the Chart Properties
-- Undo and Redo Actions
-- Sorting Table Columns
-- Filtering Table Columns
-- Formatting Table Columns
-- Conditional Formatting on Table Columns
-- Sorting Crosstab Columns
-- Sorting Crosstab Rows
-- Implementing Search in Reports
-- Providing Bookmarks in Reports
-- Disabling the JIVE UI
+-   Interacting With JIVE UI Components
+-   Using Floating Headers
+-   Changing the Chart Type
+-   Changing the Chart Properties
+-   Undo and Redo Actions
+-   Sorting Table Columns
+-   Filtering Table Columns
+-   Formatting Table Columns
+-   Conditional Formatting on Table Columns
+-   Sorting Crosstab Columns
+-   Sorting Crosstab Rows
+-   Implementing Search in Reports
+-   Providing Bookmarks in Reports
+-   Disabling the JIVE UI
 
 ## Interacting With JIVE UI Components
 
@@ -45,7 +45,7 @@ var report = v.report({
 var components = report.data().components;
 ```
 
-The components that can be modified are columns and charts. These components of the JIVE UI have an ID, but it may change from execution to execution. To refer to these components, create your report in JRXML and use the `net.sf.jasperreports.components.name` property to name them. In the case of a column, this property should be set on the column definition in the table model. In Jaspersoft Studio, you can select the column in the Outline View, then go to **Properties \> Advanced**, and under **Misc \> Properties** you can define custom properties.
+The components that can be modified are columns and charts. These components of the JIVE UI have an ID, but it may change from execution to execution. To refer to these components, create your report in JRXML and use the `net.sf.jasperreports.components.name` property to name them. In the case of a column, this property should be set on the column definition in the table model. In Jaspersoft Studio, you can select the column in the Outline View, then go to **Properties &gt; Advanced**, and under **Misc &gt; Properties** you can define custom properties.
 
 Then you can reference the component by this name, for example a column named `sales`, and use the `updateComponent` function to modify it.
 

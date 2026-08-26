@@ -9,12 +9,12 @@ The context menus available on folder and resources when browsing or searching t
 
 You can customize the menus in the Ad Hoc Editor in the following files:
 
-- `<js-webapp>/WEB-INF/actionModel-adhocChart.xml`
+-   `<js-webapp>/WEB-INF/actionModel-adhocChart.xml`
 
-- `<js-webapp>/WEB-INF/actionModel-adhocCrosstab.xml`
+-   `<js-webapp>/WEB-INF/actionModel-adhocCrosstab.xml`
 
-- `<js-webapp>/WEB-INF/actionModel-adhocOlapCrosstab.xml`
+-   `<js-webapp>/WEB-INF/actionModel-adhocOlapCrosstab.xml`
 
-- `<js-webapp>/WEB-INF/actionModel-adhocTable.xml`
+-   `<js-webapp>/WEB-INF/actionModel-adhocTable.xml`
 
 Menus for the Dashboard Designer are not customizable in 6.x.

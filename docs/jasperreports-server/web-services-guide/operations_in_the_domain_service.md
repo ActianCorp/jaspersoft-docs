@@ -7,8 +7,8 @@ description: "The Domain web service provides the following operations:"
 
 The Domain web service provides the following operations:
 
-- `getDomainMetaData`. Returns the tree structure of sets and items in a Domain. The object returned can be used to render the Domain for users and allow them to select items for a query.
-- `executeDomainQuery`. Returns a set of values in response to a query.
+-   `getDomainMetaData`. Returns the tree structure of sets and items in a Domain. The object returned can be used to render the Domain for users and allow them to select items for a query.
+-   `executeDomainQuery`. Returns a set of values in response to a query.
 
 If an exception occurs while processing an operation request, the exception is converted to a SOAP fault that is sent as its response. In this case, the exception stacktrace is included in the response, which can be useful for debugging.
 

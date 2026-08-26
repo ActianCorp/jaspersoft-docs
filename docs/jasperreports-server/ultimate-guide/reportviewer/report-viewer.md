@@ -9,7 +9,7 @@ The interactive Report Viewer lets you highlight table values using conditional 
 
 To create the Ad Hoc table for use in the example
 
-1.  Select **Create \> Ad Hoc View** from the menu. The **Data Chooser** wizard opens.
+1.  Select **Create &gt; Ad Hoc View** from the menu. The **Data Chooser** wizard opens.
 
 2.  Click **Domains**, select SuperMart Domain, and click **Choose Data**. The **Data Chooser** opens to the **Select Fields** page.
 
@@ -34,14 +34,14 @@ To create the Ad Hoc table for use in the example
     3.  Report Name: Conditional Text Example Report
     4.  Report Description: Created in Ultimate Guide
 
-9.  For **Save Location**, click **Browse**, select **Public \> Samples \> Reports**, and click **OK**.
+9.  For **Save Location**, click **Browse**, select **Public &gt; Samples &gt; Reports**, and click **OK**.
 
 10. Click **Save**. A message confirms that the view was saved.
 
 To open the report in the viewer
 
-1.  Select **View \> Repository**.
-2.  Navigate to **Public \> Samples \> Reports** and click Conditional Text Example Report. The report opens in the interactive report viewer.
+1.  Select **View &gt; Repository**.
+2.  Navigate to **Public &gt; Samples &gt; Reports** and click Conditional Text Example Report. The report opens in the interactive report viewer.
 
 To create “stop light” conditional formatting on a numeric column
 
@@ -66,12 +66,14 @@ To create “stop light” conditional formatting on a numeric column
 6.  Click **Add** to create a new condition, and fill in the fields as follows:
 
     1.  Select **Less than or equal to** from the **Operator** menu.
+
     2.  Enter **3.5** in the **Condition** box.
+
     3.  Click ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) and pick a red background.
 
-    ![js ReportViewer ConditionalNumeric](../assets/images/js-ReportViewer-ConditionalNumeric.png)
+        ![js ReportViewer ConditionalNumeric](../assets/images/js-ReportViewer-ConditionalNumeric.png)
 
-    *Figure 2: Conditional Formatting for Numeric Values*
+        *Figure 2: Conditional Formatting for Numeric Values*
 
 7.  Click **OK**. The dialog box closes and your choices are applied. The report appears as shown in the following figure:
 

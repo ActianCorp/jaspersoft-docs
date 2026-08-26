@@ -9,7 +9,7 @@ You can edit a dashboard if you have the proper permissions.
 
 To edit a dashboard.
 
-1.  Select **View \> Repository** and search or browse for the Dashboard you want to modify.<br>
+1.  Select **View &gt; Repository** and search or browse for the Dashboard you want to modify.<br>
     By default, the repository includes the /Dashboards folder where you can store dashboards.
 
 2.  Right-click the dashboard and select **Open in Designer** from the context menu. The designer appears, displaying the dashboard.

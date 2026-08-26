@@ -13,5 +13,5 @@ The GitHub login button is disabled by default. The OAuth2 application registrat
 
 The client ID and the secret key provided by GitHub for your registered application can be set in the start script of the JasperReports Web Studio. Use *-D* arguments in the command that open the Java Virtual Machine:
 
-- `-Djsw.github.client.id=[YOUR_CLIENT_ID] `
-- `-Djsw.github.secret.key=[YOUR_SECRET_KEY]`
+-   `-Djsw.github.client.id=[YOUR_CLIENT_ID] `
+-   `-Djsw.github.secret.key=[YOUR_SECRET_KEY]`

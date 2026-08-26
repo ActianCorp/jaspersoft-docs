@@ -81,7 +81,7 @@ By modifying width and height, it is possible to create a report of whatever siz
 
 Pages, one or more of which make up a report, present bands that are independent from the data (such as the title or the page footers) and other bands that are printed only if there are one or more data records to print (such as the group headers and the detail band). These last sections can be divided into vertical columns to take advantage of the available space on the page. A column does not concern the record field, but it does concern the detail band. This means that if you have a record with 10 fields and you desire a table view, 10 columns are not needed. However, the element must be placed correctly to have a table effect. Ten columns are returned when long record lists (that are horizontally very narrow) are printed.
 
-Next, let us set up columns in a report as an example. Create a report from **File \> New \> Jasper Report**. Choose the **BlankA4** template and name it `ColumnExample`. Use **Sample DB - Database JDBC Connection** for the data adapter, with the following SQL query: `select * from orders`. Fields from the database are discovered. Double-click `SHIPNAME` to add it to the report field and click **Next** twice. Finally, click **Finish**.
+Next, let us set up columns in a report as an example. Create a report from **File &gt; New &gt; Jasper Report**. Choose the **BlankA4** template and name it `ColumnExample`. Use **Sample DB - Database JDBC Connection** for the data adapter, with the following SQL query: `select * from orders`. Fields from the database are discovered. Double-click `SHIPNAME` to add it to the report field and click **Next** twice. Finally, click **Finish**.
 
 From the outline view, drag the `SHIPNAME` field in the report in the detail band, resize the detail band, and remove the unused bands. Go to the Preview tab to see the compiled report.
 
@@ -99,24 +99,23 @@ The sum of the margins, column widths, and space between columns has to be less 
 
 From the **Properties** view of the report, there are many other options for the report configuration. Select the report root node from the outline view, and in the **Properties** view you see:
 
-- **Report Name**: It is a logical name, independent from the source file's name, and is used only by the JasperReports library (for example, to name the produced Java file when a report is compiled).
+-   **Report Name**: It is a logical name, independent from the source file's name, and is used only by the JasperReports library (for example, to name the produced Java file when a report is compiled).
 
-- **Title on a new page**: This option specifies that the title band is to be printed on a new page, which forces a page break at the end of the title band. In the first page only, the title band is printed. However, this page is still included in the total page count.
+-   **Title on a new page**: This option specifies that the title band is to be printed on a new page, which forces a page break at the end of the title band. In the first page only, the title band is printed. However, this page is still included in the total page count.
 
-- **Summary on a new page**: This option is similar to **Title on a new page** except that the summary band is printed as the last page. If you need to print this band on a new page, the new page only contains the summary band.
+-   **Summary on a new page**: This option is similar to **Title on a new page** except that the summary band is printed as the last page. If you need to print this band on a new page, the new page only contains the summary band.
 
-- **Summary with page header and footer**: This option specifies if the summary band is to be accompanied by the page header and the page footer.
+-   **Summary with page header and footer**: This option specifies if the summary band is to be accompanied by the page header and the page footer.
 
-- **Float Column Footer**: This option forces the printing of the column footer band immediately after the last detail band (or group footer) rather than the end of the column. This option is used, for example, when you want to create tables using the report elements.
+-   **Float Column Footer**: This option forces the printing of the column footer band immediately after the last detail band (or group footer) rather than the end of the column. This option is used, for example, when you want to create tables using the report elements.
 
-- **When no data type**: When an empty data is supplied as the print number (or the SQL associated with the report returns no records), an empty file is created (or a stream of zero bytes is returned). This default behavior can be modified by specifying what to do in the case of absence of data. The possible values for this field are:
+-   **When no data type**: When an empty data is supplied as the print number (or the SQL associated with the report returns no records), an empty file is created (or a stream of zero bytes is returned). This default behavior can be modified by specifying what to do in the case of absence of data. The possible values for this field are:
 
-- **No Pages**: This is the default value. The final result is an empty buffer.
+-   **No Pages**: This is the default value. The final result is an empty buffer.
 
-- **Blank Page**: This returns an empty page.
+    -   **Blank Page**: This returns an empty page.
+    -   **All Sections No Detail**: This returns a page containing all bands except for the detail band.
 
-- **All Sections No Detail**: This returns a page containing all bands except for the detail band.
+-   **Ignore Pagination**: This option specifies whether to ignore pagination for the report. When the `isIgnorePagination` property is set to true, the report-filling engine ignores the page break-related settings inside the report template and generate the document on a single, very long page.
 
-- **Ignore Pagination**: This option specifies whether to ignore pagination for the report. When the `isIgnorePagination` property is set to true, the report-filling engine ignores the page break-related settings inside the report template and generate the document on a single, very long page.
-
-- **Create Bookmarks**: This option creates bookmarks for the defined hyperlink references.
+-   **Create Bookmarks**: This option creates bookmarks for the defined hyperlink references.

@@ -7,13 +7,13 @@ description: To create a Mondrian connection
 
 To create a Mondrian connection
 
-1.  Click **View \> Repository**.
+1.  Click **View &gt; Repository**.
 
     The repository page appears.
 
-2.  In the **Folders** panel, navigate to **Organization \> Organization \> Analysis Components \> Analysis Connections**.
+2.  In the **Folders** panel, navigate to **Organization &gt; Organization &gt; Analysis Components &gt; Analysis Connections**.
 
-3.  Right-click the folder and select **Add Resource \> OLAP Client Connection**.
+3.  Right-click the folder and select **Add Resource &gt; OLAP Client Connection**.
 
     The **Set Connection Type and Properties** page appears and prompts you to define a connection.
 
@@ -37,72 +37,73 @@ To create a Mondrian connection
 
 7.  Click either:
 
-    - **Upload a Local File** to select a file from your local computer.
+-   **Upload a Local File** to select a file from your local computer.
 
     Then, click **Choose File**, navigate to select the file, and click **Select**.
 
-    - **Select a resource from the Repository** to select an existing schema.
+    -   **Select a resource from the Repository** to select an existing schema.
 
-    Then click **Browse**, navigate to select the file, and click **Select**.
+        Then click **Browse**, navigate to select the file, and click **Select**.
 
-8.  Click **Next**.
+        1.  Click **Next**.
 
-    The **OLAP Schema Resource** page appears.
+            The **OLAP Schema Resource** page appears.
 
-    ![ja add view OLAP schema details](assets/images/ja-add-view-OLAP-schema-details.png)
+            ![ja add view OLAP schema details](assets/images/ja-add-view-OLAP-schema-details.png)
 
-    *Figure 3: OLAP Schema Resource Page*
+            *Figure 3: OLAP Schema Resource Page*
 
-    If you chose to upload a new file from your computer, the fields are editable. Enter the requested information. For details, refer [Uploading an OLAP Schema](uploading_an_olap_schema.md). If you choose a file from the repository, the fields are not editable.
+            If you chose to upload a new file from your computer, the fields are editable. Enter the requested information. For details, refer [Uploading an OLAP Schema](uploading_an_olap_schema.md). If you choose a file from the repository, the fields are not editable.
 
-9.  Click **Next**.
+        2.  Click **Next**.
 
-    The **Locate Data Source** page appears and prompts you to create or select a data source.
+            The **Locate Data Source** page appears and prompts you to create or select a data source.
 
-    ![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
+            ![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
 
-    *Figure 4: Locate Data Source Page*
+            *Figure 4: Locate Data Source Page*
 
-10. Click either:
+        3.  Click either:
 
-    - **Define a Data Source in the next step** to add a data source.
-    - **Select a Data Source from the repository** to select a data source from the repository.
+    -   **Define a Data Source in the next step** to add a data source.
 
-    Then click **Browse**, navigate to select the file, and click **Select**.
+    -   **Select a Data Source from the repository** to select a data source from the repository.
 
-11. Click **Next**.
+        Then click **Browse**, navigate to select the file, and click **Select**.
 
-    The **Set Data Source Type and Properties** page appears.
+        1.  Click **Next**.
 
-    ![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
+            The **Set Data Source Type and Properties** page appears.
 
-    *Figure 5: Set Data Source Type and Properties Page*
+            ![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
 
-    If you chose to define a new data source, the fields are editable. Enter the requested information. For details, refer [Working with Data Sources](working_with_data_sources.md). If you chose a data source from the repository, the fields aren’t editable.
+            *Figure 5: Set Data Source Type and Properties Page*
 
-12. Click **Next**.
+            If you chose to define a new data source, the fields are editable. Enter the requested information. For details, refer [Working with Data Sources](working_with_data_sources.md). If you chose a data source from the repository, the fields aren’t editable.
 
-    The **Locate Access Grant Definition** page appears and prompts you to set the properties for the resource.
+        2.  Click **Next**.
 
-    ![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
+            The **Locate Access Grant Definition** page appears and prompts you to set the properties for the resource.
 
-    *Figure 6: Locate Access Grant Definition Page*
+            ![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
 
-13. Click one of the following:
+            *Figure 6: Locate Access Grant Definition Page*
 
-    - **Do not link an Access Grant** if you do not need to apply for data security.
+        3.  Click one of the following:
 
-    Then skip to another step step 16.
+    -   **Do not link an Access Grant** if you do not need to apply for data security.
 
-    - **Upload a Local File** to select a file from your local computer.
+        Then skip to another step step 16.
 
-    Then click **Browse,** navigate to select the file you want, and click **Select**.
+    -   **Upload a Local File** to select a file from your local computer.
 
-    - **Select a resource from the Repository** to select an existing schema.
+        Then click **Browse,** navigate to select the file you want, and click **Select**.
 
-    Then click **Browse**, navigate to select the schema, and click **Select**.
+    -   **Select a resource from the Repository** to select an existing schema.
 
-14. Click **Next**.
+Then click **Browse**, navigate to select the schema, and click **Select**.
+
+1.  Click **Next**.
 
     If you chose to secure the view, the **Access Grant Resource** page appears.
 
@@ -110,8 +111,8 @@ To create a Mondrian connection
 
     *Figure 7: Access Grant Resource Page*
 
-15. If you chose to upload a new AGXML file, the fields are editable. Enter the requested information. For details, refer to [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you chose an access grant file from the repository, the fields are not editable.
+2.  If you chose to upload a new AGXML file, the fields are editable. Enter the requested information. For details, refer to [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you chose an access grant file from the repository, the fields are not editable.
 
-16. Click **Next**.
+3.  Click **Next**.
 
 The Mondrian connection is added to the repository. Views can now reference this connection to expose data to your users. For information on creating OLAP views, refer to [Administering OLAP Views](administering_olap_views.md). For information about creating Ad Hoc views, refer to JasperReports Server User Guide.

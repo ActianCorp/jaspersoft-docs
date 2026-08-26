@@ -15,12 +15,12 @@ This chapter assumes that you're familiar with security concepts such as certifi
 
 This chapter contains the following sections:
 
-- [Overview of External CAS Authentication](cas-authentication-steps.md)
-- [CAS Server for Testing](cas-test-server.md)
-- [Configuring JasperReports Server for CAS Authentication](cas-configuring-jrs.md)
-- [Configuring Java to Trust the CAS Certificate](cas-configuring-java-certificate-trust.md)
-- [Beans to Configure](cas-beans.md)
-- [Setting CAS Authentication Properties](cas-setting-authentication-properties.md)
-- [Setting User Roles](cas-setting-user-roles.md)
-- [Setting the User Organization](cas-setting-user-organization.md)
-- [Restarting JasperReports Server](cas-jrs-restart.md)
+-   [Overview of External CAS Authentication](cas-authentication-steps.md)
+-   [CAS Server for Testing](cas-test-server.md)
+-   [Configuring JasperReports Server for CAS Authentication](cas-configuring-jrs.md)
+-   [Configuring Java to Trust the CAS Certificate](cas-configuring-java-certificate-trust.md)
+-   [Beans to Configure](cas-beans.md)
+-   [Setting CAS Authentication Properties](cas-setting-authentication-properties.md)
+-   [Setting User Roles](cas-setting-user-roles.md)
+-   [Setting the User Organization](cas-setting-user-organization.md)
+-   [Restarting JasperReports Server](cas-jrs-restart.md)

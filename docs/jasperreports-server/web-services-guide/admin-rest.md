@@ -11,7 +11,7 @@ The RESTful administration services gives responses that contain the same XML da
 
 This chapter includes the following sections:
 
-- [The organization Service](the_organization_service.md)
-- [The user Service](the_user_service.md)
-- [The attribute Service](the_attribute_service.md)
-- [The role Service](the_role_service.md)
+-   [The organization Service](the_organization_service.md)
+-   [The user Service](the_user_service.md)
+-   [The attribute Service](the_attribute_service.md)
+-   [The role Service](the_role_service.md)

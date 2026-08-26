@@ -59,7 +59,7 @@ The following method creates a new report option for a given report. A report op
 
 In this example, we create new options for the sample report named Cascading_multi_select_report:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report/options?label=MyReportOption
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report/options?label=MyReportOption
 
 With the following request body:
 

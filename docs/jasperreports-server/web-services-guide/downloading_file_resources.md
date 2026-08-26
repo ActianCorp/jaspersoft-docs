@@ -7,8 +7,8 @@ description: "There are two operations on file resources:"
 
 There are two operations on file resources:
 
-- Viewing the file resource details to determine the file format
-- Downloading the binary file contents
+-   Viewing the file resource details to determine the file format
+-   Downloading the binary file contents
 
 To view the file resource details, specify the URL and the file descriptor type as follows:
 

@@ -13,12 +13,12 @@ For information about localizing Topics, Domains, and reports, refer to the Jasp
 
 This chapter contains the following sections:
 
-- [Configuring JasperReports Server for Multi-byte Fonts](multi-byte_fonts.md)
+-   [Configuring JasperReports Server for Multi-byte Fonts](multi-byte_fonts.md)
 
-- [UTF-8 Configuration](utf-8_configuration.md)
+-   [UTF-8 Configuration](utf-8_configuration.md)
 
-- [Changing Character Encoding](changing_character_encoding.md)
+-   [Changing Character Encoding](changing_character_encoding.md)
 
-- [Creating a Locale](creating_a_locale.md)
+-   [Creating a Locale](creating_a_locale.md)
 
-- [Configuring JasperReports Server to Offer a Locale](offering_a_locale.md)
+-   [Configuring JasperReports Server to Offer a Locale](offering_a_locale.md)

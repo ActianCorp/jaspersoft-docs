@@ -92,15 +92,15 @@ A custom data source definition can have properties so that users may configure 
 
 There are two kinds of properties:
 
-- Editable properties that must be string values. When a user launches the **New Data Source** dialog to create an instance of your custom data source definition, the editable properties have text fields for user input. These values are persisted in the repository when you save the data source.
+-   Editable properties that must be string values. When a user launches the **New Data Source** dialog to create an instance of your custom data source definition, the editable properties have text fields for user input. These values are persisted in the repository when you save the data source.
 
-- Hidden properties that can be of any type. You set these property values in the Spring configuration file to be passed to your `ReportDataSourceService` implementation. Therefore, they do not appear in the **New Data Source** dialog, nor do they need to be persisted in the repository. Use hidden properties if you want to give your `ReportDataSourceService` implementation access to a Spring bean instance.
+-   Hidden properties that can be of any type. You set these property values in the Spring configuration file to be passed to your `ReportDataSourceService` implementation. Therefore, they do not appear in the **New Data Source** dialog, nor do they need to be persisted in the repository. Use hidden properties if you want to give your `ReportDataSourceService` implementation access to a Spring bean instance.
 
 These properties are defined in two places that must work together:
 
-- Your `ReportDataSourceService` implementation must have getters and setters for each property, and your code can use the values for any type of processing. For source code examples, see [Hibernate Custom Data Source](custom-data-source-examples.md).
+-   Your `ReportDataSourceService` implementation must have getters and setters for each property, and your code can use the values for any type of processing. For source code examples, see [Hibernate Custom Data Source](custom-data-source-examples.md).
 
-- The Spring beans need the list of properties to set up the New Data Source dialog, save the user values in the repository, and later instantiate your `ReportDataSourceService` when needed to fill a report. For examples of both editable and hidden properties, see the XML example in 1.1.5, “Defining the Custom Data Source in Spring,” on page 1.
+-   The Spring beans need the list of properties to set up the New Data Source dialog, save the user values in the repository, and later instantiate your `ReportDataSourceService` when needed to fill a report. For examples of both editable and hidden properties, see the XML example in 1.1.5, “Defining the Custom Data Source in Spring,” on page 1.
 
 ### Implementing the Optional Validator Interface
 
@@ -108,13 +108,13 @@ A validator verifies property values entered by the user and rejects bad values 
 
 You can implement any level of validation that you need, such as:
 
-- Null check (presence or absence of value)
+-   Null check (presence or absence of value)
 
-- Type validation (string or number)
+-   Type validation (string or number)
 
-- Syntax validation (format or contents of a string)
+-   Syntax validation (format or contents of a string)
 
-- Range validation (value of a number)
+-   Range validation (value of a number)
 
 Property values may include references to attributes, whose values are not determined until the data source is instantiated when running a report. An attribute has the following syntax: `{attribute('attrName')}` or `{attribute('attrName','[User|Tenant|Server]')}`. Your validator code should recognize these patterns in property value strings and allow or skip validation of the attribute reference.
 
@@ -233,9 +233,9 @@ To configure your data source, you must add a Spring bean that references the `c
 
 Within this file, there are two ways to configure your data source:
 
-- If you implemented the `ReportDataSourceService` interface, use the `CustomDataSourceDefinition` class.
+-   If you implemented the `ReportDataSourceService` interface, use the `CustomDataSourceDefinition` class.
 
-- If your data source extends `DataAdapterDefinition`, you can configure your data source as a data adapter.
+-   If your data source extends `DataAdapterDefinition`, you can configure your data source as a data adapter.
 
 ### Using CustomDataSourceDefinition
 
@@ -471,9 +471,9 @@ The name must be a language supported by your query executor.
 
 Alternatively, you can add your query executor as a separate bean without modifying the existing Spring configuration. In that case you would:
 
-- Create a bean similar to `queryLanguagesPro` above, but that extends `queryLanguagesPro` if you are using a commercial edition. Save this bean with `id=customQueryLanguage` in a file named `.../WEB-INF/applicationContext-customQueryLang.xml`. Of course, you can use your own names for the id and file name.
+-   Create a bean similar to `queryLanguagesPro` above, but that extends `queryLanguagesPro` if you are using a commercial edition. Save this bean with `id=customQueryLanguage` in a file named `.../WEB-INF/applicationContext-customQueryLang.xml`. Of course, you can use your own names for the id and file name.
 
-- Edit the file `.../WEB-INF/js.spring.properties` and modify the following line:
+-   Edit the file `.../WEB-INF/js.spring.properties` and modify the following line:
 
 ``` properties
 bean.queryLanguages=queryLanguagesPro

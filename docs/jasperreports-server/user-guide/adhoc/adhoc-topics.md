@@ -1,14 +1,14 @@
 ---
 title: Working with Topics
-description: "When a user clicks Create > Ad Hoc View on the Home page, the Select Data wizard offers a path to the list of Topics populated from the Ad Hoc Components/Topics folder in the repository. There are..."
+description: "When a user clicks Create &gt; Ad Hoc View on the Home page, the Select Data wizard offers a path to the list of Topics populated from the Ad Hoc Components/Topics folder in the repository. There are..."
 ---
 
 # Working with Topics
 
-When a user clicks **Create \> Ad Hoc View** on the Home page, the Select Data wizard offers a path to the list of Topics populated from the Ad Hoc Components/Topics folder in the repository. There are two types of Topics:
+When a user clicks **Create &gt; Ad Hoc View** on the Home page, the Select Data wizard offers a path to the list of Topics populated from the Ad Hoc Components/Topics folder in the repository. There are two types of Topics:
 
-- JRXML-based Topics–Created by administrators using Jaspersoft Studio and uploaded as JRXML files to the proper location in the repository. Topics are typically of this type.
-- Domain Topics–Created from a Domain by administrators using JasperReports Server.
+-   JRXML-based Topics–Created by administrators using Jaspersoft Studio and uploaded as JRXML files to the proper location in the repository. Topics are typically of this type.
+-   Domain Topics–Created from a Domain by administrators using JasperReports Server.
 
 Either type of Topic is an empty view associated with a data source in the server, and is then built on in the Ad Hoc Editor.
 
@@ -18,15 +18,15 @@ JRXML-based topics are the most common type of topic. You can upload previously 
 
 To upload a JRXML-based Topic
 
-1.  Log in to the server as an administrator and select **View \> Repository**.
+1.  Log in to the server as an administrator and select **View &gt; Repository**.
 
     !!! note
 
         While any user with sufficient repository permissions can upload a Topic to the server, this example requires an administrator login to access the JServer Jdbc data source.
 
-2.  Locate the folder where Topics are stored. The location of the Topics folder depends on your system configuration. By default, Topics are in the **Ad Hoc Components \> Topics** folder.
+2.  Locate the folder where Topics are stored. The location of the Topics folder depends on your system configuration. By default, Topics are in the **Ad Hoc Components &gt; Topics** folder.
 
-3.  Right-click the Topics folder name and select **Add Resource  \> JasperReports®** from the context menu. The Set Up the Report page of the Jasper Report wizard appears.
+3.  Right-click the Topics folder name and select **Add Resource  &gt; JasperReports®** from the context menu. The Set Up the Report page of the Jasper Report wizard appears.
 
     !!! note
 
@@ -34,11 +34,11 @@ To upload a JRXML-based Topic
 
 4.  In the Set Up the Report page, give the Topic a name, a Resource ID, and an optional description, then click **Next**.
 
-    - The **Name** field is the visible name of the file in the repository, such as `Example Topic`.
-    - The **Resource ID** field is the internal ID of the object, such as `Example_Topic`. The server does not accept spaces in an internal ID.
-    - The **Description** field, such as `Topic uploaded for User Guide example`, helps users understand the purpose of the file.
+    -   The **Name** field is the visible name of the file in the repository, such as `Example Topic`.
+    -   The **Resource ID** field is the internal ID of the object, such as `Example_Topic`. The server does not accept spaces in an internal ID.
+    -   The **Description** field, such as `Topic uploaded for User Guide example`, helps users understand the purpose of the file.
 
-5.  In the **Locate the JRXML File** section, select **Upload a Local File**, and click **Browse** to locate the file and upload the Topic from the file system. In this example, the file is \<js-install\>/samples/adhoc/topics/adhoc_sample.jrxml.
+5.  In the **Locate the JRXML File** section, select **Upload a Local File**, and click **Browse** to locate the file and upload the Topic from the file system. In this example, the file is &lt;js-install&gt;/samples/adhoc/topics/adhoc_sample.jrxml.
 
     !!! note
 
@@ -58,7 +58,7 @@ To upload a JRXML-based Topic
 
     Topics usually do not need a query or customization, but you can define them.
 
-When you select **Create \> Ad Hoc View** and click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) in the Select Data wizard, you can browse to **Ad Hoc Components \> Topics**. If you select the Example Topic, you can create a report using the columns available in the data source selected in step 7.
+When you select **Create &gt; Ad Hoc View** and click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) in the Select Data wizard, you can browse to **Ad Hoc Components &gt; Topics**. If you select the Example Topic, you can create a report using the columns available in the data source selected in step 7.
 
 The JRXML file that the Topic is based on must contain a query and a field list.
 
@@ -82,13 +82,13 @@ For example, this JRXML code declares a StoreState field that is displayed in re
 </field>
 ```
 
-Topics also support the \$R expressions for field names; for more information, see [Localizing Reports](../repo-upload-reports/repo-localizing-reports.md).
+Topics also support the $R expressions for field names; for more information, see [Localizing Reports](../repo-upload-reports/repo-localizing-reports.md).
 
 For fields in a non-domain topic the following properties may be of interest:
 
-- `dimensionOrMeasure`: Marks a field as a field or a measure.
-- `defaultAgg`: Which aggregation should be used for this measure (avg, etc.).
-- `semantic.item.desc`: A description for the field.
-- `defaultMask`: Set a measure as a \$, date etc.
+-   `dimensionOrMeasure`: Marks a field as a field or a measure.
+-   `defaultAgg`: Which aggregation should be used for this measure (avg, etc.).
+-   `semantic.item.desc`: A description for the field.
+-   `defaultMask`: Set a measure as a $, date etc.
 
 For more information on working with JRXML topics, see the Jaspersoft Studio User Guide.

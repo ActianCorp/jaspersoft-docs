@@ -92,48 +92,48 @@ The output formats are those supported by JasperReports server, as given by the 
 
 The recurrence can be defined as follows:
 
-- No recurrence (single run), for example:
+-   No recurrence (single run), for example:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">simpleTrigger</span>&gt;</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">startDate</span>&gt;2011-11-11T11:11:11-08:00&lt;/<span class="kw">startDate</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">timezone</span>&gt;America/Los_Angeles&lt;/<span class="kw">timezone</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;0&lt;/<span class="kw">version</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">occurrenceCount</span>&gt;1&lt;/<span class="kw">occurrenceCount</span>&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">simpleTrigger</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">simpleTrigger</span>&gt;</span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">startDate</span>&gt;2011-11-11T11:11:11-08:00&lt;/<span class="kw">startDate</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">timezone</span>&gt;America/Los_Angeles&lt;/<span class="kw">timezone</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;0&lt;/<span class="kw">version</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">occurrenceCount</span>&gt;1&lt;/<span class="kw">occurrenceCount</span>&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">simpleTrigger</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Simple recurrence, for example every day until a given date:
+-   Simple recurrence, for example every day until a given date:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">simpleTrigger</span>&gt;</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">endDate</span>&gt;2011-11-11T11:11:11-08:00&lt;/<span class="kw">endDate</span>&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">startDate</span>&gt;2012-12-12T12:12:12-08:00&lt;/<span class="kw">startDate</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">timezone</span>&gt;America/Los_Angeles&lt;/<span class="kw">timezone</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;0&lt;/<span class="kw">version</span>&gt;</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">occurrenceCount</span>&gt;-1&lt;/<span class="kw">occurrenceCount</span>&gt;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">recurrenceInterval</span>&gt;1&lt;/<span class="kw">recurrenceInterval</span>&gt;</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">recurrenceIntervalUnit</span>&gt;</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">value</span>&gt;DAY&lt;/<span class="kw">value</span>&gt;</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">recurrenceIntervalUnit</span>&gt;</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">simpleTrigger</span>&gt;</span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">simpleTrigger</span>&gt;</span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">endDate</span>&gt;2011-11-11T11:11:11-08:00&lt;/<span class="kw">endDate</span>&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">startDate</span>&gt;2012-12-12T12:12:12-08:00&lt;/<span class="kw">startDate</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">timezone</span>&gt;America/Los_Angeles&lt;/<span class="kw">timezone</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">version</span>&gt;0&lt;/<span class="kw">version</span>&gt;</span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">occurrenceCount</span>&gt;-1&lt;/<span class="kw">occurrenceCount</span>&gt;</span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">recurrenceInterval</span>&gt;1&lt;/<span class="kw">recurrenceInterval</span>&gt;</span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">recurrenceIntervalUnit</span>&gt;</span>
+    <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      &lt;<span class="kw">value</span>&gt;DAY&lt;/<span class="kw">value</span>&gt;</span>
+    <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">recurrenceIntervalUnit</span>&gt;</span>
+    <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">simpleTrigger</span>&gt;</span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-- Calendar recurrence, for example every Tuesday and Thursday in February, April, and June until next year:
+-   Calendar recurrence, for example every Tuesday and Thursday in February, April, and June until next year:
 
 <table>
 <colgroup>

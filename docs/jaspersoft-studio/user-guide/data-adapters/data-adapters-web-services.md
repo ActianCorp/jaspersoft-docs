@@ -11,13 +11,13 @@ You can configure a data adapter to connect to a REST web service. This mechanis
 
 In addition to the usual data adapter settings, you can configure the following for a JSON or XML adapter that connects to a web service:
 
-- **Data URL**: Base URI for the request.
-- **Username** and **Password**: Credentials for web services that require authentication.
-- **Request method**: The method to use for the data adapter. Supported methods are GET, POST, and PUT.
-- **URL Parameters** tab: Parameters to append to the URI.
-- **POST/PUT Parameters** tab: Parameters to send in the request body.
-- **POST/PUT Body** tab: Data to send in the request body.
-- **Headers** tab: Parameters to send in the HTTP header.
+-   **Data URL**: Base URI for the request.
+-   **Username** and **Password**: Credentials for web services that require authentication.
+-   **Request method**: The method to use for the data adapter. Supported methods are GET, POST, and PUT.
+-   **URL Parameters** tab: Parameters to append to the URI.
+-   **POST/PUT Parameters** tab: Parameters to send in the request body.
+-   **POST/PUT Body** tab: Data to send in the request body.
+-   **Headers** tab: Parameters to send in the HTTP header.
 
 ## The Data Adapter Tab in the Dataset and Query Dialog
 
@@ -30,18 +30,25 @@ When you create a report using a data adapter that connects to a web service, yo
 
 This tab lets you configure the following information for the data adapter:
 
-- **Data URL**: Base URI for the request.
-- **Username** and **Password**: Credentials for web services that require authentication.
-- **Request method**: The method to use for the data adapter. Supported methods are GET, POST, and PUT.
-- **URL Parameters** tab: Parameters to append to the URI.
-- **POST/PUT Parameters** tab: Parameters to send in the request body.
-- **POST/PUT Body** tab: Data to send in the request body.
-- **Headers** tab: Parameters to send in the HTTP header.
+-   **Data URL**: Base URI for the request.
 
-The following additional information is shown:
+-   **Username** and **Password**: Credentials for web services that require authentication.
 
-- ![jss icon dataset query data adapter mapped to parameter](../assets/images/jss-icon-dataset-query-data-adapter-mapped-to-parameter.png): The URL parameter in the data adapter has been associated with an HTTP parameter in the report. The name of the report parameter is shown to the right.
-- ![jss icon dataset query parameter default](../assets/images/jss-icon-dataset-query-parameter-default.png): The URL parameter in the data adapter has a default value.
+-   **Request method**: The method to use for the data adapter. Supported methods are GET, POST, and PUT.
+
+-   **URL Parameters** tab: Parameters to append to the URI.
+
+-   **POST/PUT Parameters** tab: Parameters to send in the request body.
+
+-   **POST/PUT Body** tab: Data to send in the request body.
+
+-   **Headers** tab: Parameters to send in the HTTP header.
+
+    The following additional information is shown:
+
+-   ![jss icon dataset query data adapter mapped to parameter](../assets/images/jss-icon-dataset-query-data-adapter-mapped-to-parameter.png): The URL parameter in the data adapter has been associated with an HTTP parameter in the report. The name of the report parameter is shown to the right.
+
+-   ![jss icon dataset query parameter default](../assets/images/jss-icon-dataset-query-parameter-default.png): The URL parameter in the data adapter has a default value.
 
 ## Example of Connecting to a Web Service
 
@@ -57,37 +64,39 @@ where `[token]` is the web services token that you request in the first step bel
 
 The overall steps are:
 
-- Create a data adapter that constructs the web services request. You can enter the following components of your request: a base URL, a header, and HTTP parameters.
-- Create a report that uses the data adapter and discover fields.
-- Add HTTP parameters to the report and connect them to the parameters in your adapter.
+-   Create a data adapter that constructs the web services request. You can enter the following components of your request: a base URL, a header, and HTTP parameters.
 
-Request a web services token
+-   Create a report that uses the data adapter and discover fields.
 
-Before you can use this example, you must get a web services token from the NOAA at <https://www.ncdc.noaa.gov/cdo-web/token>. Follow the directions on this page to have a token sent to your email. If you do not receive your token, check your spam folder.
+-   Add HTTP parameters to the report and connect them to the parameters in your adapter.
 
-Create the data adapter
+    Request a web services token
 
-1.  Click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) on the main toolbar OR right-click a project in the Project Explorer and select **New \> Data Adapter**.
+    Before you can use this example, you must get a web services token from the NOAA at <https://www.ncdc.noaa.gov/cdo-web/token>. Follow the directions on this page to have a token sent to your email. If you do not receive your token, check your spam folder.
 
-2.  In the **DataAdapter File** window, choose the project where you want to save the data adapter file. This should be the project that contains the reports you want to use with your data adapter.
+    Create the data adapter
 
-3.  Enter a name for your adapter, for example NOAA adapter, and click **Next**.
+    1.  Click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) on the main toolbar OR right-click a project in the Project Explorer and select **New &gt; Data Adapter**.
 
-    The **Data Adapters Wizard** is displayed.
+    2.  In the **DataAdapter File** window, choose the project where you want to save the data adapter file. This should be the project that contains the reports you want to use with your data adapter.
 
-4.  Select the data adapter type that corresponds to the type of information the web service provides. This example uses JSON.
+    3.  Enter a name for your adapter, for example NOAA adapter, and click **Next**.
 
-5.  Click **Next**.
+        The **Data Adapters Wizard** is displayed.
 
-6.  Enter a name for your adapter. This name is used when you select an adapter for a report.
+    4.  Select the data adapter type that corresponds to the type of information the web service provides. This example uses JSON.
 
-7.  In the **File/URL** field, enter the base web services request for your data. You want this request to be general enough that you can use it for multiple datasets and reports, but you also want it to contain as much reusable information as possible. For example, for NOAA, you might enter this request:
+    5.  Click **Next**.
 
-    `https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND`
+    6.  Enter a name for your adapter. This name is used when you select an adapter for a report.
 
-8.  Select **Use the report JSON expression when filling report**.
+    7.  In the **File/URL** field, enter the base web services request for your data. You want this request to be general enough that you can use it for multiple datasets and reports, but you also want it to contain as much reusable information as possible. For example, for NOAA, you might enter this request:
 
-9.  Click **Options** to open the **HTTP Connection Options** dialog to configure additional request parameters. You can later configure these parameters in your report.
+        `https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND`
+
+    8.  Select **Use the report JSON expression when filling report**.
+
+    9.  Click **Options** to open the **HTTP Connection Options** dialog to configure additional request parameters. You can later configure these parameters in your report.
 
     |  |
     |----|
@@ -96,23 +105,24 @@ Create the data adapter
 
     The following parameters are available:
 
-    - **Username** and **Password** (optional): The username and password to use if your location requires authentication. In this example, leave them blank.
-    - **Request Type**: In this example, select GET to retrieve data from the web service.
-    - To add a parameter to the request URL, click **Add** in the URL Parameters tab. Enter the name and value of your parameter in the Parameter dialog and click **OK. These** parameters are added to the request URL. Use the parameter names required by your web service. Later, when you create a report using this data adapter, you can connect the web services parameter to a parameter in the report. In this case, the value field is overridden by the parameter configuration in the report. For multiple parameters, add each parameter separately.
+    -   **Username** and **Password** (optional): The username and password to use if your location requires authentication. In this example, leave them blank.
 
-    For this example, set the following parameters:
+    -   **Request Type**: In this example, select GET to retrieve data from the web service.
 
-    - - `locationid`: Set **Name** to the NOAA parameter `locationid` and **Value** to a default location in NOAA format, for example ZIP.
-      - `startdate`: Set **Name** to `startdate` and **Value** to the current date. (Note: The NOAA parameter `startdate` is optional and defaults to the current date.)
-      - `enddate`: Set **Name** to `enddate` and **Value** to the current date. (Note: The NOAA parameter `enddate` is optional and defaults to the current date.)
+    -   To add a parameter to the request URL, click **Add** in the URL Parameters tab. Enter the name and value of your parameter in the Parameter dialog and click **OK. These** parameters are added to the request URL. Use the parameter names required by your web service. Later, when you create a report using this data adapter, you can connect the web services parameter to a parameter in the report. In this case, the value field is overridden by the parameter configuration in the report. For multiple parameters, add each parameter separately.
 
-    - Click the HTTP Headers tab to add headers to the HTTP request. To do this, click **Add**, enter the name and value of your parameter in the Parameter dialog and click **OK**. For this example, add the NOAA token you requested:
+        For this example, set the following parameters:
 
-      - `token`: Set **Name** to the NOAA parameter `token` and **Value** to the NOAA key you requested previously.
+        -   `locationid`: Set **Name** to the NOAA parameter `locationid` and **Value** to a default location in NOAA format, for example ZIP.
+        -   `startdate`: Set **Name** to `startdate` and **Value** to the current date. (Note: The NOAA parameter `startdate` is optional and defaults to the current date.)
+        -   `enddate`: Set **Name** to `enddate` and **Value** to the current date. (Note: The NOAA parameter `enddate` is optional and defaults to the current date.)
 
-10. Click **OK**.
+    -   Click the HTTP Headers tab to add headers to the HTTP request. To do this, click **Add**, enter the name and value of your parameter in the Parameter dialog and click **OK**. For this example, add the NOAA token you requested:
 
-11. Click **Test Connection** to verify the data can be received.
+        -   `token`: Set **Name** to the NOAA parameter `token` and **Value** to the NOAA key you requested previously.
+
+1.  Click **OK**.
+2.  Click **Test Connection** to verify the data can be received.
 
 ## Using the Data Adapter in a Report
 
@@ -150,55 +160,52 @@ Lay out the report
 
 Normally, you do not want your parameters to be fixed values. You may want to use an expression or to prompt for user input. You can add HTTP input parameters in three ways:
 
-- Using the **Parameters** tab in the **Dataset and Query** dialog.
+-   Using the **Parameters** tab in the **Dataset and Query** dialog.
 
-- Using the **Outline and Properties** views.
+-   Using the **Outline and Properties** views.
 
-- Using the **Data Adapter** tab in the **Dataset and Query** dialog, with additional configuration on the **Parameters** tab.
+-   Using the **Data Adapter** tab in the **Dataset and Query** dialog, with additional configuration on the **Parameters** tab.
 
 This section shows how to create parameters that override the parameters from the data adapter and prompt the user for data.
 
 ## Configuring a Parameter using the Parameters tab in the Dataset and Query dialog
 
 1.  Right-click the root node of your report and select **Dataset and Query…**.
-
 2.  In the **Dataset and Query** dialog, click the **Parameters** tab.
-
 3.  Click ![jss icon hide system parameters](../assets/images/jss-icon-hide-system-parameters.png) to hide the system parameters.
-
 4.  Click **Add** to create a parameter.
-
 5.  Select the parameter you just created, click **Edit**, and enter the following, then click **OK**:
 
-    - **Parameter Name**: Location
-    - **Is For Prompt**: `true` (default)
-    - **Class Type**: `java.lang.String` (default)
-    - **Default Value Expression**: `"ZIP:94111"`
+-   **Parameter Name**: Location
 
-6.  Click ![jss icon dataset query show parameter properties](../assets/images/jss-icon-dataset-query-show-parameter-properties.png) to display parameter properties.
+    -   **Is For Prompt**: `true` (default)
+    -   **Class Type**: `java.lang.String` (default)
+    -   **Default Value Expression**: `"ZIP:94111"`
 
-7.  Select your parameter and click **Add Property**. A dialog displays a list of properties available for a web services data adapter.
+1.  Click ![jss icon dataset query show parameter properties](../assets/images/jss-icon-dataset-query-show-parameter-properties.png) to display parameter properties.
+
+2.  Select your parameter and click **Add Property**. A dialog displays a list of properties available for a web services data adapter.
 
     |  |
     |----|
     | ![jss data adapter json properties list](../assets/images/jss-data-adapter-json-properties-list.png) |
     | *Figure 5: Properties for an HTTP Parameter* |
 
-8.  Select the **URL Parameter** and click **OK**.
+3.  Select the **URL Parameter** and click **OK**.
 
-9.  Select the property you just created and click **Edit**.
+4.  Select the property you just created and click **Edit**.
 
-10. Enter **locationid** to map this parameter to the `locationid` URL parameter in your request and click **OK**.
+5.  Enter **locationid** to map this parameter to the `locationid` URL parameter in your request and click **OK**.
 
-11. If you click the **Data Adapters** tab, you see that the value for `locationid` has been set to **Location**.
+6.  If you click the **Data Adapters** tab, you see that the value for `locationid` has been set to **Location**.
 
-12. Click **OK** to exit the **Dataset and Query** dialog.
+7.  Click **OK** to exit the **Dataset and Query** dialog.
 
-13. Preview the report.
+8.  Preview the report.
 
-14. You are now prompted to enter a value for the location, for example, **ZIP:99501**. For more information about location formats, see the NOAA API documentation.
+9.  You are now prompted to enter a value for the location, for example, **ZIP:99501**. For more information about location formats, see the NOAA API documentation.
 
-15. Click ![jss icon run report](../assets/images/jss-icon-run-report.png) to run the report.
+10. Click ![jss icon run report](../assets/images/jss-icon-run-report.png) to run the report.
 
 ## Configuring a Parameter Using the Data Adapter Tab in the Dataset and Query Dialog
 
@@ -224,14 +231,13 @@ The names and default values you set for the URL parameters in your data adapter
 
 7.  On the **Parameters** tab, select Parameter1 and click **Edit**. You see that the evaluation time and properties have been set automatically. Enter the following and click **OK**:
 
-    - **Parameter Name**: End Date
-    - **Default Value Expression**: 2017-07-30
+-   **Parameter Name**: End Date
 
-8.  Click **OK** to exit the **Dataset and Query** dialog.
+    -   **Default Value Expression**: 2017-07-30
 
-9.  If you wish, you can preview the report. You are now prompted to enter a value for the end date as well as the location. Make sure the end date you enter is after the default start date you entered when you created the data adapter.
-
-10. Click ![jss icon run report](../assets/images/jss-icon-run-report.png) to run the report.
+1.  Click **OK** to exit the **Dataset and Query** dialog.
+2.  If you wish, you can preview the report. You are now prompted to enter a value for the end date as well as the location. Make sure the end date you enter is after the default start date you entered when you created the data adapter.
+3.  Click ![jss icon run report](../assets/images/jss-icon-run-report.png) to run the report.
 
 ## Configuring a Parameter Using the Outline and Properties Views
 
@@ -245,20 +251,16 @@ The names and default values you set for the URL parameters in your data adapter
 
 4.  Enter the following on the **Object** tab:
 
-    - **Name**: Start Date
-    - **Class**: java.lang.String (default)
-    - **Default Value Expression**: 2017-07-15
-    - **Is For Prompting**: Selected
-    - **Evaluation Time**: Early
+-   **Name**: Start Date
 
-5.  Click the **Advanced** tab in the **Properties** view, click **Properties**, then click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png).
+    -   **Class**: java.lang.String (default)
+    -   **Default Value Expression**: 2017-07-15
+    -   **Is For Prompting**: Selected
+    -   **Evaluation Time**: Early
 
-6.  The **Properties** dialog is displayed, showing options specific to a web services data source.
-
-7.  In the **URL parameter** field, enter the name of the URL parameter you wish to use for input, in this case, `startdate`.
-
-8.  Click **Finish**.
-
-9.  If you wish, you can preview the report. You are now prompted to enter a value for the start date as well as location and end date. Make sure the start date that you enter is before the end date.
-
-10. Click ![jss icon run report](../assets/images/jss-icon-run-report.png) to run the report.
+1.  Click the **Advanced** tab in the **Properties** view, click **Properties**, then click ![jss icon ellipsis](../assets/images/jss-icon-ellipsis.png).
+2.  The **Properties** dialog is displayed, showing options specific to a web services data source.
+3.  In the **URL parameter** field, enter the name of the URL parameter you wish to use for input, in this case, `startdate`.
+4.  Click **Finish**.
+5.  If you wish, you can preview the report. You are now prompted to enter a value for the start date as well as location and end date. Make sure the start date that you enter is before the end date.
+6.  Click ![jss icon run report](../assets/images/jss-icon-run-report.png) to run the report.

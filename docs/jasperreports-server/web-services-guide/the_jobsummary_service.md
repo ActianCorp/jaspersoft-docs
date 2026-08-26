@@ -11,8 +11,8 @@ description: The rest/jobsummary service is superseded by The v2/jobs Service.
 
 In order to schedule reports and interact with jobs that are created to run a report at a later time, the REST API provides two services:
 
-- The jobsummary service lists all currently defined jobs on a given report.
-- The job service lets you create, modify, and delete a specific job.
+-   The jobsummary service lists all currently defined jobs on a given report.
+-   The job service lets you create, modify, and delete a specific job.
 
 The jobsummary service is a read only service. Requests for PUT, POST, and DELETE operations receive the error 405, method not allowed.
 

@@ -21,5 +21,5 @@ The service works via XML-RPC calls that use the SOAP encoding. It uses the HTTP
 
 This chapter contains the following sections:
 
-- [Types Defined in the WSDL](types_defined_in_the_wsdl1.md)
-- [Operations in the Domain Service](operations_in_the_domain_service.md)
+-   [Types Defined in the WSDL](types_defined_in_the_wsdl1.md)
+-   [Operations in the Domain Service](operations_in_the_domain_service.md)

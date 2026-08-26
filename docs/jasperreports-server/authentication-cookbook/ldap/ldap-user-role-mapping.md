@@ -17,16 +17,16 @@ The mapping for user roles is configured in a bean of the `JSDefaultLdapAuthorit
 
 To configure the mapping for user roles in sample-applicationContext-externalAuth-LDAP\[-mt\].xml, locate the bean of the `JSDefaultLdapAuthoritiesPopulator` class, the second constructor argument of `ldapAuthenticationProvider`, and specify the following information:
 
-- `constructor-arg index="1"`: An optional branch DN where group entries are located. If not specified, the search covers your entire LDAP directory starting from the base DN.
+-   `constructor-arg index="1"`: An optional branch DN where group entries are located. If not specified, the search covers your entire LDAP directory starting from the base DN.
 
-- `groupRoleAttribute` property: The attribute whose value is mapped to the name of the JasperReports Server role. Often, this is the `cn` attribute that gives the name of the role in the RDN of the group entry. But it can be any attribute, for example a custom attribute named `Jaspersoft Role Name` defined by a custom LDAP schema.
+-   `groupRoleAttribute` property: The attribute whose value is mapped to the name of the JasperReports Server role. Often, this is the `cn` attribute that gives the name of the role in the RDN of the group entry. But it can be any attribute, for example a custom attribute named `Jaspersoft Role Name` defined by a custom LDAP schema.
 
-- `groupSearchFilter` property: A group search filter that locates entries representing groups to which the user belongs. For static groups, this filter should detect entries with the `groupofuniquenames` object class and with a `uniqueMember` value that matches the DN found by the user search. You can use the following parameters:
+-   `groupSearchFilter` property: A group search filter that locates entries representing groups to which the user belongs. For static groups, this filter should detect entries with the `groupofuniquenames` object class and with a `uniqueMember` value that matches the DN found by the user search. You can use the following parameters:
 
-  - `{0}` represents the full DN of the user entry.
-  - `{1}` represents the username.
+    -   `{0}` represents the full DN of the user entry.
+    -   `{1}` represents the username.
 
-- `searchSubtree` property: Whether or not the search should extend to all subtrees beneath the branch DN, or beneath the base DN when no branch DN is specified.
+-   `searchSubtree` property: Whether or not the search should extend to all subtrees beneath the branch DN, or beneath the base DN when no branch DN is specified.
 
 `JSDefaultLdapAuthoritiesPopulator` is a wrapper class of the Spring Security `DefaultLdapAuthoritiesPopulator` class. Spring Security supports additional properties; see the [Spring Security documentation](https://docs.spring.io/spring-security/reference/6.5/index.html) for more information.
 
@@ -60,8 +60,8 @@ Be careful when defining the properties for mapping user roles. The search for g
 
 After the mapping has determined the role names given to the external user in JasperReports Server:
 
-- In the community edition, which doesn't have the organization architecture, the roles are synchronized with existing roles and assigned to the user.
-- In commercial editions, which have the organization architecture, the external user and roles are assigned to an organization that's either the default single organization or an organization mapped from the DN of the LDAP user. Organization mapping is described in [Mapping the User Organization](ldap-setting-user-organization.md).
+-   In the community edition, which doesn't have the organization architecture, the roles are synchronized with existing roles and assigned to the user.
+-   In commercial editions, which have the organization architecture, the external user and roles are assigned to an organization that's either the default single organization or an organization mapped from the DN of the LDAP user. Organization mapping is described in [Mapping the User Organization](ldap-setting-user-organization.md).
 
 If you intend for one of the mapped roles to provide administrator privileges, you must explicitly map it to the system roles, as described in [Mapping Roles to System Roles](ldap-mapping-system-roles.md). Otherwise, all mapped roles are created in the mapped organization.
 

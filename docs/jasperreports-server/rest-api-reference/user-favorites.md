@@ -9,9 +9,9 @@ The rest_v2/favorites service provides methods that allow you to add the resourc
 
 This chapter includes the following sections:
 
-- Adding Resources to Favorites
-- Removing Resources from Favorites
-- Accessing Resources in Favorites
+-   Adding Resources to Favorites
+-   Removing Resources from Favorites
+-   Accessing Resources in Favorites
 
 ## Adding Resources to Favorites
 

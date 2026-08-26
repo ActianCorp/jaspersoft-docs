@@ -81,21 +81,21 @@ To configure a chart
 
 5.  Also in the **Chart Data Configuration** dialog, enter an expression to associate with each value in the data source. For a Pie 3D chart, three expressions can be entered: `key`, `value`, and `label`.
 
-    - **Key expression** identifies a slice of the chart. Each key expression must be a unique. Any repeated key simply overwrites the duplicate key. A key can never be `null`.
-    - **Value expression** specifies the numeric value of the key.
-    - **Label expression** specifies the label of a pie chart slice. This is the key expression by default.
+-   **Key expression** identifies a slice of the chart. Each key expression must be a unique. Any repeated key simply overwrites the duplicate key. A key can never be `null`.
 
-    Next to each field, click the![dotdotdot button](../assets/images/dotdotdot-button.png) button. Enter the following:
+    -   **Value expression** specifies the numeric value of the key.
+    -   **Label expression** specifies the label of a pie chart slice. This is the key expression by default.
 
-    **Value**: `$F{orders}`
+Next to each field, click the![dotdotdot button](../assets/images/dotdotdot-button.png) button. Enter the following:
 
-    **Label**:` $F{shipcountry}`
+**Value**: `$F{orders}`
 
-    **Key**: `$F{shipcountry}`
+**Label**:` $F{shipcountry}`
 
-6.  Click **Finish**.
+**Key**: `$F{shipcountry}`
 
-7.  Save your report, and preview it to see the result.
+1.  Click **Finish**.
+2.  Save your report, and preview it to see the result.
 
 |                                                    |
 |----------------------------------------------------|

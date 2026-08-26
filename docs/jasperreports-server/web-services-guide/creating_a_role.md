@@ -7,8 +7,8 @@ description: "To create a role, send the PUT request to the restv2/roles service
 
 To create a role, send the PUT request to the rest_v2/roles service with the intended role ID (name) specified in the URL.
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
-- In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create roles in the root organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
+-   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create roles in the root organization.
 
 Roles do not have any properties to specify other than the role ID, but the request must include a descriptor that can be empty.
 

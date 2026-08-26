@@ -7,19 +7,19 @@ description: "Some of the new and enhanced features in JasperReports Server can 
 
 Some of the new and enhanced features in JasperReports Server can affect your deployment, and you should plan your upgrade accordingly. Before upgrading make sure to:
 
-- Review this information carefully and determine how the changes described affect your deployment.
+-   Review this information carefully and determine how the changes described affect your deployment.
 
-- Back up your current JasperReports Server installation, repository, and keystore.
+-   Back up your current JasperReports Server installation, repository, and keystore.
 
-- Run the upgrade script as the same user who originally installed the server, or make sure the server's keystore is available in the home directory of the user running the upgrade script.
+-   Run the upgrade script as the same user who originally installed the server, or make sure the server's keystore is available in the home directory of the user running the upgrade script.
 
 The versions and their affected functionality are:
 
-- Changes in 10.1.0 affect upgrades.
+-   Changes in 10.1.0 affect upgrades.
 
-- Changes in 10.0 affect upgrades.
+-   Changes in 10.0 affect upgrades.
 
-- Changes in 9.0 affect upgrades
+-   Changes in 9.0 affect upgrades
 
 !!! note
 
@@ -41,8 +41,8 @@ However, once the upgrade process has completed, you can use the **JRS UI - Impo
 
 This chapter contains the following sections:
 
-- [Changes in 10.1 That May Affect Your Upgrade](plan-upgrade-10.1.md)
+-   [Changes in 10.1 That May Affect Your Upgrade](plan-upgrade-10.1.md)
 
-- [Changes in 10.0 That May Affect Your Upgrade](plan-upgrade-10.0.md)
+-   [Changes in 10.0 That May Affect Your Upgrade](plan-upgrade-10.0.md)
 
-- [Changes in 9.0 That May Affect Your Upgrade](plan-upgrade-9.0.md)
+-   [Changes in 9.0 That May Affect Your Upgrade](plan-upgrade-9.0.md)

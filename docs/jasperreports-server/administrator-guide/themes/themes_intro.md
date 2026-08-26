@@ -19,12 +19,12 @@ For multi-organization deployments, administrators can set the theme individuall
 
 This chapter contains the following sections:
 
-- [Introduction to Themes](introduction_to_themes.md)
+-   [Introduction to Themes](introduction_to_themes.md)
 
-- [How Themes Work](how_themes_work.md)
+-   [How Themes Work](how_themes_work.md)
 
-- [Administering Themes](administering_themes.md)
+-   [Administering Themes](administering_themes.md)
 
-- [Creating Themes](creating_themes.md)
+-   [Creating Themes](creating_themes.md)
 
-- [Working With CSS Files](working_with_css_files.md)
+-   [Working With CSS Files](working_with_css_files.md)

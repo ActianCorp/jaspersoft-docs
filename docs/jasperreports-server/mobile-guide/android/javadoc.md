@@ -11,10 +11,12 @@ The Jaspersoft Mobile SDK for Android includes the Javadoc for all of its packag
 
 The Mobile SDK and the JasperMobile app for Android are documented at:
 
-- <https://github.com/Jaspersoft/js-android-sdk/wiki>
-- <https://github.com/Jaspersoft/js-android-app/wiki>
+-   <https://github.com/Jaspersoft/js-android-sdk/wiki>
 
-In addition, the following documentation is available on the Jaspersoft Community website ([http://community.jaspersoft.com/documentation](http://community.jaspersoft.com/documentation?version=15786)):
+-   <https://github.com/Jaspersoft/js-android-app/wiki>
 
-- JasperReports Server REST API Reference (REST API)
-- JasperReports Server Mobile Developer Guide (this book)
+    In addition, the following documentation is available on the Jaspersoft Community website ([http://community.jaspersoft.com/documentation](http://community.jaspersoft.com/documentation?version=15786)):
+
+-   JasperReports Server REST API Reference (REST API)
+
+-   JasperReports Server Mobile Developer Guide (this book)

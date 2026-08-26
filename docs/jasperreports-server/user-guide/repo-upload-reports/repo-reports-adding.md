@@ -13,26 +13,32 @@ Using the Ad Hoc Editor, you can create reports within JasperReports Server from
 
 You can add a report to the server’s repository in two ways:
 
-- From within the server
+-   From within the server
 
-Add the JRXML file and any other resources that the report needs as a report unit. A wizard guides you through each step.
+    Add the JRXML file and any other resources that the report needs as a report unit. A wizard guides you through each step.
 
-- From Jaspersoft Studio
+-   From Jaspersoft Studio
 
-Design the report in Jaspersoft Studio, and use a connection to JasperReports Server to add the JRXML and resources to the JasperReports Server repository. See the Jaspersoft Studio User Guide for information.
+    Design the report in Jaspersoft Studio, and use a connection to JasperReports Server to add the JRXML and resources to the JasperReports Server repository. See the Jaspersoft Studio User Guide for information.
 
-To add the sample report units to the server, you need access to the sample data in the server installation directory on the file system (\<js-install\>/samples). Contact your administrator for help with locating these files.
+    To add the sample report units to the server, you need access to the sample data in the server installation directory on the file system (&lt;js-install&gt;/samples). Contact your administrator for help with locating these files.
 
-!!! note
+    !!! note
 
-    In most cases, it is preferable to upload the JRXML file from Jaspersoft Studio. Uploading through JasperReports Server is included for completeness.
+        In most cases, it is preferable to upload the JRXML file from Jaspersoft Studio. Uploading through JasperReports Server is included for completeness.
 
-This chapter includes examples of adding a report to the repository using the server’s wizard and the plug-in. The chapter contains the following sections:
+    This chapter includes examples of adding a report to the repository using the server’s wizard and the plug-in. The chapter contains the following sections:
 
-- [Overview of a Report Unit](repo-report-unit.md)
-- [Adding a Report Unit to the Server](repo-add-simple-report-unit.md)
-- [Defining a Query in a Report](repo-defining-query.md)
-- [Adding a Complex Report Unit to the Server](repo-adding-complex-report.md)
-- [Adding Cascading Input Controls to a Report](repo-adding-cascading-input-controls.md)
-- [Editing JRXML Report Units](repo-editing-jrxml.md)
-- [Localizing Reports](repo-localizing-reports.md)
+-   [Overview of a Report Unit](repo-report-unit.md)
+
+-   [Adding a Report Unit to the Server](repo-add-simple-report-unit.md)
+
+-   [Defining a Query in a Report](repo-defining-query.md)
+
+-   [Adding a Complex Report Unit to the Server](repo-adding-complex-report.md)
+
+-   [Adding Cascading Input Controls to a Report](repo-adding-cascading-input-controls.md)
+
+-   [Editing JRXML Report Units](repo-editing-jrxml.md)
+
+-   [Localizing Reports](repo-localizing-reports.md)

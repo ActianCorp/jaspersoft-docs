@@ -11,10 +11,10 @@ The REST (Representational State Transfer) API depends on the standard methods p
 
 The REST services in JasperReports Server 10.1 include:
 
-- Repository services: Search the repository; create, modify, and delete resources; view and set permissions on repository objects; and import and export repository catalogs.
+-   Repository services: Search the repository; create, modify, and delete resources; view and set permissions on repository objects; and import and export repository catalogs.
 
-- Report services: Run reports and access report output; access and manipulate report options and input controls; and work with scheduled jobs.
+-   Report services: Run reports and access report output; access and manipulate report options and input controls; and work with scheduled jobs.
 
-- Administration services: Work with users and user attributes, roles and role membership, and organizations in commercial editions.
+-   Administration services: Work with users and user attributes, roles and role membership, and organizations in commercial editions.
 
 Jaspersoft also publishes a PHP client for embedding reports in PHP applications. The PHP client provides a wrapper for the REST API, so developers can use simple PHP structures and syntax to access JasperReports Server. For more information, see the [PHP client community project](http://community.jaspersoft.com/project/php-client).

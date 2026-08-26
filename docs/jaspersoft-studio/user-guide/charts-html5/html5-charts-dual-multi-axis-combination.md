@@ -9,9 +9,9 @@ This example shows how to create a column-spline chart that plots average freigh
 
 A similar dialog is used for the following types of charts:
 
-- Dual- and multi-axis charts that use different scales for each y-axis. (This enables you to compare data items easily with very different scales.)
+-   Dual- and multi-axis charts that use different scales for each y-axis. (This enables you to compare data items easily with very different scales.)
 
-- Combination charts that display multiple data series in a single chart that combines the features of two different charts.
+-   Combination charts that display multiple data series in a single chart that combines the features of two different charts.
 
 !!! note
 
@@ -50,24 +50,28 @@ To create the chart using a simple configuration
 
 4.  Enter the following to create your category:
 
-    - **Category Expression**:` $F{SHIPCOUNTRY}`
-    - **Ordering**: **Ascending**
+-   **Category Expression**:` $F{SHIPCOUNTRY}`
 
-5.  Select Series 1 and configure the first measure for total freight. This measure is used for columns. You can change this using advanced configuration:
+    -   **Ordering**: **Ascending**
 
-    - **Value Expression**: `$F{FREIGHT}`
-    - **Aggregation Function**: `Average`
-    - **Tooltip Expression**: `"Average Freight"`
+        1.  Select Series 1 and configure the first measure for total freight. This measure is used for columns. You can change this using advanced configuration:
 
-6.  Select Series 2 from the drop-down and configure the second measure for total orders. This measure is used for spline:
+    -   **Value Expression**: `$F{FREIGHT}`
 
-    - **Value Expression**: `$F{ORDERID}`
-    - **Aggregation Function**: `DistinctCount`
-    - **Tooltip Expression**: `"Total Orders"`
+    -   **Aggregation Function**: `Average`
 
-7.  Click **OK** to return to design view.
+    -   **Tooltip Expression**: `"Average Freight"`
 
-8.  Save and preview your report. It should look like the following figure.
+        1.  Select Series 2 from the drop-down and configure the second measure for total orders. This measure is used for spline:
+
+    -   **Value Expression**: `$F{ORDERID}`
+
+    -   **Aggregation Function**: `DistinctCount`
+
+    -   **Tooltip Expression**: `"Total Orders"`
+
+1.  Click **OK** to return to design view.
+2.  Save and preview your report. It should look like the following figure.
 
 |  |
 |----|
@@ -109,67 +113,74 @@ A simple configuration lets you add a measure, but does not let you choose set w
 
 5.  Click **Add** to specify the series type:
 
-    - **Contributor**: `SeriesProperty`
-    - **Property Name**: `type`
-    - **Use Constant Value**: `spline`
+-   **Contributor**: `SeriesProperty`
 
-    Click **OK**, then click **OK** again.
+    -   **Property Name**: `type`
 
-    |  |
-    |----|
-    | ![jss html5 charts columnspline editproperty](../assets/images/jss-html5-charts-columnspline-editproperty.png) |
-    | *Figure 6: Adding a Series Property* |
+    -   **Use Constant Value**: `spline`
 
-    !!! note
+        Click **OK**, then click **OK** again.
 
-        The supported constant values for series property type are `column`, `line`, and `spline`.
+        |  |
+        |----|
+        | ![jss html5 charts columnspline editproperty](../assets/images/jss-html5-charts-columnspline-editproperty.png) |
+        | *Figure 6: Adding a Series Property* |
 
-6.  Select Measure2 and click **Modify**.
+        !!! note
 
-    The Measure dialog is displayed. If you want, you can change the name to Total Orders.
+            The supported constant values for series property type are `column`, `line`, and `spline`.
 
-7.  Click the **Advanced Properties** tab.
+        1.  Select Measure2 and click **Modify**.
 
-8.  Click **Add** to specify the series type:
+            The Measure dialog is displayed. If you want, you can change the name to Total Orders.
 
-    - **Contributor**: `SeriesProperty`
-    - **Property Name**: `type`
-    - **Use Constant Value**: `column`
+        2.  Click the **Advanced Properties** tab.
 
-    Click **OK**, then click **OK** again.
+        3.  Click **Add** to specify the series type:
 
-9.  Click **OK** thrice to return to the design view, then save and preview the chart. The display has changed to reflect your settings.
+    -   **Contributor**: `SeriesProperty`
 
-|  |
-|----|
-| ![html5 charts columnspline seriestype result](../assets/images/html5-charts-columnspline-seriestype-result.png) |
-| *Figure 7: Chart After Changing the Measure Types* |
+    -   **Property Name**: `type`
 
-To add a series level
+    -   **Use Constant Value**: `column`
 
-1.  From the design view, double-click the chart to open the **HTML5 Chart Edit Dialog**.
+        Click **OK**, then click **OK** again.
 
-2.  Make sure you are in the advanced configuration view of the **Data Configuration** tab.
+        1.  Click **OK** thrice to return to the design view, then save and preview the chart. The display has changed to reflect your settings.
 
-3.  Set the series type for any existing measures, as described above.
+        |  |
+        |----|
+        | ![html5 charts columnspline seriestype result](../assets/images/html5-charts-columnspline-seriestype-result.png) |
+        | *Figure 7: Chart After Changing the Measure Types* |
 
-4.  Click **Add** in the **Series Level** section to open the **Series Level** dialog.
+        To add a series level
 
-    |  |
-    |----|
-    | ![html5 charts columnspline seirieslevel](../assets/images/html5-charts-columnspline-seirieslevel.png) |
-    | *Figure 8: Adding a Series Level to a Column-Spline Chart* |
+        1.  From the design view, double-click the chart to open the **HTML5 Chart Edit Dialog**.
 
-5.  Create a series with the following:
+        2.  Make sure you are in the advanced configuration view of the **Data Configuration** tab.
 
-    - **Name**: `Year`
-    - **Expression**: `new java.text.SimpleDateFormat ("yyyy").format($F{ORDERDATE}) `
-    - **Value Class Name**: `java.lang.Comparable`
-    - **Order**: `Ascending`
+        3.  Set the series type for any existing measures, as described above.
 
-    Click **OK** twice to return to design view.
+        4.  Click **Add** in the **Series Level** section to open the **Series Level** dialog.
 
-6.  Save and preview the report.
+            |  |
+            |----|
+            | ![html5 charts columnspline seirieslevel](../assets/images/html5-charts-columnspline-seirieslevel.png) |
+            | *Figure 8: Adding a Series Level to a Column-Spline Chart* |
+
+        5.  Create a series with the following:
+
+    -   **Name**: `Year`
+
+    -   **Expression**: `new java.text.SimpleDateFormat ("yyyy").format($F{ORDERDATE}) `
+
+    -   **Value Class Name**: `java.lang.Comparable`
+
+    -   **Order**: `Ascending`
+
+Click **OK** twice to return to design view.
+
+1.  Save and preview the report.
 
 |  |
 |----|

@@ -8,43 +8,46 @@ description: To open the Domain Designer and create a new Domain
 To open the Domain Designer and create a new Domain
 
 1.  Log in as an administrative user.
-
 2.  Create a Domain in one of the following ways:
 
-    - Select **Create \> Domain** from the main menu.
-    - Click **Create** in the Domains section of the home page.
-    - Right-click a repository folder and choose **Add Resource \> Domain**.
+-   Select **Create &gt; Domain** from the main menu.
 
-    The **Choose Data** dialog appears.
+    -   Click **Create** in the Domains section of the home page.
 
-    ![js DomainDesigner ChooseData](../assets/images/js-DomainDesigner-ChooseData.png)
+    -   Right-click a repository folder and choose **Add Resource &gt; Domain**.
 
-    *Figure 1: The Choose a Data Source dialog*
+        The **Choose Data** dialog appears.
 
-3.  Select a data source in the **Choose Data** dialog and click **OK**.
+        ![js DomainDesigner ChooseData](../assets/images/js-DomainDesigner-ChooseData.png)
 
-    - Use only data sources in the repository for which the intended user has at least execute permission.
-    - If you installed the sample data, you can use the sample JDBC, JNDI, and virtual data sources in **Organization \> Data Sources** or **Organization \> Analysis Components \> Analysis Data Sources**.
-    - You can use the icons at the top of the **Choose Data** dialog to switch between a repository tree view and a flat list of data sources:
+        *Figure 1: The Choose a Data Source dialog*
 
-    ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png): Display data sources as a repository view.
+        1.  Select a data source in the **Choose Data** dialog and click **OK**.
 
-    ![js Dashboard icon ViewList](../assets/images/js-Dashboard-icon-ViewList.png): Display data sources as a list.
+    -   Use only data sources in the repository for which the intended user has at least execute permission.
 
-    - For performance reasons, the **Choose Data** dialog has an upper limit on the number of data sources it displays. If the data source you want does not appear in the list, use the **Search...** bar ![js Repository icon Search](../assets/images/js-Repository-icon-Search.png) to locate it.
+    -   If you installed the sample data, you can use the sample JDBC, JNDI, and virtual data sources in **Organization &gt; Data Sources** or **Organization &gt; Analysis Components &gt; Analysis Data Sources**.
 
-4.  Click **OK** to open the **Domain Designer** with the selected data source.
+    -   You can use the icons at the top of the **Choose Data** dialog to switch between a repository tree view and a flat list of data sources:
 
-To edit an existing Domain
+        ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png): Display data sources as a repository view.
 
-1.  Log in as an administrative user.
+        ![js Dashboard icon ViewList](../assets/images/js-Dashboard-icon-ViewList.png): Display data sources as a list.
 
-2.  Display a list of Domains in one of the following ways:
+    -   For performance reasons, the **Choose Data** dialog has an upper limit on the number of data sources it displays. If the data source you want does not appear in the list, use the **Search...** bar ![js Repository icon Search](../assets/images/js-Repository-icon-Search.png) to locate it.
 
-    - Navigate to a folder in the Repository that contains Domains.
-    - Click the large icon in the Domains block on the home page.
+        1.  Click **OK** to open the **Domain Designer** with the selected data source.
 
-3.  Right-click the Domain you want and select **Edit** from the menu.
+        To edit an existing Domain
+
+        1.  Log in as an administrative user.
+        2.  Display a list of Domains in one of the following ways:
+
+    -   Navigate to a folder in the Repository that contains Domains.
+
+    -   Click the large icon in the Domains block on the home page.
+
+1.  Right-click the Domain you want and select **Edit** from the menu.
 
 The **Domain Designer** displays the **Data Management** tab for the Domain you selected.
 

@@ -50,7 +50,7 @@ To create a data adapter for a Spotfire Information Link
 
 To create your report
 
-1.  Click **File \> New \> JasperReport.**
+1.  Click **File &gt; New &gt; JasperReport.**
 2.  Select a template and enter a name for your report.
 3.  Click **Next**. The **Data Source** dialog is displayed.
 4.  Select the **Spotfire Information Link** data adapter that you created above.
@@ -62,7 +62,7 @@ To create your report
 10. Click **Finish**. Jaspersoft Studio displays the report in the **Design** tab.
 11. Edit the report as needed. For example, add fields and components and configure your query and dataset.
 12. Click **Preview** to ensure that the report is correctly configured.
-13. When your report is ready, click **File \> Save**.
+13. When your report is ready, click **File &gt; Save**.
 
 To export your data adapter as an jrdax file
 
@@ -120,7 +120,7 @@ The **Dataset and Query** dialog shows the prompts for your **Spotfire Informati
 
 **Class Type**: `java.lang.String`
 
-**Default Value Expression**: The default value expression must be two strings with a caret (^) between them. Most often, you want to create three parameters in Jaspersoft Studio: two parameters that define the endpoints of the range and the third parameter of type String that is used to pass the range to Spotfire. The endpoint parameters should correspond to the type of the prompt.
+**Default Value Expression**: The default value expression must be two strings with a caret (\^) between them. Most often, you want to create three parameters in Jaspersoft Studio: two parameters that define the endpoints of the range and the third parameter of type String that is used to pass the range to Spotfire. The endpoint parameters should correspond to the type of the prompt.
 
 For example, for a `Range` prompt of type `DateTime`, you might create two parameters of type `java.sql.Timestamp` that are used to take input for the start and end time:
 
@@ -173,12 +173,13 @@ The parameters would look like this on the **Parameters** tab.
 3.  To map a prompt to a parameter:
 
     1.  Double-click a prompt. The GUID for the prompt is displayed, followed by an equals sign (=).
+
     2.  Type the name of the parameter that you want to use after the equals sign (=) in the form `$P{ParameterName}`. For example, for the date range prompt above, you would enter `$P{OrderDateRange}`.
 
-    |  |
-    |----|
-    | ![jss spotfire prompts guids](../assets/images/jss-spotfire-prompts-guids.png) |
-    | *Figure 4: Prompts with GUIDs mapped to parameters* |
+        |  |
+        |----|
+        | ![jss spotfire prompts guids](../assets/images/jss-spotfire-prompts-guids.png) |
+        | *Figure 4: Prompts with GUIDs mapped to parameters* |
 
 4.  Repeat these steps for each prompt.
 

@@ -9,13 +9,13 @@ Templates are one of the most useful tools in Jaspersoft Studio. You can use the
 
 This chapter explains how to build custom templates that appear in the Template Chooser. It has the following sections:
 
-- [Template Structure](templates-structure.md)
+-   [Template Structure](templates-structure.md)
 
-- [Creating and Customizing Templates](templates-creating.md)
+-   [Creating and Customizing Templates](templates-creating.md)
 
-- [Saving Templates](templates-saving.md)
+-   [Saving Templates](templates-saving.md)
 
-- [Adding Templates to Jaspersoft Studio](templates-adding-as-template.md)
+-   [Adding Templates to Jaspersoft Studio](templates-adding-as-template.md)
 
 !!! note
 

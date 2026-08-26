@@ -82,7 +82,7 @@ To remove the Domain menu items
     -->
     ```
 
-4.  Find the section at the top of the file that creates the Add Resources sub-menu. Then add comments to remove the lines that define the ****Add Resources \> Domain**** menu item, as shown in the code sample above.
+4.  Find the section at the top of the file that creates the Add Resources sub-menu. Then add comments to remove the lines that define the ****Add Resources &gt; Domain**** menu item, as shown in the code sample above.
 
 5.  Save the modified files and reload the web app in the app server to see the changes (see [1.0.1, “Reloading the JasperReports Server Web App,” on page 1](reloading-jrs-webapp.md)).
 

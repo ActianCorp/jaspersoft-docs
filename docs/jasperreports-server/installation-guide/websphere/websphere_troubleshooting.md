@@ -44,10 +44,10 @@ More recently, the server uses version 2.10.0.
 
 The error shown above is caused by a conflict between the IBM JDK used by WebSphere and the xercesImpl-2.6.2 library bundled with older versions of JasperReports Server. There are two solutions:
 
-- Remove the xercesImpl library from the following location:
+-   Remove the xercesImpl library from the following location:
 
-`<websphere>\profiles\AppSrv<NN>\installedApps\<node>\jasperserver-pro_war.ear\`
+    `<websphere>\profiles\AppSrv<NN>\installedApps\<node>\jasperserver-pro_war.ear\`
 
-`jasperserver-pro.war\WEB-INF\lib`
+    `jasperserver-pro.war\WEB-INF\lib`
 
-- Update the xercesImpl library to a new version (if it is an old version).
+-   Update the xercesImpl library to a new version (if it is an old version).

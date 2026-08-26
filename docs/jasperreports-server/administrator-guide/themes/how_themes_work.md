@@ -17,10 +17,10 @@ This chapter uses the following terminology to distinguish between root-level an
 
 | Name | Folder | Description |
 |----|----|----|
-| Default theme | root \> Themes \> default | The unmodified UI as it appears at installation. The default theme is defined in the default folder in the Themes folder at the root of the repository. |
-| System theme | root \> Themes \> active-theme | The active theme set at the root level. All users in all organizations see this theme unless an organization-specific theme is activated. |
-| Inherited theme | Organization \> Themes \> default | The combination of all themes applied to the parent organizations and inherited by a suborganization. The organization's inherited theme is stored in the default folder within the organization's Themes folder. |
-| Active theme | Organization \> Themes \> active-theme | The theme that's active at the organization or system level. Users see a combination of the active and inherited theme, depending on the files in the active theme and the inheritance rules. |
+| Default theme | root &gt; Themes &gt; default | The unmodified UI as it appears at installation. The default theme is defined in the default folder in the Themes folder at the root of the repository. |
+| System theme | root &gt; Themes &gt; active-theme | The active theme set at the root level. All users in all organizations see this theme unless an organization-specific theme is activated. |
+| Inherited theme | Organization &gt; Themes &gt; default | The combination of all themes applied to the parent organizations and inherited by a suborganization. The organization's inherited theme is stored in the default folder within the organization's Themes folder. |
+| Active theme | Organization &gt; Themes &gt; active-theme | The theme that's active at the organization or system level. Users see a combination of the active and inherited theme, depending on the files in the active theme and the inheritance rules. |
 
 Every level of organization, including the root, has a designated active theme. If no custom theme is made active, the default theme at every level is the active theme.
 
@@ -38,17 +38,17 @@ The images associated with a theme include all the icons in the user interface a
 
 The image files for the default theme are stored in a folder named images. In a custom theme, there are two ways to change an image of the default theme:
 
-- Create a folder named images and an image file with the same name as the one you want to replace.
+-   Create a folder named images and an image file with the same name as the one you want to replace.
 
-- Modify the corresponding CSS rules to specify the name and location of a different image.
+-   Modify the corresponding CSS rules to specify the name and location of a different image.
 
 When you modify the CSS rules, you can use any of the following ways to reference image files or any other helper file:
 
-- Directly in the theme folder. In this case the file is referenced without a path, for example `"myfile.png"` in CSS.
+-   Directly in the theme folder. In this case the file is referenced without a path, for example `"myfile.png"` in CSS.
 
-- In any folder path located in the theme folder. For example, your custom CSS file could refer to `"MyImages/myfile.png"` if you create a folder named `MyImages` in the theme folder and upload your images there.
+-   In any folder path located in the theme folder. For example, your custom CSS file could refer to `"MyImages/myfile.png"` if you create a folder named `MyImages` in the theme folder and upload your images there.
 
-- Anywhere on the Internet. Following the CSS standard, your custom CSS can refer to images or any helper file with a regular URL.
+-   Anywhere on the Internet. Following the CSS standard, your custom CSS can refer to images or any helper file with a regular URL.
 
 ## Inheritance
 
@@ -73,12 +73,12 @@ Once inheritance determines which files to load, the standard CSS priority schem
 
 This leads to two general ways of developing custom themes:
 
-- The quickest way is to copy individual CSS rules from the default theme files, modify the rules to change the UI, and save them in the `overrides_custom.css` file. This is the only file in your new theme. Because `overrides_custom.css` is always the last CSS file to be loaded, its rules override the same rules in other files. This allows you to easily change any number of rules, and manage them all in a single file.<br>
-  For example, if you want to increase the size of text on all the buttons in the default theme, you can do this with a few rules in the `overrides_custom.css` file. You may need to adjust the spacing for certain buttons, but the idea is you only need to change a limited number of rules.
+-   The quickest way is to copy individual CSS rules from the default theme files, modify the rules to change the UI, and save them in the `overrides_custom.css` file. This is the only file in your new theme. Because `overrides_custom.css` is always the last CSS file to be loaded, its rules override the same rules in other files. This allows you to easily change any number of rules, and manage them all in a single file.<br>
+    For example, if you want to increase the size of text on all the buttons in the default theme, you can do this with a few rules in the `overrides_custom.css` file. You may need to adjust the spacing for certain buttons, but the idea is you only need to change a limited number of rules.
 
 <!-- -->
 
-- If you modify the user interface extensively, you can use the existing structure of CSS files in the default theme. In this case, copy the relevant files from the default theme, make your modifications, and save the files in your new theme. The new files are inherited when you activate the theme.
+-   If you modify the user interface extensively, you can use the existing structure of CSS files in the default theme. In this case, copy the relevant files from the default theme, make your modifications, and save the files in your new theme. The new files are inherited when you activate the theme.
 
 An example of these extensive changes would be if you want to increase the size of the buttons themselves in the default theme. You would need to rewrite the majority of the rules in the buttons.css file and create images for the new buttons. In this case, it is much easier to copy the `buttons.css` file than to copy dozens of rules into the `overrides_custom.css` file. You could still use the `overrides_custom.css` file to adjust the spacing of elements around the buttons, because there would be fewer of those rules to modify.
 

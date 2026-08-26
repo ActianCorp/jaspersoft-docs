@@ -1,11 +1,11 @@
 ---
 title: The Filters Panel
-description: "The Filters panel displays any filters defined for the view. You can set the filter values and see the resulting change in the Ad Hoc View panel. To minimize the Filters panel, click the > button in..."
+description: "The Filters panel displays any filters defined for the view. You can set the filter values and see the resulting change in the Ad Hoc View panel. To minimize the Filters panel, click the &gt; button..."
 ---
 
 # The Filters Panel
 
-The Filters panel displays any filters defined for the view. You can set the filter values and see the resulting change in the Ad Hoc View panel. To minimize the Filters panel, click the **\>** button in the top left corner of the panel. Click the **\<**  button on the minimized panel to expand it again.
+The Filters panel displays any filters defined for the view. You can set the filter values and see the resulting change in the Ad Hoc View panel. To minimize the Filters panel, click the **&gt;** button in the top left corner of the panel. Click the **&lt;**  button on the minimized panel to expand it again.
 
 For more information on working with filters, see [Using Filters and Input Controls](adhoc-filters-and-input-controls.md).
 
@@ -21,21 +21,21 @@ To save an Ad Hoc view
 
 You can also save an Ad Hoc view as a report. Typically, a report is created when you want to:
 
-- See data in the interactive Report Viewer.
+-   See data in the interactive Report Viewer.
 
-- Perform additional formatting of the table data.
+-   Perform additional formatting of the table data.
 
-- Embed the data content in a dashboard.
+-   Embed the data content in a dashboard.
 
 Create a report from the view by selecting **Save Ad Hoc View and Create Report**; you can also create and run a report directly from the repository. For more information, see [Running or Creating a Simple Report](../reports/reports-running-simple.md). When you run the report, it is displayed as a JasperReport.
 
 To preview an Ad Hoc view
 
-- Click the **Editing** button and select **Viewing**.
+-   Click the **Editing** button and select **Viewing**.
 
 To switch to the design mode from the preview (display mode)
 
-- Click the **Viewing** button and select **Editing**.
+-   Click the **Viewing** button and select **Editing**.
 
 ## Dependent Reports
 

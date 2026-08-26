@@ -13,17 +13,17 @@ Run the following commands
 
 1.  Download CocoaPods. CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries such as the Jaspersoft Mobile SDK in your projects. CocoaPods is distributed as a ruby gem, and is installed by running the following commands in Terminal.app:
 
-    \$ sudo gem install cocoapods
+    $ sudo gem install cocoapods
 
-    \$ pod setup
+    $ pod setup
 
     Depending on your Ruby installation, you may not have to run as sudo to install the cocoapods gem.
 
 2.  Project dependencies to be managed by CocoaPods are specified in a file called Podfile. Create this file in the same directory as your Xcode project (.xcodeproj) file:
 
-    \$ touch Podfile
+    $ touch Podfile
 
-    \$ open -a Xcode Podfile
+    $ open -a Xcode Podfile
 
     !!! note
 
@@ -67,13 +67,13 @@ Run the following commands
 
 4.  Now you can install the dependencies in your project:
 
-    \$ pod install
+    $ pod install
 
 5.  From now on, be sure to always open the generated Xcode workspace (.xcworkspace) instead of the project file when building your project:
 
-    \$ open \<YourProjectName\>.xcworkspace
+    $ open &lt;YourProjectName&gt;.xcworkspace
 
-6.  At this point, everything's in place for you to start using Jaspersoft Mobile SDK for iOS. Just \#import the headers for the classes you need.
+6.  At this point, everything's in place for you to start using Jaspersoft Mobile SDK for iOS. Just #import the headers for the classes you need.
 
 If you run into any issues with a CocoaPods based installation out of the box, the most likely cause is that your project or target contains some configuration that is overriding the settings provided via CocoaPods. CocoaPods works by adding an .xcconfig file that contains configuration aggregated from the Pods you have installed. If you augment these configuration settings within your target, you have to be sure to include the `$(inherited)` value to pick up the values provided by CocoaPods.
 

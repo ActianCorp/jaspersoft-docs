@@ -21,11 +21,11 @@ The installer distribution bundles the following components:
 
 You can use components that you have installed previously. Make sure that you are using supported versions of the components. For information about specific versions of third-party applications supported by the installer, refer to the JasperReports Server Supported Platform Datasheet.
 
-- Tomcat application server: If you want to use an existing Tomcat, it must be on the local machine. See [Selecting Third-Party Components](select-tomcat.md) for more information.
+-   Tomcat application server: If you want to use an existing Tomcat, it must be on the local machine. See [Selecting Third-Party Components](select-tomcat.md) for more information.
 
-- PostgreSQL database: If you want to use an existing PostgreSQL, it can be on a local or remote machine. If it’s on a remote Linux machine, configure PostgreSQL to allow remote connections as described in [Enabling Connections to a Remote Host](select-postgresql.md). See [Selecting a PostgreSQL Configuration](select-postgresql.md) for more information.
+-   PostgreSQL database: If you want to use an existing PostgreSQL, it can be on a local or remote machine. If it’s on a remote Linux machine, configure PostgreSQL to allow remote connections as described in [Enabling Connections to a Remote Host](select-postgresql.md). See [Selecting a PostgreSQL Configuration](select-postgresql.md) for more information.
 
-- Chrome/Chromium browser: See [Selecting a Chrome/Chromium Configuration](select-phantomjs.md) for more information.
+-   Chrome/Chromium browser: See [Selecting a Chrome/Chromium Configuration](select-phantomjs.md) for more information.
 
 !!! note
 

@@ -13,9 +13,9 @@ By default, JasperReports Server does *not* enable the Secure Socket Layer/Trans
 
 Without HTTPS, all data sent by the user, including passwords, appear unencrypted in the network traffic. Because passwords should never be visible, JasperReports Server provides an independent method for encrypting the password values without using HTTPS. Passwords are encrypted in the following cases:
 
-- Passwords sent from the login page.
-- Passwords sent from the change password dialog. See [Configuring User Password Options](configuring_user_password_options.md).
-- Passwords sent from the user management pages by an administrator.
+-   Passwords sent from the login page.
+-   Passwords sent from the change password dialog. See [Configuring User Password Options](configuring_user_password_options.md).
+-   Passwords sent from the user management pages by an administrator.
 
 When a browser requests one of these pages, the server generates a private-public key pair and sends the public key along with the page. A JavaScript in the requested page encrypts the password when the user posts it to the server. Meanwhile, the server saves its private key and uses it to decrypt the password when it arrives. After decrypting the password, the server continues with the usual authentication methods.
 

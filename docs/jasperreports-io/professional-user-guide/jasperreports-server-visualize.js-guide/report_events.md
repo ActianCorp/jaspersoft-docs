@@ -9,11 +9,11 @@ Depending on the size of your data, the `report` function can run for several se
 
 This chapter contains the following sections:
 
-- Tracking Completion Status
-- Tracking Report Container Size
-- Listening for Page Totals
-- Listening for the Last Page
-- Customizing a Report's DOM Before Rendering
+-   Tracking Completion Status
+-   Tracking Report Container Size
+-   Listening for Page Totals
+-   Listening for the Last Page
+-   Customizing a Report's DOM Before Rendering
 
 ## Tracking Completion Status
 

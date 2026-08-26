@@ -38,7 +38,7 @@ Use the following method to modify the values in a given report option.
 
 For example, we change the report option we created in section [Creating Report Options](creating_report_options.md) with the following header:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report/options/MyReportOption
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report/options/MyReportOption
 
 And the following request body:
 

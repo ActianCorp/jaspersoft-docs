@@ -43,6 +43,13 @@ jobs:
       - name: Fail on broken internal links
         run: python3 tools/flare2md/check_site.py
 
+      # Nested lists are the fidelity check that has broken twice: a sub-list
+      # the markdown expresses must render as a sub-list, not as top-level
+      # items. Cheap to assert, and it fails the deploy rather than shipping a
+      # flattened procedure.
+      - name: Fail on flattened nested lists
+        run: python3 tools/flare2md/check_lists.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

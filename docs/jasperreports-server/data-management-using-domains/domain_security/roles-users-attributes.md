@@ -9,8 +9,8 @@ description: "Domain security can reference a user’s roles to determine the ac
 
 Domain security can reference a user’s roles to determine the access permissions to grant. The following roles meet CZS’s needs:
 
-- ROLE_SALES_MANAGER is assigned to sales managers.
-- ROLE_SALES_REP is assigned to sales representatives.
+-   ROLE_SALES_MANAGER is assigned to sales managers.
+-   ROLE_SALES_REP is assigned to sales representatives.
 
 CZS grants each role access to view the Sales Domain. For details about creating roles and assigning privileges, refer to the JasperReports Server Administrator Guide. The following shows CZS’s ROLE_SALES_REP:
 
@@ -35,8 +35,8 @@ For details about creating users, refer to the JasperReports Server Administrato
 
 A user attribute is a name-value pair defined at the user level that corresponds to some data in a Domain. CZS wants to be able to describe their users in terms of product lines that they sell and the cities where they sell them. So each user is assigned two attributes in addition to a role:
 
-- The `Cities` profile attribute corresponds to the City field in the Geography item group in the Sales Domain.
-- The `ProductDepartment` attribute corresponds to the Department field in the Product item group in the Sales Domain.
+-   The `Cities` profile attribute corresponds to the City field in the Geography item group in the Sales Domain.
+-   The `ProductDepartment` attribute corresponds to the Department field in the Product item group in the Sales Domain.
 
 <table>
 <caption><p>UserAttributes of All CZS Users</p></caption>

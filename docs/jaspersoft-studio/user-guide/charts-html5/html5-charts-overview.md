@@ -9,17 +9,17 @@ HTML5 charts are a flexible, interactive way to explore your data graphically. Y
 
 The following terminologies are used to describe HTML5 charts:
 
-- **Values**: Static properties.
+-   **Values**: Static properties.
 
-- **Expressions**: Dynamic properties.
+-   **Expressions**: Dynamic properties.
 
-- **Categories**: Rows. In a pie chart, the categories are the slices.
+-   **Categories**: Rows. In a pie chart, the categories are the slices.
 
-- **Levels**: Some chart types let you add multiple categories or series ranked hierarchically, with the topmost category set as Level 1. When you export a chart with multiple levels to JasperReports Server, users see a slider that they can use to select the level of aggregation. For example, you might have a chart that has three categories — Country, Region, and City — and users can choose a level for viewing the data.
+-   **Levels**: Some chart types let you add multiple categories or series ranked hierarchically, with the topmost category set as Level 1. When you export a chart with multiple levels to JasperReports Server, users see a slider that they can use to select the level of aggregation. For example, you might have a chart that has three categories — Country, Region, and City — and users can choose a level for viewing the data.
 
-- **Measures**: Measures contain summarized values. They are typically numeric fields that determine the length of bars, size of pie slices, location of points (in line charts), or the height of areas.
+-   **Measures**: Measures contain summarized values. They are typically numeric fields that determine the length of bars, size of pie slices, location of points (in line charts), or the height of areas.
 
-- **Series Contributors**: In the Design tab, these are defined at the measure level. In JRXML, these are defined as Series.
+-   **Series Contributors**: In the Design tab, these are defined at the measure level. In JRXML, these are defined as Series.
 
 !!! note
 

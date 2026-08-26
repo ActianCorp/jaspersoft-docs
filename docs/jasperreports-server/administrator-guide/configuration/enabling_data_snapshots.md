@@ -11,17 +11,17 @@ description: "The features in this section may be restricted by your JasperRepor
 
 The data snapshot feature stores report data in the server, which can change in the user experience significantly:
 
-- Without data snapshots – Whenever users run a report, the server queries the data source and displays the latest data. When the same report is run over and over, the data source is often returning the same data every time. This is the default behavior.
+-   Without data snapshots – Whenever users run a report, the server queries the data source and displays the latest data. When the same report is run over and over, the data source is often returning the same data every time. This is the default behavior.
 
-- With data snapshots – The first time a report runs, it queries the data source and stores a copy of the data with the report in the repository. Users who view the report later see the data from the saved snapshot, not from querying the data source. Reports accessed through REST APIs and Visualize.js are also based on the saved snapshot. For large reports or frequently viewed reports, the persisted snapshot provides a significant performance gain and reduces load on your data sources. Every user who has access to the report will see the data from the same snapshot. For users who require it, the report viewer provides a button to manually refresh the data snapshot anytime. In addition, when the scheduler runs a job on a report it always updates the snapshot. Enable data snapshots if you'd like to use them.
+-   With data snapshots – The first time a report runs, it queries the data source and stores a copy of the data with the report in the repository. Users who view the report later see the data from the saved snapshot, not from querying the data source. Reports accessed through REST APIs and Visualize.js are also based on the saved snapshot. For large reports or frequently viewed reports, the persisted snapshot provides a significant performance gain and reduces load on your data sources. Every user who has access to the report will see the data from the same snapshot. For users who require it, the report viewer provides a button to manually refresh the data snapshot anytime. In addition, when the scheduler runs a job on a report it always updates the snapshot. Enable data snapshots if you'd like to use them.
 
 We encourage enabling data snapshots with the following recommendations:
 
-- If you have a new installation of JasperReports Server, enable snapshots to get the full server functionality. In the future, persistent data snapshots may be enabled by default.
+-   If you have a new installation of JasperReports Server, enable snapshots to get the full server functionality. In the future, persistent data snapshots may be enabled by default.
 
-- If you're upgrading from an early release that predates data snapshots, first follow the upgrade procedure and verify the outcome, as instructed in the JasperReports Server Installation Guide. Then, before enabling data snapshots, notify your users about this new functionality.
+-   If you're upgrading from an early release that predates data snapshots, first follow the upgrade procedure and verify the outcome, as instructed in the JasperReports Server Installation Guide. Then, before enabling data snapshots, notify your users about this new functionality.
 
-- Data snapshots are stored in the server's repository, which must be sized accordingly. If you have a large number of reports, or very large reports, consider the performance of your repository database before enabling snapshots. If your users rely on data that changes frequently or if they expect to see real-time data when opening a report, do not enable snapshots. Alternatively, you can enable snapshots selectively as described below.
+-   Data snapshots are stored in the server's repository, which must be sized accordingly. If you have a large number of reports, or very large reports, consider the performance of your repository database before enabling snapshots. If your users rely on data that changes frequently or if they expect to see real-time data when opening a report, do not enable snapshots. Alternatively, you can enable snapshots selectively as described below.
 
 ## Global Data Snapshot Configuration
 
@@ -79,9 +79,9 @@ net.sf.jasperreports.data.cache.persistable=false
 
 There are two ways to control snapshots at the report level. In the case above:
 
-- Data snapshots are enabled on the server, so most reports use them.
+-   Data snapshots are enabled on the server, so most reports use them.
 
-- Reports that don't benefit from data snapshots can explicitly disable snapshots in their own JRXML.
+-   Reports that don't benefit from data snapshots can explicitly disable snapshots in their own JRXML.
 
 As with all report-level properties, you can set server-wide default values, as described in [Configuring JasperReports Library](configuring_jasperreports_library.md):
 
@@ -117,11 +117,11 @@ As with all report-level properties, you can set server-wide default values, as 
 
 Because the report-level property takes precedence over the server-level property, this enables a second way to control snapshots:
 
-- Data snapshots are enabled on the server.
+-   Data snapshots are enabled on the server.
 
-- But the server-wide default is set to false, so most reports don't use them.
+-   But the server-wide default is set to false, so most reports don't use them.
 
-- Reports that benefit from data snapshots can explicitly enable snapshots in their own JRXML with: `net.sf.jasperreports.data.cache.persistable=true`
+-   Reports that benefit from data snapshots can explicitly enable snapshots in their own JRXML with: `net.sf.jasperreports.data.cache.persistable=true`
 
 ## Data Snapshots in the Scheduler
 

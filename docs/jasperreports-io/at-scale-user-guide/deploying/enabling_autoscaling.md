@@ -24,14 +24,17 @@ Open that document in a separate tab and apply it as follows:
 3.  The autoscaling group tags should already be defined, but it is best to verify them.
 
     1.  Open the AWS Web console and locate your cluster.
+
     2.  Select your node group under your cluster.
+
     3.  Locate the autoscaling group created automatically for the node group.
+
     4.  Scroll down to Tags and confirm the following (where JRIOcluster is the cluster name):
 
-    |                                       |       |
-    |---------------------------------------|-------|
-    | k8s.io/cluster-autoscaler/JRIOcluster | owned |
-    | k8s.io/cluster-autoscaler/enabled     | true  |
+        |                                       |       |
+        |---------------------------------------|-------|
+        | k8s.io/cluster-autoscaler/JRIOcluster | owned |
+        | k8s.io/cluster-autoscaler/enabled     | true  |
 
 4.  Perform all steps in the section “Deploy the Cluster Autoscaler” of the Amazon document. At the time of publication, the latest version of the autoscaler is 1.7.3, giving the final command as follows:
 

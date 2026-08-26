@@ -7,11 +7,11 @@ description: "You can use the following REST APIs to modify, pause, resume, rest
 
 You can use the following REST APIs to modify, pause, resume, restart, and delete multiple alerts:
 
-- Modifying Multiple Alerts
-- Pausing Multiple Alerts
-- Resuming Multiple Alerts
-- Restarting Multiple Alerts
-- Deleting Multiple Alerts
+-   Modifying Multiple Alerts
+-   Pausing Multiple Alerts
+-   Resuming Multiple Alerts
+-   Restarting Multiple Alerts
+-   Deleting Multiple Alerts
 
 ## Modifying Multiple Alerts
 

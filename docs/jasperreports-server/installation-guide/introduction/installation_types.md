@@ -7,9 +7,9 @@ description: "As of version 8.0, JasperReports Server supports the following ins
 
 As of version 8.0, JasperReports Server supports the following installations:
 
-- Compact installation: The Repository, Audit, Access, and Monitoring tables are created in a single repository database. This is the same configuration as previous versions.
+-   Compact installation: The Repository, Audit, Access, and Monitoring tables are created in a single repository database. This is the same configuration as previous versions.
 
-- Split installation: Only the Repository tables are created in the repository database. The Audit, Access, and Monitoring tables are created in a separate audit database. For servers with high loads or performance needs, this speeds up repository access by storing diagnostic logs separately.
+-   Split installation: Only the Repository tables are created in the repository database. The Audit, Access, and Monitoring tables are created in a separate audit database. For servers with high loads or performance needs, this speeds up repository access by storing diagnostic logs separately.
 
 The default installation is the Compact installation.
 
@@ -31,8 +31,8 @@ The `default_master.properties` file handles the configuration for the Split ins
 
 To configure the `default_master.properties` file for the Split installation upgrade:
 
-- Edit the `default_master.properties` file to configure settings specific to your database and application server.<br>
-  Look for the line **Uncomment below settings ONLY for split installation** and uncomment the settings listed in the following table.
+-   Edit the `default_master.properties` file to configure settings specific to your database and application server.<br>
+    Look for the line **Uncomment below settings ONLY for split installation** and uncomment the settings listed in the following table.
 
 For example: To uncomment `# installType=split`, change it to `installType=split`.
 

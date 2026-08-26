@@ -17,10 +17,10 @@ Follow these instructions if you want to use Elastic Load Balancer (ELB) as an H
 
     `/usr/share/tomcat/conf/server.xml`
 
-4.  Locate the connector tag: `<connector port="80"...`
+    1.  Locate the connector tag: `<connector port="80"...`
 
-5.  In the connector tag, add the following parameters:
+    2.  In the connector tag, add the following parameters:
 
-    `scheme="https" proxyPort="443" proxyName="Elastic load balancer public DNS name"`
+        `scheme="https" proxyPort="443" proxyName="Elastic load balancer public DNS name"`
 
-6.  Save the file and restart Tomcat. See [Stopping and Restarting Tomcat](stopping-and-restarting-tomcat.md).
+4.  Save the file and restart Tomcat. See [Stopping and Restarting Tomcat](stopping-and-restarting-tomcat.md).

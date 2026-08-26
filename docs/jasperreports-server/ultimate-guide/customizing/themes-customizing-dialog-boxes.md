@@ -56,7 +56,7 @@ To change the background color for dialog boxes
 
 Customization of dialog box using themes
 
-To limit the scope of a customization to a specific dialog box, use the ID of the dialog box. For example, to change the background of the \#standardConfirm dialog box displayed when a user is required to confirm an action, use code like the following:
+To limit the scope of a customization to a specific dialog box, use the ID of the dialog box. For example, to change the background of the #standardConfirm dialog box displayed when a user is required to confirm an action, use code like the following:
 
 <table>
 <colgroup>

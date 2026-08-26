@@ -7,25 +7,25 @@ description: "Any JasperReport can be parameterized so that its generated output
 
 Any JasperReport can be parameterized so that its generated output is a function of values given at run time (query filters), or so that its layout is changed to accommodate different users (such as changing the title).
 
-- The range of possible values or list of discrete values allowed.
+-   The range of possible values or list of discrete values allowed.
 
-- The type of input, for example single-select or multi-select, and the widget to display the possible values, for example drop-down list or check boxes.
+-   The type of input, for example single-select or multi-select, and the widget to display the possible values, for example drop-down list or check boxes.
 
-- Display options such as labels and whether the value is required.
+-   Display options such as labels and whether the value is required.
 
-- The name of the corresponding parameter in the JRXML.
+-   The name of the corresponding parameter in the JRXML.
 
 When a user runs the report, the server uses this information to prompt the user for a value and to validate that input. For example, consider a report that returns sales data for all of a company's products; the user might input a product to view by selecting a product name in a list.
 
 JasperReports Server supports several types of input controls, each of which can map to certain types of parameters in the report's JRXML. The input control also determines the kind of widget the user interacts with:
 
-- Boolean: Presented as a check box. These input controls return a `java.lang.Boolean` object to the report engine in response to the user's selection. Boolean input controls return TRUE or FALSE as values, depending on whether the box is checked.
+-   Boolean: Presented as a check box. These input controls return a `java.lang.Boolean` object to the report engine in response to the user's selection. Boolean input controls return TRUE or FALSE as values, depending on whether the box is checked.
 
-- Single value: Presented as a free-form text box. You must specify a datatype, for example a text or numerical value, and the user's entry is validated against this datatype.
+-   Single value: Presented as a free-form text box. You must specify a datatype, for example a text or numerical value, and the user's entry is validated against this datatype.
 
-- Single-select: Presented as either a drop-down list or a set of radio buttons. A single-select input control returns a single value.
+-   Single-select: Presented as either a drop-down list or a set of radio buttons. A single-select input control returns a single value.
 
-- Multi-select: Presented as a scrollable list of values or a set of check boxes. A multi-select input control returns a collection of values.
+-   Multi-select: Presented as a scrollable list of values or a set of check boxes. A multi-select input control returns a collection of values.
 
 One advanced feature of single-select or multi-select input controls is that the values they present can be the result of a dynamic query. The query retrieves actual values from the data source before presenting them as choices to the user. These queries can contain parameters themselves, for example based on the logged-in user or the selection of a previous input control. Query parameters are described in [Query-based Input Controls](query-based_input_controls.md) and [Cascading Input Controls](cascading_input_controls.md).
 
@@ -41,9 +41,9 @@ As with other resources, input controls can be created locally as part of a Jasp
 
 To use an input control in a report, the control must meet two conditions:
 
-- The parameter name in the input control must correspond to the name of the parameter in the report. No error occurs for a mismatch, but at run time `NULL` is passed instead of the actual value of the parameter.
+-   The parameter name in the input control must correspond to the name of the parameter in the report. No error occurs for a mismatch, but at run time `NULL` is passed instead of the actual value of the parameter.
 
-- The input control and its corresponding parameter must be of compatible datatypes (for example, both must be text types or date types). If there is a mismatch, the report fails and an exception is returned.
+-   The input control and its corresponding parameter must be of compatible datatypes (for example, both must be text types or date types). If there is a mismatch, the report fails and an exception is returned.
 
 This section explains how to create an input control in the repository. To reference input controls in a JasperReport, see the JasperReports Server User Guide.
 
@@ -51,9 +51,9 @@ To create an input control:
 
 1.  Log on as an administrator.
 
-2.  Click **View \> Repository** and locate the folder for the input control.
+2.  Click **View &gt; Repository** and locate the folder for the input control.
 
-3.  Right-click the folder's name and select **Add Resource \> Input Control** from the context menu. The **Add Input Control** page appears.
+3.  Right-click the folder's name and select **Add Resource &gt; Input Control** from the context menu. The **Add Input Control** page appears.
 
     ![js AddInputControl Create](../assets/images/js-AddInputControl-Create.png)
 
@@ -73,48 +73,48 @@ To create an input control:
 
 9.  Select options for the control. Your options are:
 
-    - **Mandatory**: Forces the end user to supply a value.
+    -   **Mandatory**: Forces the end user to supply a value.
 
-    - **Enable/Disable Input Control**: Controls whether you can edit the value of the Input Control. You can choose from the following three options:
+    -   **Enable/Disable Input Control**: Controls whether you can edit the value of the Input Control. You can choose from the following three options:
 
-      - **Enable**: Displays the value of the parameter while allowing you to edit it. By default, **Enable** is selected.
+        -   **Enable**: Displays the value of the parameter while allowing you to edit it. By default, **Enable** is selected.
 
-      - **Disable**: Displays the value of the parameter while restricting you from editing it.
+        -   **Disable**: Displays the value of the parameter while restricting you from editing it.
 
-      - **Conditional**: Based on the condition defined, the Input Control may be enabled or disabled. When selected, the associated **Custom Expression** field is enabled.
+        -   **Conditional**: Based on the condition defined, the Input Control may be enabled or disabled. When selected, the associated **Custom Expression** field is enabled.
 
-        You can find the list of accepted expression formats in the Expression Formats Accepted section of the JasperReports Server User Guide.
+            You can find the list of accepted expression formats in the Expression Formats Accepted section of the JasperReports Server User Guide.
 
-        For information about how to create an input control for custom functions, see [Input Controls for Custom Functions](input_controls_for_custom_functions.md).
+            For information about how to create an input control for custom functions, see [Input Controls for Custom Functions](input_controls_for_custom_functions.md).
 
-        A tooltip appears when you hover over the question mark icon next to the **Conditional \>** **Custom Expression** input field.
+            A tooltip appears when you hover over the question mark icon next to the **Conditional &gt;** **Custom Expression** input field.
 
-        ![custom ic conditional tooltip](../assets/images/custom-ic-conditional-tooltip.png)
+            ![custom ic conditional tooltip](../assets/images/custom-ic-conditional-tooltip.png)
 
-    - **Show/Hide Input Control**: Determines the visibility of the Input Control. You can choose from the following three options:
+    -   **Show/Hide Input Control**: Determines the visibility of the Input Control. You can choose from the following three options:
 
-      - **Show**: Makes the Input Control visible in the **Input Controls** dialog. By default, **Show** is selected.
+        -   **Show**: Makes the Input Control visible in the **Input Controls** dialog. By default, **Show** is selected.
 
-      - **Hide**: Restricts the visibility of the Input Control in the **Input Controls** dialog.
+        -   **Hide**: Restricts the visibility of the Input Control in the **Input Controls** dialog.
 
-      - **Conditional**: Based on the condition defined, the Input Control may be shown or hidden. When selected, the associated **Custom Expression** field is enabled.
+        -   **Conditional**: Based on the condition defined, the Input Control may be shown or hidden. When selected, the associated **Custom Expression** field is enabled.
 
-        You can find the list of accepted expression formats in the Expression Formats Accepted section of the JasperReports Server User Guide.
+            You can find the list of accepted expression formats in the Expression Formats Accepted section of the JasperReports Server User Guide.
 
-        For information about how to create an input control for custom functions, see [Input Controls for Custom Functions](input_controls_for_custom_functions.md).
+            For information about how to create an input control for custom functions, see [Input Controls for Custom Functions](input_controls_for_custom_functions.md).
 
-        The tooltip is also displayed when you hover over the question mark icon next to the **Conditional \>** **Custom Expression** input field.
+            The tooltip is also displayed when you hover over the question mark icon next to the **Conditional &gt;** **Custom Expression** input field.
 
 10. Click **Next**.<br>
       Subsequent pages depend on what type of input control you chose:
 
-    - Boolean types do not require any further information.
+    -   Boolean types do not require any further information.
 
-    - Single-value types require a datatype the user can enter.
+    -   Single-value types require a datatype the user can enter.
 
-    - Single-select and multi-select types based on static lists require a list of values.
+    -   Single-select and multi-select types based on static lists require a list of values.
 
-    - Single-select and multi-select types based on queries require a query.
+    -   Single-select and multi-select types based on queries require a query.
 
 11. For information about how to create an input control for custom functions, see [Input Controls for Custom Functions](input_controls_for_custom_functions.md).
 

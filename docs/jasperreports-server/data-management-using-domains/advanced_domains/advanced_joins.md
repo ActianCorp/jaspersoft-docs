@@ -25,8 +25,8 @@ In some cases, you may need to duplicate a table in order to join it several tim
 
     The XML design file supports additional join features not supported in the Domain Designer, including:
 
-    - NOT or OR operator between joins inside a composite join.
-    - Joins within the same table.
+    -   NOT or OR operator between joins inside a composite join.
+    -   Joins within the same table.
 
     If you have a Domain design file in XML format that uses these features and you open it in the Domain Designer, these joins will be displayed as read-only joins. See Read-Only Joins for more information.
 
@@ -34,16 +34,16 @@ In some cases, you may need to duplicate a table in order to join it several tim
 
 The Domain Designer supports the four most common join types:
 
-- **Inner**: The result contains only rows where the values in the chosen columns are equal.
-- **Left Outer**: The result contains all the rows of the left table, paired with a row of the right table when the values in the chosen columns are equal or contain blanks.
-- **Right Outer**: The result contains all the rows of the right table, paired with a row of the left table when the values in the chosen columns are equal or contain blanks.
-- **Full Outer**: The result contains all rows from both tables, paired when the joined columns are equal, and filled with blanks when the columns are not equal. Not available in MySQL.
+-   **Inner**: The result contains only rows where the values in the chosen columns are equal.
+-   **Left Outer**: The result contains all the rows of the left table, paired with a row of the right table when the values in the chosen columns are equal or contain blanks.
+-   **Right Outer**: The result contains all the rows of the right table, paired with a row of the left table when the values in the chosen columns are equal or contain blanks.
+-   **Full Outer**: The result contains all rows from both tables, paired when the joined columns are equal, and filled with blanks when the columns are not equal. Not available in MySQL.
 
 ## Comparison Operators
 
 The Domain Designer supports the following comparison operators between fields. You can't compare fields of different data types:
 
-=, ≠, \>, \<, \>=, \<= .
+=, ≠, &gt;, &lt;, &gt;=, &lt;= .
 
 Comparison operators other than = often generate a large amount of rows (similar to a Cartesian product) when used on their own. For best results, use them in a composite join in conjunction with an = join. See Composite Joins for more information.
 
@@ -55,8 +55,8 @@ Comparison operators other than = often generate a large amount of rows (similar
 
 Composite joins implement multiple join conditions for the same pair of tables. You can create composite joins in the following ways:
 
-- Add a join to a join tree that already contains a join between those tables.
-- Select **Create Custom Join...** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu of the join.
+-   Add a join to a join tree that already contains a join between those tables.
+-   Select **Create Custom Join...** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu of the join.
 
 ![js DomainDesigner CompositeJoin Example](../assets/images/js-DomainDesigner-CompositeJoin-Example.png)
 
@@ -82,53 +82,56 @@ To add a custom join to an existing join
 
 4.  Enter the range, set, or value you want for the field, based on the operator you chose.
 
-    - = or ≠ (available for all column types)
+-   = or ≠ (available for all column types)
 
-    \>, \<, \>=, or \<= (available for numeric and date columns only)
+    &gt;, &lt;, &gt;=, or &lt;= (available for numeric and date columns only)
 
     Enter a constant value or an attribute that takes a single value. Strings are enclosed in single quotes. For example:
 
-    - `5000`
-    - `'Mexico'`
-    - `attribute('CountryAttribute')`
+    -   `5000`
 
-    !!! note
+        -   `'Mexico'`
 
-        For more information about using attributes in Domains, see [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md).
+            -   `attribute('CountryAttribute')`
 
-    - IN or NOT IN – Enter one of the following:
+!!! note
 
-      - A set of strings or values, enclosed in parentheses and separated by commas. Strings are enclosed in single quotes. For example:
+    For more information about using attributes in Domains, see [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md).
 
-        - `(1,2,3,4,5)`
+-   IN or NOT IN – Enter one of the following:
 
-        - `('San Francisco','Portland', 'Seattle') `
+    -   A set of strings or values, enclosed in parentheses and separated by commas. Strings are enclosed in single quotes. For example:
 
-        - `('true')`
+        -   `(1,2,3,4,5)`
 
-    - A range of values, separated by a colon (numeric and date columns only). For example:
+        -   `('San Francisco','Portland', 'Seattle') `
 
-      - `(7000 : 8000)`
+        -   `('true')`
 
-5.  To verify that your syntax is correct, click **Validate**. Fix errors if necessary.
+-   A range of values, separated by a colon (numeric and date columns only). For example:
 
-6.  Click **Create Custom Join**. The join is added below the existing join as part of a composite join.
+    -   `(7000 : 8000)`
+
+1.  To verify that your syntax is correct, click **Validate**. Fix errors if necessary.
+
+2.  Click **Create Custom Join**. The join is added below the existing join as part of a composite join.
 
     ![js DomainDesigner CustomJoin Result](../assets/images/js-DomainDesigner-CustomJoin-Result.png)
 
     *Figure 4: A custom join in the design panel*
 
-7.  To edit or delete a custom join:
+3.  To edit or delete a custom join:
 
-- Click ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) and select **Edit Custom Join…** to open the **Edit Custom Join** dialog and modify the join.
-- Click ![js DomainDesigner icon remove](../assets/images/js-DomainDesigner-icon-remove.png) to delete a custom join.
+-   Click ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) and select **Edit Custom Join…** to open the **Edit Custom Join** dialog and modify the join.
+
+    -   Click ![js DomainDesigner icon remove](../assets/images/js-DomainDesigner-icon-remove.png) to delete a custom join.
 
 ## Read-Only Joins
 
 The design file format (XML) supports additional join features not supported in the Domain Designer, including:
 
-- NOT or OR operator in a single join expression.
-- Joins between different columns in the same table.
+-   NOT or OR operator in a single join expression.
+-   Joins between different columns in the same table.
 
 If you have a Domain design file in XML that uses these features and you open it in the Domain Designer, these joins are displayed as read-only joins. The join expression is shown as a string. You can still set the join type and weight.
 
@@ -150,10 +153,10 @@ The Domain Designer and Domain Design file do not impose any limits on the numbe
 
 Wherever possible, follow these practices to avoid loops or to minimize their impact on Ad Hoc views:
 
-- For a join tree with N tables, use N-1 joins. A composite join is considered a single join. See Composite Joins for more information.
-- Create copies of tables you need to use more than once in the join tree. You can copy a table by right-clicking it in the **Data Structure** panel on the **Joins** tab and selecting **Copy Table** from the context menu.
-- Enable **Minimum Path Joins** for each join tree. (This option is not the default.)
-- For better join performance, prioritize joins that involve indexed columns. To do this, assign low join weights to the preferred joins and high join weights to less desirable joins.
+-   For a join tree with N tables, use N-1 joins. A composite join is considered a single join. See Composite Joins for more information.
+-   Create copies of tables you need to use more than once in the join tree. You can copy a table by right-clicking it in the **Data Structure** panel on the **Joins** tab and selecting **Copy Table** from the context menu.
+-   Enable **Minimum Path Joins** for each join tree. (This option is not the default.)
+-   For better join performance, prioritize joins that involve indexed columns. To do this, assign low join weights to the preferred joins and high join weights to less desirable joins.
 
 The options on the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu in the join tree title bar, along with specific table and join options, give you influence over which join paths are chosen in an Ad Hoc view when multiple options are possible.
 
@@ -163,8 +166,8 @@ Often, an Ad Hoc view created from a join tree in your Domain does not need to u
 
 Suppose you create an Ad Hoc view using two tables from a Domain with a loop. JasperReports Server attempts to avoid circular joins in the SQL by choosing a path between the tables. However, by default, you cannot be sure which join path the Ad Hoc view will use. If you are using tables A and B, you do not know whether the server will use the direct join from A–B or the indirect join A–C–B. The following options influence which joins are used by the Ad Hoc view:
 
-- **Use minimum path joins** (not selected by default): When this option is selected, an Ad Hoc view created from the join tree uses a minimum join length. When **Use minimum path joins** is selected, you can optionally assign weights to the joins in the join set. Higher weights indicate less desirable joins. For most situations, the best practice is to enable this option to avoid circular joins. Deselect it only if you need backwards compatibility with legacy Domains.
-- **Use all joins** (not selected by default): Available for backwards compatibility. When this attribute is selected, an Ad Hoc view created from the data island includes all the joins in the join tree. For most situations, the best practice is to leave this option unselected.
+-   **Use minimum path joins** (not selected by default): When this option is selected, an Ad Hoc view created from the join tree uses a minimum join length. When **Use minimum path joins** is selected, you can optionally assign weights to the joins in the join set. Higher weights indicate less desirable joins. For most situations, the best practice is to enable this option to avoid circular joins. Deselect it only if you need backwards compatibility with legacy Domains.
+-   **Use all joins** (not selected by default): Available for backwards compatibility. When this attribute is selected, an Ad Hoc view created from the data island includes all the joins in the join tree. For most situations, the best practice is to leave this option unselected.
 
 ### Join Weights
 

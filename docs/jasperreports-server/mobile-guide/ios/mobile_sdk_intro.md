@@ -15,8 +15,8 @@ This chapter documents version 2.0 of the Jaspersoft Mobile SDK for iOS.
 
 This chapter contains the following sections:
 
-- [System Requirements](system_requirements.md)
-- [Setting Up the Jaspersoft Mobile SDK for iOS](setting_up_the_jaspersoft_mobile_sdk.md)
-- [Structure of the Mobile SDK for iOS](structure_of_the_mobile_sdk.md)
-- [API Documentation](api_documentation.md)
-- [JasperMobile App for iOS](jaspermobile_app.md)
+-   [System Requirements](system_requirements.md)
+-   [Setting Up the Jaspersoft Mobile SDK for iOS](setting_up_the_jaspersoft_mobile_sdk.md)
+-   [Structure of the Mobile SDK for iOS](structure_of_the_mobile_sdk.md)
+-   [API Documentation](api_documentation.md)
+-   [JasperMobile App for iOS](jaspermobile_app.md)

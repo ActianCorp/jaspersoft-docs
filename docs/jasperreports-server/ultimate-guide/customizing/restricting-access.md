@@ -1,17 +1,17 @@
 ---
 title: Restricting Access to a Location in the Repository
-description: "You can use role-based permissions to control access to repository locations. For example, by default, the Public > Samples > Ad Hoc Views folder is set to Read Only for ROLEUSER. This allows users..."
+description: "You can use role-based permissions to control access to repository locations. For example, by default, the Public &gt; Samples &gt; Ad Hoc Views folder is set to Read Only for ROLEUSER. This allows..."
 ---
 
 # Restricting Access to a Location in the Repository
 
-You can use role-based permissions to control access to repository locations. For example, by default, the **Public \> Samples \> Ad Hoc Views** folder is set to **Read Only** for ROLE_USER. This allows users to see the folder contents and to create new reports from the Ad Hoc views in this folder, but they can't edit those views.
+You can use role-based permissions to control access to repository locations. For example, by default, the **Public &gt; Samples &gt; Ad Hoc Views** folder is set to **Read Only** for ROLE_USER. This allows users to see the folder contents and to create new reports from the Ad Hoc views in this folder, but they can't edit those views.
 
 You can hide the contents of this folder from ROLE_USER by setting repository permissions to execute only. To do this:
 
 1.  Log in as jasperadmin.
 
-2.  Select **View \> Repository** from the menu.
+2.  Select **View &gt; Repository** from the menu.
 
 3.  Navigate to the **Public/Samples** folder.
 

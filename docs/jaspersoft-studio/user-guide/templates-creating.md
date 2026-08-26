@@ -13,7 +13,7 @@ If you want to start fresh with your template, create a one.
 
 To create a template
 
-1.  Go to **File \> New \> Jasper Report** to open the **New Report Wizard**.
+1.  Go to **File &gt; New &gt; Jasper Report** to open the **New Report Wizard**.
 
 2.  Select a template to start. Click **Blank Letter** and **Next**.
 
@@ -23,36 +23,37 @@ To create a template
 
 4.  Select **One Empty Record - Empty rows** and click **Finish**.
 
-    |                                                 |
-    |-------------------------------------------------|
-    | ![empty record](assets/images/empty-record.png) |
-    | *Figure 1: One Empty Record Data Source*        |
+|                                                 |
+|-------------------------------------------------|
+| ![empty record](assets/images/empty-record.png) |
+| *Figure 1: One Empty Record Data Source*        |
 
-    An empty report opens, containing the following bands:
+An empty report opens, containing the following bands:
 
-    - Title
-    - Page Header
-    - Column Header
-    - Detail
-    - Column Footer
-    - Page Footer
-    - Summary
+-   Title
 
-5.  Right-click on the report root node in the **Outline**, and select **Create Group**. The **Group Band** dialog is displayed.
+    -   Page Header
+    -   Column Header
+    -   Detail
+    -   Column Footer
+    -   Page Footer
+    -   Summary
+
+1.  Right-click on the report root node in the **Outline**, and select **Create Group**. The **Group Band** dialog is displayed.
 
     |                                                           |
     |-----------------------------------------------------------|
     | ![group band window](assets/images/group-band-window.png) |
     | *Figure 2: Group Band Dialog*                             |
 
-6.  Name your group and click **Next**. The **Group Layout** dialog is displayed.
+2.  Name your group and click **Next**. The **Group Layout** dialog is displayed.
 
     |                                                 |
     |-------------------------------------------------|
     | ![group layout](assets/images/group-layout.png) |
     | *Figure 3: Group Layout Dialog*                 |
 
-7.  Leave both **Add the Group Header** and **Add the Group Footer** checked, and click **Finish**.
+3.  Leave both **Add the Group Header** and **Add the Group Footer** checked, and click **Finish**.
 
 Your report is similar to the one in Figure 7‑5.
 

@@ -7,9 +7,9 @@ description: "Once you have placed your table in your report, use the Table Wiza
 
 To create a table
 
-- To autosize your table, drag the Table element ![table element](assets/images/table-element.png) from the Elements palette into any band of the report.
+-   To autosize your table, drag the Table element ![table element](assets/images/table-element.png) from the Elements palette into any band of the report.
 
-- To set the size of the table manually when you insert it, click the Table element ![table element](assets/images/table-element.png), but do not drag. The cursor changes ![jss icon loaded palette element](assets/images/jss-icon-loaded-palette-element.png) to show that an element is selected. Click and drag in the report editing area to size and place the element. When you size the table when you first insert it, the columns fill the whole table.
+-   To set the size of the table manually when you insert it, click the Table element ![table element](assets/images/table-element.png), but do not drag. The cursor changes ![jss icon loaded palette element](assets/images/jss-icon-loaded-palette-element.png) to show that an element is selected. Click and drag in the report editing area to size and place the element. When you size the table when you first insert it, the columns fill the whole table.
 
 Once you have placed your table in your report, use the **Table Wizard** to choose a new or existing dataset for your table.
 
@@ -46,7 +46,7 @@ To create a new dataset for your table
     |  |
     |----|
     | ![table wizard dataset groupby](assets/images/table-wizard-dataset-groupby.png) |
-    | *Figure 5: Table Wizard - Dataset \> Group By* |
+    | *Figure 5: Table Wizard - Dataset &gt; Group By* |
 
 5.  Select one or more fields to group by and move them to the **Fields** list on the right. Click **Next**. You are prompted to select a connection.
 
@@ -57,27 +57,28 @@ To create a new dataset for your table
 
 6.  Select a data connection option. Your options are:
 
-    - Use the same connection used to fill the master report (the option used in this example)
-    - Use another connection (you provide a connection)
-    - Use an empty data source
-    - Use a JRDatasource expression (you enter a JRDatasource expression)
-    - Do not use any data source or connection
+-   Use the same connection used to fill the master report (the option used in this example)
 
-7.  Click **Next**. You are prompted to choose the fields for produce table columns.
+    -   Use another connection (you provide a connection)
+    -   Use an empty data source
+    -   Use a JRDatasource expression (you enter a JRDatasource expression)
+    -   Do not use any data source or connection
+
+1.  Click **Next**. You are prompted to choose the fields for produce table columns.
 
     |  |
     |----|
     | ![table wizard table columns](assets/images/table-wizard-table-columns.png) |
     | *Figure 7: Table Wizard - Table Columns* |
 
-8.  Select one or more fields to for table columns and move them to the Fields list on the right. Click **Next**. You are prompted to select a layout.
+2.  Select one or more fields to for table columns and move them to the Fields list on the right. Click **Next**. You are prompted to select a layout.
 
     |                                                               |
     |---------------------------------------------------------------|
     | ![table wizard layout](assets/images/table-wizard-layout.png) |
     | *Figure 8: Table Wizard - Layout*                             |
 
-9.  Select the layout for your table, and click **Finish**. The table appears where you dragged the table element in your report.
+3.  Select the layout for your table, and click **Finish**. The table appears where you dragged the table element in your report.
 
 |                                                       |
 |-------------------------------------------------------|

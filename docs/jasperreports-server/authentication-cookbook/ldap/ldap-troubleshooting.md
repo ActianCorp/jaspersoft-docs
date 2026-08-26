@@ -26,8 +26,8 @@ Could not login to JasperReports Server.
 
 This error can be misleading, because it can come from a wide range of root causes, including problems that are not directly related to the credentials used. These include:
 
-- Communication issues
-- User search issues
+-   Communication issues
+-   User search issues
 
 !!! note
 
@@ -194,7 +194,7 @@ In the example above, there is a missing ending tag for `property`. To fix this,
 
 ##### Problem
 
-Role names can't contain certain special characters, including the XML reserved characters \<, \>, &, ', ", and \\ If you use a reserved character in a role name in your XML file, JasperReports Server attempts to interpret it as XML, which results in a stack trace. The precise error depends on the special character. For example, if you use an ampersand (&) in a role name, you see an error like this:
+Role names can't contain certain special characters, including the XML reserved characters &lt;, &gt;, &, ', ", and \\. If you use a reserved character in a role name in your XML file, JasperReports Server attempts to interpret it as XML, which results in a stack trace. The precise error depends on the special character. For example, if you use an ampersand (&) in a role name, you see an error like this:
 
 ``` text
 context initialization failed
@@ -210,7 +210,7 @@ In general, it is safest to restrict role names to alpha-numeric characters. If 
 
 ##### Problem
 
-Jasper is trying to read a bean definition that doesn’t exist. In the error message, you see reference to the \<type of bean\>, which typically refers to the actual java class name for that bean definition. The bean name in the applicationContext-externalAuth.xml file may appear later in the error:
+Jasper is trying to read a bean definition that doesn’t exist. In the error message, you see reference to the &lt;type of bean&gt;, which typically refers to the actual java class name for that bean definition. The bean name in the applicationContext-externalAuth.xml file may appear later in the error:
 
 ``` text
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '<type of bean>' defined in ServletContext resource [/WEB-INF/applicationContext-externalAuth-LDAP-mt.xml]: Cannot resolve reference to bean '<myBean>' while setting bean property 'userSearch'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named '<myBean>' is defined
@@ -237,7 +237,7 @@ Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Canno
 
 Check the following:
 
-1.  Make sure the jar containing the specified class can be found in the classpath, (for example, \jasperserver-pro\WEB-INF\lib).
+1.  Make sure the jar containing the specified class can be found in the classpath, (for example, \\jasperserver-pro\\WEB-INF\\lib).
 2.  Verify that the name of the class is correct in your XML file. If the class name is spelled wrong, it won't be found as the name won't match, even if the class is present in a jar in the classpath.
 
 ## Login Displays Security Check Page

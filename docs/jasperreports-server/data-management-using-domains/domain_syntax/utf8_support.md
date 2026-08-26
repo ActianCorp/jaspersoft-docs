@@ -15,11 +15,11 @@ If your database is properly configured and the appropriate fonts are available 
 
 IDs have the following character restrictions:
 
-- All UTF-8 characters are allowed in IDs except for the following symbols, which will cause errors:
+-   All UTF-8 characters are allowed in IDs except for the following symbols, which will cause errors:
 
 `().,"=!+-></:[]*|?$`
 
 This limitation applies to table IDs in the database as well as user-created IDs in design files and in the Domain Designer.
 
-- The straight single quote (`'`, Unicode 0027) can appear in database table IDs but not in user-created IDs.
-- In general, the best practice is to use alphabet characters, not punctuation or arithmetic symbols, when creating Domains.
+-   The straight single quote (`'`, Unicode 0027) can appear in database table IDs but not in user-created IDs.
+-   In general, the best practice is to use alphabet characters, not punctuation or arithmetic symbols, when creating Domains.

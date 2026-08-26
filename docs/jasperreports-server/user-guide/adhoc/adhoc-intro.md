@@ -13,24 +13,24 @@ The Ad Hoc Editor is the interactive designer for creating and editing an Ad Hoc
 
 This chapter discusses the Ad Hoc Editor and Ad Hoc views, and includes the following sections:
 
-- [Overview of the Ad Hoc Editor](adhoc-editor-overview.md)
+-   [Overview of the Ad Hoc Editor](adhoc-editor-overview.md)
 
-- [The Layout Band](the-layout-band.md)
+-   [The Layout Band](the-layout-band.md)
 
-- [Working with Tables](adhoc-tables.md)
+-   [Working with Tables](adhoc-tables.md)
 
-- [Working with Charts](adhoc-charts.md)
+-   [Working with Charts](adhoc-charts.md)
 
-- [Working with Standard Crosstabs](adhoc-crosstabs-standard.md)
+-   [Working with Standard Crosstabs](adhoc-crosstabs-standard.md)
 
-- [Working with OLAP Connection-based Crosstabs](adhoc-crosstabs-olap.md)
+-   [Working with OLAP Connection-based Crosstabs](adhoc-crosstabs-olap.md)
 
-- [Calculated Fields and Measures](calc-fields-intro.md)
+-   [Calculated Fields and Measures](calc-fields-intro.md)
 
-- [Using Filters and Input Controls](adhoc-filters-and-input-controls.md)
+-   [Using Filters and Input Controls](adhoc-filters-and-input-controls.md)
 
-- [Creating a View from a Domain](adhoc-create-view-from-domain.md)
+-   [Creating a View from a Domain](adhoc-create-view-from-domain.md)
 
-- [Creating Topics](adhoc-topics.md)
+-   [Creating Topics](adhoc-topics.md)
 
 After you create an Ad Hoc view, you - and other users with the proper permissions - can run the report, then further refine the displayed information and personalize the look of the report in the Report Viewer. For more information on that process, see [“Running Reports and the Report Viewer” on page 1](../reports/reports-intro.md).

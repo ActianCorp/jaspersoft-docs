@@ -11,11 +11,11 @@ If you have not done so already, you need to install and configure the Google An
 
 The Google Android SDK is available in two different packages from Google:
 
-- The Android Studio Bundle includes an IDE (integrated development environment) based on Intellij IDEA. For installation instructions, see:
+-   The Android Studio Bundle includes an IDE (integrated development environment) based on Intellij IDEA. For installation instructions, see:
 
-<http://developer.android.com/sdk/installing/index.html?pkg=studio>
+    <http://developer.android.com/sdk/installing/index.html?pkg=studio>
 
-- The SDK Tools package for other development environments. Use this to install the Google Android SDK in your existing IDE. For installation instructions, see:
+-   The SDK Tools package for other development environments. Use this to install the Google Android SDK in your existing IDE. For installation instructions, see:
 
 <http://developer.android.com/sdk/installing/index.html?pkg=tools>
 

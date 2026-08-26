@@ -9,9 +9,9 @@ JasperReports Server user Favorites enables you to add the repository resources 
 
 This chapter includes the following sections:
 
-- Adding Resources to Favorites
-- [Removing Resources from Favorites](within-object.md)
-- [Accessing Favorites](accessing-fav.md)
+-   Adding Resources to Favorites
+-   [Removing Resources from Favorites](within-object.md)
+-   [Accessing Favorites](accessing-fav.md)
 
 ## Adding Resources to Favorites
 

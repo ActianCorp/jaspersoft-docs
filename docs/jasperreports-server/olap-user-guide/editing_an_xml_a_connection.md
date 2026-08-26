@@ -35,13 +35,13 @@ To edit an XML/A connection’s naming and properties
 
 4.  Click **Test Connection**.
 
-    Jaspersoft OLAP attempts to connect to the remote server:
+Jaspersoft OLAP attempts to connect to the remote server:
 
-    - If it can connect, a message indicating success appears.
-    - If the connection fails, a message indicating the type of problem appears. For example, the message might indicate that a catalog with the specified name was not found in the data source; re-enter the catalog name and test the connection again. If a data source with the specified name is not found, the message may indicate that no data source was found; examine your remote server's data sources, update the connection's details, and click **Test Connection** again.
+-   If it can connect, a message indicating success appears.
 
-5.  Click the **Show Details** link to learn more about the problem.
+    -   If the connection fails, a message indicating the type of problem appears. For example, the message might indicate that a catalog with the specified name was not found in the data source; re-enter the catalog name and test the connection again. If a data source with the specified name is not found, the message may indicate that no data source was found; examine your remote server's data sources, update the connection's details, and click **Test Connection** again.
 
-6.  When the test succeeds, click **Submit**.
+1.  Click the **Show Details** link to learn more about the problem.
+2.  When the test succeeds, click **Submit**.
 
 The edited XML/A Connection appears in the repository.

@@ -11,11 +11,11 @@ We recommend that you carefully review the effects of the changes you make to th
 
 !!! note
 
-    The **Manage** menu only appears if you have an administrative role, such as ROLE_ADMINISTRATOR (for the all editions) and ROLE_SUPERUSER (for commercial editions). In commercial editions with a single organization, the **Manage \> Server Settings** menu can be made available to the jasperadmin account by assigning it ROLE_SUPERUSER; otherwise, only superuser can access the Server Settings page.
+    The **Manage** menu only appears if you have an administrative role, such as ROLE_ADMINISTRATOR (for the all editions) and ROLE_SUPERUSER (for commercial editions). In commercial editions with a single organization, the **Manage &gt; Server Settings** menu can be made available to the jasperadmin account by assigning it ROLE_SUPERUSER; otherwise, only superuser can access the Server Settings page.
 
 To change the OLAP settings
 
-1.  Click **Manage \> Server Settings**.
+1.  Click **Manage &gt; Server Settings**.
 
 2.  Click **OLAP Settings**.
 

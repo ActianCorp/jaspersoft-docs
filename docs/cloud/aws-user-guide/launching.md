@@ -18,59 +18,62 @@ The JasperReports Server instance is hosted in your Virtual Private Cloud (VPC).
 To create a JasperReports Server instance in a VPC
 
 1.  Select the Jaspersoft product that you want in the AWS Marketplace and [follow the subscription process](acceptingtou.md) to get to the **Configure the Software** page.
-
 2.  Under the **Fulfillment Option**, select CloudFormation Template from the first dropdown list.
-
 3.  From the second dropdown list, select the option specific to the Jaspersoft product:
 
-    - **Jaspersoft Instance in a VPC** for Jaspersoft Reporting and Analytics for AWS (Hourly)
-    - **Jaspersoft Multi-tenancy Instance in a VPC** for Jaspersoft for AWS with Multi-Tenancy (Hourly)
-    - **BYOL Jaspersoft Stack VPC deployment** for Jaspersoft Reporting and Analytics for AWS (BYOL)
+-   **Jaspersoft Instance in a VPC** for Jaspersoft Reporting and Analytics for AWS (Hourly)
 
-4.  Select the software version and region, then click **Continue to Launch**.
+    -   **Jaspersoft Multi-tenancy Instance in a VPC** for Jaspersoft for AWS with Multi-Tenancy (Hourly)
 
-5.  Under **Choose Action**, select **Launch CloudFormation** and then click **Launch**. The **Create stack** page in the AWS console opens. Under the Specify template, the Amazon S3 URL option is already selected and a URL for the template file is filled in. Do not change these options.
+    -   **BYOL Jaspersoft Stack VPC deployment** for Jaspersoft Reporting and Analytics for AWS (BYOL)
 
-6.  Click **Next**. The **Specify stack details** page appears.
+        1.  Select the software version and region, then click **Continue to Launch**.
 
-7.  In the **Stack name** field, give your CloudFormation stack a unique name.
+        2.  Under **Choose Action**, select **Launch CloudFormation** and then click **Launch**. The **Create stack** page in the AWS console opens. Under the Specify template, the Amazon S3 URL option is already selected and a URL for the template file is filled in. Do not change these options.
 
-8.  Install **Chrome** to enable the export functionality. By default, it is set to **No**. Select **Yes** to install. For details, see [Chrome AWS](installing-phantomjs.md).
+        3.  Click **Next**. The **Specify stack details** page appears.
 
-9.  Choose an **InstanceType**.
+        4.  In the **Stack name** field, give your CloudFormation stack a unique name.
 
-10. Choose the **KeyPairName** of your EC2 KeyPair.
+        5.  Install **Chrome** to enable the export functionality. By default, it is set to **No**. Select **Yes** to install. For details, see [Chrome AWS](installing-phantomjs.md).
 
-11. Choose the **VpcId** from your account.
+        6.  Choose an **InstanceType**.
 
-12. Choose the **SubnetId** from the VPC.
+        7.  Choose the **KeyPairName** of your EC2 KeyPair.
 
-13. Choose whether to create a publicly accessible IP address for the instance using **EnablePublicIp**. Default is True. Select False to refuse.
+        8.  Choose the **VpcId** from your account.
 
-14. In the **RemoteAccessCIDR** field, enter the IP address and mask for SSH access.
+        9.  Choose the **SubnetId** from the VPC.
 
-15. Click **Next**. The **Configure stack options** page appears.
+        10. Choose whether to create a publicly accessible IP address for the instance using **EnablePublicIp**. Default is True. Select False to refuse.
 
-16. Add any tags that you want to use to simplify the administration of your infrastructure.
+        11. In the **RemoteAccessCIDR** field, enter the IP address and mask for SSH access.
 
-    A tag consists of a key/value pair and can flow to resources inside your stack. You can add up to 10 unique keys to each instance, along with an optional value for each key.
+        12. Click **Next**. The **Configure stack options** page appears.
 
-17. Select an IAM role for managing the stack's resources.
+        13. Add any tags that you want to use to simplify the administration of your infrastructure.
 
-18. Expand the **Advanced** section and set your notification, rollback, and other options.
+            A tag consists of a key/value pair and can flow to resources inside your stack. You can add up to 10 unique keys to each instance, along with an optional value for each key.
 
-19. Click **Next**. The **Review** page appears.
+        14. Select an IAM role for managing the stack's resources.
 
-20. Double check your template, parameter, and option information.
+        15. Expand the **Advanced** section and set your notification, rollback, and other options.
 
-21. Click the acknowledgment checkbox, then click **Create Stack**. You see a message telling you your stack has been created. The Services web page shows your stack's initial status as `CREATE_IN_PROGRESS`. It generally takes two to four minutes for the status to change to `CREATE_COMPLETE`.
+        16. Click **Next**. The **Review** page appears.
 
-22. Select your complete instance and click the **Outputs** tab. Here you can find the information you need when you are ready to log into JasperReports Server:
+        17. Double check your template, parameter, and option information.
 
-- The URL for Getting Started with JasperReports Server.
-- The name of your instance.
-- The login name and password.
-- The name of your S3LicenseBucket.
+        18. Click the acknowledgment checkbox, then click **Create Stack**. You see a message telling you your stack has been created. The Services web page shows your stack's initial status as `CREATE_IN_PROGRESS`. It generally takes two to four minutes for the status to change to `CREATE_COMPLETE`.
+
+        19. Select your complete instance and click the **Outputs** tab. Here you can find the information you need when you are ready to log into JasperReports Server:
+
+    -   The URL for Getting Started with JasperReports Server.
+
+    -   The name of your instance.
+
+    -   The login name and password.
+
+    -   The name of your S3LicenseBucket.
 
 ## Creating a JasperReports Server Cluster Inside a VPC
 
@@ -78,97 +81,101 @@ Jaspersoft provides an auto-scaling cluster using the Amazon Relational Database
 
 The CloudFormation template for the cluster creates the following AWS resources:
 
-- An Auto Scaling group that contains the EC2 instances for your JasperReports Server cluster. When creating the stack, you can define the maximum number of instances in your cluster. The Auto Scaling group defines the thresholds for increasing and decreasing the instances in your cluster. For more information about auto scaling groups, see the AWS documentation:
+-   An Auto Scaling group that contains the EC2 instances for your JasperReports Server cluster. When creating the stack, you can define the maximum number of instances in your cluster. The Auto Scaling group defines the thresholds for increasing and decreasing the instances in your cluster. For more information about auto scaling groups, see the AWS documentation:
 
-<https://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroup.html>
+    <https://docs.aws.amazon.com/autoscaling/latest/userguide/AutoScalingGroup.html>
 
-- An Amazon ELB that works as a static endpoint (DNS Name - URL) and monitors the clustered JasperReports Server instances. If something happens to one of your instances—the instance fails or JasperReports Server stops responding—it can be replaced with a new one. For more information on ELB, see the AWS documentation: <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html>
-
-!!! note
-
-    If you are using a BYOL license, make sure to delete any existing instances after applying your license. Deleting an instance before applying for your license may result in the automatic creation of a new instance using an older license. See [Applying a Jaspersoft License for AWS BYOL](applying-byol-license.md) for more information.
-
-To create a new JasperReports Server cluster in a VPC
-
-1.  Select the Jaspersoft product that you want in the AWS Marketplace and [follow the subscription process](acceptingtou.md) to get to the **Configure the Software** page.
-
-2.  Under the **Fulfillment Option**, select CloudFormation Template from the first dropdown list.
-
-3.  From the second dropdown list, select the option specific to the Jaspersoft product:
-
-    - **JasperReports Server (Hourly) cluster** for Jaspersoft Reporting and Analytics for AWS (Hourly)
-    - **JasperReports Server MT Hourly cluster** for Jaspersoft for AWS with Multi-Tenancy (Hourly)
-    - **Jaspersoft BYOL Cluster** for Jaspersoft Reporting and Analytics for AWS (BYOL)
-
-4.  Select the software version and region, then click **Continue to Launch**.
-
-5.  Under **Choose Action**, select **Launch CloudFormation** and then click **Launch**. The **Create stack** page in the AWS console opens. Under the Specify template, the Amazon S3 URL option is already selected and a URL for the template file is filled in. Do not change these options.
-
-6.  Click **Next**. The **Specify stack details** page appears.
-
-7.  In the **Stack name** field, give your CloudFormation stack a unique name.
-
-8.  Install **Chrome** to enable the export functionality. By default, it is set to **No**. Select **Yes** to install. For details, see [Chrome AWS](installing-phantomjs.md).
-
-9.  Enter the host name of your database connection in **DBHost**, the database port number in **DBPort**, and the database name in **DBName**.
-
-10. Enter the database username in the **DBUser** field and the database password in **DBPassword**.
-
-11. Confirm if you want to **IncludeSamples**. By default, it is set to **No**.
-
-12. Choose an **InstanceType**.
-
-13. Provide the number of maximum instances in **MaxInstancesCount**. By default, the value is **2**.
-
-14. Choose the **KeyPairName** of your EC2 KeyPair.
-
-15. Choose your **VpcId** from the dropdowns.
-
-16. Provide the required details in the **EC2InstanceSubnetIDs** and **RemoteAccessCIDR** fields.
-
-17. Choose at least two **LoadBalancerSubnetIds** from the same VPC.
+-   An Amazon ELB that works as a static endpoint (DNS Name - URL) and monitors the clustered JasperReports Server instances. If something happens to one of your instances—the instance fails or JasperReports Server stops responding—it can be replaced with a new one. For more information on ELB, see the AWS documentation: <https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html>
 
     !!! note
 
-        Selecting two SubnetIds from the different VPCs generate an error.
+        If you are using a BYOL license, make sure to delete any existing instances after applying your license. Deleting an instance before applying for your license may result in the automatic creation of a new instance using an older license. See [Applying a Jaspersoft License for AWS BYOL](applying-byol-license.md) for more information.
 
-18. Choose at least two **EC2InstanceSubnets** from the same VPC and ensure that these subnets have outbound internet connectivity.
+    To create a new JasperReports Server cluster in a VPC
 
-19. **EnablePublicIp** defaults to true. Unless you change this setting, your initialization instance can be assigned a public IP address and an ELB (if enabled) can be configured as "internet-facing". See Amazon's documentation about internet-facing load balancers here:
+    1.  Select the Jaspersoft product that you want in the AWS Marketplace and [follow the subscription process](acceptingtou.md) to get to the **Configure the Software** page.
+    2.  Under the **Fulfillment Option**, select CloudFormation Template from the first dropdown list.
+    3.  From the second dropdown list, select the option specific to the Jaspersoft product:
 
-    <http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-internet-facing-load-balancers.html>
+    -   **JasperReports Server (Hourly) cluster** for Jaspersoft Reporting and Analytics for AWS (Hourly)
 
-20. In the **SecuredIp** field, enter the IP address and mask for SSH access.
+    -   **JasperReports Server MT Hourly cluster** for Jaspersoft for AWS with Multi-Tenancy (Hourly)
 
-21. Enter the maximum number of instances to create for your cluster in the **MaxInstancesCount** field. You can have a maximum of 10 instances in your cluster.
+    -   **Jaspersoft BYOL Cluster** for Jaspersoft Reporting and Analytics for AWS (BYOL)
 
-22. To enable notifications about your instance state, enter a valid email address in the **OperatorEMail** field. Leave this field blank to disable the notification.
+        1.  Select the software version and region, then click **Continue to Launch**.
 
-23. Click **Next**. The **Configure stack options** page appears.
+        2.  Under **Choose Action**, select **Launch CloudFormation** and then click **Launch**. The **Create stack** page in the AWS console opens. Under the Specify template, the Amazon S3 URL option is already selected and a URL for the template file is filled in. Do not change these options.
 
-24. Add any tags that you want to simplify the administration of your infrastructure.
+        3.  Click **Next**. The **Specify stack details** page appears.
 
-    A tag consists of a key/value pair and can flow to resources inside your stack. You can add up to 10 unique tags for each instance.
+        4.  In the **Stack name** field, give your CloudFormation stack a unique name.
 
-25. Expand the **Advanced** section of the **Configure stack options** page and set your notification, rollback, and other options.
+        5.  Install **Chrome** to enable the export functionality. By default, it is set to **No**. Select **Yes** to install. For details, see [Chrome AWS](installing-phantomjs.md).
 
-26. Click **Next**. The **Review** page appears.
+        6.  Enter the host name of your database connection in **DBHost**, the database port number in **DBPort**, and the database name in **DBName**.
 
-    Double-check your template, parameter, and option information.
+        7.  Enter the database username in the **DBUser** field and the database password in **DBPassword**.
 
-27. Click the acknowledgment checkbox, then click **Create**.
+        8.  Confirm if you want to **IncludeSamples**. By default, it is set to **No**.
 
-    You can see your Stack Name listed in a table. While it is being created the Status column can display `CREATE_IN_PROGRESS`. After a few minutes, the status should change to `CREATE_COMPLETE`.
+        9.  Choose an **InstanceType**.
 
-    If the status changes to `ROLLBACK` instead of `CREATE_COMPLETE`, you need to [accept the Terms of Use](acceptingtou.md). Check the **Events** tab for more information.
+        10. Provide the number of maximum instances in **MaxInstancesCount**. By default, the value is **2**.
 
-28. Select your complete instance and click the **Outputs** tab. Here you can find the information you need when you are ready to log into JasperReports Server:
+        11. Choose the **KeyPairName** of your EC2 KeyPair.
 
-- The URL for Getting Started with JasperReports Server.
-- The login name and password.
-- The name of your ProvisionInstance.
-- The name of your Auto Scaling group.
-- The name of your S3LicenseBucket.
+        12. Choose your **VpcId** from the dropdowns.
+
+        13. Provide the required details in the **EC2InstanceSubnetIDs** and **RemoteAccessCIDR** fields.
+
+        14. Choose at least two **LoadBalancerSubnetIds** from the same VPC.
+
+            !!! note
+
+                Selecting two SubnetIds from the different VPCs generate an error.
+
+        15. Choose at least two **EC2InstanceSubnets** from the same VPC and ensure that these subnets have outbound internet connectivity.
+
+        16. **EnablePublicIp** defaults to true. Unless you change this setting, your initialization instance can be assigned a public IP address and an ELB (if enabled) can be configured as "internet-facing". See Amazon's documentation about internet-facing load balancers here:
+
+            <http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-internet-facing-load-balancers.html>
+
+        17. In the **SecuredIp** field, enter the IP address and mask for SSH access.
+
+        18. Enter the maximum number of instances to create for your cluster in the **MaxInstancesCount** field. You can have a maximum of 10 instances in your cluster.
+
+        19. To enable notifications about your instance state, enter a valid email address in the **OperatorEMail** field. Leave this field blank to disable the notification.
+
+        20. Click **Next**. The **Configure stack options** page appears.
+
+        21. Add any tags that you want to simplify the administration of your infrastructure.
+
+            A tag consists of a key/value pair and can flow to resources inside your stack. You can add up to 10 unique tags for each instance.
+
+        22. Expand the **Advanced** section of the **Configure stack options** page and set your notification, rollback, and other options.
+
+        23. Click **Next**. The **Review** page appears.
+
+            Double-check your template, parameter, and option information.
+
+        24. Click the acknowledgment checkbox, then click **Create**.
+
+            You can see your Stack Name listed in a table. While it is being created the Status column can display `CREATE_IN_PROGRESS`. After a few minutes, the status should change to `CREATE_COMPLETE`.
+
+            If the status changes to `ROLLBACK` instead of `CREATE_COMPLETE`, you need to [accept the Terms of Use](acceptingtou.md). Check the **Events** tab for more information.
+
+        25. Select your complete instance and click the **Outputs** tab. Here you can find the information you need when you are ready to log into JasperReports Server:
+
+    -   The URL for Getting Started with JasperReports Server.
+
+    -   The login name and password.
+
+    -   The name of your ProvisionInstance.
+
+    -   The name of your Auto Scaling group.
+
+    -   The name of your S3LicenseBucket.
 
 ### Initializing Repository
 
@@ -218,70 +225,81 @@ We do not recommend this method, because it does not provide the auto-connection
 
 *Figure 1: Missing Role Error Message*
 
-If you launch your instance with a role, JasperReports Server use that Role to generate temporary AWS security tokens for automatic discovery and management of security between your JasperReports Server instance and RDS\Redshift instances.
+If you launch your instance with a role, JasperReports Server use that Role to generate temporary AWS security tokens for automatic discovery and management of security between your JasperReports Server instance and RDS\\Redshift instances.
 
 If no role is defined in your JasperReports Server Instance, you have 2 options:
 
-- Provide Access and Secret keys in AWS Datasource for Discovery and Automatic Security management.
-- Manage security manually. (In this case, remember to disable Automatic security management in JasperReports Server Server Settings.)
+-   Provide Access and Secret keys in AWS Datasource for Discovery and Automatic Security management.
 
-To create a JasperReports Server instance from the EC2 console
+-   Manage security manually. (In this case, remember to disable Automatic security management in JasperReports Server Server Settings.)
 
-1.  Open the AWS Management Console.
+    To create a JasperReports Server instance from the EC2 console
 
-2.  Go to **Compute \> EC2**. The EC2 Dashboard page opens.
+    1.  Open the AWS Management Console.
 
-3.  On the left, select **Image \> AMIs**.
+    2.  Go to **Compute &gt; EC2**. The EC2 Dashboard page opens.
 
-4.  Enter Jaspersoft in the **Search** text field and press Enter.
+    3.  On the left, select **Image &gt; AMIs**.
 
-5.  Select the AMI that you want, and click the **Launch instance from AMI** button at the top of the page. The **Launch an Instance** page opens.
+    4.  Enter Jaspersoft in the **Search** text field and press Enter.
 
-    !!! note
+    5.  Select the AMI that you want, and click the **Launch instance from AMI** button at the top of the page. The **Launch an Instance** page opens.
 
-        Make sure you select the correct AMI for your license type (hourly, annual, or BYOL).
+        !!! note
 
-6.  Choose an **Instance Type** from the list.
+            Make sure you select the correct AMI for your license type (hourly, annual, or BYOL).
 
-    ![instance type](assets/images/instance-type.png)
+    6.  Choose an **Instance Type** from the list.
 
-    *Figure 4: Instance Type list*
+        ![instance type](assets/images/instance-type.png)
 
-7.  Click **Next: Configure Instance Details** at the bottom of the page, and configure the following details. Hover over the information icon ![icon info](assets/images/icon-info.png) for descriptions of each item.
+        *Figure 4: Instance Type list*
 
-    - Number of instances
-    - Purchasing option
-    - Network
-    - Auto-assign Public IP
-    - IAM role
-    - Shutdown behavior
-    - Enable termination protection
-    - Monitoring
-    - Tenancy
+    7.  Click **Next: Configure Instance Details** at the bottom of the page, and configure the following details. Hover over the information icon ![icon info](assets/images/icon-info.png) for descriptions of each item.
 
-8.  Expand the **Advanced Details** section and configure the following details:
+    -   Number of instances
 
-    - Kernel ID
-    - RAM disk ID
-    - User data
+    -   Purchasing option
 
-9.  Click **Next: Add Storage** and review the details. Click the items that you want to edit. You can add EBS and instance store volumes by clicking the **Add New Volume** button.
+    -   Network
 
-10. Click **Next: Tag Instance** and add optional tags. To add more tags, click the **Create Tag** button.
+    -   Auto-assign Public IP
+
+    -   IAM role
+
+    -   Shutdown behavior
+
+    -   Enable termination protection
+
+    -   Monitoring
+
+    -   Tenancy
+
+        1.  Expand the **Advanced Details** section and configure the following details:
+
+    -   Kernel ID
+
+    -   RAM disk ID
+
+    -   User data
+
+1.  Click **Next: Add Storage** and review the details. Click the items that you want to edit. You can add EBS and instance store volumes by clicking the **Add New Volume** button.
+
+2.  Click **Next: Tag Instance** and add optional tags. To add more tags, click the **Create Tag** button.
 
     A tag is a key/value pair that flows to resources inside your stack. You can add up to 10 unique tags to each instance.
 
-11. Click **Next: Configure Security Group** and configure your firewall rules. Choose an existing security group or create a new security group.
+3.  Click **Next: Configure Security Group** and configure your firewall rules. Choose an existing security group or create a new security group.
 
     !!! note
 
         We set up one AWS DB Security Group (using IP address) per JasperReports Server instance in each RDS region. The security group allows connections from the JasperReports Server instance to the specified AWS database instance.
 
-12. Click **Review and Launch**. Review your information and edit if necessary.
+4.  Click **Review and Launch**. Review your information and edit if necessary.
 
-13. Click **Launch**.
+5.  Click **Launch**.
 
-14. When prompted, select an existing key pair, or create a new key pair, and click **Launch Instances**.
+6.  When prompted, select an existing key pair, or create a new key pair, and click **Launch Instances**.
 
     You can see a message telling you that your instance is now launching. Your instances may take a few minutes to launch, depending on the software you are running.
 
@@ -289,7 +307,7 @@ To create a JasperReports Server instance from the EC2 console
 
         Hours of use on your new instances start immediately and continue to accrue until you stop or terminate your instances.
 
-15. Click **Close**.
+7.  Click **Close**.
 
 ## Logging in to JasperReports Server
 
@@ -307,10 +325,11 @@ To log into JasperReports Server the first time
 
 2.  Choose what you want from the following:
 
-- Upload your license to the server
-- Explore resources
-- Watch an introductory video
-- Log in
+-   Upload your license to the server
+
+    -   Explore resources
+    -   Watch an introductory video
+    -   Log in
 
 ![JRS login page](assets/images/JRS-login-page.png)
 

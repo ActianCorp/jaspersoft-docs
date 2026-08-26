@@ -69,6 +69,21 @@ def source_projects():
     return found
 
 
+def toc_hidden_topics():
+    """`project/topic` paths that a target's TOC entry conditions exclude.
+
+    Written by build.py. These are not gaps: Flare hides them from this
+    target's output, so the published set must not contain them either.
+    """
+    path = REPORTS / "toc-hidden.json"
+    if not path.is_file():
+        return set()
+    out = set()
+    for paths in json.loads(path.read_text()).values():
+        out.update(paths)
+    return out
+
+
 def exclusion_reason(project: str) -> str:
     """Documented reason a project is not part of the published set."""
     if project in G.EXCLUDED:
@@ -138,7 +153,9 @@ def main() -> int:
                     published_prints.add(fingerprint(path))
     published_prints.discard("")
 
-    rows, unique_unpublished, artifacts, emptied = [], [], [], []
+    hidden = toc_hidden_topics()
+
+    rows, unique_unpublished, artifacts, emptied, hidden_rows = [], [], [], [], []
     grand = defaultdict(int)
 
     for project_dir in source_projects():
@@ -161,6 +178,9 @@ def main() -> int:
                 elif not print_:
                     counts["no text in source"] += 1
                     emptied.append("%s/%s" % (project_dir, posix))
+                elif "%s/%s" % (project_dir, posix) in hidden:
+                    counts["hidden by Flare conditions"] += 1
+                    hidden_rows.append((project_dir, posix))
                 else:
                     counts["unique, not published"] += 1
                     unique_unpublished.append((project_dir, posix))
@@ -194,20 +214,41 @@ def main() -> int:
         "",
         "## Part 1 — nothing missed",
         "",
-        "| Project | Topics | Published | Book artifacts | Same text elsewhere | No text | Unique, unpublished | Why not published |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Project | Topics | Published | Book artifacts | Same text elsewhere | No text | Hidden in Flare | Unique, unpublished | Why not published |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for project, is_published, total, counts in rows:
         why = "" if is_published else exclusion_reason(project)
-        lines.append("| `%s` | %d | %d | %d | %d | %d | %d | %s |" % (
+        lines.append("| `%s` | %d | %d | %d | %d | %d | %d | %d | %s |" % (
             project, total,
             counts["published"], counts["book artifact"],
             counts["same text published elsewhere"], counts["no text in source"],
+            counts["hidden by Flare conditions"],
             counts["unique, not published"], why))
-    lines.append("| **total** | **%d** | **%d** | **%d** | **%d** | **%d** | **%d** | |" % (
+    lines.append("| **total** | **%d** | **%d** | **%d** | **%d** | **%d** | **%d** | **%d** | |" % (
         grand["topics"], grand["published"], grand["book artifact"],
         grand["same text published elsewhere"], grand["no text in source"],
+        grand["hidden by Flare conditions"],
         grand["unique, not published"]))
+
+    lines += ["", "### Topics hidden by the Flare targets", "",
+              "A TOC entry in the guide's target carries a condition the target "
+              "excludes, so Flare leaves the topic out of this output. They are "
+              "listed here to show the exclusion is the source's decision, not "
+              "a gap in the migration.", ""]
+    if not hidden_rows:
+        lines.append("None.")
+    else:
+        by_project = defaultdict(list)
+        for project, posix in hidden_rows:
+            by_project[project].append(posix)
+        for project, items in sorted(by_project.items()):
+            lines.append("<details><summary><code>%s</code> — %d topics</summary>"
+                         % (project, len(items)))
+            lines.append("")
+            for posix in sorted(items):
+                lines.append("- `%s`" % posix)
+            lines += ["", "</details>", ""]
 
     lines += ["", "### Unique topics that are not published", ""]
     if not unique_unpublished:

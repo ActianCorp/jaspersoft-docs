@@ -1,13 +1,13 @@
 ---
 title: Opening an OLAP View
-description: "1. Click View > Repository."
+description: "1. Click View &gt; Repository."
 ---
 
 # Opening an OLAP View
 
 To open an OLAP view,
 
-1.  Click **View \> Repository**.
+1.  Click **View &gt; Repository**.
 
     The repository appears.
 

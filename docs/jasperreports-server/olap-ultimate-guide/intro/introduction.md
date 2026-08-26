@@ -13,15 +13,15 @@ JasperReports® Server builds on JasperReports® Library as a comprehensive fami
 
 The heart of the Jaspersoft® BI Suite is the server, which provides the ability to:
 
-- Easily create new reports based on views designed in an intuitive, web-based, drag and drop Ad Hoc Editor.
+-   Easily create new reports based on views designed in an intuitive, web-based, drag and drop Ad Hoc Editor.
 
-- Efficiently and securely manage many reports.
+-   Efficiently and securely manage many reports.
 
-- Interact with reports, including sorting, changing formatting, entering parameters, and drilling on data.
+-   Interact with reports, including sorting, changing formatting, entering parameters, and drilling on data.
 
-- Schedule reports for distribution through email and storage in the repository.
+-   Schedule reports for distribution through email and storage in the repository.
 
-- Arrange reports and web content to create appealing, data-rich Jaspersoft Dashboards that quickly convey business trends.
+-   Arrange reports and web content to create appealing, data-rich Jaspersoft Dashboards that quickly convey business trends.
 
 For users interested in multi-dimensional modeling, we offer Jaspersoft® OLAP, which runs as part of the server.
 
@@ -29,22 +29,23 @@ Jaspersoft OLAP runs within JasperReports Server. JasperReports Server itself bu
 
 You can use the following sources of information to learn about JasperReports Server:
 
-- Our core documentation describes how to install, administer, and use JasperReports Server and Jaspersoft Studio. Core documentation is available as PDFs in the doc subdirectory of your JasperReports Server installation. You can also access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
+-   Our core documentation describes how to install, administer, and use JasperReports Server and Jaspersoft Studio. Core documentation is available as PDFs in the doc subdirectory of your JasperReports Server installation. You can also access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
 
-- Our Ultimate Guides document advanced features and configuration. They also include best practice recommendations and numerous examples. You can access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
+-   Our Ultimate Guides document advanced features and configuration. They also include best practice recommendations and numerous examples. You can access PDF and HTML versions of these guides online from the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website.
 
-- Our [Online Learning Portal](https://www.jaspersoft.com/getting-started) lets you learn at your own pace, and covers topics for developers, system administrators, business users, and data integration users. The Portal is available online from the Professional Services section of our [website](http://www.jaspersoft.com/).
+-   Our [Online Learning Portal](https://www.jaspersoft.com/getting-started) lets you learn at your own pace, and covers topics for developers, system administrators, business users, and data integration users. The Portal is available online from the Professional Services section of our [website](http://www.jaspersoft.com/).
 
-- - Our free samples, which are installed with JasperReports Library, Jaspersoft Studio, and JasperReports Server, are available and documented online. Please visit our [GitHub repository](https://github.com/Jaspersoft/jasperreports).
+-   -   Our free samples, which are installed with JasperReports Library, Jaspersoft Studio, and JasperReports Server, are available and documented online. Please visit our [GitHub repository](https://github.com/Jaspersoft/jasperreports).
 
-- If you have a subscription to our professional support offerings, please contact our Technical Support team when you have questions or run into difficulties. They are available on the web at <https://www.jaspersoft.com/support>.
+-   If you have a subscription to our professional support offerings, please contact our Technical Support team when you have questions or run into difficulties. They are available on the web at <https://www.jaspersoft.com/support>.
 
-JasperReports Server is a component of both a community project and commercial offerings. Each integrates the standard features such as security, scheduling, a web services interface, and much more for running and sharing reports. Commercial editions provide additional features, including Ad Hoc views and reports, advanced charts, dashboards, Domains, auditing, and a multi-organization architecture for hosting large BI deployments.
+    JasperReports Server is a component of both a community project and commercial offerings. Each integrates the standard features such as security, scheduling, a web services interface, and much more for running and sharing reports. Commercial editions provide additional features, including Ad Hoc views and reports, advanced charts, dashboards, Domains, auditing, and a multi-organization architecture for hosting large BI deployments.
 
-This chapter contains the following sections:
+    This chapter contains the following sections:
 
-- Community and Commercial Editions
-- User Descriptions and Document Maps
+-   Community and Commercial Editions
+
+-   User Descriptions and Document Maps
 
 ## Community and Commercial Editions
 
@@ -62,13 +63,13 @@ Technical Business Analysts know their business, data, and processes. They are p
 
 If you are a Technical Business Analyst, refer to the following sections of this document:
 
-- [On-Line Analytical Processing](../get-started/on_line_analytical_processing.md)
+-   [On-Line Analytical Processing](../get-started/on_line_analytical_processing.md)
 
-- [Analyzing Data in a View](../analyze-data/analyzing_data_in_a_view.md)
+-   [Analyzing Data in a View](../analyze-data/analyzing_data_in_a_view.md)
 
-- [Securing Data in](../secure-data/securing_data_in_jaspersoft_olap.md)
+-   [Securing Data in](../secure-data/securing_data_in_jaspersoft_olap.md)
 
-- [Understanding the Design Concepts](../administer/understanding_the_design_concepts.md)
+-   [Understanding the Design Concepts](../administer/understanding_the_design_concepts.md)
 
 ### System Developer
 
@@ -76,9 +77,9 @@ System Developers leverage Jaspersoft OLAP functionality in their own products. 
 
 If you are a System Developer, refer to the following sections of this document:
 
-- [On-Line Analytical Processing](../get-started/on_line_analytical_processing.md)
-- [Analyzing Data in a View](../analyze-data/analyzing_data_in_a_view.md)
-- [Integrating in the Enterprise’s Data Flow](../administer/integrating_jaspersoft_olap_in_the_e.md)
+-   [On-Line Analytical Processing](../get-started/on_line_analytical_processing.md)
+-   [Analyzing Data in a View](../analyze-data/analyzing_data_in_a_view.md)
+-   [Integrating in the Enterprise’s Data Flow](../administer/integrating_jaspersoft_olap_in_the_e.md)
 
 ### System Administrator and Database Administrator
 
@@ -88,6 +89,6 @@ Database Administrators (DBAs) administer database management systems (DBMS), an
 
 If you are a System Administrator or DBA, refer to the following sections of this document:
 
-- [Getting Started](../get-started/getting_started.md)
-- [Analyzing Data in a View](../analyze-data/analyzing_data_in_a_view.md)
-- [Administering](../administer/administering_jaspersoft_olap.md)
+-   [Getting Started](../get-started/getting_started.md)
+-   [Analyzing Data in a View](../analyze-data/analyzing_data_in_a_view.md)
+-   [Administering](../administer/administering_jaspersoft_olap.md)

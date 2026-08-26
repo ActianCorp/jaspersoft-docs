@@ -32,81 +32,89 @@ To create the chart
     |  |
     |----|
     | ![jss advanced configuration](../assets/images/jss-advanced_configuration.png) |
-    | *Figure 1: HTML5 Charts Properties \> Chart Data \> Configuration* |
+    | *Figure 1: HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
 
 4.  Under **Categories Levels**, select Level1 and click **Modify**. Then enter the following:
 
-    - **Expression**: `$F{y}`
-    - **Value Class Name**: `java.lang.Integer`
+-   **Expression**: `$F{y}`
 
-    Click **OK**.
+    -   **Value Class Name**: `java.lang.Integer`
 
-5.  Under **Series Level**, select Series1 and click **Modify**. Then enter the following:
+        Click **OK**.
 
-    - **Expression**: `$F{x}`
-    - **Value Class Name**: `java.lang.Integer`
+        1.  Under **Series Level**, select Series1 and click **Modify**. Then enter the following:
 
-    Click **OK**.
+    -   **Expression**: `$F{x}`
 
-6.  Under **Measures**, select Measure1 and click **Modify**. Then enter the following:
+    -   **Value Class Name**: `java.lang.Integer`
 
-    - **Value Expression**: `$F{population}`
-    - **Value Class Name**: `java.lang.Integer`
+        Click **OK**.
 
-    Click **OK**.
+        1.  Under **Measures**, select Measure1 and click **Modify**. Then enter the following:
 
-    You can optionally add other hidden measures, for example:
+    -   **Value Expression**: `$F{population}`
 
-    - for `$F{hc_a2}`: **Value Expression**: `$F{hc_a2}` and **Value Class Name**: `java.lang.String`.
-    - for `$F{name}` - **Value Expression**: `$F{name}` and **Value Class Name**: `java.lang.String`.
+    -   **Value Class Name**: `java.lang.Integer`
 
-7.  Click the **Chart Formatting** tab, select **Chart \> Title** on the left and enter your title in the **Title** text box. For this example, enter `US states by population in 2016`.
+        Click **OK**.
 
-8.  Select **Subtitle** and enter Subtitle in the **Subtitle** text box. For this example, enter `Source: Wikipedia`.
+        You can optionally add other hidden measures, for example:
 
-9.  On the **Chart Formatting** tab, select **Tilemap** on the left. You can set two additional properties of the tilemap chart: **Tile Shape** and **Color By Point**.
+    -   for `$F{hc_a2}`: **Value Expression**: `$F{hc_a2}` and **Value Class Name**: `java.lang.String`.
 
-10. Select the tile shape from the drop-down. For this example, Tile Shape is Hexagon and Color By Point is set to false.
+    -   for `$F{name}` - **Value Expression**: `$F{name}` and **Value Class Name**: `java.lang.String`.
 
-    The default tile shape is Hexagon, but you can also select Circle, Diamond, or Square. If Color By Point is set to true, any tile in the chart is colored with consecutive colors in the 'Colors' chart property. The Color By Point property can be neglected when colors are defined in the colorAxis property.
+        1.  Click the **Chart Formatting** tab, select **Chart &gt; Title** on the left and enter your title in the **Title** text box. For this example, enter `US states by population in 2016`.
 
-    |                                                                          |
-    |--------------------------------------------------------------------------|
-    | ![jss tilemap properties](../assets/images/jss-tilemap%20properties.png) |
-    | *Figure 2: Setting Tile Shape and Color By Point*                        |
+        2.  Select **Subtitle** and enter Subtitle in the **Subtitle** text box. For this example, enter `Source: Wikipedia`.
 
-11. Click **Show Advanced Properties**.
+        3.  On the **Chart Formatting** tab, select **Tilemap** on the left. You can set two additional properties of the tilemap chart: **Tile Shape** and **Color By Point**.
 
-12. To configure the chart legend, select the **colorAxis \> dataClasses**. Edit property array dialog appears.
+        4.  Select the tile shape from the drop-down. For this example, Tile Shape is Hexagon and Color By Point is set to false.
 
-    |                                                                          |
-    |--------------------------------------------------------------------------|
-    | ![jss edit property array](../assets/images/jss-edit-property-array.png) |
-    | *Figure 3: Edit property array dialog*                                   |
+            The default tile shape is Hexagon, but you can also select Circle, Diamond, or Square. If Color By Point is set to true, any tile in the chart is colored with consecutive colors in the 'Colors' chart property. The Color By Point property can be neglected when colors are defined in the colorAxis property.
 
-13. On the Item list tab, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png) to add an item. A new item is created with the name Item 1. Enter the following information.
+            |                                                                          |
+            |--------------------------------------------------------------------------|
+            | ![jss tilemap properties](../assets/images/jss-tilemap%20properties.png) |
+            | *Figure 2: Setting Tile Shape and Color By Point*                        |
 
-    - **colorAxis.dataClasses.color**: `#F9EDB3`
-    - **colorAxis.dataClasses.name**: \<1M
-    - **colorAxis.dataClasses.to**: 1000000
+        5.  Click **Show Advanced Properties**.
 
-14. To add a second item, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png) and enter the following information.
+        6.  To configure the chart legend, select the **colorAxis &gt; dataClasses**. Edit property array dialog appears.
 
-    - **colorAxis.dataClasses.color**: `#FFC428`
-    - **colorAxis.dataClasses.from**: 1000000
-    - **colorAxis.dataClasses.name**: 1M-5M
-    - **colorAxis.dataClasses.to**: 5000000
+            |                                                                          |
+            |--------------------------------------------------------------------------|
+            | ![jss edit property array](../assets/images/jss-edit-property-array.png) |
+            | *Figure 3: Edit property array dialog*                                   |
 
-    Click **OK**.
+        7.  On the Item list tab, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png) to add an item. A new item is created with the name Item 1. Enter the following information.
 
-    |                                                      |
-    |------------------------------------------------------|
-    | ![jss ColorAxis](../assets/images/jss-ColorAxis.png) |
-    | *Figure 4: Adding Required Information for Items*    |
+    -   **colorAxis.dataClasses.color**: `#F9EDB3`
 
-15. To enable the labels to appear in each tile map, select **plotOptions \> tilemap \> dataLables** and set enabled to true.
+    -   **colorAxis.dataClasses.name**: &lt;1M
 
-16. To preview the chart from inside the dialog, click **Show Chart Preview**.
+    -   **colorAxis.dataClasses.to**: 1000000
+
+        1.  To add a second item, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png) and enter the following information.
+
+    -   **colorAxis.dataClasses.color**: `#FFC428`
+
+    -   **colorAxis.dataClasses.from**: 1000000
+
+    -   **colorAxis.dataClasses.name**: 1M-5M
+
+    -   **colorAxis.dataClasses.to**: 5000000
+
+Click **OK**.
+
+|                                                      |
+|------------------------------------------------------|
+| ![jss ColorAxis](../assets/images/jss-ColorAxis.png) |
+| *Figure 4: Adding Required Information for Items*    |
+
+1.  To enable the labels to appear in each tile map, select **plotOptions &gt; tilemap &gt; dataLables** and set enabled to true.
+2.  To preview the chart from inside the dialog, click **Show Chart Preview**.
 
 |                                                                |
 |----------------------------------------------------------------|

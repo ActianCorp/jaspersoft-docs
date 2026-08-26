@@ -15,11 +15,11 @@ Click **Library** to view your Library list.
 
 From the Library page, you can:
 
-- Run and schedule reports.
+-   Run and schedule reports.
 
-- Open Ad Hoc views and generate reports from them.
+-   Open Ad Hoc views and generate reports from them.
 
-- Run and edit dashboards.
+-   Run and edit dashboards.
 
 All of these functions are available by right-clicking the item that you want to work with and selecting an action from the context menu.
 
@@ -29,6 +29,6 @@ The Library table has two columns that refer to when the repository items were c
 
 Generally, the created date is earlier than the modified date. In some situations, however, the created date may be after the modified date. This can happen for one of two reasons:
 
-- When an existing report (A) is modified, then subsequently copied into a new report (B). In the Library list, report B’s created date is the day it was created, but its modified date reflects the last time report A was changed.
+-   When an existing report (A) is modified, then subsequently copied into a new report (B). In the Library list, report B’s created date is the day it was created, but its modified date reflects the last time report A was changed.
 
-- An existing report is exported from one system and imported into another. In the Library list, the reports created date is the date it was imported into the new system, and the modified date is the date it was last modified in the original system.
+-   An existing report is exported from one system and imported into another. In the Library list, the reports created date is the date it was imported into the new system, and the modified date is the date it was last modified in the original system.

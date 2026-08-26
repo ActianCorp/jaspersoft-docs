@@ -7,9 +7,9 @@ description: "JasperReports provides some built-in parameters (internal to the r
 
 JasperReports provides some built-in parameters (internal to the reporting engine). You can read the built-in parameters, but you cannot modify or delete them. Some important built-in parameters are:
 
-- **REPORT_CONNECTION** - For a report using JDBC, this parameter holds the JDBC connection used to run the SQL query.
-- **REPORT_DATA_SOURCE** - This parameter contains the data source used to fill the report (if available).
-- **REPORT_LOCALE** - This parameter contains the locale used to fill the report.
+-   **REPORT_CONNECTION** - For a report using JDBC, this parameter holds the JDBC connection used to run the SQL query.
+-   **REPORT_DATA_SOURCE** - This parameter contains the data source used to fill the report (if available).
+-   **REPORT_LOCALE** - This parameter contains the locale used to fill the report.
 
 Some built-in parameters are specific to a query language. For example, if you are using the Hibernate query language, the reports automatically include the `HIBERNATE_SESSION` parameter that holds the Hibernate session for the HQL query.
 

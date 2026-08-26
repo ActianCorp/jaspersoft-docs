@@ -15,9 +15,7 @@ See the Jaspersoft Studio User Guide for instructions on how to install Jasperso
 
 ## Connecting Jaspersoft Studio to Your Data
 
-1.  Create a new Data Adapter (called Data Source in Jaspersoft Studio).
-
-    ![03000013](assets/images/03000013.png)
+1.  Create a new Data Adapter (called Data Source in Jaspersoft Studio).![03000013](assets/images/03000013.png)
 
     New DataAdapter button
 
@@ -27,29 +25,21 @@ See the Jaspersoft Studio User Guide for instructions on how to install Jasperso
 
     DataAdapter wizard
 
-2.  Name your DataAdapter and click **Next**.
-
-    ![03000015](assets/images/03000015.png)
+2.  Name your DataAdapter and click **Next**.![03000015](assets/images/03000015.png)
 
     Selecting a data source type
 
-3.  Select the data source type. For Amazon RDS and Redshift, use **JDBC**. Then click **Next**.
-
-    ![03000017](assets/images/03000017.png)
+3.  Select the data source type. For Amazon RDS and Redshift, use **JDBC**. Then click **Next**.![03000017](assets/images/03000017.png)
 
     Entering your database location
 
 4.  Add the **JDBC Driver**. You may need to search the web for one that corresponds to your RDBMS or other technology on your EC2 instance.
 
-5.  Enter the **JDBC Url**. This is the Endpoint URL from your Amazon EC2 dashboard (including the port) and database type.
-
-    ![03000016](assets/images/03000016.png)
+5.  Enter the **JDBC Url**. This is the Endpoint URL from your Amazon EC2 dashboard (including the port) and database type.![03000016](assets/images/03000016.png)
 
     Locating the Endpoint
 
-6.  Click the **Driver Classpath** tab and select the local path of the driver.
-
-    ![03000018](assets/images/03000018.png)
+6.  Click the **Driver Classpath** tab and select the local path of the driver.![03000018](assets/images/03000018.png)
 
     Selecting the driver classpath
 
@@ -61,27 +51,19 @@ You'll need to connect to the Jaspersoft Studio repository to manage and schedul
 
 To define the Repository Explorer's connection
 
-1.  In Jaspersoft Studio, select **Window** \> **Show Views** \> **Other….**
+1.  In Jaspersoft Studio, select **Window** &gt; **Show Views** &gt; **Other….**![0300001A](assets/images/0300001A.png)
 
-    ![0300001A](assets/images/0300001A.png)
+    **Window** &gt; **Show Views** &gt; **Other….** menu
 
-    **Window** \> **Show Views** \> **Other….** menu
-
-2.  Select **Repository Explorer**.
-
-    ![0300001B](assets/images/0300001B.png)
+2.  Select **Repository Explorer**.![0300001B](assets/images/0300001B.png)
 
     Selecting the Repository Explorer
 
-3.  Select the instance’s URL. It should start with `ec2`.
-
-    ![0300001C](assets/images/0300001C.png)
+3.  Select the instance’s URL. It should start with `ec2`.![0300001C](assets/images/0300001C.png)
 
     Selecting the instance URL
 
-4.  Right-click the name of your instance to create a JasperReports Server repository connection.
-
-    ![0300001D](assets/images/0300001D.png)
+4.  Right-click the name of your instance to create a JasperReports Server repository connection.![0300001D](assets/images/0300001D.png)
 
     Creating the JasperReports Server repository connection
 

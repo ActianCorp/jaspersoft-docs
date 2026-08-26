@@ -9,11 +9,11 @@ The JasperReports Server commercial editions support Fusion charting, and includ
 
 Using the libraries, you can create visually appealing, animated, and interactive reports:
 
-- Maps Pro - Color-coded maps covering all countries and regions of the globe.
+-   Maps Pro - Color-coded maps covering all countries and regions of the globe.
 
-- Charts Pro - Standard and stacked charts with animation and interactivity.
+-   Charts Pro - Standard and stacked charts with animation and interactivity.
 
-- Widgets Pro - Non-standard charts such as gauges, funnels, spark lines, and Gantt charts.
+-   Widgets Pro - Non-standard charts such as gauges, funnels, spark lines, and Gantt charts.
 
 These components are based on Fusion libraries, which generate HTML5 output that is embedded in the HTML and PDF output. When a report containing a Maps, Charts, or Widgets Pro element is exported in a format other than HTML or PDF, the space used by the element remains blank.
 

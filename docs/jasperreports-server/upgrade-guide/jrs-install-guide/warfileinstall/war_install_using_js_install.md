@@ -10,56 +10,58 @@ Follow this procedure to install JasperReports Server using the WAR file distrib
 Prerequisites for installing the WAR file
 
 1.  Install a supported version of the Java Development Kit (JDK). See the TIBCO Jaspersoft Supported Platforms Datasheet document on the [Documentation section](http://community.jaspersoft.com/documentation) of the Jaspersoft Community website for a list.
-
 2.  Create and set the `JAVA_HOME` system environment variable to point to the Java JDK location.
-
 3.  Locate or install one of the following application servers. See the Jaspersoft Platform Support Guide for supported versions:
 
-    - Apache Tomcat
-    - JBoss EAP or Wildfly (additional steps may be required for JBoss EAP or Wildfly. Please see [Additional Steps for Using JBoss EAP, JBoss Web Server or Wildfly](../../../installation-guide/warfileinstall/additional_steps_for_using_db2_and_j.md) ).
+-   Apache Tomcat
 
-4.  Locate or install the
+    -   JBoss EAP or Wildfly (additional steps may be required for JBoss EAP or Wildfly. Please see [Additional Steps for Using JBoss EAP, JBoss Web Server or Wildfly](../../../installation-guide/warfileinstall/additional_steps_for_using_db2_and_j.md) ).
 
-    PostgreSQL, MySQL, Oracle, SQL Server, or DB2
+        1.  Locate or install the
 
-    database. If you use DB2, follow the steps in [Additional Steps for Using DB2 and js-install Scripts](../../../installation-guide/warfileinstall/additional_steps_for_using_db2_and_j.md).
+            PostgreSQL, MySQL, Oracle, SQL Server, or DB2
 
-!!! note
+            database. If you use DB2, follow the steps in [Additional Steps for Using DB2 and js-install Scripts](../../../installation-guide/warfileinstall/additional_steps_for_using_db2_and_j.md).
 
-    The target database can be on a remote server. The application server should reside on the local machine.
+        !!! note
 
-For an optional pre-install validation test, run `js-install`` .bat/sh test`. See [js-install Script Test Mode](../../../installation-guide/warfileinstall/war_troubleshooting_jrs.md) for more information.
+            The target database can be on a remote server. The application server should reside on the local machine.
 
-To install the WAR file using js-install scripts
+        For an optional pre-install validation test, run `js-install`` .bat/sh test`. See [js-install Script Test Mode](../../../installation-guide/warfileinstall/war_troubleshooting_jrs.md) for more information.
 
-The scripts are intended for the bash shell.
+        To install the WAR file using js-install scripts
 
-!!! note
+        The scripts are intended for the bash shell.
 
-    If installing to non-Linux Unix platforms such as IBM AIX, FreeBSD, or Solaris, the bash shell is required for using the js-install scripts.
+        !!! note
 
-1.  Extract all files from
+            If installing to non-Linux Unix platforms such as IBM AIX, FreeBSD, or Solaris, the bash shell is required for using the js-install scripts.
 
-    `js-jrs``_10.1.0`
+        1.  Extract all files from
 
-    \_bin.zip. Choose a destination, such as:
+            `js-jrs``_10.1.0`
 
-    - On Windows: `C:\Jaspersoft`
-    - On Linux: `/home/<user>`
-    - On Mac: `/Users/<user>`
+            \_bin.zip. Choose a destination, such as:
 
-    The directory, `on Linux_bin`, appears in the file location you choose.
+    -   On Windows: `C:\Jaspersoft`
 
-2.  Copy the `<dbType>_master.properties` file for your database from `sample_conf` and paste it to `buildomatic`:
+    -   On Linux: `/home/<user>`
 
-    - Copy from: `<js-install>/buildomatic/sample_conf/`
-    - Paste to: `<js-install>/buildomatic`
+    -   On Mac: `/Users/<user>`
 
-    For example, if your database is PostgreSQL, copy `postgresql_master.properties` to `<js-install>/buildomatic`.
+        The directory, `on Linux_bin`, appears in the file location you choose.
 
-3.  Rename the file that you copied to `default_master.properties`.
+        1.  Copy the `<dbType>_master.properties` file for your database from `sample_conf` and paste it to `buildomatic`:
 
-4.  Edit the `default_master.properties` file to add the settings for your database and application server. Sample Values for the default_master.properties File lists sample property values for each supported database.
+    -   Copy from: `<js-install>/buildomatic/sample_conf/`
+
+    -   Paste to: `<js-install>/buildomatic`
+
+For example, if your database is PostgreSQL, copy `postgresql_master.properties` to `<js-install>/buildomatic`.
+
+1.  Rename the file that you copied to `default_master.properties`.
+
+2.  Edit the `default_master.properties` file to add the settings for your database and application server. Sample Values for the default_master.properties File lists sample property values for each supported database.
 
     <table>
     <caption><p>Sample Values for the default_master.properties File</p></caption>
@@ -159,7 +161,7 @@ The scripts are intended for the bash shell.
         When the property `appServerType` is set to `skipAppServerCheck`, buildomatic skips any application server validation.
 
         Backslashes in paths must be doubled in properties files, for example:<br>
-        appServerDir=C:\\Apache Software Foundation\\Tomcat 11.0.
+        appServerDir=C:\\\\Apache Software Foundation\\\\Tomcat 11.0.
 
         <span id="Oracle_dbUsername"></span>The `dbUsername` must be the same as the Oracle user name. In addition, buildomatic does with the “sys as sysdba” syntax.
 
@@ -169,49 +171,52 @@ The scripts are intended for the bash shell.
 
         On Linux, if Tomcat is installed using apt-get, yum, or rpm, see [Tomcat Installed Using apt-get/yum](../../../installation-guide/troubleshooting/application_server_related_problems.md).
 
-5.  In case DB2, SQL Server or Oracle databases are used you must install the required JDBC driver. For steps to install, see [Installing Database Vendor JDBC Drivers](../../../installation-guide/additional/jdbc-driver.md).
+3.  In case DB2, SQL Server or Oracle databases are used you must install the required JDBC driver. For steps to install, see [Installing Database Vendor JDBC Drivers](../../../installation-guide/additional/jdbc-driver.md).
 
-6.  Run the `js-install` script:
+4.  Run the `js-install` script:
 
     1.  Start your database server.
+
     2.  Stop your application server.
+
     3.  Open Command Prompt as Administrator on Windows or open a terminal window on Linux and Mac OSX.
+
     4.  Run the `js-install` script for the version and files that you want, as shown in the following table:
 
-    <table>
-    <colgroup>
-    <col style="width: 50%" />
-    <col style="width: 50%" />
-    </colgroup>
-    <thead>
-    <tr>
-    <th><p>Commands</p></th>
-    <th><p>Description</p></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td><p><code>cd &lt;js-install&gt;/buildomatic</code></p></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td><p><code>js-install</code><code> .bat </code>(Windows)</p>
-    <p><code>./</code><code>js-install</code><code> .sh </code>(Linux and Mac OSX)</p></td>
-    <td><p>Installs JasperReports Server and JasperReports Web Studio, sample data, and sample databases (foodmart and sugarcrm)</p></td>
-    </tr>
-    <tr>
-    <td><p><code>js-install</code><code> .bat minimal </code>(Windows)</p>
-    <p><code>./</code><code>js-install</code><code> .sh minimal </code>(Linux and Mac OSX)</p></td>
-    <td><p>Installs JasperReports Server and JasperReports Web Studio, but not the sample data and sample databases</p></td>
-    </tr>
-    </tbody>
-    </table>
+        <table>
+        <colgroup>
+        <col style="width: 50%" />
+        <col style="width: 50%" />
+        </colgroup>
+        <thead>
+        <tr>
+        <th><p>Commands</p></th>
+        <th><p>Description</p></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><p><code>cd &lt;js-install&gt;/buildomatic</code></p></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><p><code>js-install</code><code> .bat </code>(Windows)</p>
+        <p><code>./</code><code>js-install</code><code> .sh </code>(Linux and Mac OSX)</p></td>
+        <td><p>Installs JasperReports Server and JasperReports Web Studio, sample data, and sample databases (foodmart and sugarcrm)</p></td>
+        </tr>
+        <tr>
+        <td><p><code>js-install</code><code> .bat minimal </code>(Windows)</p>
+        <p><code>./</code><code>js-install</code><code> .sh minimal </code>(Linux and Mac OSX)</p></td>
+        <td><p>Installs JasperReports Server and JasperReports Web Studio, but not the sample data and sample databases</p></td>
+        </tr>
+        </tbody>
+        </table>
 
-    If you encounter errors during the `js-install` script execution, see [Error Running js-install Scripts (.bat/sh)](../../../installation-guide/warfileinstall/war_troubleshooting_jrs.md).
+        If you encounter errors during the `js-install` script execution, see [Error Running js-install Scripts (.bat/sh)](../../../installation-guide/warfileinstall/war_troubleshooting_jrs.md).
 
-7.  Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
+5.  Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
 
-8.  Set up the license (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
+6.  Set up the license (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
 
 !!! note
 

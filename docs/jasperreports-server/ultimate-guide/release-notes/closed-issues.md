@@ -7,7 +7,7 @@ description: The following issues have been fixed in this release of JasperRepor
 
 The following issues have been fixed in this release of JasperReports® Server.
 
-| Key         | Summary       |
-|-------------|---------------|
-| \<ABC-123\> | *\<Summary\>* |
-| \<ABC-123\> | *\<Summary\>* |
+| Key             | Summary           |
+|-----------------|-------------------|
+| &lt;ABC-123&gt; | *&lt;Summary&gt;* |
+| &lt;ABC-123&gt; | *&lt;Summary&gt;* |

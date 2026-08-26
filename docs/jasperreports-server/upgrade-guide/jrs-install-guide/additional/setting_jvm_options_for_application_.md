@@ -11,15 +11,15 @@ description: "The settings in this section apply specifically to the Oracle/Sun 
 
 You may need to set the following options for your JVM:
 
-- Memory: Java Virtual Machine (JVM) runtime parameters normally need to be explicitly set so that the memory settings have values larger than the default settings. The options and values depend on your version of Java and the application server that you use. You may need to increase the memory assigned for the JVM according to your usage.
+-   Memory: Java Virtual Machine (JVM) runtime parameters normally need to be explicitly set so that the memory settings have values larger than the default settings. The options and values depend on your version of Java and the application server that you use. You may need to increase the memory assigned for the JVM according to your usage.
 
 !!! note
 
     If JasperReports Web Studio is deployed in the same application server as JasperReports Server, the memory demand increases. Hence, the memory assigned for Tomcat must be adjusted. It is recommended to increase Xmx at least by 0.5 GB.
 
-- Garbage collection: You may need to tune garbage collection for your JVM, depending on your memory and CPU usage as well as JasperReports Server throughput. Different collectors have different performance characteristics. Consult the documentation for your JVM for information on available collectors.
+-   Garbage collection: You may need to tune garbage collection for your JVM, depending on your memory and CPU usage as well as JasperReports Server throughput. Different collectors have different performance characteristics. Consult the documentation for your JVM for information on available collectors.
 
-- UTF-8 support for Oracle: If you need to support UTF-8 for your Oracle database, set `defaultNChar` to `true` to ensure that the database implicitly converts all `CHAR` data to `NCHAR` when you access `CHAR` columns. If you do not need to support UTF-8 for your Oracle database, you can omit this setting.
+-   UTF-8 support for Oracle: If you need to support UTF-8 for your Oracle database, set `defaultNChar` to `true` to ensure that the database implicitly converts all `CHAR` data to `NCHAR` when you access `CHAR` columns. If you do not need to support UTF-8 for your Oracle database, you can omit this setting.
 
 !!! note
 
@@ -161,7 +161,7 @@ If you installed JasperReports Server to use Tomcat running as a Windows service
 
 1.  Launch the Tomcat configuration application. If you installed the bundled Tomcat, you can do this by going to the `<js-install>/apache-tomcat/bin` directory and double-clicking the `jasperreportsTomcat.exe` file. (If you have multiple instances of JasperReports Server installed, the file name will be of the form ` jasperreportsTomcatnum<number>.exe`, for example, ` jasperreportsTomcatnum2.exe`.) If you installed Tomcat using an existing Windows service, look for an `.exe` file in the same location, with the same name as your Tomcat service, or select the service from the Windows Start menu:
 
-    ****Start \> Programs \> Apache Tomcat \> Configure Tomcat (Run as administrator)****
+    ****Start &gt; Programs &gt; Apache Tomcat &gt; Configure Tomcat (Run as administrator)****
 
 2.  In the Apache Tomcat Properties dialog, click the **Java** tab.
 

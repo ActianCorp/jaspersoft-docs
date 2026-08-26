@@ -11,7 +11,7 @@ By default, data staging is not enabled on the server. You must enable data stag
 
 When a Domain Topic uses data staging, it no longer uses any Domain-based optimizations (data policies) configured in the server because those apply only to database queries. Datasets that are staged are also exempt from the Ad Hoc cache time limits such as idle time and time-to-live. Data policies and Ad Hoc cache settings still apply to Domain Topics that do not use data staging.
 
-When deciding to enable data staging, you should consider the nature of your data, its size, your database performance, and your access patterns to determine whether staging will help your views and reports run faster. You should also perform realistic usage tests to determine the amount of memory and size of data that give you the best performance. You can see staged datasets on the Ad Hoc cache page (**Manage \> Server Settings \> Ad Hoc Cache**), which displays their size and fetch time.
+When deciding to enable data staging, you should consider the nature of your data, its size, your database performance, and your access patterns to determine whether staging will help your views and reports run faster. You should also perform realistic usage tests to determine the amount of memory and size of data that give you the best performance. You can see staged datasets on the Ad Hoc cache page (**Manage &gt; Server Settings &gt; Ad Hoc Cache**), which displays their size and fetch time.
 
 To get the full benefit of data staging, you must ensure your server has enough physical memory allocated to the Java virtual machine so that the cached dataset stays in memory. The cache for data staging will use disk storage when memory is full, but response times will suffer. Therefore, you must apply data staging to carefully selected Domain Topics so that the resulting sum of all staged datasets does not overwhelm your cache or your Java virtual machine (JVM) memory limits.
 
@@ -84,9 +84,9 @@ When data staging is enabled on the server as shown above, Domain Topics offer t
 
 The two settings control data staging behavior:
 
-- Enable staging: Turns on data staging for this Domain Topic. All Ad Hoc Editor actions, Ad Hoc views, and Ad Hoc reports based on this Domain Topic will use the staged data in the cache.
+-   Enable staging: Turns on data staging for this Domain Topic. All Ad Hoc Editor actions, Ad Hoc views, and Ad Hoc reports based on this Domain Topic will use the staged data in the cache.
 
-- Refresh interval for cached data: Determines the refresh interval of the staged data. The default minimum interval is 10 minutes. The maximum interval you can specify is 7 days.
+-   Refresh interval for cached data: Determines the refresh interval of the staged data. The default minimum interval is 10 minutes. The maximum interval you can specify is 7 days.
 
 Each time the specified interval is reached, the server refreshes the staged data by querying the data source for the entire dataset again. The new staged data replaces the old staged data in the cache so that the staging lasts indefinitely, but the dataset is renewed. Staged data is refreshed asynchronously every interval by the server, independently of any access to the staged data by an Ad Hoc view or report.
 
@@ -100,10 +100,10 @@ Data staging stores a dataset based on the items and filters selected in the Dom
 
 When data staging has been turned on and views or reports have been created based on this Domain Topic, you can edit the Domain Topic as follows:
 
-- You can add items from the Domain to the Domain Topic. When you save the Domain Topic, the server immediately retrieves the new dataset with the new items and stores it in the cache.
+-   You can add items from the Domain to the Domain Topic. When you save the Domain Topic, the server immediately retrieves the new dataset with the new items and stores it in the cache.
 
-- You cannot remove items from the Domain Topic. If you try to remove items, the **Data Chooser** dialog will give an error. Look in the log file to find details about these dependencies.
+-   You cannot remove items from the Domain Topic. If you try to remove items, the **Data Chooser** dialog will give an error. Look in the log file to find details about these dependencies.
 
-- You cannot turn off data staging for this Domain Topic unless all Ad Hoc views and reports based on it have been deleted.
+-   You cannot turn off data staging for this Domain Topic unless all Ad Hoc views and reports based on it have been deleted.
 
-- You can change the refresh interval of the staged data. When you save the Domain Topic, the server immediately retrieves the dataset again and applies the new refresh interval in the future.
+-   You can change the refresh interval of the staged data. When you save the Domain Topic, the server immediately retrieves the dataset again and applies the new refresh interval in the future.

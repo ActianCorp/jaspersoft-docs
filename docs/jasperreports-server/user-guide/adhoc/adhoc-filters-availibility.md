@@ -7,20 +7,20 @@ description: "Input controls and filters can appear in the Editor and when a rep
 
 Input controls and filters can appear in the Editor and when a report runs:
 
-- Input controls can be set to be visible or invisible when you edit a view:
+-   Input controls can be set to be visible or invisible when you edit a view:
 
-  - Input controls set to **Always prompt** are displayed in the editor and always appear before the report is run.
-  - Input controls that are not set to **Always prompt** are always hidden in the editor and hidden when the report is run.
+    -   Input controls set to **Always prompt** are displayed in the editor and always appear before the report is run.
+    -   Input controls that are not set to **Always prompt** are always hidden in the editor and hidden when the report is run.
 
-- Filters defined in the Domain design are always hidden in the editor and when the report is run.
+-   Filters defined in the Domain design are always hidden in the editor and when the report is run.
 
-- Filters created in the Data Chooser can be locked or unlocked:
+-   Filters created in the Data Chooser can be locked or unlocked:
 
-  - Filters that are unlocked display filter information in the editor and are available from the **Options** button when the report is run.
-  - Filters that are locked display input controls in the editor when you see the view in display mode but are not available from the **Options** button when the report is run. Users can remove the filter while in the editor, allowing them to see all the data unfiltered when the report is run.
-  - You cannot change whether the filter is displayed after the report is created.
+    -   Filters that are unlocked display filter information in the editor and are available from the **Options** button when the report is run.
+    -   Filters that are locked display input controls in the editor when you see the view in display mode but are not available from the **Options** button when the report is run. Users can remove the filter while in the editor, allowing them to see all the data unfiltered when the report is run.
+    -   You cannot change whether the filter is displayed after the report is created.
 
-- Filters defined in the editor are always available in the Filters panel of the editor and from the **Options** button when the report is run.
+-   Filters defined in the editor are always available in the Filters panel of the editor and from the **Options** button when the report is run.
 
 When setting up input controls for a huge view that takes a long time to run, consider setting the view to **Always prompt**. Before a report is run, the Report Viewer prompts you to provide the input options**,** preventing the report from running with the default input options.
 
@@ -47,7 +47,7 @@ To determine whether an input control is visible
 
 To lock a filter
 
-1.  Click **Create** \> **Ad Hoc View**.
+1.  Click **Create** &gt; **Ad Hoc View**.
 
 2.  In the Select Data wizard, click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and browse to **Domains** to create a new view based on a Domain.
 

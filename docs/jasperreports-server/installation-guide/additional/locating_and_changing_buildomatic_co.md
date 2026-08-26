@@ -67,27 +67,27 @@ Buildomatic takes the JasperReports Server WAR file from the root of the `<js-in
 
 When you run the `deploy-webapp-`pro target, buildomatic unpacks the war archive into your application server and copies the needed database configuration files to their appropriate locations. For instance, in the case of Tomcat:
 
-- `<js-install/> ``jasperserver`` ``-pro`` .war`
+-   `<js-install/> ``jasperserver`` ``-pro`` .war`
 
-Unpacked and copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /*`
+    Unpacked and copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /*`
 
-- `<js-install>/buildomatic/build_conf/default/webapp/META-INF/context.xml`
+-   `<js-install>/buildomatic/build_conf/default/webapp/META-INF/context.xml`
 
-Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /META-INF/context.xml`
+    Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /META-INF/context.xml`
 
-- `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/classes/hibernate.properties`
+-   `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/classes/hibernate.properties`
 
-Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /WEB-INF/classes/hibernate.properties`
+    Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /WEB-INF/classes/hibernate.properties`
 
-- `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/js.quartz.properties`
+-   `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/js.quartz.properties`
 
-Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /WEB-INF/js.quartz.properties`
+    Copied to `<tomcat>/webapps/``jasperserver`` ``-pro`` /WEB-INF/js.quartz.properties`
 
-- `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/js.password-storage-config.properties`
+-   `<js-install>/buildomatic/build_conf/default/webapp/WEB-INF/js.password-storage-config.properties`
 
-Copied to `<tomcat>/webapps/jasperserver-pro/WEB-INF/js.password-storage-config.properties`
+    Copied to `<tomcat>/webapps/jasperserver-pro/WEB-INF/js.password-storage-config.properties`
 
-- `<js-install>/buildomatic/build_conf/db/postgres/jdbc/postgresql-42.2.5.jar`
+-   `<js-install>/buildomatic/build_conf/db/postgres/jdbc/postgresql-42.2.5.jar`
 
 Copied to `<tomcat>/lib`
 

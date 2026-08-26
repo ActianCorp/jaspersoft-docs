@@ -9,12 +9,12 @@ If you have searched through our available resources and still have questions re
 
 To submit a case, log into the [Online Customer Portal](http://support.jaspersoft.com/) (<http://support.jaspersoft.com/>), hover over the “Cases” link in the navigation bar, and click “Submit a Case”. You'll see a simple form. In your case description, please be sure to specify the following:
 
-- The Jaspersoft product and version you're using (NOTE: update this information on the My Company’s Deployment Information page whenever possible)
-- An appropriate Severity Level, as described [HERE](http://www.jaspersoft.com/support-definitions): (<http://www.jaspersoft.com/support-definitions>)
-- Details about your environment (Operating System, Java version, application server, database, etc.)
-- The exact steps Support must follow to reproduce the reported issue
-- Information about any changes that were applied to your environment or application when the issue first appeared
-- Attach any relevant files (ex: your JRXML template and/or your application log file\*, stack trace, etc.)
+-   The Jaspersoft product and version you're using (NOTE: update this information on the My Company’s Deployment Information page whenever possible)
+-   An appropriate Severity Level, as described [HERE](http://www.jaspersoft.com/support-definitions): (<http://www.jaspersoft.com/support-definitions>)
+-   Details about your environment (Operating System, Java version, application server, database, etc.)
+-   The exact steps Support must follow to reproduce the reported issue
+-   Information about any changes that were applied to your environment or application when the issue first appeared
+-   Attach any relevant files (ex: your JRXML template and/or your application log file\*, stack trace, etc.)
 
 More recommendations for effective case preparation are available [HERE](http://www.jaspersoft.com/support-procedures): (<http://www.jaspersoft.com/support-procedures>)
 

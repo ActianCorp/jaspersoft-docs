@@ -13,55 +13,55 @@ To create a JDBC connection
 
 1.  Create the connection globally or locally:
 
-    - To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
-    - To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
+-   To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
 
-    The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
+    -   To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
 
-2.  From the list, select **Database JDBC connection** to open the **Data Adapter** dialog.
+        The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
 
-    |                                                          |
-    |----------------------------------------------------------|
-    | ![jdbc connection](../assets/images/jdbc-connection.png) |
-    | *Figure 1: Configuring a JDBC Connection*                |
+        1.  From the list, select **Database JDBC connection** to open the **Data Adapter** dialog.
 
-3.  Name the connection (use a significant name like `Mysql – Test`). This is the name that appears on the list of available connections when you create a report.
+            |                                                          |
+            |----------------------------------------------------------|
+            | ![jdbc connection](../assets/images/jdbc-connection.png) |
+            | *Figure 1: Configuring a JDBC Connection*                |
 
-4.  In the **JDBC Driver** field, specify the JDBC driver to use for your database connection. The drop-down displays the names of the most common JDBC drivers.
+        2.  Name the connection (use a significant name like `Mysql – Test`). This is the name that appears on the list of available connections when you create a report.
 
-    |                                                    |
-    |----------------------------------------------------|
-    | ![jdbc drivers](../assets/images/jdbc-drivers.png) |
-    | *Figure 2: JDBC Drivers List*                      |
+        3.  In the **JDBC Driver** field, specify the JDBC driver to use for your database connection. The drop-down displays the names of the most common JDBC drivers.
 
-    For the list of supported drivers, see the Jaspersoft Platform Support Guide . If a driver is not listed, you might need to download it from the official website and add it to the classpath as described in the following sections. See Using a JDBC Connection.
+            |                                                    |
+            |----------------------------------------------------|
+            | ![jdbc drivers](../assets/images/jdbc-drivers.png) |
+            | *Figure 2: JDBC Drivers List*                      |
 
-    !!! note
+            For the list of supported drivers, see the Jaspersoft Platform Support Guide . If a driver is not listed, you might need to download it from the official website and add it to the classpath as described in the following sections. See Using a JDBC Connection.
 
-        JasperReports Server includes the JDBC drivers for the following commercial databases: Oracle, MS SQLServer and DB2. In some cases, these drivers provide functionality not provided by the vendors' driver. However, there may be some differences in queries between the two drivers. You can use the drivers, or you can choose to install and use the driver supplied by the database vendor.
+            !!! note
 
-        If you upload your reports to JasperReports Server, make sure to use the same driver in both JasperReports Server and Jaspersoft Studio.
+                JasperReports Server includes the JDBC drivers for the following commercial databases: Oracle, MS SQLServer and DB2. In some cases, these drivers provide functionality not provided by the vendors' driver. However, there may be some differences in queries between the two drivers. You can use the drivers, or you can choose to install and use the driver supplied by the database vendor.
 
-5.  Enter the connection URL.
+                If you upload your reports to JasperReports Server, make sure to use the same driver in both JasperReports Server and Jaspersoft Studio.
 
-6.  Enter a username and password to access the database. If the password is empty, it is better if you specify that it be saved. You can choose to save the password in one of two ways:
+        4.  Enter the connection URL.
 
-    - Clear text: This is not secure, but can sometimes be convenient when working in a developer or staging environment.
-    - Eclipse secure storage: This is the correct option for security, but can be difficult to work with when testing and saving adapters. In addition, it can make it difficult to share adapters with other developers or deploy data adapters to JasperReports Server.
+        5.  Enter a username and password to access the database. If the password is empty, it is better if you specify that it be saved. You can choose to save the password in one of two ways:
 
-7.  After you have inserted all the data, click the **Test** button to verify the connection. If everything's okay, you see a message that the test was successful.
+    -   Clear text: This is not secure, but can sometimes be convenient when working in a developer or staging environment.
 
-8.  Click **OK** to exit the message.
+    -   Eclipse secure storage: This is the correct option for security, but can be difficult to work with when testing and saving adapters. In addition, it can make it difficult to share adapters with other developers or deploy data adapters to JasperReports Server.
 
-9.  Click **Finish** to create the connection.
+1.  After you have inserted all the data, click the **Test** button to verify the connection. If everything's okay, you see a message that the test was successful.
+2.  Click **OK** to exit the message.
+3.  Click **Finish** to create the connection.
 
 ## Troubleshooting a Database JDBC Connection
 
 When the tests fail, the most common exceptions are:
 
-- A `ClassNotFoundError` was generated.
-- The URL is not correct.
-- Parameters are not correct for the connection (database is not found, the username or password is wrong, and so on).
+-   A `ClassNotFoundError` was generated.
+-   The URL is not correct.
+-   Parameters are not correct for the connection (database is not found, the username or password is wrong, and so on).
 
 ### ClassNotFoundError
 
@@ -80,7 +80,7 @@ To add a resource to the Jaspersoft Studio classpath
 
 If you add a resource to the Jaspersoft Studio classpath, it is available to all data adapters. In addition to JARs, you can add variables, libraries, class folders, and external class folders. To add a jar to the Jaspersoft Studio classpath:
 
-1.  Click **Project \> Properties \> Java Build Path\>Libraries**, and click **Add JARs** or **Add External JARs**.
+1.  Click **Project &gt; Properties &gt; Java Build Path&gt;Libraries**, and click **Add JARs** or **Add External JARs**.
 2.  Browse to locate the jar you want to add.
 3.  Select the file that you want to add to the classpath.
 4.  Click **OK**.

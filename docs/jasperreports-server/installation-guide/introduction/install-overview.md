@@ -7,28 +7,28 @@ description: "You can install JasperReports Server either by running an executab
 
 This section includes:
 
-- Installation
-- Evaluation Licenses
-- Login
-- Starting and Stopping
+-   Installation
+-   Evaluation Licenses
+-   Login
+-   Starting and Stopping
 
 ## Installation
 
 You can install JasperReports Server either by running an executable installer or deploying a WAR file. For evaluations, we recommend the installer; for most production instances, we recommend the WAR file. Both the executable and the WAR file are available from [Jaspersoft Technical Support](https://www.jaspersoft.com/support) ; download:
 
-- ` `
+-   ` `
 
-  `js-jrs``_10.1.0`
+    `js-jrs``_10.1.0`
 
-  \_\<osType\>-\<arch\>.\<ext\>
+    \_&lt;osType&gt;-&lt;arch&gt;.&lt;ext&gt;
 
-- ` `
+-   ` `
 
-  `js-jrs``_10.1.0`
+    `js-jrs``_10.1.0`
 
-  \_bin.zip
+    \_bin.zip
 
-For more information, see the installation guide, which is found at \<`js-install` \>/docs/JasperReports-Server-Install-Guide.pdf.
+For more information, see the installation guide, which is found at &lt;`js-install` &gt;/docs/JasperReports-Server-Install-Guide.pdf.
 
 ### Binary Installer
 
@@ -36,7 +36,7 @@ To install JasperReports Server, you can use the binary installer, which is avai
 
 `js-jrs``_10.1.0`
 
-\_installer-\<osType\>-\<arch\>.\<ext\>
+\_installer-&lt;osType&gt;-&lt;arch&gt;.&lt;ext&gt;
 
 Double-click the installer and accept the default installation type to create a standard installation. Select the custom installation type to configure your instance to specify the application server and RDBMS to use, among other options. The installer can also be run from the command line.
 
@@ -70,7 +70,7 @@ To install
     |-------------------------------------|
     | ./js-install.sh (or js-install.bat) |
 
-3.  Then change the JAVA_OPT memory options for your application server following instructions from the installation guide. For example, under Linux with Tomcat running on JDK 1.8, add the following to the top of the \<tomcat\>/bin/setclasspath.sh file:
+3.  Then change the JAVA_OPT memory options for your application server following instructions from the installation guide. For example, under Linux with Tomcat running on JDK 1.8, add the following to the top of the &lt;tomcat&gt;/bin/setclasspath.sh file:
 
     <table>
     <colgroup>
@@ -86,9 +86,9 @@ To install
 
 4.  Next, copy your jasperserver.license to your application server user's home folder:
 
-|                                                                |
-|----------------------------------------------------------------|
-| cp \<js-install\>/jasperserver.license \<path-to-home-folder\> |
+|                                                                        |
+|------------------------------------------------------------------------|
+| cp &lt;js-install&gt;/jasperserver.license &lt;path-to-home-folder&gt; |
 
 ## Evaluation Licenses
 
@@ -142,7 +142,7 @@ This section describes how to start and stop the server if you installed using t
 
 ### Windows
 
-You can start and stop from the Windows menu: click **Programs \> JasperReports Server 10.1.0** **\> Start and Stop \> Start Service or Stop Service**.
+You can start and stop from the Windows menu: click **Programs &gt; JasperReports Server 10.1.0** **&gt; Start and Stop &gt; Start Service or Stop Service**.
 
 ### Linux
 

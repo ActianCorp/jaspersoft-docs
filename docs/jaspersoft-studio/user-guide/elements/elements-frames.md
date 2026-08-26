@@ -11,9 +11,9 @@ A frame can contain other frames, and so on, recursively. To add an element to a
 
 The advantages of using a frame to draw a border around a set of elements, with respect to using a simple rectangle element, are:
 
-- When you move a frame, all the elements contained in the frame move.
-- While using a rectangle to overlap some elements, the elements inside the rectangle are not treated as if they overlap (with respect to the frame), so you do not have problems when exporting in HTML (which does not support overlapped elements).
-- Finally, the frame automatically stretches according to its content, and the element ` position type` property of its elements refer to the frame itself, not to the band, making the design a bit easier to manage.
+-   When you move a frame, all the elements contained in the frame move.
+-   While using a rectangle to overlap some elements, the elements inside the rectangle are not treated as if they overlap (with respect to the frame), so you do not have problems when exporting in HTML (which does not support overlapped elements).
+-   Finally, the frame automatically stretches according to its content, and the element ` position type` property of its elements refer to the frame itself, not to the band, making the design a bit easier to manage.
 
 ## Sizing the Frame
 

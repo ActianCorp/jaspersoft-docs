@@ -9,6 +9,6 @@ During a manual WAR file installation to migrate from earlier versions of Jasper
 
 These errors were successfully resolved by adding the following lines to the `context.xml` file:
 
-- `jdbc/jasperserverSystemAnalytics`
+-   `jdbc/jasperserverSystemAnalytics`
 
-- `jdbc/jasperserverAuditAnalytics`
+-   `jdbc/jasperserverAuditAnalytics`

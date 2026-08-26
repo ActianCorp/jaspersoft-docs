@@ -36,13 +36,13 @@ $JAVA_HOME/bin/keytool -genkey -alias tomcat -keyalg RSA -keystore $CATALINA_HOM
 
 The basic install requires certain data. With the above commands, you are prompted for the data:
 
-- Enter two passwords twice. The default for both is “changeit”. If you use the default, be sure to set better, stronger passwords later.
-- Specify information about your organization, including your first and last name, your organization unit, and organization. The normal response for the first and last name is the domain of your server, such as jasperserver.mycompany.com. This identifies the organization that the certificate is issued *to*. For organization unit, enter your department or similar-sized unit; for organization, enter the company or corporation. These identify the organization that the certificate is issued *by*.
-- Keytool has numerous switches. For more information about it, see the [Java documentation](http://download.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html).
+-   Enter two passwords twice. The default for both is “changeit”. If you use the default, be sure to set better, stronger passwords later.
+-   Specify information about your organization, including your first and last name, your organization unit, and organization. The normal response for the first and last name is the domain of your server, such as jasperserver.mycompany.com. This identifies the organization that the certificate is issued *to*. For organization unit, enter your department or similar-sized unit; for organization, enter the company or corporation. These identify the organization that the certificate is issued *by*.
+-   Keytool has numerous switches. For more information about it, see the [Java documentation](http://download.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html).
 
 ## Enabling SSL in the Web Server
 
-Once the certificate and key are saved in the Tomcat keystore, you need to configure your secure socket in the \$CATALINA_BASE/conf/server.xml file, where \$CATALINA_BASE represents the base directory for the Tomcat instance. For your convenience, sample `<Connector>` elements for two common SSL connectors (blocking and non-blocking) are included in the default server.xml file that is installed with Tomcat. They are similar to the code below, with the connector elements commented out, as shown.
+Once the certificate and key are saved in the Tomcat keystore, you need to configure your secure socket in the $CATALINA_BASE/conf/server.xml file, where $CATALINA_BASE represents the base directory for the Tomcat instance. For your convenience, sample `<Connector>` elements for two common SSL connectors (blocking and non-blocking) are included in the default server.xml file that is installed with Tomcat. They are similar to the code below, with the connector elements commented out, as shown.
 
 ``` text
 <!-- Define a SSL HTTP/1.1 Connector on port 8443
@@ -64,16 +64,16 @@ The default protocol is HTTP 1.1. The default port is 8443. The port is the TCP/
 
 At this point, the JasperReports Server web application runs on either protocol (HTTP and HTTPS). You can test the protocols in your web browser.
 
-| HTTP:  | http://localhost:8080/jasperserver\[-pro\]/          |
-|--------|------------------------------------------------------|
-| HTTPS: | https://localhost:\<SSLport\>./jasperserver\[-pro\]/ |
+| HTTP:  | http://localhost:8080/jasperserver\[-pro\]/              |
+|--------|----------------------------------------------------------|
+| HTTPS: | https://localhost:&lt;SSLport&gt;./jasperserver\[-pro\]/ |
 
 The next step then is to configure the web application to enforce SSL as the *only* protocol allowed. Otherwise, requests coming through HTTP are still serviced.
 
-Edit the file \<js-webapp\>/WEB-INF/web.xml. Near the end of the file, make the following changes inside the first `<security-constraint>` tag:
+Edit the file &lt;js-webapp&gt;/WEB-INF/web.xml. Near the end of the file, make the following changes inside the first `<security-constraint>` tag:
 
-- Comment out the line `<transport-guarantee>NONE</transport-guarantee>`.
-- Uncomment the line `<transport-guarantee>CONFIDENTIAL</transport-guarantee>`.
+-   Comment out the line `<transport-guarantee>NONE</transport-guarantee>`.
+-   Uncomment the line `<transport-guarantee>CONFIDENTIAL</transport-guarantee>`.
 
 Your final code should be like the following:
 

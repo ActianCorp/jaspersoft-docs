@@ -17,18 +17,18 @@ Double-click the installer and accept the default installation type to create a 
 
 This chapter includes the following sections:
 
-- [Installation Requirements](install-requirements.md)
+-   [Installation Requirements](install-requirements.md)
 
-- [Choosing Installer Components](choosing_components.md)
+-   [Choosing Installer Components](choosing_components.md)
 
-- [Installing Sample Data](installing_sample_data.md)
+-   [Installing Sample Data](installing_sample_data.md)
 
-- [Installation](installation.md)
+-   [Installation](installation.md)
 
-- [Post-Installation Steps](post_installation_steps.md)
+-   [Post-Installation Steps](post_installation_steps.md)
 
-- [Starting and Stopping JasperReports Server](starting-server.md)
+-   [Starting and Stopping JasperReports Server](starting-server.md)
 
-- [Logging into JasperReports Server](logging_into_jasperreports_server.md)
+-   [Logging into JasperReports Server](logging_into_jasperreports_server.md)
 
-- [Uninstalling JasperReports Server](uninstalling.md)
+-   [Uninstalling JasperReports Server](uninstalling.md)

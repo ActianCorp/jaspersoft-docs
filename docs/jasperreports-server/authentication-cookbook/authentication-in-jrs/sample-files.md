@@ -5,15 +5,15 @@ description: "All Spring Security configuration files are located in the JasperR
 
 # Locating and Working With Sample Files
 
-All Spring Security configuration files are located in the JasperReports Server web application deployed in an application server. In general, all of the sample files for external authentication are located in the \<js‑install\>/samples/externalAuth-sample-config directory. Unless otherwise specified, all file names mentioned in this guide are located in this directory.
+All Spring Security configuration files are located in the JasperReports Server web application deployed in an application server. In general, all of the sample files for external authentication are located in the &lt;js‑install&gt;/samples/externalAuth-sample-config directory. Unless otherwise specified, all file names mentioned in this guide are located in this directory.
 
 ## Deploying Configuration Files
 
 To configure JasperReports Server to work with external authentication, you need to create and deploy an external configuration file as follows:
 
-1.  Create or copy a file and name it in the form applicationContext-\<customName\>.xml, for example, applicationContext-externalAuth-LDAP.xml. JasperReports Server includes sample files for some implementations, for example, LDAP, CAS, and an external JDBC database, in the \<js‑install\>/samples/externalAuth-sample-config/ directory.
+1.  Create or copy a file and name it in the form applicationContext-&lt;customName&gt;.xml, for example, applicationContext-externalAuth-LDAP.xml. JasperReports Server includes sample files for some implementations, for example, LDAP, CAS, and an external JDBC database, in the &lt;js‑install&gt;/samples/externalAuth-sample-config/ directory.
 2.  Edit the file and create and configure the bean properties correctly for your deployment, as described in the following sections.
-3.  Place the correctly configured applicationContext-\<customName\>.xml file in the \<js-webapp\>/WEB-INF directory.
+3.  Place the correctly configured applicationContext-&lt;customName&gt;.xml file in the &lt;js-webapp&gt;/WEB-INF directory.
 
 ## WEB-INF Directory Location
 
@@ -68,5 +68,5 @@ delete <path\filename>
 
 In this sample:
 
-- `<path/filename>` refers to the relative path and name of the file to modify within the WAR file
-- `-pro` is part of the WAR file name if you installed a commercial edition of JasperReports Server.
+-   `<path/filename>` refers to the relative path and name of the file to modify within the WAR file
+-   `-pro` is part of the WAR file name if you installed a commercial edition of JasperReports Server.

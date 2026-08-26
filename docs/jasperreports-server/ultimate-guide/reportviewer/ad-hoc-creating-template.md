@@ -9,11 +9,11 @@ Report templates customize the look of the reports you create from Ad Hoc views.
 
 The following example shows how to create a template using the following:
 
-- Export the default report template from JasperReports Server. This is usually the Actual Size report template, which is used in this example.
+-   Export the default report template from JasperReports Server. This is usually the Actual Size report template, which is used in this example.
 
-- Edit the report template in Jaspersoft Studio to add a page header with a company logo and the current date and a page footer with the page number. This example uses the `logo.png` sample image from the JasperReports Server's repository as part of the updated template.
+-   Edit the report template in Jaspersoft Studio to add a page header with a company logo and the current date and a page footer with the page number. This example uses the `logo.png` sample image from the JasperReports Server's repository as part of the updated template.
 
-- Import the edited report template as a new template in JasperReports Server and use it to create a report from an Ad Hoc view.
+-   Import the edited report template as a new template in JasperReports Server and use it to create a report from an Ad Hoc view.
 
 !!! note
 
@@ -23,7 +23,7 @@ To export a template in JasperReports Server
 
 1.  Log in as an admin to JasperReports Server.
 
-2.  Click **View \> Repository** and browse to **Public \> Templates**.
+2.  Click **View &gt; Repository** and browse to **Public &gt; Templates**.
 
 3.  Right-click on the Actual Size report template and select **Export**. The **Export Resources** dialog appears.
 
@@ -45,7 +45,7 @@ To export a template in JasperReports Server
 
 10. Move the template file to your MyReports folder in your Jaspersoft Studio workspace.
 
-11. In JasperReports Server browse to **Public \> Samples \> Resources \> Images**.
+11. In JasperReports Server browse to **Public &gt; Samples &gt; Resources &gt; Images**.
 
 12. Right-click the logo.png file and select **Properties** from the context menu.
 
@@ -59,7 +59,7 @@ To edit a report template in Jaspersoft Studio
 
 1.  Open Jaspersoft Studio.
 
-2.  Go to **File \> Open File**.
+2.  Go to **File &gt; Open File**.
 
 3.  Browse to your My Reports folder, select the template file, and click **Open**. Jaspersoft Studio opens the template in the **Design** tab.
 
@@ -95,8 +95,8 @@ To edit a report template in Jaspersoft Studio
 
 To import a template and create a report in JasperReports Server
 
-1.  In JasperReports Server, click **View \> Repository** and browse to **Public \> Templates**.
-2.  Right-click the **Templates** folder and select **Add Resource \> File \> JRXML** from the context menu. The **Add File** page appears.
+1.  In JasperReports Server, click **View &gt; Repository** and browse to **Public &gt; Templates**.
+2.  Right-click the **Templates** folder and select **Add Resource &gt; File &gt; JRXML** from the context menu. The **Add File** page appears.
 3.  Enter the required information for the template. Click **Choose File** to locate the report template on your file system.
 4.  When done, click **Submit**. The new template appears in the Templates folder in the repository.
 5.  On the JasperReports Server Home page, click **Create** in the Reports block. The **Create Report** wizard opens.

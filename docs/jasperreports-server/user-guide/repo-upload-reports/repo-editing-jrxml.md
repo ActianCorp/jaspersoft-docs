@@ -9,13 +9,13 @@ After you add a report unit to the repository, you can edit any of its elements,
 
 To edit the complex report example
 
-1.  Log into the server as an administrator and select **View \> Repository**
+1.  Log into the server as an administrator and select **View &gt; Repository**
 
     !!! note
 
         If you log in as a user, you can edit a report that you created. This example requires an administrator login because an administrator created the complex report.
 
-2.  Search or browse the repository to locate the report. In this example, go to **Organization \> Reports**.
+2.  Search or browse the repository to locate the report. In this example, go to **Organization &gt; Reports**.
 
 3.  Right-click the New Complex Report and select **Edit** from the context menu. The JasperReport wizard opens the report unit.
 

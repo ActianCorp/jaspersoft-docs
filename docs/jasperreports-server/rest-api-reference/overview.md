@@ -15,31 +15,38 @@ Historically, the REST API is considered a web service, and JasperReports Server
 
 This chapter includes the following sections:
 
-- List of Services
-- Sending REST Requests from a Browser
-- HTTP Response Codes
-- Deprecated Web Services
+-   List of Services
+-   Sending REST Requests from a Browser
+-   HTTP Response Codes
+-   Deprecated Web Services
 
 ## List of Services
 
 The REST API of JasperReports Server responds to HTTP requests from client applications, in particular the following methods (sometimes called verbs):
 
-- GET to list, search and acquire information about server resources.
-- POST to create new resources and execute reports.
-- PUT to modify existing resources.
-- DELETE to remove resources.
+-   GET to list, search and acquire information about server resources.
 
-As with any RESTful service, not all methods (GET, PUT, POST, and DELETE) are supported on every service. The URLs usually include a path to the resource being acted upon, as well as any parameters that are accepted by the method. For example, to search for input control resources in the repository, your application would send the following HTTP request:
+-   POST to create new resources and execute reports.
 
-GET http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/resources?type=inputControl
+-   PUT to modify existing resources.
 
-In all URLs in this API Reference:
+-   DELETE to remove resources.
 
-- `<host>` is the name of the computer hosting JasperReports Server
-- `<port>` is the port you specified during installation
-- `jasperserver[-pro]` indicates that the service is available in both Community and Commercial editions.
-- `jasperserver-pro` indicates that the service is available only in Commercial editions.
-- The context name (by default jasperserver or jasperserver-pro) may be customized in your specific installation of JasperReports Server
+    As with any RESTful service, not all methods (GET, PUT, POST, and DELETE) are supported on every service. The URLs usually include a path to the resource being acted upon, as well as any parameters that are accepted by the method. For example, to search for input control resources in the repository, your application would send the following HTTP request:
+
+    GET http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/resources?type=inputControl
+
+    In all URLs in this API Reference:
+
+-   `<host>` is the name of the computer hosting JasperReports Server
+
+-   `<port>` is the port you specified during installation
+
+-   `jasperserver[-pro]` indicates that the service is available in both Community and Commercial editions.
+
+-   `jasperserver-pro` indicates that the service is available only in Commercial editions.
+
+-   The context name (by default jasperserver or jasperserver-pro) may be customized in your specific installation of JasperReports Server
 
 The REST services are available at the following URLs:
 
@@ -118,7 +125,7 @@ For progammers creating a client application, the reference chapters in this gui
 
 For tools that can parse the Web Application Description Language (WADL), the following URL gives a machine-readable XML description of all supported REST v2 services:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/application.wadl
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/application.wadl
 
 ## Sending REST Requests from a Browser
 

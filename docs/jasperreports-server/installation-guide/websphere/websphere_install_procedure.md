@@ -41,18 +41,18 @@ To prepare JasperReports Server files
 
     1.  Copy the `<dbType>_master.properties` file for your database from `sample_conf` and paste it to `buildomatic`:
 
-        - `cd <js-install>/buildomatic`
-        - Copy from: `<js-install>/buildomatic/sample_conf`
-        - Paste to: `<js-install>/buildomatic`<br>
-          For example, copy `sample_conf/postgresql_master.properties` to `buildomatic`.
+        -   `cd <js-install>/buildomatic`
+        -   Copy from: `<js-install>/buildomatic/sample_conf`
+        -   Paste to: `<js-install>/buildomatic`<br>
+            For example, copy `sample_conf/postgresql_master.properties` to `buildomatic`.
 
     2.  Rename the file that you copied to `default_master.properties`.
 
     3.  Edit the `default_master.properties` file:
 
-        - Set `appServerType` to `skipAppServerCheck`.
-        - Change `dbUsername`, `dbPassword`, and `dbHost` to the appropriate settings for your database.
-        - If you are using a port other than the default for your database, or if you have installed the database on a remote machine, change the `dbPort` field under Custom Properties to the appropriate settings.
+        -   Set `appServerType` to `skipAppServerCheck`.
+        -   Change `dbUsername`, `dbPassword`, and `dbHost` to the appropriate settings for your database.
+        -   If you are using a port other than the default for your database, or if you have installed the database on a remote machine, change the `dbPort` field under Custom Properties to the appropriate settings.
 
         For the Split installation, configure the additional settings in the `default_master.properties` file as described in [Additional Buildomatic Configuration for Split Installation Upgrade](../../upgrade-guide/jrs-install-guide/introduction/installation_types.md).
 
@@ -131,20 +131,20 @@ Configure CSRFGuard, Hibernate, and Quartz settings in the WAR file
 
     1.  Extract the `Websphere.jrs.csrfguard.properties` file using the following command:
 
-    ``` bash
-    cd <js-install>
-    "%JAVA_HOME%/bin/jar" xf jasperserver-pro.war WEB-INF/csrf/Websphere.jrs.csrfguard.properties
-    ```
+        ``` bash
+        cd <js-install>
+        "%JAVA_HOME%/bin/jar" xf jasperserver-pro.war WEB-INF/csrf/Websphere.jrs.csrfguard.properties
+        ```
 
-    This creates the `WEB-INF/csrf` folder in the current location and places the extracted file there.
+        This creates the `WEB-INF/csrf` folder in the current location and places the extracted file there.
 
-2.  Rename the file from `Websphere.jrs.csrfguard.properties` to `jrs.csrfguard.properties` using the following command:
+    2.  Rename the file from `Websphere.jrs.csrfguard.properties` to `jrs.csrfguard.properties` using the following command:
 
-    ``` bash
-    mv ./WEB-INF/csrf/Websphere.jrs.csrfguard.properties ./WEB-INF/csrf/jrs.csrfguard.properties
-    ```
+        ``` bash
+        mv ./WEB-INF/csrf/Websphere.jrs.csrfguard.properties ./WEB-INF/csrf/jrs.csrfguard.properties
+        ```
 
-3.  Extract and rename the `web-version24.xml` file using the commands below:
+2.  Extract and rename the `web-version24.xml` file using the commands below:
 
     ``` bash
     cd <js-install>
@@ -186,40 +186,40 @@ Configure CSRFGuard, Hibernate, and Quartz settings in the WAR file
 
     Do the same for the Supermart, Foodmart, Audit, System Analytics and Audit Analytics databases.
 
-4.  Enable Hibernate persistence:
+3.  Enable Hibernate persistence:
 
     1.  Extract the `applicationContext.xml` file using the commands below:
 
-    ``` bash
-    cd <js-install>
-    "%JAVA_HOME%/bin/jar" xf jasperserver-pro.war WEB-INF/applicationContext.xml
-    ```
+        ``` bash
+        cd <js-install>
+        "%JAVA_HOME%/bin/jar" xf jasperserver-pro.war WEB-INF/applicationContext.xml
+        ```
 
-5.  Uncomment the following line:
+    2.  Uncomment the following line:
 
-    ``` html
-    <!--Hibernate-Validator Websphere fix-->
-       <bean id="HibernatePersistenceResolverWebsphereFix"
-      class="com.jaspersoft.hibernate.resolver.HibernatePersistenceProviderResolver"
-      init-method="register"/>
-    ```
+        ``` html
+        <!--Hibernate-Validator Websphere fix-->
+           <bean id="HibernatePersistenceResolverWebsphereFix"
+          class="com.jaspersoft.hibernate.resolver.HibernatePersistenceProviderResolver"
+          init-method="register"/>
+        ```
 
-6.  In the same file, find the `profileAttributesResolver` bean:
+    3.  In the same file, find the `profileAttributesResolver` bean:
 
-    ``` xml
-    <bean id="profileAttributesResolver"
-      class="com.jaspersoft.jasperserver.api.metadata.user.service.impl.ProfileAttributesResolverImpl">
-    ```
+        ``` xml
+        <bean id="profileAttributesResolver"
+          class="com.jaspersoft.jasperserver.api.metadata.user.service.impl.ProfileAttributesResolverImpl">
+        ```
 
-    Add `depends-on="HibernatePersistenceResolverWebsphereFix` to it:
+        Add `depends-on="HibernatePersistenceResolverWebsphereFix` to it:
 
-    ``` xml
-    <bean id="profileAttributesResolver"
-      class="com.jaspersoft.jasperserver.api.metadata.user.service.impl.ProfileAttributesResolverImpl"
-      depends-on="HibernatePersistenceResolverWebsphereFix">
-    ```
+        ``` xml
+        <bean id="profileAttributesResolver"
+          class="com.jaspersoft.jasperserver.api.metadata.user.service.impl.ProfileAttributesResolverImpl"
+          depends-on="HibernatePersistenceResolverWebsphereFix">
+        ```
 
-7.  Copy the already configured files for `hibernate.properties` and `js.quartz.properties` to the `WEB-INF` folder.
+4.  Copy the already configured files for `hibernate.properties` and `js.quartz.properties` to the `WEB-INF` folder.
 
     (Buildomatic configured these files for your database type in the steps above.)
 
@@ -235,7 +235,7 @@ Configure CSRFGuard, Hibernate, and Quartz settings in the WAR file
 
     Copy the `../buildomatic/keystore.init.properties` file needs to the `../WEB-INF/classes` directory.
 
-8.  Edit the scheduler URI port value for WebSphere in the `js.quartz.properties`:
+5.  Edit the scheduler URI port value for WebSphere in the `js.quartz.properties`:
 
     Edit `js.quartz.properties`:
 
@@ -247,9 +247,9 @@ Configure CSRFGuard, Hibernate, and Quartz settings in the WAR file
 
     `report.scheduler.web.deployment.uri=http://localhost:9080/jasperserver-pro`
 
-9.  If you want to configure JasperReports Server to automatically schedule and email reports, enter your mail server information in the `js.quartz.properties` file. Modify all `report.scheduler.mail.sender.*` properties for your mail server.
+6.  If you want to configure JasperReports Server to automatically schedule and email reports, enter your mail server information in the `js.quartz.properties` file. Modify all `report.scheduler.mail.sender.*` properties for your mail server.
 
-10. Now that you have modified/updated the individual configuration files, you must replace them in the WAR file archive using the following commands.
+7.  Now that you have modified/updated the individual configuration files, you must replace them in the WAR file archive using the following commands.
 
     ``` bash
     cd <js-install>
@@ -259,14 +259,14 @@ Configure CSRFGuard, Hibernate, and Quartz settings in the WAR file
     "%JAVA_HOME%\bin\jar" uf jasperserver-pro.war WEB-INF/applicationContext.xml
     ```
 
-11. If you have modified the `web.xml` file, replace that file in the WAR file archive using the following additional commands.
+8.  If you have modified the `web.xml` file, replace that file in the WAR file archive using the following additional commands.
 
     ``` bash
     cd <js-install>
     "%JAVA_HOME%\bin\jar" uf jasperserver-pro.war WEB-INF/web.xml
     ```
 
-12. Enter the following additional commands:
+9.  Enter the following additional commands:
 
     ``` bash
     cd <js-install>
@@ -279,395 +279,399 @@ Configure CSRFGuard, Hibernate, and Quartz settings in the WAR file
     zip -d jasperserver-pro.war WEB-INF/lib/batik\*
     ```
 
-13. Add the latest `batik-all.jar` from Websphere:
+10. Add the latest `batik-all.jar` from Websphere:
 
     1.  Find the jar using the following command:
 
-    ``` text
-    find /opt/IBM/ -name "batik*.*"
-    ```
+        ``` text
+        find /opt/IBM/ -name "batik*.*"
+        ```
 
-14. Copy the file into a lib directory in the `jasperserver-pro.war` file, for example:
+    2.  Copy the file into a lib directory in the `jasperserver-pro.war` file, for example:
 
-    ``` bash
-    cd <js-install>
-    mkdir -p WEB-INF/lib
-    cp /opt/IBM/WebSphere/AppServer/systemApps/isclite.ear/lib/batik-all.jar WEB-INF/lib
-    "%JAVA_HOME%\bin\jar" uf jasperserver-pro.war WEB-INF/lib/batik-all.jar
-    ```
+        ``` bash
+        cd <js-install>
+        mkdir -p WEB-INF/lib
+        cp /opt/IBM/WebSphere/AppServer/systemApps/isclite.ear/lib/batik-all.jar WEB-INF/lib
+        "%JAVA_HOME%\bin\jar" uf jasperserver-pro.war WEB-INF/lib/batik-all.jar
+        ```
 
-15. Clean up your file system by deleting the `WEB-INF` directory that you created along with the edited files it contains.
+11. Clean up your file system by deleting the `WEB-INF` directory that you created along with the edited files it contains.
 
 ## Configuring a JDBC Provider in WebSphere
 
 To configure a JDBC Provider in WebSphere
 
-1.  Launch the WebSphere Administrative Console and navigate to **Resources \> JDBC \> JDBC Providers**.
+1.  Launch the WebSphere Administrative Console and navigate to **Resources &gt; JDBC &gt; JDBC Providers**.
 
 2.  On the **JDBC providers** page, click the **Guided Activity** link at the top of the **JDBC Providers** page and follow the Integrated Solutions Console instructions:
 
     1.  Configure credentials for a secure database:
 
-    - Use the J2C authentication aliases panel to create a new authenticated user.
-    - In Global Security, click **New** and enter the user alias, user ID, and password. The following table shows the credentials that WebSphere uses to access the database.
-
-    |            | Alias               | Example User ID | Example Password |
-    |------------|---------------------|-----------------|------------------|
-    | PostgreSQL | postgresql_jasperdb | postgres        | postgres         |
-    | MySQL      | mysql_jasperdb      | root            | password         |
-    | Oracle     | jasperserver_user   | jasperserver    | password         |
-    | DB2        | db2admin_user       | db2inst1        | password         |
-    | SQL Server | jasperserver_user   | sa              | sa               |
-
-    J2C Authentication Alias Settings
-
-3.  Connect to a database panel. From the Scope drop-down, choose **`Node:<node_name>,Server=<server_name>`**
-
-4.  Click the **New** button to create a new JDBC Provider.
-
-5.  Select your database type:
-
-    - If you are using PostgreSQL or MySQL — select User-defined.
-    - If you want to use the JDBC driver built and distributed by the MySQL project, see [MySQL Example](../additional/jdbc-driver.md)
-    - If you are using the DB2, Oracle, or SQL Server — select the appropriate database.
+-   Use the J2C authentication aliases panel to create a new authenticated user.
+
+    -   In Global Security, click **New** and enter the user alias, user ID, and password. The following table shows the credentials that WebSphere uses to access the database.
+
+        |            | Alias               | Example User ID | Example Password |
+        |------------|---------------------|-----------------|------------------|
+        | PostgreSQL | postgresql_jasperdb | postgres        | postgres         |
+        | MySQL      | mysql_jasperdb      | root            | password         |
+        | Oracle     | jasperserver_user   | jasperserver    | password         |
+        | DB2        | db2admin_user       | db2inst1        | password         |
+        | SQL Server | jasperserver_user   | sa              | sa               |
+
+        J2C Authentication Alias Settings
+
+        1.  Connect to a database panel. From the Scope drop-down, choose **`Node:<node_name>,Server=<server_name>`**
+
+            1.  Click the **New** button to create a new JDBC Provider.
+            2.  Select your database type:
 
-6.  Select or enter these options. Your options depend on your database type.
+        -   If you are using PostgreSQL or MySQL — select User-defined.
 
-    <table>
-    <colgroup>
-    <col style="width: 33%" />
-    <col style="width: 33%" />
-    <col style="width: 33%" />
-    </colgroup>
-    <thead>
-    <tr>
-    <th>Database type</th>
-    <th>Implementation class name or type</th>
-    <th>Name</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td><p>User-defined (PostgreSQL)</p></td>
-    <td><p><code>org.postgresql.jdbc2.optional.ConnectionPool</code></p></td>
-    <td><p>PostgreSQL JDBC Provider</p></td>
-    </tr>
-    <tr>
-    <td>User-defined<br />
-    (MySQL)</td>
-    <td><code>org.mariadb.jdbc.MySQLDataSource</code></td>
-    <td><p>MySQL JDBC Provider</p></td>
-    </tr>
-    <tr>
-    <td><p>User-defined<br />
-    (MySQL)</p></td>
-    <td><p><code>com.mysql.jdbc.jdbc2.optional</code>.<br />
-      <code>MysqlConnectionPoolDataSource</code></p></td>
-    <td><p>MySQL JDBC Provider</p></td>
-    </tr>
-    <tr>
-    <td><p>DB2 Universal JDBC Driver Provider</p></td>
-    <td><p>Connection pool data source</p></td>
-    <td><p>DB2 Universal JDBC Driver Provider</p></td>
-    </tr>
-    <tr>
-    <td><p>Oracle</p></td>
-    <td><p>Connection pool data source</p></td>
-    <td><p>Oracle JDBC Driver</p></td>
-    </tr>
-    <tr>
-    <td><p>SQL Server</p></td>
-    <td><p>Connection pool data source</p></td>
-    <td><p>Microsoft SQL Server JDBC Driver</p></td>
-    </tr>
-    </tbody>
-    </table>
+        -   If you want to use the JDBC driver built and distributed by the MySQL project, see [MySQL Example](../additional/jdbc-driver.md)
 
-7.  Click `Next` and enter the database classpath information for the JDBC provider.
+        -   If you are using the DB2, Oracle, or SQL Server — select the appropriate database.
 
-    1.  For PostgreSQL, MySQL, Oracle, SQL Server, and DB2, enter the following:
+            1.  Select or enter these options. Your options depend on your database type.
 
-    `<js-install>\buildomatic\conf_source\db\<your_database>\jdbc\`
+                <table>
+                <colgroup>
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                <col style="width: 33%" />
+                </colgroup>
+                <thead>
+                <tr>
+                <th>Database type</th>
+                <th>Implementation class name or type</th>
+                <th>Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><p>User-defined (PostgreSQL)</p></td>
+                <td><p><code>org.postgresql.jdbc2.optional.ConnectionPool</code></p></td>
+                <td><p>PostgreSQL JDBC Provider</p></td>
+                </tr>
+                <tr>
+                <td>User-defined<br />
+                (MySQL)</td>
+                <td><code>org.mariadb.jdbc.MySQLDataSource</code></td>
+                <td><p>MySQL JDBC Provider</p></td>
+                </tr>
+                <tr>
+                <td><p>User-defined<br />
+                (MySQL)</p></td>
+                <td><p><code>com.mysql.jdbc.jdbc2.optional</code>.<br />
+                  <code>MysqlConnectionPoolDataSource</code></p></td>
+                <td><p>MySQL JDBC Provider</p></td>
+                </tr>
+                <tr>
+                <td><p>DB2 Universal JDBC Driver Provider</p></td>
+                <td><p>Connection pool data source</p></td>
+                <td><p>DB2 Universal JDBC Driver Provider</p></td>
+                </tr>
+                <tr>
+                <td><p>Oracle</p></td>
+                <td><p>Connection pool data source</p></td>
+                <td><p>Oracle JDBC Driver</p></td>
+                </tr>
+                <tr>
+                <td><p>SQL Server</p></td>
+                <td><p>Connection pool data source</p></td>
+                <td><p>Microsoft SQL Server JDBC Driver</p></td>
+                </tr>
+                </tbody>
+                </table>
 
-    For example, enter:
+            2.  Click `Next` and enter the database classpath information for the JDBC provider.
 
-    `C:\`
+                1.  For PostgreSQL, MySQL, Oracle, SQL Server, and DB2, enter the following:
 
-    `js-jrs``_10.1.0`
+                    `<js-install>\buildomatic\conf_source\db\<your_database>\jdbc\`
 
-    \_bin\buildomatic\conf_source\db\postgresql\jdbc\postgresql-42.2.5.jar
+                    For example, enter:
 
-    Alternatively, you can copy the jar to a location in your WebSphere deployment and specify that location for the JDBC driver path.
+                    `C:\`
 
-    !!! note
+                    `js-jrs``_10.1.0`
 
-        If JasperReports Server is deployed on the same host as DB2, delete the following file to avoid conflicts: `<db2>/SQLLIB/java/db2jcc.jar`
+                    \_bin\\buildomatic\\conf_source\\db\\postgresql\\jdbc\\postgresql-42.2.5.jar
 
-8.  To ensure you have full support for import/export from the command line, copy your JDBC driver to the following location. If you are not using the command line for import/export, you can skip this step:
+                    Alternatively, you can copy the jar to a location in your WebSphere deployment and specify that location for the JDBC driver path.
 
-    |       |                                                                 |
-    |-------|-----------------------------------------------------------------|
-    | from: | `<js-install>\buildomatic\conf_source\db\<your_database>\jdbc\` |
-    | to:   | `<js-install>\buildomatic\conf_source\iePro\lib`                |
+                    !!! note
 
-9.  Click **Next** to proceed to the next step.
+                        If JasperReports Server is deployed on the same host as DB2, delete the following file to avoid conflicts: `<db2>/SQLLIB/java/db2jcc.jar`
 
-10. Review the JDBC provider information that you entered and click **Finish**.
+            3.  To ensure you have full support for import/export from the command line, copy your JDBC driver to the following location. If you are not using the command line for import/export, you can skip this step:
 
-To define the jasperserver JDBC data source and expose it through JNDI
+                |       |                                                                 |
+                |-------|-----------------------------------------------------------------|
+                | from: | `<js-install>\buildomatic\conf_source\db\<your_database>\jdbc\` |
+                | to:   | `<js-install>\buildomatic\conf_source\iePro\lib`                |
 
-1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
+            4.  Click **Next** to proceed to the next step.
 
-    !!! note
+            5.  Review the JDBC provider information that you entered and click **Finish**.
 
-        To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md) .
+            To define the jasperserver JDBC data source and expose it through JNDI
 
-2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
+            1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
 
-3.  To create a new data source, click **New**. The **New Data Source** wizard appears.
+                !!! note
 
-4.  Enter the data source name: `jasperserver`
+                    To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md) .
 
-5.  Enter the JNDI name: `jdbc/jasperserver`
+            2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
 
-6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
+            3.  To create a new data source, click **New**. The **New Data Source** wizard appears.
 
-7.  Click **Next** and accept the default helper class (`com.ibm.websphere.rsadapter.GenericDataStoreHelper`). Select the checkbox to use this data source in container managed persistence (CMP).
+            4.  Enter the data source name: `jasperserver`
 
-8.  Click **Next** and select the Setup security aliases, as shown in the following table.
+            5.  Enter the JNDI name: `jdbc/jasperserver`
 
-    | Field Name                             | PostgreSQL Value        |
-    |----------------------------------------|-------------------------|
-    | Component-managed authentication alias | `postgresql_jasperdb`   |
-    | Mapping configuration alias            | DefaultPrincipalMapping |
-    | Container-managed authentication alias | `postgresql_jasperdb`   |
+            6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
 
-9.  Click **Next**, review the summary information, and click **Finish**.
+            7.  Click **Next** and accept the default helper class (`com.ibm.websphere.rsadapter.GenericDataStoreHelper`). Select the checkbox to use this data source in container managed persistence (CMP).
 
-To set the connection pool size
+            8.  Click **Next** and select the Setup security aliases, as shown in the following table.
 
-1.  In the list of JDBC data sources, click the newly created **jasperserver** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
-3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
-4.  Click **Save**.
+                | Field Name                             | PostgreSQL Value        |
+                |----------------------------------------|-------------------------|
+                | Component-managed authentication alias | `postgresql_jasperdb`   |
+                | Mapping configuration alias            | DefaultPrincipalMapping |
+                | Container-managed authentication alias | `postgresql_jasperdb`   |
 
-To define custom properties
+            9.  Click **Next**, review the summary information, and click **Finish**.
 
-1.  In the list of JDBC data sources, select the check box for the newly created **jasperserver** data source and click **Test Connection**.
+            To set the connection pool size
 
-    In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
+            1.  In the list of JDBC data sources, click the newly created **jasperserver** data source to edit it.
+            2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+            3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
+            4.  Click **Save**.
 
-2.  Navigate to the jasperserver data sources **General Properties** page.
+            To define custom properties
 
-3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
+            1.  In the list of JDBC data sources, select the check box for the newly created **jasperserver** data source and click **Test Connection**.
 
-4.  Scroll down the list of properties and select **databaseName**. Set the value to `jasperserver`.
+                In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
 
-5.  Set **serverName** to the correct value for your server.
+            2.  Navigate to the jasperserver data sources **General Properties** page.
 
-To define the jsSystemAnalytics JDBC data source and expose it through JNDI
+            3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
 
-1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
+            4.  Scroll down the list of properties and select **databaseName**. Set the value to `jasperserver`.
 
-    !!! note
+            5.  Set **serverName** to the correct value for your server.
 
-        To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md).
+            To define the jsSystemAnalytics JDBC data source and expose it through JNDI
 
-2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
+            1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
 
-3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
+                !!! note
 
-4.  Enter the data source name: `jsSystemAnalytics`
+                    To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md).
 
-5.  Enter the JNDI name: `jdbc/jasperserverSystemAnalytics`
+            2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
 
-6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
+            3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
 
-7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the checkbox to use this data source in container managed persistence (CMP).
+            4.  Enter the data source name: `jsSystemAnalytics`
 
-8.  Click **Next** and select the Setup security aliases, as shown in the following table.
+            5.  Enter the JNDI name: `jdbc/jasperserverSystemAnalytics`
 
-    | Field Name                             | PostgreSQL Value        |
-    |----------------------------------------|-------------------------|
-    | Component-managed authentication alias | `postgresql_jasperdb`   |
-    | Mapping configuration alias            | DefaultPrincipalMapping |
-    | Container-managed authentication alias | `postgresql_jasperdb`   |
+            6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
 
-9.  Click **Next**, review the summary information, and click **Finish**.
+            7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the checkbox to use this data source in container managed persistence (CMP).
 
-To set the connection pool size
+            8.  Click **Next** and select the Setup security aliases, as shown in the following table.
 
-1.  In the list of JDBC data sources, click the newly created **jsSystemAnalytics** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
-3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
-4.  Click **Save**.
+                | Field Name                             | PostgreSQL Value        |
+                |----------------------------------------|-------------------------|
+                | Component-managed authentication alias | `postgresql_jasperdb`   |
+                | Mapping configuration alias            | DefaultPrincipalMapping |
+                | Container-managed authentication alias | `postgresql_jasperdb`   |
 
-To define custom properties
+            9.  Click **Next**, review the summary information, and click **Finish**.
 
-1.  In the list of JDBC data sources, select the check box for the newly created **jsSystemAnalytics** data source and click **Test Connection**.
+            To set the connection pool size
 
-    In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
+            1.  In the list of JDBC data sources, click the newly created **jsSystemAnalytics** data source to edit it.
+            2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+            3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
+            4.  Click **Save**.
 
-2.  Navigate to the jasperserver data sources **General Properties** page.
+            To define custom properties
 
-3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
+            1.  In the list of JDBC data sources, select the check box for the newly created **jsSystemAnalytics** data source and click **Test Connection**.
 
-4.  Scroll down the list of properties and select **databaseName**. Set the value to `jsSystemAnalytics`.
+                In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
 
-5.  Set **serverName** to the correct value for your server.
+            2.  Navigate to the jasperserver data sources **General Properties** page.
 
-To define the jsaudit JDBC data source and expose it through JNDI
+            3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
 
-1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
+            4.  Scroll down the list of properties and select **databaseName**. Set the value to `jsSystemAnalytics`.
 
-    !!! note
+            5.  Set **serverName** to the correct value for your server.
 
-        To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md).
+            To define the jsaudit JDBC data source and expose it through JNDI
 
-2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
+            1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
 
-3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
+                !!! note
 
-4.  Enter the data source name:` jsaudit`
+                    To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md).
 
-5.  Enter the JNDI name: `jdbc/jasperserverAudit`
+            2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
 
-6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
+            3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
 
-7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the check box to use this data source in container managed persistence (CMP).
+            4.  Enter the data source name:` jsaudit`
 
-8.  Click **Next** and select the Setup security aliases, as shown in the following table.
+            5.  Enter the JNDI name: `jdbc/jasperserverAudit`
 
-    | Field Name                             | PostgreSQL Value        |
-    |----------------------------------------|-------------------------|
-    | Component-managed authentication alias | `postgresql_jasperdb`   |
-    | Mapping configuration alias            | DefaultPrincipalMapping |
-    | Container-managed authentication alias | `postgresql_jasperdb`   |
+            6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
 
-9.  Click **Next**, review the summary information, and click **Finish**.
+            7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the check box to use this data source in container managed persistence (CMP).
 
-To set the connection pool size
+            8.  Click **Next** and select the Setup security aliases, as shown in the following table.
 
-1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
-3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
-4.  Click **Save**.
+                | Field Name                             | PostgreSQL Value        |
+                |----------------------------------------|-------------------------|
+                | Component-managed authentication alias | `postgresql_jasperdb`   |
+                | Mapping configuration alias            | DefaultPrincipalMapping |
+                | Container-managed authentication alias | `postgresql_jasperdb`   |
 
-To define custom properties
+            9.  Click **Next**, review the summary information, and click **Finish**.
 
-1.  In the list of JDBC data sources, select the check box for the newly created **jsaudit** data source and click **Test Connection**.
+            To set the connection pool size
 
-    In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
+            1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
+            2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+            3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
+            4.  Click **Save**.
 
-    !!! note
+            To define custom properties
 
-        If you are using the TIBCO JDBC driver with SQL Server, and you see an error such as the following:
+            1.  In the list of JDBC data sources, select the check box for the newly created **jsaudit** data source and click **Test Connection**.
 
-        `Could not find stored procedure 'master..xp_jdbc_open2' DSRA0010E: SQL State = HY000, Error Code=2,812`
+                In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
 
-        Add the following variable to **Custom properties**:
+                !!! note
 
-        `enable2Phase = false`
+                    If you are using the TIBCO JDBC driver with SQL Server, and you see an error such as the following:
 
-2.  Navigate to the **jsaudit** data sources **General Properties** page.
+                    `Could not find stored procedure 'master..xp_jdbc_open2' DSRA0010E: SQL State = HY000, Error Code=2,812`
 
-3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
+                    Add the following variable to **Custom properties**:
 
-4.  Scroll down the list of properties and select **databaseName**. Set the value to:
+                    `enable2Phase = false`
 
-    - For Compact installation: `jasperserver`
-    - For Split installation: `jsaudit`
+            2.  Navigate to the **jsaudit** data sources **General Properties** page.
 
-5.  Set **serverName** to the correct value for your server.
+            3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
 
-To create optional sugarcrm and foodmart data sources
+            4.  Scroll down the list of properties and select **databaseName**. Set the value to:
 
-1.  If you plan to run the sample reports, use the values in the following table to create the foodmart and sugarcrm JNDI data sources.
+    -   For Compact installation: `jasperserver`
 
-    <table>
-    <thead>
-    <tr>
-    <th>Field Name</th>
-    <th colspan="2">Value</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td><p>Data source name</p></td>
-    <td><p><code>foodmart</code></p></td>
-    <td><p><code>sugarcrm</code></p></td>
-    </tr>
-    <tr>
-    <td><p>JNDI name</p></td>
-    <td><p><code>jdbc/foodmart</code></p></td>
-    <td><p><code>jdbc/sugarcrm</code></p></td>
-    </tr>
-    </tbody>
-    </table>
+    -   For Split installation: `jsaudit`
 
-2.  Click **Save directly to the master configuration**.
+        1.  Set **serverName** to the correct value for your server.
 
-Next, deploy the WAR file in WebSphere as described in Deploying the WAR File in WebSphere.
+        To create optional sugarcrm and foodmart data sources
 
-To define the jsAuditAnalytics JDBC data source and expose it through JNDI
+        1.  If you plan to run the sample reports, use the values in the following table to create the foodmart and sugarcrm JNDI data sources.
 
-1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
+            <table>
+            <thead>
+            <tr>
+            <th>Field Name</th>
+            <th colspan="2">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><p>Data source name</p></td>
+            <td><p><code>foodmart</code></p></td>
+            <td><p><code>sugarcrm</code></p></td>
+            </tr>
+            <tr>
+            <td><p>JNDI name</p></td>
+            <td><p><code>jdbc/foodmart</code></p></td>
+            <td><p><code>jdbc/sugarcrm</code></p></td>
+            </tr>
+            </tbody>
+            </table>
 
-    !!! note
+        2.  Click **Save directly to the master configuration**.
 
-        To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md).
+        Next, deploy the WAR file in WebSphere as described in Deploying the WAR File in WebSphere.
 
-2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
+        To define the jsAuditAnalytics JDBC data source and expose it through JNDI
 
-3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
+        1.  Click the name of the JDBC provider that you just created. For example, for PostgreSQL, click **PostgreSQL JDBC Provider**.
 
-4.  Enter the data source name: `jsAuditAnalytics`
+            !!! note
 
-5.  Enter the JNDI name: `jdbc/jasperserverAuditAnalytics`
+                To use a database other than PostgreSQL, configure the database connections and custom properties as described in [Configuring Other Database Connections](websphere_other_dbs.md).
 
-6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
+        2.  Click **Data sources** in the **Additional Properties** of the JDBC provider details panel.
 
-7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the check box to use this data source in container managed persistence (CMP).
+        3.  To create a new data source, click **New**. The **New Data Source Wizard** appears.
 
-8.  Click **Next** and select the Setup security aliases, as shown in the following table.
+        4.  Enter the data source name: `jsAuditAnalytics`
 
-    | Field Name                             | PostgreSQL Value        |
-    |----------------------------------------|-------------------------|
-    | Component-managed authentication alias | `postgresql_jasperdb`   |
-    | Mapping configuration alias            | DefaultPrincipalMapping |
-    | Container-managed authentication alias | `postgresql_jasperdb`   |
+        5.  Enter the JNDI name: `jdbc/jasperserverAuditAnalytics`
 
-9.  Click **Next**, review the summary information, and click **Finish**.
+        6.  Click **Next**, choose **Select an existing JDBC provider**, then select **PostgreSQL JDBC Provider** from the drop-down list.
 
-To set the connection pool size
+        7.  Click **Next** and accept the default helper class (com.ibm.websphere.rsadapter.GenericDataStoreHelper). Select the check box to use this data source in container managed persistence (CMP).
 
-1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
-2.  Click **Additional Properties \> Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
-3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
-4.  Click **Save**.
+        8.  Click **Next** and select the Setup security aliases, as shown in the following table.
 
-To define custom properties
+            | Field Name                             | PostgreSQL Value        |
+            |----------------------------------------|-------------------------|
+            | Component-managed authentication alias | `postgresql_jasperdb`   |
+            | Mapping configuration alias            | DefaultPrincipalMapping |
+            | Container-managed authentication alias | `postgresql_jasperdb`   |
 
-1.  In the list of JDBC data sources, select the check box for the newly created **jsAuditAnalytics** data source and click **Test Connection**.
+        9.  Click **Next**, review the summary information, and click **Finish**.
 
-    In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
+        To set the connection pool size
 
-2.  Navigate to the **jsaudit** data sources **General Properties** page.
+        1.  In the list of JDBC data sources, click the newly created **jsaudit** data source to edit it.
+        2.  Click **Additional Properties &gt; Connection Pool Properties**. You can see that **Maximum Connections** is set to 10 by default.
+        3.  Set **Maximum Connections** to 50. You may want to set it to a higher value if necessary.
+        4.  Click **Save**.
 
-3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
+        To define custom properties
 
-4.  Scroll down the list of properties and select **databaseName**. Set the value to:
+        1.  In the list of JDBC data sources, select the check box for the newly created **jsAuditAnalytics** data source and click **Test Connection**.
 
-    - For Compact installation: `jasperserver`
-    - For Split installation: `jsaudit`
+            In the Messages area, a success or failure message appears. The failure message gives you information about which custom properties you need to define.
 
-5.  Set **serverName** to the correct value for your server.
+        2.  Navigate to the **jsaudit** data sources **General Properties** page.
+
+        3.  In **Additional Properties**, on the right side of the **General Properties** page, click **Custom properties**.
+
+        4.  Scroll down the list of properties and select **databaseName**. Set the value to:
+
+    -   For Compact installation: `jasperserver`
+
+    -   For Split installation: `jsaudit`
+
+1.  Set **serverName** to the correct value for your server.
 
 ## Deploying the WAR File in WebSphere
 
 To deploy the JasperReports Server WAR file in WebSphere
 
-1.  In the Administrative Console, navigate to ****Applications \> New Application**** and select **New Enterprise Application.**
+1.  In the Administrative Console, navigate to ****Applications &gt; New Application**** and select **New Enterprise Application.**
 
     JasperReports Server is a modern application, based on Java Servlet version 2.4, so you do not select the older, WebSphere V4‑compliant application type.
 
@@ -705,9 +709,9 @@ For the JasperReports Server XML/A functionality to work, special Java JVM optio
 
 To configure your Java JVM options
 
-1.  Select ****Enterprise Applications \> jasperserver-pro_war \> Target specific application status \> (server name)****.
+1.  Select ****Enterprise Applications &gt; jasperserver-pro_war &gt; Target specific application status &gt; (server name)****.
 
-2.  Expand ****Java and Process Management**** **\> Process Definition \> Java Virtual Machine \> Generic JVM arguments.**
+2.  Expand ****Java and Process Management**** **&gt; Process Definition &gt; Java Virtual Machine &gt; Generic JVM arguments.**
 
 3.  In the **Generic JVM Options** text box, paste in the following JVM options that explicitly specify JasperReports Server classes for Xalan, as well as optimize JVM resources. The memory settings are a recommended minimum; you may need to increase the memory assigned to the JVM according to your usage:
 
@@ -763,7 +767,7 @@ To configure your Java JVM options
 
 To configure class loading
 
-1.  Select **Enterprise Applications \> jasperserver-pro_war \> Class loading and update detection**.
+1.  Select **Enterprise Applications &gt; jasperserver-pro_war &gt; Class loading and update detection**.
 2.  In the section **Class loader order**, select **Classes loaded with local class loader first (parent last)**.
 3.  In the **WAR class loader policy** section select **Single class loader for application**.
 4.  Save directly to your master configuration.

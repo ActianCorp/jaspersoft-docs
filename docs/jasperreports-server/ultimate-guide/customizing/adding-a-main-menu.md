@@ -7,9 +7,9 @@ description: "The following example shows two useful ways to add custom menu ite
 
 The following example shows two useful ways to add custom menu items:
 
-- You can add your own menus to the main menu bar.
+-   You can add your own menus to the main menu bar.
 
-- You can add menu items to either existing or custom menus and link them outside the server.
+-   You can add menu items to either existing or custom menus and link them outside the server.
 
 This example creates a new menu named Accounts. It contains the internal search item created in the previous example and an external search with Google.
 
@@ -92,7 +92,7 @@ This example creates a new menu named Accounts. It contains the internal search 
 
 9.  Reload the web app in the app server to see the changes (see [1.0.1, “Reloading the JasperReports Server Web App,” on page 1](reloading-jrs-webapp.md)).
 
-10. When the web app has reloaded, log into JasperReports Server as `joeuser`. You'll see the new Accounts menu with **Accounts \> Google MyCompany** opening a Google search. The following figure shows both the new menu and the external search results.
+10. When the web app has reloaded, log into JasperReports Server as `joeuser`. You'll see the new Accounts menu with **Accounts &gt; Google MyCompany** opening a Google search. The following figure shows both the new menu and the external search results.
 
   ![js Customization GoogleResults](../assets/images/js-Customization-GoogleResults.png)
 

@@ -116,11 +116,11 @@ By default, all events and properties are logged. To enable or disable logging o
 
 In the file, event types and their properties are listed under `<util:map id="enabledEventsMapping">`. The map has three parts:
 
-- `WEB_SERVICES`: Event types related to accessing JasperReports Server through a web service.
+-   `WEB_SERVICES`: Event types related to accessing JasperReports Server through a web service.
 
-- `GUI`: Event types for access through the user interface.
+-   `GUI`: Event types for access through the user interface.
 
-- `INTERNAL`: Event types used by the server itself, such as when running a scheduled report.
+-   `INTERNAL`: Event types used by the server itself, such as when running a scheduled report.
 
 To disable an event, comment it out. For example:
 
@@ -128,9 +128,9 @@ To disable an event, comment it out. For example:
 
 To disable a property, use any of these measures:
 
-- Delete the property. For example, remove `folderDescription`, resulting in:<br>
-  `<entry key="createFolder" value="folderName,folderLabel,exception" />`
-- Disable it with the `|` syntax. For example:<br>
-  `<entry key="createFolder" value="folderName,folderLabel,|folderDescription,exception" />`
-- Use the "all except" `*|` syntax to specify only the disabled property. All others are recorded. For example:<br>
-  `<entry key="createFolder" value="*|folderDescription" />`
+-   Delete the property. For example, remove `folderDescription`, resulting in:<br>
+    `<entry key="createFolder" value="folderName,folderLabel,exception" />`
+-   Disable it with the `|` syntax. For example:<br>
+    `<entry key="createFolder" value="folderName,folderLabel,|folderDescription,exception" />`
+-   Use the "all except" `*|` syntax to specify only the disabled property. All others are recorded. For example:<br>
+    `<entry key="createFolder" value="*|folderDescription" />`

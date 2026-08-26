@@ -7,9 +7,9 @@ description: "JasperReports® Server ensures that people can access only the dat
 
 JasperReports® Server ensures that people can access only the data they are allowed to see. The settings that define organizations, users, roles, and repository resources work together to provide complete access control that includes:
 
-- Authentication – Restricts access to identified users and protects that access with passwords. Defines roles for grouping users and assigning permissions.
-- Authorization – Controls access to repository objects, pages, and menus based on users and roles.
-- Data level security (commercial version only) – Defines row and column level permissions to access your data. Row and column level permissions can be defined and enforced in Domains.
+-   Authentication – Restricts access to identified users and protects that access with passwords. Defines roles for grouping users and assigning permissions.
+-   Authorization – Controls access to repository objects, pages, and menus based on users and roles.
+-   Data level security (commercial version only) – Defines row and column level permissions to access your data. Row and column level permissions can be defined and enforced in Domains.
 
 Administrators must keep security in mind at all times when managing organizations, users, roles, and resources, because the security settings behind each of these rely on the others.
 
@@ -27,9 +27,9 @@ Administrators must keep security in mind at all times when managing organizatio
 
 This chapter contains the following sections:
 
-- Authentication
+-   Authentication
 
-- Authorization Overview
+-   Authorization Overview
 
 ## Authentication
 
@@ -39,19 +39,19 @@ JasperReports® Server also implements roles for creating groups or classes of u
 
 JasperReports® Server relies on the open source Spring security framework. It has many configurable options for:
 
-- External authentication services such as LDAP (used by Microsoft Active Directory and Novell eDirectory)
-- Single Sign-on using JA-SIG's Central Authentication Service (CAS)
-- Java Authentication and Authorization Service (JAAS)
-- Container security (Tomcat, Jetty)
-- SiteMinder
-- Anonymous user access (disabled by default)
+-   External authentication services such as LDAP (used by Microsoft Active Directory and Novell eDirectory)
+-   Single Sign-on using JA-SIG's Central Authentication Service (CAS)
+-   Java Authentication and Authorization Service (JAAS)
+-   Container security (Tomcat, Jetty)
+-   SiteMinder
+-   Anonymous user access (disabled by default)
 
 JasperReports® Server also supports these encryption and authentication standards:
 
-- HTTPS, including requiring HTTPS
-- HTTP Basic
-- HTTP Digest
-- X509
+-   HTTPS, including requiring HTTPS
+-   HTTP Basic
+-   HTTP Digest
+-   X509
 
 The Spring framework is readily extensible to integrate with custom and commercial authentication services and transports.
 

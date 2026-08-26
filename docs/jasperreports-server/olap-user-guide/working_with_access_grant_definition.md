@@ -13,15 +13,15 @@ An access grant definition is an XML structure that specifies a user’s access 
 
 This section includes:
 
-- [Overview of Data-level Access Using AGXML Schemas](overview_of_data_level_access_using_.md)
+-   [Overview of Data-level Access Using AGXML Schemas](overview_of_data_level_access_using_.md)
 
-- [Sample Access Grant Definition](sample_access_grant_definition.md)
+-   [Sample Access Grant Definition](sample_access_grant_definition.md)
 
-- [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md)
+-   [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md)
 
-- [Working with Attributes](working_with_profile_attributes.md)
+-   [Working with Attributes](working_with_profile_attributes.md)
 
-- [Best Practices for Designing Access Control](best_practices_for_designing_access_.md)
+-   [Best Practices for Designing Access Control](best_practices_for_designing_access_.md)
 
 !!! note
 

@@ -39,7 +39,7 @@ To view the Supermart dashboard
 
         Use the **Back** button instead of the browser back button. This ensures the best experience with respect to the state of the previous page.
 
-6.  When done, click **View \> Repository** to go to the repository page.
+6.  When done, click **View &gt; Repository** to go to the repository page.
 
     !!! note
 

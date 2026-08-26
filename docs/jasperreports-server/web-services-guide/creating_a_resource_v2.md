@@ -142,21 +142,15 @@ The POST method also supports a way to create complex resources and their neste
 <td colspan="2"><p>Root resource multipart item name: resource</p>
 <p>Root resource multipart Content-type and corresponding item names:</p>
 <ul>
-<li>mondrianConnection:</li>
-</ul>
+<li><p>mondrianConnection:</p>
+<p>- schema: mondrian schema XML file</p></li>
+<li><p>secureMondrianConnection:</p>
 <p>- schema: mondrian schema XML file</p>
-<ul>
-<li>secureMondrianConnection:</li>
-</ul>
-<p>- schema: mondrian schema XML file</p>
-<p>- accessGrantSchemas.accessGrantSchema[{itemIndex}]: XML file</p>
-<ul>
-<li>semanticLayerDataSource:</li>
-</ul>
+<p>- accessGrantSchemas.accessGrantSchema[{itemIndex}]: XML file</p></li>
+<li><p>semanticLayerDataSource:</p>
 <p>- schema: domain schema XML file</p>
 <p>- securityFile: security file XML</p>
-<p>- bundles.bundle[{bundleIndex}]: i18n properties file</p>
-<ul>
+<p>- bundles.bundle[{bundleIndex}]: i18n properties file</p></li>
 <li>reportUnit</li>
 </ul>
 <p>- jrxml: report unit JRXML file</p>

@@ -11,16 +11,16 @@ The scalable query engine is completely optional: you can choose whether to depl
 
 This chapter contains the following sections:
 
-- [Overview](overview.md)
+-   [Overview](overview.md)
 
-- [Architecture](architecture.md)
+-   [Architecture](architecture.md)
 
-- [Downloading the Software](downloading.md)
+-   [Downloading the Software](downloading.md)
 
-- [Docker Configuration](docker.md)
+-   [Docker Configuration](docker.md)
 
-- [Deploying with Kubernetes](kubernetes.md)
+-   [Deploying with Kubernetes](kubernetes.md)
 
-- [Configuring JasperReports Server](configuring_jrs.md)
+-   [Configuring JasperReports Server](configuring_jrs.md)
 
-- [Logging and Debugging](logging.md)
+-   [Logging and Debugging](logging.md)

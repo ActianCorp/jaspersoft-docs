@@ -9,7 +9,7 @@ By default the JMX diagnostic subsystem is always enabled, but external access i
 
 Internally, the diagnostics subsystem is passive and has no performance impact until it is accessed in a report through the diagnostic data source. However, if you wish to disable real-time diagnostics entirely, rename or remove the following files:
 
-- `.../WEB-INF/applicationContext-diagnostic.xml`
-- `.../WEB-INF/applicationContext-diagnostic-pro.xml`
+-   `.../WEB-INF/applicationContext-diagnostic.xml`
+-   `.../WEB-INF/applicationContext-diagnostic-pro.xml`
 
 In that case, the diagnostic data source, the sample report, and the sample Topic described in [Using the Diagnostic Data in Reports](using_the_diagnostic_data_in_reports.md) will not function either. They can be deleted from the repository.

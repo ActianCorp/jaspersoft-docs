@@ -7,8 +7,8 @@ description: "The constants that the services require are defined in the followi
 
 The constants that the services require are defined in the following classes:
 
-- `com.jaspersoft.jasperserver.api.metadata.xml.domain.impl.ResourceDescriptor`
-- `com.jaspersoft.jasperserver.api.metadata.xml.domain.impl.Argument`
+-   `com.jaspersoft.jasperserver.api.metadata.xml.domain.impl.ResourceDescriptor`
+-   `com.jaspersoft.jasperserver.api.metadata.xml.domain.impl.Argument`
 
 The following values are extracted from `ResourceDescriptor`:
 

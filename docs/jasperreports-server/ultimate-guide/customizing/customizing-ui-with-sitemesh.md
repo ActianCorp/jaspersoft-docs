@@ -9,15 +9,15 @@ JasperReports Server uses the SiteMesh framework to lay out and decorate nearly 
 
 The SiteMesh framework is controlled by the following files:
 
-- `<js-webapp>/WEB-INF/web.xml`
+-   `<js-webapp>/WEB-INF/web.xml`
 
-- `<js-webapp>/WEB-INF/sitemesh.xml`
+-   `<js-webapp>/WEB-INF/sitemesh.xml`
 
-- `<js-webapp>/WEB-INF/decorators.xml`
+-   `<js-webapp>/WEB-INF/decorators.xml`
 
-- `<js-webapp>/WEB-INF/decorators/main.jsp`
+-   `<js-webapp>/WEB-INF/decorators/main.jsp`
 
-- `<js-webapp>/WEB-INF/decorators/decorator.jsp`
+-   `<js-webapp>/WEB-INF/decorators/decorator.jsp`
 
 Essentially, the XML files specify how UI pages should be generated, and the JSP files generate the pages. The following sections describe these files and how to customize the JSPs to change the overall branding of the UI.
 
@@ -121,13 +121,13 @@ For example, if the user clicks `View > Reports`, the action executes `WEB-INF/j
 
 Now that you know how `decorator.jsp` defines the main page of the server UI, you can customize the file. If you use JasperReports Server as part of your suite of business applications, you may not want the Jaspersoft branding on the page. Editing the decorators.jsp file in the deployed webapp lets you remove the branding. The following elements make up the Jaspersoft branding:
 
-- The company logo: to change or remove the logo , see [1.0.1, “Changing the Logo and Favicon,” on page 1](themes-customizing-logo-and-favicon.md).
+-   The company logo: to change or remove the logo , see [1.0.1, “Changing the Logo and Favicon,” on page 1](themes-customizing-logo-and-favicon.md).
 
-- The browser icon (favicon): to change or remove the browser icon, see [1.0.1, “Changing the Logo and Favicon,” on page 1](themes-customizing-logo-and-favicon.md).
+-   The browser icon (favicon): to change or remove the browser icon, see [1.0.1, “Changing the Logo and Favicon,” on page 1](themes-customizing-logo-and-favicon.md).
 
-- The page title appearing in the browser.
+-   The page title appearing in the browser.
 
-- The About link and copyright footer on every page.
+-   The About link and copyright footer on every page.
 
 To edit the page title
 

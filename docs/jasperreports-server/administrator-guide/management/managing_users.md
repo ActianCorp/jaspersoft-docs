@@ -69,7 +69,7 @@ The default installation of JasperReports Server includes the following users:
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
 
-2.  Select **Manage \> Users** or on the Admin Home page, click **Manage** in the Users workflow block. The Manage Users page displays the users in each organization and the properties of the selected user.
+2.  Select **Manage &gt; Users** or on the Admin Home page, click **Manage** in the Users workflow block. The Manage Users page displays the users in each organization and the properties of the selected user.
 
     ![js ManageUsers overview](../assets/images/js-ManageUsers-overview.png)
 
@@ -81,8 +81,8 @@ The default installation of JasperReports Server includes the following users:
 
 3.  To locate a user:
 
-    - Browse for users - Expand the organization hierarchy in the left-panel, and select an organization or suborganization. Scroll through the list of users if it is too long to fit on your screen.
-    - Search for a user - Select the organization (or any parent organization) and enter a search string in the **Search** field of the Users panel. The search results show all user ID or names in the selected organization and suborganizations that match the search string.
+    -   Browse for users - Expand the organization hierarchy in the left-panel, and select an organization or suborganization. Scroll through the list of users if it is too long to fit on your screen.
+    -   Search for a user - Select the organization (or any parent organization) and enter a search string in the **Search** field of the Users panel. The search results show all user ID or names in the selected organization and suborganizations that match the search string.
 
 4.  Select a user account to view its Properties in the right-hand panel.
 
@@ -96,7 +96,7 @@ The default installation of JasperReports Server includes the following users:
 
 1.  Log in as an administrator (`jasperadmin` in the user's intended organization or any parent organization, or `superuser`).
 
-2.  Select **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+2.  Select **Manage &gt; Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
 
 3.  In the Organizations panels, select the organization for the new user and click **Add User**. The Add User dialog appears.
 
@@ -106,13 +106,13 @@ The default installation of JasperReports Server includes the following users:
 
 4.  Enter the following information:
 
-    - User name - The new user's full name. The name is optional but recommended. It appears in the menu bar of the UI when the user is logged in.
-    - User ID - Generated automatically from the username. You can accept the suggested value or type your own. The user ID is used to log into JasperReports Server, and for administrators to manage users and resources. The User ID must be unique within the organization, but may exist in multiple organizations.
-    - Email - This is optional but must be in a valid email format.
-    - Password and confirmation - Enter and confirm a password for the user.
-    - User is enabled - To enable the user to log in, select this check box. Users who are not enabled can't log in. If you implement role-based permissions, you might want to delay enabling the user until you assign more roles. For more information on roles, see [Managing Roles](managing_roles.md).
+    -   User name - The new user's full name. The name is optional but recommended. It appears in the menu bar of the UI when the user is logged in.
+    -   User ID - Generated automatically from the username. You can accept the suggested value or type your own. The user ID is used to log into JasperReports Server, and for administrators to manage users and resources. The User ID must be unique within the organization, but may exist in multiple organizations.
+    -   Email - This is optional but must be in a valid email format.
+    -   Password and confirmation - Enter and confirm a password for the user.
+    -   User is enabled - To enable the user to log in, select this check box. Users who are not enabled can't log in. If you implement role-based permissions, you might want to delay enabling the user until you assign more roles. For more information on roles, see [Managing Roles](managing_roles.md).
 
-5.  Click **Add User to \<organization\>**.
+5.  Click **Add User to &lt;organization&gt;**.
 
     The new user is available in the Users panel. To assign roles to the user, click **Edit** in the user's Properties panel.
 
@@ -124,7 +124,7 @@ To edit a user's properties:
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
 
-2.  Click **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+2.  Click **Manage &gt; Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
 
 3.  In the Organizations panel, select the user's organization or a parent organization.
 
@@ -155,7 +155,7 @@ Logging in as another user is also necessary when you are maintaining resources 
 You may sometimes need to disable user accounts. For example, when making configuration changes, you may want to lock out all users until the changes are finished. Administrators can select any number of users in their organization, and the system admins (`superuser`) can select all users in the server, except themselves.
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
-2.  Click **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+2.  Click **Manage &gt; Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
 3.  In the Organizations panel, select the users' organization; to enable or disable users in different organizations, select the common parent organization.
 4.  In the Users list, use Control-click and Shift-click to make multiple selections. If the User list is too long, enter a search term to find users and enable or disable them individually.
 5.  Click **Enable** or **Disable** in the menu bar.
@@ -163,7 +163,7 @@ You may sometimes need to disable user accounts. For example, when making config
 ## Deleting One or More Users
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
-2.  Click **Manage \> Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
+2.  Click **Manage &gt; Users** or, on the Admin Home page, click **Manage** in the Users workflow block.
 3.  In the Organizations panel, select the user's organization; to delete users in different organizations, select the common parent organization.
 4.  In the Users list, use Control-click and Shift-click to make multiple selections. If the list of users is too long, enter a search term to find and select the user.
 5.  In the tool bar of the Users panel, click **Delete** and confirm the action.
@@ -174,14 +174,14 @@ You can define a user from being deleted. This could be useful, for example, if 
 
 To define a user from deletion:
 
-1.  Edit *\<tomcat-home\>/webapp/jasperserver-pro/WEB-INF/applicationContext-security.xml*
+1.  Edit *&lt;tomcat-home&gt;/webapp/jasperserver-pro/WEB-INF/applicationContext-security.xml*
 2.  Search for *util:list bean "restrictedUsersListToBeDeleted"*
 
-\<util:list id="restrictedUsersListToBeDeleted" list-class="java.util.ArrayList" value-type="java.lang.String"\>
+&lt;util:list id="restrictedUsersListToBeDeleted" list-class="java.util.ArrayList" value-type="java.lang.String"&gt;
 
-\<value\>anonymousUser\</value\>
+&lt;value&gt;anonymousUser&lt;/value&gt;
 
-\</util:list\>
+&lt;/util:list&gt;
 
 By default, this location has "*anonymousUser*", but you can add additional users, for example "*superuser*"; or for tenant user, "*jasperadmin\|organization_1*".
 
@@ -203,22 +203,22 @@ After updating the table, restart the Tomcat server to clear the User Details Ca
 
 The following security considerations should be taken before re-enabling a user's account:
 
-- All failed login attempts for External Users (except CAS, as it is not supported) before they successfully login in JasperReports Server will be tracked in JIExternalUserLoginEvents. That table has auto-clean cron-job and will reset their failed attempts by an internally scheduled process (for more details, refer to the JasperReports Server Security Guide).
-- Verifying the identity of the locked out user.
-- Checking logs for human error or automated attack.
+-   All failed login attempts for External Users (except CAS, as it is not supported) before they successfully login in JasperReports Server will be tracked in JIExternalUserLoginEvents. That table has auto-clean cron-job and will reset their failed attempts by an internally scheduled process (for more details, refer to the JasperReports Server Security Guide).
+-   Verifying the identity of the locked out user.
+-   Checking logs for human error or automated attack.
 
 !!! note
 
     For more information on how to check logs, see the JasperReports Server Security Guide.
 
-- You can enable logging of user login events and failed attempts by setting:
+-   You can enable logging of user login events and failed attempts by setting:
 
 ``` text
 com.jaspersoft.jasperserver.api.security.externalAuth.wrappers.spring.ldap.JSLdapAuthenticationProvider
 com.jaspersoft.jasperserver.api.security.internalAuth.InternalDaoAuthenticationProvider
 ```
 
-> to *DEBUG* in *Manage \> Server Settings \> Log Settings*.
+> to *DEBUG* in *Manage &gt; Server Settings &gt; Log Settings*.
 
 ## Creating a System Administrator
 

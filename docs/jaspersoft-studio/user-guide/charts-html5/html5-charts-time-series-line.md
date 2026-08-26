@@ -41,21 +41,26 @@ To create the chart
 
 6.  Define your first series. For this example, use the following data:
 
-    - **Series**: Series 1. The name of the series is automatically generated. You cannot change it in a simple configuration.
-    - **Value Expression**: `$F{FREIGHT}`.
-    - **Aggregation Function**: Highest
-    - **Tooltip Expression**: "max freight"
+-   **Series**: Series 1. The name of the series is automatically generated. You cannot change it in a simple configuration.
 
-7.  To define an additional series, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png). For this example, define a second measure using the following data.
+    -   **Value Expression**: `$F{FREIGHT}`.
 
-    - **Series**: Series 2.
-    - **Value Expression**: `$F{FREIGHT}.multiply(new BigDecimal(0.5))`
-    - **Aggregation Function**: Sum
-    - **Tooltip Expression**: "total freight/2"
+    -   **Aggregation Function**: Highest
 
-8.  Click **OK** to close the **HTML5 Chart Edit Dialog**.
+    -   **Tooltip Expression**: "max freight"
 
-9.  Preview the report.
+        1.  To define an additional series, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png). For this example, define a second measure using the following data.
+
+    -   **Series**: Series 2.
+
+    -   **Value Expression**: `$F{FREIGHT}.multiply(new BigDecimal(0.5))`
+
+    -   **Aggregation Function**: Sum
+
+    -   **Tooltip Expression**: "total freight/2"
+
+1.  Click **OK** to close the **HTML5 Chart Edit Dialog**.
+2.  Preview the report.
 
 |  |
 |----|

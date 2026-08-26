@@ -9,9 +9,9 @@ The log files contain important information about how the server is running. If 
 
 JasperReports Server now uses the [Apache Log4j 2](http://logging.apache.org/log4j/2.x/index.html) package to generate log files. JasperReports Server also uses the [SLF4J](http://www.slf4j.org/) facade (Simple Logging Facade for Java) and the `Log4j 2 SLF4J` Binding.
 
-- The default log file is `.../WEB-INF/logs/jasperserver.log`.
+-   The default log file is `.../WEB-INF/logs/jasperserver.log`.
 
-- The default log configuration file is `.../WEB-INF/log4j2.properties`.
+-   The default log configuration file is `.../WEB-INF/log4j2.properties`.
 
 To view the log file, you must have access to the file system where JasperReports Server is installed. This section describes the settings that control what information JasperReports Server writes to its logs.
 
@@ -65,13 +65,13 @@ logger.<logger-name>.appenderRef.<output-type>.ref=<output-name>
 
 where:
 
-- `<logger-name>` is the name of the logger and usually based on the Java classname. The name cannot contain dots (`.`), so the convention is to use the entire classname with dots replaced by underscores (`_`).
+-   `<logger-name>` is the name of the logger and usually based on the Java classname. The name cannot contain dots (`.`), so the convention is to use the entire classname with dots replaced by underscores (`_`).
 
-- `<Java-classname>` is the name of the Java class that you want to monitor.
+-   `<Java-classname>` is the name of the Java class that you want to monitor.
 
-- `<log-level>` is `error`, `warn`, `info`, or `debug`.
+-   `<log-level>` is `error`, `warn`, `info`, or `debug`.
 
-- `<output-type>` is a Log4j 2 output type, either `stdout` or `rolling`. The respective `<output-name>` is either `stdout` or the name of a file output defined in the `log4j2.properties` file. There can be multiple output types, as shown in the following example:
+-   `<output-type>` is a Log4j 2 output type, either `stdout` or `rolling`. The respective `<output-name>` is either `stdout` or the name of a file output defined in the `log4j2.properties` file. There can be multiple output types, as shown in the following example:
 
 ``` properties
 logger.net_sf_jasperreports_engine_query_JRJdbcQueryExecuter.name=net.sf.jasperreports.engine.query.JRJdbcQueryExecuter
@@ -90,12 +90,12 @@ If you have made modifications in the **Log Settings** UI, those settings are pe
 
 The available parameters for JasperReports Server logs include:
 
-- **USER_ID**: The username with which JasperReports Server is logged in.
-- **SESSION_ID**: Session ID of the logged in User.
-- **RESOURCE_URI**: URI of the Resource opened.
-- **REQUEST_TYPE**: The HTTP request type, for example: GET, POST, DELETE or PUT.
-- **REQUEST_STATUS**: The HTTP request status code, such as 200 for OK.
-- **TIME_TAKEN**: Time taken by a request in milliseconds.
+-   **USER_ID**: The username with which JasperReports Server is logged in.
+-   **SESSION_ID**: Session ID of the logged in User.
+-   **RESOURCE_URI**: URI of the Resource opened.
+-   **REQUEST_TYPE**: The HTTP request type, for example: GET, POST, DELETE or PUT.
+-   **REQUEST_STATUS**: The HTTP request status code, such as 200 for OK.
+-   **TIME_TAKEN**: Time taken by a request in milliseconds.
 
 JasperReports Server logs follow the following format, for example, for Log4j:
 
@@ -115,9 +115,9 @@ To configure the log format, use the `log4j.properties` file located in the `WEB
 
 !!! note
 
-    - Any delimiter can be used between the parameters.
-    - If any parameter is not applicable for given thread request, then that parameter will not be logged.
-    - By default, the log format used with version JasperReports Server 8.2 or earlier is still supported, but you can configure/add new parameters as per your requirements.
+    -   Any delimiter can be used between the parameters.
+    -   If any parameter is not applicable for given thread request, then that parameter will not be logged.
+    -   By default, the log format used with version JasperReports Server 8.2 or earlier is still supported, but you can configure/add new parameters as per your requirements.
 
 To log **all** parameters of Log4j's ThreadContext, use *%X* in layout pattern.
 
@@ -149,7 +149,7 @@ To set the current logging levels
 
 1.  Log in as a system administrator (`superuser` by default).
 
-2.  Select **Manage \> Server Settings** and choose **Log Settings** in the left panel.
+2.  Select **Manage &gt; Server Settings** and choose **Log Settings** in the left panel.
 
     ![js Settings Logs](../assets/images/js-Settings-Logs.png)
 
@@ -166,12 +166,12 @@ To set the current logging levels
 
     When viewing and setting loggers on the **Log Settings** page, keep the following in mind:
 
-    - The list of loggers on this page is a pre-determined set that may be useful for debugging. This list of loggers is not related to those defined or set in the `log4j2.properties` file.
-    - Setting a logger or log level on this page does not write or change any configuration in the `log4j2.properties` file.
-    - In the list of loggers, the logging levels reflect the current run-time level. If a logger level is set in the configuration file and never modified through this page, its level appears here. Otherwise, these loggers have the inherited root level of ERROR.
-    - As explained in Log Levels, a log level may be defined differently in the configuration file and on this page, in which case the level on this page takes precedence.
-    - Once you set a level or define a logger on the **Log Settings** page, its value is stored in the repository and becomes persistent when the server is restarted. Because the level stored in the repository has precedence, it will be the log level in effect after the server restarts.
-    - If you want to remove a logger or log level that was set on the **Log Settings** page and stored in the repository, select **Restore Defaults** in the left panel of the **Server Settings** UI. Click the delete icon next to the logger you want to remove.
+    -   The list of loggers on this page is a pre-determined set that may be useful for debugging. This list of loggers is not related to those defined or set in the `log4j2.properties` file.
+    -   Setting a logger or log level on this page does not write or change any configuration in the `log4j2.properties` file.
+    -   In the list of loggers, the logging levels reflect the current run-time level. If a logger level is set in the configuration file and never modified through this page, its level appears here. Otherwise, these loggers have the inherited root level of ERROR.
+    -   As explained in Log Levels, a log level may be defined differently in the configuration file and on this page, in which case the level on this page takes precedence.
+    -   Once you set a level or define a logger on the **Log Settings** page, its value is stored in the repository and becomes persistent when the server is restarted. Because the level stored in the repository has precedence, it will be the log level in effect after the server restarts.
+    -   If you want to remove a logger or log level that was set on the **Log Settings** page and stored in the repository, select **Restore Defaults** in the left panel of the **Server Settings** UI. Click the delete icon next to the logger you want to remove.
 
 The following table describes the loggers presented on the **Log Settings** page. To change which loggers appear permanently on the page, see Adding a Logger to the Log Settings Page.
 
@@ -329,9 +329,9 @@ JasperReports Server Professional Edition includes a monitoring tool that you ca
 
 ### Prerequisites
 
-- Ensure that JMX is enabled on the JasperReports® Server.
+-   Ensure that JMX is enabled on the JasperReports® Server.
 
-- Java version 17 or later.
+-   Java version 17 or later.
 
 ### Configuration
 

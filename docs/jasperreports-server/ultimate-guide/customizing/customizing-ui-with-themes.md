@@ -17,15 +17,15 @@ Theme files are stored in the repository and can be downloaded, uploaded, and ma
 
 Keep the following tips in mind when working with themes:
 
-- Plan your theme deployment carefully and test it with end-users to ensure it works the way you intend.
+-   Plan your theme deployment carefully and test it with end-users to ensure it works the way you intend.
 
-- The server must be running and you must be logged in as an administrator to modify themes. Modifications take effect when you make your new theme files active. You don't need to recompile any code or restart the server.
+-   The server must be running and you must be logged in as an administrator to modify themes. Modifications take effect when you make your new theme files active. You don't need to recompile any code or restart the server.
 
-- You must create or modify your CSS files in an external editor. Once you have modified the files you want, you can create a theme folder directly in the repository, or create a theme folder offline and upload it as a Zip archive file. Use the method that works best for you.
+-   You must create or modify your CSS files in an external editor. Once you have modified the files you want, you can create a theme folder directly in the repository, or create a theme folder offline and upload it as a Zip archive file. Use the method that works best for you.
 
-- Your themes can be as simple or as complex as you want. You can combine multiple customizations in a single theme; you can also override one file in your theme with another file.
+-   Your themes can be as simple or as complex as you want. You can combine multiple customizations in a single theme; you can also override one file in your theme with another file.
 
-- In multi-organization deployments, themes defined in a parent organization are expressed in child organizations. Depending on your needs, you may want to implement your theme at the root level or at an organization level. You can also create a set of common customizations in a parent organization and override them in individual child organizations. See the JasperReports Server Administrator Guide for details on the organization hierarchy and how it works with themes.
+-   In multi-organization deployments, themes defined in a parent organization are expressed in child organizations. Depending on your needs, you may want to implement your theme at the root level or at an organization level. You can also create a set of common customizations in a parent organization and override them in individual child organizations. See the JasperReports Server Administrator Guide for details on the organization hierarchy and how it works with themes.
 
 !!! note
 

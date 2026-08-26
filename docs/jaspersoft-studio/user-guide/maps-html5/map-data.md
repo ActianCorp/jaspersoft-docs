@@ -7,11 +7,11 @@ description: The HTML5 Maps are a kind of Highcharts that lets you explore geogr
 
 The HTML5 Maps are a kind of Highcharts that lets you explore geographic maps. Jaspersoft Studio provides advanced and interactive HTML5 Maps that are implemented through the Highcharts Map library. You can add an HTML5 Map to your reports. The HTML5 Map requires two sets of data to render properly: map data set and chart data set.
 
-- This chapter has the following sections:
+-   This chapter has the following sections:
 
-- Map Data Set
+-   Map Data Set
 
-- [Chart Data Set](chart-data.md)
+-   [Chart Data Set](chart-data.md)
 
 ## Map Data Set
 
@@ -27,11 +27,11 @@ The GeoJSON format contains some general information such as title and copyright
 
 This section describes:
 
-- Creating a Simple HTML5 Map Component
+-   Creating a Simple HTML5 Map Component
 
-- Customizing HTML5 Map Components
+-   Customizing HTML5 Map Components
 
-- Customizing the Map Copyright Information
+-   Customizing the Map Copyright Information
 
 ### Creating a Simple HTML5 Map Component
 
@@ -62,87 +62,93 @@ Now you have a simple map component and you can customize its appearance to meet
 Adding background color and border to the map
 
 1.  Right-click the HTML5 element and select **Edit Map properties**. The **HTML5 Map Edit Dialog** is displayed.
-
 2.  On the **Map Formatting** tab, select the **Map** section and set the **Background Color**, for this example, enter the following value:
 
-    - **Background Color**: `#14D9D5`
+-   **Background Color**: `#14D9D5`
 
-3.  Select the **Borders and Plot Area** section and enter the following values:
+    1.  Select the **Borders and Plot Area** section and enter the following values:
 
-    - **Plot Shadow**: `true`
-    - **Plot Background Color**: `#F2EB1D`
-    - **Plot Border Color**: `#F7072B`
-    - **Plot Border Width**: `1 px`
-    - **Border Color**: `#130FFA` (this refers to the map regions outside the plot area)
-    - **Border Radius**: `4 px`
-    - **Border Width**: `3 px`
+    -   **Plot Shadow**: `true`
 
-4.  To preview the map from inside the dialog, click **Show Map Preview**.
+    -   **Plot Background Color**: `#F2EB1D`
 
-|                                                                      |
-|----------------------------------------------------------------------|
-| ![jss html5 map bgcolor](../assets/images/jss-html5-map-bgcolor.png) |
-| *Figure 2: Background Color of the Map*                              |
+    -   **Plot Border Color**: `#F7072B`
 
-To set the color of the entire map
+    -   **Plot Border Width**: `1 px`
 
-1.  On the **Map Formatting** tab, select the Colors section and select the first color from the **Color Palette**.
+    -   **Border Color**: `#130FFA` (this refers to the map regions outside the plot area)
 
-2.  Click Modify, **Pick the new color** dialog is displayed.
+    -   **Border Radius**: `4 px`
 
-3.  On the **Advanced Colors** tab, enter the following value:
+    -   **Border Width**: `3 px`
 
-    - Hex: `#433BD4`
+        1.  To preview the map from inside the dialog, click **Show Map Preview**.
 
-4.  Click **OK**.
+        |                                                                      |
+        |----------------------------------------------------------------------|
+        | ![jss html5 map bgcolor](../assets/images/jss-html5-map-bgcolor.png) |
+        | *Figure 2: Background Color of the Map*                              |
 
-    |  |
-    |----|
-    | ![jss map custom color settings](../assets/images/jss-map-custom%20color-settings.png) |
-    | *Figure 3: Customizing Map Color* |
+        To set the color of the entire map
 
-5.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+        1.  On the **Map Formatting** tab, select the Colors section and select the first color from the **Color Palette**.
+        2.  Click Modify, **Pick the new color** dialog is displayed.
+        3.  On the **Advanced Colors** tab, enter the following value:
 
-|                                                          |
-|----------------------------------------------------------|
-| ![jss map preview](../assets/images/jss-map-preview.png) |
-| *Figure 4: Preview in the HTML5 Map Edit Dialog*         |
+    -   Hex: `#433BD4`
 
-You can color each state or region with a different color. To do so, select the **Plot Options** section and set **Color by Point** to true. Color for each region is picked from the **Color Palette**. The process flows in a circular way. When the last color is picked up from the palette, the next color is the first color in the same palette.
+        1.  Click **OK**.
 
-Adding inner borders to a map
+            |  |
+            |----|
+            | ![jss map custom color settings](../assets/images/jss-map-custom%20color-settings.png) |
+            | *Figure 3: Customizing Map Color* |
 
-In a simple map, you can display and configure the inner borders that distinguishes states or adjacent regions on a given map.
+        2.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
-1.  On the **Map Formatting** tab, select the **Plot Options** section.
-2.  Click the **Inner Borders** subsection and select the **Show Borders** checkbox.
-3.  Set **Border Width** to 2 px and **Border Color** to \#7B7B7B.
-4.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+        |                                                          |
+        |----------------------------------------------------------|
+        | ![jss map preview](../assets/images/jss-map-preview.png) |
+        | *Figure 4: Preview in the HTML5 Map Edit Dialog*         |
 
-|  |
-|----|
-| ![jss html5 map innerborder](../assets/images/jss-html5-map-innerborder.png) |
-| *Figure 5: Simple Map with Inner Borders and Color by Point Property Enabled* |
+        You can color each state or region with a different color. To do so, select the **Plot Options** section and set **Color by Point** to true. Color for each region is picked from the **Color Palette**. The process flows in a circular way. When the last color is picked up from the palette, the next color is the first color in the same palette.
 
-To change the cursor type
+        Adding inner borders to a map
 
-1.  On the **Map Formatting** tab, select the **Plot Options** section.
-2.  Click the **Styling** subsection and select the `zoom-in` option from the drop-down list in the **Cursor Type**.
-3.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+        In a simple map, you can display and configure the inner borders that distinguishes states or adjacent regions on a given map.
 
-|  |
-|----|
-| ![jss html5 map cursor type](../assets/images/jss-html5-map-cursor-type.png) |
-| *Figure 6: Selecting Cursor Type* |
+        1.  On the **Map Formatting** tab, select the **Plot Options** section.
+        2.  Click the **Inner Borders** subsection and select the **Show Borders** checkbox.
+        3.  Set **Border Width** to 2 px and **Border Color** to #7B7B7B.
+        4.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
-Using the Map Component
+        |  |
+        |----|
+        | ![jss html5 map innerborder](../assets/images/jss-html5-map-innerborder.png) |
+        | *Figure 5: Simple Map with Inner Borders and Color by Point Property Enabled* |
 
-Like the Highcharts component, in the map formatting tab, you can edit the properties of the map using the following map components:
+        To change the cursor type
 
-- **Title**: Set properties for the map title.
-- **Subtitle**: Set properties for the map subtitle.
-- **Legend**: Set properties for the map legend, it is useful when you display data on the map.
-- **Tooltip**: Provides general settings for tooltips on the map.
+        1.  On the **Map Formatting** tab, select the **Plot Options** section.
+        2.  Click the **Styling** subsection and select the `zoom-in` option from the drop-down list in the **Cursor Type**.
+        3.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+
+        |  |
+        |----|
+        | ![jss html5 map cursor type](../assets/images/jss-html5-map-cursor-type.png) |
+        | *Figure 6: Selecting Cursor Type* |
+
+        Using the Map Component
+
+        Like the Highcharts component, in the map formatting tab, you can edit the properties of the map using the following map components:
+
+    -   **Title**: Set properties for the map title.
+
+    -   **Subtitle**: Set properties for the map subtitle.
+
+    -   **Legend**: Set properties for the map legend, it is useful when you display data on the map.
+
+    -   **Tooltip**: Provides general settings for tooltips on the map.
 
 ### Customizing the Map Copyright Information
 
@@ -152,11 +158,12 @@ To customize the map copyright information
 
 1.  On the **Map Formatting** tab, select the **Credits** section. For this example, enter the following information:
 
-    - **Show credits**: `true`
-    - **Credits**: `Map Example`
-    - **Hyperlink Reference**: `https://example.com`
+-   **Show credits**: `true`
 
-2.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+    -   **Credits**: `Map Example`
+    -   **Hyperlink Reference**: `https://example.com`
+
+1.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
 |                                                                          |
 |--------------------------------------------------------------------------|

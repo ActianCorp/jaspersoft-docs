@@ -7,20 +7,27 @@ description: You can export a dashboard or a dashlet and save it on your compute
 
 You can export a dashboard or a dashlet and save it on your computer. Dashboards can be exported as a screenshot or in a detailed mode as a document. Dashlets can be exported in a detailed mode as a document. Exporting a dashboard or dashlet requires the following:
 
-- The export button has been enabled for the dashboard or dashlet. Hence, the export of the adhoc view dashlet created from the existing adhoc view remains available after changing the visualization type as the export button is enabled.
+-   The export button has been enabled for the dashboard or dashlet. Hence, the export of the adhoc view dashlet created from the existing adhoc view remains available after changing the visualization type as the export button is enabled.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>The export button is disabled for the newly created dashlets, which are created by adding new content when switching from one visualization type to another. For example, when:</p><ul><li><p>Table is switched to another visualization type.</p></li><li>CrossTab is switched to another visualization type.</li><li>Chart is switched to either Table or CrossTab visualization type.</li></ul><p><p>Therefore, the export of the adhoc view dashlet created by adding new context is not available after changing the visualization type as the export button is disabled. </p></p>
-  </div>
+    !!! note
 
-  For more information, see [Dashboard Properties](dashboard-properties.md) and [Dashlet Properties](dashboard-properties.md).
+        The export button is disabled for the newly created dashlets, which are created by adding new content when switching from one visualization type to another. For example, when:
 
-- Chrome/Chromium is installed on the computer hosting JasperReports Server. For information on configuring Chrome/Chromium for dashboards, see the System Configuration chapter in the JasperReports Server Administrator Guide.
+        -   Table is switched to another visualization type.
+
+        -   CrossTab is switched to another visualization type.
+
+        -   Chart is switched to either Table or CrossTab visualization type.
+
+        Therefore, the export of the adhoc view dashlet created by adding new context is not available after changing the visualization type as the export button is disabled.
+
+    For more information, see [Dashboard Properties](dashboard-properties.md) and [Dashlet Properties](dashboard-properties.md).
+
+-   Chrome/Chromium is installed on the computer hosting JasperReports Server. For information on configuring Chrome/Chromium for dashboards, see the System Configuration chapter in the JasperReports Server Administrator Guide.
 
 To export a dashboard or a dashlet
 
-1.  Select **View \> Repository** and search or browse for the Dashboard you want to export.
+1.  Select **View &gt; Repository** and search or browse for the Dashboard you want to export.
 
 2.  Click the link to open the dashboard.
 
@@ -64,15 +71,15 @@ To export a dashboard or a dashlet
 
     The available formats for dashlets are:
 
-    - PDF Document (.pdf)
-    - Rich Text Format (.rtf)
-    - Comma Separated Values (.csv)
-    - OpenDocument Text (.odt)
-    - OpenDocument Spreadsheet (.ods)
-    - Microsoft Word (.docx)
-    - Microsoft Excel - Paginated(.xlsx)
-    - Microsoft Excel (.xlsx)
-    - Microsoft PowerPoint (.pptx)
+    -   PDF Document (.pdf)
+    -   Rich Text Format (.rtf)
+    -   Comma Separated Values (.csv)
+    -   OpenDocument Text (.odt)
+    -   OpenDocument Spreadsheet (.ods)
+    -   Microsoft Word (.docx)
+    -   Microsoft Excel - Paginated(.xlsx)
+    -   Microsoft Excel (.xlsx)
+    -   Microsoft PowerPoint (.pptx)
 
 4.  Save the dashboard or dashlet in the export file format, for example PDF, or open it in the application.
 

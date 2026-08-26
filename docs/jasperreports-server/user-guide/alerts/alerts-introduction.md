@@ -13,26 +13,26 @@ You can use this feature to set alerts for reports from the Reports Viewer toolb
 
 For creating an alert, you must click the Turn on alert mode icon ![js alert add icon](../assets/images/js-alert-add-icon.png) on the toolbar. This enables the numeric fields or data points of the report for creating alerts. When creating an alert, you must specify the condition for which alerts have to be generated. The alerting feature is dependent on the Threshold, Data point, and Condition set while creating an alert. You get notified via an email for an alert when the specified Condition matches the Threshold value.
 
-You can view a list of alerts on the **Manage \> Admin Console \> Alerts** tab.
+You can view a list of alerts on the **Manage &gt; Admin Console &gt; Alerts** tab.
 
 This chapter contains the following sections:
 
-- Alert Overview
-- [Creating an Alert](create-alert.md)
-- [Viewing the List of Alerts](alerts-list.md)
-- [Searching an Alert](alerts-list.md)
-- [Editing an Alert](alerts-list.md)
-- [Deleting an Alert](alerts-list.md)
+-   Alert Overview
+-   [Creating an Alert](create-alert.md)
+-   [Viewing the List of Alerts](alerts-list.md)
+-   [Searching an Alert](alerts-list.md)
+-   [Editing an Alert](alerts-list.md)
+-   [Deleting an Alert](alerts-list.md)
 
 ## Alert Overview
 
 By using the alert feature, you can set up an alert for the following tabs:
 
-- **Condition** - Which condition an alert is using to notify you about the alert. You can customize the condition based on the available options.
-- **Parameters** - Which input controls are applied on the report. When a report has no input controls, then the Parameters tab is disabled.
-- **Schedule** - Which recurrence and start time for the alert is to be set to schedule the alert and get notified.
-- **Notifications** - The email options to send alert notifications along with subject and message to the recipients for an alert.
-- **Output** - The name of the output file, output format, and time zone.
+-   **Condition** - Which condition an alert is using to notify you about the alert. You can customize the condition based on the available options.
+-   **Parameters** - Which input controls are applied on the report. When a report has no input controls, then the Parameters tab is disabled.
+-   **Schedule** - Which recurrence and start time for the alert is to be set to schedule the alert and get notified.
+-   **Notifications** - The email options to send alert notifications along with subject and message to the recipients for an alert.
+-   **Output** - The name of the output file, output format, and time zone.
 
 ### Sample Use case to Generate an Alert
 

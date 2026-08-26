@@ -7,7 +7,7 @@ description: "As of JasperReports Server 7.5, the use of keys in a single keysto
 
 As of JasperReports Server 7.5, the use of keys in a single keystore has been standardized, and all the necessary files and configuration settings are created and initialized during the installation.
 
-The following files are created during installation, where \$USER is the user who installed the server:
+The following files are created during installation, where $USER is the user who installed the server:
 
 <table>
 <colgroup>
@@ -51,11 +51,11 @@ WEB-INF/classes</td>
 
 The server uses different cryptographic keys for the following tasks:
 
-- Encrypting user passwords and secure files in the internal database.
-- Encrypting and decrypting passwords in import and export catalogs. The server may also import keys to decrypt catalogs from other servers.
-- Encrypting passwords and sensitive data that appear in configuration files.
-- Encrypting log contents in log collector output and diagnostic data.
-- Encrypting HTTP parameters with a static key (now deprecated).
+-   Encrypting user passwords and secure files in the internal database.
+-   Encrypting and decrypting passwords in import and export catalogs. The server may also import keys to decrypt catalogs from other servers.
+-   Encrypting passwords and sensitive data that appear in configuration files.
+-   Encrypting log contents in log collector output and diagnostic data.
+-   Encrypting HTTP parameters with a static key (now deprecated).
 
 ## Keys During Upgrade
 
@@ -63,9 +63,9 @@ Because key management was introduced recently in JasperReports Server, upgrade 
 
 One important detail is that the keys and keystore are associated with the user that originally installed the server. Therefore, you must do the following for the upgrade to recover your encrypted repository contents:
 
-- Back up your original keystore by copying the `.jrsks` and `.jrsksp` files to a safe location. Remember that these files contain sensitive keys for your data, so they must always be transmitted and stored securely.
-- Run the upgrade script as the same user that was originally used to install the server. Then the keystore is available to the script in the user's home directory.
-- Alternatively, copy the `.jrsks` and `.jrsksp` files to the home directory of the user that runs the upgrade script.
+-   Back up your original keystore by copying the `.jrsks` and `.jrsksp` files to a safe location. Remember that these files contain sensitive keys for your data, so they must always be transmitted and stored securely.
+-   Run the upgrade script as the same user that was originally used to install the server. Then the keystore is available to the script in the user's home directory.
+-   Alternatively, copy the `.jrsks` and `.jrsksp` files to the home directory of the user that runs the upgrade script.
 
 When the server's original keystore is available to the user running the upgrade script, the keys it contains are copied and preserved in the new keystore (`.jrsks`) with the aliases `deprecatedPasswordEncSecret` and `deprecatedImportExportEncSecret`.
 
@@ -79,7 +79,7 @@ Without the keystore files, the specific files created with random keys during t
 
 Backups of the keystore files are digital copies of the files stored in a secure location, usually determined by your IT policies. Use the following guidelines when creating and implementing your keystore backup policies:
 
-- Copy both the `.jrsks` and `.jrsksp` files together, keeping the `.jrsksp` file encoded as it is.
-- The keystore files should be copied only by the system user who installed the server.
-- Restrict access to the backup keystore files as you would the originals on production servers. This includes digital access security for online backups and physical security for offline backups. The files are literally the keys to the application and should be guarded as such.
-- If you need to restore from the backups, the system user who installed the server should copy the files to their home directory (\$USER/\$HOME). This is the location where the server expects to find them at run-time.
+-   Copy both the `.jrsks` and `.jrsksp` files together, keeping the `.jrsksp` file encoded as it is.
+-   The keystore files should be copied only by the system user who installed the server.
+-   Restrict access to the backup keystore files as you would the originals on production servers. This includes digital access security for online backups and physical security for offline backups. The files are literally the keys to the application and should be guarded as such.
+-   If you need to restore from the backups, the system user who installed the server should copy the files to their home directory ($USER/$HOME). This is the location where the server expects to find them at run-time.

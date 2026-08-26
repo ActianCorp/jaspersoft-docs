@@ -11,9 +11,9 @@ Report splitting works with a single report that can be run in the JasperReports
 
 This chapter contains the following sections:
 
-- Report Bursting
+-   Report Bursting
 
-- [Report Splitting](report-splitting.md)
+-   [Report Splitting](report-splitting.md)
 
 ## Report Bursting
 
@@ -55,7 +55,7 @@ To burst a report
 
 5.  On the **Parameters** tab, click **Add** to add the parameter. Report Bursting Parameter dialog appears. Enter the Parameter name and Parameter value that you want to pass to the burst reports. For example:<br>
     **Parameter name**: ShipCountry_1<br>
-    **Parameter value**: \$F{Country}
+    **Parameter value**: $F{Country}
 
     |                                                               |
     |---------------------------------------------------------------|
@@ -82,7 +82,7 @@ To burst a report
     | *Figure 4: Adding Essential Options* |
 
 7.  Select Output File Options and set the following options:<br>
-    **File name**: “Sales-” + \$F{Country}<br>
+    **File name**: “Sales-” + $F{Country}<br>
     **Formats**: select the output format for the burst report, for example, PDF or Excel.<br>
     **Sequential File Names by Timestamp**: true<br>
     **Repository Folder URI**: specify the location for the report exports to be generated in the repository, for example, /public/bursting/output. You can choose the output folder using the JasperReports Server picker (browse icon) or the expression editor. Before selecting the output folder, ensure that the output folder exists in the JasperReports Server repository.

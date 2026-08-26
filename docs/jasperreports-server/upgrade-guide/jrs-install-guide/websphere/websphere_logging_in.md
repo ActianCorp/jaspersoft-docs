@@ -9,7 +9,7 @@ description: "1. Go to the following URL to log in:"
 
     `http://<hostname>:9080/jasperserver-pro`
 
-    where \<hostname\> is localhost, a machine name, or an IP address. The login page should appear after some time to compile the necessary JSP files.
+    where &lt;hostname&gt; is localhost, a machine name, or an IP address. The login page should appear after some time to compile the necessary JSP files.
 
 2.  Log in with administrative credentials:
 

@@ -15,9 +15,9 @@ For example, consider that you are working in a warehouse. You have to restock t
 
 This chapter includes the following sections:
 
-- Searching for an Alert
-- Viewing an Alert Definition
-- The alert Descriptor
+-   Searching for an Alert
+-   Viewing an Alert Definition
+-   The alert Descriptor
 
 ## Searching for an Alert
 
@@ -313,21 +313,31 @@ The `alert` descriptor is a complex data object with nested containers for the v
 
 The properties of the `alert` descriptor are defined in the following sections:
 
-- General Properties of a Alert, such as label and description, but also the output format and base filename.
-- Source and Input Controls includes the repository URL of the report or report option and the parameter value of any input control if any of them are present and applied to the same report.
-- Simple Trigger defines interval-based repetition of the alert for a given number of occurrences.
-- Calendar Trigger runs at specific times, specific days of the week or days of the month.
-- Alert Output Properties define the file name and locations where output files are written.
-- FTP Output defines whether the output files are written to a remote server.
-- Alert Output Email defines the recipients for successful output files.
-- [Alert DataPoint](alerts.md) defines the numeric values for which an alert is created.
+-   General Properties of a Alert, such as label and description, but also the output format and base filename.
 
-When submitting an `alert` descriptor to create or modify an alert schedule, not all properties are needed. In the following tables, each property is one of the following:
+-   Source and Input Controls includes the repository URL of the report or report option and the parameter value of any input control if any of them are present and applied to the same report.
 
-- **Required** - This property must have a value for input to define a valid alert.
-- **Optional** - This property may be omitted on input, either because it is nullable, or because the server assigns a default value. The behavior is explained in the property description.
-- **Conditional** - The property may be required or optional depending on other property values. The behavior is explained in the property description.
-- **Ignored** - This property is for internal usage or output only, and the server ignores any value on input. Good practice is to omit these properties from your input.
+-   Simple Trigger defines interval-based repetition of the alert for a given number of occurrences.
+
+-   Calendar Trigger runs at specific times, specific days of the week or days of the month.
+
+-   Alert Output Properties define the file name and locations where output files are written.
+
+-   FTP Output defines whether the output files are written to a remote server.
+
+-   Alert Output Email defines the recipients for successful output files.
+
+-   [Alert DataPoint](alerts.md) defines the numeric values for which an alert is created.
+
+    When submitting an `alert` descriptor to create or modify an alert schedule, not all properties are needed. In the following tables, each property is one of the following:
+
+-   **Required** - This property must have a value for input to define a valid alert.
+
+-   **Optional** - This property may be omitted on input, either because it is nullable, or because the server assigns a default value. The behavior is explained in the property description.
+
+-   **Conditional** - The property may be required or optional depending on other property values. The behavior is explained in the property description.
+
+-   **Ignored** - This property is for internal usage or output only, and the server ignores any value on input. Good practice is to omit these properties from your input.
 
 ### General Properties of an Alert
 

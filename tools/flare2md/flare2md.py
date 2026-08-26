@@ -43,10 +43,15 @@ MC = "{%s}" % MC_NS
 TOPIC_SUFFIXES = (".htm", ".html")
 
 # Fallback condition tokens for projects whose target carries no expression.
+#
+# ExcludeFromHelp is deliberately not here. It means "leave this out of the
+# in-product Help", not "do not publish": of the HTML5 targets in these sources
+# 22 include it and only 17 exclude it, and treating it as unpublishable hid
+# pages the portal shows (the Domains guide's introduction). Guides whose target
+# really does exclude it are covered by `target.exclude`.
 DROP_CONDITION_TOKENS = (
     "donotpublish",
     "excludefrombuilds",
-    "excludefromhelp",
     "donotimport",
     "printonly",
     "draft",
@@ -198,7 +203,6 @@ def synthetic_target(guide_condition: str, all_guide_conditions, warn=None) -> T
         "globalconditions.hiddentext",
         "jasperconditions.community",
         "jasperconditions.donotpublish",
-        "jasperconditions.excludefromhelp",
     }
     for token in all_guide_conditions:
         if token.lower() != guide_condition.lower():
@@ -306,23 +310,34 @@ def inline_snippets(elem, base_dir: Path, warn, depth: int = 0, fallbacks=()) ->
         parent.remove(node)
 
 
+def condition_excluded(value: str, target: Target) -> bool:
+    """Whether a `conditions` value hides its element from this target.
+
+    Flare reads the comma-separated list as the set of tags on the element, and
+    exclusion wins: one excluded tag hides the element whatever else it carries.
+
+    Used for topic content, for TOC entries (whose attribute has no MadCap
+    prefix) and for deciding which links to follow, so all three agree on what
+    the target publishes.
+    """
+    for tok in (t.strip().lower() for t in (value or "").split(",")):
+        if not tok:
+            continue
+        if tok in target.exclude:
+            return True
+        if tok in target.include:
+            continue
+        if any(bad in tok for bad in DROP_CONDITION_TOKENS):
+            # Unknown to this target, but unpublishable by convention.
+            return True
+    return False
+
+
 def apply_conditions(elem, target: Target) -> None:
     """Drop elements excluded by the target's condition expression."""
     for node in list(elem.iter()):
         cond = node.get("%sconditions" % MC)
-        if not cond:
-            continue
-        tokens = [t.strip().lower() for t in cond.split(",") if t.strip()]
-        drop = False
-        for tok in tokens:
-            if tok in target.exclude:
-                drop = True
-            elif tok in target.include:
-                continue
-            elif any(bad in tok for bad in DROP_CONDITION_TOKENS):
-                # Unknown to this target, but unpublishable by convention.
-                drop = True
-        if drop and node.getparent() is not None:
+        if cond and condition_excluded(cond, target) and node.getparent() is not None:
             _drop_keeping_tail(node)
 
 
@@ -546,43 +561,76 @@ def _listify(elem, class_re, list_tag, matches, passes: int = 3) -> None:
 
 
 def _listify_once(elem, class_re, list_tag, matches) -> None:
+    """Turn one parent's pseudo-list paragraphs into real nested lists.
+
+    A Flare pseudo-list is a *stream*: paragraphs carrying a level in their
+    class name, with the figures, tables and code samples that belong to a step
+    sitting between it and the next one. So the stream is walked in order and
+    interrupting content is held back — if the stream resumes, that content
+    belongs to the item it followed and moves inside it, at whatever depth that
+    item was; if the stream has ended, it stays where it is.
+
+    Doing it in one walk is what keeps a sub-step a sub-step: promoting the
+    resumed items to the top level (which building a fresh list per run does)
+    renumbered lettered sub-steps as main steps.
+    """
     for parent in list(elem.iter()):
         if not isinstance(parent.tag, str) or parent.tag in ("ul", "ol"):
             continue
-        run = []
-        # Flare numbers these paragraphs with a CSS counter that only resets on
-        # a *_First class, so a table or a paragraph between two steps does not
-        # restart the count. Carry it across the interruption and start the next
-        # list where the previous one stopped.
-        carried = 0
 
-        def flush(run, carried):
-            if not run:
-                return carried
-            emitted = _wrap_run_in_list(parent, run, list_tag,
-                                        start=carried + 1 if carried else None)
-            return carried + emitted
+        root = None       # the list being built
+        stack = []        # [(level, list element)] for the open nesting
+        last_item = None  # where held-back content goes
+        pending = []      # interrupting nodes since the last item
 
         for child in list(parent):
             info = None
             if child.tag == "p" and matches(child):
                 info = _list_level(child, class_re)
-            if info is not None:
-                level, is_first = info
-                # Only a top-level *_First restarts the sequence; a lettered
-                # sub-step's "first" just begins its own nested run.
-                if is_first and level == 1:
-                    carried = flush(run, carried) if run else carried
-                    run = []
-                    carried = 0
-                run.append((child, level))
+
+            if info is None:
+                if root is not None:
+                    if (isinstance(child.tag, str)
+                            and (re.fullmatch(r"h[1-6]", child.tag)
+                                 or child.tag in ("ol", "ul"))):
+                        root, stack, last_item, pending = None, [], None, []
+                    else:
+                        pending.append(child)
                 continue
-            carried = flush(run, carried)
-            run = []
-            # A heading ends the sequence: the next section's steps start at one.
-            if isinstance(child.tag, str) and re.fullmatch(r"h[1-6]", child.tag):
-                carried = 0
-        flush(run, carried)
+
+            level, is_first = info
+            if root is None or (is_first and level == 1):
+                root = etree.Element(list_tag)
+                parent.insert(list(parent).index(child), root)
+                stack = [(1, root)]
+                last_item, pending = None, []
+            elif pending and last_item is not None:
+                for node in pending:
+                    parent.remove(node)
+                    last_item.append(node)
+            pending = []
+
+            # A run that begins deeper than the list it joins still hangs off
+            # the item above it, so clamp rather than invent parents.
+            level = max(1, min(level, stack[-1][0] + 1))
+            # Some sequences open on a sub-step, with no step above it to hang
+            # from; those sit at the level of the list they start.
+            if level > stack[-1][0] and not stack[-1][1].findall("li"):
+                level = stack[-1][0]
+            while len(stack) > 1 and stack[-1][0] > level:
+                stack.pop()
+            if level > stack[-1][0]:
+                host = stack[-1][1]
+                items = host.findall("li")
+                anchor = items[-1] if items else etree.SubElement(host, "li")
+                stack.append((level, etree.SubElement(anchor, list_tag)))
+
+            item = etree.SubElement(stack[-1][1], "li")
+            item.text = child.text
+            for kid in list(child):
+                item.append(kid)
+            parent.remove(child)
+            last_item = item
 
 
 def _wrap_run_in_list(parent, run, list_tag="ul", start=None) -> int:
@@ -1132,6 +1180,50 @@ def handle_links(elem) -> None:
             _strip_mc_attrs(node)
 
 
+FOOTNOTE_CLASS = "jsd-footnote"
+
+
+def mark_footnotes(elem) -> None:
+    """Give each Flare footnote a superscript marker, numbered per page.
+
+    `<MadCap:footnote>` holds only the note text; Flare's HTML output puts a
+    superscript number where the element sits and shows the note after it. With
+    the element merely unwrapped by `strip_madcap`, the note ran straight into
+    the sentence before it — "CompatibleOther commercially supported or
+    community OpenJDK-based Java 17..." on the Platform Support guide's JVM
+    page, which is how it reached the reviewers.
+
+    Written as inline HTML rather than markdown footnote syntax: 19 of the 20
+    footnotes in these sources sit in a table cell, those tables stay raw HTML,
+    and Python-Markdown does not read `[^1]` inside an HTML block. The element
+    is renamed rather than rebuilt so a link or emphasis inside the note
+    survives.
+    """
+    for index, node in enumerate(list(elem.iter("%sfootnote" % MC)), start=1):
+        parent = node.getparent()
+        if parent is None:
+            continue
+        # The number goes in a span wrapping the <sup>, not on the <sup>
+        # itself: pandoc's superscript carries no attributes, so a class there
+        # is dropped when the surrounding table is written back as raw HTML,
+        # while a span keeps its own. The tail space separates the marker from
+        # the note even with no stylesheet.
+        marker = etree.Element("span")
+        marker.set("class", FOOTNOTE_CLASS + "-ref")
+        sup = etree.SubElement(marker, "sup")
+        sup.text = str(index)
+        marker.tail = " "
+        parent.insert(parent.index(node), marker)
+        # A footnote holding paragraphs cannot be a span: pandoc hoists block
+        # content out of one and leaves the span empty, which is how the
+        # Application Servers note lost its two system-requirement paragraphs.
+        block = any(isinstance(c.tag, str) and c.tag in BLOCK_TAGS for c in node)
+        node.tag = "div" if block else "span"
+        node.set("class", FOOTNOTE_CLASS)
+        if node.text:
+            node.text = node.text.lstrip()
+
+
 def strip_madcap(elem) -> None:
     for node in list(elem.iter("%skeyword" % MC, "%sindexEntry" % MC)):
         _drop_keeping_tail(node)
@@ -1160,8 +1252,11 @@ def strip_presentation(elem) -> None:
         for attr in CRUFT_ATTRS:
             node.attrib.pop(attr, None)
         # Keep the language hint that fence_code_blocks added; it is what makes
-        # pandoc emit a fenced block instead of an indented one.
-        if not (node.get("class") or "").startswith("language-"):
+        # pandoc emit a fenced block instead of an indented one, and the
+        # footnote classes, which are this site's own and carry the styling that
+        # tells a footnote apart from the sentence it hangs off.
+        klass = node.get("class") or ""
+        if not (klass.startswith("language-") or klass.startswith(FOOTNOTE_CLASS)):
             node.attrib.pop("class", None)
         if node.tag == "a":
             for attr in ("target", "rel", "alt"):
@@ -1384,6 +1479,51 @@ def inner_html(body) -> str:
     return "".join(parts)
 
 
+# The markdown dialect pandoc writes.
+#
+# Not `gfm`: pandoc indents a nested bullet list by two spaces there, and
+# Python-Markdown (what Zensical parses with) only recognizes a nested list at
+# four — so every sub-bullet in the source came out as a top-level bullet.
+# pandoc's own `markdown` has `four_space_rule`, which indents every level of
+# list content to a multiple of four.
+#
+# The rest of the flavour pulls that dialect back to what Python-Markdown can
+# read: pipe tables only (its `tables` extension does not know pandoc's simple,
+# multiline or grid tables), and off go the constructs it would render as
+# literal text — fenced divs, bracketed spans, fancy/example list markers,
+# raw attributes, inline notes, citations, line blocks. `-smart` keeps
+# quotes and dashes as authored, and `-implicit_figures`,
+# `-header_attributes`, `-inline_code_attributes`, `-link_attributes` and
+# `-fenced_code_attributes` keep images, headings, code and links plain: this
+# dialect can express an element's leftover HTML attributes as a trailing
+# `{...}` block, which Python-Markdown prints verbatim (a Flare
+# `<code href="…">` came out as `` `url`{href="url"} ``). With them off,
+# pandoc falls back to raw HTML for an attributed link exactly as gfm did.
+# `-table_captions` for the same reason: a Flare table caption became a
+# `: Caption` line, which renders as literal text; without it the caption
+# stays the plain paragraph the source has, and `-table_attributes` keeps a
+# Flare table style class off the table.
+#
+# `-all_symbols_escapable-tex_math_dollars` fixes an escaping mismatch that
+# gfm had too: pandoc wrote `\\<` and `\\$`, and Python-Markdown only consumes
+# a backslash before its own special characters, so 617 pages showed the
+# backslash ("dollar signs (\\$)"). Without those two, `<` comes out as an
+# entity and `$` unescaped, and both render as authored.
+PANDOC_TO = (
+    "markdown"
+    "+four_space_rule"
+    "+pipe_tables"
+    "-simple_tables-multiline_tables-grid_tables"
+    "-fancy_lists-example_lists"
+    "-fenced_divs-bracketed_spans-native_divs-native_spans"
+    "-raw_attribute-inline_notes-citations-definition_lists-line_blocks"
+    "-smart-implicit_figures-header_attributes"
+    "-inline_code_attributes-link_attributes-fenced_code_attributes"
+    "-table_captions-table_attributes"
+    "-all_symbols_escapable-tex_math_dollars"
+)
+
+
 def pandoc(chunks):
     """Convert several HTML fragments in one pandoc run; returns markdown list.
 
@@ -1396,7 +1536,7 @@ def pandoc(chunks):
     chunks = [NS_DECL_RE.sub("", chunk) for chunk in chunks]
     joined = ("<p>%s</p>" % SPLIT_TOKEN).join(chunks)
     proc = subprocess.run(
-        ["pandoc", "-f", "html", "-t", "gfm+pipe_tables", "--wrap=none"],
+        ["pandoc", "-f", "html", "-t", PANDOC_TO, "--wrap=none"],
         input=joined.encode("utf-8"),
         capture_output=True,
     )

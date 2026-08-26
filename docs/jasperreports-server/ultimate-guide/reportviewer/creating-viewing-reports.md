@@ -13,6 +13,6 @@ JasperReports® Server makes it easy to run reports. When you run a report, it o
 
 This chapter contains the following sections:
 
-- [The Report Viewer and Conditional Text](report-viewer.md)
+-   [The Report Viewer and Conditional Text](report-viewer.md)
 
-- [Creating a New Report Template](ad-hoc-creating-template.md)
+-   [Creating a New Report Template](ad-hoc-creating-template.md)

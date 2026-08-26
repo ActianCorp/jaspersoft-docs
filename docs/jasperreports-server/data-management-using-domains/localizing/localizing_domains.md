@@ -11,7 +11,7 @@ The translated strings for a given language are defined in a properties file cal
 
 This chapter contains the following sections:
 
-- [Planning for Localization](planning_for_localization.md)
-- [Creating Locale Bundles](creating_locale_bundles.md)
-- [Properties File Syntax](properties_file_syntax.md)
-- [Adding Locale Bundles to a Domain](adding_locale_bundles.md)
+-   [Planning for Localization](planning_for_localization.md)
+-   [Creating Locale Bundles](creating_locale_bundles.md)
+-   [Properties File Syntax](properties_file_syntax.md)
+-   [Adding Locale Bundles to a Domain](adding_locale_bundles.md)

@@ -15,10 +15,10 @@ For additional credentials required for logging into JasperReports Server, go to
 
     Before launching the Jaspersoft VM from Azure Marketplace, perform the following actions:
 
-    - Microsoft Azure Account. Do not have an Azure account? [Sign up here](https://azure.microsoft.com/en-us/account/).
-    - [Certificate](https://docs.microsoft.com/en-us/azure/key-vault/certificates/tutorial-import-certificate) is required to connect to Azure SQL Databases for security. Do not have a Key Pair created? [Generate one](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-certificates-point-to-site-linux)
-    - Existing Jaspersoft annual subscription (needed for BYOL)
-    - Recommended starting VM Size is 4VCPUs.
+    -   Microsoft Azure Account. Do not have an Azure account? [Sign up here](https://azure.microsoft.com/en-us/account/).
+    -   [Certificate](https://docs.microsoft.com/en-us/azure/key-vault/certificates/tutorial-import-certificate) is required to connect to Azure SQL Databases for security. Do not have a Key Pair created? [Generate one](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-certificates-point-to-site-linux)
+    -   Existing Jaspersoft annual subscription (needed for BYOL)
+    -   Recommended starting VM Size is 4VCPUs.
 
 1.  In Azure Marketplace, perform the following steps:<br>
     To find Jaspersoft on the Azure Marketplace, type Jaspersoft in the search field and press enter. The search result displays all the Jaspersoft offerings.
@@ -27,24 +27,24 @@ For additional credentials required for logging into JasperReports Server, go to
 
     2.  Select any of the following options to launch the VM.
 
-        - **Create**
+        -   **Create**
 
-        - **Start with a pre-set configuration**
+        -   **Start with a pre-set configuration**
 
-          [![LaunchingVM](assets/images/LaunchingVM.png)](assets/files/LaunchingVM.png)
+            [![LaunchingVM](assets/images/LaunchingVM.png)](assets/files/LaunchingVM.png)
 
         Selecting the **Create** initiates the Create a Virtual Machine wizard and **Start with a pre-set configuration** lets you customize your VM.
 
     3.  To start the pre-set configuration, click the **Start with a pre-set configuration** button.
 
     4.  On the **Choose recommended defaults that match your workload** wizard, select a workload environment.
-        - Dev/Test
-        - Production
+        -   Dev/Test
+        -   Production
 
     5.  Select one of these workload types.
-        - General Purpose(D-series)
-        - Memory optimized(E-series)
-        - Compute optimized(F-series)
+        -   General Purpose(D-series)
+        -   Memory optimized(E-series)
+        -   Compute optimized(F-series)
 
     6.  After you select the workload environment and workload type, click **Continue** to create a VM.
 

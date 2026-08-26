@@ -9,4 +9,4 @@ You can use Unicode syntax to write non-Latin-based characters (such as Greek, C
 
 !!! note
 
-    If you use this character in a static text element, “\u20ac” will appear. The value of a static field is not interpreted as a Java expression.
+    If you use this character in a static text element, “\\u20ac” will appear. The value of a static field is not interpreted as a Java expression.

@@ -11,18 +11,18 @@ When you insert an element, you can let Jaspersoft Studio autosize it, or you ca
 
 To let Jaspersoft Studio autosize an element
 
-- Drag an element from the palette to place it in the report editing area.
+-   Drag an element from the palette to place it in the report editing area.
 
-To size an element at insertion time
+    To size an element at insertion time
 
-- Click the element in the palette. The cursor changes ![jss icon loaded palette element](../assets/images/jss-icon-loaded-palette-element.png) to show that an element is selected. Click and drag in the report editing area to size and place the element. If you insert a crosstab or table using click and drag, the columns fill the whole crosstab or table.
+-   Click the element in the palette. The cursor changes ![jss icon loaded palette element](../assets/images/jss-icon-loaded-palette-element.png) to show that an element is selected. Click and drag in the report editing area to size and place the element. If you insert a crosstab or table using click and drag, the columns fill the whole crosstab or table.
 
 ## Selecting Elements
 
-- Click to select an element in the report editing area.
-- Drag to adjust the element's position or change its size by selecting it and dragging a corner of the selection frame.
-- To select several elements at the same time, drag the cursor in a rectangle around them. When two or more elements are selected, only their common properties are displayed in the Properties view. If the values of the properties are different, the value fields are blank (usually the field is shown empty). To edit properties unique to one element, select only that element.
-- Shift-click to select the parent of the current object. For example, shift-click an element contained directly in a band to select the band.
+-   Click to select an element in the report editing area.
+-   Drag to adjust the element's position or change its size by selecting it and dragging a corner of the selection frame.
+-   To select several elements at the same time, drag the cursor in a rectangle around them. When two or more elements are selected, only their common properties are displayed in the Properties view. If the values of the properties are different, the value fields are blank (usually the field is shown empty). To edit properties unique to one element, select only that element.
+-   Shift-click to select the parent of the current object. For example, shift-click an element contained directly in a band to select the band.
 
 ## Positioning Elements
 
@@ -30,7 +30,7 @@ Jaspersoft Studio offers a number of ways to place the elements in your report w
 
 ### Using the Grid
 
-To show a grid for aligning elements in the page, go to **View \>** **Show Grid** from the main menu. To force the elements to snap to the grid, also select **Snap to Grid**.
+To show a grid for aligning elements in the page, go to **View &gt;** **Show Grid** from the main menu. To force the elements to snap to the grid, also select **Snap to Grid**.
 
 ### Using Bands
 
@@ -42,7 +42,7 @@ In the report editing area, you can drag an element from one band to another ban
 
 ### Guides
 
-When dragging or resizing an element, Jaspersoft Studio suggests places to align it based on the elements currently in the Design tab, the band bounds, and any guides. When the element you are moving or resizing is in line with another element in the report, a guideline appears, allowing you to align the elements. To force elements to align with guidelines, select **View \> Snap to Guides** from the main menu.
+When dragging or resizing an element, Jaspersoft Studio suggests places to align it based on the elements currently in the Design tab, the band bounds, and any guides. When the element you are moving or resizing is in line with another element in the report, a guideline appears, allowing you to align the elements. To force elements to align with guidelines, select **View &gt; Snap to Guides** from the main menu.
 
 You can drag and change the position of a guideline at any time with no effect on the element’s position.
 
@@ -56,14 +56,17 @@ You can use the Properties view to edit an element’s properties. By default th
 
 Some elements that can contain many other elements are called containers. Containers include bands, frames, table cells, and crosstab cells. The following tools help you position items inside containers:
 
-- Sizing tools – Let you size an element to fit the height, width, or entire container.
-- Container layouts – Let you set how elements are automatically arranged in a container.
+-   Sizing tools – Let you size an element to fit the height, width, or entire container.
 
-Elements inside containers must obey the following rules.
+-   Container layouts – Let you set how elements are automatically arranged in a container.
 
-- Elements in table cell and crosstab cells must be fully contained by the parent in the design time. Otherwise, an error occurs at compilation time.
-- Elements in bands can extend horizontally past the document margins and/or overflow the top of the band. Otherwise, an error occurs at compilation time.
-- Frames are able to adapt their size to content.
+    Elements inside containers must obey the following rules.
+
+-   Elements in table cell and crosstab cells must be fully contained by the parent in the design time. Otherwise, an error occurs at compilation time.
+
+-   Elements in bands can extend horizontally past the document margins and/or overflow the top of the band. Otherwise, an error occurs at compilation time.
+
+-   Frames are able to adapt their size to content.
 
 ### Container Layouts
 
@@ -71,20 +74,23 @@ A container layout is a design-time tool that adjusts the size and the position 
 
 There are four container layouts:
 
-- Free layout
-- Horizontal layout
-- Vertical layout (default)
-- Grid layout
+-   Free layout
 
-An additional layout, spreadsheet layout, is displayed on the same context menu, but is actually applied across bands. See [1.1, “Working with Spreadsheet Layout,” on page 1](../spreadsheet-layout.md) for more information.
+-   Horizontal layout
 
-To choose a layout:
+-   Vertical layout (default)
 
-- Right-click in the container, select Arrange in Container from the menu, then select the layout you want.
+-   Grid layout
 
-or
+    An additional layout, spreadsheet layout, is displayed on the same context menu, but is actually applied across bands. See [1.1, “Working with Spreadsheet Layout,” on page 1](../spreadsheet-layout.md) for more information.
 
-- Click the container and then select the option you want from the Layouts menu on the Appearance tab of the Properties view. This is the only way to select Free Layout.
+    To choose a layout:
+
+-   Right-click in the container, select Arrange in Container from the menu, then select the layout you want.
+
+    or
+
+-   Click the container and then select the option you want from the Layouts menu on the Appearance tab of the Properties view. This is the only way to select Free Layout.
 
 ### Working with Grid Layout
 
@@ -168,7 +174,7 @@ To use grid layout
     | ![jss containers grid 1 before](../assets/images/jss-containers-grid-1-before.png) |
     | Title band before applying grid layout |
 
-6.  Right-click in a blank space in the Title band and select **Arrange in Container \> Grid Layout**, or select the Title band and select **Grid Layout** in the Properties view.
+6.  Right-click in a blank space in the Title band and select **Arrange in Container &gt; Grid Layout**, or select the Title band and select **Grid Layout** in the Properties view.
 
     The two elements are arranged to fill the band equally.
 
@@ -197,15 +203,16 @@ To use grid layout
 
 9.  Position the static text. To do this, select the static text. In the Properties view, in the Layout section of the Appearance tab, set the following:
 
-    - Set **Row Number** to 1 to move the element to the second row. You could also have added the static text directly below the first row, but setting the row explicitly gives you more control.
-    - Set **Column Span** to 2 to have the element span both columns. You could instead set the Column Number to 2 to move the static text under the chart.
+-   Set **Row Number** to 1 to move the element to the second row. You could also have added the static text directly below the first row, but setting the row explicitly gives you more control.
 
-    |  |
-    |----|
-    | ![jss containers grid 5 new row](../assets/images/jss-containers-grid-5-new-row.png) |
-    | Using two rows in grid layout |
+    -   Set **Column Span** to 2 to have the element span both columns. You could instead set the Column Number to 2 to move the static text under the chart.
 
-10. Set the relative heights of the rows. To do this, select the chart and set **Row Weight** to 10 in the Layout section of the Appearance tab of the Properties view. You could actually do this by changing the settings on any of the three elements, but in this case, the chart is the main element and you want other elements to adjust to it.
+|  |
+|----|
+| ![jss containers grid 5 new row](../assets/images/jss-containers-grid-5-new-row.png) |
+| Using two rows in grid layout |
+
+1.  Set the relative heights of the rows. To do this, select the chart and set **Row Weight** to 10 in the Layout section of the Appearance tab of the Properties view. You could actually do this by changing the settings on any of the three elements, but in this case, the chart is the main element and you want other elements to adjust to it.
 
 |  |
 |----|

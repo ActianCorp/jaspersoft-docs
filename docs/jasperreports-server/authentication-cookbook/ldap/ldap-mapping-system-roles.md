@@ -9,8 +9,8 @@ When the organization mapping is complete, synchronization invokes `mtExternalUs
 
 Depending on your deployment, you can map roles to system roles in one of two ways:
 
-- Configure the `mtExternalUserSetupProcessor` or `externalUserSetupProcessor` bean with `organizationRoleMap` to map between external and internal roles. The processor checks if the user has an external role as a map entry key. If the user has the role, the processor assigns the user the internal role in the map entry value instead of the external role in the key.
-- Map user roles statically using the `mtExternalUserSetupProcessor` or `externalUserSetupProcessor` bean.
+-   Configure the `mtExternalUserSetupProcessor` or `externalUserSetupProcessor` bean with `organizationRoleMap` to map between external and internal roles. The processor checks if the user has an external role as a map entry key. If the user has the role, the processor assigns the user the internal role in the map entry value instead of the external role in the key.
+-   Map user roles statically using the `mtExternalUserSetupProcessor` or `externalUserSetupProcessor` bean.
 
 One practical consequence of external administrator role mapping is that external authentication can be used exclusively. When properly set up, you can have external users who are system or organization administrators. Then you don't need to have the superuser and jasperadmin users. However, you must ensure that every organization has an external user mapped to the organization with the correct attributes to have organization admin privileges.
 
@@ -28,8 +28,8 @@ Whether you map users and roles to a single organization or multiple organizatio
 
 The `organizationRoleMap` property provides a list of key/value pairs that maps external role names to internal ones. The key should be a role name that your mapping creates, after adding the prefix and capitalization as configured in `JSDefaultLdapAuthoritiesPopulator`. For commercial JasperReports Server deployments, you need to choose the level at which the role is assigned:
 
-- To map to an internal role at the organization level, append `|*` to the name of the internal role, for example, `ROLE_EXTERNAL_USER|*`. Roles mapped at the organization level do not have administrative privileges.
-- To map to an internal role at the system (null) level, do not modify the internal role name, for example, ROLE_EXTERNAL_ADMINISTRATOR. Roles at the system level are usually reserved for special users like the system administrator and allow access to the repository folder of all other organizations.
+-   To map to an internal role at the organization level, append `|*` to the name of the internal role, for example, `ROLE_EXTERNAL_USER|*`. Roles mapped at the organization level do not have administrative privileges.
+-   To map to an internal role at the system (null) level, do not modify the internal role name, for example, ROLE_EXTERNAL_ADMINISTRATOR. Roles at the system level are usually reserved for special users like the system administrator and allow access to the repository folder of all other organizations.
 
 For example, if your LDAP user belongs to a group named `jrsadmin` that's mapped to the name `ROLE_ADMIN_EXTERNAL_ORGANIZATION`, the following code example would assign that user the `ROLE_ADMINISTRATOR` system role that makes the user an organization admin. This example shows how to create this system role mapping in a single organization configuration for commercial editions:
 
@@ -65,9 +65,9 @@ Roles not mapped to system roles are created and synchronized in the mapped orga
 
 If you're mapping all your external users to a single organization, you can assign static roles to users. This lets you specify a list of administrative users and roles, and a list of roles for non-administrative users. To define static roles, use the `externalUserSetupProcessor` or `mtExternalUserSetupProcessor` bean. To set up static roles, locate the version of the bean used in your sample file and configure the following properties:
 
-- `adminUserNames` property: A list of usernames granted internal administrator privileges in JasperReports Server. The username values must exactly match the usernames authenticated and returned by the external authority.
-- `defaultAdminRoles` property: A list of JasperReports Server internal roles. These are assigned to every user in the list of administrators.
-- `defaultInternalRoles` property: A list of JasperReports Server roles assigned to every user not in the list of administrators.
+-   `adminUserNames` property: A list of usernames granted internal administrator privileges in JasperReports Server. The username values must exactly match the usernames authenticated and returned by the external authority.
+-   `defaultAdminRoles` property: A list of JasperReports Server internal roles. These are assigned to every user in the list of administrators.
+-   `defaultInternalRoles` property: A list of JasperReports Server roles assigned to every user not in the list of administrators.
 
 The following example shows how to use the `mtExternalUserSetupProcessor` bean to define static roles. The configuration for `externalUserSetupProcessor` is similar:
 

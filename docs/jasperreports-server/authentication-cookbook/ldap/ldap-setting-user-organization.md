@@ -13,8 +13,8 @@ In implementation that supports multiple organizations, all users and roles exce
 
 If your JasperReports Server supports multiple organizations, you have two ways to set the user organization for external users:
 
-- Create a mapping from RDNs in your LDAP server to organizations in JasperReports Server, as described in Mapping to Multiple Organizations.
-- If you want all users to be in just one of your organizations, use the `externalTenantSetupProcessor` bean to specify the organization, as described in Mapping to a Single Organization.
+-   Create a mapping from RDNs in your LDAP server to organizations in JasperReports Server, as described in Mapping to Multiple Organizations.
+-   If you want all users to be in just one of your organizations, use the `externalTenantSetupProcessor` bean to specify the organization, as described in Mapping to a Single Organization.
 
 If your JasperReports Server deployment supports only a single organization (all community deployments and some professional editions), you do not need to set organization information.
 
@@ -30,10 +30,10 @@ Organizations created during external user login have an administrator with a de
 
 Specify the following information in the `ldapExternalTenantProcessor` bean to map the RDN of the user to a hierarchy of organizations in JasperReports Server:
 
-- `excludeRootDn` property: Property that specifies whether the base DN, also called root DN, should be mapped along with the RDN. For example, if the property list for `organizationRDNs` contains `dc` and you don't exclude the base DN of `dc=example,dc=com`, the base DN maps to the following: the organization ID `example` nested inside the organization ID `com` nested inside the specified root organization. The base DN is part of the LDAP URL specified in [Setting the LDAP Connection Parameters](ldap-setting-connection-parameters.md).
-- `organizationRDNs` property: A list of attribute names that determines which RDN values should be mapped to organization names. The names in this list determine the RDNs that creates a hierarchy of organizations in JasperReports Server. For example, if you specify the value `ou`, each RDN with `ou=<name>` creates a level in the hierarchy of mapped organizations. If this list is blank or none of the attributes match the RDN of the user entry, the `defaultOrganization` property determines the organization name.
-- `rootOrganizationId` property: The ID of an organization under which any mapped organizations are created as sub-organizations. If the root organization ID is absent or blank (`""`), the server creates the organization(s) mapped in `organizationRDNs` as children of the default organization shipped with JasperReports Server.
-- `defaultOrganization` property (optional): The ID of an organization assigned to users that would otherwise be mapped to a null organization ID.
+-   `excludeRootDn` property: Property that specifies whether the base DN, also called root DN, should be mapped along with the RDN. For example, if the property list for `organizationRDNs` contains `dc` and you don't exclude the base DN of `dc=example,dc=com`, the base DN maps to the following: the organization ID `example` nested inside the organization ID `com` nested inside the specified root organization. The base DN is part of the LDAP URL specified in [Setting the LDAP Connection Parameters](ldap-setting-connection-parameters.md).
+-   `organizationRDNs` property: A list of attribute names that determines which RDN values should be mapped to organization names. The names in this list determine the RDNs that creates a hierarchy of organizations in JasperReports Server. For example, if you specify the value `ou`, each RDN with `ou=<name>` creates a level in the hierarchy of mapped organizations. If this list is blank or none of the attributes match the RDN of the user entry, the `defaultOrganization` property determines the organization name.
+-   `rootOrganizationId` property: The ID of an organization under which any mapped organizations are created as sub-organizations. If the root organization ID is absent or blank (`""`), the server creates the organization(s) mapped in `organizationRDNs` as children of the default organization shipped with JasperReports Server.
+-   `defaultOrganization` property (optional): The ID of an organization assigned to users that would otherwise be mapped to a null organization ID.
 
 !!! warning
 
@@ -121,11 +121,11 @@ To set up admin users
         </bean>
     ```
 
-5.  The \${...} syntax above references values configured in the following file:
+5.  The ${...} syntax above references values configured in the following file:
 
-    \<js-install\>\buildomatic\conf_source\iePro\js.config.properties file.
+    &lt;js-install&gt;\\buildomatic\\conf_source\\iePro\\js.config.properties file.
 
-    To set these values, open \<js-install\>\buildomatic\conf_source\iePro\js.config.properties and edit the entries there.
+    To set these values, open &lt;js-install&gt;\\buildomatic\\conf_source\\iePro\\js.config.properties and edit the entries there.
 
     ``` properties
     new.tenant.user.name.1=jasperadmin
@@ -176,8 +176,8 @@ The `tenantIdNotSupportedSymbols` property of the `configurationBean` bean in th
 
 If you have a commercial version of JasperReports Server, you can choose to map all external users to a single organization, for example, in the following cases:
 
-- You have a commercial JasperReports Server deployment that does not implement multiple organizations, but instead uses the default organization. This includes commercial versions licensed for a single organization. In this case, externally authenticated users must be mapped to the default organization.
-- You have multiple organizations in JasperReports Server, but still want all external users to be placed in a single organization.
+-   You have a commercial JasperReports Server deployment that does not implement multiple organizations, but instead uses the default organization. This includes commercial versions licensed for a single organization. In this case, externally authenticated users must be mapped to the default organization.
+-   You have multiple organizations in JasperReports Server, but still want all external users to be placed in a single organization.
 
 The following steps show how to map all external users to a single organization using the sample-applicationContext-externalAuth-LDAP-mt.xml file:
 

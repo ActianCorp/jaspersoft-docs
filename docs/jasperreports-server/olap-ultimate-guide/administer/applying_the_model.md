@@ -100,27 +100,27 @@ To analyze the FoodMart view
 
 5.  Let us see if that finding holds true across different stores. To do so, we add another dimension, which creates a crossjoin. Analytic views make creating a crossjoin easy.
 
-    1.  Select ![ja pro change data cube](../assets/images/ja-pro-change-data-cube.png), make STORE a row, and select **All Stores**\> USA \> CA (for instructions on adding a dimension, refer to [Cube Configuration](../analyze-data/cube_configuration.md)). Adding the STORE dimension to rows allows you to see the breakdown within the store as well as across different stores with respect to certain products (if we wanted to compare different products across stores, we would make PRODUCTS a row instead of STORES).
+    1.  Select ![ja pro change data cube](../assets/images/ja-pro-change-data-cube.png), make STORE a row, and select **All Stores**&gt; USA &gt; CA (for instructions on adding a dimension, refer to [Cube Configuration](../analyze-data/cube_configuration.md)). Adding the STORE dimension to rows allows you to see the breakdown within the store as well as across different stores with respect to certain products (if we wanted to compare different products across stores, we would make PRODUCTS a row instead of STORES).
 
-    ![ja ug admin expand2](../assets/images/ja-ug-admin-expand2.png)
+        ![ja ug admin expand2](../assets/images/ja-ug-admin-expand2.png)
 
-    Adding the All Stores Dimension
+        Adding the All Stores Dimension
 
-    <table>
-    <colgroup>
-    <col style="width: 100%" />
-    </colgroup>
-    <tbody>
-    <tr>
-    <td><p><code>select {[Measures].[Store Sales]} ON COLUMNS,</code></p>
-    <p><code> Crossjoin([Product].[Drink].[Alcoholic Beverages].[Beer and Wine].Children, {[Store].[All Stores]}) ON ROWS</code></p>
-    <p><code>from [Sales]</code></p>
-    <p><code>where [Time].[2012].[Q4].[12]</code></p></td>
-    </tr>
-    </tbody>
-    </table>
+        <table>
+        <colgroup>
+        <col style="width: 100%" />
+        </colgroup>
+        <tbody>
+        <tr>
+        <td><p><code>select {[Measures].[Store Sales]} ON COLUMNS,</code></p>
+        <p><code> Crossjoin([Product].[Drink].[Alcoholic Beverages].[Beer and Wine].Children, {[Store].[All Stores]}) ON ROWS</code></p>
+        <p><code>from [Sales]</code></p>
+        <p><code>where [Time].[2012].[Q4].[12]</code></p></td>
+        </tr>
+        </tbody>
+        </table>
 
-6.  Deselect the ![ja pro zoom on drill](../assets/images/ja-pro-zoom-on-drill.png), then use ![ja expand position 2 nav table](../assets/images/ja-expand-position-2-nav-table.jpg) to drill down to navigate to intersections of the store and city data. For example, under both the BEER and WINE subcategories, drill-down on ALL STORES, then USA, then CALIFORNIA to examine the data on the California stores. Notice that your are comparing two products across five stores, in an easy-to-understand format. We did this by navigating the data presented by Jaspersoft OLAP without having to design and run a report.
+    2.  Deselect the ![ja pro zoom on drill](../assets/images/ja-pro-zoom-on-drill.png), then use ![ja expand position 2 nav table](../assets/images/ja-expand-position-2-nav-table.jpg) to drill down to navigate to intersections of the store and city data. For example, under both the BEER and WINE subcategories, drill-down on ALL STORES, then USA, then CALIFORNIA to examine the data on the California stores. Notice that your are comparing two products across five stores, in an easy-to-understand format. We did this by navigating the data presented by Jaspersoft OLAP without having to design and run a report.
 
 ![ja ug admin drilldown3](../assets/images/ja-ug-admin-drilldown3.png)
 

@@ -13,10 +13,10 @@ When rendering a report, by default it is scaled to fit in the container you spe
 
 To set a different scaling factor when rendering a report, specify its `scale` property:
 
-- `container` – The report is scaled to fully fit within the container, both in width and height. If the container is a different aspect ratio, there will be white space in the dimension where the container is larger. This is the default scaling behavior when the `scale` property is not specified.
-- `width` – The report is scaled to fit within the width of the container. If the report is taller than the container, users will need to scroll vertically to see the entire report.
-- `height` – The report is scaled to fit within the height of the container. If the report is wider than the container, users will need to scroll horizontally to see the entire report.
-- Scale factor – A decimal value greater than 0, with 1 being equivalent to 100%. A value between 0 and 1 reduces the report from its normal size, and a value greater than 1 enlarges it. If either or both dimensions of the scaled report are larger than the container, users will need to scroll to see the entire report.
+-   `container` – The report is scaled to fully fit within the container, both in width and height. If the container is a different aspect ratio, there will be white space in the dimension where the container is larger. This is the default scaling behavior when the `scale` property is not specified.
+-   `width` – The report is scaled to fit within the width of the container. If the report is taller than the container, users will need to scroll vertically to see the entire report.
+-   `height` – The report is scaled to fit within the height of the container. If the report is wider than the container, users will need to scroll horizontally to see the entire report.
+-   Scale factor – A decimal value greater than 0, with 1 being equivalent to 100%. A value between 0 and 1 reduces the report from its normal size, and a value greater than 1 enlarges it. If either or both dimensions of the scaled report are larger than the container, users will need to scroll to see the entire report.
 
 In every case, the entire report is scaled in both directions by the same amount, you cannot change the aspect ratio of tables and crosstab elements.
 

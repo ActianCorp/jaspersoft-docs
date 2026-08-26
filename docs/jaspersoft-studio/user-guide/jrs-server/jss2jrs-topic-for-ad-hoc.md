@@ -11,7 +11,7 @@ The following steps show how to create a Topic based on the sample database prov
 
 To create a Topic's JRXML
 
-1.  In Jaspersoft Studio, click **File \> New \> Jasper Report**. The report wizard appears.
+1.  In Jaspersoft Studio, click **File &gt; New &gt; Jasper Report**. The report wizard appears.
 
 2.  Select a report template and click **Next**.
 
@@ -41,7 +41,7 @@ To upload the Topic
 
     If you have not created any server connections, create one before proceeding. For more information, see [Connecting to JasperReports Server](jss2jrs-connecting.md).
 
-2.  Navigate to the Topic folder. For example, if you are logged in as jasperadmin, navigate to **Ad Hoc Components \> Topics**.
+2.  Navigate to the Topic folder. For example, if you are logged in as jasperadmin, navigate to **Ad Hoc Components &gt; Topics**.
 
 3.  Right-click the **Topics** folder and select **New**. The **Add Resource Wizard** appears.
 
@@ -55,15 +55,15 @@ To upload the Topic
 
 8.  Click the **Data Source from Repository** radio button and click ![dotdotdot button](../assets/images/dotdotdot-button.png) to its right.
 
-9.  Navigate to **Analysis Components \> Analysis connections**, select the SugarCRM data source, and click **OK**.
+9.  Navigate to **Analysis Components &gt; Analysis connections**, select the SugarCRM data source, and click **OK**.
 
 10. Click **Finish** to upload the report unit to the Topics folder so it can be used in the JasperReports Server Ad Hoc Editor.
 
 To test the Topic
 
 1.  Log in to JasperReports Server.
-2.  Click **Create \> Ad Hoc View**.
-3.  On the **Topics** tab of the **Data Chooser**, open the **Topics** folder. For example, navigate to **Organizations \> Topics**.
+2.  Click **Create &gt; Ad Hoc View**.
+3.  On the **Topics** tab of the **Data Chooser**, open the **Topics** folder. For example, navigate to **Organizations &gt; Topics**.
 4.  Click the **Topic** that you created above and click **Table**, **Chart**, or **Crosstab**.
 5.  Verify that the fields you selected in Jaspersoft Studio all appear in the list of available fields.
 
@@ -83,11 +83,11 @@ For example, this JRXML code declares a StoreState field displayed in reports as
 </field>
 ```
 
-Topics also support the \$R expressions for field names; for more information, see [Expressions](../expressions/expressions.md).
+Topics also support the $R expressions for field names; for more information, see [Expressions](../expressions/expressions.md).
 
 For fields in a non-domain topic the following properties may be of interest:
 
-- `dimensionOrMeasure`, which marks a field as a field or a measure
-- `defaultAgg`, the aggregation to use for this measure (for example, `avg`)
-- `semantic.item.desc`, a description of the field
-- `DefaultMask`, which sets a measure as a \$ or date
+-   `dimensionOrMeasure`, which marks a field as a field or a measure
+-   `defaultAgg`, the aggregation to use for this measure (for example, `avg`)
+-   `semantic.item.desc`, a description of the field
+-   `DefaultMask`, which sets a measure as a $ or date

@@ -1,11 +1,11 @@
 ---
 title: Viewing Attributes
-description: "The GET method of the attributes service retrieves the list of attributes, if any, defined for the specified entity (a user, an organization, or the server-level). For possible values of <entity> in..."
+description: "The GET method of the attributes service retrieves the list of attributes, if any, defined for the specified entity (a user, an organization, or the server-level). For possible values of..."
 ---
 
 # 1.0.1 Viewing Attributes
 
-The GET method of the attributes service retrieves the list of attributes, if any, defined for the specified entity (a user, an organization, or the server-level). For possible values of \<entity\> in the URL, see [1.1.2, “Entities with Attributes,” on page 1](the_v2_attributes_service.md).
+The GET method of the attributes service retrieves the list of attributes, if any, defined for the specified entity (a user, an organization, or the server-level). For possible values of &lt;entity&gt; in the URL, see [1.1.2, “Entities with Attributes,” on page 1](the_v2_attributes_service.md).
 
 There are two syntaxes; the following one is for reading multiple attributes or all attributes at once.
 

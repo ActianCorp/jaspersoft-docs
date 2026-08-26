@@ -19,15 +19,15 @@ Jaspersoft Studio requires the Java Runtime Environment (JRE). To compile the re
 
 During the JSS download, you must accept the Java license agreement and select the correct operating system. Jaspersoft Studio is based on Eclipse and supports several common operating systems. For the versions supported, see the JasperReports Server Supported Platform Datasheet:
 
-- Windows, 64 bit
+-   Windows, 64 bit
 
-- Linux, 64 bit
+-   Linux, 64 bit
 
-- MacOS X, 64 bit
+-   MacOS X, 64 bit
 
 To find the version of Eclipse used in Jaspersoft Studio:
 
-1.  Select **Help \> About Jaspersoft® Studio** from the main menu.
+1.  Select **Help &gt; About Jaspersoft® Studio** from the main menu.
 
 2.  Click the Eclipse icon to view information about Eclipse ![jss icon eclipse](assets/images/jss-icon-eclipse.png).
 
@@ -41,29 +41,29 @@ The Eclipse RCP package is available in the following formats for community and 
 
 Commercial versions:
 
-- js-jss_x.x.x_linux_x86_64.tgz
+-   js-jss_x.x.x_linux_x86_64.tgz
 
-- js-jss_x.x.x_macosx_x86_64.dmg
+-   js-jss_x.x.x_macosx_x86_64.dmg
 
-- js-jss_x.x.x_sources.zip
+-   js-jss_x.x.x_sources.zip
 
-- js-jss_x.x.x_windows_x86_64.exe
+-   js-jss_x.x.x_windows_x86_64.exe
 
-- js-jss_x.x.x_windows_x86_64.zip
+-   js-jss_x.x.x_windows_x86_64.zip
 
 x.x.x represents the version number of Jaspersoft Studio.
 
 For community only, unsupported versions for the Eclipse RCP are available as a convenience for users who are in a restricted environment and cannot download or install an .exe file:
 
-- js-studiocomm_x.x.x_linux_amd64.deb
+-   js-studiocomm_x.x.x_linux_amd64.deb
 
-- js-studiocomm_x.x.x_linux_x86_64.tgz
+-   js-studiocomm_x.x.x_linux_x86_64.tgz
 
-- js-studiocomm_x.x.x_macosx_x86_64.dmg
+-   js-studiocomm_x.x.x_macosx_x86_64.dmg
 
-- js-studiocomm_x.x.x_windows_x86_64.exe
+-   js-studiocomm_x.x.x_windows_x86_64.exe
 
-- js-studiocomm_x.x.x_windows_x86_64.zip
+-   js-studiocomm_x.x.x_windows_x86_64.zip
 
 ## Command-Line Installation on Windows
 
@@ -109,11 +109,11 @@ The Jaspersoft Studio installer can be run via the command line on Windows. The 
 
 Suppose you want to use a silent install for Jaspersoft Studio and have the following setup:
 
-- Installer Path:` \JASPERSOFT\Installer\JaspersoftStudioPro-x.x.x.final-windows-installer-x86_64.exe`
+-   Installer Path:` \JASPERSOFT\Installer\JaspersoftStudioPro-x.x.x.final-windows-installer-x86_64.exe`
 
-- License File (downloaded from support portal): `C:\Jaspersoft\My Licenses\jasperserver.license`
+-   License File (downloaded from support portal): `C:\Jaspersoft\My Licenses\jasperserver.license`
 
-- Desired destination folder: `C:\SW\JASPERSOFT\JSS\xxx`
+-   Desired destination folder: `C:\SW\JASPERSOFT\JSS\xxx`
 
 The install command is:
 
@@ -137,7 +137,7 @@ To obtain a commercial license, contact [Jaspersoft Technical Support](https://w
 
 To install a license file:
 
-1.  Select **Help \> License Manager** from the main menu.
+1.  Select **Help &gt; License Manager** from the main menu.
 
     ![jss license manager](assets/images/jss-license-manager.png)
 

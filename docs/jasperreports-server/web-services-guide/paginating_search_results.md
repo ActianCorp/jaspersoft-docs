@@ -13,9 +13,9 @@ Pagination is complicated by the fact that JasperReports® Server enforces permi
 
 There are 3 different combinations of settings that you can use for pagination.
 
-- Default pagination - Every page may have less than a complete page of results, but this is the most performant strategy and the easiest to implement.
-- Full page pagination - Ensures that every page has exactly the number of results that you specify, but this makes the server perform more queries, and it requires extra logic in the client.
-- No pagination - Requests all search results in a single reply, which is simplest to process but can block the caller for a noticeable delay when there are many results.
+-   Default pagination - Every page may have less than a complete page of results, but this is the most performant strategy and the easiest to implement.
+-   Full page pagination - Ensures that every page has exactly the number of results that you specify, but this makes the server perform more queries, and it requires extra logic in the client.
+-   No pagination - Requests all search results in a single reply, which is simplest to process but can block the caller for a noticeable delay when there are many results.
 
 The advantages and disadvantages of each pagination strategy are described in the following sections. Choose a strategy for your respository searches based on the types searches being performed, the user performing the search, and the contents of your repository. Every request to the v2/resources service can use a different pagination strategy; it's up to your client app to use the appropriate strategy and process the results accordingly.
 
@@ -25,8 +25,8 @@ With the default pagination, every page of results returned by the server may co
 
 Default pagination has the best performance and, when configured with the right limit for the size of your repository, almost no delay in response for your users. Because results are filtered by permissions, the user credentials that you specify for the request determine how full each page is:
 
-- The system admin (`superuser`) has access to every resource, and therefore the results are effectively unfiltered and each page is full. But the same can be true when you perform a search as jasperadmin within his organization, or even as a plain user within a folder where the user has full read permission. In these cases the default pagination is very efficient and has no partially-full pages.
-- If you are performing a sparse search, for example finding all reports that a given user has permission to access within an entire and large organization, then the results may have many partially-full page, all of differing lengths. In this case, you may prefer to use “Full Page Pagination” on page 1.
+-   The system admin (`superuser`) has access to every resource, and therefore the results are effectively unfiltered and each page is full. But the same can be true when you perform a search as jasperadmin within his organization, or even as a plain user within a folder where the user has full read permission. In these cases the default pagination is very efficient and has no partially-full pages.
+-   If you are performing a sparse search, for example finding all reports that a given user has permission to access within an entire and large organization, then the results may have many partially-full page, all of differing lengths. In this case, you may prefer to use “Full Page Pagination” on page 1.
 
 <table>
 <colgroup>

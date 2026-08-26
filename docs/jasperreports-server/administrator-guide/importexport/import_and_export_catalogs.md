@@ -23,11 +23,11 @@ The resources in the repository often have dependencies on other resources, for 
 
 However, when exporting individual organizations, there are three scenarios that create broken dependencies:
 
-- An organization admin exports a resource with dependencies that he does not have permission to access.
+-   An organization admin exports a resource with dependencies that he does not have permission to access.
 
-- The export from an organization includes a resource with a dependency in a parent organization. For reasons of consistency, even the system admin (`superuser`) can't export a dependency in a parent organization if the parent organization is not explicitly selected for export.
+-   The export from an organization includes a resource with a dependency in a parent organization. For reasons of consistency, even the system admin (`superuser`) can't export a dependency in a parent organization if the parent organization is not explicitly selected for export.
 
-- Unchecking the **Include dependencies** check box when exporting from the repository in the Web UI.
+-   Unchecking the **Include dependencies** check box when exporting from the repository in the Web UI.
 
 In these cases, you will see an error to inform you that the dependency cannot be exported. If you choose to proceed with the export, it will contain a broken dependency that may block it from being imported.
 
@@ -88,15 +88,15 @@ From a different server</td>
 
 In addition to the default import and export operations, this guide documents the following:
 
-- Importing catalogs from older servers with legacy or custom keys.
-- Exporting catalogs with a specific key.
+-   Importing catalogs from older servers with legacy or custom keys.
+-   Exporting catalogs with a specific key.
 
 For operations to set up and manipulate keys, see the JasperReports Server Security Guide:
 
-- Specifying custom keys during import and export operations.
+-   Specifying custom keys during import and export operations.
 
-- Importing keys used by other servers.
+-   Importing keys used by other servers.
 
-- Exporting keys for use in other servers.
+-   Exporting keys for use in other servers.
 
-- Sharing custom keys between multiple servers.
+-   Sharing custom keys between multiple servers.

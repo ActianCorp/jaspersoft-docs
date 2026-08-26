@@ -67,9 +67,9 @@ To move a measure within its section of the dialog
 
 To move a dimension into the Columns or Rows section of the Change Data Cube dialog
 
-- Click ![ja table move to column](../assets/images/ja-table-move-to-column.png) next to the dimension to move the data to a column.
-- Click ![ja table move to row](../assets/images/ja-table-move-to-row.png) next to the dimension to move it to a row.
-- To configure a dimension, click the dimension in the dialog. For example, to configure the STORE dimension, click **STORE** in the Rows section, and the root level of the STORE dimension appears:
+-   Click ![ja table move to column](../assets/images/ja-table-move-to-column.png) next to the dimension to move the data to a column.
+-   Click ![ja table move to row](../assets/images/ja-table-move-to-row.png) next to the dimension to move it to a row.
+-   To configure a dimension, click the dimension in the dialog. For example, to configure the STORE dimension, click **STORE** in the Rows section, and the root level of the STORE dimension appears:
 
 ![ja ug analysisview tools ChangeDataCubeMeasures STOREdimension](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-STOREdimension.png)
 
@@ -121,11 +121,11 @@ The MDX Query Editor contains the MDX query that retrieves the contents of the n
 
 An MDX query consists of data sets, query scope, and filter specifications:
 
-- A SELECT statement determines the data sets that populate the columns (x-axis) and rows (y-axis) of the navigation table. The SELECT statement includes the measures to use as columns and rows. The query in this example specifies data sets in terms of:
+-   A SELECT statement determines the data sets that populate the columns (x-axis) and rows (y-axis) of the navigation table. The SELECT statement includes the measures to use as columns and rows. The query in this example specifies data sets in terms of:
 
-  - \[Measures\].\[Unit Sales\], \[Measures\].\[Store Cost\], \[Measures\].\[Store Sales\] as columns; \[Promotion Media\].\[All Media\] and \[Product\].\[All Products\] as rows.
-  - The FROM clause specifies the cube that is queried. You can query only one cube at a time.
-  - The WHERE clause uses dimensions to constrain the data sets retrieved by the query, that is, the clause specifies the filters that screen the data the query returns. In this example, \[TIME\].\[2012\] is the filter.
+    -   \[Measures\].\[Unit Sales\], \[Measures\].\[Store Cost\], \[Measures\].\[Store Sales\] as columns; \[Promotion Media\].\[All Media\] and \[Product\].\[All Products\] as rows.
+    -   The FROM clause specifies the cube that is queried. You can query only one cube at a time.
+    -   The WHERE clause uses dimensions to constrain the data sets retrieved by the query, that is, the clause specifies the filters that screen the data the query returns. In this example, \[TIME\].\[2012\] is the filter.
 
 Click **Apply** to update the navigation table in the OLAP view. The system validates the query and updates the navigation table. Click **Revert** to discard all changes.
 
@@ -139,9 +139,9 @@ For a reference to the MDX query language, see <https://learn.microsoft.com/en-u
 
 The sort options include the following:
 
-- Sort into a cube hierarchy.
-- Start sorting in descending order.
-- Display only the first N rows.
+-   Sort into a cube hierarchy.
+-   Start sorting in descending order.
+-   Display only the first N rows.
 
 To use the sort options, first click ![ja pro editdisplayoptions](../assets/images/ja-pro-editdisplayoptions.png) to open the Display Options dialog:
 
@@ -157,17 +157,17 @@ The following sections explain the options.
 
 Generally, dimension members are sorted hierarchically, within their parent member. Take, for instance, a crosstab showing the store sales for all stores in the United States. The dimension hierarchy might be as follows:
 
-- All Stores
-- USA
-- CA
-- Alameda
-- Beverly Hills<br>
-  OR
-- Portland
-- Salem
-- WA
-- Bellingham
-- Seattle
+-   All Stores
+-   USA
+-   CA
+-   Alameda
+-   Beverly Hills<br>
+    OR
+-   Portland
+-   Salem
+-   WA
+-   Bellingham
+-   Seattle
 
 All Stores is above USA in the hierarchy, which is above CA in the hierarchy, and so on.
 

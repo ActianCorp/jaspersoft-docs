@@ -34,21 +34,21 @@ The examples in this chapter use the shortened Windows commands without the opti
 
 When using the import and export utilities, keep the following in mind:
 
-- JasperReports Server should be stopped when using the import and export utilities. This is very important for the import utility to avoid issues with caches, configuration, and security.
+-   JasperReports Server should be stopped when using the import and export utilities. This is very important for the import utility to avoid issues with caches, configuration, and security.
 
-- All command-line options start with two dashes (`--`).
+-   All command-line options start with two dashes (`--`).
 
-- You must specify either a directory or a zip file to export to or import from.
+-   You must specify either a directory or a zip file to export to or import from.
 
-- The import and export commands include additional options to import and export keys between servers that need to share export catalogs. The options for sharing keys are documented in the JasperReports Server Security Guide. Once keys have been shared between servers, the commands in this chapter can be used without specifying keys.
+-   The import and export commands include additional options to import and export keys between servers that need to share export catalogs. The options for sharing keys are documented in the JasperReports Server Security Guide. Once keys have been shared between servers, the commands in this chapter can be used without specifying keys.
 
-- If you are exporting or importing organizations, you must be aware of resource dependencies outside of the organization that may block the operation. For more information, see [Dependencies During Import and Export](import_and_export_catalogs.md).
+-   If you are exporting or importing organizations, you must be aware of resource dependencies outside of the organization that may block the operation. For more information, see [Dependencies During Import and Export](import_and_export_catalogs.md).
 
-- Ensure the output location specified for an export is writable to the user running the command.
+-   Ensure the output location specified for an export is writable to the user running the command.
 
-- All URIs are repository paths originating at the root (`/`). In commercial editions of the server, even those with a single default organization, the path must include the organization unless you specify `--organization` option, for example:
+-   All URIs are repository paths originating at the root (`/`). In commercial editions of the server, even those with a single default organization, the path must include the organization unless you specify `--organization` option, for example:
 
-  `/organizations/organization_1/reports/interactive/CustomersReport`
+    `/organizations/organization_1/reports/interactive/CustomersReport`
 
 !!! warning
 
@@ -183,66 +183,63 @@ The `js-export` command includes additional options for exporting cryptographic 
 
 Examples:
 
-- Export everything in the repository:
+-   Export everything in the repository:
 
-  ``` bash
-  js-export --everything --output-dir myExport
-  ```
+    ``` bash
+    js-export --everything --output-dir myExport
+    ```
 
-- Export the /reports/interactive/CustomersReport report unit to a catalog folder:
+-   Export the /reports/interactive/CustomersReport report unit to a catalog folder:
 
-  ``` bash
-  js-export --uris /organizations/organization_1/reports/interactive/CustomersReport --output-dir myExport
-  ```
+    ``` bash
+    js-export --uris /organizations/organization_1/reports/interactive/CustomersReport --output-dir myExport
+    ```
 
-- Export the /images and /reports folders:
+-   Export the /images and /reports folders:
 
-  ``` bash
-  js-export --uris /organizations/organization_1/images /organizations/organization_1/reports --output-dir myExport
-  ```
+    ``` bash
+    js-export --uris /organizations/organization_1/images /organizations/organization_1/reports --output-dir myExport
+    ```
 
-- Export all resources (except users, roles, and job schedules) and their permissions to a zip catalog:
+-   Export all resources (except users, roles, and job schedules) and their permissions to a zip catalog:
 
-  ``` bash
-  js-export --uris / --repository-permissions --output-zip myExport.zip
-  ```
+    ``` bash
+    js-export --uris / --repository-permissions --output-zip myExport.zip
+    ```
 
-- Export all resources and report jobs:
+-   Export all resources and report jobs:
 
-  ``` bash
-  js-export --uris / --report-jobs / --output-dir myExport
-  ```
+    ``` bash
+    js-export --uris / --report-jobs / --output-dir myExport
+    ```
 
-- Export the report jobs of the /reports/interactive/CustomersReport report unit:
+-   Export the report jobs of the /reports/interactive/CustomersReport report unit:
 
-  ``` bash
-  js-export --report-jobs /organizations/organization_1/reports/interactive/CustomersReport --output-dir myExport
-  ```
+    ``` bash
+    js-export --report-jobs /organizations/organization_1/reports/interactive/CustomersReport --output-dir myExport
+    ```
 
-- Export all roles and users:
+-   Export all roles and users:
 
-  ``` bash
-  js-export --roles --users --output-dir myExport
-  ```
+    ``` bash
+    js-export --roles --users --output-dir myExport
+    ```
 
-- Export ROLE_USER and ROLE_ADMINISTRATOR roles along with all users belonging to either role:
+-   Export ROLE_USER and ROLE_ADMINISTRATOR roles along with all users belonging to either role:
 
-  ``` bash
-  js-export --roles ROLE_USER, ROLE_ADMINISTRATOR --role-users --output-dir myExport
-  ```
+    ``` bash
+    js-export --roles ROLE_USER, ROLE_ADMINISTRATOR --role-users --output-dir myExport
+    ```
 
-- Export all resources in an organization, but not its suborganizations:
+-   Export all resources in an organization, but not its suborganizations:
 
-  ``` bash
-  js-export --organization organization_1 --skip-suborganizations --uris /
-  ```
+    ``` bash
+    js-export --organization organization_1 --skip-suborganizations --uris /
+    ```
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
+    !!! note
 
-                      <p>The folder named Temp at the root and in every organization is a special folder. None of the folders or resources in a Temp folder are exported.</p>
-
-  </div>
+        The folder named Temp at the root and in every organization is a special folder. None of the folders or resources in a Temp folder are exported.
 
 ## Importing from the Command Line
 
@@ -344,29 +341,29 @@ The `js-import` command includes additional options for importing cryptographic 
 
 Examples:
 
-- Import the `myExport.zip` catalog archive file:
+-   Import the `myExport.zip` catalog archive file:
 
-  ``` bash
-  js-import --input-zip myExport.zip
-  ```
+    ``` bash
+    js-import --input-zip myExport.zip
+    ```
 
-- Import the `myDir` catalog folder, replacing existing resources if their URIs and types match those found in the catalog:
+-   Import the `myDir` catalog folder, replacing existing resources if their URIs and types match those found in the catalog:
 
-  ``` bash
-  js-import --input-dir myDir --update
-  ```
+    ``` bash
+    js-import --input-dir myDir --update
+    ```
 
-- Import the `myExport.zip` catalog archive file but ignore any users found in the catalog:
+-   Import the `myExport.zip` catalog archive file but ignore any users found in the catalog:
 
-  ``` bash
-  js-import --input-zip myExport.zip --update --skip-user-update
-  ```
+    ``` bash
+    js-import --input-zip myExport.zip --update --skip-user-update
+    ```
 
-- Import the `myDir` catalog folder with access events:
+-   Import the `myDir` catalog folder with access events:
 
-  ``` bash
-  js-import --input-dir myDir --include-access-events
-  ```
+    ``` bash
+    js-import --input-dir myDir --include-access-events
+    ```
 
 When a resource in the target repository has the same URI as on that you are importing, the default behavior is left as it is and the existing resource remains unchanged (no overwriting occurs).
 
@@ -404,9 +401,9 @@ To configure the import-export utilities
 
     This command generates the following files with the values that you added to the `default_master.properties` file:
 
-    - `<js-install>/buildomatic/build_conf/default/js.jdbc.properties`
+    -   `<js-install>/buildomatic/build_conf/default/js.jdbc.properties`
 
-    - `<js-install>/buildomatic/build_conf/default/js.quartz.properties` (only for DB2 and PostgreSQL)
+    -   `<js-install>/buildomatic/build_conf/default/js.quartz.properties` (only for DB2 and PostgreSQL)
 
 4.  Make sure that the JDBC driver for your database is located in the following folder:
 

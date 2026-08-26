@@ -7,8 +7,8 @@ description: "The GET method without any user ID searches for and lists user acc
 
 The GET method without any user ID searches for and lists user accounts. It has options to search for users by name or by role. If no search is specified, it returns all users. The method has two forms:
 
-- In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
-- In commercial editions with organizations, use the first URL to list all users starting from the logged-in user’s organization (root for the system admin), and use the second URL to list all users in a specified organization.
+-   In the community edition of the server, or commercial editions without organizations, use the first form of the URL without an organization ID.
+-   In commercial editions with organizations, use the first URL to list all users starting from the logged-in user’s organization (root for the system admin), and use the second URL to list all users in a specified organization.
 
 <table>
 <colgroup>

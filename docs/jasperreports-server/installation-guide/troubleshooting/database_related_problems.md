@@ -47,9 +47,9 @@ The JasperReports Server installation/upgrade processes and the repository datab
 
 If you are upgrading in a restricted environment, your database administrator may need to give you temporary admin permissions for the upgrade. For example, if you are using PostgreSQL for your database, the database admin may use one of the following workarounds:
 
-- Add administrator credentials in the `default_master.properties` file prior to upgrade and then replace them with jasperadmin credentials after upgrade.
+-   Add administrator credentials in the `default_master.properties` file prior to upgrade and then replace them with jasperadmin credentials after upgrade.
 
-- Prior to upgrade, grant `CREATE` and `DROP` permissions at the database server level for the jasperadmin user, then revoke those permissions after successful upgrade.
+-   Prior to upgrade, grant `CREATE` and `DROP` permissions at the database server level for the jasperadmin user, then revoke those permissions after successful upgrade.
 
 ## Database Connectivity Errors
 
@@ -81,11 +81,11 @@ You are prompted for the password of the user that you specified on the command 
 
 Start SQL\*Plus and try logging into Oracle directly. Use the password specified during installation to log in as each of these users:
 
-- `jasperserver`: schema user for the JasperReports Server metadata.
+-   `jasperserver`: schema user for the JasperReports Server metadata.
 
-- `sugarcrm`: schema user for the SugarCRM sample data.
+-   `sugarcrm`: schema user for the SugarCRM sample data.
 
-- `foodmart`: schema user for the foodmart sample data.
+-   `foodmart`: schema user for the foodmart sample data.
 
 ### Logging into Microsoft SQL Server
 
@@ -121,8 +121,8 @@ Use a different locale or remove the case-sensitivity setting.
 
 To avoid storage of the user and password values for the database, you can configure the Oracle or SQL Server driver to use Windows authentication. To do this, copy the NTLM authentication DLLs for your database from the `<js-install>\jasperserverwar\tools directory` directory to a location in your Windows system path (defined by the PATH environment variable) and onfigure them as described in the instructions for your database:
 
-- <https://blogs.oracle.com/blogbypuneeth/post/steps-to-configure-kerberos-spnego-ntlm-authentication-with-weblogic-server-running-on-oracle-jdk->
-- <https://learn.microsoft.com/en-us/sql/connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server?view=sql-server-ver16>
+-   <https://blogs.oracle.com/blogbypuneeth/post/steps-to-configure-kerberos-spnego-ntlm-authentication-with-weblogic-server-running-on-oracle-jdk->
+-   <https://learn.microsoft.com/en-us/sql/connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server?view=sql-server-ver16>
 
 ## Maximum Packet Size in MySQL
 

@@ -89,11 +89,11 @@ Permissions on folders and resources determine what users see in the repository 
 
 Permissions apply when browsing or searching the repository and when using any dialog that accesses the repository, like browsing folders to save a report. Note that:
 
-- Copying does not preserve the permissions on an object. Users may copy a read-only object, paste it into a read-write folder, then edit the object. For more details, see [Copying and Moving](managing_folders_and_resources.md).
-- Copying and cutting (moving) actions can be completed only by a user with Read + Write + Delete access to the folder in which the object is pasted. For more details, see [Copying and Moving](managing_folders_and_resources.md).
-- Cutting, deleting, and setting permissions on folders is allowed only if the user has the same permission on all folder contents.
-- Cutting and deleting resources in bulk is allowed only if the user has at least Read + Delete permission on all selected resources.
-- Deleting a resource is allowed only if no other resources rely on it. For more details, see [Deleting Folders and Resources](managing_folders_and_resources.md)
+-   Copying does not preserve the permissions on an object. Users may copy a read-only object, paste it into a read-write folder, then edit the object. For more details, see [Copying and Moving](managing_folders_and_resources.md).
+-   Copying and cutting (moving) actions can be completed only by a user with Read + Write + Delete access to the folder in which the object is pasted. For more details, see [Copying and Moving](managing_folders_and_resources.md).
+-   Cutting, deleting, and setting permissions on folders is allowed only if the user has the same permission on all folder contents.
+-   Cutting and deleting resources in bulk is allowed only if the user has at least Read + Delete permission on all selected resources.
+-   Deleting a resource is allowed only if no other resources rely on it. For more details, see [Deleting Folders and Resources](managing_folders_and_resources.md)
 
 ## Inheriting Permissions
 
@@ -175,9 +175,9 @@ To set permissions on a folder or resource in the repository
 
     There are two special cases when setting permissions:
 
-    - If a resource inherits a permission, for example Read-Only, you cannot set the permission to the same value, at least not directly. You need to temporarily change the permission level on the parent folder, then set the explicit permission, then set the parent folder's permission back to the original value.<br>
-      When a resource and its parent folder have been set to the same permission in this way, the permission dialog still shows the asterisk as if the permission were inherited. But if the parent is later given a different permission, for example Read-Write, the resource retains its explicit Read-Only permission instead of inheriting Read-Write.
-    - To reset the permission level so that it once more inherits from its parent folder, select a different permissions level and click **Apply**, then select the permission with the asterisk and click **Apply** again.
+    -   If a resource inherits a permission, for example Read-Only, you cannot set the permission to the same value, at least not directly. You need to temporarily change the permission level on the parent folder, then set the explicit permission, then set the parent folder's permission back to the original value.<br>
+        When a resource and its parent folder have been set to the same permission in this way, the permission dialog still shows the asterisk as if the permission were inherited. But if the parent is later given a different permission, for example Read-Write, the resource retains its explicit Read-Only permission instead of inheriting Read-Write.
+    -   To reset the permission level so that it once more inherits from its parent folder, select a different permissions level and click **Apply**, then select the permission with the asterisk and click **Apply** again.
 
 ## Testing User Permissions
 
@@ -186,7 +186,7 @@ Once you have configured users, roles and permissions, we recommend that you tes
 To test user permissions
 
 1.  Log in as an administrator.
-2.  Select **Manage \> Users**.
+2.  Select **Manage &gt; Users**.
 3.  Select the user's organization, then browse or search for the user whose permissions you are testing.
 4.  In the Users panel, select the user.
 5.  In the Properties panel, click **Login as User**. The selected user's Home page appears. The login information in the upper-right corner shows that you are logged in as that user.

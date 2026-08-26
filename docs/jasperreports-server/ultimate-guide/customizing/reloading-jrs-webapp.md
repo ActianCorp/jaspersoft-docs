@@ -12,15 +12,17 @@ Each application server has its own management console that lets you view and co
 1.  If you have not configured any users on your Apache Tomcat server, you must first add a user and give it the `manager-gui` role. To do this:
 
     1.  Edit the file `<js-install>/apache-tomcat/conf/tomcat-users.xml`.
-    2.  Create a user if necessary and give it the `manager-gui` role. You can give the user any name and password you prefer.
-    3.  Restart your Apache Tomcat server for this change to take effect.
 
-    ``` xml
-    <tomcat-users>
-      <role rolename="manager-gui"/>
-      <user username="tomcat" password="tomcat" roles="manager-gui"/>
-    </tomcat-users>
-    ```
+    2.  Create a user if necessary and give it the `manager-gui` role. You can give the user any name and password you prefer.
+
+        ``` xml
+        <tomcat-users>
+          <role rolename="manager-gui"/>
+          <user username="tomcat" password="tomcat" roles="manager-gui"/>
+        </tomcat-users>
+        ```
+
+    3.  Restart your Apache Tomcat server for this change to take effect.
 
 2.  Once you have created a manager-gui user, open the Apache Tomcat Manager page in a browser:<br>
     `http://<host>:<port>/manager/html/`, where `<host>` and `<port>` are where you installed the server. For a default installation, use `http://localhost:8080/manager/html/`.

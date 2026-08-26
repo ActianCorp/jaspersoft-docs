@@ -13,17 +13,17 @@ The jobs service also uses exclusion calendars that can be defined in [The jobs 
 
 This chapter includes the following sections:
 
-- Searching for Jobs
-- Viewing a Job Definition
-- The job Descriptor
-- Creating a Job
-- Viewing Job Status
-- Modifying a Job
-- Pausing Jobs
-- Resuming Jobs
-- Restarting Failed Jobs
-- Deleting Jobs
-- Storing Additional Job Properties
+-   Searching for Jobs
+-   Viewing a Job Definition
+-   The job Descriptor
+-   Creating a Job
+-   Viewing Job Status
+-   Modifying a Job
+-   Pausing Jobs
+-   Resuming Jobs
+-   Restarting Failed Jobs
+-   Deleting Jobs
+-   Storing Additional Job Properties
 
 ## Searching for Jobs
 
@@ -382,21 +382,31 @@ The `job` descriptor is a complex data object with nested containers for the var
 
 The properties of the `job` descriptor are defined in the following sections:
 
-- General Properties of a Job, such as label and description, but also the output formats and base filename.
-- Source and Input Controls includes the repository URL of the report, report option, or dashboard, and any input controls.
-- Simple Trigger defines interval-based repetition of the job for a given number of occurrences.
-- Calendar Trigger runs at specific time on specific days of the week or days of the month.
-- Job Output Properties define the file name and locations where output files are written.
-- FTP Output defines whether the output files are written to a remote server.
-- Job Output Email defines the recipients for successful output files.
-- Job Status Email defines the recipients for success or error messages.
+-   General Properties of a Job, such as label and description, but also the output formats and base filename.
 
-When submitting a `job` descriptor to create or modify a job schedule, not all properties are needed. In the following tables, each property is one of the following:
+-   Source and Input Controls includes the repository URL of the report, report option, or dashboard, and any input controls.
 
-- Required - This property must have a value for input to define a valid job.
-- Optional - This property may be omitted on input, either because it is nullable, or because the server assigns a default value. The behavior is explained in the property description.
-- Conditional - The property may be required or optional depending on other property values. The behavior is explained in the property description.
-- Ignored - This property is for internal usage or output only, and the server ignores any value on input. Good practice is to omit these properties from your input.
+-   Simple Trigger defines interval-based repetition of the job for a given number of occurrences.
+
+-   Calendar Trigger runs at specific time on specific days of the week or days of the month.
+
+-   Job Output Properties define the file name and locations where output files are written.
+
+-   FTP Output defines whether the output files are written to a remote server.
+
+-   Job Output Email defines the recipients for successful output files.
+
+-   Job Status Email defines the recipients for success or error messages.
+
+    When submitting a `job` descriptor to create or modify a job schedule, not all properties are needed. In the following tables, each property is one of the following:
+
+-   Required - This property must have a value for input to define a valid job.
+
+-   Optional - This property may be omitted on input, either because it is nullable, or because the server assigns a default value. The behavior is explained in the property description.
+
+-   Conditional - The property may be required or optional depending on other property values. The behavior is explained in the property description.
+
+-   Ignored - This property is for internal usage or output only, and the server ignores any value on input. Good practice is to omit these properties from your input.
 
 ### General Properties of a Job
 
@@ -1088,7 +1098,7 @@ When a job runs successfully, the properties in `mailNotification` specify email
 
 The second type of notifications is job success and failure emails specified in the `alert` container. These messages indicate whether the job ran successfully or not, and contain an error message in case of failure. They do not include the report output in case of success.
 
-Regardless of any settings here, the scheduler sends completion status to the job owner and the administrators of the same organization on each job trigger, assuming those users have email addresses defined in their profiles. You can change this behavior, as described in the configuration chapter of the JasperReports Server Administrator Guide. The scheduler also sends a server message in case of job failure (visible to administrators in **View \> Messages**).
+Regardless of any settings here, the scheduler sends completion status to the job owner and the administrators of the same organization on each job trigger, assuming those users have email addresses defined in their profiles. You can change this behavior, as described in the configuration chapter of the JasperReports Server Administrator Guide. The scheduler also sends a server message in case of job failure (visible to administrators in **View &gt; Messages**).
 
 <table>
 <colgroup>
@@ -1460,8 +1470,8 @@ POST http://localhost:8080/jasperserver-pro/rest_v2/jobs?id=3798&id=3802&id=3806
 
 The `jobModel` provides two mechanisms to perform more complex updates:
 
-- You can describe nested structures by using the nestedName`Model` equivalent element. Like the `jobModel`, nested model elements contain only the subset that you want to modify. Thus you could change one value within a parameter, the end date within a schedule, or an email address within a notification.
-- You can remove the definition of an element by using the `is`PropertyName`Modified` element and giving it the value true. This indicates that the element's new value is null, and thus that the element should be removed altogether from the job descriptor.
+-   You can describe nested structures by using the nestedName`Model` equivalent element. Like the `jobModel`, nested model elements contain only the subset that you want to modify. Thus you could change one value within a parameter, the end date within a schedule, or an email address within a notification.
+-   You can remove the definition of an element by using the `is`PropertyName`Modified` element and giving it the value true. This indicates that the element's new value is null, and thus that the element should be removed altogether from the job descriptor.
 
 In the following example, the description is removed from the target jobs, the trigger's time zone is modified, and the file name is changed. Note that XML descriptors do not use the `trigger` container and thus do not have a `triggerModel` container:
 

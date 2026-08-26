@@ -9,9 +9,9 @@ Jaspersoft Studio is the latest incarnation of the well-known iReport Editor. Be
 
 This chapter contains the following sections:
 
-- [Introduction](intro.md)
+-   [Introduction](intro.md)
 
-- [Installing Jaspersoft Studio](intro-installation.md)
+-   [Installing Jaspersoft Studio](intro-installation.md)
 
 !!! note
 

@@ -11,5 +11,5 @@ Jaspersoft has implemented a proxy bean for each filter chain, for example, `del
 
 The following sample files use JasperReports Server’s external authentication APIs to integrate with custom SSO servers following a CAS-like protocol:
 
-- sample-applicationContext-externalAuth-sso.xml: Sample file for integrating CAS with a single-organization JasperReports Server. Included with the community edition of JasperReports Server only.
-- sample-applicationContext-externalAuth-sso-mt.xml: Sample file for integrating CAS with a multiple-organization JasperReports Server. In this example, user details like external roles and organization are retrieved from an external database. Included with the commercial version of JasperReports Server only.
+-   sample-applicationContext-externalAuth-sso.xml: Sample file for integrating CAS with a single-organization JasperReports Server. Included with the community edition of JasperReports Server only.
+-   sample-applicationContext-externalAuth-sso-mt.xml: Sample file for integrating CAS with a multiple-organization JasperReports Server. In this example, user details like external roles and organization are retrieved from an external database. Included with the commercial version of JasperReports Server only.

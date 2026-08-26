@@ -13,15 +13,15 @@ From the Library page, Repository page, and Search Results page, you can remove 
 
 For example:
 
-- To remove a report listed in Favorites from the Library page, locate the report and deselect the star icon to the left of the report name. You can also remove multiple files by deselecting the star icon.
+-   To remove a report listed in Favorites from the Library page, locate the report and deselect the star icon to the left of the report name. You can also remove multiple files by deselecting the star icon.
 
-![remove report fav](../assets/images/remove%20report-fav.png)
+    ![remove report fav](../assets/images/remove%20report-fav.png)
 
-Removing Report from Favorites using Star Icon
+    Removing Report from Favorites using Star Icon
 
-Similarly, you can remove other files listed in Favorites from the Repository page and Search Results page.
+    Similarly, you can remove other files listed in Favorites from the Repository page and Search Results page.
 
-- To remove a report from the Favorites list in the Library page, locate the report, right-click it and select **Remove from Favorites** option from the context menu. You can also remove multiple items from Favorites at once. To select the starred items, use shift or control key with arrow keys, and then right-click the selected items and select **Remove from Favorites** from the context menu.
+-   To remove a report from the Favorites list in the Library page, locate the report, right-click it and select **Remove from Favorites** option from the context menu. You can also remove multiple items from Favorites at once. To select the starred items, use shift or control key with arrow keys, and then right-click the selected items and select **Remove from Favorites** from the context menu.
 
 ![remove report fav context menu](../assets/images/remove%20report-fav-context%20menu.png)
 

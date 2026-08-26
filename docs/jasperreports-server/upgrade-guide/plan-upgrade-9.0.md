@@ -9,31 +9,31 @@ description: "As of release 9.0, Progress drivers are removed from JasperReports
 
 As of release 9.0, Progress drivers are removed from JasperReports Server. If you have any resources that use or depend on any of the following Progress Drivers:
 
-- TIautorest-6.0.1.005359.jar
+-   TIautorest-6.0.1.005359.jar
 
-- TIcassandra-6.0.3.jar
+-   TIcassandra-6.0.3.jar
 
-- TIdb2-5.1.4.000288.jar
+-   TIdb2-5.1.4.000288.jar
 
-- TIgooglebigquery-6.0.0.001346.jar
+-   TIgooglebigquery-6.0.0.001346.jar
 
-- TIhive-5.14.1.jar
+-   TIhive-5.14.1.jar
 
-- TIimpala-5.14.2.jar
+-   TIimpala-5.14.2.jar
 
-- TImongodb-6.0.2.000510.jar
+-   TImongodb-6.0.2.000510.jar
 
-- TIoracle-6.0.0.000790.jar
+-   TIoracle-6.0.0.000790.jar
 
-- TIredshift-5.14.1.jar / TIredshift-6.0.0.000366.jar
+-   TIredshift-5.14.1.jar / TIredshift-6.0.0.000366.jar
 
-- TIsforce-6.0.0.001533.jar
+-   TIsforce-6.0.0.001533.jar
 
-- TIsparksql-6.0.1.000124.jar
+-   TIsparksql-6.0.1.000124.jar
 
-- TIsqlserver-6.0.0.000541.jar
+-   TIsqlserver-6.0.0.000541.jar
 
-  then you must manually install drivers that are recommended by the database vendor. After installing new drivers, update the resources in JasperReports Server to use the new drivers.
+    then you must manually install drivers that are recommended by the database vendor. After installing new drivers, update the resources in JasperReports Server to use the new drivers.
 
 ## Additional Steps to Migrate JasperReports Server on MS SQL Server, Oracle, DB2
 
@@ -70,8 +70,8 @@ Executing a report unit may result in exceptions like **The data types time and 
 
 You can resolve this issue using any of the following two options:
 
-- update JRXML and SQL query to reflect type change.
-- force the SQL Server JDBC driver to return Time as DateTime by updating the JDBC connection URL and adding `sendTimeAsDatetime=false`.
+-   update JRXML and SQL query to reflect type change.
+-   force the SQL Server JDBC driver to return Time as DateTime by updating the JDBC connection URL and adding `sendTimeAsDatetime=false`.
 
 ### Oracle
 
@@ -182,9 +182,9 @@ Consider allocating additional memory for your application server to meet the de
 
 To support new calculations, the following Date grouping functions were renamed:
 
-- Quarter renamed to Quarter and Year (examples, Q1 2024, Q2 2024, Q3 2024, Q4 2024).
+-   Quarter renamed to Quarter and Year (examples, Q1 2024, Q2 2024, Q3 2024, Q4 2024).
 
-- Month renamed to Month and Year (examples, January 2024, February 2024).
+-   Month renamed to Month and Year (examples, January 2024, February 2024).
 
 ## Updates to JNDI Data Sources
 
@@ -224,14 +224,14 @@ JasperReports Server allows you to enable the scheduler and headless browser to 
 
 ## Important Notes about Compact and Split installations
 
-- Users are able to upgrade from 8.2 Compact to 9.0 Compact using samedb and newdb.
+-   Users are able to upgrade from 8.2 Compact to 9.0 Compact using samedb and newdb.
 
-- Users are able to upgrade from 8.2 Split to 9.0 Split using samedb and newdb.
+-   Users are able to upgrade from 8.2 Split to 9.0 Split using samedb and newdb.
 
-- Users will not be able to upgrade:
+-   Users will not be able to upgrade:
 
-  - From 8.2 Compact to 9.0 Split.
-  - From 8.2 Split to 9.0 Compact.
+    -   From 8.2 Compact to 9.0 Split.
+    -   From 8.2 Split to 9.0 Compact.
 
 If users need 9.0 Split installations but they are on 8.2 Compact, the required upgrade path is to:
 

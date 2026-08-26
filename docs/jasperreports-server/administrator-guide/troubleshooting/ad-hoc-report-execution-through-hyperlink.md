@@ -13,29 +13,29 @@ Only the hyperlinks with **Target** as **Self** are marked as drill-down, and **
 
 To mark the other hyperlink targets as **Self**, choose any one of the options listed below:
 
-- pass the `force.drill.down` hyperlink parameter:
+-   pass the `force.drill.down` hyperlink parameter:
 
-  ``` xml
-  <hyperlinkParameter name="force.drill.down">
-      <hyperlinkParameterExpression><![CDATA[true]]></hyperlinkParameterExpression></hyperlinkParameter>
-  ```
+    ``` xml
+    <hyperlinkParameter name="force.drill.down">
+        <hyperlinkParameterExpression><![CDATA[true]]></hyperlinkParameterExpression></hyperlinkParameter>
+    ```
 
-- set the `jrxml` property:
+-   set the `jrxml` property:
 
-  ``` xml
-  <property name="net.sf.jasperreports.htmlviewer.force.drill.down" value="true"/>
-  ```
+    ``` xml
+    <property name="net.sf.jasperreports.htmlviewer.force.drill.down" value="true"/>
+    ```
 
-- set the property in the `jasperreports.properties config` file globally:
+-   set the property in the `jasperreports.properties config` file globally:
 
-  ``` properties
-  net.sf.jasperreports.htmlviewer.force.drill.down=true
-  ```
+    ``` properties
+    net.sf.jasperreports.htmlviewer.force.drill.down=true
+    ```
 
 !!! note
 
-    - If the hyperlink parameter and report-level property are not present, then the global-level value takes precedence.
+    -   If the hyperlink parameter and report-level property are not present, then the global-level value takes precedence.
 
-    - If the hyperlink parameter is not present, the report-level value takes precedence over the global-level value.
+    -   If the hyperlink parameter is not present, the report-level value takes precedence over the global-level value.
 
-    - If the hyperlink parameter property is set to any value, then it takes precedence over report level value as well as global-level value.
+    -   If the hyperlink parameter property is set to any value, then it takes precedence over report level value as well as global-level value.

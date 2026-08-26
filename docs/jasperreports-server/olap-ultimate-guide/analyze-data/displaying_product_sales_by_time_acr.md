@@ -11,9 +11,9 @@ In the following example, we’ll use the Foodmart Sample Analysis View.
 
 To compare quarterly snack foods sales dollar amounts among the West Coast states
 
-1.  Click **View \> Repository** to display the Repository panel.
+1.  Click **View &gt; Repository** to display the Repository panel.
 
-2.  In the Folders panel, expand the folder **Organization \>** **Analysis Components \>** **Analysis Views**.
+2.  In the Folders panel, expand the folder **Organization &gt;** **Analysis Components &gt;** **Analysis Views**.
 
     A list of OLAP views appears in the Repository panel
 
@@ -23,9 +23,9 @@ To compare quarterly snack foods sales dollar amounts among the West Coast state
 
     For details about using cube dimensions, see [Columns, Rows, and Filters](cube_configuration.md).
 
-5.  Click the **Move to Rows** icon ![ja table move to row](../assets/images/ja-table-move-to-row.png) next to the **Store** filter to create a row, then expand the Store row and select **All Stores \> USA**. Click **OK**.
+5.  Click the **Move to Rows** icon ![ja table move to row](../assets/images/ja-table-move-to-row.png) next to the **Store** filter to create a row, then expand the Store row and select **All Stores &gt; USA**. Click **OK**.
 
-6.  Click the filter icon ![ja table filter](../assets/images/ja-table-filter.png) next to **Product** in the Rows section, then click it and expand to and select **All Products \> Food \> Snack Foods**.
+6.  Click the filter icon ![ja table filter](../assets/images/ja-table-filter.png) next to **Product** in the Rows section, then click it and expand to and select **All Products &gt; Food &gt; Snack Foods**.
 
 7.  Click **OK** twice to accept the selections.
 

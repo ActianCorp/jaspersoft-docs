@@ -15,6 +15,6 @@ As of JasperReports Server 6.0, Domains allow the following symbols:
 
 These symbols have been tested with the following databases:
 
-- SQL Server
-- DB2
-- PostgreSQL
+-   SQL Server
+-   DB2
+-   PostgreSQL

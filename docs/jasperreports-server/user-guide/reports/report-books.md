@@ -17,13 +17,13 @@ To run a report book in the Report Viewer
 
      The sample report book contains three bundled reports:
 
-    - **Distribution by Country**, a chart-type report.
+    -   **Distribution by Country**, a chart-type report.
 
-    - **Customer Education**, a crosstab-type report.
+    -   **Customer Education**, a crosstab-type report.
 
-    - **Customers List**, a table-type report.
+    -   **Customers List**, a table-type report.
 
-      Each of these reports can be accessed by a tab, along with the Table of Contents page, located at the top of the Report Viewer.
+        Each of these reports can be accessed by a tab, along with the Table of Contents page, located at the top of the Report Viewer.
 
 2.  Click the **Chart** tab to open the **Customer Distribution by Country** report. Note that you can interact with this report as you would with a standard chart-based report in the viewer.
 

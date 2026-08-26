@@ -7,15 +7,15 @@ description: Jaspersoft Studio supports a random data source that determines the
 
 Jaspersoft Studio supports a random data source that determines the field types and returns random data in each field. You can set how many records are returned. Here are some of the ways that you can use the random data adapter to test a report:
 
-- Use a small number of records to visualize a chart.
+-   Use a small number of records to visualize a chart.
 
-- Use a large number of records to simulate a multi-page report.
+-   Use a large number of records to simulate a multi-page report.
 
-- Use it as the data source for a subreport, subdataset, or table.
+-   Use it as the data source for a subreport, subdataset, or table.
 
 To create a new random data source in the current folder
 
-1.  Select **File \> New \> Data Adapter** from the main menu or select **New \> Data Adapter** from the context menu of a folder. The **Data Adapter Wizard** opens.
+1.  Select **File &gt; New &gt; Data Adapter** from the main menu or select **New &gt; Data Adapter** from the context menu of a folder. The **Data Adapter Wizard** opens.
 
 2.  Select the folder where you want to place the adapter and click **Next**.
 
@@ -37,7 +37,7 @@ To create a new random data source in the current folder
 
 !!! note
 
-    To create a global random data adapter that you can use in different projects, go to the Project Explorer and select **New \> Data Adapter** from the context menu. Global data adapters cannot be accessed from JasperReports Server project types.
+    To create a global random data adapter that you can use in different projects, go to the Project Explorer and select **New &gt; Data Adapter** from the context menu. Global data adapters cannot be accessed from JasperReports Server project types.
 
 Using the random data source in a new subreport, subdataset, or table
 

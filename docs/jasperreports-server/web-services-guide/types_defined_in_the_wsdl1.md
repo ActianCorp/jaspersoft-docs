@@ -9,8 +9,8 @@ The WSDL defines several types that are returned by operations of the service. T
 
 These are the objects returned when accessing Domains:
 
-- `SimpleMetaData`. Encapsulates all the sets and items in a Domain structure.
-- `SimpleMetaLevel`. Represents an item set in the Domain. It may contain items, other item sets, or both.
-- `SimpleMetaItem`. An item in the Domain. Unlike a level or set, an item is a source of data referenceable in a query.
-- `ResultSetData`. Object returned by a Domain query. It contains column names and rows of data.
-- `DataRow`. Contains values for each column in a row.
+-   `SimpleMetaData`. Encapsulates all the sets and items in a Domain structure.
+-   `SimpleMetaLevel`. Represents an item set in the Domain. It may contain items, other item sets, or both.
+-   `SimpleMetaItem`. An item in the Domain. Unlike a level or set, an item is a source of data referenceable in a query.
+-   `ResultSetData`. Object returned by a Domain query. It contains column names and rows of data.
+-   `DataRow`. Contains values for each column in a row.

@@ -84,83 +84,88 @@ When it lists a folder, the repository web service returns a set of resource des
 
 Similarly, when it lists a report unit, the repository web service returns a set of resource descriptors that contain (at a minimum) the main JRXML source file. Since a resource in a report unit can be either a local resource or a reference to another repository resource, you should keep a few details in mind:
 
-- If a report unit data source is not defined locally, its `wsType` is set to `datasource`, which does not indicate the exact nature of the resource. Its type should simply be `reference`, but since the data source used by the report unit is a special child resource, it’s easy to recognize. The URI of the referenced resource is available in the `PROP_REFERENCE_URI` property.
-- The main JRXML resource’s `wsType` is always set to `jrxml`, even if it’s a reference to an external JRXML resource. By looking at the `PROP_IS_REFERENCE` and `PROP_REFERENCE_URI` properties, you can determine where the resource is actually stored. The `PROP_RU_IS_MAIN_REPORT` property identifies the main JRXML source file of the report unit, even if the order of its children is altered.
-- The purpose of listing a report unit is to get the list of the resources contained in the report unit. To retrieve the entire report unit (report unit resource as well as its children) at the same time, use the `get` service.
+-   If a report unit data source is not defined locally, its `wsType` is set to `datasource`, which does not indicate the exact nature of the resource. Its type should simply be `reference`, but since the data source used by the report unit is a special child resource, it’s easy to recognize. The URI of the referenced resource is available in the `PROP_REFERENCE_URI` property.
 
-The following Java sample illustrates `wsclient` as an instance of `com.jaspersoft.jasperserver.irplugin.wsclient.WSClient`:
+-   The main JRXML resource’s `wsType` is always set to `jrxml`, even if it’s a reference to an external JRXML resource. By looking at the `PROP_IS_REFERENCE` and `PROP_REFERENCE_URI` properties, you can determine where the resource is actually stored. The `PROP_RU_IS_MAIN_REPORT` property identifies the main JRXML source file of the report unit, even if the order of its children is altered.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="language-text highlight"><pre><code>ResourceDescriptor rd = new ResourceDescriptor();
-rd.setWsType( ResourceDescriptor.TYPE_FOLDER );
-rd.setUriString(&quot;/&quot;);
-List lst = wsclient.list(rd);</code></pre></div></td>
-</tr>
-</tbody>
-</table>
+-   The purpose of listing a report unit is to get the list of the resources contained in the report unit. To retrieve the entire report unit (report unit resource as well as its children) at the same time, use the `get` service.
 
-PHP sample:
+    The following Java sample illustrates `wsclient` as an instance of `com.jaspersoft.jasperserver.irplugin.wsclient.WSClient`:
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">$result</span> = ws_list<span class="er">(</span><span class="st">&quot;/&quot;</span><span class="kw">);</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">(</span><span class="ex">get_class</span><span class="er">(</span><span class="va">$result</span><span class="kw">)</span> <span class="ex">==</span> <span class="st">&#39;SOAP_Fault&#39;</span><span class="kw">)</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">$errorMessage</span> = <span class="va">$result</span>-<span class="op">&gt;</span>getFault<span class="er">(</span><span class="kw">)</span><span class="ex">-</span><span class="op">&gt;</span>faultstring<span class="kw">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">$folders</span> = getResourceDescriptors<span class="er">(</span><span class="va">$result</span><span class="kw">);</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="language-text highlight"><pre><code>ResourceDescriptor rd = new ResourceDescriptor();
+    rd.setWsType( ResourceDescriptor.TYPE_FOLDER );
+    rd.setUriString(&quot;/&quot;);
+    List lst = wsclient.list(rd);</code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-This PHP sample uses the client.php file found in the PHP sample provided with JasperReports Server. This file defines the most important constants you may find useful when integrating with the JasperReports Server web services, as well as useful functions that wrap the `list`, `get`, and the runReport operations.
+    PHP sample:
 
-The list operation also provides a shortcut to get the list of all resources of a given type in the repository, for example all the reports. This use of the list operation has the following syntax:
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">$result</span> = ws_list<span class="er">(</span><span class="st">&quot;/&quot;</span><span class="kw">);</span></span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">(</span><span class="ex">get_class</span><span class="er">(</span><span class="va">$result</span><span class="kw">)</span> <span class="ex">==</span> <span class="st">&#39;SOAP_Fault&#39;</span><span class="kw">)</span></span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span></span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">$errorMessage</span> = <span class="va">$result</span>-<span class="op">&gt;</span>getFault<span class="er">(</span><span class="kw">)</span><span class="ex">-</span><span class="op">&gt;</span>faultstring<span class="kw">;</span></span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+    <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+    <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span></span>
+    <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">$folders</span> = getResourceDescriptors<span class="er">(</span><span class="va">$result</span><span class="kw">);</span></span>
+    <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">request</span> <span class="ot">operationName=</span><span class="st">&quot;list&quot;</span>&gt;</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">argument</span> <span class="ot">name=</span><span class="st">&quot;LIST_RESOURCES&quot;</span>/&gt;</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">argument</span> <span class="ot">name=</span><span class="st">&quot;RESOURCE_TYPE&quot;</span>&gt;reportUnit&lt;/<span class="kw">argument</span>&gt;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">argument</span> <span class="ot">name=</span><span class="st">&quot;PARENT_DIRECTORY&quot;</span>&gt;/reports&lt;/<span class="kw">argument</span>&gt;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">request</span>&gt;</span></code></pre></div></td>
-</tr>
-<tr>
-<td><div class="language-text highlight"><pre><code>or
-&lt;request operationName=&quot;list&quot;&gt;
-  &lt;argument name=&quot;LIST_RESOURCES&quot;/&gt;
-  &lt;argument name=&quot;RESOURCE_TYPE&quot;&gt;reportUnit&lt;/argument&gt;
-  &lt;argument name=&quot;START_FROM_DIRECTORY&quot;&gt;/reports&lt;/argument&gt;
-&lt;/request&gt;</code></pre></div></td>
-</tr>
-</tbody>
-</table>
+    This PHP sample uses the client.php file found in the PHP sample provided with JasperReports Server. This file defines the most important constants you may find useful when integrating with the JasperReports Server web services, as well as useful functions that wrap the `list`, `get`, and the runReport operations.
 
-No value is needed for the `LIST_RESOURCES` argument. The value of the `RESOURCE_TYPE` argument can be any value of `wsType` except `folder`. The `PARENT_DIRECTORY` argument is the name of folder in which you want to look for resources. If you want to look for the resources in a branch of the repository, use the `START_FROM_DIRECTORY` argument.
+    The list operation also provides a shortcut to get the list of all resources of a given type in the repository, for example all the reports. This use of the list operation has the following syntax:
 
-!!! note
+    <table>
+    <colgroup>
+    <col style="width: 100%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">request</span> <span class="ot">operationName=</span><span class="st">&quot;list&quot;</span>&gt;</span>
+    <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">argument</span> <span class="ot">name=</span><span class="st">&quot;LIST_RESOURCES&quot;</span>/&gt;</span>
+    <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">argument</span> <span class="ot">name=</span><span class="st">&quot;RESOURCE_TYPE&quot;</span>&gt;reportUnit&lt;/<span class="kw">argument</span>&gt;</span>
+    <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">argument</span> <span class="ot">name=</span><span class="st">&quot;PARENT_DIRECTORY&quot;</span>&gt;/reports&lt;/<span class="kw">argument</span>&gt;</span>
+    <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">request</span>&gt;</span></code></pre></div></td>
+    </tr>
+    <tr>
+    <td><div class="language-text highlight"><pre><code>or
+    &lt;request operationName=&quot;list&quot;&gt;
+      &lt;argument name=&quot;LIST_RESOURCES&quot;/&gt;
+      &lt;argument name=&quot;RESOURCE_TYPE&quot;&gt;reportUnit&lt;/argument&gt;
+      &lt;argument name=&quot;START_FROM_DIRECTORY&quot;&gt;/reports&lt;/argument&gt;
+    &lt;/request&gt;</code></pre></div></td>
+    </tr>
+    </tbody>
+    </table>
 
-    Using LIST_RESOURCES is the only case in which a request doesn’t require a resource descriptor.
+    No value is needed for the `LIST_RESOURCES` argument. The value of the `RESOURCE_TYPE` argument can be any value of `wsType` except `folder`. The `PARENT_DIRECTORY` argument is the name of folder in which you want to look for resources. If you want to look for the resources in a branch of the repository, use the `START_FROM_DIRECTORY` argument.
 
-Several Java methods in `com.jaspersoft.jasperserver.irplugin.wsclient.WSClient` use `LIST_RESOURCES`:
+    !!! note
 
-- `list(String xmlRequest)` - Sends any custom request, including one using `LIST_RESOURCES` as shown above.
-- `listResources(String type)` - Lists all resources of the given type in the repository visible to the logged in user.
-- `listResourcesInFolder(String type, String parentFolder)` - Lists resources of the given type in the folder.
-- `listResourcesUnderFolder(String type, String ancestorFolder)` - Lists resources of the given type in the folder and the entire tree beneath that folder.
+        Using LIST_RESOURCES is the only case in which a request doesn’t require a resource descriptor.
+
+    Several Java methods in `com.jaspersoft.jasperserver.irplugin.wsclient.WSClient` use `LIST_RESOURCES`:
+
+-   `list(String xmlRequest)` - Sends any custom request, including one using `LIST_RESOURCES` as shown above.
+
+-   `listResources(String type)` - Lists all resources of the given type in the repository visible to the logged in user.
+
+-   `listResourcesInFolder(String type, String parentFolder)` - Lists resources of the given type in the folder.
+
+-   `listResourcesUnderFolder(String type, String ancestorFolder)` - Lists resources of the given type in the folder and the entire tree beneath that folder.

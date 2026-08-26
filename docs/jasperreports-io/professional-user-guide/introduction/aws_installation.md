@@ -11,27 +11,28 @@ This section covers the JasperReports IO For Amazon Web Services (AWS) Hourly o
 
 You need a few things before you can install and run JasperReports IO on Amazon Web Services:
 
-- An Amazon Web Services account.<br>
-  If you already have an account, [log in to AWS](https://console.aws.amazon.com/).<br>
-  To create an AWS account, go to [Amazon Web Services sign in page](https://console.aws.amazon.com/), click the **Create a new AWS account** button, and follow the instructions.
+-   An Amazon Web Services account.<br>
+    If you already have an account, [log in to AWS](https://console.aws.amazon.com/).<br>
+    To create an AWS account, go to [Amazon Web Services sign in page](https://console.aws.amazon.com/), click the **Create a new AWS account** button, and follow the instructions.
 
-!!! note
+    !!! note
 
-    If you have a personal Amazon.com account stored in your browser, AWS uses that account by default. You need to sign out of Amazon or, preferably, use a different browser to set up an AWS account separate from your personal account.
+        If you have a personal Amazon.com account stored in your browser, AWS uses that account by default. You need to sign out of Amazon or, preferably, use a different browser to set up an AWS account separate from your personal account.
 
-- A valid Amazon key pair in your account. If you do not have a valid key pair, follow the instructions on the AWS documentation site: <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>
-- The Required Permissions for using our CloudFormation template.
+-   A valid Amazon key pair in your account. If you do not have a valid key pair, follow the instructions on the AWS documentation site: <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>
+
+-   The Required Permissions for using our CloudFormation template.
 
 ## Required Permissions
 
 Using our CF templates typically requires some admin permissions. AWS permissions required to launch a new JasperReports IO instance include:
 
-- CloudFormation create stack and events
-- Create and run EC2 instances
-- Create EC2 security groups
-- Create IAM resources
-- Create S3 bucket
-- Create CloudWatch log (if selected)
+-   CloudFormation create stack and events
+-   Create and run EC2 instances
+-   Create EC2 security groups
+-   Create IAM resources
+-   Create S3 bucket
+-   Create CloudWatch log (if selected)
 
 ## Accepting Terms of Use
 
@@ -50,8 +51,8 @@ To accept the license agreement
 
 The following is a list of the instance types supported for JasperReports IO:
 
-- T2 Micro (t2.micro)
-- T2 Medium (t2.medium)
+-   T2 Micro (t2.micro)
+-   T2 Medium (t2.medium)
 
 Performance may vary based on system attributes such as network, bandwidth, memory requirements for a given use case, query requirements, and the like.
 
@@ -61,9 +62,9 @@ For more information about EC2 instance types, see the AWS documentation: <http:
 
 A stack is a collection of AWS resources that you create and delete as a single unit. Our CloudFormation template creates the following resources and bundles them into a usable stack:
 
-- IAM role
-- S3 bucket
-- EC2 instance with JasperReports IO installed, configured, and using the IAM role for appropriate credentials.
+-   IAM role
+-   S3 bucket
+-   EC2 instance with JasperReports IO installed, configured, and using the IAM role for appropriate credentials.
 
 To create a JasperReports IO instance
 
@@ -142,9 +143,9 @@ To correct the S3 bucket
 
 3.  Click the instance with the invalid S3 bucket in the table.
 
-4.  Click **Actions \> Instance State \> Stop** to stop the instance.
+4.  Click **Actions &gt; Instance State &gt; Stop** to stop the instance.
 
-5.  Click **Actions \> Instance Settings \> View/Change User Data**.
+5.  Click **Actions &gt; Instance Settings &gt; View/Change User Data**.
 
 6.  Locate the `s3.repository.bucket` and replace the invalid S3 bucket name with the correct one.
 

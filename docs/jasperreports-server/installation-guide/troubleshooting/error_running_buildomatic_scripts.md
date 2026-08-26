@@ -36,9 +36,9 @@ c:\js-builds\jasperserver\buildomatic\install.xml:6:
 
 Ant failed to create a task or type. To correct the error, copy `<js-install>/buildomatic/extra-jars/ant-contrib.jar` to your `<apache-ant>/lib` directory.
 
-## Failure with '\$' Character in Passwords in Buildomatic Scripts
+## Failure with '$' Character in Passwords in Buildomatic Scripts
 
-If your password in buildomatic scripts includes two of more '\$' characters in a row, Ant will not accept it. This issue does not occur when dollar signs are separated by other characters. For example, `$pas$word$` or `pas$word$` will not fail.
+If your password in buildomatic scripts includes two of more '$' characters in a row, Ant will not accept it. This issue does not occur when dollar signs are separated by other characters. For example, `$pas$word$` or `pas$word$` will not fail.
 
 If you have two consecutive dollar signs, you will need to escape each with three more dollar signs. For example, if your password is `pa$$word`, enter it as `pa$$$$$$$$word` in the configuration file. Once you do this, JasperReports Server sets all data connections to `pa$$word`.
 

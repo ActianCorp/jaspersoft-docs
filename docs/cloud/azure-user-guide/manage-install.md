@@ -7,10 +7,10 @@ description: "After launching the Jaspersoft VM on Azure, you can manage the ins
 
 After launching the Jaspersoft VM on Azure, you can manage the installation, which includes:
 
-- Applying a license for Jaspersoft for Azure
-- Upgrading Azure instance
-- Retrieving logs
-- Stopping and restarting the tomcat
+-   Applying a license for Jaspersoft for Azure
+-   Upgrading Azure instance
+-   Retrieving logs
+-   Stopping and restarting the tomcat
 
 Installation directory:
 
@@ -28,7 +28,7 @@ To use BYOL with a SQL Server VM, you must have a license for SQL Server Standar
 
 To create an Azure VM running SQL Server 2017 with one of these bring-your-own-license images, see the VMs prefixed with "{BYOL}":
 
-- [SQL Server 2017 Enterprise Azure VM](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017EnterpriseWindowsServer2016)
-- [SQL Server 2017 Standard Azure VM](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017StandardonWindowsServer2016)
+-   [SQL Server 2017 Enterprise Azure VM](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017EnterpriseWindowsServer2016)
+-   [SQL Server 2017 Standard Azure VM](https://portal.azure.com/#create/Microsoft.BYOLSQLServer2017StandardonWindowsServer2016)
 
 For more information on Azure licenses, contact [Azure support](https://azure.microsoft.com/en-us/support/options/).

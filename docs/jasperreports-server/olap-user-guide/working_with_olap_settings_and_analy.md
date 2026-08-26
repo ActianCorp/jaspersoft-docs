@@ -13,12 +13,12 @@ This section describes system configuration and maintenance options, including o
 
 This section includes:
 
-- [Enabling Javascript in OLAP Schemas](enabling_javascript.md)
+-   [Enabling Javascript in OLAP Schemas](enabling_javascript.md)
 
-- [Changing OLAP Settings](changing_olap_settings.md)
+-   [Changing OLAP Settings](changing_olap_settings.md)
 
-- [Flushing the OLAP Cache](flushing_the_olap_cache.md)
+-   [Flushing the OLAP Cache](flushing_the_olap_cache.md)
 
-- [Configuring OLAP Cache Reuse](configuring_olap_cache_reuse.md)
+-   [Configuring OLAP Cache Reuse](configuring_olap_cache_reuse.md)
 
-- [Configuring the XML/A Cache](configuring_the_xml_a_cache.md)
+-   [Configuring the XML/A Cache](configuring_the_xml_a_cache.md)

@@ -49,9 +49,9 @@ If you embed JasperReports Server in your application, you may want to remove al
 
 3.  Log into JasperReports Server as an administrator.
 
-4.  Select **View \> Repository** and navigate to the location where you created your theme.
+4.  Select **View &gt; Repository** and navigate to the location where you created your theme.
 
-5.  Right-click the embed theme in the repository and select **Add Resource \> File \> CSS**.
+5.  Right-click the embed theme in the repository and select **Add Resource &gt; File &gt; CSS**.
 
 6.  Select the `overrides_custom.css` file you created and enter `overrides_custom.css` for the Name and Resource ID.
 

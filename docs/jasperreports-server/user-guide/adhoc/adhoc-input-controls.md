@@ -11,29 +11,47 @@ There are two types of input controls: Single-select and multi-select. The input
 
 Single select controls present a calendar or dropdown list of values, from which you can choose a single value. To create this type of input control select one of the following operators:
 
-- equals
-- is not equal to
-- is greater than
-- is less than
-- is greater or equal to
-- is less or equal to
-- contains
-- does not contain
-- starts with
-- does not start with
-- ends with
-- does not end with
-- is before
-- is after
-- is on or before
-- is on or after
+-   equals
 
-Multi-select controls display a calendar or dropdown list of values, from which you can choose multiple values. You can click to select individual values or shift-click to select multiple sequential values. You can also search for values, ![js icon InputControl SelectAll](../assets/images/js-icon-InputControl-SelectAll.png) select all available values, ![js icon InputControl DeselectAll](../assets/images/js-icon-InputControl-DeselectAll.png) deselect all available values, or ![js InputControl icon invert](../assets/images/js-InputControl-icon-invert.png) invert the selection. A **Selected** tab shows only items that are selected and allows you to delete them. To create this type of input control select one of the following operators:
+-   is not equal to
 
-- is one of
-- is not one of
-- is between
-- is not between
+-   is greater than
+
+-   is less than
+
+-   is greater or equal to
+
+-   is less or equal to
+
+-   contains
+
+-   does not contain
+
+-   starts with
+
+-   does not start with
+
+-   ends with
+
+-   does not end with
+
+-   is before
+
+-   is after
+
+-   is on or before
+
+-   is on or after
+
+    Multi-select controls display a calendar or dropdown list of values, from which you can choose multiple values. You can click to select individual values or shift-click to select multiple sequential values. You can also search for values, ![js icon InputControl SelectAll](../assets/images/js-icon-InputControl-SelectAll.png) select all available values, ![js icon InputControl DeselectAll](../assets/images/js-icon-InputControl-DeselectAll.png) deselect all available values, or ![js InputControl icon invert](../assets/images/js-InputControl-icon-invert.png) invert the selection. A **Selected** tab shows only items that are selected and allows you to delete them. To create this type of input control select one of the following operators:
+
+-   is one of
+
+-   is not one of
+
+-   is between
+
+-   is not between
 
 To add an input control to the view using a filter
 

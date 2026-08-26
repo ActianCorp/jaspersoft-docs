@@ -9,9 +9,9 @@ One very simple way to customize JasperReports Server is to replace the logo and
 
 The Jaspersoft logo is white on a transparent border and is displayed on the blue background of the default theme. If your logo isn't visible on this background. you can change the background color to suit your needs, as explained in [1.0.1, “Changing Colors and Fonts,” on page 1](themes-changing-colors-and-fonts.md). You can change the logo either of these ways:
 
-- Replace the logo file with your own. If your logo has roughly the same dimensions as the Jaspersoft logo you can simply replace the logo file. The Jaspersoft logo is 200 pixels wide by 23 pixels high.
+-   Replace the logo file with your own. If your logo has roughly the same dimensions as the Jaspersoft logo you can simply replace the logo file. The Jaspersoft logo is 200 pixels wide by 23 pixels high.
 
-- Change the CSS to load your logo file. If you can't make your logo to fit the CSS, edit the CSS to load your logo.
+-   Change the CSS to load your logo file. If you can't make your logo to fit the CSS, edit the CSS to load your logo.
 
 To change the favicon, replace the favicon file. The favicon is 16 pixels wide by 16 pixels high and saved as a .ico file.
 
@@ -24,13 +24,13 @@ One way to replace the logo and/or favicon is to create an image file with the s
 To replace the logo and/or favicon file with your own
 
 1.  Edit a theme or create a new one. Make sure it includes a folder named images.
-
 2.  Do one or both of the following:
 
-    - Replace the logo. Convert your logo image to the SVG format, save it with the filename logo_reverse.svg, and copy it to the images folder.
-    - Replace the favicon. Convert your favicon to the ICO format, save it with the filename favicon.png, and copy it to the images folder.
+-   Replace the logo. Convert your logo image to the SVG format, save it with the filename logo_reverse.svg, and copy it to the images folder.
 
-3.  Upload and activate the new theme to the chosen location and click your browser’s **Refresh** button. Your logo appears in the top-left corner of every page:
+    -   Replace the favicon. Convert your favicon to the ICO format, save it with the filename favicon.png, and copy it to the images folder.
+
+1.  Upload and activate the new theme to the chosen location and click your browser’s **Refresh** button. Your logo appears in the top-left corner of every page:
 
 ![js Customization MyCompanyLogo](../assets/images/js-Customization-MyCompanyLogo.png)
 

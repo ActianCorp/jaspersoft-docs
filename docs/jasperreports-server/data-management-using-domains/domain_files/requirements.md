@@ -7,28 +7,31 @@ description: "The relationship of item definitions, column definitions, and actu
 
 The relationship of item definitions, column definitions, and actual database columns is the essence of the Domain itself and must be maintained when editing the design file. To be uploaded to a Domain, a design file must meet the following conditions:
 
-- It must be well-formed XML. This means that all syntax, spelling, and punctuation are correct so that the file contains a hierarchy of elements, attributes, and content.
-- The following symbols cannot be entered directly; they must be escaped using their HTML encoding:
+-   It must be well-formed XML. This means that all syntax, spelling, and punctuation are correct so that the file contains a hierarchy of elements, attributes, and content.
 
-& (`&amp;`), " (`&quot;`), \< (`&lt;`), \> (`&gt;`);
+-   The following symbols cannot be entered directly; they must be escaped using their HTML encoding:
 
-- It must be valid with regard to the XML schema. The XML schema defines allowed XML element and attribute names and how they are nested in a hierarchical structure. This ensures that the elements and attributes are those used by JasperReports Server. The allowed versions of the XML schema of a Domain design are given in the XSD files located in `<install‑dir>/samples/domain‑xsd/`. This document describes the functionality supported by the following version:
+    & (`&amp;`), " (`&quot;`), &lt; (`&lt;`), &gt; (`&gt;`);
 
-`<install-dir>/samples/domain-xsd/schema_1_3.xsd `
+-   It must be valid with regard to the XML schema. The XML schema defines allowed XML element and attribute names and how they are nested in a hierarchical structure. This ensures that the elements and attributes are those used by JasperReports Server. The allowed versions of the XML schema of a Domain design are given in the XSD files located in `<install‑dir>/samples/domain‑xsd/`. This document describes the functionality supported by the following version:
 
-- The design file must be internally consistent. You can upload a partial file, but to use the Domain, you must define all the necessary elements of a Domain design. These constraints cannot be expressed in the XSD file because they are outside the scope of an XML schema.
+    `<install-dir>/samples/domain-xsd/schema_1_3.xsd `
 
-!!! note
+-   The design file must be internally consistent. You can upload a partial file, but to use the Domain, you must define all the necessary elements of a Domain design. These constraints cannot be expressed in the XSD file because they are outside the scope of an XML schema.
 
-    It is possible to create or upload partial Domain files, but to be usable, a Domain file must include certain elements, such as: a data source, one or more tables, and one or more presentation items.
+    !!! note
 
-- The tables and columns in the design must be consistent with their external definition in the data source of the Domain. The design must reference valid table and column names in the data source; in particular, table names for a design based on an Oracle RDBMS must include the database schema name. The data source also defines the datatype of a column, and the design must use that column accordingly. As a result, a design file is specific to a given data source and may fail when used in a Domain with a different data source.
+        It is possible to create or upload partial Domain files, but to be usable, a Domain file must include certain elements, such as: a data source, one or more tables, and one or more presentation items.
 
-The more complex elements of a design file have further constraints:
+-   The tables and columns in the design must be consistent with their external definition in the data source of the Domain. The design must reference valid table and column names in the data source; in particular, table names for a design based on an Oracle RDBMS must include the database schema name. The data source also defines the datatype of a column, and the design must use that column accordingly. As a result, a design file is specific to a given data source and may fail when used in a Domain with a different data source.
 
-- SQL queries for a derived table must be valid with respect to the JDBC driver for the data source. The tables and columns in the query must exist in the data source, and the columns in the results must match those declared in the design.
-- For a virtual data source that combines data from data sources with different JDBC drivers, SQL queries are validated against Teiid SQL. For more information, see the Teiid Reference Guide under the Documentation link on the [Jaspersoft Support Portal](http://support.jaspersoft.com).
-- Expressions for filters and calculated fields must be valid programmatic expressions in Jaspersoft's Domain Expression Language (DomEL). This format is documented in [Domain Expression Language (DomEL)](../domel/domain_expression_language.md).
+    The more complex elements of a design file have further constraints:
+
+-   SQL queries for a derived table must be valid with respect to the JDBC driver for the data source. The tables and columns in the query must exist in the data source, and the columns in the results must match those declared in the design.
+
+-   For a virtual data source that combines data from data sources with different JDBC drivers, SQL queries are validated against Teiid SQL. For more information, see the Teiid Reference Guide under the Documentation link on the [Jaspersoft Support Portal](http://support.jaspersoft.com).
+
+-   Expressions for filters and calculated fields must be valid programmatic expressions in Jaspersoft's Domain Expression Language (DomEL). This format is documented in [Domain Expression Language (DomEL)](../domel/domain_expression_language.md).
 
 !!! warning
 

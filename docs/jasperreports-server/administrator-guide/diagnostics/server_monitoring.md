@@ -15,10 +15,10 @@ The Ad Hoc views and domains are located in the `/Public/Completed Schedules` fo
 
 The Ad Hoc views are provided in the `/Public/``Completed Schedules/Ad Hoc Views` folder. The following Ad Hoc views are available:
 
-- Successful Reports Ad Hoc View
-- Failed Reports Ad Hoc View
-- Output Formats Ad Hoc View
-- Query Details Ad Hoc View
+-   Successful Reports Ad Hoc View
+-   Failed Reports Ad Hoc View
+-   Output Formats Ad Hoc View
+-   Query Details Ad Hoc View
 
 ![js repository Completed Schedules Ad Hoc views](../assets/images/js-repository-Completed%20Schedules-Ad%20Hoc%20views.png)
 
@@ -34,17 +34,17 @@ Ad Hoc views use cached data for better performance, so the recommendation is to
 
 We have two levels of data for the completed scheduled reports:
 
-- Level 1:
+-   Level 1:
 
-  - Successful Reports Ad Hoc View: Table showing successful scheduled report executions with data like Job ID, Schedule ID, Execution ID, User, Start Time, End Time, Run Time, and more.
-  - Failed Reports Ad Hoc View: Table showing failed scheduled report executions with data like Job ID, Schedule ID, Execution ID, User, Start Time, End Time, Run Time, Execution Error Category, Error Messages, and more.
+    -   Successful Reports Ad Hoc View: Table showing successful scheduled report executions with data like Job ID, Schedule ID, Execution ID, User, Start Time, End Time, Run Time, and more.
+    -   Failed Reports Ad Hoc View: Table showing failed scheduled report executions with data like Job ID, Schedule ID, Execution ID, User, Start Time, End Time, Run Time, Execution Error Category, Error Messages, and more.
 
 You can add scheduled report executions to a dashboard to view the latest data every time the dashboard runs.
 
-- Level 2:
+-   Level 2:
 
-  - Output Formats Ad Hoc View: Lists the output formats of a specific scheduled report execution.
-  - Query Details Ad Hoc View: Lists the query details of a specific scheduled report execution.
+    -   Output Formats Ad Hoc View: Lists the output formats of a specific scheduled report execution.
+    -   Query Details Ad Hoc View: Lists the query details of a specific scheduled report execution.
 
 You can add these views to the dashboard with the Successful Reports Ad Hoc View/Failed Reports Ad Hoc View and use Execution ID as input control for these views. Using the Execution ID as an input control to drill down from level 1 to level 2, you can view detailed data of the specific scheduled reports.
 
@@ -57,7 +57,7 @@ For performance reasons, Ad Hoc views use cached data. To see the real-time data
 To clear Ad Hoc cache
 
 1.  Log in as an administrator (`jasperadmin` in the user's organization or any parent organization, or `superuser`).
-2.  Select **Manage \> Server Setting**, and then click **Ad Hoc Cache** in the left panel.
+2.  Select **Manage &gt; Server Setting**, and then click **Ad Hoc Cache** in the left panel.
 3.  Click **Clear All**.
 
 #### Create Reports using Ad Hoc Views
@@ -108,10 +108,10 @@ To view the real-time Ad Hoc View data using dashboards
 
 The Domains are provided in the /Public/`Completed Schedules/Domains` folder. Administrators have access to Domains with the data that is used to create Ad Hoc views. You can change column headers, create calculated fields, and so on, using the data provided in domains. The following Domains are available:
 
-- Successful Reports Domain
-- Failed Reports Domain
-- Query Details Domain
-- Output Formats Domain
+-   Successful Reports Domain
+-   Failed Reports Domain
+-   Query Details Domain
+-   Output Formats Domain
 
 ![js repository Completed Schedules Domains](../assets/images/js-repository-Completed%20Schedules-Domains.png)
 

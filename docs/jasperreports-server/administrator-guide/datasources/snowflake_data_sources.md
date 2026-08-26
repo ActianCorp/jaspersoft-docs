@@ -7,9 +7,9 @@ description: "During Snowflake data source creation, when creating a warehouse n
 
 During Snowflake data source creation, when creating a warehouse name, use the following characteristics:
 
-- Start with a letter (A-Z, a-z) or an underscore (“\_”).
+-   Start with a letter (A-Z, a-z) or an underscore (“\_”).
 
-- The name should contain only letters, underscores, decimal digits (0-9), and dollar signs (“\$”).
+-   The name should contain only letters, underscores, decimal digits (0-9), and dollar signs (“$”).
 
 !!! note
 

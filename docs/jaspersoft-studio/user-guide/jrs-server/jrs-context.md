@@ -15,7 +15,7 @@ To associate a project with a JasperReports Server instance
 
 1.  Go to the Repository Explorer.
 
-2.  Create a server connection by right-clicking **Servers  \> Create JasperReports Server Connection**. Set up your server connection.<br>
+2.  Create a server connection by right-clicking **Servers  &gt; Create JasperReports Server Connection**. Set up your server connection.<br>
     OR<br>
     Edit an existing connection by right-clicking the connection and selecting **Edit JasperReports Server Connection**.
 
@@ -33,7 +33,7 @@ To associate a project with a JasperReports Server instance
 To set the folder context to JasperReports Server
 
 1.  Right-click on the folder whose context you want to change.
-2.  Select **Report Repository Type \> JasperReports Server**.
+2.  Select **Report Repository Type &gt; JasperReports Server**.
 
 If you know the folder structure that you are using on your JasperReports Server, you can set up the same structure in your project, so you can place images, data sources, and other resources in the locations they map to on the server.
 
@@ -43,7 +43,7 @@ Once you have associated your server with a project, opening a report from the s
 
 1.  Go to your server in the Repository Explorer.
 
-2.  Navigate to the folder that contains your reports. This example uses the **Public \> Samples \> Reports  \> 06. Profit Detail Report**.
+2.  Navigate to the folder that contains your reports. This example uses the **Public &gt; Samples &gt; Reports  &gt; 06. Profit Detail Report**.
 
 3.  Expand the folder for your report. You see the local resources for the report.
 

@@ -9,10 +9,10 @@ This chapter describes how to create more advanced Domains through the interface
 
 This chapter contains the following sections:
 
-- [Domains and Data Virtualization](data_virtualization.md)
-- [Derived Tables](derived_tables.md)
-- [Calculated Fields](calculated_fields.md)
-- [Advanced Joins](advanced_joins.md)
-- [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md)
-- [Modifying a Domain](modifying_a_domain.md)
-- [Importing and Exporting Domain Design Files](importing_and_exporting.md)
+-   [Domains and Data Virtualization](data_virtualization.md)
+-   [Derived Tables](derived_tables.md)
+-   [Calculated Fields](calculated_fields.md)
+-   [Advanced Joins](advanced_joins.md)
+-   [Using Attributes in the Domain Designer](attributes_in_the_domain_designer.md)
+-   [Modifying a Domain](modifying_a_domain.md)
+-   [Importing and Exporting Domain Design Files](importing_and_exporting.md)

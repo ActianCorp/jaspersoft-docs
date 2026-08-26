@@ -5,27 +5,33 @@ description: The reportExecutions service includes only a simple mechanism for s
 
 # The inputControls Service
 
-The reportExecutions service includes only a simple mechanism for setting input control (parameters) values in reports. The inputControls service provides a complete set of operations for reading and reordering input controls, and for updating input control values. Even though the inputControls service is accessed through a URL that includes rest_v2/reports/\<resourceURI\> /inputControls, the \<resourceURI\> can be any of the following resource types that support input controls:
+The reportExecutions service includes only a simple mechanism for setting input control (parameters) values in reports. The inputControls service provides a complete set of operations for reading and reordering input controls, and for updating input control values. Even though the inputControls service is accessed through a URL that includes rest_v2/reports/&lt;resourceURI&gt; /inputControls, the &lt;resourceURI&gt; can be any of the following resource types that support input controls:
 
-- `reportUnit`
-- `reportOption`
-- `adhocDataView`
+-   `reportUnit`
 
-!!! note
+-   `reportOption`
 
-    rest_v2/inputControls is mainly a read-only API (for example, for reading the list of available input controls in a report, getting values of that input control, or selecting certain values from the list of available input controls). Use rest_v2/resources for mapping or updating input controls.
+-   `adhocDataView`
 
-This chapter includes the following sections:
+    !!! note
 
-- Listing Input Controls
-- Input Control Structure
-- Listing Input Control Values
-- Changing the Order of Input Controls
-- Setting Input Control Values
+        rest_v2/inputControls is mainly a read-only API (for example, for reading the list of available input controls in a report, getting values of that input control, or selecting certain values from the list of available input controls). Use rest_v2/resources for mapping or updating input controls.
+
+    This chapter includes the following sections:
+
+-   Listing Input Controls
+
+-   Input Control Structure
+
+-   Listing Input Control Values
+
+-   Changing the Order of Input Controls
+
+-   Setting Input Control Values
 
 ## Listing Input Controls
 
-The following method returns a description of the structure of the input controls for a given resource. The \<resourceURI\> can be any of the resource types that support input controls (`reportUnit`, `reportOption`, `adhocDataView`).
+The following method returns a description of the structure of the input controls for a given resource. The &lt;resourceURI&gt; can be any of the resource types that support input controls (`reportUnit`, `reportOption`, `adhocDataView`).
 
 By default, the inputControls operation returns both the structure and the state of the input controls. The structure of an input control is its name, type, and display characteristics (such as a label). The state of an input control includes both the current value and the list of possible values, if applicable to that type. You can use the structure of each input control to create a UI for your users to enter values. The state of each input control gives you the values to display, such as the values in a dropdown selector.
 
@@ -256,73 +262,74 @@ The `inputControl.handler.values.caseSensitive` property defines the `case-sensi
 
 The input control objects shown in the examples above contain the information needed by your application to display the input controls to your users and allow them to make a selection. The main elements are:
 
-- ID and URI to define which input control it is.
+-   ID and URI to define which input control it is.
 
-- Mandatory, visible, and read-only flags to determine whether users should interact with this input control.
+-   Mandatory, visible, and read-only flags to determine whether users should interact with this input control.
 
-- Display characteristics such as a label and description.
+-   Display characteristics such as a label and description.
 
-- The type of input control, which also determines how it is displayed and how users interact with it, for example text box, checkboxes, radio buttons, or dropdown list. The type is one of the following values:
+-   The type of input control, which also determines how it is displayed and how users interact with it, for example text box, checkboxes, radio buttons, or dropdown list. The type is one of the following values:
 
-  <table>
-  <colgroup>
-  <col style="width: 50%" />
-  <col style="width: 50%" />
-  </colgroup>
-  <tbody>
-  <tr>
-  <td><span>bool</span> (checkbox)</td>
-  <td><span>singleValue</span></td>
-  </tr>
-  <tr>
-  <td><span>singleSelect</span> (dropdown)</td>
-  <td><span>singleValueText</span></td>
-  </tr>
-  <tr>
-  <td><span>singleSelectRadio</span></td>
-  <td><span>singleValueNumber</span></td>
-  </tr>
-  <tr>
-  <td><span>multiSelectCheckbox</span></td>
-  <td><span>singleValueDate</span></td>
-  </tr>
-  <tr>
-  <td rowspan="2"><ul>
-  <li><span>multiSelect (list box)</span></li>
-  </ul></td>
-  <td><span>singleValueDatetime</span></td>
-  </tr>
-  <tr>
-  <td><span>singleValueTime</span></td>
-  </tr>
-  </tbody>
-  </table>
+    <table>
+    <colgroup>
+    <col style="width: 50%" />
+    <col style="width: 50%" />
+    </colgroup>
+    <tbody>
+    <tr>
+    <td><span>bool</span> (checkbox)</td>
+    <td><span>singleValue</span></td>
+    </tr>
+    <tr>
+    <td><span>singleSelect</span> (dropdown)</td>
+    <td><span>singleValueText</span></td>
+    </tr>
+    <tr>
+    <td><span>singleSelectRadio</span></td>
+    <td><span>singleValueNumber</span></td>
+    </tr>
+    <tr>
+    <td><span>multiSelectCheckbox</span></td>
+    <td><span>singleValueDate</span></td>
+    </tr>
+    <tr>
+    <td rowspan="2"><ul>
+    <li><span>multiSelect (list box)</span></li>
+    </ul></td>
+    <td><span>singleValueDatetime</span></td>
+    </tr>
+    <tr>
+    <td><span>singleValueTime</span></td>
+    </tr>
+    </tbody>
+    </table>
 
 For all of the single-value types in the right-hand column, the structure includes an additional `dataType` object that defines limits on the data type such as `maxValue` or `strictMax`. Your app should interpret these limits and enforce them on the values that users may enter.
 
 The input control structure also includes certain validation rules that depend on the type of input control. The presence of these rules indicates that your client should verify or validate the values it receives from your users. The rules provide messages to display when validation fails. Messages are localized if you have language bundles defined on the server and the authenticated user specifies a locale. In the current release, the following validations are possible:
 
-- mandatoryValidationRule - This input is required (as indicated by `"mandatory": true`), and your client should ensure that the user enters a value.
+-   mandatoryValidationRule - This input is required (as indicated by `"mandatory": true`), and your client should ensure that the user enters a value.
 
-``` text
-    "mandatoryValidationRule" : {
-        "errorMessage" : "This field is mandatory so you must enter data."
-    }
-```
+    ``` text
+        "mandatoryValidationRule" : {
+            "errorMessage" : "This field is mandatory so you must enter data."
+        }
+    ```
 
-- dateTimeFormatValidationRule - This input is a date or time value and your client should ensure that the user enters a valid date or time.
+-   dateTimeFormatValidationRule - This input is a date or time value and your client should ensure that the user enters a valid date or time.
 
-``` text
-    "dateTimeFormatValidationRule" : {
-        "errorMessage" : "Specify a valid date value.",
-        "format" : "yyyy-MM-dd"
-    }
-```
+    ``` text
+        "dateTimeFormatValidationRule" : {
+            "errorMessage" : "Specify a valid date value.",
+            "format" : "yyyy-MM-dd"
+        }
+    ```
 
-The input control structure also defines cascading dependencies, if any, between the input controls. The cascading dependencies determine whether a change of values in one input control may change the possible values in another.
+    The input control structure also defines cascading dependencies, if any, between the input controls. The cascading dependencies determine whether a change of values in one input control may change the possible values in another.
 
-- masterDependencies - A list of input control IDs that this input control depends on. If one of these dependencies is modified, your application should fetch the new state of this input control.
-- slaveDependencies - A list of input control IDs that depend on this input control. If this input control is modified (given a new value by your user), your application should fetch new state values for these dependencies.
+-   masterDependencies - A list of input control IDs that this input control depends on. If one of these dependencies is modified, your application should fetch the new state of this input control.
+
+-   slaveDependencies - A list of input control IDs that depend on this input control. If this input control is modified (given a new value by your user), your application should fetch new state values for these dependencies.
 
 The state object of an input control contains the current and possible values for this input control. The state objects are explained in the next section.
 
@@ -330,7 +337,7 @@ The state object of an input control contains the current and possible values fo
 
 The following method returns only the state objects that define the current values of a resource's input controls. The state object includes the possible values of each input control, and among these values, the one that is currently selected. Your app can use these values to generate input and selection widgets in the UI for each input control.
 
-Use this method if you have already fetched all the input control structures using the inputControls method. The \<resourceURI\> can be any of the resource types that support input controls (`reportUnit`, `reportOption`, `adhocDataView`).
+Use this method if you have already fetched all the input control structures using the inputControls method. The &lt;resourceURI&gt; can be any of the resource types that support input controls (`reportUnit`, `reportOption`, `adhocDataView`).
 
 <table>
 <colgroup>
@@ -462,8 +469,8 @@ The following example shows two more JSON `inputControlState` objects for single
 
 Note that the state objects do not contain the input control type, therefore your app must determine how to read each state object based on the input control structure that it has previously fetched and stored in memory. There are two ways you can match the list of input control values to their previously fetched structure:
 
-- Each state object has the ID and URI of its corresponding input control. The URI of an input control is equivalent to \<resourceURI\>\_files/\<inputControlID\>. Use the ID or URI of each state object to match the ID or URI of each input control structure in your app.
-- Input controls are positional: the order of input controls is determined when creating the resource and saved in the resource. All responses from the inputControls methods, both structure and values, contain the complete list of input controls in the same order.
+-   Each state object has the ID and URI of its corresponding input control. The URI of an input control is equivalent to &lt;resourceURI&gt;\_files/&lt;inputControlID&gt;. Use the ID or URI of each state object to match the ID or URI of each input control structure in your app.
+-   Input controls are positional: the order of input controls is determined when creating the resource and saved in the resource. All responses from the inputControls methods, both structure and values, contain the complete list of input controls in the same order.
 
 ## Changing the Order of Input Controls
 
@@ -521,9 +528,9 @@ Note that if you manage your list of input control structures and states based o
 
 After your app has fetched all structures and values and created a UI, you can interact with the input controls and set new values. Use the following methods to send the new values and selections to the server. The server performs validation and returns an error if certain conditions are not satisfied. Before sending new values your application should validate user input in the following ways:
 
-- It must prevent certain input, such as accepting values for a read-only input control or making multiple selections in a single-select input control.
-- It should enforce constraints, such as ensuring that a mandatory input control is not null or has at least one selection.
-- It should also validate values against any input control limits, such as minimum and maximum values.
+-   It must prevent certain input, such as accepting values for a read-only input control or making multiple selections in a single-select input control.
+-   It should enforce constraints, such as ensuring that a mandatory input control is not null or has at least one selection.
+-   It should also validate values against any input control limits, such as minimum and maximum values.
 
 After sending new values, use the response to update any changes in selection list values. For example, if you change an input control with cascading dependencies, the server responds with the new selection lists for the dependent input controls. After all new values have been set, you can call the reportExecutions service to run the report again.
 
@@ -765,17 +772,17 @@ This method is used to get the total available values and limit the count of the
 
 Provide inputs for the following fields in the request body:
 
-- Offset - Specify the values to be returned for each input control.
+-   Offset - Specify the values to be returned for each input control.
 
-- Limit - Specify the total number of values to be returned for each input control.
+-   Limit - Specify the total number of values to be returned for each input control.
 
-- Criteria - Specify the texts or words to be returned for each input control. If specified, then it searches not only for the complete text, but also for the values provided in the texts for the specified criteria. For example, specifying "ry" in the criteria field returns all the values containing "ry" texts.
+-   Criteria - Specify the texts or words to be returned for each input control. If specified, then it searches not only for the complete text, but also for the values provided in the texts for the specified criteria. For example, specifying "ry" in the criteria field returns all the values containing "ry" texts.
 
-- Select - This field is newly added. Specify either "selectedValues" or "allValues" in this field.
+-   Select - This field is newly added. Specify either "selectedValues" or "allValues" in this field.
 
-  - If "selectedValues" is chosen, then the returned available values have the default-selected values.
-  - If "allValues" is chosen, then the returned available values have all the values selected.
-  - If any other value other than "selectedValues" or "allValues" is provided, then this field is ignored.
+    -   If "selectedValues" is chosen, then the returned available values have the default-selected values.
+    -   If "allValues" is chosen, then the returned available values have all the values selected.
+    -   If any other value other than "selectedValues" or "allValues" is provided, then this field is ignored.
 
 !!! note
 

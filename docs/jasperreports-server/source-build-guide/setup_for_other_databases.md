@@ -15,17 +15,17 @@ You can choose to use the provided JDBC driver or download a native JDBC Driver.
 
 You can download a JDBC driver appropriate for your database. In this case, additional configurations are required. You can download a JDBC driver from one of these vendor sites:
 
-- <http://www.oracle.com/technetwork/indexes/downloads> (Oracle)
-- <https://www.microsoft.com/en-us/download/details.aspx?id=56615> (SQL Server)
-- <http://www-01.ibm.com/software/data/db2/linux-unix-windows/downloads.html> (DB2)
+-   <http://www.oracle.com/technetwork/indexes/downloads> (Oracle)
+-   <https://www.microsoft.com/en-us/download/details.aspx?id=56615> (SQL Server)
+-   <http://www-01.ibm.com/software/data/db2/linux-unix-windows/downloads.html> (DB2)
 
 Copy the downloaded JDBC jar to the following location:
 
-- `<js-src>/buildomatic/conf_source/db/<dbType>/jdbc`
+-   `<js-src>/buildomatic/conf_source/db/<dbType>/jdbc`
 
 For example, for SQL Server the driver would go here:
 
-- `<js-src>/buildomatic/conf_source/db/sqlserver/jdbc`
+-   `<js-src>/buildomatic/conf_source/db/sqlserver/jdbc`
 
 ## Set Up Your Database
 

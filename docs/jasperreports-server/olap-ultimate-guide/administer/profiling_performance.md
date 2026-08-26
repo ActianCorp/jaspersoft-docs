@@ -13,7 +13,7 @@ A basic observation about performance optimization is that improving the speed o
 
 In ROLAP implementations such as Jaspersoft OLAP, one quickly finds that most of the system time is spent running SQL queries. The most effective ways to improve this time are (a) tuning the database for the common queries and (b) increasing the size of the OLAP engines’ available memory for caching, which reduces the number of queries that must be sent to the database itself. JasperReports Server commercial editions have a profiling feature that can be used to save performance statistics for any part of the system code. This profiling can be used to analyze MDX and SQL execution times.
 
-When the profiling feature is enabled, every query is timed and the timing data is stored in the ProfilingRecord table and displayed in performance reports and views. The reports are in organization\>/Performance/Reports. The views are in organization\>/Performance/Views.
+When the profiling feature is enabled, every query is timed and the timing data is stored in the ProfilingRecord table and displayed in performance reports and views. The reports are in organization&gt;/Performance/Reports. The views are in organization&gt;/Performance/Views.
 
 To use the profiling feature
 
@@ -34,9 +34,9 @@ Enabling performance profiling may have a minor impact on the overall performanc
 
 There are several approaches to performance profilings, depending on your goal:
 
-- To get a general sense of the mix of queries being performed and their average response time, collect data from actual users’ activities. This is useful for observations about what the most frequent queries are and what the slowest queries are.
-- To investigate the cause of individual queries that are slow, repeat the same query in various conditions, such as load on the application server or database server.
-- To develop better MDX, try rewriting an MDX query and looking at the generated SQL timings for the various approaches.
+-   To get a general sense of the mix of queries being performed and their average response time, collect data from actual users’ activities. This is useful for observations about what the most frequent queries are and what the slowest queries are.
+-   To investigate the cause of individual queries that are slow, repeat the same query in various conditions, such as load on the application server or database server.
+-   To develop better MDX, try rewriting an MDX query and looking at the generated SQL timings for the various approaches.
 
 Having a test automation tool (such as Selenium) simulate users performing queries are very helpful, so that you can compare results for the same actions with different settings for the database, application configuration, and so on.
 

@@ -21,7 +21,7 @@ To add bookmarks
 8.  Click outside the design space in the Design tab, then click **Report** in the Properties view.
 9.  Click to enable **Create bookmarks**.
 10. Open the **Content_Page_One.jrxml** in the Design tab.
-11. Click the **\$F{SHIPCITY}** text band.
+11. Click the **$F{SHIPCITY}** text band.
 12. In the Properties view, click **Hyperlink**.
 13. Expand the **Anchor and Bookmark** section.
 14. Click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor, and click **Fields**.

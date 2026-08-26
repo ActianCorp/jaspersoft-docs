@@ -7,17 +7,17 @@ description: "The 16. Interactive Sales Report example has several input control
 
 The 16. Interactive Sales Report example has several input controls:
 
-- Product Family
+-   Product Family
 
-- Product Department
+-   Product Department
 
-- Product Category
+-   Product Category
 
-- Product Name
+-   Product Name
 
-- Country
+-   Country
 
-- Gender
+-   Gender
 
 Using input controls, you run the report with one set of data and then another. When saved, an instance of the report with alternate input controls is called a **Report Version**, and is labeled as such in the repository.
 

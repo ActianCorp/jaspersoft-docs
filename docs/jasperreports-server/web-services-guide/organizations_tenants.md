@@ -11,7 +11,7 @@ description: "This section describes functionality that can be restricted by the
 
 At present, there is no practical difference between organizations and tenants; both kinds of entity are administered with these `tenant` operations:
 
-- `getTenant`. Returns a list of tenants that meet specified criteria.
-- `getSubTenantList`. Returns a list of sub-tenants (units within a tenant).
-- `putTenant`. Returns the named tenant. If the object is not already in the database, the call creates a new one.
-- `deleteTenant`. Deletes the named tenant.
+-   `getTenant`. Returns a list of tenants that meet specified criteria.
+-   `getSubTenantList`. Returns a list of sub-tenants (units within a tenant).
+-   `putTenant`. Returns the named tenant. If the object is not already in the database, the call creates a new one.
+-   `deleteTenant`. Deletes the named tenant.

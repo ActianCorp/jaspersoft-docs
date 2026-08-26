@@ -9,7 +9,7 @@ An OLAP schema is a logical model that defines a multidimensional data structure
 
 The Jaspersoft OLAP Workbench is a graphical tool to help you define and test the schema. You can also edit the schema XML file in a text editor.
 
-Because Jaspersoft OLAP relies on Mondrian (an OLAP engine), the OLAP schemas you create for Jaspersoft OLAP must follow the Mondrian schema format, which is written in XML (for an example, refer to the sample schemas in your JasperReports Server installation under js-install\>\samples\OLAP\schemas\\\
+Because Jaspersoft OLAP relies on Mondrian (an OLAP engine), the OLAP schemas you create for Jaspersoft OLAP must follow the Mondrian schema format, which is written in XML (for an example, refer to the sample schemas in your JasperReports Server installation under js-install&gt;\\samples\\OLAP\\schemas\\\
 FoodmartSchema.xml.
 
 There are many graphical tools that can help you build a schema, including the Workbench.

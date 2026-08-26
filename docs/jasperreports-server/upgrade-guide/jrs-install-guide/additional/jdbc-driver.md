@@ -78,9 +78,9 @@ If for instance, you want to use a JDBC driver built and distributed by the MySQ
 
 JasperReports Server no longer includes JDBC drivers for the following commercial databases:
 
-- DB2
-- Oracle
-- SQL Server
+-   DB2
+-   Oracle
+-   SQL Server
 
 You can download the driver supplied by the database vendor as described below. To do this, you must first obtain and install the driver you want, then copy that driver into buildomatic.
 
@@ -126,9 +126,9 @@ Copy your DB2 driver to the following directory:
 
 You can use Oracle RAC with the TIBCO JDBC Oracle driver. This driver works with Oracle RAC with the following settings:
 
-- Use Oracle for non-CDB connection settings as described in [Standard Oracle options](../../../installation-guide/warfileinstall/war_install_using_js_install.md).
+-   Use Oracle for non-CDB connection settings as described in [Standard Oracle options](../../../installation-guide/warfileinstall/war_install_using_js_install.md).
 
-- Use `js-install.bat/sh minimal` with Oracle. This option does not install sample databases.
+-   Use `js-install.bat/sh minimal` with Oracle. This option does not install sample databases.
 
 To support additional functionality with Oracle RAC, such as load balancing with multiple servers, you need to configure your application server and manually set up the correct connection URL.
 

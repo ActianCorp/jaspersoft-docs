@@ -71,8 +71,8 @@ If the report unit’s main JRXML already resides in the repository, the descrip
 
 A second child resource is recognized during creation: a data source descriptor of the data source that the server will use to run the report. This resource is optional, and can be defined either locally to the report unit or as a reference to another resource in the repository:
 
-- When the data source is defined locally, the resource’s `wsType` must be a valid data source type, such as `jdbc`, `jndi`, or `bean`.
-- If the data source is defined elsewhere in the repository, its `wsType` must be set to `datasource`, which indicatesan undefined resource that can be used as a data source, and its `PROP_FILERESOURCE_IS_REFERENCE` property must be set to `true`. The resource’s actual URI must be set using the `PROP_FILERESOURCE_REFERENCE_URI` property.
+-   When the data source is defined locally, the resource’s `wsType` must be a valid data source type, such as `jdbc`, `jndi`, or `bean`.
+-   If the data source is defined elsewhere in the repository, its `wsType` must be set to `datasource`, which indicatesan undefined resource that can be used as a data source, and its `PROP_FILERESOURCE_IS_REFERENCE` property must be set to `true`. The resource’s actual URI must be set using the `PROP_FILERESOURCE_REFERENCE_URI` property.
 
 Other resources such as input controls and subreports, must be added separately using the put operation to modify the report unit.
 

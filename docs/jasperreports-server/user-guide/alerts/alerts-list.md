@@ -1,17 +1,17 @@
 ---
 title: List of Alerts
-description: "All scheduled alerts that you have defined appear on the View > Schedules and Alerts > Alerts tab. You can also click the View Alert List icon !js alert list blue badge of the Report title bar to..."
+description: "All scheduled alerts that you have defined appear on the View &gt; Schedules and Alerts &gt; Alerts tab. You can also click the View Alert List icon !js alert list blue badge of the Report title bar..."
 ---
 
 # List of Alerts
 
-All scheduled alerts that you have defined appear on the **View \> Schedules and Alerts \> Alerts** tab. You can also click the **View Alert List** icon ![js alert list blue badge](../assets/images/js-alert-list-blue-badge.png) of the Report title bar to view scheduled alerts in the Alerts panel.
+All scheduled alerts that you have defined appear on the **View &gt; Schedules and Alerts &gt; Alerts** tab. You can also click the **View Alert List** icon ![js alert list blue badge](../assets/images/js-alert-list-blue-badge.png) of the Report title bar to view scheduled alerts in the Alerts panel.
 
 !!! note
 
-    Currently in the **View \> Schedules and Alerts \> Alerts** tab, the Alerts page is a new beta feature that might not be fully stable or supported. For more information about the Alerts beta feature, see [Admin Console Beta](https://community.jaspersoft.com/wiki/admin-console).
+    Currently in the **View &gt; Schedules and Alerts &gt; Alerts** tab, the Alerts page is a new beta feature that might not be fully stable or supported. For more information about the Alerts beta feature, see [Admin Console Beta](https://community.jaspersoft.com/wiki/admin-console).
 
-Typical users see only the alerts that they have defined in the **View \> Schedules and Alerts \> Alerts** tab. Administrators can see the alerts defined by all users in the Alerts page.
+Typical users see only the alerts that they have defined in the **View &gt; Schedules and Alerts &gt; Alerts** tab. Administrators can see the alerts defined by all users in the Alerts page.
 
 ![js alert list open](../assets/images/js-alert-list-open.png)
 
@@ -129,16 +129,16 @@ You can disable the alerting feature using the configuration, this disables aler
 
 Once the alerts are disabled, you can see the below changes to the UI.
 
-- The **View alerts** ![view alert](../assets/images/view_alert.png) and **Turn-on Alert mode** buttons ![turnOn alert](../assets/images/turnOn_alert.png) gets hidden.
+-   The **View alerts** ![view alert](../assets/images/view_alert.png) and **Turn-on Alert mode** buttons ![turnOn alert](../assets/images/turnOn_alert.png) gets hidden.
 
-  ![hidden alertmode](../assets/images/hidden_alertmode.png)
+    ![hidden alertmode](../assets/images/hidden_alertmode.png)
 
-- The **Alerts tab** on **the Admin Console** is hidden when the Alert feature is disabled.
+-   The **Alerts tab** on **the Admin Console** is hidden when the Alert feature is disabled.
 
-  ![alerttab adminConsole](../assets/images/alerttab_adminConsole.png)
+    ![alerttab adminConsole](../assets/images/alerttab_adminConsole.png)
 
-- The **Schedules and Alerts** menu option is changed to **Schedules**.
+-   The **Schedules and Alerts** menu option is changed to **Schedules**.
 
-  **Alerts tab** is hidden on **Schedules and Alerts** page.
+    **Alerts tab** is hidden on **Schedules and Alerts** page.
 
-  ![schedule alertpage](../assets/images/schedule_alertpage.png)
+    ![schedule alertpage](../assets/images/schedule_alertpage.png)

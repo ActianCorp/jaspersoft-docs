@@ -9,7 +9,7 @@ Procedure:
 
 1.  Log in as the system administrator (superuser).
 
-2.  Select **View \> Repository**, right-click a folder's name, and select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page.
+2.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page.
 
 3.  From the **Type** drop-down, select **MongoDB**.
 

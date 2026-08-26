@@ -17,18 +17,18 @@ This chapter introduces a sample architecture for JasperReports Server cluster e
 
 This chapter contains the following sections:
 
-- [Sample Cluster Architecture](sample-cluster-architecture.md)
+-   [Sample Cluster Architecture](sample-cluster-architecture.md)
 
-- [Jaspersoft OLAP in a Cluster](jaspersoft-olap-in-a-cluster.md)
+-   [Jaspersoft OLAP in a Cluster](jaspersoft-olap-in-a-cluster.md)
 
-- [Session Management and Failover](session-management-and-failover.md)
+-   [Session Management and Failover](session-management-and-failover.md)
 
-- [Cluster Design Process](cluster_design_process.md)
+-   [Cluster Design Process](cluster_design_process.md)
 
-- [Performance Requirements](performance-requirements.md)
+-   [Performance Requirements](performance-requirements.md)
 
-- [Availability Requirements](availability-requirements.md)
+-   [Availability Requirements](availability-requirements.md)
 
-- [Scalability Requirements](scalability-requirements.md)
+-   [Scalability Requirements](scalability-requirements.md)
 
-- [Sizing a Cluster](sizing-a-cluster.md)
+-   [Sizing a Cluster](sizing-a-cluster.md)

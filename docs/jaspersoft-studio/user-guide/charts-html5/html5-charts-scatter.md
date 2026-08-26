@@ -44,48 +44,65 @@ To create the chart
 
 6.  Under **Categories Levels**, select Level1 and click **Modify**. Then enter the following:
 
-    - **Name**: `ShipCountry`
-    - **Expression**:` $F{SHIPCOUNTRY}`
-    - **Value Class Name**: `java.lang.String`
-    - **Order**: `Ascending`
+-   **Name**: `ShipCountry`
 
-    Click **OK**.
+    -   **Expression**:` $F{SHIPCOUNTRY}`
 
-7.  Under Categories Levels, click `Add` and create a second Category with the following information:
+    -   **Value Class Name**: `java.lang.String`
 
-    - **Name**: `ShipCity`
-    - **Expression**:` $F{SHIPCITY}`
-    - **Value Class Name**: `java.lang.String`
-    - **Order**: `Ascending`
+    -   **Order**: `Ascending`
 
-    Click **OK**.
+        Click **OK**.
 
-8.  Under Series Level, select Series1 and click **Modify**. Then enter the following:
+        1.  Under Categories Levels, click `Add` and create a second Category with the following information:
 
-    - **Name**: `Order Year`
-    - **Expression**: `YEAR($F{ORDERDATE}) `
-    - **Value Class Name**: `java.lang.Integer`
-    - **Order**: `Ascending`
+    -   **Name**: `ShipCity`
 
-    Click **OK**.
+    -   **Expression**:` $F{SHIPCITY}`
 
-9.  Under Measures, select Measure1 and click **Modify**. Then enter the following for maximum freight:
+    -   **Value Class Name**: `java.lang.String`
 
-    - **Name**: `Max Freight`
-    - **Label Expression**: `"Max Freight"`
-    - **Calculation**: `Highest`
-    - **Value Expression**: `$F{FREIGHT}`
-    - **Value Class Name**: `java.math.BigDecimal`
+    -   **Order**: `Ascending`
 
-    Click **OK**.
+        Click **OK**.
 
-10. Under Measures, select Measure0 and click **Modify**. Then enter the following for average freight:
+        1.  Under Series Level, select Series1 and click **Modify**. Then enter the following:
 
-- **Name**: `Average Freight`
-- **Label Expression**: `"Average Freight"`
-- **Calculation**: `Average`
-- **Value Expression**: `$F{FREIGHT}`
-- **Value Class Name**: `java.math.BigDecimal`
+    -   **Name**: `Order Year`
+
+    -   **Expression**: `YEAR($F{ORDERDATE}) `
+
+    -   **Value Class Name**: `java.lang.Integer`
+
+    -   **Order**: `Ascending`
+
+        Click **OK**.
+
+        1.  Under Measures, select Measure1 and click **Modify**. Then enter the following for maximum freight:
+
+    -   **Name**: `Max Freight`
+
+    -   **Label Expression**: `"Max Freight"`
+
+    -   **Calculation**: `Highest`
+
+    -   **Value Expression**: `$F{FREIGHT}`
+
+    -   **Value Class Name**: `java.math.BigDecimal`
+
+        Click **OK**.
+
+        1.  Under Measures, select Measure0 and click **Modify**. Then enter the following for average freight:
+
+    -   **Name**: `Average Freight`
+
+    -   **Label Expression**: `"Average Freight"`
+
+    -   **Calculation**: `Average`
+
+    -   **Value Expression**: `$F{FREIGHT}`
+
+    -   **Value Class Name**: `java.math.BigDecimal`
 
 Click **OK**.
 

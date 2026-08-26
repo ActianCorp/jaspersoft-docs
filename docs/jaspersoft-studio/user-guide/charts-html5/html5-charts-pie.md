@@ -42,23 +42,24 @@ The **HTML5 Chart Edit Dialog** is displayed.
     |  |
     |----|
     | ![HTML5 Charts Properties Chart Data](../assets/images/HTML5%20Charts%20Properties_Chart%20Data.png) |
-    | *Figure 1: HTML5 Charts Properties \> Chart Data \> Configuration* |
+    | *Figure 1: HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
 
 6.  Enter the required information on the Data subtab. For this example:
 
-    - **Slice Expression**: Enter the expression that you want to use for the slices. You can enter the expression directly, or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the **Expression Editor**. For this example, use `$F{SHIPCOUNTRY}`.
-    - **Value Expression**: Enter the expression that you want to use as a base for the measure calculation. For this example, use `$F{ORDERID}`.
-    - **Aggregation Function**: Select the function to apply to the value expression. For this example, use `DistinctCount`.
-    - **Tooltip Expression**: Enter an expression to display when a user hovers over a slice of the pie. For this example, enter `"Orders"`.
-    - **Ordering**: Select an order for the slices. For this example, choose `Ascending`. This displays the slices in alphabetical order.
+-   **Slice Expression**: Enter the expression that you want to use for the slices. You can enter the expression directly, or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the **Expression Editor**. For this example, use `$F{SHIPCOUNTRY}`.
 
-7.  To preview the chart from inside the dialog, click **Show Chart Preview**.
+    -   **Value Expression**: Enter the expression that you want to use as a base for the measure calculation. For this example, use `$F{ORDERID}`.
+    -   **Aggregation Function**: Select the function to apply to the value expression. For this example, use `DistinctCount`.
+    -   **Tooltip Expression**: Enter an expression to display when a user hovers over a slice of the pie. For this example, enter `"Orders"`.
+    -   **Ordering**: Select an order for the slices. For this example, choose `Ascending`. This displays the slices in alphabetical order.
+
+1.  To preview the chart from inside the dialog, click **Show Chart Preview**.
 
     A preview is displayed to the right of the dialog. This preview can take some time to load the first time it is run.
 
-8.  Click the Dataset subtab. This subtab lets you choose a dataset and dataset properties. For this example, use the default **\[Report main dataset\]**.
+2.  Click the Dataset subtab. This subtab lets you choose a dataset and dataset properties. For this example, use the default **\[Report main dataset\]**.
 
-9.  You can optionally filter the dataset by entering an expression in the **Increment expression** text box. You can enter text directly or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor. For this example, filter your dataset using the following increment expression:
+3.  You can optionally filter the dataset by entering an expression in the **Increment expression** text box. You can enter text directly or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor. For this example, filter your dataset using the following increment expression:
 
     `$F{SHIPCOUNTRY}.startsWith("I") ||`
 
@@ -66,18 +67,18 @@ The **HTML5 Chart Edit Dialog** is displayed.
 
     `$F{SHIPCOUNTRY}.startsWith ("U")`
 
-10. Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
+4.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
     |  |
     |----|
     | ![jss html5 pie chart dataset](../assets/images/jss-html5-pie-chart-dataset.png) |
-    | *Figure 2: HTML5 Charts Properties \> Chart Data \> Configuration* |
+    | *Figure 2: HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
 
-11. Click **OK** to close the HTML5 Chart Edit dialog.
+5.  Click **OK** to close the HTML5 Chart Edit dialog.
 
     A placeholder for the chart is inserted in the design view of your report. The design view of a report does not display live data for a chart.
 
-12. Save, then click the **Preview** tab to see your chart. To see an interactive preview, select HTML from the **Preview** drop-down. Hover over a pie segment to see the number of orders.
+6.  Save, then click the **Preview** tab to see your chart. To see an interactive preview, select HTML from the **Preview** drop-down. Hover over a pie segment to see the number of orders.
 
 |  |
 |----|

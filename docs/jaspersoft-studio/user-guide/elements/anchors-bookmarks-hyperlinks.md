@@ -22,22 +22,22 @@ To set anchor, bookmark, or hyperlink properties, select an image, text field, o
 
 This window is divided in two sections:
 
-- Anchor and Bookmark
-- Hyperlink
+-   Anchor and Bookmark
+-   Hyperlink
 
 ## Anchors and Bookmarks
 
 An anchor identifies a specific position in a document. If you plan to export your report to PDF, you can optionally set a bookmark level to have the anchor show up as a PDF bookmark. The Anchor and Bookmark area lets you set the following:
 
-- **Anchor Name Expression** – Expression for the name of the anchor. This name can be referenced by other hyperlinks. Click the ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) button to open the **Expression Editor**, where you can write or build the expression.
-- **Bookmark Level** – Bookmark level when the report is exported to PDF. If you plan to export your report as a PDF, set a bookmark level to populate the bookmark tree, making the final document navigation much easier. To make an anchor available as a bookmark, simply choose a bookmark level higher than one. Defining different levels creates nested bookmarks.
+-   **Anchor Name Expression** – Expression for the name of the anchor. This name can be referenced by other hyperlinks. Click the ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) button to open the **Expression Editor**, where you can write or build the expression.
+-   **Bookmark Level** – Bookmark level when the report is exported to PDF. If you plan to export your report as a PDF, set a bookmark level to populate the bookmark tree, making the final document navigation much easier. To make an anchor available as a bookmark, simply choose a bookmark level higher than one. Defining different levels creates nested bookmarks.
 
 Bookmarks can also be displayed in JasperReports Server when the report is displayed in the interactive viewer. To display bookmarks in the server, set the following property:
 
 `<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>`
 
 This property can be set on the report level or globally in the JasperReports Server<br>
-WEB-INF\classes\jasperreports.properties file.
+WEB-INF\\classes\\jasperreports.properties file.
 
 !!! note
 
@@ -49,21 +49,21 @@ WEB-INF\classes\jasperreports.properties file.
 
 Hyperlinks let you link a location in a report to another destination. The most important property of a hyperlink is its type, which determines the format of the target. Jaspersoft Studio supports the following types of hyperlink: The exact properties of a hyperlink depend on the hyperlink type. The following properties may appear for a hyperlink:
 
-- **Link Target** – Specifies where to open the link target. The Link Target is similar to the target attribute of an HTML link. The dropdown box shows the following options: Self, Blank, Top, Parent. You can also specify a target name, which actually makes sense only when the hyperlink is used in a web environment.
+-   **Link Target** – Specifies where to open the link target. The Link Target is similar to the target attribute of an HTML link. The dropdown box shows the following options: Self, Blank, Top, Parent. You can also specify a target name, which actually makes sense only when the hyperlink is used in a web environment.
 
-- **Link Type** – The following link types are supported in Jaspersoft Studio: Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, ReportExecution, and dashlet. You can also define your own custom hyperlink types.
+-   **Link Type** – The following link types are supported in Jaspersoft Studio: Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, ReportExecution, and dashlet. You can also define your own custom hyperlink types.
 
-- **Target Expressions** – Expressions that determine the location of the link target. May include:
+-   **Target Expressions** – Expressions that determine the location of the link target. May include:
 
-  - **Hyperlink Anchor Expression** – Anchor in document to use as a hyperlink target.
-  - **Hyperlink Page Expression** – Page in document to use as hyperlink target.
-  - **Hyperlink Reference Expression** – Location of remote document. For link of type Reference, use a URL; for a link of type Remote Anchor or Remote Page, use a file reference.
+    -   **Hyperlink Anchor Expression** – Anchor in document to use as a hyperlink target.
+    -   **Hyperlink Page Expression** – Page in document to use as hyperlink target.
+    -   **Hyperlink Reference Expression** – Location of remote document. For link of type Reference, use a URL; for a link of type Remote Anchor or Remote Page, use a file reference.
 
-- **Hyperlink When Expression** – Expression that determines when the hyperlink is implemented. A hyperlink is only available if the Hyperlink When expression returns the Boolean value `True` (default).
+-   **Hyperlink When Expression** – Expression that determines when the hyperlink is implemented. A hyperlink is only available if the Hyperlink When expression returns the Boolean value `True` (default).
 
-- **Tooltip Expression** – String to use as a tooltip when a user hovers the cursor over the hyperlink.
+-   **Tooltip Expression** – String to use as a tooltip when a user hovers the cursor over the hyperlink.
 
-- **Parameters** – Parameters that specify information about the target; only available for ReportExecution hyperlinks and custom hyperlink types.
+-   **Parameters** – Parameters that specify information about the target; only available for ReportExecution hyperlinks and custom hyperlink types.
 
 ReportExecution is implemented as a custom hyperlink type in JasperReports Library.
 
@@ -79,10 +79,10 @@ When working with a hyperlink of type Reference, you can add parameters via the 
 
 Several hyperlink types link to an existing report. These types are primarily supported in PDF and HTML formats:
 
-- LocalAnchor – Links between two locations into the same document. It can be used, for example, to link the titles of a summary to the chapters to which they refer. To define the local anchor, it is necessary to specify a hyperlink anchor expression, which produces a valid anchor name, for example, `"title"`.
-- LocalPage – Point to a specific page in the current report. In this case, it is necessary to specify the page number you are pointing to by means of a hyperlink page expression, for example `Integer.valueOf(2)`. The expression must return an Integer object.
-- RemoteAnchor – Points to an anchor that resides in an external document. In this case, the location of the external file must be specified in the Hyperlink Reference Expression field, and the name of the anchor must be specified in the Hyperlink Anchor Expression field.
-- RemotePage – Points to a particular page of an external document. In this case, the location of the external file must be specified in the Hyperlink Reference Expression field, and the page number must specified in the Hyperlink Reference Expression.
+-   LocalAnchor – Links between two locations into the same document. It can be used, for example, to link the titles of a summary to the chapters to which they refer. To define the local anchor, it is necessary to specify a hyperlink anchor expression, which produces a valid anchor name, for example, `"title"`.
+-   LocalPage – Point to a specific page in the current report. In this case, it is necessary to specify the page number you are pointing to by means of a hyperlink page expression, for example `Integer.valueOf(2)`. The expression must return an Integer object.
+-   RemoteAnchor – Points to an anchor that resides in an external document. In this case, the location of the external file must be specified in the Hyperlink Reference Expression field, and the name of the anchor must be specified in the Hyperlink Anchor Expression field.
+-   RemotePage – Points to a particular page of an external document. In this case, the location of the external file must be specified in the Hyperlink Reference Expression field, and the page number must specified in the Hyperlink Reference Expression.
 
 Similar to links of type Reference, you can specify additional parameters for these hyperlink types by appending them to the expression string.
 
@@ -90,11 +90,11 @@ Similar to links of type Reference, you can specify additional parameters for th
 
 Hyperlinks of type ReportExecution run one JasperReports Server report from another JasperReports Server report, for example, when drilling down to a report in the context of JasperReports Server. Instead of a hyperlink reference or similar expression, ReportExecution hyperlinks use JasperReports parameters to specify the target. The following report-execution parameters are available:
 
-- `_report` (required) – String that points to the JasperReports Server report to run. Usually a path on JasperReports Server, enclosed in quotes, such as "/public/Samples/Reports/myReport"
-- `_page` (optional) – Specifies a page to display in the target report. Only one of `_page` and `_anchor` should be used. If both are used, `_page` takes precedence and `_anchor` is ignored.
-- `_anchor` (optional) – Specifies a named anchor to display in the target report.
-- `_output` (optional) – Specifies an output format for the report, such as PDF, DOCX, etc. The default is HTML.
-- If the destination report contains one or more input controls, their value can be set by specifying the name of the input control as a parameter name and providing a value.
+-   `_report` (required) – String that points to the JasperReports Server report to run. Usually a path on JasperReports Server, enclosed in quotes, such as "/public/Samples/Reports/myReport"
+-   `_page` (optional) – Specifies a page to display in the target report. Only one of `_page` and `_anchor` should be used. If both are used, `_page` takes precedence and `_anchor` is ignored.
+-   `_anchor` (optional) – Specifies a named anchor to display in the target report.
+-   `_output` (optional) – Specifies an output format for the report, such as PDF, DOCX, etc. The default is HTML.
+-   If the destination report contains one or more input controls, their value can be set by specifying the name of the input control as a parameter name and providing a value.
 
 !!! note
 
@@ -178,21 +178,21 @@ Image, text field, and chart elements can be used both as anchors into a documen
 To create a hyperlink
 
 1.  Click the **Hyperlink** tab in the Properties view.
-
 2.  In the **Link Target** dropdown, choose one of the following target types:
 
-    - **Self**: This is the default setting. It opens the link in the current window.
-    - **Blank**: Opens the target in a new window. Used for output formats such as HTML and PDF.
-    - **Top**: Opens the target in the current window but outside the frames. Used for output formats such as HTML and PDF.
-    - **Parent**: Opens the target in the parent window (if available). Used for output formats such as HTML and PDF.
+-   **Self**: This is the default setting. It opens the link in the current window.
 
-3.  In the **Link Type** dropdown, choose whether the link type is None, Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, or ReportExecution.
+    -   **Blank**: Opens the target in a new window. Used for output formats such as HTML and PDF.
+    -   **Top**: Opens the target in the current window but outside the frames. Used for output formats such as HTML and PDF.
+    -   **Parent**: Opens the target in the parent window (if available). Used for output formats such as HTML and PDF.
+
+1.  In the **Link Type** dropdown, choose whether the link type is None, Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, or ReportExecution.
 
     See Hyperlink Types for an explanation of the different choices.
 
-4.  Click the ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) button next to **Hyperlink Tool Expression** to create a tooltip for your hyperlink.
+2.  Click the ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) button next to **Hyperlink Tool Expression** to create a tooltip for your hyperlink.
 
-5.  Save your report.
+3.  Save your report.
 
 ### Creating a report of dashlet type
 

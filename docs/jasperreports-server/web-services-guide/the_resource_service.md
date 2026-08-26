@@ -9,9 +9,9 @@ The resource service supports several HTTP methods to view, download, create, an
 
 GET is used to show the information about a specific resource. Getting a resource can serve several purposes:
 
-- In the case of JasperReports, also known as report units, this service returns the structure of the JasperReport, including resourceDescriptors for any linked resources.
-- For resources that contain files, specifying the `fileData=true` argument downloads the file content.
-- Specifying a query-based input control with arguments for running the query returns the dynamic values for the control.
+-   In the case of JasperReports, also known as report units, this service returns the structure of the JasperReport, including resourceDescriptors for any linked resources.
+-   For resources that contain files, specifying the `fileData=true` argument downloads the file content.
+-   Specifying a query-based input control with arguments for running the query returns the dynamic values for the control.
 
 !!! note
 

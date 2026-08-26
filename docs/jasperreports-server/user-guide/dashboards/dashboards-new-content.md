@@ -7,17 +7,17 @@ description: "In addition to pre-existing reports and Ad Hoc views, you can crea
 
 In addition to pre-existing reports and Ad Hoc views, you can create content for your dashboard directly from the Dashboard Designer, including:
 
-- Charts
+-   Charts
 
-- Crosstabs
+-   Crosstabs
 
-- Tables
+-   Tables
 
-- Text
+-   Text
 
-- Web page links
+-   Web page links
 
-- Images
+-   Images
 
 ## Adding Charts, Crosstabs, and Tables
 
@@ -33,9 +33,9 @@ To add a new chart, crosstab, or table to your dashboard
 
 2.  Browse to or search for the data source that you want to use.
 
-    - Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) for a tree view of the files.
-    - Click ![js Dashboard icon ViewList](../assets/images/js-Dashboard-icon-ViewList.png) for a list view of the files.
-    - Use the text search field to locate a specific data source.
+    -   Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) for a tree view of the files.
+    -   Click ![js Dashboard icon ViewList](../assets/images/js-Dashboard-icon-ViewList.png) for a list view of the files.
+    -   Use the text search field to locate a specific data source.
 
 3.  Depending on your selected data source, the remaining steps may vary. Follow the displayed instructions. for more information about this process, see [1.0.1, “Ad Hoc Sources: Topics, Domains, and OLAP Connections,” on page 1](../adhoc/adhoc-topics-domains-olap.md).
 

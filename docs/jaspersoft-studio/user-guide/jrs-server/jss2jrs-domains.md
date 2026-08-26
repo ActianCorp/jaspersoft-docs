@@ -17,16 +17,16 @@ The jasperQL language was introduced in version 7.8 and has better support for i
 
 Before your report can access a domain with either query language, consider the following requirements:
 
-- Make sure that your domain is fully defined and saved on the server. For information about creating domains, see JasperReports Server Data Management Using Domains. The examples in this section use the supermart sample domain.
-- Make sure that JasperReports Server is online.
-- Optional: Define the server profile or connection object, as described [Connecting to JasperReports Server](jss2jrs-connecting.md). You do not need the server profile to create and run a domain report, but you need it to publish the report back to the server.
-- Create a data adapter for the server connection, as described in the next section. The data adapter may also identify the domain on the server, or the report may specify the domain.
+-   Make sure that your domain is fully defined and saved on the server. For information about creating domains, see JasperReports Server Data Management Using Domains. The examples in this section use the supermart sample domain.
+-   Make sure that JasperReports Server is online.
+-   Optional: Define the server profile or connection object, as described [Connecting to JasperReports Server](jss2jrs-connecting.md). You do not need the server profile to create and run a domain report, but you need it to publish the report back to the server.
+-   Create a data adapter for the server connection, as described in the next section. The data adapter may also identify the domain on the server, or the report may specify the domain.
 
 ## Creating a Domain Data Adapter
 
 A data adapter for a domain identifies your instance of JasperReports Server and the domain in its repository.
 
-1.  In the Repository Explorer, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) or select **File \> New  \> Data Adapter** from the menu. In the **Data Adapter Wizard** that appears, double-click **Jaspersoft Server**.
+1.  In the Repository Explorer, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png) or select **File &gt; New  &gt; Data Adapter** from the menu. In the **Data Adapter Wizard** that appears, double-click **Jaspersoft Server**.
 
     |  |
     |----|
@@ -71,7 +71,7 @@ To create a report based on a domain.
 
 1.  Make sure you have defined a data adapter for accessing the domain on your instance of JasperReports Server. For more information, see “Creating a Domain Data Adapter” on page 1.
 
-2.  Click ![jss icon new report](../assets/images/jss-icon-new-report.png) or select **File \> New  \> JasperReport** from the menu. The **New Report Wizard** is displayed.
+2.  Click ![jss icon new report](../assets/images/jss-icon-new-report.png) or select **File &gt; New  &gt; JasperReport** from the menu. The **New Report Wizard** is displayed.
 
 3.  Select a template and click **Next**.
 
@@ -88,7 +88,7 @@ To create a report based on a domain.
 
     The default query language is jasperQL. You can select a different domain on the server if needed, and the dialog updates the available fields. The domain being used is stored in the report itself, therefore it may be different from the one in the data adapter.
 
-6.  Select fields or folders in the Domain on the left of the dialog, and drag them to the Fields item on the right to create fields. For example, drag **Sales \> Stores**.
+6.  Select fields or folders in the Domain on the left of the dialog, and drag them to the Fields item on the right to create fields. For example, drag **Sales &gt; Stores**.
 
     The items are added as a flat list, using the labels from the Domain. At this point, you can refine the query by adding fields to filters, group by, and order by headings. These actions are covered in detail in the next section Using the jasperQL Query Designer.
 

@@ -18,6 +18,5 @@ Applies to Jaspersoft **10.1.0**.
 - [Analyzing Data in a View](analyze-data/analyzing_data_in_a_view.md)
 - [Securing Data in Jaspersoft OLAP](secure-data/securing_data_in_jaspersoft_olap.md)
 - [Administering Jaspersoft OLAP](administer/administering_jaspersoft_olap.md)
-- [Glossary](glossary/glossary.md)
-- [TIBCO Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
+- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
 - [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)

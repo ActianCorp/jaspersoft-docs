@@ -7,33 +7,33 @@ description: "The Visualization Selector lets you switch between Ad Hoc view typ
 
 The Visualization Selector lets you switch between Ad Hoc view types, allowing you to choose the best way to represent your information in the Ad Hoc view, including:
 
-- Table, which displays values corresponding to the rows and columns in the data source.
+-   Table, which displays values corresponding to the rows and columns in the data source.
 
-- Crosstab, which compares one or more values across multiple sets of related fields.
+-   Crosstab, which compares one or more values across multiple sets of related fields.
 
-- Column, which compares values displayed as columns.
+-   Column, which compares values displayed as columns.
 
-- Bar, which compares values displayed as bars.
+-   Bar, which compares values displayed as bars.
 
-- Line, which compares values displayed as points connected by lines.
+-   Line, which compares values displayed as points connected by lines.
 
-- Area, which compares values displayed as shaded areas.
+-   Area, which compares values displayed as shaded areas.
 
-- Spider, which compares three or more values on a series of spokes. Spider charts can use columns, lines, or areas to display values.
+-   Spider, which compares three or more values on a series of spokes. Spider charts can use columns, lines, or areas to display values.
 
-- Dual- and Multi-Axis, which display values using two or more measures.
+-   Dual- and Multi-Axis, which display values using two or more measures.
 
-- Time Series, which compares time intervals displayed as points connected by lines. The Time Series chart type is only available for non-OLAP charts.
+-   Time Series, which compares time intervals displayed as points connected by lines. The Time Series chart type is only available for non-OLAP charts.
 
-- Scatter, which compares values as individual points arrayed across both axes of a chart.
+-   Scatter, which compares values as individual points arrayed across both axes of a chart.
 
-- Bubble, which compares three measures displayed as circles of varying sizes arrayed across both axes of a chart.
+-   Bubble, which compares three measures displayed as circles of varying sizes arrayed across both axes of a chart.
 
-- Pie, which compares values displayed as slices of a circular graph.
+-   Pie, which compares values displayed as slices of a circular graph.
 
-- Range, which displays values such as heat and tree maps. Only the Heat Map chart is available for OLAP data sources.
+-   Range, which displays values such as heat and tree maps. Only the Heat Map chart is available for OLAP data sources.
 
-- Gauge, which displays values as a radial or arc gauge, based on a defined minimum and maximum measure setting.
+-   Gauge, which displays values as a radial or arc gauge, based on a defined minimum and maximum measure setting.
 
 !!! note
 
@@ -247,10 +247,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>Requires two or more measures.</li>
 <li>Measures must be placed in the Columns drop area.</li>
-<li>Fields and dimensions can be placed only in the Rows drop area.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Fields and dimensions can be placed only in the Rows drop area.</p>
+<p>For New Layout Band:</p></li>
 <li>Requires two or more measures.</li>
 <li>Measures must be placed in the Columns and Lines drop area.</li>
 <li>Fields and dimensions can be placed only in the X-axis drop area.</li>
@@ -295,10 +293,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>Requires two or more measures.</li>
 <li>Measures must be placed in the Columns drop area.</li>
-<li>Fields and dimensions can be placed only in the Rows drop area.</li>
-</ul>
-<p>For New Layout band:</p>
-<ul>
+<li><p>Fields and dimensions can be placed only in the Rows drop area.</p>
+<p>For New Layout band:</p></li>
 <li>Requires two or more measures.</li>
 <li>Measures must be placed in the Lines drop area.</li>
 <li>Fields and dimensions can be placed only in the X-axis drop area.</li>
@@ -322,10 +318,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>Requires two or more measures.</li>
 <li>Measures must be placed in the Columns drop area.</li>
-<li>Fields and dimensions can be placed only in the Rows drop area.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Fields and dimensions can be placed only in the Rows drop area.</p>
+<p>For New Layout Band:</p></li>
 <li>Requires two or more Measures.</li>
 <li>Measures must be placed in the Columns drop area.</li>
 <li>Fields can be placed only in the X-axis drop area.</li>
@@ -341,10 +335,8 @@ The following table describes the available visualization types, and the rules (
 <td><p><strong>Line</strong> - Displays date and time data points connected with straight lines.</p>
 <p>For Old Layout Band:</p>
 <ul>
-<li>Requires a single Date/Time field in the Rows drop area.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Requires a single Date/Time field in the Rows drop area.</p>
+<p>For New Layout Band:</p></li>
 <li>The fields Date/Time must be placed in Time axis drop area.</li>
 <li>Fields or measures must be placed in the Lines drop area.</li>
 </ul></td>
@@ -363,10 +355,8 @@ The following table describes the available visualization types, and the rules (
 <td><p><strong>Area</strong> - Displays date and time data points connected with a straight line and a color below the line. Groups are displayed as transparent overlays.</p>
 <p>For Old Layout Band:</p>
 <ul>
-<li>Requires a single date/time field in the Rows drop area.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Requires a single date/time field in the Rows drop area.</p>
+<p>For New Layout Band:</p></li>
 <li>Time or Date field must be placed in Time axis.</li>
 <li>Fields and Measures can be placed in the Areas drop area.</li>
 </ul></td>
@@ -377,10 +367,8 @@ The following table describes the available visualization types, and the rules (
 <p>For Old Layout Band:</p>
 <ul>
 <li>Requires a single date/time field in the Rows drop area.</li>
-<li>The field must be set to the "day" group function.</li>
-</ul>
-<p>For new Layout Band:</p>
-<ul>
+<li><p>The field must be set to the "day" group function.</p>
+<p>For new Layout Band:</p></li>
 <li>Time or Date field must be placed in Time axis.</li>
 <li>Fields and Measures can be placed in the Areas drop area.</li>
 </ul></td>
@@ -395,10 +383,8 @@ The following table describes the available visualization types, and the rules (
 <p>For old Layout Band:</p>
 <ul>
 <li>Requires exactly two measures.</li>
-<li>Measures must be placed in the Columns drop area.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Measures must be placed in the Columns drop area.</p>
+<p>For New Layout Band:</p></li>
 <li>Measures must be placed in the X-axis and Y-axis drop area.</li>
 <li>Fields must be placed in the Values and Color By drop area.</li>
 </ul></td>
@@ -409,10 +395,8 @@ The following table describes the available visualization types, and the rules (
 <p>For Old Layout Band:</p>
 <ul>
 <li>Requires exactly three measures in the Columns drop area.</li>
-<li>The measures cannot be placed between other fields.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>The measures cannot be placed between other fields.</p>
+<p>For New Layout Band:</p></li>
 <li>Three Measures must be placed in the X-axis, Y-axis and Size drop area.</li>
 <li>Fields can be placed in the Values and Color By drop area.</li>
 </ul></td>
@@ -443,10 +427,8 @@ The following table describes the available visualization types, and the rules (
 <li>Requires at least one measure and one field.</li>
 <li>Fields must be placed in the Rows drop area. Only one field can be placed in the Rows drop areaif it contains a measure.</li>
 <li>Two fields can be placed in the Rows location if it contains no measures.</li>
-<li>Multiple measures are allowed in the Rows drop area, but only one measure is allowed in the Columns drop area.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Multiple measures are allowed in the Rows drop area, but only one measure is allowed in the Columns drop area.</p>
+<p>For New Layout Band:</p></li>
 <li>Requires two fields to the Levels drop area</li>
 <li>One Measure can be placed in the Value drop area.</li>
 </ul></td>
@@ -476,15 +458,11 @@ The following table describes the available visualization types, and the rules (
 <p>Non-OLAP:</p>
 <ul>
 <li>One field, followed by one Measure, required in the Columns drop area.</li>
-<li>One field is required in the row drop area.</li>
-</ul>
-<p>OLAP:</p>
-<ul>
+<li><p>One field is required in the row drop area.</p>
+<p>OLAP:</p></li>
 <li>One Dimension level, followed by one Measure, required in the Columns location.</li>
-<li>One Dimension level is required in the Rows drop area.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>One Dimension level is required in the Rows drop area.</p>
+<p>For New Layout Band:</p></li>
 <li>Requires one Field to X-axis and one to Y-axis drop area.</li>
 <li>One Measure can be placed to Value drop area.</li>
 </ul></td>
@@ -496,10 +474,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>One Measure required in the Columns drop area.</li>
 <li>One Date/Time field is required in the Rows drop area.</li>
-<li>Only available for non-OLAP data sources.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Only available for non-OLAP data sources.</p>
+<p>For New Layout Band:</p></li>
 <li>Requires one Date/Time Field to the Time Axis drop area.</li>
 <li>One Measure can be placed in the Value drop area.</li>
 </ul></td>
@@ -510,10 +486,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>Two Measures are required in the Columns drop area.</li>
 <li>One field is required in the Rows drop area.</li>
-<li>Only available for non-OLAP data sources.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Only available for non-OLAP data sources.</p>
+<p>For New Layout Band:</p></li>
 <li>Requires one Measure each to the Size and Color drop area.</li>
 <li>One Field is required in the Category drop area.</li>
 </ul></td>
@@ -525,10 +499,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>One Measure required in the Columns drop area.</li>
 <li>One or more fields required in the Rows drop area.</li>
-<li>Only available for non-OLAP data sources.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Only available for non-OLAP data sources.</p>
+<p>For New Layout Band:</p></li>
 <li>One Measure is required in the Size drop area.</li>
 <li>One or more Fields required in the Category drop area.</li>
 </ul></td>
@@ -540,10 +512,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>One Measure required in the Columns drop area.</li>
 <li>Two or more Fields required in the Rows drop area.</li>
-<li>Only available for non-OLAP data sources.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Only available for non-OLAP data sources.</p>
+<p>For New Layout Band:</p></li>
 <li>One Measure is required in the Size drop area.</li>
 <li>Two or more Fields required in the Category drop area.</li>
 </ul></td>
@@ -559,10 +529,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>One or more Measures required in the Columns drop area.</li>
 <li>One or more Fields required in the Columns drop area.</li>
-<li>Define the minimum and maximum sizes, color stops, and layout on the Appearance tab.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Define the minimum and maximum sizes, color stops, and layout on the Appearance tab.</p>
+<p>For New Layout Band:</p></li>
 <li>One or more Measure is required in the Values drop area.</li>
 <li>One or more Fields required in the Multiples drop area.</li>
 </ul></td>
@@ -573,10 +541,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>Two or more Measures required in the Columns drop area.</li>
 <li>One or more Fields required in the Columns drop area.</li>
-<li>Define the minimum and maximum sizes, color stops, and layout on the Appearance tab.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Define the minimum and maximum sizes, color stops, and layout on the Appearance tab.</p>
+<p>For New Layout Band:</p></li>
 <li>Two or more Measure are required in the Values drop area.</li>
 <li>One or more Fields required in the Multiples drop area.</li>
 </ul></td>
@@ -588,10 +554,8 @@ The following table describes the available visualization types, and the rules (
 <ul>
 <li>One or more Measures required in the Columns drop area.</li>
 <li>One or more Fields required in the Rows drop area.</li>
-<li>Define the minimum and maximum sizes, color stops, and layout on the Appearance tab.</li>
-</ul>
-<p>For New Layout Band:</p>
-<ul>
+<li><p>Define the minimum and maximum sizes, color stops, and layout on the Appearance tab.</p>
+<p>For New Layout Band:</p></li>
 <li>One or more Measure is required in the Values drop area.</li>
 <li>One or more Fields is required in the Multiples drop area.</li>
 </ul></td>

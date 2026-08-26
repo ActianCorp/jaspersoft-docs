@@ -15,9 +15,9 @@ Only administrators can create data sources in the repository. So, although user
 
 Each resource, including each folder, has an ID, a name, and an optional description:
 
-- The ID is used internally to reference a resource. The ID must be unique within its folder, but may exist in multiple folders.
-- The resource name is displayed in the repository.
-- The description, if defined, appears in the repository and in the tooltips.
+-   The ID is used internally to reference a resource. The ID must be unique within its folder, but may exist in multiple folders.
+-   The resource name is displayed in the repository.
+-   The description, if defined, appears in the repository and in the tooltips.
 
 As in a file system, the IDs of nested folders define the path to a resource. For example, the path to a report might be: /reports/samples/Freight.
 
@@ -43,7 +43,7 @@ To create a folder
 
 1.  Log in as a user who has write permission to the parent folder.
 
-2.  Select **View \> Repository** and locate the parent folder in the Folders panel.
+2.  Select **View &gt; Repository** and locate the parent folder in the Folders panel.
 
 3.  Right-click the parent folder and select **Add Folder** from the context menu. The Add Folder dialog appears.
 
@@ -59,12 +59,12 @@ To create a folder
 
 Each resource has different requirements. For example some are created from uploaded files, whereas others are created by defining values in a wizard. The procedures for adding each type are available in the documentation below:
 
-- Interactive resources such as Ad Hoc views and dashboards are described in the JasperReports Server User Guide.
-- JasperReports are covered in the JasperReports Server User Guide.
-- Domains are covered in the JasperReports Server Data Management Using Domains.
-- Mondrian and OLAP resources are covered in the Jaspersoft OLAP User Guide.
-- Data sources are explained in the chapter [Data Sources](../datasources/datasources_intro.md).
-- Queries, data types, lists of values, input controls, and file resources are explained in the chapter [Other Resources in the Repository](../resources/resources_intro.md)
+-   Interactive resources such as Ad Hoc views and dashboards are described in the JasperReports Server User Guide.
+-   JasperReports are covered in the JasperReports Server User Guide.
+-   Domains are covered in the JasperReports Server Data Management Using Domains.
+-   Mondrian and OLAP resources are covered in the Jaspersoft OLAP User Guide.
+-   Data sources are explained in the chapter [Data Sources](../datasources/datasources_intro.md).
+-   Queries, data types, lists of values, input controls, and file resources are explained in the chapter [Other Resources in the Repository](../resources/resources_intro.md)
 
 Most resources are created through the Add Resource menu item on the context menu for folders in the repository. In the following figure, you can see the full menu and submenu with all the resources administrators can create:
 
@@ -90,7 +90,7 @@ To rename a folder or resource
 
 1.  Log in as a user who has write permission for the folder or resource.
 
-2.  In the repository, browse or search for the resource. For renaming folders, select **View \> Repository** and locate the folder.
+2.  In the repository, browse or search for the resource. For renaming folders, select **View &gt; Repository** and locate the folder.
 
 3.  Right-click the object and select **Properties...** from the context menu. The Properties dialog appears.<br>
 
@@ -118,7 +118,7 @@ To copy or moving folders and resources
 
 1.  Log in as a user who has the required permissions for the folder or resource.
 
-2.  Click **View \> Repository**, and expand the folders to display the object to be copied or moved.
+2.  Click **View &gt; Repository**, and expand the folders to display the object to be copied or moved.
 
 3.  Right-click the resource and select **Copy** or **Cut** (delete permission is required to cut a resource).
 
@@ -203,9 +203,9 @@ The procedure for editing a resource depends on the resource type. All of the di
 
 When editing a resource, you have several limitations:
 
-- You cannot change a resource's ID. If you need to change an ID, you have to create a new resource and delete the old one.
-- You cannot change the location of a resource. To change the location of the resource, see Copying and Moving.
-- For file resources, you cannot see the name of the file that was uploaded, nor in most cases download and view the contents of the file. Your only option is to upload a new file to replace the old one.
+-   You cannot change a resource's ID. If you need to change an ID, you have to create a new resource and delete the old one.
+-   You cannot change the location of a resource. To change the location of the resource, see Copying and Moving.
+-   For file resources, you cannot see the name of the file that was uploaded, nor in most cases download and view the contents of the file. Your only option is to upload a new file to replace the old one.
 
 ## Deleting Folders and Resources
 

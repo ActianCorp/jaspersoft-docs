@@ -22,13 +22,13 @@ The custom visualization component lets you use JavaScript in Jaspersoft Studio 
 
 The custom visualization component is a powerful and flexible feature, suitable for advanced users of JasperReports Library. Using the component requires advanced coding skills in the following technologies:
 
-- JavaScript
+-   JavaScript
 
-- CSS
+-   CSS
 
-- HTML/DHTML
+-   HTML/DHTML
 
-- Optionally, any third-party library you want to expose in Jaspersoft Studio and JasperReports Server.
+-   Optionally, any third-party library you want to expose in Jaspersoft Studio and JasperReports Server.
 
 !!! note
 
@@ -52,20 +52,20 @@ Next, create and deploy reports that rely on your custom visualization component
 
 You can also create a custom component descriptor in JSON, which lets you add the following to your component:
 
-- A component UI: You can specify the property names and types and the data items used by the component.
+-   A component UI: You can specify the property names and types and the data items used by the component.
 
-- A thumbnail image: Used when the component is presented in the component choose, which appears when a component is dragged into the design view.
+-   A thumbnail image: Used when the component is presented in the component choose, which appears when a component is dragged into the design view.
 
-- Location of implementation files: You can specify the location of the JavaScript file and CSS file that implement the component.
+-   Location of implementation files: You can specify the location of the JavaScript file and CSS file that implement the component.
 
 This component can help you use any number of JavaScript libraries, such as:
 
-- D3.js
+-   D3.js
 
-- Raphäel
+-   Raphäel
 
-- Highcharts
+-   Highcharts
 
-- JQuery
+-   JQuery
 
 For details, see the articles on our Community wiki that describe the custom visualization component.

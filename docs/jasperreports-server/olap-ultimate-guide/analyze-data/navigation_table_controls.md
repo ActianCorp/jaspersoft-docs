@@ -7,9 +7,9 @@ description: "The navigation table displays the data from the OLAP view as rows 
 
 The navigation table displays the data from the OLAP view as rows and columns. The table controls adjust the display to help you understand the data. Three controls apply to dimension members:
 
-- Expand Member
-- Expand Position
-- Zoom on Drill
+-   Expand Member
+-   Expand Position
+-   Zoom on Drill
 
 **Drill-through** applies to measures.
 
@@ -49,26 +49,30 @@ To disable drill-through, open the Display Options dialog ([Figure 1-10, “Sort
 
 In the drill-through tables, these controls are available:
 
-- **Sorting**. Rows in the drill-through table can be sorted based on a given column. To sort by a column, use the sort icon next to that column’s header. Clicking that column’s ![ja sort descending nav table](../assets/images/ja-sort-descending-nav-table.jpg) resets the sort mode to natural order, that is, the record order in the database, which is indicated by ![ja table sort](../assets/images/ja-table-sort.png).
-- **Forward/Backward**. Click the left and right arrows to go to another page.
-- **First/Last**. Click the double arrows to go to the first or last page.
-- **Go to Page**. Enter a number and click the icon to go to the specified page.
-- **Rows per Page**. Enter a number and click the icon to set the number of rows per page.
+-   **Sorting**. Rows in the drill-through table can be sorted based on a given column. To sort by a column, use the sort icon next to that column’s header. Clicking that column’s ![ja sort descending nav table](../assets/images/ja-sort-descending-nav-table.jpg) resets the sort mode to natural order, that is, the record order in the database, which is indicated by ![ja table sort](../assets/images/ja-table-sort.png).
 
-Notice that there are 2,445 pages in the table. To filter the table and reduce its size, use the Edit Properties dialog. To open the dialog, click ![ja table edit](../assets/images/ja-table-edit.png) at the top-left corner of the drill-through table.
+-   **Forward/Backward**. Click the left and right arrows to go to another page.
 
-![ja ug analysisview tools EditProps](../assets/images/ja-ug-analysisview-tools-EditProps.png)
+-   **First/Last**. Click the double arrows to go to the first or last page.
 
-*Figure 3: Edit Properties Dialog for a Drill-through Table*
+-   **Go to Page**. Enter a number and click the icon to go to the specified page.
 
-The Edit Properties dialog has three controls:
+-   **Rows per Page**. Enter a number and click the icon to set the number of rows per page.
 
-- **Measures**. Though not labeled in this dialog, the items in the list above the Columns label are measures. To include a measure in the table, select its checkbox.
+    Notice that there are 2,445 pages in the table. To filter the table and reduce its size, use the Edit Properties dialog. To open the dialog, click ![ja table edit](../assets/images/ja-table-edit.png) at the top-left corner of the drill-through table.
 
-To hide a measure from view, clear its checkbox.
+    ![ja ug analysisview tools EditProps](../assets/images/ja-ug-analysisview-tools-EditProps.png)
 
-- **Columns**. To include a column in the table, select its checkbox. Use the up-down triangles ![ja ug analysisview tools DrillThrutable up down](../assets/images/ja-ug-analysisview-tools-DrillThrutable-up-down.png) to move the column to the left or right.
+    *Figure 3: Edit Properties Dialog for a Drill-through Table*
 
-To hide a column from view, clear its checkbox.
+    The Edit Properties dialog has three controls:
 
-- **Page size**. Specifies the number of rows on a page.
+-   **Measures**. Though not labeled in this dialog, the items in the list above the Columns label are measures. To include a measure in the table, select its checkbox.
+
+    To hide a measure from view, clear its checkbox.
+
+-   **Columns**. To include a column in the table, select its checkbox. Use the up-down triangles ![ja ug analysisview tools DrillThrutable up down](../assets/images/ja-ug-analysisview-tools-DrillThrutable-up-down.png) to move the column to the left or right.
+
+    To hide a column from view, clear its checkbox.
+
+-   **Page size**. Specifies the number of rows on a page.

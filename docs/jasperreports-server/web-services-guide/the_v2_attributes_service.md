@@ -49,10 +49,10 @@ Attributes with the same name may be defined on different entities. For example,
 
 JasperReports® Server 6.0 also introduces the notion of secure attribute that can be used to store sensitive information such as a password. Secure attributes have the following properties:
 
-- Their values are stored in encrypted form in the server's internal database.
-- Their values are write-only through the REST service; their value is never returned.
-- Their values are never displayed in the user interface; only ●●● or \*\*\* symbols are shown.
-- Their value is decrypted only when referenced internally, for example as the password field in a data source.
+-   Their values are stored in encrypted form in the server's internal database.
+-   Their values are write-only through the REST service; their value is never returned.
+-   Their values are never displayed in the user interface; only ●●● or \*\*\* symbols are shown.
+-   Their value is decrypted only when referenced internally, for example as the password field in a data source.
 
 When reading the value of a secure attribute, the server returns the field `"secure": "true"` instead of the `"value"` field. Applications that read attributes must test for this case:
 
@@ -93,19 +93,19 @@ Applications that set secure attributes should consider enabling HTTPS so that 
 
 The entities that may have attributes are user accounts, organizations, and the server itself, represented by the root organization. The entity is specified in the URL invoking the v2/attributes service. The URL has the following form:
 
-http://\<host\>:\<port\>/jasperserver\[-pro\]/rest_v2/\<entity\>attributes\<parameters\>
+http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/&lt;entity&gt;attributes&lt;parameters&gt;
 
-The syntax of \<entity\> depends on the target entity for the operation and the type of server.
+The syntax of &lt;entity&gt; depends on the target entity for the operation and the type of server.
 
-| Commercial Edition | Syntax of \<entity\>                           |
-|--------------------|------------------------------------------------|
-| User               | organizations/organizationID/users/userID/     |
-| Organization-level | organizations/organizationID/                  |
-| Server Admin       | users/userID/                                  |
-| Server-level       | \<blank\> (the attributes apply to the "root") |
-| Community Edition  | Syntax of \<entity\>                           |
-| User               | users/userID/                                  |
-| Server-level       | \<blank\> (the attributes apply to the "root") |
+| Commercial Edition | Syntax of &lt;entity&gt;                           |
+|--------------------|----------------------------------------------------|
+| User               | organizations/organizationID/users/userID/         |
+| Organization-level | organizations/organizationID/                      |
+| Server Admin       | users/userID/                                      |
+| Server-level       | &lt;blank&gt; (the attributes apply to the "root") |
+| Community Edition  | Syntax of &lt;entity&gt;                           |
+| User               | users/userID/                                      |
+| Server-level       | &lt;blank&gt; (the attributes apply to the "root") |
 
 !!! note
 
@@ -117,23 +117,25 @@ Only API calls that include administrator credentials may view, set, or delete a
 
 In commercial editions of the server, operations on attributes follow the visibility rules for organizations:
 
-- Organization admins (`jasperadmin` by default) can view and edit attributes on their own organization, their users, any of their sub-organizations, and the users in any sub-organizations.
-- Ogranization admins can't view or edit attributes in any parent or sibling organizations.
-- Only the server admin (`superuser` by default) can view and edit attributes at the server level, represented as the root organization.
-- Server admins can view and edit attributes on any organization or sub-organization in the server, as well as on any user account in any organization.
-- Only a server admin can view and edit attributes on other server admins (users of the root organization).
+-   Organization admins (`jasperadmin` by default) can view and edit attributes on their own organization, their users, any of their sub-organizations, and the users in any sub-organizations.
+-   Ogranization admins can't view or edit attributes in any parent or sibling organizations.
+-   Only the server admin (`superuser` by default) can view and edit attributes at the server level, represented as the root organization.
+-   Server admins can view and edit attributes on any organization or sub-organization in the server, as well as on any user account in any organization.
+-   Only a server admin can view and edit attributes on other server admins (users of the root organization).
 
 ## 1.1.4 Referencing Attributes
 
 As mentioned, several internal mechanisms of the server read attributes on users and organizations and make use of their values in some way:
 
-- Domain security files: you can reference attribute values associated with the logged-in user (or his organization) to create rules to access data in the Domain. For more information, see the chapter "Advanced Domains Features" in the JasperReports® Server User Guide.
-- Data source definitions: the fields that define a data source, such as its server, port number, database, and user credentials, can all reference attributes of the logged-in user's organization (or a server-specific attribute). In this way, different organizations or different servers can share the same data source yet still access a different database. For more information, see the chapter "Data Sources" in the JasperReports® Server Administrator Guide.
+-   Domain security files: you can reference attribute values associated with the logged-in user (or his organization) to create rules to access data in the Domain. For more information, see the chapter "Advanced Domains Features" in the JasperReports® Server User Guide.
 
-The server provides two different methods to reference attributes:
+-   Data source definitions: the fields that define a data source, such as its server, port number, database, and user credentials, can all reference attributes of the logged-in user's organization (or a server-specific attribute). In this way, different organizations or different servers can share the same data source yet still access a different database. For more information, see the chapter "Data Sources" in the JasperReports® Server Administrator Guide.
 
-- Categorical reference: requests the value of a named attribute from a specific entity, either the logged-in user's profile, the logged-in user's organization, or from the server-wide set of attributes. If the named attribute is not defined in the specified entity, an error is returned.
-- Hierarchical reference: searches for the value of a named attribute first in the logged-in user's account, and if not found, then in the logged-in user's organization, and if still not found, then at the server level. This allows attributes to be defined at several levels, with the defintion at a lower level (the user profile) having higher priority, and the definition at a higher lever (the organization or server level) providing a default value. If the named attritute is not defined at any level, an error is returned.
+    The server provides two different methods to reference attributes:
+
+-   Categorical reference: requests the value of a named attribute from a specific entity, either the logged-in user's profile, the logged-in user's organization, or from the server-wide set of attributes. If the named attribute is not defined in the specified entity, an error is returned.
+
+-   Hierarchical reference: searches for the value of a named attribute first in the logged-in user's account, and if not found, then in the logged-in user's organization, and if still not found, then at the server level. This allows attributes to be defined at several levels, with the defintion at a lower level (the user profile) having higher priority, and the definition at a higher lever (the organization or server level) providing a default value. If the named attritute is not defined at any level, an error is returned.
 
 The methods you use to reference attributes will then determine the entities where you need to create attributes and the values of those attributes.
 
@@ -141,8 +143,8 @@ The methods you use to reference attributes will then determine the entities whe
 
 Attributes have the following limitations in the v2/attributes service:
 
-- The user ID and organization ID are specified in the URL, and therefore must be less than 100 characters long and not contain spaces or special symbols.
-- Attribute names and attribute values being written with this service are limited to 255 characters and may not be empty (null) nor contain only whitespace characters.
+-   The user ID and organization ID are specified in the URL, and therefore must be less than 100 characters long and not contain spaces or special symbols.
+-   Attribute names and attribute values being written with this service are limited to 255 characters and may not be empty (null) nor contain only whitespace characters.
 
 The v2/attributes service detects these conditions and returns errors accordingly:
 

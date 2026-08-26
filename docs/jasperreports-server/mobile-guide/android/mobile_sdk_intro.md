@@ -21,9 +21,9 @@ This chapter documents version 1.9 of the Jaspersoft Mobile SDK for Android.
 
 This chapter contains the following sections:
 
-- [System Requirements](system_requirements.md)
-- [Setting Up the Google Android SDK](setting_up_the_google_android_sdk.md)
-- [Setting Up the Jaspersoft Mobile SDK for Android](setting_up_the_jaspersoft_mobile_sdk.md)
-- [Structure of the Mobile SDK for Android](structure_of_the_mobile_sdk.md)
-- [Javadoc](javadoc.md)
-- [JasperMobile App for Android](jaspermobile_app.md)
+-   [System Requirements](system_requirements.md)
+-   [Setting Up the Google Android SDK](setting_up_the_google_android_sdk.md)
+-   [Setting Up the Jaspersoft Mobile SDK for Android](setting_up_the_jaspersoft_mobile_sdk.md)
+-   [Structure of the Mobile SDK for Android](structure_of_the_mobile_sdk.md)
+-   [Javadoc](javadoc.md)
+-   [JasperMobile App for Android](jaspermobile_app.md)

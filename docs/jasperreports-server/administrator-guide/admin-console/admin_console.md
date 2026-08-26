@@ -7,13 +7,13 @@ description: "The Admin Console is a new page for JasperReports Server that allo
 
 The Admin Console is a new page for JasperReports Server that allows system admins (`superuser`) and organization admins (`jasperadmin`) with detailed views of **Schedules**, **Alerts**, and **Diagnostic** data.
 
-Users, other than administrators, do not have access to the **Admin Console** page and can view the **Schedules, Alerts** and **Diagnostics** details within the **View\>Schedules and Alerts** page. For more information, see the JasperReports Server User Guide.
+Users, other than administrators, do not have access to the **Admin Console** page and can view the **Schedules, Alerts** and **Diagnostics** details within the **View&gt;Schedules and Alerts** page. For more information, see the JasperReports Server User Guide.
 
 This chapter contains the following sections:
 
-- Schedules
-- Alerts
-- Diagnostics
+-   Schedules
+-   Alerts
+-   Diagnostics
 
 ## Schedules Tab
 
@@ -21,7 +21,7 @@ The Schedules tab in the Admin Console page is accessible to the system admins (
 
 ### List of All Schedules
 
-All scheduled jobs that the user has defined appear in the Schedules tab of the **Manage\>Admin Console** page. In the **Schedules** page, you can search, sort, add filter, refresh, and download a scheduled report. For more information on these operations, see the List of Scheduled Jobs section in the JasperReports Server User Guide.
+All scheduled jobs that the user has defined appear in the Schedules tab of the **Manage&gt;Admin Console** page. In the **Schedules** page, you can search, sort, add filter, refresh, and download a scheduled report. For more information on these operations, see the List of Scheduled Jobs section in the JasperReports Server User Guide.
 
 ![AdminConsole scheduleAlert](../assets/images/AdminConsole_scheduleAlert.png)
 
@@ -49,7 +49,7 @@ The **Schedules** page shows the following:
 
 To edit a scheduled job for a report
 
-1.  Click **Manage\> Admin Console \> Schedules**.
+1.  Click **Manage&gt; Admin Console &gt; Schedules**.
 
 2.  Click the Edit icon ![js edit icon](../assets/images/js-edit-icon.png) in the row of the job that you want to update.
 
@@ -67,7 +67,7 @@ To stop a job from running without deleting it, disable the job.
 
 To pause a scheduled job:
 
-1.  Click **Manage\>Admin Console \> Schedules**.
+1.  Click **Manage&gt;Admin Console &gt; Schedules**.
 
 2.  In the row of the job that you want to stop, disable the **Pause/Activate** toggle switch.
 
@@ -79,7 +79,7 @@ To pause a scheduled job:
 
 To delete a scheduled job:
 
-1.  Click **Manage\> Admin Console \> Schedules**.
+1.  Click **Manage&gt; Admin Console &gt; Schedules**.
 
 2.  Click the delete icon ![js alert trash icon](../assets/images/js-alert-trash-icon.png) in the row of the job you want to delete. A confirmation dialog with a warning message is displayed to confirm if you want to delete this job.
 
@@ -117,7 +117,7 @@ The **Alerts** tab is the new feature in the **Admin Console** page. You can vie
 
 The **Diagnostics** tab in the **Admin Console** page provides a snapshot overview of your entire Jaspersoft system. Only the system admin (`superuser`) can view the diagnostic information. This user interface lets you quickly and easily view the status of license validity date, repository - database, configuration, size, total count of reports run, product details, and so on.
 
-The following figure shows all the diagnostics information that the user has defined appear in the **Diagnostics** tab of the **Manage\>Admin Console** page.
+The following figure shows all the diagnostics information that the user has defined appear in the **Diagnostics** tab of the **Manage&gt;Admin Console** page.
 
 ![js diagnostic tab](../assets/images/js-diagnostic-tab.png)
 
@@ -135,4 +135,4 @@ The **Diagnostics** page includes the following controls:
 
 The **See more** and **See less** controls lets you expand or collapse the viewed information in the Diagnostics page.
 
-The information of the report displayed in the **Diagnostics** tab can be viewed on the **View\>Repository** page. For more information on the diagnostics, refer to the [Using the Diagnostic Data in Reports](../diagnostics/using_the_diagnostic_data_in_reports.md).
+The information of the report displayed in the **Diagnostics** tab can be viewed on the **View&gt;Repository** page. For more information on the diagnostics, refer to the [Using the Diagnostic Data in Reports](../diagnostics/using_the_diagnostic_data_in_reports.md).

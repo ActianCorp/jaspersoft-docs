@@ -7,13 +7,13 @@ description: "When you want to create other locales for JasperReports Server, tr
 
 When you want to create other locales for JasperReports Server, translation is only one aspect of localization. Creating a locale includes these tasks:
 
-- Translating labels and messages
+-   Translating labels and messages
 
-- Creating a Resource Bundle
+-   Creating a Resource Bundle
 
-- Setting Date and Datetime Formats
+-   Setting Date and Datetime Formats
 
-- Setting Data Format Masks
+-   Setting Data Format Masks
 
 The tasks in this section require you to edit these files:
 
@@ -330,7 +330,7 @@ To use the date/format from `jasperserver_config.properties` for Input Controls,
 
     1.  Comment out `` `bean.calendarFormatProvider=isoCalendarFormatProvider` `` line.
 
-    - Uncomment `` `bean.calendarFormatProvider=messagesCalendarFormatProvider` `` line.
+    -   Uncomment `` `bean.calendarFormatProvider=messagesCalendarFormatProvider` `` line.
 
 ## Setting Data Format Masks
 
@@ -393,20 +393,20 @@ ADH_100_MASK_dec_4
 
 Date format masks are implemented using `java.text.SimpleDateFormat` and JasperReports extensions that provide access to predefined localized data format masks. New datetime masks must be specified in one of the following formats:
 
-- A style for the date part of the value and a style for the time part (separated by comma) or a single style for both parts. A style is one of Short, Medium, Long, Full, Default (which correspond to `java.text.DateFormat` styles) and Hide.
-- A pattern that can be supplied to `java.text.SimpleDateFormat`. In this case, internationalization support is limited.
+-   A style for the date part of the value and a style for the time part (separated by comma) or a single style for both parts. A style is one of Short, Medium, Long, Full, Default (which correspond to `java.text.DateFormat` styles) and Hide.
+-   A pattern that can be supplied to `java.text.SimpleDateFormat`. In this case, internationalization support is limited.
 
-Both integer and decimal data format masks are implemented with `java.text.DecimalFormat`, which localizes characters in the format specification. For example, consider the case of the digit grouping symbol (thousands separator): in French, it is a space; in U.S. English, it is a comma. `DecimalFormat` handles both cases: if the number pattern \#,##0 is used, the number 6000 appears as 6 000 in the French locale and as 6,000 in the U.S. English locale.
+Both integer and decimal data format masks are implemented with `java.text.DecimalFormat`, which localizes characters in the format specification. For example, consider the case of the digit grouping symbol (thousands separator): in French, it is a space; in U.S. English, it is a comma. `DecimalFormat` handles both cases: if the number pattern #,##0 is used, the number 6000 appears as 6 000 in the French locale and as 6,000 in the U.S. English locale.
 
 For more information about Java's handling of decimal and date format masks, see:
 
-- <http://download.oracle.com/javase/6/docs/api/java/text/DecimalFormat.html>
-- <http://download.oracle.com/javase/6/docs/api/java/text/DateFormat.html>
+-   <http://download.oracle.com/javase/6/docs/api/java/text/DecimalFormat.html>
+-   <http://download.oracle.com/javase/6/docs/api/java/text/DateFormat.html>
 
 !!! note
 
     By default, monetary values in Ad Hoc views are masked as USD (United States Dollars). Depending on your data, you may need to support a different currency, support more than one currency, or support currency conversion. These are three very different cases:
 
-    - Supporting a different currency than USD involves changing the monetary masks to use the correct symbol for your currency (for example, replace the `$` symbol in the `ADH_100_MASK_dec_2 and ADH_100_MASK_dec_3` masks). However, changing this symbol does not actually convert currencies in your reports.
-    - Supporting other currencies in addition to USD involves adding new masks. However, adding data formats does not actually convert currencies in your reports.
-    - Supporting currency conversion is more complicated; you must consider such issues as fluctuations in conversion rates. Oftentimes, a third-party service can be used to perform currency conversion
+    -   Supporting a different currency than USD involves changing the monetary masks to use the correct symbol for your currency (for example, replace the `$` symbol in the `ADH_100_MASK_dec_2 and ADH_100_MASK_dec_3` masks). However, changing this symbol does not actually convert currencies in your reports.
+    -   Supporting other currencies in addition to USD involves adding new masks. However, adding data formats does not actually convert currencies in your reports.
+    -   Supporting currency conversion is more complicated; you must consider such issues as fluctuations in conversion rates. Oftentimes, a third-party service can be used to perform currency conversion

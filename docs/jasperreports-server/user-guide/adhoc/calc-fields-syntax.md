@@ -9,17 +9,17 @@ This section describes the syntax required when creating calculated fields in Ad
 
 Use the following syntax for inputs:
 
-- To reference a text string, use single quotes (') - `'Text String'`.
+-   To reference a text string, use single quotes (') - `'Text String'`.
 
-- To reference a field label, use double quotes (") - `"``Ad Hoc Label``"`.
+-   To reference a field label, use double quotes (") - `"``Ad Hoc Label``"`.
 
-- To reference date constants, indicate the date type as part of the syntax, as listed below:
+-   To reference date constants, indicate the date type as part of the syntax, as listed below:
 
-  - To reference a date without time data (for example: yyyy-dd-mm), use `d` followed by single quotes (') - `d'2014-06-10'`.
-  - To reference a date with day and time data (for example: yyyy-dd-mm hh:mm:ss) use `ts `followed by single quotes (') - `ts'2014-06-10 01:30:00'`. If you use `ts `and enter the date information only, the time is automatically set to `00:00:00`.
-  - To reference a date with time data only (hh:mm:ss), use `t` followed by single quotes (') - `t'01:30:00'`.
+    -   To reference a date without time data (for example: yyyy-dd-mm), use `d` followed by single quotes (') - `d'2014-06-10'`.
+    -   To reference a date with day and time data (for example: yyyy-dd-mm hh:mm:ss) use `ts `followed by single quotes (') - `ts'2014-06-10 01:30:00'`. If you use `ts `and enter the date information only, the time is automatically set to `00:00:00`.
+    -   To reference a date with time data only (hh:mm:ss), use `t` followed by single quotes (') - `t'01:30:00'`.
 
-- To reference a date field label, use double quotes (") - `"``Ad Hoc Date Field Label``"`.
+-   To reference a date field label, use double quotes (") - `"``Ad Hoc Date Field Label``"`.
 
 !!! note
 
@@ -31,21 +31,20 @@ Use the following syntax for inputs:
 
 In the function descriptions for calculated fields in [section 1.0.1, “Calculated Field Reference,” on page 1](calc-fields-reference.md), the argument name describes the type of input the function accepts. For more information about input types, see JasperReports Server Data Management Using Domains:
 
-- `BooleanExpression` - Any expression that takes on Boolean values, including the label of a Boolean field or measure, a Boolean calculation, or a Boolean value.
+-   `BooleanExpression` - Any expression that takes on Boolean values, including the label of a Boolean field or measure, a Boolean calculation, or a Boolean value.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <p>You can create a BooleanExpression using the following: comparison operators (==, !=, &gt;, &gt;=, &lt;, &lt;=, in); functions that return Boolean values (StartsWith, EndsWith, IsNull, Contains) and logical functions (AND, OR, NOT).</p>
-  </div>
+    !!! note
 
-- `DateExpression` - Any type of date or timestamp values, including the label of a date field or measure, or a calculation that returns dates.
+        You can create a BooleanExpression using the following: comparison operators (==, !=, &gt;, &gt;=, &lt;, &lt;=, in); functions that return Boolean values (StartsWith, EndsWith, IsNull, Contains) and logical functions (AND, OR, NOT).
 
-- `DateTimeExpression` - Date expressions that contain time values, including the label of a date field or measure, or a calculation that returns dates. These values are also known as timestamp values.
+-   `DateExpression` - Any type of date or timestamp values, including the label of a date field or measure, or a calculation that returns dates.
 
-- `Expression` - Any valid date, date-time, numeric, or string expression.
+-   `DateTimeExpression` - Date expressions that contain time values, including the label of a date field or measure, or a calculation that returns dates. These values are also known as timestamp values.
 
-- `NumericExpression` - Numeric values, including the label of a numeric field or measure, or a calculation that returns numbers.
+-   `Expression` - Any valid date, date-time, numeric, or string expression.
 
-- `TextExpression` - Text values, including the label of a text field or measure, or a text string.
+-   `NumericExpression` - Numeric values, including the label of a numeric field or measure, or a calculation that returns numbers.
 
-- `Level` - For aggregate functions, specifies the set of values used to compute the calculation. Possible values include Current (not available for PercentOf), ColumnGroup, ColumnTotal, RowGroup, RowTotal, Total. See [section 1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.
+-   `TextExpression` - Text values, including the label of a text field or measure, or a text string.
+
+-   `Level` - For aggregate functions, specifies the set of values used to compute the calculation. Possible values include Current (not available for PercentOf), ColumnGroup, ColumnTotal, RowGroup, RowTotal, Total. See [section 1.0.1.1, “Levels in Aggregate Functions,” on page 1](calc-fields-aggregates.md) for more information.

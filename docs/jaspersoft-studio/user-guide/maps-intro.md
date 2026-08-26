@@ -31,15 +31,15 @@ To disable Google Maps in Jaspersoft Studio Professional
 
 This topic contains the following sections:
 
-- Working with Map Properties
+-   Working with Map Properties
 
-- Working with Authentication Properties
+-   Working with Authentication Properties
 
-- Working with Markers
+-   Working with Markers
 
-- Working with Paths
+-   Working with Paths
 
-- Properties for Markers and Paths
+-   Properties for Markers and Paths
 
 ## Working with Map Properties
 
@@ -54,28 +54,38 @@ The **Map** tab in the **Properties** view lets you set the basic properties for
 
 You can set the following map properties using the **Map** tab:
 
-- **Map Preview**: Opens a Google Maps window. This window supports standard Google Maps functionalities, such as dragging, zooming, and switching between **Map** and **Satellite** views.
+-   **Map Preview**: Opens a Google Maps window. This window supports standard Google Maps functionalities, such as dragging, zooming, and switching between **Map** and **Satellite** views.
 
-|                                                                     |
-|---------------------------------------------------------------------|
-| ![jss google maps center](assets/images/jss-google-maps-center.png) |
-| *Figure 2: Setting a map location*                                  |
+    |                                                                     |
+    |---------------------------------------------------------------------|
+    | ![jss google maps center](assets/images/jss-google-maps-center.png) |
+    | *Figure 2: Setting a map location*                                  |
 
-Changes to this window are reflected in the map in your report. In addition, you can change the map's center in any of the following ways. When you close the preview, the map is automatically centered at the selected location:
+    Changes to this window are reflected in the map in your report. In addition, you can change the map's center in any of the following ways. When you close the preview, the map is automatically centered at the selected location:
 
-- - **Address**: Enter an address in the entry bar to center the map at that location.
-  - **Latitude** and **Longitude**: Enter a latitude and longitude to center your map at that location.
-  - Double-click: Double-click anywhere on the map to center it at that location.
-- **Map Type**: The Google Maps view. Options are: roadmap, satellite, terrain, and hybrid.
-- **Latitude**: The latitude of the map center. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
-- **Longitude**: The longitude of the map center. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
-- **Address** A String representing the address of the center. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression. The value must be enclosed in quotes, for example, "350 Rhode Island Ave., San Francisco, CA".
-- **Zoom**: Integer representing the Google Maps zoom level. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
-- **Language**: String that sets the in-map language. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression. The value must be enclosed in quotes, for example, "ru-RU". See the Google Maps documentation for more information.
-- **Map Scale**: Sets the size of the scale bar at the bottom of the map.
-- **Evaluation Time**: Dropdown that lets you set the evaluation time of the map. See [Evaluation Time](variables-other-properties.md) for more information.
-- **Image Type**: Dropdown that lets you set the image type to use when the map is embedded in your report.
-- **On Error Type**: Dropdown that lets you set the type of message to display when there is an error with the map.
+    -   **Address**: Enter an address in the entry bar to center the map at that location.
+    -   **Latitude** and **Longitude**: Enter a latitude and longitude to center your map at that location.
+    -   Double-click: Double-click anywhere on the map to center it at that location.
+
+-   **Map Type**: The Google Maps view. Options are: roadmap, satellite, terrain, and hybrid.
+
+-   **Latitude**: The latitude of the map center. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
+
+-   **Longitude**: The longitude of the map center. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
+
+-   **Address** A String representing the address of the center. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression. The value must be enclosed in quotes, for example, "350 Rhode Island Ave., San Francisco, CA".
+
+-   **Zoom**: Integer representing the Google Maps zoom level. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
+
+-   **Language**: String that sets the in-map language. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression. The value must be enclosed in quotes, for example, "ru-RU". See the Google Maps documentation for more information.
+
+-   **Map Scale**: Sets the size of the scale bar at the bottom of the map.
+
+-   **Evaluation Time**: Dropdown that lets you set the evaluation time of the map. See [Evaluation Time](variables-other-properties.md) for more information.
+
+-   **Image Type**: Dropdown that lets you set the image type to use when the map is embedded in your report.
+
+-   **On Error Type**: Dropdown that lets you set the type of message to display when there is an error with the map.
 
 ## Viewing Authentication Properties
 
@@ -88,18 +98,17 @@ If you want to use a Google Maps key or business client license, we recommend th
 
 To configure your Google Maps license and/or version information
 
-1.  Select **Window \> Preferences** to open the **Preferences** dialog (**Eclipse \> Preferences** on Mac).
-
-2.  Navigate to **Jaspersoft Studio \> Properties**.
-
+1.  Select **Window &gt; Preferences** to open the **Preferences** dialog (**Eclipse &gt; Preferences** on Mac).
+2.  Navigate to **Jaspersoft Studio &gt; Properties**.
 3.  To configure a property, click **Add** to open the Properties dialog, enter the name of the property and the property's value, then click **OK**. You can configure the following Google Maps APIs properties. See the JasperReports Library configuration reference for more information on each property:
 
-    - `net.sf.jasperreports.components.map.client.id`: Specifies the client ID for Google Maps API for Business. If set, it takes precedence over the API key property. It usually works along with the signature property for signed URLs.
-    - `net.sf.jasperreports.components.map.key`: Specifies the Google Maps API key.
-    - `net.sf.jasperreports.components.map.signature`: Specifies the encrypted client signature for signed request URLs.
-    - `net.sf.jasperreports.components.map.version`: Indicates which version of the Google Maps API should be loaded.
+-   `net.sf.jasperreports.components.map.client.id`: Specifies the client ID for Google Maps API for Business. If set, it takes precedence over the API key property. It usually works along with the signature property for signed URLs.
 
-4.  When you have specified all your properties, click **OK** to exit the Preferences dialog.
+    -   `net.sf.jasperreports.components.map.key`: Specifies the Google Maps API key.
+    -   `net.sf.jasperreports.components.map.signature`: Specifies the encrypted client signature for signed request URLs.
+    -   `net.sf.jasperreports.components.map.version`: Indicates which version of the Google Maps API should be loaded.
+
+1.  When you have specified all your properties, click **OK** to exit the Preferences dialog.
 
 !!! note
 
@@ -109,15 +118,15 @@ To configure your Google Maps license and/or version information
 
 A marker identifies a location on a map. You can create markers manually, either using a fixed location that is known when the report is created, or using an expression based on report data. You can also define markers based on a dataset. A single map can include both manual markers and markers from one or more datasets. This section describes:
 
-- Marker Properties
+-   Marker Properties
 
-- Static Markers
+-   Static Markers
 
-- Adding Markers Using the Map
+-   Adding Markers Using the Map
 
-- Dynamic Markers
+-   Dynamic Markers
 
-- Modifying Markers
+-   Modifying Markers
 
 ### Marker Properties
 
@@ -157,35 +166,31 @@ To define a marker manually
 
 5.  Specify a location for your marker. You can do this by entering latitude and longitude, entering an address, or defining markers on the map preview:
 
-    - **Latitude and Longitude**: Enter the latitude and longitude coordinates for your marker. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression. For this example, enter the following values:
+-   **Latitude and Longitude**: Enter the latitude and longitude coordinates for your marker. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression. For this example, enter the following values:
 
-      - **Latitude** – 37.833
-      - **Longitude** – -122.4167
+    -   **Latitude** – 37.833
 
-    - **Address**: The address is used only if **Latitude** and **Longitude** are blank. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
+        -   **Longitude** – -122.4167
 
-6.  (Optional) Set the title for your marker, if any.
+    -   **Address**: The address is used only if **Latitude** and **Longitude** are blank. You can type directly in the entry bar, or click ![jss icon edit](assets/images/jss-icon-edit.png) to enter an expression.
 
-7.  (Optional) To have a new browser window or tab open with related information when a user clicks the marker, enter the URL and select the Target type.
+        1.  (Optional) Set the title for your marker, if any.
+        2.  (Optional) To have a new browser window or tab open with related information when a user clicks the marker, enter the URL and select the Target type.
+        3.  (Optional) Set your icon type (default or custom) and icon properties:
 
-8.  (Optional) Set your icon type (default or custom) and icon properties:
+    -   If you are using the default marker, you can set additional properties, such as color, label. These properties are not available for a custom icon. This example uses the color 00CCFF and the label J.
 
-    - If you are using the default marker, you can set additional properties, such as color, label. These properties are not available for a custom icon. This example uses the color 00CCFF and the label J.
+        |  |
+        |----|
+        | ![jss google maps static marker color](assets/images/jss-google-maps-static-marker-color.png) |
+        | *Figure 5: Setting color and label for a marker* |
 
-    |  |
-    |----|
-    | ![jss google maps static marker color](assets/images/jss-google-maps-static-marker-color.png) |
-    | *Figure 5: Setting color and label for a marker* |
+    -   To use a marker icon other than the default, click **Custom Icon** to specify a URL that points to the image to use. Currently, we do not support loading an image directly from the repository or as a resource local to the report. Instead, the JavaScript API loads the icon from the URL. Then set additional optional properties for your marker, such as icon height, width, origin, and anchor.
 
-    - To use a marker icon other than the default, click **Custom Icon** to specify a URL that points to the image to use. Currently, we do not support loading an image directly from the repository or as a resource local to the report. Instead, the JavaScript API loads the icon from the URL. Then set additional optional properties for your marker, such as icon height, width, origin, and anchor.
-
-9.  Click **OK** to return to the Markers dialog.
-
-10. To create additional markers, click **Add**, enter the marker properties, then click **OK** to return to the **Markers** dialog.
-
-11. Click **OK** to create your markers.
-
-12. Once you have defined your markers, preview your report in HTML. For this example, select the Empty Data Set for your preview.
+1.  Click **OK** to return to the Markers dialog.
+2.  To create additional markers, click **Add**, enter the marker properties, then click **OK** to return to the **Markers** dialog.
+3.  Click **OK** to create your markers.
+4.  Once you have defined your markers, preview your report in HTML. For this example, select the Empty Data Set for your preview.
 
 |  |
 |----|
@@ -217,9 +222,10 @@ To define a marker manually using the map
 
 4.  To enter an individual marker, select the **Map** tab. You can perform the following tasks:
 
-- To create a marker by selecting a location on the map, right-click on the location you want and select **Add marker**.
-- To delete one or more markers, select the markers in the panel at the right and press **Delete**, or right-click on the marker and select **Delete**.
-- To edit a marker's location, double-click the marker to open the **Marker** dialog.
+-   To create a marker by selecting a location on the map, right-click on the location you want and select **Add marker**.
+
+    -   To delete one or more markers, select the markers in the panel at the right and press **Delete**, or right-click on the marker and select **Delete**.
+    -   To edit a marker's location, double-click the marker to open the **Marker** dialog.
 
 ### Adding Markers Using a Dataset
 
@@ -283,7 +289,7 @@ Create a dataset in your report
 
 3.  Select the SFDataAdapter.jrdax data adapter and click **Next**.
 
-4.  Click **\>\>** to select all fields and click **Finish**.
+4.  Click **&gt;&gt;** to select all fields and click **Finish**.
 
     The dataset is created in your report.
 
@@ -319,29 +325,30 @@ Create a dataset in your report
 
 8.  For a dataset, you typically want to use expressions for your values. For each property you want to read from the dataset, click ![jss icon edit](assets/images/jss-icon-edit.png) on the entry bar, select **Use Expression** and enter the expression to use. For this example, use the following expressions:
 
-    - Latitude: `$F{latitude}`
-    - Longitude: `$F{longitude}`
-    - Address: `$F{landmark}`
+-   Latitude: `$F{latitude}`
 
-    !!! note
+    -   Longitude: `$F{longitude}`
+    -   Address: `$F{landmark}`
 
-        You can use expressions to pass parameters to a map component dynamically. Expressions allow you to evaluate data in your dataset and use the results to populate the map. In the component's properties, properties based on expressions show `f(x)` next to the field.
+!!! note
 
-9.  Click **OK**. The **Markers** dialog displays the markers you just created.
+    You can use expressions to pass parameters to a map component dynamically. Expressions allow you to evaluate data in your dataset and use the results to populate the map. In the component's properties, properties based on expressions show `f(x)` next to the field.
+
+1.  Click **OK**. The **Markers** dialog displays the markers you just created.
 
     |  |
     |----|
     | ![jss google maps item data markers from dataset](assets/images/jss-google-maps-item-data-markers-from-dataset.png) |
     | *Figure 10: Item data for markers created from a dataset* |
 
-10. Click **OK**. Your markers are displayed on the **Marker** tab of the **Properties** view, along with any other markers you have created.
+2.  Click **OK**. Your markers are displayed on the **Marker** tab of the **Properties** view, along with any other markers you have created.
 
     |  |
     |----|
     | [![jss google maps markers from dataset](assets/images/jss-google-maps-markers-from-dataset.png)](assets/files/jss-google-maps-markers-from-dataset.png) |
     | *Figure 11: Properties view showing markers added manually and markers defined from a dataset* |
 
-11. Preview your report in HTML. The example below shows the markers from the sample dataset along with a static marker.
+3.  Preview your report in HTML. The example below shows the markers from the sample dataset along with a static marker.
 
 |  |
 |----|
@@ -382,9 +389,9 @@ To define a marker series name
 
 Marker clustering can be applied in two ways:
 
-- across the entire map
+-   across the entire map
 
-- independently for each marker series.
+-   independently for each marker series.
 
 To enable map-wide marker clustering
 
@@ -404,9 +411,9 @@ To enable clustering for a specific marker series
 
 Marker spidering can be applied in two ways:
 
-- across the entire map
+-   across the entire map
 
-- independently for each marker series.
+-   independently for each marker series.
 
 To enable map-wide marker spidering
 
@@ -428,27 +435,27 @@ To enable spidering for a specific marker series
 
 You can use a map legend to clearly communicate the meaning of different marker series on a map, especially if you are using multiple series. The properties for configuring the legend are grouped within the `<legend/>` element and include:
 
-- `enabled`: flag that enables the legend element
+-   `enabled`: flag that enables the legend element
 
-- `label`: the legend title
+-   `label`: the legend title
 
-- `position`: specifies the legend position on the map. [This page](https://developers.google.com/maps/documentation/javascript/reference/control#ControlPosition) lists all the possible values. The default value is `RIGHT_CENTER`.
+-   `position`: specifies the legend position on the map. [This page](https://developers.google.com/maps/documentation/javascript/reference/control#ControlPosition) lists all the possible values. The default value is `RIGHT_CENTER`.
 
-- `orientation`: specifies how legend items will be aligned within the legend control. Possible values are:
+-   `orientation`: specifies how legend items will be aligned within the legend control. Possible values are:
 
-  - `vertical` (default value)
+    -   `vertical` (default value)
 
-  - `horizontal`
+    -   `horizontal`
 
-- `legendMaxWidth`: specifies the maximum width of the legend control, in pixels.
+-   `legendMaxWidth`: specifies the maximum width of the legend control, in pixels.
 
-- `legendMaxWidth.fullscreen`: specifies the maximum width of the legend control, in pixels, when the map is turned full screen.
+-   `legendMaxWidth.fullscreen`: specifies the maximum width of the legend control, in pixels, when the map is turned full screen.
 
-- `legendMaxHeight`: specifies the maximum height of the legend control, in pixels.
+-   `legendMaxHeight`: specifies the maximum height of the legend control, in pixels.
 
-- `legendMaxHeight.fullscreen`: specifies the maximum height of the legend control, in pixels, when the map is turned full screen.
+-   `legendMaxHeight.fullscreen`: specifies the maximum height of the legend control, in pixels, when the map is turned full screen.
 
-- `useMarkerIcons`: if enabled, the pin icons representing the markers are used for the legend items as well.
+-   `useMarkerIcons`: if enabled, the pin icons representing the markers are used for the legend items as well.
 
 To further customize how the legend item appears, you can define a specific **Legend Icon Expression** for each marker series within its **Item Data** element (as shown in the **Markers** dialog). This expression should specify the URL or file path to the desired icon representing that series in the legend.
 
@@ -472,11 +479,11 @@ It should contain the URL or file path of the default icon.
 
 You can add one or more paths to your maps. A path is defined by:
 
-- A name that serves as a path identifier; the name must be unique in your report.
+-   A name that serves as a path identifier; the name must be unique in your report.
 
-- A collection of places (points) on the map defined by latitude/longitude coordinates or addresses. These are connected to form the path.
+-   A collection of places (points) on the map defined by latitude/longitude coordinates or addresses. These are connected to form the path.
 
-- (Optional) A style that specifies various style configuration properties, such as line and fill color, line weight, and opacity.
+-   (Optional) A style that specifies various style configuration properties, such as line and fill color, line weight, and opacity.
 
 ### Defining Path Styles
 
@@ -522,39 +529,32 @@ Create a dataset in your report
 1.  Right-click the root in the outline view and select **Create Dataset**.
 2.  Name the dataset and click **Next**. For this example, name the dataset PathStyles.
 3.  Select the data adapter for your path styles (Path Styles Data Adapter) and click **Next**.
-4.  Click **\>\>** to select all fields and click **Finish**.
+4.  Click **&gt;&gt;** to select all fields and click **Finish**.
 5.  Select the dataset (PathStyles) you just created in the outline view.
 6.  In the Properties view, enter the filename of the data adapter (PathStylesDataAdapter.jrdax) in the Default Data Adapter entry box. Setting the default data adapter lets you use a different dataset from the one used in the main report. See [, “Default Data Adapter ,” on page 1](data-adapters/data-adapters-using-in-reports.md) for more information.
 
 Define a style using a dataset
 
 1.  Create your data source, a data adapter that points to it, and a dataset that uses the data adapter.
-
 2.  Add a map component to the report, or select an existing map in the **Design** tab.
-
 3.  Select the **Paths** tab in the **Properties** view.
-
 4.  In the **Styles** section, click **Add** to open the **Items** dialog.
-
 5.  Click the **Dataset** tab in the **Path** dialog and select **Use Dataset**.
-
 6.  In the **Dataset Run** section, select your styles dataset (PathStyles) and accept the default settings. You have already set the default data adapter for this dataset.
-
 7.  Select the **Items** tab and click **Add** to open the **Style** dialog.
-
 8.  For each property you want to read from the dataset, click ![jss icon edit](assets/images/jss-icon-edit.png) on the entry bar, select **Use Expression** and enter the expression to use. For this example, use the following expressions:
 
-    - Name: `$F{name}`
-    - Stroke Color: `$F{strokecolor}`
-    - Stroke Opacity: `$F{strokeopacity}`
-    - Stroke Weight: `$F{strokeweight}`
-    - Fill Color: `$F{fillcolor}`
-    - Fill Opacity: `$F{fillopacity}`
-    - Is Polygon: `$F{ispolygon}`
+-   Name: `$F{name}`
 
-9.  Click **OK** to return to the Items dialog.
+    -   Stroke Color: `$F{strokecolor}`
+    -   Stroke Opacity: `$F{strokeopacity}`
+    -   Stroke Weight: `$F{strokeweight}`
+    -   Fill Color: `$F{fillcolor}`
+    -   Fill Opacity: `$F{fillopacity}`
+    -   Is Polygon: `$F{ispolygon}`
 
-10. Click **OK** to create the style set.
+1.  Click **OK** to return to the Items dialog.
+2.  Click **OK** to create the style set.
 
 |  |
 |----|
@@ -574,10 +574,12 @@ To define a path using the Add button.
 3.  To add a point to the path, click **Add** to open **Path** dialog. For each point, specify the following:
 
     1.  The path name (to identify which path includes the point).
+
     2.  The latitude/longitude coordinates or the address of the point.
+
     3.  Additional optional properties, such as the name of a path style.
 
-    Click **OK** to add your point.
+        Click **OK** to add your point.
 
 4.  Use the **Up** and **Down** buttons to change the order in which the points appear.
 
@@ -595,12 +597,12 @@ To add points to a path using the map preview
 
 4.  Select your path from the **Paths** menu. The **Paths** menu has the following characteristics:
 
-    - If you already have static paths defined for your map, you can select a path name from the **Paths** menu. Points you create are added to the currently selected path. You can switch between paths at any time.
-    - If you have not created any static paths, then you can enter a name on this menu. If a static path exists, you cannot create a one.
+-   If you already have static paths defined for your map, you can select a path name from the **Paths** menu. Points you create are added to the currently selected path. You can switch between paths at any time.
 
-5.  To add a point to the current path, right-click on the location you want and select **Add marker**.
+    -   If you have not created any static paths, then you can enter a name on this menu. If a static path exists, you cannot create a one.
 
-6.  To delete one or more markers, select the markers in the panel at the right and press **Delete**, or right-click on the marker and select **Delete**.
+1.  To add a point to the current path, right-click on the location you want and select **Add marker**.
+2.  To delete one or more markers, select the markers in the panel at the right and press **Delete**, or right-click on the marker and select **Delete**.
 
 !!! note
 
@@ -609,32 +611,24 @@ To add points to a path using the map preview
 ### Defining a Path Using a Dataset
 
 1.  Create a CSV file, a data adapter that points to it, and a dataset that uses the data adapter. This example uses the same data as in Sample Data. Pay close attention when adding points to your data: they are connected on the map in the order that they appear in the data. If they are not in a sensible order in the data, the path does not make sense, either.
-
 2.  Define the styles that your paths use. This example uses the styles defined in Defining Path Styles Dynamically.
-
 3.  Add a map component to the report, or select an existing map in the Design tab.
-
 4.  If you have not set the center or zoom, do so. For this example, click the **Map** tab in the **Properties** view, enter "San Francisco, CA" in the **Address** field, and enter 11 in the **Zoom** field.
-
 5.  Select the **Paths** tab in the **Properties** view.
-
 6.  In the **Paths** section, click **Add** to open the **Markers** dialog.
-
 7.  Click the **Dataset** tab in the **Markers** dialog and select **Use Dataset**.
-
 8.  In the **Dataset Run** section, select **SFLandmarksDataset** and accept the default settings. You have already set the default data adapter for this dataset.
-
 9.  For each property you want to read from the dataset, click ![jss icon edit](assets/images/jss-icon-edit.png) on the entry bar, select **Use Expression**, and enter the expression to use. For this example, use the following expressions:
 
-    - Path Name: `$F{path}`
-    - Latitude: `$F{latitude}`
-    - Longitude: `$F{longitude}`
-    - Address: `$F{landmark}`
-    - Style: `$F{style}`
+-   Path Name: `$F{path}`
 
-10. Click **OK**. The path information is added to the **Path** section in the **Properties** view.
+    -   Latitude: `$F{latitude}`
+    -   Longitude: `$F{longitude}`
+    -   Address: `$F{landmark}`
+    -   Style: `$F{style}`
 
-11. Preview your report in HTML. The following image shows the example without markers. If you added the markers earlier, they are also visible.
+1.  Click **OK**. The path information is added to the **Path** section in the **Properties** view.
+2.  Preview your report in HTML. The following image shows the example without markers. If you added the markers earlier, they are also visible.
 
 |  |
 |----|

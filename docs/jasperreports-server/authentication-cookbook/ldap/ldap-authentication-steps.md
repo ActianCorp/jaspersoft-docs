@@ -32,6 +32,6 @@ The following process explains the interaction of the user’s browser, JasperRe
 
 When comparing these steps with those in [Default Internal Authentication](../authentication-in-jrs/internal-authentication-steps.md), there are three significant differences, all in Step 3:
 
-- JasperReports Server verifies the credentials through LDAP instead of using its internal user database.
-- The roles and organization ID in the user’s principal object are mapped from the LDAP response.
-- The internal database must be synchronized with any new information in the user’s principal object.
+-   JasperReports Server verifies the credentials through LDAP instead of using its internal user database.
+-   The roles and organization ID in the user’s principal object are mapped from the LDAP response.
+-   The internal database must be synchronized with any new information in the user’s principal object.

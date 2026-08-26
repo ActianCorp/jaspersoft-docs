@@ -15,7 +15,7 @@ When connecting to Azure, it is preferable to use the data source type **JDBC** 
 
 Follow these steps to connect to Azure SQL using JDBC connection:
 
-1.  From the JasperReports Server main menu, go to **Create** **\>** **Data Source**. A New Data Source page is displayed.
+1.  From the JasperReports Server main menu, go to **Create** **&gt;** **Data Source**. A New Data Source page is displayed.
 
 2.  From the **Type** drop-down menu, select **JDBC** and enter the following information:<br>
 
@@ -32,4 +32,4 @@ Follow these steps to connect to Azure SQL using JDBC connection:
 
 !!! note
 
-    The **Microsoft Azure \> Settings \> Connection strings \> JDBC** page may have other options that can be entered.
+    The **Microsoft Azure &gt; Settings &gt; Connection strings &gt; JDBC** page may have other options that can be entered.

@@ -11,12 +11,12 @@ You need an active Internet connection to run Jaspersoft Studio. When prompted, 
 
 You can view various options available on the **Member Login** dialog, including:
 
-- **Forgot Password**: Resets your password.
-- **Join Now**: Opens the **Join the Jaspersoft Community** [page](https://community.jaspersoft.com/register/). You can create an account and join the community by filling the form.
-- **End User License Agreement**: Opens the **End User License Agreement** (EULA) document.
-- **Quit** Jaspersoft Studio: Quits Jaspersoft Studio.
-- **Alternative Login Method**: Provides a secondary, smartphone-based activation method to Jaspersoft® Studio Community. For more information, see Alternative Login Method.
-- **Log in**: Logs in to Jaspersoft Studio.
+-   **Forgot Password**: Resets your password.
+-   **Join Now**: Opens the **Join the Jaspersoft Community** [page](https://community.jaspersoft.com/register/). You can create an account and join the community by filling the form.
+-   **End User License Agreement**: Opens the **End User License Agreement** (EULA) document.
+-   **Quit** Jaspersoft Studio: Quits Jaspersoft Studio.
+-   **Alternative Login Method**: Provides a secondary, smartphone-based activation method to Jaspersoft® Studio Community. For more information, see Alternative Login Method.
+-   **Log in**: Logs in to Jaspersoft Studio.
 
 Jaspersoft Studio starts only when the credentials are valid and login is successful.
 

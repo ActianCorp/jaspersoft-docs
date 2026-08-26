@@ -17,10 +17,10 @@ To schedule a report
 
     The **New Schedule** dialog has the following tabs:
 
-    - Schedule – When to run the scheduled job, and how often.
-    - Parameters – If the report was designed with input controls, which parameters the scheduled job uses.
-    - Output Options – The name of the output file, the output format and locale, and where the output file is stored.
-    - Notifications – Email options for sending the output to recipients and for sending administrative messages.
+    -   Schedule – When to run the scheduled job, and how often.
+    -   Parameters – If the report was designed with input controls, which parameters the scheduled job uses.
+    -   Output Options – The name of the output file, the output format and locale, and where the output file is stored.
+    -   Notifications – Email options for sending the output to recipients and for sending administrative messages.
 
 2.  Create the schedule, as described in [Creating a Schedule](../schedules/schedules-job.md).
 

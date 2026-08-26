@@ -71,6 +71,6 @@ From?</p></td>
 
 For security purposes, the search for running reports is has the following restrictions:
 
-- The system administrator (`superuser`) can see and cancel any report running on the server.
-- An organization admin (`jasperadmin`) can see every running report, but can cancel only the reports that were started by a user of the same organization or one of its child organizations.
-- A regular user can see every running report, but can cancel only the reports that he initiated.
+-   The system administrator (`superuser`) can see and cancel any report running on the server.
+-   An organization admin (`jasperadmin`) can see every running report, but can cancel only the reports that were started by a user of the same organization or one of its child organizations.
+-   A regular user can see every running report, but can cancel only the reports that he initiated.

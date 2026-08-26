@@ -15,9 +15,9 @@ To create a reusable query:
 
 1.  Login as an administrator.
 
-2.  Click **View \> Repository** and locate the folder for the query.
+2.  Click **View &gt; Repository** and locate the folder for the query.
 
-3.  Right-click the folder's name and select **Add Resource \> Query** from the context menu. The **Add Query** page appears.
+3.  Right-click the folder's name and select **Add Resource &gt; Query** from the context menu. The **Add Query** page appears.
 
     ![js AddQuery NameTheQuery](../assets/images/js-AddQuery-NameTheQuery.png)
 
@@ -31,9 +31,9 @@ To create a reusable query:
 
 5.  Select the data source and click **Next**. Your options are:
 
-    - **Do not link a data source**: If no data source is associated with the query, the server uses the data source associated with the report that references the query.
-    - **Create a new data source**: You can define a local data source within this query resource that is not accessible to any other resource. Click the link to create any data source as described in [Data Sources](../datasources/datasources_intro.md). This new data source overrides any data source specified in reports that use the query.
-    - **Select data source from repository**: This creates a reference to a data source in the repository. Click **Browse** to select an existing data source. The data source that you select overrides any data source specified in reports that use the query.
+    -   **Do not link a data source**: If no data source is associated with the query, the server uses the data source associated with the report that references the query.
+    -   **Create a new data source**: You can define a local data source within this query resource that is not accessible to any other resource. Click the link to create any data source as described in [Data Sources](../datasources/datasources_intro.md). This new data source overrides any data source specified in reports that use the query.
+    -   **Select data source from repository**: This creates a reference to a data source in the repository. Click **Browse** to select an existing data source. The data source that you select overrides any data source specified in reports that use the query.
 
     ![js AddQuery DefineTheQuery](../assets/images/js-AddQuery-DefineTheQuery.png)
 

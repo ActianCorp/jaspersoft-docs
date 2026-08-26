@@ -11,11 +11,11 @@ The Layout Band is designed to seamlessly support both old and new layout band c
 
 Directly beneath the tool bar is the Layout Band. Here there are two fields. These fields have different labels and functions, depending on the type of view you are creating:
 
-- For tables, these fields are **Columns** and **Groups**.
+-   For tables, these fields are **Columns** and **Groups**.
 
-- For charts, these fields are **Columns** and **Rows**.
+-   For charts, these fields are **Columns** and **Rows**.
 
-- For crosstabs, these fields are **Columns** and **Rows**.
+-   For crosstabs, these fields are **Columns** and **Rows**.
 
 You can drag and drop fields and measures into these boxes to populate your view.
 
@@ -33,35 +33,34 @@ Directly beside the tool bar is the New Layout Band. There are two drop-areas fi
 
 In the New Layout Band:
 
-- You can **collapse or expand** the **Build Visualization** tab by clicking the icon beside the **Build Visualization**.
+-   You can **collapse or expand** the **Build Visualization** tab by clicking the icon beside the **Build Visualization**.
 
-- The tootlip gives the information about the drop areas in the **Build Visualization** tab.
+-   The tootlip gives the information about the drop areas in the **Build Visualization** tab.
 
-- The Empty Canvas area gives the information about the drop areas according to the visualization type that you select.
+-   The Empty Canvas area gives the information about the drop areas according to the visualization type that you select.
 
-  ![adhoc empty canvas](../assets/images/adhoc-empty-canvas.png)
+    ![adhoc empty canvas](../assets/images/adhoc-empty-canvas.png)
 
-  *Figure 1: Ad Hoc Editor’s Empty Canvas Area View*
+    *Figure 1: Ad Hoc Editor’s Empty Canvas Area View*
 
-- The fields or measures can be **swapped** only for the **Cross-tab** visualization type only, by clicking the **Switch** icon between the two drop ares.
+-   The fields or measures can be **swapped** only for the **Cross-tab** visualization type only, by clicking the **Switch** icon between the two drop ares.
 
-  <div class="admonition note">
-  <p class="admonition-title">Note</p>
-  <strong>Switch the Groups</strong> button is only present in the Old Layout Band, and not the New Layout Band.
-  </div>
+    !!! note
 
-- For the **Unused tokens**, after you select the visualization type, the fields and measures that cannot be used in any of the drop areas are moved to the **Unused** box.
+        **Switch the Groups** button is only present in the Old Layout Band, and not the New Layout Band.
 
-  To clear the unused fields or measure, click the **X** icon. You can also refer the tool-tip for **Unused** box.
+-   For the **Unused tokens**, after you select the visualization type, the fields and measures that cannot be used in any of the drop areas are moved to the **Unused** box.
 
-- **Invalid tokens** are displayed in drop areas, When a field or measure token displays in a drop box that does not allow that type of token. This usually happens when you add the fields and measures and then change the visualization type or open an Ad Hoc View created in an older version of JasperReports Server.
+    To clear the unused fields or measure, click the **X** icon. You can also refer the tool-tip for **Unused** box.
 
-  You can delete the invalid tokens or move them to the supported drop areas.
+-   **Invalid tokens** are displayed in drop areas, When a field or measure token displays in a drop box that does not allow that type of token. This usually happens when you add the fields and measures and then change the visualization type or open an Ad Hoc View created in an older version of JasperReports Server.
 
-- In the **Select Visualization Type** dialog, the description area below the visualization type, shows the currently selected visualization type. The criteria for creating a visualization are displayed on the empty canvas area.
+    You can delete the invalid tokens or move them to the supported drop areas.
 
-- In **Build Visualization** tab, you can change the position of fields or measures, within their drop areas by:
+-   In the **Select Visualization Type** dialog, the description area below the visualization type, shows the currently selected visualization type. The criteria for creating a visualization are displayed on the empty canvas area.
 
-  - Moving Up or Down through kebab menu, click ![Adhoc icon ](../assets/images/Adhoc-icon-.png) icon and select **Move Up** or **Move Down** to move the fields or measures in the drop areas.
+-   In **Build Visualization** tab, you can change the position of fields or measures, within their drop areas by:
 
-  - Drag field or measures and drop them to the new location.
+    -   Moving Up or Down through kebab menu, click ![Adhoc icon ](../assets/images/Adhoc-icon-.png) icon and select **Move Up** or **Move Down** to move the fields or measures in the drop areas.
+
+    -   Drag field or measures and drop them to the new location.

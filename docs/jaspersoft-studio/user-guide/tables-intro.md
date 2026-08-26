@@ -15,10 +15,10 @@ The Table wizard allows you to create a complex table with a few clicks. Each ta
 
 This chapter contains the following sections:
 
-- [Creating a Table](tables-creating.md)
+-   [Creating a Table](tables-creating.md)
 
-- [Editing a Table](tables-editing.md)
+-   [Editing a Table](tables-editing.md)
 
-- [Table Structure](tables-structure.md)
+-   [Table Structure](tables-structure.md)
 
-- [Working with Columns](tables-working-with-columns.md)
+-   [Working with Columns](tables-working-with-columns.md)

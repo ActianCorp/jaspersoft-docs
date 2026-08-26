@@ -7,15 +7,15 @@ description: "If you cannot use the js-install scripts to create the JasperRepor
 
 If you cannot use the `js-install` scripts to create the JasperReports Server database and the sample databases, you can create them manually. Follow the instructions for your database to create the repository database and optional sample databases:
 
-- PostgreSQL
+-   PostgreSQL
 
-- MySQL
+-   MySQL
 
-- Oracle
+-   Oracle
 
-- DB2
+-   DB2
 
-- SQL Server
+-   SQL Server
 
 The commands in these sections have been tested at Jaspersoft, but the commands you need to use on your database instance may be different.
 
@@ -66,7 +66,7 @@ postgres=#\i supermart-update.sql;
 postgres=#\q
 ```
 
-- If you didn't install the optional sample databases, complete the installation with these commands:
+-   If you didn't install the optional sample databases, complete the installation with these commands:
 
 `cd <js-install>/buildomatic`
 
@@ -84,9 +84,9 @@ If you installed the optional sample databases, complete the installation with t
 
 For more information about executing the Ant scripts, see [Installing the WAR File Manually](../../../installation-guide/warfileinstall/war_install_manually.md).
 
-- Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
+-   Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
 
-- Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
+-   Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
 
 ## MySQL
 
@@ -136,7 +136,7 @@ mysql>source supermart-update.sql;
 mysql>exit
 ```
 
-- If you didn't install the optional sample databases, complete the installation with these commands:
+-   If you didn't install the optional sample databases, complete the installation with these commands:
 
 `cd <js-install>/buildomatic`
 
@@ -154,9 +154,9 @@ If you installed the optional sample databases, complete the installation with t
 
 For more information about executing the Ant scripts, see [Installing the WAR File Manually](../../../installation-guide/warfileinstall/war_install_manually.md).
 
-- Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
+-   Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
 
-- Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
+-   Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
 
 ## Oracle
 
@@ -225,32 +225,37 @@ You can use the Oracle client software, `sqlplus.exe` or `sqlplus`, to interact 
 4.  Create a server setting with the audit db schema name (auditDB=JSAUDIT), to do so:
 
     1.  Go to `<js-install>/buildomatic/bin` path and edit the `db-common.xml` file.
+
     2.  Add the following target at the end of file and before `</project>`:<br>
         `<target name="import-profile-attributes">`<br>
         `<import-profile-attribute key="auditDB" attrValue="${audit.dbName}"/>`<br>
         `</target>`
+
     3.  Save the file.
+
     4.  Run the following command:<br>
         `./js-ant import-profile-attributes`
 
-    !!! note
+        !!! note
 
-        Server setting auditDB=JSAUDIT is needed for audit reports working properly on oracle in case of split installation.
+            Server setting auditDB=JSAUDIT is needed for audit reports working properly on oracle in case of split installation.
 
 5.  (Optional) Special edit to the `sugarcrm.sql` script that creates the `sugarcrm` sample database. The `sqlplus` command line tool interprets SQL statements differently than a JDBC call (that is, the way buildomatic runs SQL scripts). Because of this, the `sugarcrm.sql` file must be edited to run using `sqlplus`. To make these edits, do the following:
 
-    - Unzip the `sugarcrm.zip` file to get the `sugarcrm.sql` file. Open `sugarcrm.sql` for editing:
-    - Uncomment the `"-- set define off"` line to look like this `"set define off"` (Line 7)
-    - Uncomment the `"--/"` line that follows the `CREATE TRIGGER` statements (there are 12 of these toward the very end of the file on line 71,282. Just before the `CREATE INDEX` statements). Change to be just `"/"`. (This stops the trigger procedure definition in `sqlplus`.)
-    - Save the file.
+-   Unzip the `sugarcrm.zip` file to get the `sugarcrm.sql` file. Open `sugarcrm.sql` for editing:
 
-    !!! note
+    -   Uncomment the `"-- set define off"` line to look like this `"set define off"` (Line 7)
 
-        If you build and load the sample databases using buildomatic, the NLS_LANG setting is automatically handled via a JDBC driver setting.
+        -   Uncomment the `"--/"` line that follows the `CREATE TRIGGER` statements (there are 12 of these toward the very end of the file on line 71,282. Just before the `CREATE INDEX` statements). Change to be just `"/"`. (This stops the trigger procedure definition in `sqlplus`.)
+        -   Save the file.
 
-        If you load the sample databases using buildomatic, you will not need to set any variables or make any script edits.
+!!! note
 
-6.  (Optional) Set the `NLS_LANG` variable. The `sugarcrm` database has test data that requires a specific NLS_LANG setting to load into Oracle correctly. You need to set this in your shell environment if you are manually loading the `sugarcrm` database.
+    If you build and load the sample databases using buildomatic, the NLS_LANG setting is automatically handled via a JDBC driver setting.
+
+    If you load the sample databases using buildomatic, you will not need to set any variables or make any script edits.
+
+1.  (Optional) Set the `NLS_LANG` variable. The `sugarcrm` database has test data that requires a specific NLS_LANG setting to load into Oracle correctly. You need to set this in your shell environment if you are manually loading the `sugarcrm` database.
 
     <table>
     <colgroup>
@@ -269,7 +274,7 @@ You can use the Oracle client software, `sqlplus.exe` or `sqlplus`, to interact 
     </tbody>
     </table>
 
-7.  (Optional) Run the following commands if you want to install sample databases:
+2.  (Optional) Run the following commands if you want to install sample databases:
 
 ``` bash
 cd <js-install>/buildomatic/install_resources/sql/oracle
@@ -288,7 +293,7 @@ SQL> @supermart-update.sql
 SQL> exit
 ```
 
-- If you didn't install the optional sample databases, complete the installation with these commands:
+-   If you didn't install the optional sample databases, complete the installation with these commands:
 
 `cd <js-install>/buildomatic`
 
@@ -306,9 +311,9 @@ If you installed the optional sample databases, complete the installation with t
 
 For more information about executing the Ant scripts, see [Installing the WAR File Manually](../../../installation-guide/warfileinstall/war_install_manually.md).
 
-- Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
+-   Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
 
-- Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
+-   Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
 
 ## DB2
 
@@ -354,7 +359,7 @@ db2 -tf foodmart-db2.sql (first make sure file is unzipped)
 db2 -tf supermart-update.sql (if script is available)
 ```
 
-- If you didn't install the optional sample databases, complete the installation with these commands:
+-   If you didn't install the optional sample databases, complete the installation with these commands:
 
 `cd <js-install>/buildomatic`
 
@@ -372,13 +377,13 @@ If you installed the optional sample databases, complete the installation with t
 
 For more information about executing the Ant scripts, see [Installing the WAR File Manually](../../../installation-guide/warfileinstall/war_install_manually.md).
 
-- Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
+-   Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
 
-- Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
+-   Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
 
 Further considerations:
 
-- If JasperReports Server is deployed on the same host as DB2, delete the following file to avoid conflicts:
+-   If JasperReports Server is deployed on the same host as DB2, delete the following file to avoid conflicts:
 
 `<db2>/SQLLIB/java/db2jcc.jar`
 
@@ -406,7 +411,7 @@ To create the JasperReports Server database manually in SQL Server:
     2> GO
     ```
 
-2.  From the Windows Start menu, select ****Microsoft SQL Server \> SQL Server Management Studio****.
+2.  From the Windows Start menu, select ****Microsoft SQL Server &gt; SQL Server Management Studio****.
 
 3.  Connect to SQL Server as the administrative database user, and check that the `jasperserver` database appears in the Object Explorer.
 
@@ -461,7 +466,7 @@ Alternatively, you can replace the first command and create the database manuall
 
 To complete the manual installation of databases in SQL Server
 
-- If you didn't install the optional sample databases, complete the installation with these commands:
+-   If you didn't install the optional sample databases, complete the installation with these commands:
 
 `cd <js-install>/buildomatic`
 
@@ -479,6 +484,6 @@ If you installed the optional sample databases, complete the installation with t
 
 For more information about executing the Ant scripts, see [Installing the WAR File Manually](../../../installation-guide/warfileinstall/war_install_manually.md).
 
-- Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
+-   Set Java JVM Options (required), as described in [Setting JVM Options for Application Servers](../../../installation-guide/additional/setting_jvm_options_for_application_.md).
 
-- Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).
+-   Set up the JasperReports Server License (required) as described in [Setting Up the JasperReports Server License](../../../installation-guide/additional/setting_up_the_jasperreports_server_.md).

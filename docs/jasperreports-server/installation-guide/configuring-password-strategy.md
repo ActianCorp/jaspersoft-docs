@@ -9,23 +9,23 @@ The `default_master.properties` file handles the configuration for the password 
 
 To configure the `default_master.properties` file for password strategy,
 
-- Edit the `default_master.properties` file to configure settings specific to your password strategy and algorithms.
+-   Edit the `default_master.properties` file to configure settings specific to your password strategy and algorithms.
 
-- Uncomment any of the settings, along with the sample values for each supported algorithm, as per your requirement.
+-   Uncomment any of the settings, along with the sample values for each supported algorithm, as per your requirement.
 
-  For example: To uncomment `# password.modern.algorithm=scrypt`, change it to `password.modern.algorithm=scrypt`.
+    For example: To uncomment `# password.modern.algorithm=scrypt`, change it to `password.modern.algorithm=scrypt`.
 
 !!! note
 
-    - By default, `password strategy=modern`.
+    -   By default, `password strategy=modern`.
 
-      To enable the legacy strategy, set `password.strategy=legacy` and comment out all other strategy configurations.
+        To enable the legacy strategy, set `password.strategy=legacy` and comment out all other strategy configurations.
 
-    - By default, `password.modern.algorithm=pbkdf2`.
+    -   By default, `password.modern.algorithm=pbkdf2`.
 
-      To enable a specific algorithm, comment out the other two algorithms along with their respective properties present in the `default_master.properties` file.
+        To enable a specific algorithm, comment out the other two algorithms along with their respective properties present in the `default_master.properties` file.
 
-      For example, to use Argon2, you must comment out both PBKDF2 and Scrypt and their configurations.
+        For example, to use Argon2, you must comment out both PBKDF2 and Scrypt and their configurations.
 
 ``` bash
 # =============================================================================

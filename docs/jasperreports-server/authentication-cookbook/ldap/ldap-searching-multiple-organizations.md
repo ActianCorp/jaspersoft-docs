@@ -7,8 +7,8 @@ description: "When you're authenticating users for one or more organizations in 
 
 When you're authenticating users for one or more organizations in a commercial edition of JasperReports Server, the search parameters must be able to locate all users for all organizations for these reasons:
 
-- The mapping from LDAP user entries to organizations in the server requires the user entries to be in a hierarchical tree structure that mimics the intended organization hierarchy. You can't use attribute values or group membership in LDAP to define organizations.
-- External authorization doesn't allow the user to enter an organization name. So the search must find the username among all organizations.
+-   The mapping from LDAP user entries to organizations in the server requires the user entries to be in a hierarchical tree structure that mimics the intended organization hierarchy. You can't use attribute values or group membership in LDAP to define organizations.
+-   External authorization doesn't allow the user to enter an organization name. So the search must find the username among all organizations.
 
 This has two implications:
 
@@ -40,5 +40,5 @@ This has two implications:
 
 2.  You cannot implement external authentication for two users with the same login name in different organizations. LDAP supports this as long as the two users have distinct DNs, and JasperReports Server supports this for the default internal authentication. But during external authentication, organization mapping happens after user search, so the user search must return a single LDAP entry:
 
-- Pattern matching stops at the first match based on the login name. As a result, only the user whose LDAP entry pattern is listed higher in the list can log in.
-- Search returns more than one entry. As a result, login fails for both users with the same login name.
+-   Pattern matching stops at the first match based on the login name. As a result, only the user whose LDAP entry pattern is listed higher in the list can log in.
+-   Search returns more than one entry. As a result, login fails for both users with the same login name.

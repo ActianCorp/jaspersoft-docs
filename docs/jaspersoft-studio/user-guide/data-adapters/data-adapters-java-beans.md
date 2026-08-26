@@ -85,12 +85,13 @@ Once you have created your `Factory` class instance, you can create a data adapt
 
 1.  Create the connection globally or locally:
 
-    - To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
-    - To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
+-   To create the connection globally, right-click **Data Adapters** in the Repository Explorer and choose **Create Data Adapter**.
 
-    The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
+    -   To create the connection local to a project, click ![jss icon new data adapter](../assets/images/jss-icon-new-data-adapter.png), enter a name and location for the data adapter in the **DataAdapter File** dialog, and then click **Next**.
 
-2.  To create a connection to handle JavaBeans, select **Collection of JavaBeans** in the list of data adapter types.
+The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-creating.md)).
+
+1.  To create a connection to handle JavaBeans, select **Collection of JavaBeans** in the list of data adapter types.
 
     The fields necessary to create a collection of JavaBeans appear.
 
@@ -99,15 +100,15 @@ Once you have created your `Factory` class instance, you can create a data adapt
     | ![jss data adapter collection of javabeans](../assets/images/jss-data-adapter-collection-of-javabeans.png) |
     | *Figure 1: Collection of JavaBeans Data Adapter* |
 
-3.  Create a name for your adapter.
+2.  Create a name for your adapter.
 
-4.  Enter the name of your Java class in the Factory class. For the example above, you would need to specify the class name for **TestFactory**.
+3.  Enter the name of your Java class in the Factory class. For the example above, you would need to specify the class name for **TestFactory**.
 
-5.  Enter the name of the static method in your Factory class. In the example above, this is `generateCollection`.
+4.  Enter the name of the static method in your Factory class. In the example above, this is `generateCollection`.
 
-6.  By default, the field names in your JavaBeans become the field names in your data adapter. If your JavaBeans definition has field descriptions, and you want to use these as names in Jaspersoft Studio, select **Use field description**.
+5.  By default, the field names in your JavaBeans become the field names in your data adapter. If your JavaBeans definition has field descriptions, and you want to use these as names in Jaspersoft Studio, select **Use field description**.
 
-7.  If necessary, you can add the path to your jar files.
+6.  If necessary, you can add the path to your jar files.
 
 ## Registering the Fields
 
@@ -128,6 +129,6 @@ If you selected **Use field description** when you specified the properties of y
 
 Jaspersoft Studio provides a visual tool to map JavaBean attributes to report fields. To use it, open the query window, go to the tab **JavaBean Data Source**, insert the full class name of the bean you want to explore, and click **Read attributes**. The tab displays the attributes of the specified bean class.
 
-- If an attribute is also a Java object, you can double-click the object to display its other attributes.
+-   If an attribute is also a Java object, you can double-click the object to display its other attributes.
 
-- To map a field, select an attribute name and click the **Add Selected Field(s)** button.
+-   To map a field, select an attribute name and click the **Add Selected Field(s)** button.

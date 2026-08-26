@@ -9,9 +9,9 @@ This chapter describes the recommended procedure for upgrading to JasperReports 
 
 This chapter contains the following sections:
 
-- Migrating From Compact to Split (samedb)
+-   Migrating From Compact to Split (samedb)
 
-- Migrating From Compact to Split (newdb)
+-   Migrating From Compact to Split (newdb)
 
 ## Migrating From Compact to Split (samedb)
 
@@ -21,15 +21,15 @@ To migrate from Compact installation to Split installation (samedb):
 
 2.  Run the following command to migrate from Compact to Split:
 
-    - Windows: `js-migrate-to-split-samedb.bat`
-    - Linux and Mac OSX: `./js-migrate-to-split-samedb.sh`
+    -   Windows: `js-migrate-to-split-samedb.bat`
+    -   Linux and Mac OSX: `./js-migrate-to-split-samedb.sh`
 
     The `audit` database is created with empty tables.
 
 3.  Run the following command to transfer the data (Audit, Access, and Log monitoring data) to the `audit` database from the `jasperserver` database:
 
-    - Windows: `transfer-audit-data.bat`
-    - Linux and Mac OSX: `./transfer-audit-data.sh`
+    -   Windows: `transfer-audit-data.bat`
+    -   Linux and Mac OSX: `./transfer-audit-data.sh`
 
     The data is transferred to the `audit` database and the tables are deleted from the `jasperserver` database. Rerun the command if there is any interruption in the data transfer process, it will resume the transfer process from where it was interrupted in the previous run.
 
@@ -43,14 +43,14 @@ To migrate from Compact installation to Split installation (newdb):
 
 2.  Run the following command to migrate from Compact to Split and import the resources:
 
-    - Windows:
+    -   Windows:
 
-      - `js-migrate-to-split-newdb.bat js-<ver>-export.zip` (Migrate without the Audit, Access, and Log Monitoring data)
-      - `js-migrate-to-split-newdb.bat js-<ver>-export.zip include-access-events include-audit-events include-monitoring-events` (Migrate with the Audit, Access, and Log Monitoring data)
+        -   `js-migrate-to-split-newdb.bat js-<ver>-export.zip` (Migrate without the Audit, Access, and Log Monitoring data)
+        -   `js-migrate-to-split-newdb.bat js-<ver>-export.zip include-access-events include-audit-events include-monitoring-events` (Migrate with the Audit, Access, and Log Monitoring data)
 
-    - Linux and Mac OSX:
+    -   Linux and Mac OSX:
 
-      - `./js-migrate-to-split-newdb.sh js-<ver>-export.zip` (Migrate without the Audit, Access, and Log Monitoring data)
-      - `./js-migrate-to-split-newdb.sh js-<ver>-export.zip include-access-events include-audit-events include-monitoring-events` (Migrate with the Audit, Access, and Log Monitoring data)
+        -   `./js-migrate-to-split-newdb.sh js-<ver>-export.zip` (Migrate without the Audit, Access, and Log Monitoring data)
+        -   `./js-migrate-to-split-newdb.sh js-<ver>-export.zip include-access-events include-audit-events include-monitoring-events` (Migrate with the Audit, Access, and Log Monitoring data)
 
 The `jasperserver` database and `audit` database are created and the resources are imported from the zip file provided as the input.

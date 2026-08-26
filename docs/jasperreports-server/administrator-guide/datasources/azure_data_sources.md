@@ -14,9 +14,9 @@ Before you can create an Azure SQL data source, you will need a management certi
 To upload a certificate file to the repository
 
 1.  Log into JasperReports Server as an administrator.
-2.  Click **View \>Repository** and expand the folder tree.
+2.  Click **View &gt;Repository** and expand the folder tree.
 3.  Browse to the folder where you want to save the certificate.
-4.  Right-click the folder and select **Add Resource \> File \> Azure Certificate** from the context menu.
+4.  Right-click the folder and select **Add Resource &gt; File &gt; Azure Certificate** from the context menu.
 5.  Click **Choose File** to locate and upload the certificate key exchange (`.pfx`) or server certificate (`.cer`) file.
 6.  Enter a name and resource ID for the file.
 7.  Click **Submit** to save the file to the repository.
@@ -29,7 +29,7 @@ To create an Azure SQL data source
 
 1.  Log into JasperReports Server as an administrator.
 
-2.  Click **View \> Repository**, expand the folder tree, and right-click a folder to select **Add Resource \> Data Source** from the context menu. Alternatively, you can select **Create \> Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is **Data Sources**. The **New Data Source** page appears.
+2.  Click **View &gt; Repository**, expand the folder tree, and right-click a folder to select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page and specify a folder location later. If you installed the sample data, the suggested folder is **Data Sources**. The **New Data Source** page appears.
 
 3.  From the **Type** dropdown, select **Azure SQL**. The information on the page changes to reflect what's needed to define an Azure SQL data source.
 
@@ -55,13 +55,13 @@ To create an Azure SQL data source
 6.  When you've entered all the information, click **Test Connection**.<br>
     If your connection is successful, a message appears to the right of the button. Sometimes the process takes a few minutes. In that case you'll see an alert. Try the test again after one or two minutes. The test performs the following actions:
 
-    - Validates the user name and password.
+    -   Validates the user name and password.
 
-    - Creates firewall access rules to authorize ingress to the data service.
+    -   Creates firewall access rules to authorize ingress to the data service.
 
-    - Adds the IP address of your JasperReports Server instance to the access rule.
+    -   Adds the IP address of your JasperReports Server instance to the access rule.
 
-      If you want to control details of the access rule name or specify the IP address manually, see [Configuring Cloud Services](../configuration/configuring_cloud_services.md).
+        If you want to control details of the access rule name or specify the IP address manually, see [Configuring Cloud Services](../configuration/configuring_cloud_services.md).
 
 7.  Click **Save**. The **Save** dialog appears.
 

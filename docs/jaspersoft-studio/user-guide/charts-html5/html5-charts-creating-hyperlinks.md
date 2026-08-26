@@ -7,9 +7,9 @@ description: "To follow a link in an HTML 5 chart, the user clicks a chart compo
 
 To follow a link in an HTML 5 chart, the user clicks a chart component that represents a measure. This hyperlink is created by a specific extension to that chart component, which evaluates the properties of the measure. You can create hyperlinks in two ways:
 
-- Use a simple configuration to create hyperlinks that are automatically bucketed by the category in a simple chart.
+-   Use a simple configuration to create hyperlinks that are automatically bucketed by the category in a simple chart.
 
-- Use advanced configuration to create more complex values for a hyperlink. To do this, you define a bucket property, a key/value pair associated with a category or series level, and then define the hyperlink value using an expression.
+-   Use advanced configuration to create more complex values for a hyperlink. To do this, you define a bucket property, a key/value pair associated with a category or series level, and then define the hyperlink value using an expression.
 
 This example shows how to combine a URL with a hidden measure to create an interesting user experience.
 
@@ -62,13 +62,13 @@ Configure a simple hyperlink
 
 2.  Click **Use Hyperlink** and enter the following information:
 
-    - **Hyperlink Target**: Top
-    - **Hyperlink Type**: Reference
-    - **Hyperlink Reference Expression**: `"http://ask.com/#q=" + $F{SHIPCOUNTRY}`
+-   **Hyperlink Target**: Top
 
-3.  Click **OK** twice to return to design view.
+    -   **Hyperlink Type**: Reference
+    -   **Hyperlink Reference Expression**: `"http://ask.com/#q=" + $F{SHIPCOUNTRY}`
 
-4.  Preview your chart as HTML or using the interactive report viewer. Click any column to verify it points to the Ask.com search for that country.
+1.  Click **OK** twice to return to design view.
+2.  Preview your chart as HTML or using the interactive report viewer. Click any column to verify it points to the Ask.com search for that country.
 
 ## Working with Bucket Properties and Hidden Measures
 
@@ -83,7 +83,7 @@ Before creating a hyperlink, you can view the hyperlink you just created to see 
 
 View the existing hyperlink
 
-1.  Select **Category Levels \> Level 1** and click Modify.
+1.  Select **Category Levels &gt; Level 1** and click Modify.
 
     The **Category Levels** dialog for this category is displayed. This dialog shows details for the category, such as name and value type.
 
@@ -103,41 +103,43 @@ Add a series for Year
 To make this example slightly more useful, and to see how you can use hyperlink information from different dimensions, this example shows how to add an extra dimension called Year, so the chart can display the number of orders placed in a specific country in a specific year. Then you can create a hyperlink that contains both the country and the year.
 
 1.  Double-click the chart.
-
 2.  Click the **Chart Data** tab and select the **Configuration** subtab.
-
 3.  Click **Add** in the Series Levels area.
-
 4.  Add a series level configured as shown below:
 
-    - Name: Year
-    - Expression: YEAR( \$F{ORDERDATE} )
+-   Name: Year
 
-    |                                                                          |
-    |--------------------------------------------------------------------------|
-    | ![html5 hyperlinks series](../assets/images/html5-hyperlinks-series.png) |
-    | *Figure 3: Adding a Series Level to Define Buckets*                      |
+    -   Expression: YEAR( $F{ORDERDATE} )
 
-5.  Click **OK** twice.
+        |                                                                          |
+        |--------------------------------------------------------------------------|
+        | ![html5 hyperlinks series](../assets/images/html5-hyperlinks-series.png) |
+        | *Figure 3: Adding a Series Level to Define Buckets*                      |
 
-    Once again, you can preview the chart. Now, for each country, the chart shows the number of orders split by year.
+        1.  Click **OK** twice.
 
-    |  |
-    |----|
-    | ![jss hyperlink greenblue col countries](../assets/images/jss-hyperlink-greenblue-col-countries.png) |
-    | *Figure 4: Column Chart with Order Numbers Split by Year* |
+        Once again, you can preview the chart. Now, for each country, the chart shows the number of orders split by year.
 
-    Create a measure to hold the series hyperlink
+        |  |
+        |----|
+        | ![jss hyperlink greenblue col countries](../assets/images/jss-hyperlink-greenblue-col-countries.png) |
+        | *Figure 4: Column Chart with Order Numbers Split by Year* |
 
-    To create a more complex hyperlink, you can use a measure. Measures are usually designed to hold numeric values, most of the time the result of some aggregation function (in our example we show the count of orders). But a measure can actually be anything.
+        Create a measure to hold the series hyperlink
 
-    The following example creates a URL string:
+        To create a more complex hyperlink, you can use a measure. Measures are usually designed to hold numeric values, most of the time the result of some aggregation function (in our example we show the count of orders). But a measure can actually be anything.
 
-    - **Name**: URL Measure
-    - **Hidden**:  true (It is very important to select the checkbox, because you are not going to display this measure, it would not make sense to display a non numeric value.)
-    - **Calculation**: Nothing
-    - **Value Expression**: `"http://google.com/#q=" + $F{SHIPCOUNTRY} + " " + YEAR($F{ORDERDATE})`
-    - **Value Class Name**: `java.lang.String`
+        The following example creates a URL string:
+
+-   **Name**: URL Measure
+
+-   **Hidden**:  true (It is very important to select the checkbox, because you are not going to display this measure, it would not make sense to display a non numeric value.)
+
+-   **Calculation**: Nothing
+
+-   **Value Expression**: `"http://google.com/#q=" + $F{SHIPCOUNTRY} + " " + YEAR($F{ORDERDATE})`
+
+-   **Value Class Name**: `java.lang.String`
 
     |  |
     |----|
@@ -146,34 +148,39 @@ To make this example slightly more useful, and to see how you can use hyperlink 
 
     For this example, the most important things to note are:
 
-    - The measure is marked as **Hidden**.
-    - The calculation type is set to **Nothing**.
-    - The class of the measure is `String`. Specifically the example creates a `String` URL with a reference to both the country and the year of the order.
+    -   The measure is marked as **Hidden**.
 
-    Create a hyperlink that uses a hidden measure
+    -   The calculation type is set to **Nothing**.
 
-6.  Click **OK** to return to the **HTML5 Chart Edit Dialog**.
+    -   The class of the measure is `String`. Specifically the example creates a `String` URL with a reference to both the country and the year of the order.
 
-7.  Select Measure 1, the visible measure used for the columns in the chart.
+        Create a hyperlink that uses a hidden measure
 
-8.  Click **Modify**.
+        1.  Click **OK** to return to the **HTML5 Chart Edit Dialog**.
 
-9.  If you want, change the name of Measure 1 to **Number of Orders**.
+        2.  Select Measure 1, the visible measure used for the columns in the chart.
 
-10. Click **Edit Hyperlink**.
+        3.  Click **Modify**.
 
-    |  |
-    |----|
-    | ![jss hyperlink user measure](../assets/images/jss-hyperlink-user-measure.png) |
-    | *Figure 6: Creating a Hyperlink for the Measure* |
+        4.  If you want, change the name of Measure 1 to **Number of Orders**.
 
-11. Set the following values:
+        5.  Click **Edit Hyperlink**.
 
-    - **Use Hyperlink**: true
-    - **Hyperlink Target**: Top
-    - **Hyperlink Type**: Reference
-    - **Use Measure Value**: Select this and enter the name of the measure that contains the expression for the hyperlink, **URL Measure**.
+            |  |
+            |----|
+            | ![jss hyperlink user measure](../assets/images/jss-hyperlink-user-measure.png) |
+            | *Figure 6: Creating a Hyperlink for the Measure* |
 
-12. Click **OK** three times to return to design view. Then save the report and preview it as HTML.
+        6.  Set the following values:
+
+    -   **Use Hyperlink**: true
+
+    -   **Hyperlink Target**: Top
+
+    -   **Hyperlink Type**: Reference
+
+    -   **Use Measure Value**: Select this and enter the name of the measure that contains the expression for the hyperlink, **URL Measure**.
+
+1.  Click **OK** three times to return to design view. Then save the report and preview it as HTML.
 
 Now, each column in the stacked column chart points to a search for the corresponding country and year.

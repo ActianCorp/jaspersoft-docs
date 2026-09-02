@@ -17,7 +17,7 @@ Once you have created a virtual data source, you create a Domain that joins tabl
 
 ![js VDS structure charts](../assets/images/js-VDS-structure-charts.png)
 
-*Figure 1: Virtual Data Source Scenario*
+*Figure 1 Virtual Data Source Scenario*
 
 When you combine data sources into a virtual data source, you select an alias for each data source you include. This alias is added as a prefix to the tables in the original data source to ensure that table names are unique across the virtual data source.
 
@@ -37,7 +37,7 @@ To create a virtual data source
 
     ![js DataSource Virtual](../assets/images/js-DataSource-Virtual.png)
 
-    *Figure 2: Creating a Virtual Data Source*
+    *Figure 2 Creating a Virtual Data Source*
 
     !!! note
 
@@ -172,7 +172,7 @@ Virtual data sources can connect to Cassandra big data sources to make them avai
 To create a virtual data source that accesses a Cassandra data source
 
 1.  Create a Cassandra data source, or verify that it was created as described in [JDBC Data Sources](jdbc_data_sources.md).
-2.  Create a virtual data source as described in Virtual Data Sources.
+2.  Create a virtual data source as described in [Virtual Data Sources](#virtual-data-sources).
 3.  In the virtual data source creation dialog, select the Cassandra data source that you created in the first step, and save the virtual data source. You can select one or more Cassandra data sources, or any mix of Cassandra, JDBC, and JNDI data sources.
 4.  Create a Domain, specify the virtual data source you just created, and then select the Cassandra data tables when you create the Domain schema. The data from the data source is mapped to tables and fields in the Domain that you can use to create joins, filters, and all other features of a Domain.
 

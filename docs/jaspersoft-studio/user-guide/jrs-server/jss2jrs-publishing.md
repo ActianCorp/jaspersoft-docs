@@ -150,7 +150,7 @@ To publish a report to the server
     |  |
     |----|
     | ![report publishing wizard](../assets/images/report-publishing-wizard.png) |
-    | *Figure 1: Report Publishing Wizard* |
+    | *Figure 1 Report Publishing Wizard* |
 
 3.  Locate the directory for storing your report.
 
@@ -161,15 +161,15 @@ To publish a report to the server
     |                                                              |
     |--------------------------------------------------------------|
     | ![jss jrs resources](../assets/images/jss-jrs-resources.png) |
-    | *Figure 2: Select Resources*                                 |
+    | *Figure 2 Select Resources*                                  |
 
 6.  Select any resources that you want to upload with your report and check the box if you want to overwrite previous versions of those resources. Click **Next**. The **Configure the data source** window opens.
 
     |                                                                      |
     |----------------------------------------------------------------------|
     | ![configure data source](../assets/images/configure-data-source.png) |
-    | *Figure 3: Configure Data Source*                                    |
+    | *Figure 3 Configure Data Source*                                     |
 
-7.  Select a data source configuration. See Publishing Data Adapters for more information.
+7.  Select a data source configuration. See [Publishing Data Adapters](#choosing-a-data-source-for-a-published-report) for more information.
 
 8.  Click **Finish**. The report is uploaded to the server. If there are no errors, an appropriate message is shown.

@@ -24,4 +24,4 @@ By default, the Condition is set to Equals.
 
 ![js alert create condition tab](../assets/images/js-alert-create-condition-tab.png)
 
-*Figure 1: Condition Tab*
+*Figure 1 Condition Tab*

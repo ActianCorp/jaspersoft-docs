@@ -9,11 +9,11 @@ On the **Parameters** tab, you can view the input controls that are currently ap
 
 ![js alert create parameters](../assets/images/js-alert-create-parameters.png)
 
-*Figure 1: Parameters Tab Enabled*
+*Figure 1 Parameters Tab Enabled*
 
 ![js alert create parameters disabled](../assets/images/js-alert-create-parameters-disabled.png)
 
-*Figure 2: Parameters Tab Disabled*
+*Figure 2 Parameters Tab Disabled*
 
 !!! note
 

@@ -7,8 +7,9 @@ description: "If you have an existing JRDataSource implementation used with Jasp
 
 If you have an existing `JRDataSource` implementation used with JasperReports Library that you'd like to use in JasperReports Server, you need to implement the supporting classes and configure the server. You need to create or edit the following files:
 
+**Files Used by a Custom Data Source Implementation**
+
 <table>
-<caption><p>Files Used by a Custom Data Source Implementation</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -100,7 +101,7 @@ These properties are defined in two places that must work together:
 
 -   Your `ReportDataSourceService` implementation must have getters and setters for each property, and your code can use the values for any type of processing. For source code examples, see [Hibernate Custom Data Source](custom-data-source-examples.md).
 
--   The Spring beans need the list of properties to set up the New Data Source dialog, save the user values in the repository, and later instantiate your `ReportDataSourceService` when needed to fill a report. For examples of both editable and hidden properties, see the XML example in 1.1.5, “Defining the Custom Data Source in Spring,” on page 1.
+-   The Spring beans need the list of properties to set up the New Data Source dialog, save the user values in the repository, and later instantiate your `ReportDataSourceService` when needed to fill a report. For examples of both editable and hidden properties, see the XML example in [1.1.5, “Defining the Custom Data Source in Spring,” on page 1](#defining-the-custom-data-source-in-spring).
 
 ### Implementing the Optional Validator Interface
 
@@ -141,7 +142,7 @@ To create a validator, implement the `CustomDataSourceValidator` interface as fo
 <td><p><code>CustomDataSourceValidator</code></p></td>
 <td><p><code>validatePropertyValues(CustomReportDataSource ds, Errors errors)</code><br />
 </p></td>
-<td><p>Your code checks parameters and calls <code>errors.rejectValue()</code> with the appropriate property name and error code (see <span>Defining the Message Catalog</span>).</p></td>
+<td><p>Your code checks parameters and calls <code>errors.rejectValue()</code> with the appropriate property name and error code (see <a href="#defining-the-message-catalog">Defining the Message Catalog</a>).</p></td>
 </tr>
 </tbody>
 </table>
@@ -424,7 +425,7 @@ If you use your JasperReports Server in multiple languages, you can provide mult
 
 `.../WEB-INF/bundles`
 
-To configure your message catalog, add a bean definition such as the following to the Spring definition file that you created in Defining the Custom Data Source in Spring:
+To configure your message catalog, add a bean definition such as the following to the Spring definition file that you created in [Defining the Custom Data Source in Spring](#defining-the-custom-data-source-in-spring):
 
 ``` xml
 <bean class="com.jaspersoft.jasperserver.api.common.util.spring.GenericBeanUpdater">

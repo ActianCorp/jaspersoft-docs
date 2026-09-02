@@ -7,8 +7,9 @@ description: "The navigation table appears at the top of the OLAP view (Foodmart
 
 The navigation table appears at the top of the OLAP view ([Foodmart Sample Analysis View](opening_an_olap_view.md)). It shows the data that is retrieved by the current MDX query, which appears in both the main view and in a drill-through tables.
 
+**Navigation Table Icons and Options**
+
 <table>
-<caption><p>Navigation Table Icons and Options</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />

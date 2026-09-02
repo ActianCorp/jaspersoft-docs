@@ -124,6 +124,6 @@ OpenDocument Spreadsheet (.ods)</td>
 
     ![js Schedule New OutputDestination](../assets/images/js-Schedule-New-OutputDestination.png)
 
-    *Figure 1: Output Page for Scheduling a Dashboard – Output Destination*
+    *Figure 1 Output Page for Scheduling a Dashboard – Output Destination*
 
 When you click **Save**, the job appears in the list of scheduled jobs.

@@ -24,7 +24,7 @@ Export parameters have default values that can be set at the report- or applicat
 
 ## Adding the Exporter to the Report Viewer
 
-The most prominent place where the export channel should be available is the page that appears when the report is run. The drop-down list of export channels in the default report viewer is shown in “Adding the Exporter to the Report Viewer” on page 1 . Adding a new exporter to the report viewer involves:
+The most prominent place where the export channel should be available is the page that appears when the report is run. The drop-down list of export channels in the default report viewer is shown in [“Adding the Exporter to the Report Viewer” on page 1](#adding-the-exporter-to-the-report-viewer) . Adding a new exporter to the report viewer involves:
 
 -   Implementing a new exporter action class that extends `AbstractReportExporter`.
 
@@ -161,7 +161,7 @@ To add the exporter to the report scheduler
 
     The `{number}` and `<MyFormat>` values are the same as you used previously in step 2.
 
-5.  If you didn’t add the label in 1.1.2, “Adding the Exporter to the Report Viewer,” on page 1, add it now. In the jasperserver_messages.properties file (found in WEB-INF/bundles), add the new `report.output.<MyFormat>.label` key introduced in the reportJobBeans.xml. For example:
+5.  If you didn’t add the label in [1.1.2, “Adding the Exporter to the Report Viewer,” on page 1](#adding-the-exporter-to-the-report-viewer), add it now. In the jasperserver_messages.properties file (found in WEB-INF/bundles), add the new `report.output.<MyFormat>.label` key introduced in the reportJobBeans.xml. For example:
 
     `report.output.<MyFormat>.label=<MyFormat>`
 

@@ -13,7 +13,7 @@ In addition to remote JMX connections, JasperReports Server makes the diagnostic
 
 ![js Repository DiagnosticReports](../assets/images/js-Repository-DiagnosticReports.png)
 
-*Figure 1: Diagnostic Report in the Repository*
+*Figure 1 Diagnostic Report in the Repository*
 
 The diagnostic topic and report are based on the diagnostic data source. This is a custom data source that encapsulates the JMX information and makes it available as a data source for reports. In addition, there is an Internal Diagnostic Data Source type that can be used to create a new data source. If you accidentally delete the diagnostic data source, select **Create &gt; Data Source**, set the type to **Internal Diagnostic Data Source**, and set the name and location to re-create it.
 
@@ -21,4 +21,4 @@ The following figure shows the beginning of the diagnostic report. This report d
 
 ![js diagnostic DiagnosticReport](../assets/images/js-diagnostic-DiagnosticReport.png)
 
-*Figure 2: Contents of the Diagnostic Report*
+*Figure 2 Contents of the Diagnostic Report*

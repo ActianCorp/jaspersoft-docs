@@ -14,7 +14,7 @@ To reach the AWS Settings page
 
 ![js Settings Cloud](assets/images/js-Settings-Cloud.png)
 
-*Figure 1: Cloud Settings Page*
+*Figure 1 Cloud Settings Page*
 
 On this page you can enable AWS Security Group changes for the following settings:
 

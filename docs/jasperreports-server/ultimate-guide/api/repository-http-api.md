@@ -86,7 +86,7 @@ Reports support the following types of parameters:
 
 -   Reserved report parameters such as `output` or `reportLocale`.
 
--   Input control parameters, described in 1.1.4, “Input Control Parameters for Reports and Dashboards,” on page 1.
+-   Input control parameters, described in [1.1.4, “Input Control Parameters for Reports and Dashboards,” on page 1](#input-control-parameters-for-reports-and-dashboards).
 
 The following example executes the same report as the previous section, but also passes `7` as an input control parameter and exports to PDF instead of HTML:
 
@@ -152,7 +152,7 @@ http://<host>:<port>/<context>/dashboard/designer.html#/public/Samples/Dashboard
 
 -   The reserved dashboard parameters `viewAsDashboardFrame` and `dashboardResource`
 
--   Input control parameters, described in 1.1.4, “Input Control Parameters for Reports and Dashboards,” on page 1.
+-   Input control parameters, described in [1.1.4, “Input Control Parameters for Reports and Dashboards,” on page 1](#input-control-parameters-for-reports-and-dashboards).
 
 As of JasperReports Server 6.1, you can use non-authentication parameters before or after the hash sign (#). However, if you place general parameters after the hash sign, then on Dashboard Viewer load, the parameters are moved before the hash sign and the page is redirected to the resulting URL. The authentication parameters `j_username` and `j_password` cannot be redirected; they must appear before the hash sign.
 

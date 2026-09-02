@@ -9,7 +9,7 @@ JasperReports Server user Favorites enables you to add the repository resources 
 
 This chapter includes the following sections:
 
--   Adding Resources to Favorites
+-   [Adding Resources to Favorites](#adding-resources-to-favorites)
 -   [Removing Resources from Favorites](within-object.md)
 -   [Accessing Favorites](accessing-fav.md)
 
@@ -31,7 +31,7 @@ To add an item to Favorites using the star icon
 
 ![Click star](../assets/images/Click%20star.png)
 
-*Figure 1: Item Added to Favorites*
+*Figure 1 Item Added to Favorites*
 
 Similarly, you can add the other files to the Favorites in Repository page and Search Results page.
 
@@ -44,7 +44,7 @@ To add an item to Favorites using the context menu
 
 ![context menu fav](../assets/images/context%20menu_fav.jpg)
 
-*Figure 2: Adding Report to Favorites*
+*Figure 2 Adding Report to Favorites*
 
 Each object type has different options in its associated context menu. See the table below for the **Add to Favorites** option for each object type.
 

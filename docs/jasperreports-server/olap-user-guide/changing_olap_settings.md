@@ -23,7 +23,7 @@ To change the OLAP settings
 
     ![ja add view olapoptions](assets/images/ja-add-view-olapoptions.png)
 
-    *Figure 1: OLAP Settings Page, Commercial Editions*
+    *Figure 1 OLAP Settings Page, Commercial Editions*
 
     Each property is listed with its underlying name (as it appears in the underlying OLAP engine), as well as a more descriptive label. The properties are described in [Table 1-1](changing_olap_settings.md).
 
@@ -47,8 +47,9 @@ Test your views and adjust properties as your findings dictate.
 
 The following table lists the properties’ meanings.
 
+**OLAP Settings**
+
 <table>
-<caption><p>OLAP Settings</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

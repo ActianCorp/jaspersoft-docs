@@ -27,6 +27,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Server Diagnostics](diagnostics/diagnostics_intro.md)
 - [Troubleshooting](troubleshooting/troubleshooting_intro.md)
 - [Localization](localization/localization_intro.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](bookmatter/about-jrs-admin-guide.md)

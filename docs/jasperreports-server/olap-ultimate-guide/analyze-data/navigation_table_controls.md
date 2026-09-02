@@ -25,7 +25,7 @@ Clicking ![ja table collapse all](../assets/images/ja-table-collapse-all.png) in
 
 ![ja ug analysisview tools expandpositionexample](../assets/images/ja-ug-analysisview-tools-expandpositionexample.png)
 
-*Figure 1: Expanding Positions*
+*Figure 1 Expanding Positions*
 
 ## Zoom on Drill
 
@@ -45,7 +45,7 @@ To disable drill-through, open the Display Options dialog ([Figure 1-10, “Sort
 
 ![ja ug analysisview tools DrillThrutable](../assets/images/ja-ug-analysisview-tools-DrillThrutable.png)
 
-*Figure 2: Drill-through Table for Unit Sales*
+*Figure 2 Drill-through Table for Unit Sales*
 
 In the drill-through tables, these controls are available:
 
@@ -63,7 +63,7 @@ In the drill-through tables, these controls are available:
 
     ![ja ug analysisview tools EditProps](../assets/images/ja-ug-analysisview-tools-EditProps.png)
 
-    *Figure 3: Edit Properties Dialog for a Drill-through Table*
+    *Figure 3 Edit Properties Dialog for a Drill-through Table*
 
     The Edit Properties dialog has three controls:
 

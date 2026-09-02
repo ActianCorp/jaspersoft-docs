@@ -33,11 +33,11 @@ The system administrator (`superuser`) can add JDBC drivers for other databases 
 
 By default, no one can upload or update JAR files for JDBC drivers from the UI. Only the system administrator (`superuser`) can enable the setting and then manage the JDBC drivers, but once uploaded, the JDBC drivers are available to all administrators who create data sources. For more information, see the following sections:
 
--   Enabling JDBC Driver Uploads
+-   [Enabling JDBC Driver Uploads](#enabling-jdbc-driver-uploads)
 
--   Adding a JDBC Driver
+-   [Adding a JDBC Driver](#adding-a-jdbc-driver)
 
--   Updating a JDBC Driver
+-   [Updating a JDBC Driver](#updating-a-jdbc-driver)
 
 !!! note
 
@@ -81,9 +81,9 @@ Result: The **Select Driver** button for JAR upload should be disabled.
 
 For more information, see the following sections:
 
--   Adding a JDBC Driver
+-   [Adding a JDBC Driver](#adding-a-jdbc-driver)
 
--   Updating a JDBC Driver
+-   [Updating a JDBC Driver](#updating-a-jdbc-driver)
 
 !!! note
 
@@ -93,7 +93,7 @@ For more information, see the following sections:
 
 1.  Log in as the system administrator (`superuser`).
 
-2.  Enable JDBC driver uploads, as described in Enabling JDBC Driver Uploads.
+2.  Enable JDBC driver uploads, as described in [Enabling JDBC Driver Uploads](#enabling-jdbc-driver-uploads).
 
 3.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page.
 
@@ -103,7 +103,7 @@ For more information, see the following sections:
 
     ![js JDBC driverselection](../assets/images/js-JDBC-driverselection.png)
 
-    *Figure 1: Viewing the List of Available JDBC Drivers*
+    *Figure 1 Viewing the List of Available JDBC Drivers*
 
 6.  Select the driver that has not been installed, then click **Select Driver**. The **Select Driver** dialog appears.
 
@@ -111,7 +111,7 @@ For more information, see the following sections:
 
     ![js JDBC adddriver](../assets/images/js-JDBC-adddriver.png)
 
-    *Figure 2: Adding a JDBC Driver*
+    *Figure 2 Adding a JDBC Driver*
 
 8.  In the **Select Driver** dialog, click **Browse** to locate the appropriate driver JAR file. If your driver has more than one JAR file, click the **Browse** button that appears after selecting the first file.
 
@@ -123,7 +123,7 @@ You can replace any driver that you upload with newer versions of the same drive
 
 1.  Log in as the system administrator (`superuser`).
 
-2.  Enable JDBC driver uploads, as described in Enabling JDBC Driver Uploads.
+2.  Enable JDBC driver uploads, as described in [Enabling JDBC Driver Uploads](#enabling-jdbc-driver-uploads).
 
 3.  Select **View &gt; Repository**, right-click a folder's name, and select **Add Resource &gt; Data Source** from the context menu. Alternatively, you can select **Create &gt; Data Source** from the main menu on any page.
 
@@ -137,7 +137,7 @@ You can replace any driver that you upload with newer versions of the same drive
 
     ![js JDBC updatedriver](../assets/images/js-JDBC-updatedriver.png)
 
-    *Figure 3: Updating a JDBC Driver*
+    *Figure 3 Updating a JDBC Driver*
 
 8.  In the **Select Driver** dialog, click **Browse** to locate the JAR file for the new driver.
 
@@ -157,7 +157,7 @@ You can replace any driver that you upload with newer versions of the same drive
 
     ![js Settings RestoreDefaults jdbc](../assets/images/js-Settings-RestoreDefaults-jdbc.png)
 
-    *Figure 4: Removing an Uploaded JDBC Driver*
+    *Figure 4 Removing an Uploaded JDBC Driver*
 
 5.  Click **Save** to save your changes.
 

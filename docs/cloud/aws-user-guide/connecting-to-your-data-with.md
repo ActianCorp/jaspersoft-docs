@@ -7,7 +7,7 @@ description: Follow the instructions in the chapter to connect JasperReports Ser
 
 # Connecting to Your Data with JasperReports Server
 
-Follow the instructions in the chapter to connect JasperReports Server to Amazon RDS or Redshift. For Amazon Elastic MapReduce (EMR) see Connect to Amazon EMR. For connecting JasperReports Server to non-Amazon data sources, see Additional Connection Types.
+Follow the instructions in the chapter to connect JasperReports Server to Amazon RDS or Redshift. For Amazon Elastic MapReduce (EMR) see [Connect to Amazon EMR](#connect-to-amazon-emr). For connecting JasperReports Server to non-Amazon data sources, see [Additional Connection Types](#additional-connection-types).
 
 ## Launching JasperReports Server on AWS Marketplace
 
@@ -37,7 +37,7 @@ To connect to Amazon RDS or Redshift
 
 2.  Go to **Create** &gt; **Data Source**.![AWS DataSource](assets/images/AWS-DataSource.png)
 
-    *Figure 1: Create &gt; Data Source menu*
+    *Figure 1 Create &gt; Data Source menu*
 
 3.  Select **AWS Data Source** from the **Type** dropdown menu.
 
@@ -45,7 +45,7 @@ To connect to Amazon RDS or Redshift
 
 5.  Under **AWS Settings**, select **EC2 instance credentials**. ![aws datasource](assets/images/aws_datasource.png)
 
-    *Figure 2: Add Data Source dialog*
+    *Figure 2 Add Data Source dialog*
 
 6.  Enter your database connection info:
 
@@ -57,7 +57,7 @@ To connect to Amazon RDS or Redshift
 
     ![ec2 data](assets/images/ec2-data.png)
 
-    *Figure 3: New Data Source dialog*
+    *Figure 3 New Data Source dialog*
 
 7.  Test your connection:
 
@@ -73,7 +73,7 @@ You should always test your connection. This button does much more than just tes
 
 ![test connect](assets/images/test_connect.png)
 
-*Figure 4: Test Connection dialog*
+*Figure 4 Test Connection dialog*
 
 1.  Create a Domain:
 
@@ -81,7 +81,7 @@ You should always test your connection. This button does much more than just tes
 
     ![AWS Domain](assets/images/AWS-Domain.png)
 
-    *Figure 5: Create &gt; Domain menu*
+    *Figure 5 Create &gt; Domain menu*
 
 2.  Analyze your data:
 
@@ -89,7 +89,7 @@ You should always test your connection. This button does much more than just tes
 
     ![AWS AdHoicView](assets/images/AWS-AdHoicView.png)
 
-    *Figure 6: Create &gt; Ad Hoc View menu*
+    *Figure 6 Create &gt; Ad Hoc View menu*
 
 3.  Next steps:
 
@@ -105,7 +105,7 @@ Refer to the [Online Learning Portal](https://www.jaspersoft.com/bi-training-cen
 
     ![aws credentials](assets/images/aws_credentials.png)
 
-    *Figure 7: Entering AWS credentials*
+    *Figure 7 Entering AWS credentials*
 
 -   JDBC / JNDI Connections
 
@@ -115,7 +115,7 @@ Refer to the [Online Learning Portal](https://www.jaspersoft.com/bi-training-cen
 
     ![jdbc datasource](assets/images/jdbc_datasource.png)
 
-    *Figure 8: Using JDBC / JNDI connections*
+    *Figure 8 Using JDBC / JNDI connections*
 
 -   Amazon RDS or Redshift
 

@@ -16,7 +16,7 @@ To add a template to Jaspersoft Studio
     |  |
     |----|
     | ![Template Location Preferences](assets/images/Template%20Location%20Preferences.png) |
-    | *Figure 1: Template Location Preferences* |
+    | *Figure 1 Template Location Preferences* |
 
 3.  Navigate to the directory in which you stored your template.
 

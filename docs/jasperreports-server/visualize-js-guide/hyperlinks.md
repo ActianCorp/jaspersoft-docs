@@ -10,9 +10,9 @@ Both reports and dashboards include hyperlinks (URLs) that link to websites or o
 This chapter contains the following sections:
 
 -   [Structure of Hyperlinks](../../jasperreports-io/professional-user-guide/jasperreports-server-visualize.js-guide/hyperlinks.md)
--   Customizing Links
--   Drill-Down in Separate Containers
--   Accessing Data in Links
+-   [Customizing Links](#customizing-links)
+-   [Drill-Down in Separate Containers](#drill-down-in-separate-containers)
+-   [Accessing Data in Links](#accessing-data-in-links)
 
 ## Structure of Hyperlinks
 

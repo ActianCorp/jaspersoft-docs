@@ -32,7 +32,7 @@ To create the chart
     |  |
     |----|
     | ![jss advanced configuration](../assets/images/jss-advanced_configuration.png) |
-    | *Figure 1: HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
+    | *Figure 1 HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
 
 4.  Under **Categories Levels**, select Level1 and click **Modify**. Then enter the following:
 
@@ -77,7 +77,7 @@ To create the chart
             |                                                                          |
             |--------------------------------------------------------------------------|
             | ![jss tilemap properties](../assets/images/jss-tilemap%20properties.png) |
-            | *Figure 2: Setting Tile Shape and Color By Point*                        |
+            | *Figure 2 Setting Tile Shape and Color By Point*                         |
 
         5.  Click **Show Advanced Properties**.
 
@@ -86,7 +86,7 @@ To create the chart
             |                                                                          |
             |--------------------------------------------------------------------------|
             | ![jss edit property array](../assets/images/jss-edit-property-array.png) |
-            | *Figure 3: Edit property array dialog*                                   |
+            | *Figure 3 Edit property array dialog*                                    |
 
         7.  On the Item list tab, click ![jss icon html5 add measure](../assets/images/jss-icon-html5-add-measure.png) to add an item. A new item is created with the name Item 1. Enter the following information.
 
@@ -111,7 +111,7 @@ Click **OK**.
 |                                                      |
 |------------------------------------------------------|
 | ![jss ColorAxis](../assets/images/jss-ColorAxis.png) |
-| *Figure 4: Adding Required Information for Items*    |
+| *Figure 4 Adding Required Information for Items*     |
 
 1.  To enable the labels to appear in each tile map, select **plotOptions &gt; tilemap &gt; dataLables** and set enabled to true.
 2.  To preview the chart from inside the dialog, click **Show Chart Preview**.
@@ -119,4 +119,4 @@ Click **OK**.
 |                                                                |
 |----------------------------------------------------------------|
 | ![jss tilemap output](../assets/images/jss-tilemap_output.png) |
-| *Figure 5: Tile Map Example*                                   |
+| *Figure 5 Tile Map Example*                                    |

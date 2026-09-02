@@ -17,7 +17,7 @@ To create a list of values
 
     ![js AddListOfValues](../assets/images/js-AddListOfValues.png)
 
-    *Figure 1: Add List of Values Page*
+    *Figure 1 Add List of Values Page*
 
 4.  Enter a name for the list of values. Resource ID is filled in automatically, and the description is optional.
 

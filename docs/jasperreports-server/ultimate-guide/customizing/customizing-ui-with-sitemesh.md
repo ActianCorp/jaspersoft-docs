@@ -75,7 +75,7 @@ In `<js-webapp>/WEB-INF/decorators/`, the `main.jsp` includes the `decorator.jsp
 
 ![js Customization Decorators](../assets/images/js-Customization-Decorators.png)
 
-*Figure 1: JasperReports Server Display Elements*
+*Figure 1 JasperReports Server Display Elements*
 
 In particular, `decorator.jsp` specifies all the display elements that appear as the header and footer of every JasperReports Server page. Inside the header and footer and main frame is the `<decorator:body/>` tag that specifies where to add the HTML content generated for the target page.
 

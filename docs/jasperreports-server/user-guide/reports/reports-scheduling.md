@@ -13,7 +13,7 @@ To schedule a report
 
     ![js Schedule New Job](../assets/images/js-Schedule-New-Job.png)
 
-    *Figure 1: New Schedule Dialog*
+    *Figure 1 New Schedule Dialog*
 
     The **New Schedule** dialog has the following tabs:
 

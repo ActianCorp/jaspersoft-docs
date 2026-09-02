@@ -36,8 +36,8 @@ To encrypt passwords in a Tomcat installation, modify the installation procedure
     -   Enter your passwords in plain text.
     -   Turn on configuration file encryption by uncommenting the `encrypt=true` property. You don't have to uncomment any other encryption properties because they all have the default values shown.
     -   Unless you are using Oracle, uncomment `propsToEncrypt` and set it to `dbPassword,sysPassword`.
-    -   Optionally, specify additional properties to encrypt as described in Encrypting Additional Properties in default_master.properties.
-    -   Optionally, change the settings for configuration file encryption as described in Encryption Options.
+    -   Optionally, specify additional properties to encrypt as described in [Encrypting Additional Properties in default_master.properties](#encrypting-additional-properties-in-default_masterproperties).
+    -   Optionally, change the settings for configuration file encryption as described in [Encryption Options](#encryption-options).
 
 3.  Run the buildomatic installation script (js-install) and all other installation steps according to the JasperReports® Server Installation Guide. This has the following effects:
 

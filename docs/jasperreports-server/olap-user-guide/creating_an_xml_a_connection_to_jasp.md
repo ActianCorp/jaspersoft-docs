@@ -63,7 +63,7 @@ To create an XML/A connection
 
                 ![ja add xmla connection](assets/images/ja-add-xmla-connection.png)
 
-                *Figure 1: Set Connection Type and Properties - XML/A Page*
+                *Figure 1 Set Connection Type and Properties - XML/A Page*
 
             3.  Click **Test Connection**.
 

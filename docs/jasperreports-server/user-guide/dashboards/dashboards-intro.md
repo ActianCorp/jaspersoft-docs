@@ -13,7 +13,7 @@ A Jaspersoft dashboard displays several reports in a single, integrated view. A 
 
 ![js Dashboard Example PerformanceSummaryWithGauges](../assets/images/js-Dashboard-Example-PerformanceSummaryWithGauges.png)
 
-*Figure 1: Sample dashboard*
+*Figure 1 Sample dashboard*
 
 This chapter contains the following sections:
 

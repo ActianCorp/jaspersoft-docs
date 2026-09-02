@@ -17,18 +17,18 @@ Reports scheduled on the server also run asynchronously. reportExecutions allows
 
 This chapter includes the following sections:
 
--   Running a Report Asynchronously
--   Polling Report Execution
--   Requesting Page Status
--   Requesting Report Execution Details
--   Requesting Report Output
--   Requesting Report Bookmarks
--   Exporting a Report Asynchronously
--   Modifying Report Parameters
--   Polling Export Execution
--   Finding Running Reports and Jobs
--   Stopping Running Reports and Jobs
--   Removing a Report Execution
+-   [Running a Report Asynchronously](#running-a-report-asynchronously)
+-   [Polling Report Execution](#polling-report-execution)
+-   [Requesting Page Status](#requesting-page-status)
+-   [Requesting Report Execution Details](#requesting-report-execution-details)
+-   [Requesting Report Output](#requesting-report-output)
+-   [Requesting Report Bookmarks](#requesting-report-bookmarks)
+-   [Exporting a Report Asynchronously](#exporting-a-report-asynchronously)
+-   [Modifying Report Parameters](#modifying-report-parameters)
+-   [Polling Export Execution](#polling-export-execution)
+-   [Finding Running Reports and Jobs](#finding-running-reports-and-jobs)
+-   [Stopping Running Reports and Jobs](#stopping-running-reports-and-jobs)
+-   [Removing a Report Execution](#removing-a-report-execution)
 
 ## Running a Report Asynchronously
 
@@ -195,7 +195,7 @@ The following table describes the properties that you can specify in the `Report
 </tr>
 <tr>
 <td><p><span>parameters</span></p></td>
-<td><p><span>See example</span></p></td>
+<td><p><a href="#modifying-report-parameters">See example</a></p></td>
 <td><p>A list of input control parameters and their values.</p>
 <p>By default, the parameter values are case-sensitive. To change them to case insensitive, set <code>inputControl.handler.values.caseSensitive=false</code> in the <code>jasperserver-pro/WEB-INF/js.config.properties</code> file.</p></td>
 </tr>
@@ -507,7 +507,7 @@ GET http://localhost:8080/jasperserver-pro/rest_v2/reportExecutions/b487a05a-498
 
     JasperReports Server does not support exporting Highcharts charts with background images to PDF, ODT, DOCX, or RTF formats. When exporting or downloading reports with Highcharts that have background images to these formats, the background image is removed from the chart. The data in the chart is not affected.
 
-To download file attachments for HTML output, use the following method. Download all attachments to display the HTML content properly. The given URL is the default path, but it can be modified with the `attachmentsPrefix` property in the `reportExecutionRequest`, as described in Running a Report Asynchronously.
+To download file attachments for HTML output, use the following method. Download all attachments to display the HTML content properly. The given URL is the default path, but it can be modified with the `attachmentsPrefix` property in the `reportExecutionRequest`, as described in [Running a Report Asynchronously](#running-a-report-asynchronously).
 
 <table>
 <colgroup>
@@ -735,7 +735,7 @@ You can update the report parameters, also known as input controls, through a se
 <tr>
 <td><p><span>freshData</span></p></td>
 <td><p><span>true</span></p></td>
-<td colspan="2"><p>When data snapshots are enabled, you must set this to true to force the server to get fresh data when you change parameters. This overrides the default value of false, as explained in the table of properties in <span>Running a Report Asynchronously</span>.</p></td>
+<td colspan="2"><p>When data snapshots are enabled, you must set this to true to force the server to get fresh data when you change parameters. This overrides the default value of false, as explained in the table of properties in <a href="#running-a-report-asynchronously">Running a Report Asynchronously</a>.</p></td>
 </tr>
 <tr>
 <td colspan="2">Media-Type</td>
@@ -849,7 +849,7 @@ For example, to get the status of the HTML export in the previous example, use t
 
 GET http://localhost:8080/jasperserver-pro/rest_v2/reportExecutions/912382875_1366638024956_2/exports/195a65cb-1762-450a-be2b-1196a02bb625/status
 
-When the status is "ready", the client can download the new export output and any attachments as described in Requesting Report Output. For example:
+When the status is "ready", the client can download the new export output and any attachments as described in [Requesting Report Output](#requesting-report-output). For example:
 
 GET http://localhost:8080/jasperserver-pro/rest_v2/reportExecutions/912382875_1366638024956_2/exports/195a65cb-1762-450a-be2b-1196a02bb625/outputResource
 
@@ -942,7 +942,7 @@ The response contains a list of summary `reportExecution` descriptors, for examp
 </reportExecutions>
 ```
 
-Given the request ID, you can obtain more information about each result by downloading the full `reportExecution` descriptor, as described in Requesting Report Execution Details.
+Given the request ID, you can obtain more information about each result by downloading the full `reportExecution` descriptor, as described in [Requesting Report Execution Details](#requesting-report-execution-details).
 
 For security purposes, the search for running reports has the following restrictions:
 

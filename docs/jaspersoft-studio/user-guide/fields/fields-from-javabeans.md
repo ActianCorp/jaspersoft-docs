@@ -12,7 +12,7 @@ By selecting the **Java Bean** tab in the query designer, you can register the f
 |                                              |
 |----------------------------------------------|
 | ![javabeans](../assets/images/javabeans.png) |
-| *Figure 1: JavaBeans Tab*                    |
+| *Figure 1 JavaBeans Tab*                     |
 
 Suppose you are using objects of this Java class:
 

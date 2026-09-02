@@ -29,7 +29,7 @@ To begin writing your security file, download the template provided on the **Sec
 
     ![js DomainDesigner SecurityTabTemplate](../assets/images/js-DomainDesigner-SecurityTabTemplate.png)
 
-    *Figure 1: Security Tab with the Generic Template*
+    *Figure 1 Security Tab with the Generic Template*
 
 3.  Click ![js DomainDesigner icon download resource](../assets/images/js-DomainDesigner-icon-download-resource.png) to download the template and save it as an XML file on your computer.
 
@@ -262,7 +262,7 @@ You can also store the security file in the repository as a file resource, and t
 
     ![js DomainDesigner addSecurityFromRepo](../assets/images/js-DomainDesigner-addSecurityFromRepo.png)      ![js DomainDesigner AddSecurityFromFile](../assets/images/js-DomainDesigner-AddSecurityFromFile.png)
 
-    *Figure 2: Add Security File Dialogs*
+    *Figure 2 Add Security File Dialogs*
 
 3.  If you stored the security file in the repository, use the controls to navigate the tree or search for your file, then click **Add**.
 

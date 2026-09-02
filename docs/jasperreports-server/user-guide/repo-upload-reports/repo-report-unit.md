@@ -22,4 +22,4 @@ For more information about the report unit, refer to the JasperReports Server Ul
 
 ![js anatomy of a report unit](../assets/images/js-anatomy-of-a-report-unit.png)
 
-*Figure 1: Anatomy of a Report Unit*
+*Figure 1 Anatomy of a Report Unit*

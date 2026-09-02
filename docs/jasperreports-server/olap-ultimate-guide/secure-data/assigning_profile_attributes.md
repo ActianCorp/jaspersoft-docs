@@ -96,9 +96,9 @@ CZS determined that they need to describe their users in terms of the product li
 
     For details about configuring attributes and Mondrian connections, refer to:
 
--   Defining Attributes for Users
+-   [Defining Attributes for Users](#defining-attributes-for-users)
 
--   Using Attributes in an Access Grant Definition
+-   [Using Attributes in an Access Grant Definition](#using-attributes-in-an-access-grant-definition)
 
 -   [Creating a Mondrian Connection](creating_a_mondrian_connection_czs.md)
 
@@ -110,7 +110,7 @@ Attributes can be created for each user, role, or organization defined in the se
 
 ![ja ug security userRita ProfileAttributes](../assets/images/ja-ug-security-userRita-ProfileAttributes.png)
 
-*Figure 1: Editing Rita’s User Attributes*
+*Figure 1 Editing Rita’s User Attributes*
 
 For more information, refer to the JasperReports Server Administrator Guide.
 

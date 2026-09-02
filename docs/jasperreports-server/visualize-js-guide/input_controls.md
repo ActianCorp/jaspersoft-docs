@@ -13,13 +13,13 @@ The previous mechanism of creating your own input control structures in JavaScri
 
 This chapter contains the following sections:
 
--   Input Control Properties
--   Input Control Functions
--   Embedding Input Controls
--   Handling Input Control Events
--   Resetting Input Control Values
--   Embedded Input Control Styles
--   Custom Input Controls
+-   [Input Control Properties](#input-control-properties)
+-   [Input Control Functions](#input-control-functions)
+-   [Embedding Input Controls](#embedding-input-controls)
+-   [Handling Input Control Events](#handling-input-control-events)
+-   [Resetting Input Control Values](#resetting-input-control-values)
+-   [Embedded Input Control Styles](#embedded-input-control-styles)
+-   [Custom Input Controls](#custom-input-controls)
 
 ## Input Control Properties
 
@@ -116,7 +116,7 @@ define(function () {
 
 When you display and use input controls, the server generates the UI widgets for all of the input controls of a report; you specify the container where you want to embed them.
 
-If desired, it is still possible to generate your own UI widgets for each input control, as done in some previous versions; see Custom Input Controls. Previously written JavaScript that created custom input controls still work.
+If desired, it is still possible to generate your own UI widgets for each input control, as done in some previous versions; see [Custom Input Controls](#custom-input-controls). Previously written JavaScript that created custom input controls still work.
 
 In the simplest embedding case, you specify the URI of the report resource and a container. Only the input controls for the designated report are embedded in the container. The input controls appear on your page as standard selection boxes and drop-down selectors that the user can interact with and choose new values. The following example shows the HTML and corresponding JavaScript:
 
@@ -139,7 +139,7 @@ visualize({
 });
 ```
 
-Of course, you can add styles to determine the shape and placement of your input controls container, as shown in the following CSS sample. If you wish to change the appearance of the embedded controls *within* the container, see Embedded Input Control Styles.
+Of course, you can add styles to determine the shape and placement of your input controls container, as shown in the following CSS sample. If you wish to change the appearance of the embedded controls *within* the container, see [Embedded Input Control Styles](#embedded-input-control-styles).
 
 ``` bash
 #inputContainer {

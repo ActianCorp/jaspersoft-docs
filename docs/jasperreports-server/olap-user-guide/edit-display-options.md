@@ -9,7 +9,7 @@ The **Display Options** dialog lets you control the content and appearance of th
 
 ![ja toolbar displayoptions](assets/images/ja-toolbar-displayoptions.png)
 
-*Figure 1: Display options Dialog*
+*Figure 1 Display options Dialog*
 
 ## Cube Options
 
@@ -57,7 +57,7 @@ For more information, see the Jaspersoft OLAP Ultimate Guide.
 
 ![ja toolbar sorthierarchy](assets/images/ja-toolbar-sorthierarchy.png)
 
-*Figure 2: Sorting Across Hierarchy*
+*Figure 2 Sorting Across Hierarchy*
 
 The **Display Options** dialog also provides the following options:
 

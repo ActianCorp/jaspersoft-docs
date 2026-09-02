@@ -21,7 +21,7 @@ The default navigation table appears along with the Jaspersoft OLAP tool bar.
 
 ![ja ug foodmart default](../assets/images/ja-ug-foodmart-default.png)
 
-*Figure 1: FoodMart Sample OLAP View*
+*Figure 1 FoodMart Sample OLAP View*
 
 To find the quarterly sales dollar amount in 2012 for stores in California
 
@@ -31,7 +31,7 @@ The Change Data Cube dialog appears.
 
 ![ja ug analysisview tools ChangeDataCube Cubetools](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-Cubetools.png)
 
-*Figure 2: Change Data Cube*
+*Figure 2 Change Data Cube*
 
 The Change Data Cute dialog includes the following sections:
 
@@ -45,7 +45,7 @@ The Change Data Cute dialog includes the following sections:
 
             ![ja ug analysisview tools ChangeDataCube Cubetools TimeColumn](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-Cubetools-TimeColumn.png)
 
-            *Figure 3: Adding a Time Column*
+            *Figure 3 Adding a Time Column*
 
         2.  In the Columns section, click **Time** to open a tree displaying the dimension members.
 
@@ -53,7 +53,7 @@ The Change Data Cute dialog includes the following sections:
 
             ![ja ug analysisview tools ChangeDataCube Cubetools Time2012filter](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-Cubetools-Time2012filter.png)
 
-            *Figure 4: Defining the Time Filter*
+            *Figure 4 Defining the Time Filter*
 
         4.  Click **OK** to close the tree and return to the Change Data Cube dialog.
 
@@ -69,7 +69,7 @@ The Change Data Cute dialog includes the following sections:
 
             ![ja ug analysisview tools ChangeDataCube Cubetools StoreCAfilter](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-Cubetools-StoreCAfilter.png)
 
-            *Figure 5: Defining the Store Filter*
+            *Figure 5 Defining the Store Filter*
 
         7.  Click **OK** to close the tree and return to the Change Data Cube dialog.
 
@@ -81,7 +81,7 @@ The Change Data Cute dialog includes the following sections:
 
             ![ja ug analysisview foodmart ca 2012 without drill](../assets/images/ja-ug-analysisview-foodmart-ca-2012-without-drill.png)
 
-            *Figure 6: 2012 Store Sales Volume for Snacks at California Stores*
+            *Figure 6 2012 Store Sales Volume for Snacks at California Stores*
 
         10. Ensure that the Zoom on Drill is active by checking whether its icon is pressed:
 
@@ -99,7 +99,7 @@ The following navigation table appears:
 
 ![ja ug analysisview foodmart mondrian CA](../assets/images/ja-ug-analysisview-foodmart-mondrian-CA.png)
 
-*Figure 7: 2012 Quarterly Store Sales Volume for Snacks at California Stores*
+*Figure 7 2012 Quarterly Store Sales Volume for Snacks at California Stores*
 
 This view now shows the total sales for snack food in stores in California for 2012, broken down by quarter.
 

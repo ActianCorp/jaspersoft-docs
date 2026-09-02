@@ -12,7 +12,7 @@ When you open the Report Template dialog (**File &gt; New &gt; Jasper Report**
 |                                                         |
 |---------------------------------------------------------|
 | ![report templates](assets/images/report-templates.png) |
-| *Figure 1: Default Report Templates*                    |
+| *Figure 1 Default Report Templates*                     |
 
 A template contains all or some of the same parts as a report. Remember the following when creating a template or editing an existing template:
 

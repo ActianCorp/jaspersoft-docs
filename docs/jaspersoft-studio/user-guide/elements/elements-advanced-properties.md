@@ -17,7 +17,7 @@ The steps to open the Properties dialog differ depending on the element you sele
 |  |
 |----|
 | ![jss element properties report](../assets/images/jss-element-properties-report.png) |
-| *Figure 1: Properties dialog for a report* |
+| *Figure 1 Properties dialog for a report* |
 
 By default, the **Properties**dialog displays a form with available properties grouped by category. The available categories depend on the element type. For example, reports allow you to set a number of JDBC and timezone properties. Each property has a widget that allows you to set the property. Deprecated properties are displayed with strike-through.
 
@@ -78,7 +78,7 @@ Set properties on a text field
     |  |
     |----|
     | ![jss elements properties result](../assets/images/jss-elements-properties-result.png) |
-    | *Figure 2: Properties dialog for a report* |
+    | *Figure 2 Properties dialog for a report* |
 
 6.  Click the expression editor icon next to **net.sf.jasperreports.style.forecolor** to open the expression editor.
 

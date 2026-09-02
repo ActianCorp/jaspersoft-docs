@@ -32,7 +32,7 @@ The resulting main report has a single record containing the total number of ord
 |  |
 |----|
 | ![jss datasets same jdbc layout step1](../assets/images/jss-datasets-same-jdbc-layout-step1.png) |
-| *Figure 1: Initial report layout* |
+| *Figure 1 Initial report layout* |
 
 Create a subdataset
 
@@ -45,7 +45,7 @@ Create a subdataset
     |                                                          |
     |----------------------------------------------------------|
     | ![Dataset Wizard](../assets/images/Dataset%20Wizard.png) |
-    | *Figure 2: Creating a new subdataset*                    |
+    | *Figure 2 Creating a new subdataset*                     |
 
 3.  Enter a name for your dataset. For this tutorial, name it ExampleDataset.
 
@@ -62,7 +62,7 @@ Create a subdataset
     |  |
     |----|
     | ![Data Source page of the Dataset wizard](../assets/images/Data%20Source%20page%20of%20the%20Dataset%20wizard.png) |
-    | *Figure 3: Data Source page of the Dataset wizard* |
+    | *Figure 3 Data Source page of the Dataset wizard* |
 
 7.  Create a subdataset query and set it to:
 
@@ -77,7 +77,7 @@ The fields are registered in the subdataset and appear in the **Outline** view.
 |  |
 |----|
 | ![jss datasets fields in outline](../assets/images/jss-datasets-fields-in-outline.png) |
-| *Figure 4: The subdataset to fill the chart* |
+| *Figure 4 The subdataset to fill the chart* |
 
 Create a chart and its dataset run
 
@@ -88,7 +88,7 @@ Create a chart and its dataset run
     |  |
     |----|
     | ![jss datasets chart wizard](../assets/images/jss-datasets-chart-wizard.png) |
-    | *Figure 5: Chart Wizard* |
+    | *Figure 5 Chart Wizard* |
 
 3.  In the dataset run section of the Chart Wizard, select the dataset you created, ExampleDataset.
 
@@ -120,4 +120,4 @@ Click **Finish** to return to the Chart Wizard.
 |  |
 |----|
 | ![jss datasets chart preview](../assets/images/jss-datasets-chart-preview.png) |
-| *Figure 6: Chart filled using a subdataset* |
+| *Figure 6 Chart filled using a subdataset* |

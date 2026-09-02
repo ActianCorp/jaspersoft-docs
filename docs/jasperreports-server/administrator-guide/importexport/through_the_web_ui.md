@@ -22,32 +22,32 @@ JasperReports Server allows administrators to import and export resources and us
 </thead>
 <tbody>
 <tr>
-<td><span>Exporting from the Repository</span></td>
+<td><a href="#exporting-from-the-repository">Exporting from the Repository</a></td>
 <td>Export entire folders<br />
 Export selected resources</td>
 <td><p>System admins and Organization admins</p></td>
 </tr>
 <tr>
-<td><span>Exporting from the Settings</span></td>
+<td><a href="#exporting-from-the-settings">Exporting from the Settings</a></td>
 <td>Export everything<br />
 Export selected users or roles<br />
 Export resources by type</td>
 <td>System admins only</td>
 </tr>
 <tr>
-<td><p><span>Exporting from Organizations</span></p></td>
+<td><p><a href="#exporting-from-organizations">Exporting from Organizations</a></p></td>
 <td><p>Export entire organizations</p>
 <p>Export selected users or roles<br />
 Export resources by type</p></td>
 <td>System admins and Organization admins</td>
 </tr>
 <tr>
-<td><span>Importing to Organizations</span></td>
+<td><a href="#importing-to-organizations">Importing to Organizations</a></td>
 <td>Import into a specific organization</td>
 <td>System admins and Organization admins</td>
 </tr>
 <tr>
-<td><span>Importing from the Settings</span></td>
+<td><a href="#importing-from-the-settings">Importing from the Settings</a></td>
 <td>Import any catalog into the server</td>
 <td>System admins only</td>
 </tr>
@@ -74,7 +74,7 @@ To export resources from the repository
 
     ![js Repository ExportResources](../assets/images/js-Repository-ExportResources.png)
 
-    *Figure 1: Export Resources Dialog in the Repository*
+    *Figure 1 Export Resources Dialog in the Repository*
 
 5.  If required, change the default name of the zip file for the exported catalog.
 
@@ -124,7 +124,7 @@ To export resources from the settings page
 
     ![js Settings Export](../assets/images/js-Settings-Export.png)
 
-    *Figure 2: User Interface for Export*
+    *Figure 2 User Interface for Export*
 
 3.  If required, change the default name of the zip file for the exported catalog.
 
@@ -188,7 +188,7 @@ To export organizations
 
     ![js ManageOrgs Export](../assets/images/js-ManageOrgs-Export.png)
 
-    *Figure 3: User Interface for Organization Export*
+    *Figure 3 User Interface for Organization Export*
 
 4.  If required, change the default name of the zip file for the exported catalog.
 
@@ -249,7 +249,7 @@ To import organizations
 
     ![js ManageOrgs Import](../assets/images/js-ManageOrgs-Import.png)
 
-    *Figure 4: User Interface for Organization Import*
+    *Figure 4 User Interface for Organization Import*
 
 4.  Click **Browse** to choose the catalog zip file to import. The catalog file must be created by the export of an organization.
 
@@ -307,7 +307,7 @@ To import data from the Settings page
 
     ![js Settings Import](../assets/images/js-Settings-Import.png)
 
-    *Figure 5: User Interface for Import*
+    *Figure 5 User Interface for Import*
 
 3.  Click **Browse** to choose the catalog zip file to import. This dialog cannot import a catalog file that was created from the export of an organization.
 

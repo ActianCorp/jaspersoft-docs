@@ -30,4 +30,4 @@ The navigation table displays the top stores for the year ordered by dollar sale
 
 ![ja ug analysisview foodmart mondrian westcoast topstores](assets/images/ja-ug-analysisview-foodmart-mondrian-westcoast-topstores.png)
 
-*Figure 1: Sorting the Top West Coast Stores in Sales*
+*Figure 1 Sorting the Top West Coast Stores in Sales*

@@ -16,4 +16,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Getting Started With Jaspersoft Mobile SDK for Android](android/mobile_sdk_intro.md)
 - [Getting Started With Jaspersoft Mobile SDK for iOS](ios/mobile_sdk_intro.md)
 - [About This Guide](bookmatter/about-jrs-mobile-guide.md)
-- [Additional Topics](bookmatter/frontmatterpremium.md)

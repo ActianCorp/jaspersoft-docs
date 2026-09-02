@@ -22,6 +22,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Domain Expression Language (DomEL)](domel/domain_expression_language.md)
 - [Securing Data in a Domain](domain_security/securing_data_in_a_domain.md)
 - [Localizing Domains](localizing/localizing_domains.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](domain_designer/properties.md)

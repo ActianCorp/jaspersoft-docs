@@ -33,7 +33,7 @@ To find and run a chart example
 
     ![js Report Example WorldMap](../assets/images/js-Report-Example-WorldMap.png)
 
-    *Figure 1: World Map Report with Flash Map*
+    *Figure 1 World Map Report with Flash Map*
 
 4.  To interact with the map, mouse-over any of the countries to see the full country name and, when it has data, the value for that country.
 

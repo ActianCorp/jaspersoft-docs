@@ -25,6 +25,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Scalable Query Engine](queryengine/queryengine_intro.md)
 - [Troubleshooting](troubleshooting/troubleshooting.md)
 - [Manually Creating the JasperReports Server Database](manual-db/manually_creating_the_jasperreports_.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](bookmatter/about-jasperreports-server-build-guide.md)

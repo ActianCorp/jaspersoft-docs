@@ -19,7 +19,7 @@ The Domain Designer lets you download a template with all keys currently defined
 
     ![js DomainDesigner LocalesTab](../assets/images/js-DomainDesigner-LocalesTab.png)
 
-    *Figure 1: Template Download Link on the Locales Tab*
+    *Figure 1 Template Download Link on the Locales Tab*
 
 3.  In the **File Options** dialog box, select which keys to export:
 
@@ -31,7 +31,7 @@ The Domain Designer lets you download a template with all keys currently defined
 
         ![js DomainDesigner DownloadTemplate options](../assets/images/js-DomainDesigner-DownloadTemplate-options.png)
 
-        *Figure 2: File Options for Downloading a .properties Template*
+        *Figure 2 File Options for Downloading a .properties Template*
 
         1.  Click **OK**.
 

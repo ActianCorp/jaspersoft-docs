@@ -410,11 +410,11 @@ Change the following properties:
 </tr>
 <tr>
 <td colspan="2"><code>quartz.delegateClass</code></td>
-<td><p>Set to the same value as described in <span>Database Settings for the Quartz Driver Delegate Class</span>.</p></td>
+<td><p>Set to the same value as described in <a href="#database-settings-for-the-quartz-driver-delegate-class">Database Settings for the Quartz Driver Delegate Class</a>.</p></td>
 </tr>
 <tr>
 <td colspan="2"><code>quartz.tablePrefix</code></td>
-<td><p>Set to the same value as described in <span>Settings for the Quartz Table Prefix</span>.</p></td>
+<td><p>Set to the same value as described in <a href="#settings-for-the-quartz-table-prefix">Settings for the Quartz Table Prefix</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +459,7 @@ You can set the following properties to configure the Report Scheduler email (de
 
 `quartz.web.deployment.uri=http://localhost:8080/``jasperserver`` ``-pro`` `
 
-For information about the Prerequisite for Azure Graph API login, see Mail Server Configuration Settings Using Graph API.
+For information about the Prerequisite for Azure Graph API login, see [Mail Server Configuration Settings Using Graph API](#mail-server-configuration-settings-using-graph-api).
 
 You can set the following properties to configure the Report Scheduler email using a graph API (default values are shown):
 

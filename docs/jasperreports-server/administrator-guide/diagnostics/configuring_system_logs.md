@@ -84,7 +84,7 @@ Some common loggers are given as comments in the configuration file, simply remo
 
 Restart the server for your changes to take effect.
 
-If you have made modifications in the **Log Settings** UI, those settings are persistent in the repository and take precedence over the configuration files. However, changes in the UI are *not* written to the configuration files. Each setting is independent. For more information, see Log Levels.
+If you have made modifications in the **Log Settings** UI, those settings are persistent in the repository and take precedence over the configuration files. However, changes in the UI are *not* written to the configuration files. Each setting is independent. For more information, see [Log Levels](#log-levels).
 
 ### Configuring the Log Format
 
@@ -153,7 +153,7 @@ To set the current logging levels
 
     ![js Settings Logs](../assets/images/js-Settings-Logs.png)
 
-    *Figure 1: System Log Settings*
+    *Figure 1 System Log Settings*
 
 3.  In the list of loggers, use the drop-down selectors to change the log level for a given logger. Any change to a logging level on this page takes effect immediately, without restarting JasperReports Server.
 
@@ -169,11 +169,11 @@ To set the current logging levels
     -   The list of loggers on this page is a pre-determined set that may be useful for debugging. This list of loggers is not related to those defined or set in the `log4j2.properties` file.
     -   Setting a logger or log level on this page does not write or change any configuration in the `log4j2.properties` file.
     -   In the list of loggers, the logging levels reflect the current run-time level. If a logger level is set in the configuration file and never modified through this page, its level appears here. Otherwise, these loggers have the inherited root level of ERROR.
-    -   As explained in Log Levels, a log level may be defined differently in the configuration file and on this page, in which case the level on this page takes precedence.
+    -   As explained in [Log Levels](#log-levels), a log level may be defined differently in the configuration file and on this page, in which case the level on this page takes precedence.
     -   Once you set a level or define a logger on the **Log Settings** page, its value is stored in the repository and becomes persistent when the server is restarted. Because the level stored in the repository has precedence, it will be the log level in effect after the server restarts.
     -   If you want to remove a logger or log level that was set on the **Log Settings** page and stored in the repository, select **Restore Defaults** in the left panel of the **Server Settings** UI. Click the delete icon next to the logger you want to remove.
 
-The following table describes the loggers presented on the **Log Settings** page. To change which loggers appear permanently on the page, see Adding a Logger to the Log Settings Page.
+The following table describes the loggers presented on the **Log Settings** page. To change which loggers appear permanently on the page, see [Adding a Logger to the Log Settings Page](#adding-a-logger-to-the-log-settings-page).
 
 <table>
 <colgroup>
@@ -317,7 +317,7 @@ To edit the list of loggers on the Log Settings page
 
 3.  Restart the server for your changes to take effect.
 
-    The `logger_descriptions_pro.properties` file does not set any logger levels, it only determines which loggers are listed in the **Log Settings** UI. Loggers are shown in the UI with their currently active level, as described in Log Levels.
+    The `logger_descriptions_pro.properties` file does not set any logger levels, it only determines which loggers are listed in the **Log Settings** UI. Loggers are shown in the UI with their currently active level, as described in [Log Levels](#log-levels).
 
 !!! note
 

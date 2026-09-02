@@ -92,12 +92,12 @@ The Domain Designer automatically exposes all columns of all tables in a join, b
 
 | Element Name | Description |
 |----|----|
-| `<``fieldList``>` | (Required) A container for the `field` elements in the join tree. A `jdbcTable` element can contain only one `fieldList` element. |
+| `<`[`fieldList`](#fieldlist)`>` | (Required) A container for the `field` elements in the join tree. A `jdbcTable` element can contain only one `fieldList` element. |
 | `<`[`filterString`](representing_pre-filters.md)`>` | Expression that evaluates to true or false when applied to each row of values in the data source. For a join tree, the expression refers to columns using the `table_ID.field_name` form of the column ID. See [Representing Pre-filters in XML](representing_pre-filters.md) for more information. |
-| `<``joinInfo``>` | (Required) Gives the table ID and alias for the table specified by the `schemaAlias` and `datasourceTableName` attributes. The table ID and alias are used as the first table in the join definition. This element and its two attributes are required even if they are identical. |
-| `<``joinList``>` | (Required) Container for the `join` elements. A `jdbcTable` element can contain only one `joinList` element. The left join in the first `join` in the `joinList` must be the table specified by the `schemaAlias` and `datasourceTableName` attributes of `jdbcTable`. |
-| `<``joinOptions``>` | Specifies options for the join tree that influence how the joins that are pushed down to SQL in an Ad Hoc view. |
-| `<``tableRefList``>` | (Required) Container for the list of tables and aliases used in the join. Must include a `tableRef` tag for every table used. A `jdbcTable` element can contain only one `tableRefList` element. |
+| `<`[`joinInfo`](#joininfo)`>` | (Required) Gives the table ID and alias for the table specified by the `schemaAlias` and `datasourceTableName` attributes. The table ID and alias are used as the first table in the join definition. This element and its two attributes are required even if they are identical. |
+| `<`[`joinList`](#joinlist)`>` | (Required) Container for the `join` elements. A `jdbcTable` element can contain only one `joinList` element. The left join in the first `join` in the `joinList` must be the table specified by the `schemaAlias` and `datasourceTableName` attributes of `jdbcTable`. |
+| `<`[`joinOptions`](#joinoptions)`>` | Specifies options for the join tree that influence how the joins that are pushed down to SQL in an Ad Hoc view. |
+| `<`[`tableRefList`](#tablereflist)`>` | (Required) Container for the list of tables and aliases used in the join. Must include a `tableRef` tag for every table used. A `jdbcTable` element can contain only one `tableRefList` element. |
 
 ## fieldList
 
@@ -105,9 +105,9 @@ The Domain Designer automatically exposes all columns of all tables in a join, b
 
 ### Child Elements
 
-| Element Name  | Description                                      |
-|---------------|--------------------------------------------------|
-| `<``field``>` | (Required) Represents a column in the join tree. |
+| Element Name            | Description                                      |
+|-------------------------|--------------------------------------------------|
+| `<`[`field`](#field)`>` | (Required) Represents a column in the join tree. |
 
 ## field
 
@@ -149,7 +149,7 @@ The Domain Designer automatically exposes all columns of all tables in a join, b
 
 ## joinInfo
 
-`joinInfo` gives the table ID and alias for the table specified by the `schemaAlias` and `datasourceTableName` attributes of the `jdbcTable` element. This table is used as the first table in the join definition. The table named in `joinInfo` does not have a `tableRef` element.
+`joinInfo` gives the table ID and alias for the table specified by the `schemaAlias` and `datasourceTableName` attributes of the [`jdbcTable`](#jdbctable) element. This table is used as the first table in the join definition. The table named in `joinInfo` does not have a `tableRef` element.
 
 Both attributes of `joinInfo` are required even if they are identical to the values in `jdbcTable`.
 
@@ -166,9 +166,9 @@ Both attributes of `joinInfo` are required even if they are identical to the val
 
 ### Child Elements
 
-| Element Name | Description                                    |
-|--------------|------------------------------------------------|
-| `join`       | (Required) Representation of a join statement. |
+| Element Name    | Description                                    |
+|-----------------|------------------------------------------------|
+| [`join`](#join) | (Required) Representation of a join statement. |
 
 ## join
 
@@ -215,7 +215,7 @@ The `join` element represents a single SQL join statement. The left and right ta
 <tr>
 <td><code>expr</code></td>
 <td>String</td>
-<td><p>Expression that compares the columns on which the <code>join</code> is made. See <span>Options for the expr Attribute</span> for more information.</p></td>
+<td><p>Expression that compares the columns on which the <code>join</code> is made. See <a href="#options-for-the-expr-attribute">Options for the expr Attribute</a> for more information.</p></td>
 </tr>
 <tr>
 <td><code>weight</code></td>
@@ -317,9 +317,9 @@ The `<tableRefList>` element is a container for the list of tables and aliases u
 
 ### Child Elements
 
-| Element Name     | Description                                          |
-|------------------|------------------------------------------------------|
-| `<``tableRef``>` | (Required) Represents a table used in the join tree. |
+| Element Name | Description |
+|----|----|
+| `<`[`tableRef`](#tableref)`>` | (Required) Represents a table used in the join tree. |
 
 ## tableRef
 

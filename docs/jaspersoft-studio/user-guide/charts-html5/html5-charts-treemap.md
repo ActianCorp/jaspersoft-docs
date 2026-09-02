@@ -38,7 +38,7 @@ To create the chart
     |  |
     |----|
     | ![jss html5 charts treemap categories](../assets/images/jss-html5-charts-treemap-categories.png) |
-    | *Figure 1: Defining Multiple Categories in a Chart* |
+    | *Figure 1 Defining Multiple Categories in a Chart* |
 
 5.  Select **Category 1** and click **Modify**.
 
@@ -69,7 +69,7 @@ When you preview the chart as HTML, you can click a rectangle to zoom in. Howeve
 |  |
 |----|
 | ![jss html5 charts treemap drilldown issues](../assets/images/jss-html5-charts-treemap-drilldown-issues.png) |
-| *Figure 2: Tree Map After Drill Through, Showing Formatting Issues* |
+| *Figure 2 Tree Map After Drill Through, Showing Formatting Issues* |
 
 -   When a country, such as the USA, is selected, the adjacent country is shown on the chart.
 
@@ -86,7 +86,7 @@ To set advanced properties for the chart
     |  |
     |----|
     | ![jss html5 treemap advanced formatting](../assets/images/jss-html5-treemap-advanced-formatting.png) |
-    | *Figure 3: Advanced Formatting Properties* |
+    | *Figure 3 Advanced Formatting Properties* |
 
 3.  Click **Add**.
 
@@ -95,7 +95,7 @@ To set advanced properties for the chart
     |  |
     |----|
     | ![jss html5 charts treemap chart property](../assets/images/jss-html5-charts-treemap-chart-property.png) |
-    | *Figure 4: Setting Advanced Chart Formatting* |
+    | *Figure 4 Setting Advanced Chart Formatting* |
 
 5.  To prevent the names of other countries from showing on the border of the charts, enter the following, then click **OK**:
 
@@ -116,7 +116,7 @@ Preview the chart in HTML to drill through and see your changes.
 |  |
 |----|
 | ![jss html5 charts treemap drilldown fixed](../assets/images/jss-html5-charts-treemap-drilldown-fixed.png) |
-| *Figure 5: Tree map after formatting issues have been corrected* |
+| *Figure 5 Tree map after formatting issues have been corrected* |
 
 !!! note
 

@@ -28,6 +28,8 @@ To configure the license:
 1.  Stop the application server.
 2.  Copy the `jaspersoft.jrs.license` file in `<js-install>` to the directory for your operating system.
 
+**License Locations**
+
 | Operating System |   |
 |----|----|
 | Linux | /home/&lt;user&gt;/ |
@@ -35,8 +37,6 @@ To configure the license:
 | Windows 10 installed from WAR file | C:\\Users\\&lt;user&gt;\\ |
 | Windows 10 installed from the binary installer | C:\\Users\\ |
 | Windows 10 using an existing Tomcat Windows service | C:\\WINDOWS\\system32\\config\\systemprofile |
-
-License Locations
 
 ## User-Defined License Location
 

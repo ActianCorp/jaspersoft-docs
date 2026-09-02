@@ -26,7 +26,7 @@ When you create a report using a data adapter that connects to a web service, yo
 |  |
 |----|
 | ![jss dataset query data adapter tab](../assets/images/jss-dataset-query-data-adapter-tab.png) |
-| *Figure 1: Data Adapter tab* |
+| *Figure 1 Data Adapter tab* |
 
 This tab lets you configure the following information for the data adapter:
 
@@ -101,7 +101,7 @@ The overall steps are:
     |  |
     |----|
     | ![jss json adapter connection options](../assets/images/jss-json-adapter-connection-options.png) |
-    | *Figure 2: HTTP Connection Options* |
+    | *Figure 2 HTTP Connection Options* |
 
     The following parameters are available:
 
@@ -135,7 +135,7 @@ The overall steps are:
     |  |
     |----|
     | ![jss json dataset and query fields](../assets/images/jss-json-dataset-and-query-fields.png) |
-    | *Figure 3: Fields for JSON data* |
+    | *Figure 3 Fields for JSON data* |
 
 3.  Enter the objects that you want to use in your dataset. For this example, enter the `results`. If you only wanted to get the `datatype `values for each record, you could enter `results.datatype`.
 
@@ -146,7 +146,7 @@ The overall steps are:
     |  |
     |----|
     | ![jss json dataset and query preview](../assets/images/jss-json-dataset-and-query-preview.png) |
-    | *Figure 4: Data preview for JSON data* |
+    | *Figure 4 Data preview for JSON data* |
 
 6.  Click **OK**.
 
@@ -189,7 +189,7 @@ This section shows how to create parameters that override the parameters from th
     |  |
     |----|
     | ![jss data adapter json properties list](../assets/images/jss-data-adapter-json-properties-list.png) |
-    | *Figure 5: Properties for an HTTP Parameter* |
+    | *Figure 5 Properties for an HTTP Parameter* |
 
 3.  Select the **URL Parameter** and click **OK**.
 

@@ -7,10 +7,10 @@ description: "This chapter includes the following sections:"
 
 This chapter includes the following sections:
 
--   MIME Types
--   Downloading File Resources
--   Uploading File Resources
--   Updating File Resources
+-   [MIME Types](#mime-types)
+-   [Downloading File Resources](#downloading-file-resources)
+-   [Uploading File Resources](#uploading-file-resources)
+-   [Updating File Resources](#updating-file-resources)
 
 ## MIME Types
 
@@ -18,8 +18,9 @@ When downloading or uploading file contents, you must specify the MIME type (Mul
 
 You can customize this list of MIME types in the server by editing the `contentTypeMapping` map in the file .../WEB-INF/applicationContext-rest-services.xml. You can change MIME types for predefined types, add MIME types, or add custom types.
 
+**MIME Types for File Contents**
+
 <table>
-<caption><p>MIME Types for File Contents</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

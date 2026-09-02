@@ -7,15 +7,15 @@ description: "Jaspersoft Studio uses TIBCO GeoAnalytics Maps to produce data-ric
 
 Jaspersoft Studio uses TIBCO GeoAnalytics Maps to produce data-rich maps. This section describes their set-up and configuration, including:
 
--   Configuring a Basic Map
+-   [Configuring a Basic Map](#configuring-a-basic-map)
 
--   Using Expressions for Properties
+-   [Using Expressions for Properties](#using-expressions-for-properties)
 
--   Understanding Layers
+-   [Understanding Layers](#understanding-layers)
 
--   Working with Markers
+-   [Working with Markers](#working-with-markers)
 
--   Working with Paths
+-   [Working with Paths](#working-with-paths)
 
 !!! info "Important"
 
@@ -33,10 +33,10 @@ Because these components download content from either TIBCO's service or from Go
 
 The map component consists of three layers: a map, a set of paths, and a set of markers. The lowest layer contains the map itself, rendered by your choice of providers: TIBCO Maps or Google Maps. In both cases, the image is formed of tiles retrieved from a remote server. The next two layers (first paths then markers) can contain paths and markers or shapes.
 
-|                                                                     |
-|---------------------------------------------------------------------|
-| ![tmap layers](assets/images/tmap-layers.png)                       |
-| *Figure 1: Basic structure of the TIBCO GeoAnalytics Map component* |
+|                                                                    |
+|--------------------------------------------------------------------|
+| ![tmap layers](assets/images/tmap-layers.png)                      |
+| *Figure 1 Basic structure of the TIBCO GeoAnalytics Map component* |
 
 ## Configuring a Basic Map
 
@@ -58,7 +58,7 @@ To create a TIBCO Map component
 |                                                           |
 |-----------------------------------------------------------|
 | ![tmap attys simple](assets/images/tmap-attys-simple.png) |
-| *Figure 2: TIBCO Map Attributes*                          |
+| *Figure 2 TIBCO Map Attributes*                           |
 
 Map attributes determine how the map layer of the component is rendered. The attributes are all optional:
 
@@ -76,17 +76,17 @@ Map attributes determine how the map layer of the component is rendered. The att
 
 The simplest way to define the map layer's properties is to set them to static values. However, this is a much more limited approach than using expressions to pass parameters to the component dynamically, which allows you to evaluate the data in your data set and use the results to populate the map layer's properties. If you do not specify a different data set, the component uses the main dataset of the report. In the components properties, properties based on expressions are indicated by displaying *f(x)* next to the field, as shown below.
 
-|                                                                  |
-|------------------------------------------------------------------|
-| ![tmap attys zoom exp](assets/images/tmap-attys-zoom-exp.png)    |
-| *Figure 3: Map properties showing Zoom defined by an expression* |
+|                                                                 |
+|-----------------------------------------------------------------|
+| ![tmap attys zoom exp](assets/images/tmap-attys-zoom-exp.png)   |
+| *Figure 3 Map properties showing Zoom defined by an expression* |
 
 To specify a different dataset to resolve the map attributes based on expressions, click the **Use Dataset** checkbox to select it, and select the dataset to use in the Dataset Run.
 
 |  |
 |----|
 | ![tmap use dataset](assets/images/tmap-use-dataset.png) |
-| *Figure 4: Defining the Dataset to use to resolve map attribute expressions* |
+| *Figure 4 Defining the Dataset to use to resolve map attribute expressions* |
 
 Data Runs are used throughout Jaspersoft Studio and its related products when a report includes a subdataset. Use a Data Run to define values for the subdataset's parameters.
 
@@ -105,7 +105,7 @@ Each layer can be named uniquely. These names can be displayed in the JasperRepo
 |  |
 |----|
 | ![tmap select map layer rt](assets/images/tmap-select-map-layer-rt.png) |
-| *Figure 5: Layer names defined in the component can control the layers drawn in the final report* |
+| *Figure 5 Layer names defined in the component can control the layers drawn in the final report* |
 
 ## Working with Markers
 
@@ -113,9 +113,9 @@ Markers are points rendered on the second layer of the TIBCO Map component.
 
 This section describes:
 
--   Static Markers
+-   [Static Markers](#static-markers)
 
--   Dynamic Markers
+-   [Dynamic Markers](#dynamic-markers)
 
 ### Static Markers
 
@@ -133,7 +133,7 @@ This section describes:
 |                                                       |
 |-------------------------------------------------------|
 | ![tmap marker tab](assets/images/tmap-marker-tab.png) |
-| *Figure 6: Defining a map's markers*                  |
+| *Figure 6 Defining a map's markers*                   |
 
 1.  Specify the icon as a URL that points to the image to use. It's loaded by the JavaScript API.
 
@@ -144,14 +144,14 @@ This section describes:
     |                                                       |
     |-------------------------------------------------------|
     | ![tmap address ri](assets/images/tmap-address-ri.png) |
-    | *Figure 7: A map with a marker*                       |
+    | *Figure 7 A map with a marker*                        |
 
 2.  For the addresses, set each property to form the address: country, state, zip, city, street.
 
 |                                                                       |
 |-----------------------------------------------------------------------|
 | ![tmap marker jasper addy](assets/images/tmap-marker-jasper-addy.png) |
-| *Figure 8: Marker properties set to a static location*                |
+| *Figure 8 Marker properties set to a static location*                 |
 
 Marker properties include:
 
@@ -292,7 +292,7 @@ To use dynamic locations
     |                                                                     |
     |---------------------------------------------------------------------|
     | ![tmap props dataset loc](assets/images/tmap-props-dataset-loc.png) |
-    | *Figure 9: Location values defined as expressions*                  |
+    | *Figure 9 Location values defined as expressions*                   |
 
     This example uses an icon from the web: [Pink Push Pin](http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Push-Pin-1-Pink-icon.png).
 
@@ -300,10 +300,10 @@ To use dynamic locations
 
 15. Preview your report in HTML.
 
-|                                                                    |
-|--------------------------------------------------------------------|
-| ![tmap final map pins](assets/images/tmap-final-map-pins.png)      |
-| *Figure 10: San Francisco City College facilities marked on a map* |
+|                                                                   |
+|-------------------------------------------------------------------|
+| ![tmap final map pins](assets/images/tmap-final-map-pins.png)     |
+| *Figure 10 San Francisco City College facilities marked on a map* |
 
 ## Working with Paths
 

@@ -11,13 +11,13 @@ A report option contains input control values that you can read and modify with 
 
 This chapter includes the following sections:
 
--   Listing Report Options
+-   [Listing Report Options](#listing-report-options)
 
--   Creating Report Options
+-   [Creating Report Options](#creating-report-options)
 
--   Updating Report Options
+-   [Updating Report Options](#updating-report-options)
 
--   Deleting Report Options
+-   [Deleting Report Options](#deleting-report-options)
 
 ## Listing Report Options
 
@@ -184,7 +184,7 @@ Use the following method to modify the values in a given report option. You can 
 </tbody>
 </table>
 
-For example, we change the report option we created in 1.1, “Creating Report Options,” on page 1 with the following header:
+For example, we change the report option we created in [1.1, “Creating Report Options,” on page 1](#creating-report-options) with the following header:
 
 http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/reports/reports/samples/Cascading_multi_select_report/options/MyReportOption
 

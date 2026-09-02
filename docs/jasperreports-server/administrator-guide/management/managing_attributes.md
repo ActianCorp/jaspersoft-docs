@@ -33,7 +33,7 @@ Attributes are always referenced in relation to the currently logged in user who
 
 ## Attribute Hierarchy
 
-An attribute is a named value that is defined on a user, organization, or root of the server. Any number of attributes with any name can be defined at any or all of these levels. The definition of each attribute at each level is independent of other attributes at other levels. Attributes at different levels may have the same name, unless explicitly forbidden as described in Attribute Permissions.
+An attribute is a named value that is defined on a user, organization, or root of the server. Any number of attributes with any name can be defined at any or all of these levels. The definition of each attribute at each level is independent of other attributes at other levels. Attributes at different levels may have the same name, unless explicitly forbidden as described in [Attribute Permissions](#attribute-permissions).
 
 In the places that you reference attributes (see above), there are two ways to determine the value of an attribute:
 
@@ -109,13 +109,13 @@ To view, create, modify, or delete server-level attributes
 
     ![js Attributes Server](../assets/images/js-Attributes-Server.png)
 
-    *Figure 1: Managing Attributes at the Server Level*
+    *Figure 1 Managing Attributes at the Server Level*
 
 3.  To create a new server-level attribute, click **Add new attribute**. Enter the attribute name and value, as well as an optional description. If desired, set the permission from the dropdown list and select the Encrypt checkbox. Click **OK** to close the dialog and then click **Save** to submit the new attribute.
 
     ![js Attributes Server add](../assets/images/js-Attributes-Server-add.png)
 
-    *Figure 2: Adding a Server Attribute*
+    *Figure 2 Adding a Server Attribute*
 
 4.  To modify an attribute, click the edit icon ![js Attributes icon edit](../assets/images/js-Attributes-icon-edit.png). In the edit dialog, modify the desired fields. Click **OK** to close the dialog and then click **Save** to modify the attribute.
 
@@ -133,7 +133,7 @@ To view, create, modify, or delete server-level attributes
 
 Organization attributes are attributes defined on an organization, regardless of whether it's a top-level organization or suborganization. For example, an attribute with the same name could have different values in each organization, so that the same data source definition would access a different database specific to each organization. Furthermore, suborganizations could also define the same attribute if they need access to a different database than their parent organization.
 
-Organization attributes are managed by either the system admin or the organization admin. As with all management operations, organization admins can set the attributes in their organization and any of their sub-organizations, and the system admin can set the attributes in any organization. If a higher admin wants to restrict access to certain attributes by a lower-level admin, the higher admin must set permissions, as described in Attribute Permissions.
+Organization attributes are managed by either the system admin or the organization admin. As with all management operations, organization admins can set the attributes in their organization and any of their sub-organizations, and the system admin can set the attributes in any organization. If a higher admin wants to restrict access to certain attributes by a lower-level admin, the higher admin must set permissions, as described in [Attribute Permissions](#attribute-permissions).
 
 To view, create, modify, or delete organization-level attributes
 
@@ -147,7 +147,7 @@ To view, create, modify, or delete organization-level attributes
 
     ![js Attributes Organization](../assets/images/js-Attributes-Organization.png)
 
-    *Figure 3: Viewing Attributes on the Manage Organizations Page*
+    *Figure 3 Viewing Attributes on the Manage Organizations Page*
 
     !!! note
 
@@ -157,7 +157,7 @@ To view, create, modify, or delete organization-level attributes
 
     ![js Attributes Organization edit](../assets/images/js-Attributes-Organization-edit.png)
 
-    *Figure 4: Editing Organization Attributes*
+    *Figure 4 Editing Organization Attributes*
 
 5.  You can filter the attributes in the list to include only the inherited attributes or only the locally defined (not inherited) ones.
 
@@ -165,7 +165,7 @@ To view, create, modify, or delete organization-level attributes
 
     ![js Attributes Organization add](../assets/images/js-Attributes-Organization-add.png)
 
-    *Figure 5: Adding an Organization Attribute*
+    *Figure 5 Adding an Organization Attribute*
 
 7.  To modify an attribute, click the edit icon ![js Attributes icon edit](../assets/images/js-Attributes-icon-edit.png). In the edit dialog, modify the desired fields. Click **OK** to close the dialog and then click **Save** to modify the attribute.<br>
     You can also modify the attribute's permission and encryption by using the dropdown and checkbox in its table row. After confirming any changes, click **Save** to make them take effect.<br>
@@ -202,13 +202,13 @@ To view, create, modify, or delete user-level attributes
 
     ![js Attributes User](../assets/images/js-Attributes-User.png)
 
-    *Figure 6: Viewing Attributes on the Manage Users Page*
+    *Figure 6 Viewing Attributes on the Manage Users Page*
 
 5.  To create, modify, or delete the attributes on a user, click **Edit** in the right-hand column, then select the **Attributes** tab.
 
     ![js Attributes User edit](../assets/images/js-Attributes-User-edit.png)
 
-    *Figure 7: Editing User Attributes*
+    *Figure 7 Editing User Attributes*
 
 6.  You can filter attributes in the list to include only the inherited attributes or only the locally defined (not inherited) ones.
 
@@ -216,7 +216,7 @@ To view, create, modify, or delete user-level attributes
 
     ![js Attributes User add](../assets/images/js-Attributes-User-add.png)
 
-    *Figure 8: Adding a User Attribute*
+    *Figure 8 Adding a User Attribute*
 
 8.  To modify an attribute, click the edit icon ![js Attributes icon edit](../assets/images/js-Attributes-icon-edit.png). In the edit dialog, modify the desired fields. Click **OK** to close the dialog and then click **Save** to modify the attribute.<br>
     You can also modify the attribute's encryption by using the check box in its table row. After confirming any changes, click **Save** to make them take effect.<br>

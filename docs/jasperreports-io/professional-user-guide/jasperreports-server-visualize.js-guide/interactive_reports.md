@@ -13,20 +13,20 @@ Not only does the JIVE UI allow users to sort and filter regular reports, it als
 
 This chapter contains the following sections:
 
--   Interacting With JIVE UI Components
--   Using Floating Headers
--   Changing the Chart Type
--   Changing the Chart Properties
--   Undo and Redo Actions
--   Sorting Table Columns
--   Filtering Table Columns
--   Formatting Table Columns
--   Conditional Formatting on Table Columns
--   Sorting Crosstab Columns
--   Sorting Crosstab Rows
--   Implementing Search in Reports
--   Providing Bookmarks in Reports
--   Disabling the JIVE UI
+-   [Interacting With JIVE UI Components](#interacting-with-jive-ui-components)
+-   [Using Floating Headers](#using-floating-headers)
+-   [Changing the Chart Type](#changing-the-chart-type)
+-   [Changing the Chart Properties](#changing-the-chart-properties)
+-   [Undo and Redo Actions](#undo-and-redo-actions)
+-   [Sorting Table Columns](#sorting-table-columns)
+-   [Filtering Table Columns](#filtering-table-columns)
+-   [Formatting Table Columns](#formatting-table-columns)
+-   [Conditional Formatting on Table Columns](#conditional-formatting-on-table-columns)
+-   [Sorting Crosstab Columns](#sorting-crosstab-columns)
+-   [Sorting Crosstab Rows](#sorting-crosstab-rows)
+-   [Implementing Search in Reports](#implementing-search-in-reports)
+-   [Providing Bookmarks in Reports](#providing-bookmarks-in-reports)
+-   [Disabling the JIVE UI](#disabling-the-jive-ui)
 
 ## Interacting With JIVE UI Components
 
@@ -1699,7 +1699,7 @@ This example has a single button that allows the user to apply the conditional f
 
 ## Sorting Crosstab Columns
 
-Crosstabs are more complex and do not have as many formatting options. This example shows how to sort the values in a given column of a crosstab (the rows are rearranged). Note that the code is slightly different than Sorting Table Columns.
+Crosstabs are more complex and do not have as many formatting options. This example shows how to sort the values in a given column of a crosstab (the rows are rearranged). Note that the code is slightly different than [Sorting Table Columns](#sorting-table-columns).
 
 ``` javascript
 visualize({
@@ -1759,7 +1759,7 @@ visualize({
 });
 ```
 
-Crosstabs are more complex and do not have as many formatting options. This example shows how to sort the values in a given column of a crosstab (the rows are rearranged). Note that the code is slightly different than Sorting Table Columns.
+Crosstabs are more complex and do not have as many formatting options. This example shows how to sort the values in a given column of a crosstab (the rows are rearranged). Note that the code is slightly different than [Sorting Table Columns](#sorting-table-columns).
 
 ``` javascript
 jrio.config({

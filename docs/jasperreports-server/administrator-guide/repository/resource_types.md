@@ -7,8 +7,9 @@ description: "Some resources are created interactively, others are uploaded from
 
 Some resources are created interactively, others are uploaded from files. Many of these resource types are used to upload or define the components of reports. The following tables list the resource types that users and administrators can create in the repository:
 
+**Resource Types in the Repository**
+
 <table>
-<caption><p>Resource Types in the Repository</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -79,8 +80,9 @@ Domain Topic</p></td>
 
 Administrators and users can also manage OLAP resources in the repository, if their license supports Jaspersoft OLAP. For more information about OLAP and Mondrian resources, see the Jaspersoft OLAP User Guide.
 
+**Resource Types for OLAP**
+
 <table>
-<caption><p>Resource Types for OLAP</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

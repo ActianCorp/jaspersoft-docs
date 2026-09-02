@@ -9,13 +9,13 @@ The **Data Management** tab is where you manage the schemas and tables from your
 
 ![js DomainDesigner new domain](../assets/images/js-DomainDesigner-new-domain.png)
 
-*Figure 1: The Data Management tab before a schema has been added to the Domain*
+*Figure 1 The Data Management tab before a schema has been added to the Domain*
 
 For a Trino-based domain, the **Data Management** tab differs slightly. You need to select a catalog first, before selecting the schema and respective tables.
 
 ![js DomainDesigner new domain trino](../assets/images/js-DomainDesigner-new-domain-trino.png)
 
-*Figure 2: The Data Management tab before a catalog has been added to the Domain*
+*Figure 2 The Data Management tab before a catalog has been added to the Domain*
 
 !!! note
 
@@ -53,7 +53,7 @@ A Trino catalog contains schemas and references a data source via a connector. W
 
 ![js DomainDesigner manage catalogs](../assets/images/js-DomainDesigner-manage-catalogs.png)
 
-*Figure 3: Select Catalog for Trino-based data source*
+*Figure 3 Select Catalog for Trino-based data source*
 
 To add catalogs, first select the data source in the **Data Structure** panel on the **Data Management** tab. The **Manage Catalogs** panel appears in the **Data Design** panel.
 
@@ -68,11 +68,11 @@ If your data source supports database schemas, like Oracle RDBMS, you need to ch
 
 ![js DomainDesigner add schema](../assets/images/js-DomainDesigner-add-schema.png)
 
-*Figure 4: Select Database Schemas*
+*Figure 4 Select Database Schemas*
 
 ![js DomainDesigner add schema trino](../assets/images/js-DomainDesigner-add-schema-trino.png)
 
-*Figure 5: Select Database Schemas for Trino-based data source*
+*Figure 5 Select Database Schemas for Trino-based data source*
 
 To add schemas, first select the data source in the **Data Structure** panel on the **Data Management** tab. The **Manage Schemas** panel appears in the **Data Design** panel.
 
@@ -82,7 +82,7 @@ To add schemas, first select the data source in the **Data Structure** panel on 
 
 -   The **Available Schemas** list displays the available schemas in your data source.
 -   The **Selected Schemas** list shows the schemas you selected.
--   Selected schemas appear in the **Data Structure** panel. If you have not yet added any tables from the schema to the Domain design, ![js DomainDesigner icon EmptySchemaWarning](../assets/images/js-DomainDesigner-icon-EmptySchemaWarning.png) appears shown to the right of the schema name. See Managing Tables for more information.
+-   Selected schemas appear in the **Data Structure** panel. If you have not yet added any tables from the schema to the Domain design, ![js DomainDesigner icon EmptySchemaWarning](../assets/images/js-DomainDesigner-icon-EmptySchemaWarning.png) appears shown to the right of the schema name. See [Managing Tables](#managing-tables) for more information.
 -   You can move a schema back and forth between the lists by dragging, double-clicking, or selecting the item and clicking an arrow button ![js Domain icon RightArrow](../assets/images/js-Domain-icon-RightArrow.png) .
 
 ### Using Attributes
@@ -110,7 +110,7 @@ To use an attribute for a schema
 
 ![js DomainDesigner AddSchemaAttribute](../assets/images/js-DomainDesigner-AddSchemaAttribute.png)
 
-*Figure 6: Using a server-level attribute for a schema name*
+*Figure 6 Using a server-level attribute for a schema name*
 
 !!! note
 
@@ -136,11 +136,11 @@ You need to choose one or more tables to use in the Domain. Typically, you selec
 
 ![js DomainDesigner data management tables](../assets/images/js-DomainDesigner-data-management-tables.png)
 
-*Figure 7: Select Tables*
+*Figure 7 Select Tables*
 
 ![js DomainDesigner data management tables trino](../assets/images/js-DomainDesigner-data-management-tables-trino.png)
 
-*Figure 8: Select Tables for Trino-based data source*
+*Figure 8 Select Tables for Trino-based data source*
 
 To work with tables, first select a schema in the **Data Structure** panel on the **Data Management** tab. The **Manage Tables** panel appears on the right and presents two lists:
 

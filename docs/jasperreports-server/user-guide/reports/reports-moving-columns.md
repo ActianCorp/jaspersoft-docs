@@ -25,7 +25,7 @@ When working with a report that contains bookmarks, they are displayed in a floa
 
 ![js JIVE Bookmarks](../assets/images/js-JIVE-Bookmarks.png)
 
-*Figure 1: The Bookmarks Panel*
+*Figure 1 The Bookmarks Panel*
 
 -   To display the Bookmarks panel, click ![js AdHoc icon bookmarks](../assets/images/js-AdHoc-icon-bookmarks.png) in the Report Viewer tool bar.
 -   To jump to a bookmarked section of the report, click the name of the section in the Bookmarks panel.
@@ -50,8 +50,9 @@ To export the report
 
 2.  Select an export format from the drop-down. The export options are listed in Table 3‑6.
 
+    **Export File Types**
+
     <table>
-    <caption><p>Export File Types</p></caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />

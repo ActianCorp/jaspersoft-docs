@@ -9,10 +9,11 @@ The tool bar on the left side of your view provides access to many OLAP operatio
 
 ![ja toolbar](assets/images/ja-toolbar.png)
 
-*Figure 1: OLAP Tool Bar*
+*Figure 1 OLAP Tool Bar*
+
+**OLAP Tool Bar Icons**
 
 <table>
-<caption><p>OLAP Tool Bar Icons</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />

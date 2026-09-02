@@ -13,7 +13,7 @@ To schedule a dashboard
 
     ![js Schedule New Job Dashboard](../assets/images/js-Schedule-New-Job-Dashboard.png)
 
-    *Figure 1: New Schedule Dialog*
+    *Figure 1 New Schedule Dialog*
 
     The **New Schedule** dialog has the following tabs:
 

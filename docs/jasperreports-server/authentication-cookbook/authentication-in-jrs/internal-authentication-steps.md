@@ -9,7 +9,7 @@ The following diagram shows the general steps involved in JasperReports Serverâ€
 
 ![js sso InternalSequence](../assets/images/js-sso-InternalSequence.png)
 
-*Figure 1: Steps of Internal Authentication*
+*Figure 1 Steps of Internal Authentication*
 
 The interaction between the userâ€™s browser and JasperReports Server includes these general steps:
 

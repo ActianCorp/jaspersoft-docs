@@ -135,4 +135,4 @@ To enable connections from the installation machine to the remote PostgreSQL ser
 
 4.  Restart PostgreSQL.
 
-5.  Using your local PostgreSQL client tools, verify that you can connect to the target remote PostgreSQL from the local installation machine, as described in Using an Existing PostgreSQL on a Remote Host.
+5.  Using your local PostgreSQL client tools, verify that you can connect to the target remote PostgreSQL from the local installation machine, as described in [Using an Existing PostgreSQL on a Remote Host](#using-an-existing-postgresql-on-a-remote-host).

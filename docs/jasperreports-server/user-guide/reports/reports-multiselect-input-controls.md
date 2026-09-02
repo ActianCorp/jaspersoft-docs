@@ -22,4 +22,4 @@ To run a report with a multi-select input control
 
 ![js Report Example ProductName MultiSelect](../assets/images/js-Report-Example-ProductName-MultiSelect.png)
 
-*Figure 1: Multi-Input Control Selection*
+*Figure 1 Multi-Input Control Selection*

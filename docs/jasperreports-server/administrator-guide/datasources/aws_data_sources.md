@@ -27,7 +27,7 @@ To create an AWS Data Source
 
     ![js DataSource AWS properties](../assets/images/js-DataSource-AWS-properties.png)
 
-    *Figure 1: Selecting AWS Credentials*
+    *Figure 1 Selecting AWS Credentials*
 
 4.  Under **AWS Settings**, specify your Amazon credentials in one of the following ways:
 
@@ -36,7 +36,7 @@ To create an AWS Data Source
 
     ![js DataSource AWS generateKeys](../assets/images/js-DataSource-AWS-generateKeys.png)
 
-    *Figure 2: AWS Access and Secret Keys*
+    *Figure 2 AWS Access and Secret Keys*
 
 5.  Under **Select an AWS Data Source**, specify the connection details of the AWS data source that you want to connect to:
 
@@ -49,7 +49,7 @@ To create an AWS Data Source
 
     ![js DataSource AWS select](../assets/images/js-DataSource-AWS-select.png)
 
-    *Figure 3: Select an AWS Data Source Section*
+    *Figure 3 Select an AWS Data Source Section*
 
 6.  When you have entered all the information, click **Test Connection**.<br>
     If your connection is successful, a message appears to the right of the button. Sometimes the process takes a few minutes. In that case you will see an alert. Try the test again after one or two minutes. The test performs the following actions:

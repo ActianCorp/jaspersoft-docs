@@ -27,4 +27,4 @@ The following figure shows the beans used in LDAP authentication:
 
 ![js sso BeanConfigLDAP](../assets/images/js-sso-BeanConfigLDAP.png)
 
-*Figure 1: LDAP Beans*
+*Figure 1 LDAP Beans*

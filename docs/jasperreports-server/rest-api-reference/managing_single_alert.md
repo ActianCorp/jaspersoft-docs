@@ -7,10 +7,10 @@ description: "You can use the following REST APIs to add, modify, view, and dele
 
 You can use the following REST APIs to add, modify, view, and delete single alerts:
 
--   Creating a Single Alert
+-   [Creating a Single Alert](#creating-a-single-alert)
 -   Reading a Single Alert
--   Modifying a Single Alert
--   Deleting a Single Alert
+-   [Modifying a Single Alert](#modifying-a-single-alert)
+-   [Deleting a Single Alert](#deleting-a-single-alert)
 
 ## Creating a Single Alert
 

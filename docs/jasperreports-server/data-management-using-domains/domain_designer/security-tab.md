@@ -13,14 +13,15 @@ To create security rules, you need to understand the syntax for Domain files and
 
 ![js DomainDesigner SecurityTab](../assets/images/js-DomainDesigner-SecurityTab.png)
 
-*Figure 1: Security Tab with no Security Rules Created*
+*Figure 1 Security Tab with no Security Rules Created*
 
 The security file references the `id`s of tables, columns, sets, and items in the Domain design file. When creating a security file, be sure to use the `id`s of items and groups as they are defined in the Domain design file exported from the `Domain Designer`.
 
 The `Security` tab has the following icons to work with the security file editor.
 
+**Domain Designer Security File Icons**
+
 <table>
-<caption><p>Domain Designer Security File Icons</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />

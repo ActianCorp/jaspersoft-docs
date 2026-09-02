@@ -41,7 +41,7 @@ This section describes how to create an Ad Hoc report that prompts for input in 
 
         ![ir Bundle root properties](../assets/images/ir-Bundle-root-properties.png)
 
-        *Figure 1: Selecting Properties of the ParamMany report*
+        *Figure 1 Selecting Properties of the ParamMany report*
 
     8.  In the ParamMany Properties dialog, set the base name of the resource bundle to freight:
 
@@ -55,7 +55,7 @@ This section describes how to create an Ad Hoc report that prompts for input in 
 
             ![ir Bundle settingbasename](../assets/images/ir-Bundle-settingbasename.png)
 
-            *Figure 2: Setting the Base Name of the Resource Bundle*
+            *Figure 2 Setting the Base Name of the Resource Bundle*
 
     9.  Click **Close**.
 
@@ -65,7 +65,7 @@ This section describes how to create an Ad Hoc report that prompts for input in 
 
     ![js Bundle replace current](../assets/images/js-Bundle-replace-current.png)
 
-    *Figure 3: Saving the Current Document in iReport to the Repository*
+    *Figure 3 Saving the Current Document in iReport to the Repository*
 
     The modified JRXML with a base resource bundle name overwrites the Parametrized Report Topic in the repository.
 
@@ -137,7 +137,7 @@ This section describes how to create an Ad Hoc report that prompts for input in 
 
             ![js AdHoc localize IC](../assets/images/js-AdHoc-localize-IC.png)
 
-            *Figure 4: Creating an Ad Hoc View*
+            *Figure 4 Creating an Ad Hoc View*
 
         3.  Click ![js AdHoc icon SaveReport](../assets/images/js-AdHoc-icon-SaveReport.png) and select **Save Ad Hoc view As and Create Report**. In the Save As dialog, select the **Ad Hoc Reports** folder, and enter:
 
@@ -175,7 +175,7 @@ This section describes how to create an Ad Hoc report that prompts for input in 
 
             ![js AddJasperReport localize createIC](../assets/images/js-AddJasperReport-localize-createIC.png)
 
-            *Figure 5: Entering a $R Expression in the Prompt Text Field*
+            *Figure 5 Entering a $R Expression in the Prompt Text Field*
 
         4.  Click **Next**.
 
@@ -192,7 +192,7 @@ This section describes how to create an Ad Hoc report that prompts for input in 
 
             ![js AddJasperReport localize ctrl resources2](../assets/images/js-AddJasperReport-localize-ctrl-resources2.png)
 
-            *Figure 6: Input Controls Include One Multi-lingual Input Control*
+            *Figure 6 Input Controls Include One Multi-lingual Input Control*
 
         7.  Change the prompt text of the other input controls in a similar manner:
 
@@ -252,7 +252,7 @@ To run the report and use the localized input control
 
     ![js AddJasperReport localize run](../assets/images/js-AddJasperReport-localize-run.png)
 
-    *Figure 7: Viewing the Report in English*
+    *Figure 7 Viewing the Report in English*
 
 5.  Click **Options**.
 
@@ -270,4 +270,4 @@ In Figure 5‑34, you can see the input controls that with English and French p
 
 ![js AddJasperReport localize Eng Options](../assets/images/js-AddJasperReport-localize-Eng-Options.png)     ![js Login FR](../assets/images/js-Login-FR.png)
 
-*Figure 8: Input Control Prompts in English and French*
+*Figure 8 Input Control Prompts in English and French*

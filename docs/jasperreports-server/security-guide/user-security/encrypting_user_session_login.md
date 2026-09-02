@@ -71,7 +71,7 @@ The disadvantage of login encryption is the added processing and the added compl
 <td><p><code>encryption.dynamic.key</code></p></td>
 <td><p><code>true</code> &lt;default&gt;<br />
 <code>false</code></p></td>
-<td><p>When true, a key will be generated per every single request. When false, the key will be generated once per application installation. See descriptions in <span>Dynamic Key Encryption</span> and <span>Static Key Encryption</span> below.</p></td>
+<td><p>When true, a key will be generated per every single request. When false, the key will be generated once per application installation. See descriptions in <a href="#dynamic-key-encryption">Dynamic Key Encryption</a> and <a href="#static-key-encryption">Static Key Encryption</a> below.</p></td>
 </tr>
 </tbody>
 </table>

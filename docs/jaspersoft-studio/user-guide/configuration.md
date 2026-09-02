@@ -14,9 +14,9 @@ To open the Preferences window:
 
 This chapter has the following sections:
 
--   Properties
+-   [Properties](#properties)
 
--   JasperReports Samples
+-   [JasperReports Samples](#jasperreports-samples)
 
 -   [Units of Measure in Jaspersoft Studio](measure_units_in_jaspersoft_studio.md)
 

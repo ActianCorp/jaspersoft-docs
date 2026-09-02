@@ -19,7 +19,7 @@ To edit a Mondrian connection
 
     ![ja add view setconnectiontypepropertiesmondrian](assets/images/ja-add-view-setconnectiontypepropertiesmondrian.png)
 
-    *Figure 1: Set Connection Type and Properties Page*
+    *Figure 1 Set Connection Type and Properties Page*
 
 3.  Change values as necessary and click **Next**.
 
@@ -27,7 +27,7 @@ To edit a Mondrian connection
 
     ![ja add view locateolapschema](assets/images/ja-add-view-locateolapschema.png)
 
-    *Figure 2: Locate OLAP Schema Page*
+    *Figure 2 Locate OLAP Schema Page*
 
     You can either accept the existing file or replace it. If you replace the file, you can either upload a new file or select one from the repository.
 
@@ -45,7 +45,7 @@ To edit a Mondrian connection
 
             ![ja add view accessgrantresource](assets/images/ja-add-view-accessgrantresource.png)
 
-            *Figure 3: OLAP Schema Resource*
+            *Figure 3 OLAP Schema Resource*
 
         2.  If you chose to upload a new file, enter a name and description for it.
 
@@ -57,7 +57,7 @@ To edit a Mondrian connection
 
             ![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
 
-            *Figure 4: Locate the Data Source*
+            *Figure 4 Locate the Data Source*
 
             You can either accept the existing data source or replace it. If you replace it, you can either define a new data source or select one from the repository.
 
@@ -77,7 +77,7 @@ To edit a Mondrian connection
 
             ![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
 
-            *Figure 5: Set Data Source Type and Properties Page*
+            *Figure 5 Set Data Source Type and Properties Page*
 
         2.  Enter the requested information, For details on defining data sources, refer to [Working with Data Sources](working_with_data_sources.md) and to the JasperReports Server Administrator Guide.
 
@@ -91,7 +91,7 @@ To edit a Mondrian connection
 
             ![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
 
-            *Figure 6: Locate Access Grant Definition Page*
+            *Figure 6 Locate Access Grant Definition Page*
 
         4.  Click one of the following options:
 
@@ -107,7 +107,7 @@ To edit a Mondrian connection
 
     ![ja add view accessgrantresourcewindow](assets/images/ja-add-view-accessgrantresourcewindow.png)
 
-    *Figure 7: Access Grant Resource Page*
+    *Figure 7 Access Grant Resource Page*
 
 2.  If you upload a new AGXML file, enter the requested information. For details, refer [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you select a resource from the repository, the fields are not editable.
 

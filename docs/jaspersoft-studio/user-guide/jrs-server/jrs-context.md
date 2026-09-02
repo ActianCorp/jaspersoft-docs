@@ -24,7 +24,7 @@ To associate a project with a JasperReports Server instance
     |  |
     |----|
     | ![jss jss2jrs workspace folder](../assets/images/jss-jss2jrs-workspace-folder.png) |
-    | *Figure 1: Setting a Workspace Folder* |
+    | *Figure 1 Setting a Workspace Folder* |
 
 4.  In the Workspace Folder section, browse to the project you want to associate with this server instance.
 
@@ -50,7 +50,7 @@ Once you have associated your server with a project, opening a report from the s
     |  |
     |----|
     | ![jss jrs2jss profit details 1](../assets/images/jss-jrs2jss-profit-details-1.png) |
-    | *Figure 2: A Report and its Main.jrxml on the Server* |
+    | *Figure 2 A Report and its Main.jrxml on the Server* |
 
 4.  Open the `Main.jrxml` file in the editor. You can do this by double-clicking the file, or by right-clicking the file and selecting **Open in Editor**.
 
@@ -59,4 +59,4 @@ Once you have associated your server with a project, opening a report from the s
 |  |
 |----|
 | ![jss jrs2jss profit details 2](../assets/images/jss-jrs2jss-profit-details-2.png) |
-| *Figure 3: A Report in the Associated Jaspersoft Studio Project* |
+| *Figure 3 A Report in the Associated Jaspersoft Studio Project* |

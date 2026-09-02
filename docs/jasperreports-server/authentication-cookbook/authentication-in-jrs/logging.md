@@ -23,6 +23,8 @@ You must restart the server for your changes to take effect. For more informatio
 
 You can reduce impact on performance by restricting logging to functionality that you are interested in, for example, to a subset of Spring Security instead of all of Spring Security. [Useful Logger Classnames for External Authentication](logging.md) shows some logger classnames commonly used when debugging authentication.
 
+**Useful Logger Classnames for External Authentication**
+
 | Functionality to Log | Logger Classname |
 |----|----|
 | Spring Security | `org.springframework.security` |
@@ -39,8 +41,6 @@ You can reduce impact on performance by restricting logging to functionality tha
 | Additional processor and synchronization specific logs | `com.jaspersoft.jasperserver.api.security.externalAuth` |
 | Spring security OAuth2 client logs | `org.springframework.security.oauth2.client` |
 | Spring security authentication logs | `org.springframework.security.authentication` |
-
-Useful Logger Classnames for External Authentication
 
 !!! note
 

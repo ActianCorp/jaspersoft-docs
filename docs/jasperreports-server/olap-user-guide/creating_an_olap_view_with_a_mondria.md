@@ -21,7 +21,7 @@ To create an OLAP, view with a local Mondrian connection,
 
     ![ja add view NameTheView](assets/images/ja-add-view-NameTheView.png)
 
-    *Figure 1: Name the View Page*
+    *Figure 1 Name the View Page*
 
 4.  Enter a name and description for the new view. The **Resource ID** field is auto-generated when you type in the **Name** field. After it is saved, it cannot be changed.
 
@@ -31,7 +31,7 @@ To create an OLAP, view with a local Mondrian connection,
 
     ![ja add view locatemondrianolapclientconnsource](assets/images/ja-add-view-locatemondrianolapclientconnsource.png)
 
-    *Figure 2: Locate Mondrian Client Connection Source Page*
+    *Figure 2 Locate Mondrian Client Connection Source Page*
 
 6.  Click either:
 
@@ -47,7 +47,7 @@ To create an OLAP, view with a local Mondrian connection,
 
             ![ja add view setconnectiontypepropertiesmondrian](assets/images/ja-add-view-setconnectiontypepropertiesmondrian.png)
 
-            *Figure 3: Set Connection Type and Properties Page*
+            *Figure 3 Set Connection Type and Properties Page*
 
         2.  To change the type of the connection, select a connection type from the **Type** dropdown and complete the fields. Otherwise, enter the requested information. For details see [Creating a Mondrian Connection](creating_a_mondrian_connection.md).
 
@@ -59,7 +59,7 @@ To create an OLAP, view with a local Mondrian connection,
 
             ![ja add view locateolapschema](assets/images/ja-add-view-locateolapschema.png)
 
-            *Figure 4: Locate OLAP Schema Page*
+            *Figure 4 Locate OLAP Schema Page*
 
         5.  Click either:
 
@@ -77,7 +77,7 @@ To create an OLAP, view with a local Mondrian connection,
 
             ![ja add view OLAP schema details](assets/images/ja-add-view-OLAP-schema-details.png)
 
-            *Figure 5: OLAP Schema Resource Page*
+            *Figure 5 OLAP Schema Resource Page*
 
             If you chose to upload a new file, the fields are editable. Enter the requested information. For details, refer to [Working with OLAP Schemas](working_with_olap_schemas.md).
 
@@ -87,7 +87,7 @@ To create an OLAP, view with a local Mondrian connection,
 
             ![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
 
-            *Figure 6: Locate Data Source Page*
+            *Figure 6 Locate Data Source Page*
 
         3.  Click either:
 
@@ -103,7 +103,7 @@ To create an OLAP, view with a local Mondrian connection,
 
             ![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
 
-            *Figure 7: Set Data Source Type and Properties Page*
+            *Figure 7 Set Data Source Type and Properties Page*
 
         2.  Enter the requested information and test the connection. For details, refer to [Working with Data Sources](working_with_data_sources.md) and to the JasperReports Server Administrator Guide.
 
@@ -113,7 +113,7 @@ To create an OLAP, view with a local Mondrian connection,
 
             ![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
 
-            *Figure 8: Locate Access Grant Definition Page*
+            *Figure 8 Locate Access Grant Definition Page*
 
         4.  Click one of the following:
 
@@ -137,7 +137,7 @@ In our case, we do not need to secure the data in the view, so you will not spec
 
     ![ja add view accessgrantresourcewindow](assets/images/ja-add-view-accessgrantresourcewindow.png)
 
-    *Figure 9: Access Grant Resource Page*
+    *Figure 9 Access Grant Resource Page*
 
 2.  If you chose to upload a new file from your computer, the fields are editable. Enter the requested information. For details, refer to [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you chose a file from the repository, the fields are not editable.
 
@@ -147,7 +147,7 @@ In our case, we do not need to secure the data in the view, so you will not spec
 
     ![ja add view MDXquery](assets/images/ja-add-view-MDXquery.png)
 
-    *Figure 10: Define the Query Page*
+    *Figure 10 Define the Query Page*
 
 4.  Enter an MDX query. For example, type:
 

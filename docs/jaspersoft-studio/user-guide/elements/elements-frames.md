@@ -24,14 +24,14 @@ For example, suppose you have a frame that contains some fields and a map:
 |                                                      |
 |------------------------------------------------------|
 | ![jss frame big](../assets/images/jss-frame-big.png) |
-| *Figure 1: Frame size larger than contents*          |
+| *Figure 1 Frame size larger than contents*           |
 
 Now suppose that your map is configured with an expression that only displays the map some of the time. If you size the frame to be bigger than the map, the report inserts white space when the map is not displayed. Instead, you can size the frame to be smaller than the map:
 
 |                                                          |
 |----------------------------------------------------------|
 | ![jss frame small](../assets/images/jss-frame-small.png) |
-| *Figure 2: Frame size smaller than contents*             |
+| *Figure 2 Frame size smaller than contents*              |
 
 Now, the frame expands as necessary to include any non-null content, but no additional white space is added if the map is not present.
 

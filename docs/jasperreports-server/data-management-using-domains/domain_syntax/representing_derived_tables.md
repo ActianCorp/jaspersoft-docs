@@ -69,7 +69,7 @@ The `fieldList` is a container for the `field` elements in the table. When the d
 
 | Element Name | Description |
 |----|----|
-| `<``field``>` | (Required) A column from the table specified in `jdbcQuery`. |
+| `<`[`field`](#field)`>` | (Required) A column from the table specified in [`jdbcQuery`](#jdbcquery). |
 
 ## field
 

@@ -24,7 +24,7 @@ To create an XLS or XLSX data source
 
     ![js DataSource XLSX](../assets/images/js-DataSource-XLSX.png)
 
-    *Figure 1: File Data Source Page for an XLS/XLXS Data Source*
+    *Figure 1 File Data Source Page for an XLS/XLXS Data Source*
 
 4.  Enter the date and time format patterns used for the data source.
 

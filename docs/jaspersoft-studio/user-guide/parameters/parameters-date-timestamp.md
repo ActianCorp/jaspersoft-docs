@@ -20,7 +20,7 @@ To display the date/time that the report ran
     |  |
     |----|
     | ![jss ScheduledTime OutlineView](../assets/images/jss-ScheduledTime-OutlineView.png) |
-    | *Figure 1: \_ScheduledTime Parameter in Outline View* |
+    | *Figure 1 \_ScheduledTime Parameter in Outline View* |
 
 4.  Set the following parameter properties:
 
@@ -31,14 +31,14 @@ To display the date/time that the report ran
 |  |
 |----|
 | ![jss ScheduledTime Properties](../assets/images/jss-ScheduledTime-Properties.png) |
-| *Figure 2: \_ScheduledTime Parameter Properties* |
+| *Figure 2 \_ScheduledTime Parameter Properties* |
 
 1.  Drag the **\_ScheduledTime** element from the **Outline** view to a valid location, such as the **Title Band**, in the **Designer**:
 
     |  |
     |----|
     | ![jss ScheduledTime Designer](../assets/images/jss-ScheduledTime-Designer.png) |
-    | *Figure 3: Report Design Includes the \_ScheduledTime Parameter Element* |
+    | *Figure 3 Report Design Includes the \_ScheduledTime Parameter Element* |
 
 2.  Now you can set other properties, such as the text color of the date/time stamp. In **Properties**, check **Blank when Null** to prevent the word null from appearing on the report when it runs unscheduled.
 
@@ -51,6 +51,6 @@ To display the date/time that the report ran
 |  |
 |----|
 | ![jss ScheduledTime Report](../assets/images/jss-ScheduledTime-Report.png) |
-| *Figure 4: Output Showing the Scheduled Time the Report Actually Ran* |
+| *Figure 4 Output Showing the Scheduled Time the Report Actually Ran* |
 
 The date and time the report actually ran appears in the output, as well as the scheduled time. In the screenshot above, there was a 13-second delay between the scheduled start time and the actual run time.

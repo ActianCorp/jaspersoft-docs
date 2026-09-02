@@ -5,7 +5,7 @@ description: "You can add parameters to dashlet names, text dashlets, web page d
 
 # Specifying Parameters in Dashlets
 
-You can add parameters to dashlet names, text dashlets, web page dashlets, image dashlets, and hyperlinks in Ad Hoc viewdashlets. When you add a parameter, you must map a filter in the dashboard to the parameter. See Mapping parameters in Parameter Mapping for more information.
+You can add parameters to dashlet names, text dashlets, web page dashlets, image dashlets, and hyperlinks in Ad Hoc viewdashlets. When you add a parameter, you must map a filter in the dashboard to the parameter. See [Mapping parameters in Parameter Mapping](#mapping-parameters-in-parameter-mapping) for more information.
 
 Simple parameters
 
@@ -59,7 +59,7 @@ When you type the `$` symbol into a dashlet's text box, a dropdown list of avail
 
 ![js Dashboard AutoComplete Parameters](../assets/images/js-Dashboard-AutoComplete-Parameters.png)
 
-*Figure 1: Text dashlet showing available parameters*
+*Figure 1 Text dashlet showing available parameters*
 
 ### Mapping parameters in Parameter Mapping
 
@@ -152,7 +152,7 @@ Finally, preview the new dashboard functionality
 
     ![js DashboardDesigner Example Web Hyperlink](../assets/images/js-DashboardDesigner-Example-Web-Hyperlink.png)
 
-    *Figure 2: Dashboard with web page parameters*
+    *Figure 2 Dashboard with web page parameters*
 
 4.  Click the **Viewing** button and select **Editing** to return to the Dashboard Designer.
 

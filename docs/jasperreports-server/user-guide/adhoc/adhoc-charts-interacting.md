@@ -27,11 +27,11 @@ The following images show a bar chart before and after zooming:
 
 ![js adhoc chart brush to zoom](../assets/images/js-adhoc-chart-brush-to-zoom.png)
 
-*Figure 1: Selecting a Zoom Area*
+*Figure 1 Selecting a Zoom Area*
 
 ![js AdHoc Charts ZoomResult](../assets/images/js-AdHoc-Charts-ZoomResult.png)
 
-*Figure 2: Area After Zooming*
+*Figure 2 Area After Zooming*
 
 ## Hiding Group Members
 
@@ -42,7 +42,7 @@ Use the legends below the chart to hide or show group members.
 
 ![js AdHoc Charts Hide1](../assets/images/js-AdHoc-Charts-Hide1.png)
 
-*Figure 3: Hiding a Group Member*
+*Figure 3 Hiding a Group Member*
 
 !!! note
 
@@ -56,11 +56,11 @@ To use drill down, in the **Drill Down** section, enable the toggle. When enable
 
 ![AdhocView piechart drilldown level2](../assets/images/AdhocView-piechart-drilldown-level2.png)
 
-*Figure 4: Enable Drill Down in Old Layout Band*
+*Figure 4 Enable Drill Down in Old Layout Band*
 
 ![Adhocview piechart drill down](../assets/images/Adhocview-piechart-drill-down.png)
 
-*Figure 5: Enable Drill Down in New Layout Band*
+*Figure 5 Enable Drill Down in New Layout Band*
 
 Drill down is an interactive viewer feature and the current path of drill down is not saved in the Ad Hoc View resource. Whenever an Ad Hoc View is open in the viewer or designer, the visualization starts from the first level of data point in the drill down axis.
 

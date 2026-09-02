@@ -7,8 +7,9 @@ description: "Roles define sets of users who are granted similar permissions. Ad
 
 Roles define sets of users who are granted similar permissions. Administrators create roles, assign them to users, and set permissions in the repository (see [Repository Permissions](../repository/permissions.md)). By default, JasperReports Server includes the following roles; some are needed for system operation, some are included as part of the sample data:
 
+**Default Roles in JasperReports Server Installations**
+
 <table>
-<caption><p>Default Roles in JasperReports Server Installations</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -70,7 +71,7 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 
     ![js ManageRoles overview](../assets/images/js-ManageRoles-overview.png)
 
-    *Figure 1: Manage Roles Page*
+    *Figure 1 Manage Roles Page*
 
     > The Roles list includes all roles in the chosen organization and its suborganizations along with the five default system-level roles. The same role name may appear more than once if roles with the same name were created in different organizations. The second column (blank in this figure) gives the organization name of a particular role.
     >
@@ -100,7 +101,7 @@ It is possible for an administrator to assign a role to a user in a suborganizat
 
     ![js ManageRoles AddRole](../assets/images/js-ManageRoles-AddRole.png)
 
-    *Figure 2: Adding a Role*
+    *Figure 2 Adding a Role*
 
 5.  Enter the name of the role. The role name is also the role ID and does not accept spaces or special characters.
 
@@ -128,7 +129,7 @@ You can assign multiple users to one role. To assign multiple roles to one user,
 
     ![js ManageRoles EditRole](../assets/images/js-ManageRoles-EditRole.png)
 
-    *Figure 3: Editing the Members of a Role*
+    *Figure 3 Editing the Members of a Role*
 
 6.  Enter a different name to change the role name throughout the server.
 

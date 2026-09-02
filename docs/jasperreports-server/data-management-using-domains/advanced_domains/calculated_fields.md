@@ -28,7 +28,7 @@ Calculated fields appear in the **Data Structure** panel on the **Joins, Pre-fil
 
     ![js DomainDesigner CreateCalculatedField](../assets/images/js-DomainDesigner-CreateCalculatedField.png)
 
-    *Figure 1: New Calculated Field*
+    *Figure 1 New Calculated Field*
 
 3.  In **Field Name**, enter the name you want to use for the calculated field. This name becomes the field's ID in the Domain.
 
@@ -67,7 +67,7 @@ An expression that does not reference any fields has a constant value. For examp
 
     ![js DomainDesigner CreateConstantField](../assets/images/js-DomainDesigner-CreateConstantField.png)
 
-    *Figure 2: Creating a Constant Field*
+    *Figure 2 Creating a Constant Field*
 
 3.  In **Field Name**, enter the name you want to use for the calculated field. This becomes the ID of the field in the Domain, and you can later give it a label and description on the Presentations tab.
 

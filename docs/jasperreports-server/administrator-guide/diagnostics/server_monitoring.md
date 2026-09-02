@@ -22,13 +22,13 @@ The Ad Hoc views are provided in the `/Public/``Completed Schedules/Ad Hoc Views
 
 ![js repository Completed Schedules Ad Hoc views](../assets/images/js-repository-Completed%20Schedules-Ad%20Hoc%20views.png)
 
-*Figure 1: Ad Hoc Views in Completed Schedules*
+*Figure 1 Ad Hoc Views in Completed Schedules*
 
 You can click the Ad Hoc view name to open it. You can add filters to the views. For Query Details Ad Hoc View and Output Formats Ad Hoc View, you need to use a specific Execution ID as an input control to view the data.
 
 ![js repository Successful Reports Ad Hoc View](../assets/images/js-repository-Successful-Reports-Ad-Hoc-View.png)
 
-*Figure 2: Successful Reports Ad Hoc View*
+*Figure 2 Successful Reports Ad Hoc View*
 
 Ad Hoc views use cached data for better performance, so the recommendation is to create a dashboard using these Ad Hoc views to view real-time data.
 
@@ -91,7 +91,7 @@ To view the real-time Ad Hoc View data using dashboards
 
     ![js Successful Reports Ad Hoc View parameter mapping](../assets/images/js-Successful-Reports-Ad-Hoc-View-parameter-mapping.png)
 
-    *Figure 3: Parameter Mapping Dialog Box*
+    *Figure 3 Parameter Mapping Dialog Box*
 
     For more information on parameter mapping, see the JasperReports Server User Guide.
 
@@ -102,7 +102,7 @@ To view the real-time Ad Hoc View data using dashboards
 
 ![js Successful Scheduled Reports Dashboard](../assets/images/js-Successful-Scheduled-Reports-Dashboard.png)
 
-*Figure 4: Successful Scheduled Reports Dashboard*
+*Figure 4 Successful Scheduled Reports Dashboard*
 
 ## Domains
 
@@ -115,7 +115,7 @@ The Domains are provided in the /Public/`Completed Schedules/Domains` folder. Ad
 
 ![js repository Completed Schedules Domains](../assets/images/js-repository-Completed%20Schedules-Domains.png)
 
-*Figure 5: Domains in Completed Schedules*
+*Figure 5 Domains in Completed Schedules*
 
 ### Editing the Domains
 
@@ -126,6 +126,6 @@ To edit the data of a domain
 
 ![js repository Completed Schedules Successful Reports Domain](../assets/images/js-repository-Completed-Schedules-Successful-Reports-Domain.png)
 
-*Figure 6: Successful Reports Domain*
+*Figure 6 Successful Reports Domain*
 
 For more information on editing domains, see JasperReports Server Data Management Using Domains.

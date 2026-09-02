@@ -9,18 +9,18 @@ The `dashboard` function runs dashboards on JasperReports Server and displays th
 
 This chapter contains the following sections:
 
--   Dashboard Properties
--   Dashboard Functions
--   Dashboard Structure
--   Rendering a Dashboard
--   Getting the Embed Code of a Dashboard
--   Refreshing a Dashboard
--   Tracking Completion Status
--   Using Dashboard Input Controls
--   Using the Dashboard Undo Stack
--   Setting Dashboard Hyperlink Options
--   Exporting From a Dashboard
--   Closing a Dashboard
+-   [Dashboard Properties](#dashboard-properties)
+-   [Dashboard Functions](#dashboard-functions)
+-   [Dashboard Structure](#dashboard-structure)
+-   [Rendering a Dashboard](#rendering-a-dashboard)
+-   [Getting the Embed Code of a Dashboard](#getting-the-embed-code-of-a-dashboard)
+-   [Refreshing a Dashboard](#refreshing-a-dashboard)
+-   [Tracking Completion Status](#tracking-completion-status)
+-   [Using Dashboard Input Controls](#using-dashboard-input-controls)
+-   [Using the Dashboard Undo Stack](#using-the-dashboard-undo-stack)
+-   [Setting Dashboard Hyperlink Options](#setting-dashboard-hyperlink-options)
+-   [Exporting From a Dashboard](#exporting-from-a-dashboard)
+-   [Closing a Dashboard](#closing-a-dashboard)
 
 ## Dashboard Properties
 
@@ -379,7 +379,7 @@ dashboard
     .fail(function(e) { alert(e); });
 ```
 
-By listening for the *dashboardCompleted* event, you can give information or take action when a dashboard finishes rendering. For more information, see Tracking Completion Status.
+By listening for the *dashboardCompleted* event, you can give information or take action when a dashboard finishes rendering. For more information, see [Tracking Completion Status](#tracking-completion-status).
 
 ## Getting the Embed Code of a Dashboard
 
@@ -398,7 +398,7 @@ To copy the embed code of a dashboard:
     |  |
     |----|
     | ![js Dashboard GetEmbedCode](../assets/images/js-Dashboard-GetEmbedCode.png) |
-    | *Figure 1: The Embed Code of a Dashboard* |
+    | *Figure 1 The Embed Code of a Dashboard* |
 
     The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
 

@@ -27,8 +27,9 @@ The following terminologies are used to describe HTML5 charts:
 
 Before you add a chart to your report, consider the best way to display your data. The following table describes the available chart types.
 
+**HTML5 Chart Types**
+
 <table>
-<caption><p>HTML5 Chart Types</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

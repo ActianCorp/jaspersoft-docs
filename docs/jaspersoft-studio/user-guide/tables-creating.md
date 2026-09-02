@@ -16,7 +16,7 @@ Once you have placed your table in your report, use the **Table Wizard** to choo
 |                                                         |
 |---------------------------------------------------------|
 | ![table wizard new](assets/images/table-wizard-new.png) |
-| *Figure 1: Table Wizard - New Table*                    |
+| *Figure 1 Table Wizard - New Table*                     |
 
 To create a new dataset for your table
 
@@ -25,35 +25,35 @@ To create a new dataset for your table
     |                                                                 |
     |-----------------------------------------------------------------|
     | ![table wizard dataset](assets/images/table-wizard-dataset.png) |
-    | *Figure 2: Table Wizard - Dataset*                              |
+    | *Figure 2 Table Wizard - Dataset*                               |
 
 2.  Name your dataset and select your option: **Create new dataset from a connection or data source** or **Create an empty dataset**. For this example, choose the first option and click **Next**. You are prompted to select a data source and design query.
 
     |  |
     |----|
     | ![table wizard dataset datasource](assets/images/table-wizard-dataset-datasource.png) |
-    | *Figure 3: Table Wizard - Dataset Datasource* |
+    | *Figure 3 Table Wizard - Dataset Datasource* |
 
 3.  Select a data source and enter an SQL query such as: `select * from orders` and click **Next**. You are prompted to select dataset fields.
 
     |  |
     |----|
     | ![table wizard dataset fields](assets/images/table-wizard-dataset-fields.png) |
-    | *Figure 4: Table Wizard - Dataset Fields* |
+    | *Figure 4 Table Wizard - Dataset Fields* |
 
 4.  Select the fields that you want in your table and add them to the **Fields** list on the right. Then click **Next**. You are prompted to select the fields to group by from among your chosen fields.
 
     |  |
     |----|
     | ![table wizard dataset groupby](assets/images/table-wizard-dataset-groupby.png) |
-    | *Figure 5: Table Wizard - Dataset &gt; Group By* |
+    | *Figure 5 Table Wizard - Dataset &gt; Group By* |
 
 5.  Select one or more fields to group by and move them to the **Fields** list on the right. Click **Next**. You are prompted to select a connection.
 
     |                                                                       |
     |-----------------------------------------------------------------------|
     | ![table wizard connection](assets/images/table-wizard-connection.png) |
-    | *Figure 6: Table Wizard - Connection*                                 |
+    | *Figure 6 Table Wizard - Connection*                                  |
 
 6.  Select a data connection option. Your options are:
 
@@ -69,21 +69,21 @@ To create a new dataset for your table
     |  |
     |----|
     | ![table wizard table columns](assets/images/table-wizard-table-columns.png) |
-    | *Figure 7: Table Wizard - Table Columns* |
+    | *Figure 7 Table Wizard - Table Columns* |
 
 2.  Select one or more fields to for table columns and move them to the Fields list on the right. Click **Next**. You are prompted to select a layout.
 
     |                                                               |
     |---------------------------------------------------------------|
     | ![table wizard layout](assets/images/table-wizard-layout.png) |
-    | *Figure 8: Table Wizard - Layout*                             |
+    | *Figure 8 Table Wizard - Layout*                              |
 
 3.  Select the layout for your table, and click **Finish**. The table appears where you dragged the table element in your report.
 
 |                                                       |
 |-------------------------------------------------------|
 | ![table in report](assets/images/table-in-report.png) |
-| *Figure 9: Report Containing a Table*                 |
+| *Figure 9 Report Containing a Table*                  |
 
 To use an existing dataset when creating a table
 
@@ -96,7 +96,7 @@ Creating a table using an existing dataset is largely the same as creating a tab
     |  |
     |----|
     | ![table wizard dataset existing](assets/images/table-wizard-dataset-existing.png) |
-    | *Figure 10: Table Wizard - Dataset* |
+    | *Figure 10 Table Wizard - Dataset* |
 
 3.  Click **Next**. You are prompted to select the connection.
 

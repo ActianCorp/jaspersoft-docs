@@ -40,7 +40,7 @@ To create the chart
     |  |
     |----|
     | ![jss html5 charts advanced scatter](../assets/images/jss-html5-charts-advanced-scatter.png) |
-    | *Figure 1: Scatter Chart Properties* |
+    | *Figure 1 Scatter Chart Properties* |
 
 6.  Under **Categories Levels**, select Level1 and click **Modify**. Then enter the following:
 
@@ -111,4 +111,4 @@ The chart is now configured. Click **OK** to close the dialog, then preview the 
 |  |
 |----|
 | ![jss html5 charts scatter result](../assets/images/jss-html5-charts-scatter-result.png) |
-| *Figure 2: Scatter chart* |
+| *Figure 2 Scatter chart* |

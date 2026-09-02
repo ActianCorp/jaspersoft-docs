@@ -15,7 +15,7 @@ In Figure 1-1 you can see an example of how to set a simple recurrence.
 
 ![js Schedule New ScheduleSimple](../assets/images/js-Schedule-New-ScheduleSimple.png)
 
-*Figure 1: Simple Recurrence Settings*
+*Figure 1 Simple Recurrence Settings*
 
 Simple recurrence options are:
 
@@ -41,7 +41,7 @@ In Figure 3‑21 you see an example of calendar recurrence settings.
 
 ![js Schedule New ScheduleCalendar](../assets/images/js-Schedule-New-ScheduleCalendar.png)
 
-*Figure 2: Calendar Recurrence Settings*
+*Figure 2 Calendar Recurrence Settings*
 
 Calendar recurrence options are:
 

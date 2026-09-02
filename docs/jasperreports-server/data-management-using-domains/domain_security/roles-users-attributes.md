@@ -16,7 +16,7 @@ CZS grants each role access to view the Sales Domain. For details about creating
 
 ![js CZS Roles](../assets/images/js-CZS-Roles.png)
 
-*Figure 1: CZS Sales Representative Role*
+*Figure 1 CZS Sales Representative Role*
 
 ## Users
 
@@ -38,8 +38,9 @@ A user attribute is a name-value pair defined at the user level that corresponds
 -   The `Cities` profile attribute corresponds to the City field in the Geography item group in the Sales Domain.
 -   The `ProductDepartment` attribute corresponds to the Department field in the Product item group in the Sales Domain.
 
+**UserAttributes of All CZS Users**
+
 <table>
-<caption><p>UserAttributes of All CZS Users</p></caption>
 <thead>
 <tr>
 <th rowspan="2"><p>User</p></th>
@@ -80,4 +81,4 @@ The following figure shows the configuration of Rita’s user account. Notice Ri
 
 ![js CZS Users](../assets/images/js-CZS-Users.png)
 
-*Figure 2: CZS User Rita’s Configuration*
+*Figure 2 CZS User Rita’s Configuration*

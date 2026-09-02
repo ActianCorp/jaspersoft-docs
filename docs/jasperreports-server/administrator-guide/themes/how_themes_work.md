@@ -28,7 +28,7 @@ The following figure shows the files of the default theme in the Themes folder a
 
 ![js Themes SystemLevel](../assets/images/js-Themes-SystemLevel.png)
 
-*Figure 1: Contents of the Root default Theme*
+*Figure 1 Contents of the Root default Theme*
 
 ## Theme Files
 

@@ -16,7 +16,7 @@ To connect Jaspersoft Studio to the server
     |  |
     |----|
     | ![jss2jrs publishing jrl advancedsettings](../assets/images/jss2jrs-publishing-jrl-advancedsettings.png) |
-    | *Figure 1: Server Profile Wizard* |
+    | *Figure 1 Server Profile Wizard* |
 
 3.  Enter the URL, usernames, and password for your server. If the server hosts multiple organizations, enter the name of your organization as well.
 
@@ -57,4 +57,4 @@ The server appears in the **Repository Explorer**.
 |                                                                  |
 |------------------------------------------------------------------|
 | ![repository explorer](../assets/images/repository-explorer.png) |
-| *Figure 2: Repository Explorer*                                  |
+| *Figure 2 Repository Explorer*                                   |

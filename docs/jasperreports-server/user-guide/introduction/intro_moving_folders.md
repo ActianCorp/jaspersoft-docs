@@ -31,7 +31,7 @@ To move folders and resources by cutting and pasting
 
     ![js Folders Folder Added](../assets/images/js-Folders-Folder-Added.png)
 
-    *Figure 1: New Financial Reports Folder*
+    *Figure 1 New Financial Reports Folder*
 
 5.  The Financial Reports folder deserves a more prominent location. Move it up one level:
 

@@ -9,9 +9,9 @@ This chapter describes the recommended procedure for upgrading to JasperReports 
 
 This chapter contains the following sections:
 
--   Migrating From Compact to Split (samedb)
+-   [Migrating From Compact to Split (samedb)](#migrating-from-compact-to-split-samedb)
 
--   Migrating From Compact to Split (newdb)
+-   [Migrating From Compact to Split (newdb)](#migrating-from-compact-to-split-newdb)
 
 ## Migrating From Compact to Split (samedb)
 

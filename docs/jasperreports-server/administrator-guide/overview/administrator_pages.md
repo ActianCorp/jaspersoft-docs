@@ -20,7 +20,7 @@ Administrators have access to special pages to manage the server. After logging 
 <p><img src="../assets/images/js-Manage-menu-jasperadmin.png" alt="js Manage menu jasperadmin" /></p></td>
 </tr>
 <tr>
-<td colspan="2"><p><em>Figure 1: Manage Menu for Administrators</em></p></td>
+<td colspan="2"><p><em>Figure 1 Manage Menu for Administrators</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -31,7 +31,7 @@ The following figure shows the **Admin** page for system admins. The page is sim
 
 ![js AdminHome superuser](../assets/images/js-AdminHome-superuser.png)
 
-*Figure 2: Manage Server Page for System Admins (superuser)*
+*Figure 2 Manage Server Page for System Admins (superuser)*
 
 The pages for administering organizations, users, and roles are documented in [User and Role Management](../management/management_intro.md). The pages for administering Server Settings are documented in [Configuration Settings in the User Interface](../configuration/configuration_settings_in_the_ui.md).
 
@@ -39,4 +39,4 @@ The **About JasperReports Server** link in the footer of all pages displays the 
 
 ![js About Server](../assets/images/js-About-Server.png)
 
-*Figure 3: About JasperReports Server Dialog*
+*Figure 3 About JasperReports Server Dialog*

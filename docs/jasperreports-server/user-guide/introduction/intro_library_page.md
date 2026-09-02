@@ -11,7 +11,7 @@ Click **Library** to view your Library list.
 
 ![js Library Browse page](../assets/images/js-Library-Browse-page.png)
 
-*Figure 1: Library Page*
+*Figure 1 Library Page*
 
 From the Library page, you can:
 

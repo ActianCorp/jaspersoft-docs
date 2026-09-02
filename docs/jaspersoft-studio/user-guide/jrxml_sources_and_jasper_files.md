@@ -30,8 +30,9 @@ Jaspersoft Studio also lets you configure data sources and use them to test your
 
 The following table shows sample report source code.
 
+**A simple JRMXL file example**
+
 <table>
-<caption><p>A simple JRMXL file example</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>

@@ -49,4 +49,4 @@ When you type the `$` symbol into a dashlet's text box, a dropdown list with the
 
 ![js Dashboard AutoComplete TimeDateWildcards](../assets/images/js-Dashboard-AutoComplete-TimeDateWildcards.png)
 
-*Figure 1: Time-Date Wildcard Auto-complete*
+*Figure 1 Time-Date Wildcard Auto-complete*

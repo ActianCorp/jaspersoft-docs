@@ -14,14 +14,14 @@ Select the **Object** tab to name your field, enter a description, and choose a 
 |                                                                    |
 |--------------------------------------------------------------------|
 | ![field properties obj](../assets/images/field-properties-obj.png) |
-| *Figure 1: Object Tab in Properties View of a Field*               |
+| *Figure 1 Object Tab in Properties View of a Field*                |
 
 Select the **Advanced** tab to enter advanced properties for the field.
 
 |                                                                    |
 |--------------------------------------------------------------------|
 | ![field properties adv](../assets/images/field-properties-adv.png) |
-| *Figure 2: Advanced Tab in Properties View of a Field*             |
+| *Figure 2 Advanced Tab in Properties View of a Field*              |
 
 A field is identified by a unique name, a type, and an optional description.
 

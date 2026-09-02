@@ -15,7 +15,7 @@ The configuration of the OpenTelemetry and Jaeger agent includes the following s
 
 3.  Download Jaeger Tracing from <https://www.jaegertracing.io/download/> and run the Jaeger aggregator.
 
-To configure step by step, see Setting up OpenTelemetry and Jaeger Agent on JasperReports Server Application and Setting up OpenTelemetry and Jaeger Agent on JasperReports Server Cluster.
+To configure step by step, see [Setting up OpenTelemetry and Jaeger Agent on JasperReports Server Application](#setting-up-opentelemetry-and-jaeger-on-jasperreports-server-application) and [Setting up OpenTelemetry and Jaeger Agent on JasperReports Server Cluster](#setting-up-opentelemetry-and-jaeger-on-jasperreports-server-cluster).
 
 ## Setting up OpenTelemetry and Jaeger on JasperReports Server Application
 

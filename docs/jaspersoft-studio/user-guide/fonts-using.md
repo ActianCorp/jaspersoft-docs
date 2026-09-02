@@ -19,7 +19,7 @@ The **Fonts** page is displayed:
 |                                                         |
 |---------------------------------------------------------|
 | ![jss fonts dialog](assets/images/jss-fonts-dialog.png) |
-| *Figure 1: Fonts preferences*                           |
+| *Figure 1 Fonts preferences*                            |
 
 To create a font extension
 
@@ -32,7 +32,7 @@ This example uses two external Google fonts, Amaranth (a Latin-only font) and Lo
     |                                                               |
     |---------------------------------------------------------------|
     | ![jss fonts from path](assets/images/jss-fonts-from-path.png) |
-    | *Figure 2: Adding fonts from a path*                          |
+    | *Figure 2 Adding fonts from a path*                           |
 
 3.  Click **...** and browse to the folder that contains the fonts you want, then click **Finish**.
 
@@ -51,14 +51,14 @@ To create a font set
     |                                                                         |
     |-------------------------------------------------------------------------|
     | ![jss fonts select for set](assets/images/jss-fonts-select-for-set.png) |
-    | *Figure 3: Selecting font extensions*                                   |
+    | *Figure 3 Selecting font extensions*                                    |
 
 2.  Click **Create Font Set**. The **Font Set** dialog is displayed.
 
     |                                               |
     |-----------------------------------------------|
     | ![jss fontset](assets/images/jss-fontset.png) |
-    | *Figure 4: Font Set dialog*                   |
+    | *Figure 4 Font Set dialog*                    |
 
 3.  Enter a name for your font set and click **OK**. This example uses **SampleFontSet**.
 
@@ -73,7 +73,7 @@ Configure fonts in a font set
     |                                                                   |
     |-------------------------------------------------------------------|
     | ![jss font set expanded](assets/images/jss-font-set-expanded.png) |
-    | *Figure 5: Fonts window with expanded font set*                   |
+    | *Figure 5 Fonts window with expanded font set*                    |
 
 2.  Select **Lobster** and click **Edit** or double-click **Lobster**.
 
@@ -82,7 +82,7 @@ Configure fonts in a font set
     |  |
     |----|
     | ![jss font set family exclude](assets/images/jss-font-set-family-exclude.png) |
-    | *Figure 6: Font Set Family dialog* |
+    | *Figure 6 Font Set Family dialog* |
 
 3.  To prevent Lobster from being used by Latin characters, click **Add** next to the **Exclude Scripts** list.
 
@@ -107,7 +107,7 @@ Create a report with a local data adapter
         |                                                                       |
         |-----------------------------------------------------------------------|
         | ![jss data adapter export](assets/images/jss-data-adapter-export.png) |
-        | *Figure 7: Exporting a global data adapter*                           |
+        | *Figure 7 Exporting a global data adapter*                            |
 
     2.  Select the project that you want and click **OK**.
 
@@ -124,7 +124,7 @@ Create a report with a local data adapter
     |                                                                     |
     |---------------------------------------------------------------------|
     | ![jss data adapter local](assets/images/jss-data-adapter-local.png) |
-    | *Figure 8: Selecting the local data adapter*                        |
+    | *Figure 8 Selecting the local data adapter*                         |
 
 6.  Click **Finish**.
 
@@ -141,7 +141,7 @@ Create a report with a local data adapter
         |                                                                         |
         |-------------------------------------------------------------------------|
         | ![jss data adapter default](assets/images/jss-data-adapter-default.png) |
-        | *Figure 9: Default Data Adapter*                                        |
+        | *Figure 9 Default Data Adapter*                                         |
 
     5.  Click **Finish**.
 
@@ -164,7 +164,7 @@ Create a report with multi-lingual text
     |                                                           |
     |-----------------------------------------------------------|
     | ![jss font set menu](assets/images/jss-font-set-menu.png) |
-    | *Figure 10: Font menu with font extensions*               |
+    | *Figure 10 Font menu with font extensions*                |
 
     The default font used for a new static text element is SansSerif. This font does support for extended characters, but because it is a Java logical font that is translated to a physical font by the JVM, you will not know what font is selected when the report is run.
 
@@ -173,14 +173,14 @@ Create a report with multi-lingual text
     |                                                                         |
     |-------------------------------------------------------------------------|
     | ![jss font set design view](assets/images/jss-font-set-design-view.png) |
-    | *Figure 11: Font set in design view*                                    |
+    | *Figure 11 Font set in design view*                                     |
 
 7.  Save and preview the report. The license for these fonts lets you preview the report as a PDF.
 
 |                                                                 |
 |-----------------------------------------------------------------|
 | ![jss font set preview](assets/images/jss-font-set-preview.png) |
-| *Figure 12: Font set in preview*                                |
+| *Figure 12 Font set in preview*                                 |
 
 # Deploying Font Extensions to JasperReports Server
 
@@ -239,7 +239,7 @@ You can attach the resource directly to the report, or you can upload it to anot
     |                                                                         |
     |-------------------------------------------------------------------------|
     | ![jss jss2jrs add resource](assets/images/jss-jss2jrs-add-resource.png) |
-    | *Figure 13: Adding a resource in the Repository Explorer*               |
+    | *Figure 13 Adding a resource in the Repository Explorer*                |
 
 3.  Select a **Jar** in the **Add Resource** wizard and click **Next**.
 

@@ -26,7 +26,7 @@ To create a template
 |                                                 |
 |-------------------------------------------------|
 | ![empty record](assets/images/empty-record.png) |
-| *Figure 1: One Empty Record Data Source*        |
+| *Figure 1 One Empty Record Data Source*         |
 
 An empty report opens, containing the following bands:
 
@@ -44,14 +44,14 @@ An empty report opens, containing the following bands:
     |                                                           |
     |-----------------------------------------------------------|
     | ![group band window](assets/images/group-band-window.png) |
-    | *Figure 2: Group Band Dialog*                             |
+    | *Figure 2 Group Band Dialog*                              |
 
 2.  Name your group and click **Next**. The **Group Layout** dialog is displayed.
 
     |                                                 |
     |-------------------------------------------------|
     | ![group layout](assets/images/group-layout.png) |
-    | *Figure 3: Group Layout Dialog*                 |
+    | *Figure 3 Group Layout Dialog*                  |
 
 3.  Leave both **Add the Group Header** and **Add the Group Footer** checked, and click **Finish**.
 
@@ -60,7 +60,7 @@ Your report is similar to the one in Figure 7‑5.
 |                                                               |
 |---------------------------------------------------------------|
 | ![group header footer](assets/images/group-header-footer.png) |
-| *Figure 4: Report Containing Group Header and Footer*         |
+| *Figure 4 Report Containing Group Header and Footer*          |
 
 ## Customizing a Template
 
@@ -89,4 +89,4 @@ To customize a template
 |                                                         |
 |---------------------------------------------------------|
 | ![template preview](assets/images/template-preview.png) |
-| *Figure 5: Template Preview*                            |
+| *Figure 5 Template Preview*                             |

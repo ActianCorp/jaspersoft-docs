@@ -9,14 +9,14 @@ The modular architecture of JasperReports provides a way to plug in support for 
 
 Groovy is a full language for the Java 2 Platform. Inside the Groovy language you can use all classes and JARs that are available for Java. The following table compares some typical JasperReports expressions written in Java and Groovy:
 
+**Groovy and Java code samples**
+
 | Expression | Java | Groovy |
 |----|----|----|
 | Field | `$F{field_name}` | `$F{field_name}` |
 | Sum of two double fields | `new Double($F{f1}.doubleValue() + $F{f2}.doubleValue())` | `$F{f1} + $F{f2}` |
 | Comparison of numbers | `new Boolean($F{f}.intValue() == 1)` | `$F{f} == 1` |
 | Comparison of strings | `new Boolean($F{f} != null && $F{f}.equals("test"))` | `$F{f} == "test"` |
-
-Groovy and Java code samples
 
 The following is a correct Groovy expression:
 

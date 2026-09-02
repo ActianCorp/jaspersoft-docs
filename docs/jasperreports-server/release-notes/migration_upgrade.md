@@ -7,15 +7,15 @@ description: "This section includes the following topics:"
 
 This section includes the following topics:
 
--   Upgrade Paths
+-   [Upgrade Paths](#upgrade-paths)
 
--   Upgrade File
+-   [Upgrade File](#upgrade-file)
 
--   Database Changes
+-   [Database Changes](#database-changes)
 
--   Upgrade from Community Project
+-   [Upgrade from Community Project](#upgrade-from-community-project)
 
--   Important Upgrade Information
+-   [Important Upgrade Information](#important-upgrade-information)
 
 ## Upgrade Paths
 

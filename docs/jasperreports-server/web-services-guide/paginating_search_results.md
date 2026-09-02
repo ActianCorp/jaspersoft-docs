@@ -26,7 +26,7 @@ With the default pagination, every page of results returned by the server may co
 Default pagination has the best performance and, when configured with the right limit for the size of your repository, almost no delay in response for your users. Because results are filtered by permissions, the user credentials that you specify for the request determine how full each page is:
 
 -   The system admin (`superuser`) has access to every resource, and therefore the results are effectively unfiltered and each page is full. But the same can be true when you perform a search as jasperadmin within his organization, or even as a plain user within a folder where the user has full read permission. In these cases the default pagination is very efficient and has no partially-full pages.
--   If you are performing a sparse search, for example finding all reports that a given user has permission to access within an entire and large organization, then the results may have many partially-full page, all of differing lengths. In this case, you may prefer to use “Full Page Pagination” on page 1.
+-   If you are performing a sparse search, for example finding all reports that a given user has permission to access within an entire and large organization, then the results may have many partially-full page, all of differing lengths. In this case, you may prefer to use [“Full Page Pagination” on page 1](#full-page-pagination).
 
 <table>
 <colgroup>

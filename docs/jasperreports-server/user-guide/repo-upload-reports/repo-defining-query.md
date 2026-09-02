@@ -55,7 +55,7 @@ To define a custom query for the simple report example
 
     ![js AddReport AddQuery](../assets/images/js-AddReport-AddQuery.png)
 
-    *Figure 1: Query Page*
+    *Figure 1 Query Page*
 
 2.  Select **Click here to create a new Query**. The link becomes active.
 
@@ -71,7 +71,7 @@ To define a custom query for the simple report example
 
     ![js AddReport NameQuery](../assets/images/js-AddReport-NameQuery.png)
 
-    *Figure 2: Name the Query Page*
+    *Figure 2 Name the Query Page*
 
 5.  Click **Next**. The Link a Data Source to the Query page appears. Here you have the option to select a data source to use only with this query. This can be different from the data source you selected for uploading the report. You can choose an existing data source from the repository, define a new one, or select not to link a data source.
 
@@ -85,7 +85,7 @@ To define a custom query for the simple report example
 
     ![js AddReport DefineQuery](../assets/images/js-AddReport-DefineQuery.png)
 
-    *Figure 3: Definition of a Query*
+    *Figure 3 Definition of a Query*
 
 9.  Click **Save** to save the query. The Customization page appears. No customization is required for the example.
 
@@ -97,4 +97,4 @@ Locate the report in the repository and click to run it. Only accounts in Mexico
 
 ![js AddReport QueryOutput](../assets/images/js-AddReport-QueryOutput.png)
 
-*Figure 4: Output of the Report*
+*Figure 4 Output of the Report*

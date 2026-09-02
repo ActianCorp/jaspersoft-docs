@@ -7,25 +7,25 @@ description: "Advanced uses of Domains may consider these configurations:"
 
 Advanced uses of Domains may consider these configurations:
 
--   Disabling the Domain Validation Check
+-   [Disabling the Domain Validation Check](#disabling-the-domain-validation-check)
 
--   Setting the Level of Referential Integrity
+-   [Setting the Level of Referential Integrity](#setting-the-level-of-referential-integrity)
 
--   Optimizing Snowflake Schema Joins
+-   [Optimizing Snowflake Schema Joins](#optimizing-snowflake-schema-joins)
 
 When you use Domains with certain database constructs, you may need to configure JasperReports Server:
 
--   Enabling Oracle Synonyms
+-   [Enabling Oracle Synonyms](#enabling-oracle-synonyms)
 
--   Enabling CLOB Fields
+-   [Enabling CLOB Fields](#enabling-clob-fields)
 
--   Enabling Proprietary Types
+-   [Enabling Proprietary Types](#enabling-proprietary-types)
 
--   Extending JDBC Type Mapping
+-   [Extending JDBC Type Mapping](#extending-jdbc-type-mapping)
 
--   Accessing Materialized Views
+-   [Accessing Materialized Views](#accessing-materialized-views)
 
--   Modifying Domain Calculated Field Variable Behavior
+-   [Modifying Domain Calculated Field Variable Behavior](#modifying-domain-calculated-field-variable-behavior)
 
 ## Disabling the Domain Validation Check
 

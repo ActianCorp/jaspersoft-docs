@@ -9,21 +9,21 @@ This chapter describes the recommended procedure for upgrading to JasperReports 
 
 This chapter contains the following sections:
 
--   Upgrade Steps Overview
+-   [Upgrade Steps Overview](#upgrade-steps-overview)
 
--   Upgrading with Customizations
+-   [Upgrading with Customizations](#upgrading-with-customizations)
 
--   Back Up Your JasperReports Server Instance
+-   [Back Up Your JasperReports Server Instance](#back-up-your-jasperreports-server-instance)
 
--   Preparing the JasperReports Server 10.1 WAR File Distribution
+-   [Preparing the JasperReports Server 10.1 WAR File Distribution](#preparing-the-jasperreports-server-101-war-file-distribution)
 
--   Configuring Buildomatic for Your Database and Application Server
+-   [Configuring Buildomatic for Your Database and Application Server](#configuring-buildomatic-for-your-database-and-application-server)
 
--   Upgrading to JasperReports Server 10.1
+-   [Upgrading to JasperReports Server 10.1](#upgrading-to-jasperreports-server-101)
 
--   Starting and Logging into JasperReports Server 10.1
+-   [Starting and Logging into JasperReports Server 10.1](#starting-and-logging-into-jasperreports-server-101)
 
--   Additional Tasks to Complete the Upgrade
+-   [Additional Tasks to Complete the Upgrade](#additional-tasks-to-complete-the-upgrade)
 
 ## Upgrade Steps Overview
 
@@ -35,7 +35,7 @@ These are the general steps used in this section:
 
 3.  Download and set up the new 10.1 JasperReports Server WAR file distribution zip.
 
-4.  Run the `js-upgrade` script as described in Upgrading to JasperReports Server 10.1.
+4.  Run the `js-upgrade` script as described in [Upgrading to JasperReports Server 10.1](#upgrading-to-jasperreports-server-101).
 
 If your current instance of JasperReports Server has modifications or extensions, monitor these and reintegrate them into your 10.1 instance after upgrading.
 

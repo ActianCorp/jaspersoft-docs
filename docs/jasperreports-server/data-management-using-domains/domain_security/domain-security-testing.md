@@ -7,8 +7,8 @@ description: "Before creating a security file, CZS prepares for the implementati
 
 Before creating a security file, CZS prepares for the implementation by:
 
--   Enabling Logging
--   Creating a Test Report
+-   [Enabling Logging](#enabling-logging)
+-   [Creating a Test Report](#creating-a-test-report)
 
 ## Enabling Logging
 
@@ -50,6 +50,6 @@ CZS creates an Ad Hoc crosstab based on the Sales Domain to assist in testing th
 
 ![js czs domain test report](../assets/images/js-czs-domain-test-report.png)
 
-*Figure 1: Fields added to CZS Ad Hoc crosstab*
+*Figure 1 Fields added to CZS Ad Hoc crosstab*
 
 Each user’s limited view of this report is shown in [Testing and Results](verfiying-domain-security.md).

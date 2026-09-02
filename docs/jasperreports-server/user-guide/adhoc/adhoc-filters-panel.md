@@ -57,7 +57,7 @@ Ad Hoc report units are just simple report units that use the Ad Hoc view as dat
 
 ![Ad hoc view data source](../assets/images/Ad%20hoc%20view-data%20source.png)
 
-*Figure 1: Ad Hoc View as Data Source*
+*Figure 1 Ad Hoc View as Data Source*
 
 The default template can be changed if needed by modifying the `defaultTemplateUri` property of the `reportGeneratorDefaultConf` bean in the `applicationContext-adhoc.xml` Spring configuration file.
 

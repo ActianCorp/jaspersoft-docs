@@ -47,7 +47,7 @@ To define a pre-filter
 
     ![js DomainDesigner pre filter date range](../assets/images/js-DomainDesigner-pre-filter-date-range.png)
 
-    *Figure 1: Filters Panel of the Domain Designer*
+    *Figure 1 Filters Panel of the Domain Designer*
 
     Text columns have both substring comparison operators such as `starts with` or `contains` and whole string matching such as `equals` or `is one of`. When you select a whole string matching operator, the panel displays a list of all existing values for the chosen column, retrieved in real-time from the database. If more than 50 values are available, use search ![js Repository icon Search](../assets/images/js-Repository-icon-Search.png) to narrow the list. For multiple value matching, double-click the available values to select them. You may perform multiple searches and select values from each list of results.
 

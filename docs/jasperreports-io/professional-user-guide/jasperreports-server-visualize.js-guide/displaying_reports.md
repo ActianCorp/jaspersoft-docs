@@ -14,23 +14,23 @@ The report function also supports more advanced customizations of hyperlinks and
 
 This chapter contains the following sections:
 
--   Report Properties
--   Report Functions
--   Report Structure
--   Rendering a Report
--   Getting the Embed Code of a Report
--   Setting Report Parameters
--   Saving a Report
--   Rendering Multiple Reports
--   Resizing a Report
--   Setting Report Pagination
--   Creating Pagination Controls (Next/Previous)
--   Creating Pagination Controls (Range)
--   Exporting From a Report
--   Exporting Data From a Report
--   Refreshing a Report
--   Canceling Report Execution
--   Discovering Available Charts and Formats
+-   [Report Properties](#report-properties)
+-   [Report Functions](#report-functions)
+-   [Report Structure](#report-structure)
+-   [Rendering a Report](#rendering-a-report)
+-   [Getting the Embed Code of a Report](#getting-the-embed-code-of-a-report)
+-   [Setting Report Parameters](#setting-report-parameters)
+-   [Saving a Report](#saving-a-report)
+-   [Rendering Multiple Reports](#rendering-multiple-reports)
+-   [Resizing a Report](#resizing-a-report)
+-   [Setting Report Pagination](#setting-report-pagination)
+-   [Creating Pagination Controls (Next/Previous)](#creating-pagination-controls-nextprevious)
+-   [Creating Pagination Controls (Range)](#creating-pagination-controls-range)
+-   [Exporting From a Report](#exporting-from-a-report)
+-   [Exporting Data From a Report](#exporting-data-from-a-report)
+-   [Refreshing a Report](#refreshing-a-report)
+-   [Canceling Report Execution](#canceling-report-execution)
+-   [Discovering Available Charts and Formats](#discovering-available-charts-and-formats)
 
 ## Report Properties
 
@@ -816,7 +816,7 @@ To copy the embed code of a report:
     |                                                                        |
     |------------------------------------------------------------------------|
     | ![js Report GetEmbedCode](../assets/images/js-Report-GetEmbedCode.png) |
-    | *Figure 1: The Embed Code of a Report*                                 |
+    | *Figure 1 The Embed Code of a Report*                                  |
 
     The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
 
@@ -1319,7 +1319,7 @@ To export a report, invoke its `export` function and specify the `outputFormat` 
 
 `"pdf", "xlsx", "rtf", "csv", "xml", "odt", "ods", "docx", "json", "pptx"`
 
-For CSV and JSON output, see Exporting Data From a Report. Note that the HTML output of a report is not available through Visualize.js.
+For CSV and JSON output, see [Exporting Data From a Report](#exporting-data-from-a-report). Note that the HTML output of a report is not available through Visualize.js.
 
 To export a report, invoke its export function and specify the `outputFormat` property. You MUST wait until the run action has completed before starting the export. The following export formats are supported:
 

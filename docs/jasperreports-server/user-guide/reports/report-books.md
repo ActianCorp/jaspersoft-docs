@@ -13,7 +13,7 @@ To run a report book in the Report Viewer
 
     ![js Report Example ReportWorkbook](../assets/images/js-Report-Example-ReportWorkbook.png)
 
-    *Figure 1: Sample report book as seen in the Report Viewer*
+    *Figure 1 Sample report book as seen in the Report Viewer*
 
      The sample report book contains three bundled reports:
 

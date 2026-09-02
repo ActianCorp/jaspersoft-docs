@@ -16,7 +16,7 @@ If you need to modify the bundle, the Locales tab lets you download the bundle, 
 
 ![js DomainDesigner LocalesTab](../assets/images/js-DomainDesigner-LocalesTab.png)
 
-*Figure 1: Locales Tab When No Resources Are Attached*
+*Figure 1 Locales Tab When No Resources Are Attached*
 
 ## Uploading Locale Bundles Directly to the Domain
 
@@ -30,7 +30,7 @@ Use the following procedures to add bundles directly to your Domain.
 
     ![js DomainDesigner addLocalFileBundle](../assets/images/js-DomainDesigner-addLocalFileBundle.png)  ![js DomainDesigner addLocalFileBundleList](../assets/images/js-DomainDesigner-addLocalFileBundleList.png)
 
-    *Figure 2: Adding Bundles from your File System*
+    *Figure 2 Adding Bundles from your File System*
 
     The dialog displays a list of the files you have selected. You can add or remove items from this list to create a list of bundles to upload.
 
@@ -38,7 +38,7 @@ Use the following procedures to add bundles directly to your Domain.
 
     ![js DomainDesigner LocalesTab list](../assets/images/js-DomainDesigner-LocalesTab-list.png)
 
-    *Figure 3: Locales Tab with Bundles List*
+    *Figure 3 Locales Tab with Bundles List*
 
     The server validates the file to make sure it matches the format of a locale bundle. If the file type is not recognized or there is a syntax error, you must select another file or click **Cancel**.
 
@@ -58,7 +58,7 @@ Use the following procedures to add bundles to the repository as shared resource
 
     ![js Repository AddFile ResourceBundle](../assets/images/js-Repository-AddFile-ResourceBundle.png)
 
-    *Figure 4: Adding a Locales Bundle to the Repository*
+    *Figure 4 Adding a Locales Bundle to the Repository*
 
 3.  In the **Add File** dialog, click **Browse** under **Path to File**, and select the locale bundle on your computer. The **Name** and **Resource ID** fields are automatically filled in with the file name. You must keep the `.properties` extension on the Name and ID.
 
@@ -78,7 +78,7 @@ Use the following procedures to add bundles to the repository as shared resource
 
     ![js DomainDesigner addRepositoryBundle](../assets/images/js-DomainDesigner-addRepositoryBundle.png)
 
-    *Figure 5: Selecting Bundles from the Repository*
+    *Figure 5 Selecting Bundles from the Repository*
 
     You can also click the hierarchy icon at the top and browse the folder tree of the Repository to find the bundles you want to use. Or enter a name to search the repository.
 
@@ -90,7 +90,7 @@ Use the following procedures to add bundles to the repository as shared resource
 
     ![js DomainDesigner LocalesTab list2](../assets/images/js-DomainDesigner-LocalesTab-list2.png)
 
-    *Figure 6: Locales Tab with Local and Repository Bundles*
+    *Figure 6 Locales Tab with Local and Repository Bundles*
 
 8.  After adding bundles to a Domain that is in use, you should clear the Ad Hoc cache of all queries based on the Domain. This removes any datasets that did not rely on the locale bundles. For instructions, see the JasperReports Server Administrator Guide.
 

@@ -18,4 +18,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Connecting to Your Data with JasperReports Server](connecting-to-your-data-with.md)
 - [Jaspersoft Studio Professional](jaspersoft-studio-professional.md)
 - [About This Guide](contact-us.md)
-- [Additional Topics](about-this-document.md)

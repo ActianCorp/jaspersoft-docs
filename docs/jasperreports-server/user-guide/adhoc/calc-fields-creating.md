@@ -19,7 +19,7 @@ To create a calculated field
 
     ![js AdHoc CalcFields](../assets/images/js-AdHoc-CalcFields.png)
 
-    *Figure 1: Formula Builder Tab in New Calculated Measure Dialog Box*
+    *Figure 1 Formula Builder Tab in New Calculated Measure Dialog Box*
 
 6.  Enter Volume Tier for the **Field Name**.
 
@@ -53,7 +53,7 @@ To create a calculated field
 
     ![js AdHoc CalcFields Summary](../assets/images/js-AdHoc-CalcFields-Summary.png)
 
-    *Figure 2: Summary Tab in New Calculated Measure Dialog Box*
+    *Figure 2 Summary Tab in New Calculated Measure Dialog Box*
 
 13. Select Mode from the **Calculation** menu.
 

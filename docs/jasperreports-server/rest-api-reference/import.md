@@ -9,12 +9,12 @@ Use the rest_v2/import service to upload a catalog as a zip file and import it i
 
 This chapter includes the following sections:
 
--   Launching an Import Operation
--   Polling the Import Status
--   Import Errors
--   Restarting an Import Operation
--   Canceling an Import Operation
--   Importing from a Web Form
+-   [Launching an Import Operation](#launching-an-import-operation)
+-   [Polling the Import Status](#polling-the-import-status)
+-   [Import Errors](#import-errors)
+-   [Restarting an Import Operation](#restarting-an-import-operation)
+-   [Canceling an Import Operation](#canceling-an-import-operation)
+-   [Importing from a Web Form](#importing-from-a-web-form)
 
 ## Launching an Import Operation
 
@@ -26,7 +26,7 @@ Typically, an application uses the rest_v2/import service to upload a catalog zi
 
 The import operation is asynchronous. Your application should poll the status of the operation to determine when it finishes or has an error. In case of an error, you can restart the operation with new options or cancel it. The next sections of this chapter explain how to do this.
 
-It is also possible to invoke the import service from a web page, as explained in Importing from a Web Form.
+It is also possible to invoke the import service from a web page, as explained in [Importing from a Web Form](#importing-from-a-web-form).
 
 <table>
 <colgroup>
@@ -130,7 +130,7 @@ Setting?</span></p></td>
 </tr>
 <tr>
 <td colspan="2"><p><span>multipart/form-data</span></p></td>
-<td colspan="2"><p>You must send the secret-key or secret-uri as form-data. See <span>Importing from a Web Form</span>:</p>
+<td colspan="2"><p>You must send the secret-key or secret-uri as form-data. See <a href="#importing-from-a-web-form">Importing from a Web Form</a>:</p>
 <ul>
 <li><p>secret-key: Specify the encryption key in hexadecimal format (for example "0x1c 0x40 0xb9 0xf6 0xe2 0xd3 0xf9 0xd0 0x5a 0xab 0x84 0xe6 0xd4 0xe8 0x5f 0xed") associated with the import catalog. You can obtain the key in hexadecimal format when exporting the catalog from the source server.</p></li>
 <li><p>secret-uri: Specify the encryption key as the URI of a secure file resource in the repository. This must be the same key used when exporting the catalog from the source server.</p></li>

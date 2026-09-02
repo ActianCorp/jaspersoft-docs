@@ -13,7 +13,7 @@ The repository is a tree structure composed of folders and resources. The root c
 
 ![js Repository root](../assets/images/js-Repository-root.png)
 
-*Figure 1: Root of the Repository Showing Default Folders*
+*Figure 1 Root of the Repository Showing Default Folders*
 
 In general, we recommend that you avoid placing resources directly in the root or organization folder. Instead, use folders for various resource types, as in the sample data. The Themes folder contains files that control the look and feel of the user interface, as described in [Themes](../themes/themes_intro.md).
 
@@ -37,7 +37,7 @@ JasperReports Server automatically restricts every user's access to their own or
 </tr>
 </tbody><tfoot>
 <tr>
-<td colspan="2"><p><em>Figure 2: System Admin and Organization Admin Views of the Repository</em></p></td>
+<td colspan="2"><p><em>Figure 2 System Admin and Organization Admin Views of the Repository</em></p></td>
 </tr>
 </tfoot>
 &#10;</table>
@@ -66,16 +66,16 @@ Users and administrators can browse or search the repository, depending on what 
 
 ![js Repository Browse](../assets/images/js-Repository-Browse.png)
 
-*Figure 3: Browsing the Repository*
+*Figure 3 Browsing the Repository*
 
 -   Searching - Enter a search term in the search field at the top of any page, or select **View &gt; Search Results**.<br>
 
 ![js MenuBar search](../assets/images/js-MenuBar-search.png)
 
-*Figure 4: Search Field in the Menu Bar*
+*Figure 4 Search Field in the Menu Bar*
 
 The search results page displays a search field with the current search term at the top of the Repository panel. The search applies to resource IDs, names, and descriptions. Use the filters in the left-hand panel to refine your search.
 
 ![js Repository Search](../assets/images/js-Repository-Search.png)
 
-*Figure 5: Searching the Repository*
+*Figure 5 Searching the Repository*

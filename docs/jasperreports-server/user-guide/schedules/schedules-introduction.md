@@ -13,7 +13,7 @@ Administrative users have access to a set of Ad Hoc views with details of the co
 
 This chapter contains the following sections:
 
--   Overview of the Scheduler
+-   [Overview of the Scheduler](#overview-of-the-scheduler)
 
 -   [Creating a Schedule](schedules-job.md)
 

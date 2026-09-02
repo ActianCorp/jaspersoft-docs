@@ -23,6 +23,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Report creation using Report Wizard](report_wizard.md)
 - [Report Designer](report-designer.md)
 - [Feature Compatibility Matrix](versions.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](_template-instructions-dita-to-flare.md)

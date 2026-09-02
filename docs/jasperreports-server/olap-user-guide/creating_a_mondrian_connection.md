@@ -19,7 +19,7 @@ To create a Mondrian connection
 
     ![ja add view setconnectiontypepropertiesmondrian](assets/images/ja-add-view-setconnectiontypepropertiesmondrian.png)
 
-    *Figure 1: Set Connection Type and Properties Page*
+    *Figure 1 Set Connection Type and Properties Page*
 
     By default, the server prompts you to create a Mondrian connection, If you want to create an XML/A connection, refer to [Creating an XML/A Connection to JasperReports Server](creating_an_xml_a_connection_to_jasp.md).
 
@@ -33,7 +33,7 @@ To create a Mondrian connection
 
     ![ja add view locateolapschema](assets/images/ja-add-view-locateolapschema.png)
 
-    *Figure 2: Locate OLAP Schema Page*
+    *Figure 2 Locate OLAP Schema Page*
 
 7.  Click either:
 
@@ -51,7 +51,7 @@ To create a Mondrian connection
 
             ![ja add view OLAP schema details](assets/images/ja-add-view-OLAP-schema-details.png)
 
-            *Figure 3: OLAP Schema Resource Page*
+            *Figure 3 OLAP Schema Resource Page*
 
             If you chose to upload a new file from your computer, the fields are editable. Enter the requested information. For details, refer [Uploading an OLAP Schema](uploading_an_olap_schema.md). If you choose a file from the repository, the fields are not editable.
 
@@ -61,7 +61,7 @@ To create a Mondrian connection
 
             ![ja add view locatedatasource](assets/images/ja-add-view-locatedatasource.png)
 
-            *Figure 4: Locate Data Source Page*
+            *Figure 4 Locate Data Source Page*
 
         3.  Click either:
 
@@ -77,7 +77,7 @@ To create a Mondrian connection
 
             ![ja add view setdatasourcetypeproperties](assets/images/ja-add-view-setdatasourcetypeproperties.png)
 
-            *Figure 5: Set Data Source Type and Properties Page*
+            *Figure 5 Set Data Source Type and Properties Page*
 
             If you chose to define a new data source, the fields are editable. Enter the requested information. For details, refer [Working with Data Sources](working_with_data_sources.md). If you chose a data source from the repository, the fields aren’t editable.
 
@@ -87,7 +87,7 @@ To create a Mondrian connection
 
             ![ja add view locateaccessgrantdefinition](assets/images/ja-add-view-locateaccessgrantdefinition.png)
 
-            *Figure 6: Locate Access Grant Definition Page*
+            *Figure 6 Locate Access Grant Definition Page*
 
         3.  Click one of the following:
 
@@ -109,7 +109,7 @@ Then click **Browse**, navigate to select the schema, and click **Select**.
 
     ![ja add view accessgrantresourcewindow](assets/images/ja-add-view-accessgrantresourcewindow.png)
 
-    *Figure 7: Access Grant Resource Page*
+    *Figure 7 Access Grant Resource Page*
 
 2.  If you chose to upload a new AGXML file, the fields are editable. Enter the requested information. For details, refer to [Uploading an Access Grant Schema](uploading_an_access_grant_schema.md). If you chose an access grant file from the repository, the fields are not editable.
 

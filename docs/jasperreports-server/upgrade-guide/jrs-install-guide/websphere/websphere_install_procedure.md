@@ -64,8 +64,9 @@ To prepare JasperReports Server files
 
     5.  Open a Command Prompt as Administrator and run these commands:
 
+        **Buildomatic Targets to Execute**
+
         <table>
-        <caption><p>Buildomatic Targets to Execute</p></caption>
         <colgroup>
         <col style="width: 50%" />
         <col style="width: 50%" />
@@ -312,6 +313,8 @@ To configure a JDBC Provider in WebSphere
 
     -   In Global Security, click **New** and enter the user alias, user ID, and password. The following table shows the credentials that WebSphere uses to access the database.
 
+        **J2C Authentication Alias Settings**
+
         |            | Alias               | Example User ID | Example Password |
         |------------|---------------------|-----------------|------------------|
         | PostgreSQL | postgresql_jasperdb | postgres        | postgres         |
@@ -319,8 +322,6 @@ To configure a JDBC Provider in WebSphere
         | Oracle     | jasperserver_user   | jasperserver    | password         |
         | DB2        | db2admin_user       | db2inst1        | password         |
         | SQL Server | jasperserver_user   | sa              | sa               |
-
-        J2C Authentication Alias Settings
 
         1.  Connect to a database panel. From the Scope drop-down, choose **`Node:<node_name>,Server=<server_name>`**
 
@@ -610,7 +611,7 @@ To configure a JDBC Provider in WebSphere
 
         2.  Click **Save directly to the master configuration**.
 
-        Next, deploy the WAR file in WebSphere as described in Deploying the WAR File in WebSphere.
+        Next, deploy the WAR file in WebSphere as described in [Deploying the WAR File in WebSphere](#deploying-the-war-file-in-websphere).
 
         To define the jsAuditAnalytics JDBC data source and expose it through JNDI
 

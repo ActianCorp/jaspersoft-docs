@@ -80,7 +80,7 @@ When data staging is enabled on the server as shown above, Domain Topics offer t
 
 ![js DomainTopic DataStaging](../assets/images/js-DomainTopic-DataStaging.png)
 
-*Figure 1: Data Staging Options in Domain Topics*
+*Figure 1 Data Staging Options in Domain Topics*
 
 The two settings control data staging behavior:
 

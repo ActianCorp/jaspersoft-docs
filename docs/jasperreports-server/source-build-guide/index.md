@@ -22,6 +22,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Jaspersoft Internal Developers and Advanced Developers](internal_and-advanced_developers.md)
 - [Java Options and JasperServer License Details](java_options_and_jrs_license.md)
 - [Troubleshooting](troubleshooting.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](building_from_public_sources.md)

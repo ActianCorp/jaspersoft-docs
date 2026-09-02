@@ -7,7 +7,7 @@ description: "If you installed JasperReports Server from the binary installer, t
 
 !!! warning
 
-    If you installed JasperReports Server from the binary installer, the command-line utilities are configured by the installer. If you installed the WAR file distribution, you must follow the instructions in Configuring Import-Export Utilities before you can run the utilities.
+    If you installed JasperReports Server from the binary installer, the command-line utilities are configured by the installer. If you installed the WAR file distribution, you must follow the instructions in [Configuring Import-Export Utilities](#configuring-import-export-utilities) before you can run the utilities.
 
 The import and export utilities are shell scripts in the `<js-install>/buildomatic` folder:
 
@@ -66,8 +66,9 @@ Use this command to export repository resources such as reports, images, dashboa
 
 The `js-export` command includes additional options for exporting cryptographic keys. For more information about this special use case, see the JasperReports Server Security Guide.
 
+**Options in js-export Command**
+
 <table>
-<caption><p>Options in <code>js-export</code> Command</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -243,7 +244,7 @@ Examples:
 
 ## Importing from the Command Line
 
-See Import and Export Through the Command Line for guidelines when running the command-line utilities.
+See [Import and Export Through the Command Line](#import-and-export-through-the-command-line) for guidelines when running the command-line utilities.
 
 !!! warning
 
@@ -257,8 +258,9 @@ Exported catalogs may contain encrypted passwords. If you are importing to a dif
 
 The `js-import` command includes additional options for importing cryptographic keys. For more information about this special use case, see the JasperReports Server Security Guide.
 
+**Options in js-import Command**
+
 <table>
-<caption><p>Options in <code>js-import</code> Command</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

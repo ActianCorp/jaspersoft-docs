@@ -24,14 +24,14 @@ To create a new random data source in the current folder
     |  |
     |----|
     | ![jss data adapter random wizard1](../assets/images/jss-data-adapter-random-wizard1.png) |
-    | *Figure 1: Random records data adapter type* |
+    | *Figure 1 Random records data adapter type* |
 
 4.  Name the adapter and set the number of records that you need.
 
     |  |
     |----|
     | ![jss data adapter random wizard2](../assets/images/jss-data-adapter-random-wizard2.png) |
-    | *Figure 2: Choosing a number of random records* |
+    | *Figure 2 Choosing a number of random records* |
 
 5.  Click **Finish**
 
@@ -63,4 +63,4 @@ where `n` is the non-negative integer number of records that you want.
 |  |
 |----|
 | ![jss data adapter random dataset run](../assets/images/jss-data-adapter-random-dataset-run.png) |
-| *Figure 3: Setting a data source expression* |
+| *Figure 3 Setting a data source expression* |

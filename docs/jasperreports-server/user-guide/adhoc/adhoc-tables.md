@@ -9,11 +9,11 @@ The following sections explain how to populate, edit, and format your table-type
 
 ![js AdHoc Table Example](../assets/images/js-AdHoc-Table-Example.png)
 
-*Figure 1: Ad Hoc Editor’s Table View for old layout band*
+*Figure 1 Ad Hoc Editor’s Table View for old layout band*
 
 ![Adhoc table](../assets/images/Adhoc-table.png)
 
-*Figure 2: Ad Hoc Editor’s Table View for new layout band*
+*Figure 2 Ad Hoc Editor’s Table View for new layout band*
 
 ## Using Fields in Tables
 
@@ -250,7 +250,7 @@ Your options are:
     -   **Totals**, which displays the table totals only. In the table described above, the total amount of all sales at all regional stores that month is displayed.
     -   **Details and Totals, which display** both the individual store sales numbers, as well as the total sales numbers at the bottom of the store sales column.
 
--   **Show Duplicate Rows**, which displays only the distinct values in your table if you choose to hide the duplicate rows. By default, the **Show Duplicate Rows** setting is on. See Showing Distinct Values for more information.<br>
+-   **Show Duplicate Rows**, which displays only the distinct values in your table if you choose to hide the duplicate rows. By default, the **Show Duplicate Rows** setting is on. See [Showing Distinct Values](#showing-distinct-values) for more information.<br>
     Select the option that you want to apply to your table.
 
 ## Showing Distinct Values

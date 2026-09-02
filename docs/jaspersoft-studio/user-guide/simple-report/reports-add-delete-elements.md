@@ -18,9 +18,9 @@ To add fields to an already created report
     |  |
     |----|
     | ![Dataset section in Properties view](../assets/images/Dataset%20section%20in%20Properties%20view.png) |
-    | *Figure 1: Dataset section in Properties view* |
+    | *Figure 1 Dataset section in Properties view* |
     | The **Dataset and Query Dialog** opens.![Dataset and Query Dialog](../assets/images/Dataset%20and%20Query%20Dialog.png) |
-    | *Figure 2: Dataset and Query Dialog* |
+    | *Figure 2 Dataset and Query Dialog* |
 
 3.  Add more fields by clicking the **Read Fields** button. All the fields discovered are added as new fields in the report.
 
@@ -35,7 +35,7 @@ To add fields to an already created report
     |                                                    |
     |----------------------------------------------------|
     | ![fields added](../assets/images/fields-added.png) |
-    | *Figure 3: Fields*                                 |
+    | *Figure 3 Fields*                                  |
 
 6.  To add a field to your report, click the field and drag it into the **Design**.
 

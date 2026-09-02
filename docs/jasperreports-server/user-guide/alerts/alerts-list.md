@@ -15,17 +15,17 @@ Typical users see only the alerts that they have defined in the **View &gt; Sche
 
 ![js alert list open](../assets/images/js-alert-list-open.png)
 
-*Figure 1: View Alert List*
+*Figure 1 View Alert List*
 
 ![js Alert list panel](../assets/images/js-Alert-list-panel.png)
 
-*Figure 2: List of Alerts in the Alerts Panel*
+*Figure 2 List of Alerts in the Alerts Panel*
 
 In the above figure, `superuser` has set two alerts for the product. If there are no alerts for a report, the Alerts panel contains a message with instructions on how to create an alert. To create an alert, see [Creating an Alert](create-alert.md).
 
 ![js alert list panel empty](../assets/images/js-alert-list-panel-empty.png)
 
-*Figure 3: Empty Alerts Panel*
+*Figure 3 Empty Alerts Panel*
 
 The Alerts panel shows the Alert name, the User (owner) who created the alert, and alert Actions.
 
@@ -57,19 +57,19 @@ To search for an alert:
 
     ![js alert search records](../assets/images/js-alert-search-records.png)
 
-    *Figure 4: List of alerts found in Alerts Panel*
+    *Figure 4 List of alerts found in Alerts Panel*
 
 3.  If no alert name matches with your search term, then the list remains empty with a message, as shown in the following figure. Click the **Cancel** icon ![js alert close icon](../assets/images/js-alert-close-icon.png) to clear or cancel the search term.
 
 ![js alert search no records](../assets/images/js-alert-search-no-records.png)
 
-*Figure 5: No Alerts found in Alerts Panel*
+*Figure 5 No Alerts found in Alerts Panel*
 
 The Alerts panel can display 5, 10, 25, or 100 alert records or row in the page. By default, five rows per page are displayed. You can change the number of rows per page to 5, 10, 25, or 100. Based on your selection, records are displayed in the Alerts panel.
 
 ![js alert records in Alert panel](../assets/images/js-alert-records-in-Alert-panel.png)
 
-*Figure 6: List of Rows in Alerts Panel*
+*Figure 6 List of Rows in Alerts Panel*
 
 The total count of records in the Alerts panel is equivalent to the number of rows selected per page.
 
@@ -77,7 +77,7 @@ For example, consider you want to view 10 alerts with 5 rows per page in the Ale
 
 ![js alert total records](../assets/images/js-alert-total-records.png)
 
-*Figure 7: Row per page in Alerts Panel*
+*Figure 7 Row per page in Alerts Panel*
 
 # Editing an Alert
 
@@ -99,7 +99,7 @@ To edit an alert
 
     ![js alert edit alert close panel](../assets/images/js-alert-edit-alert-close-panel.png)
 
-    *Figure 8: List of Updated Alerts*
+    *Figure 8 List of Updated Alerts*
 
 5.  Click **Close** to close the Alerts panel.
 
@@ -115,7 +115,7 @@ To delete an alert
 
     ![js alert delete confirm panel](../assets/images/js-alert-delete-confirm-panel.png)
 
-    *Figure 9: Deleting Alert*
+    *Figure 9 Deleting Alert*
 
 3.  Click **Delete** to delete the alert else click **Cancel** to cancel the delete action.
 

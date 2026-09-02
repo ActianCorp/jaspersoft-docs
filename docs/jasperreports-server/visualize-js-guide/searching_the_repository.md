@@ -9,12 +9,12 @@ The `resourcesSearch` function performs searches in the repository to find conte
 
 This chapter contains the following sections:
 
--   Search Properties
--   Search Functions
--   Finding Resources
--   Reusing a Search Instance
--   Reusing Search Results
--   Discovering Available Types
+-   [Search Properties](#search-properties)
+-   [Search Functions](#search-functions)
+-   [Finding Resources](#finding-resources)
+-   [Reusing a Search Instance](#reusing-a-search-instance)
+-   [Reusing Search Results](#reusing-search-results)
+-   [Discovering Available Types](#discovering-available-types)
 
 ## Search Properties
 

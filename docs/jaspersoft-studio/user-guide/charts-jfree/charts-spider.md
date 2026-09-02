@@ -32,14 +32,14 @@ To create a spider chart
     |                                                    |
     |----------------------------------------------------|
     | ![spider chart](../assets/images/spider-chart.png) |
-    | *Figure 1: Spider Chart*                           |
+    | *Figure 1 Spider Chart*                            |
 
 2.  Select the report in the **Outline** view, and in the **Properties** view, click the **Edit query, filter, and sort options** button. The **Dataset and Query** dialog opens.
 
     |  |
     |----|
     | ![spider chart data filter](../assets/images/spider-chart-data-filter.png) |
-    | *Figure 2: Increment Expression for Spider Chart* |
+    | *Figure 2 Increment Expression for Spider Chart* |
 
     !!! note
 
@@ -74,11 +74,11 @@ To customize the look of your chart
     |                                                                  |
     |------------------------------------------------------------------|
     | ![spider chart design](../assets/images/spider-chart-design.png) |
-    | *Figure 3: Spider Chart Design*                                  |
+    | *Figure 3 Spider Chart Design*                                   |
 
 6.  Preview your report. It should look like the following:
 
 |                                                                    |
 |--------------------------------------------------------------------|
 | ![spider chart preview](../assets/images/spider-chart-preview.png) |
-| *Figure 4: Spider Chart Preview*                                   |
+| *Figure 4 Spider Chart Preview*                                    |

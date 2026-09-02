@@ -52,7 +52,7 @@ Importing server connections
     |                                                             |
     |-------------------------------------------------------------|
     | ![jss import servers](assets/images/jss-import-servers.png) |
-    | *Figure 1: Select the Server Connections dialog*            |
+    | *Figure 1 Select the Server Connections dialog*             |
 
 4.  Choose the connections that you want.
 

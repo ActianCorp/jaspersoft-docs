@@ -15,7 +15,7 @@ To get an Ad Hoc view embed code
 
     ![js AdHoc GetEmbedCode](../assets/images/js-AdHoc-GetEmbedCode.png)
 
-    *Figure 1: Ad Hoc View Embed Code Dialog*
+    *Figure 1 Ad Hoc View Embed Code Dialog*
 
     The dialog shows the Visualize.js code and a preview of the dashboard as it is saved.
 

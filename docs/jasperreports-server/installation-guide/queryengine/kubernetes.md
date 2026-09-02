@@ -51,7 +51,7 @@ General settings:
 | `image.nameOverride` | Overrides the default image name. Can be left as `""`. |
 | `image.fullnameOverride` | Overrides the full image name. Can be left as `""`. |
 
-The data source properties have default values for the foodmart and sugarcrm sample data sources that you can use with the sample dashboards. In production, you should redefine `config/jndi.properties` for your own data sources as shown in Specifying JNDI Data Sources, and then set the corresponding values here.
+The data source properties have default values for the foodmart and sugarcrm sample data sources that you can use with the sample dashboards. In production, you should redefine `config/jndi.properties` for your own data sources as shown in [Specifying JNDI Data Sources](#specifying-a-jndi-data-source), and then set the corresponding values here.
 
 <table>
 <colgroup>
@@ -101,7 +101,7 @@ The data source properties have default values for the foodmart and sugarcrm sam
 </tr>
 <tr>
 <td><p><code>appCredentialsSecretName</code></p></td>
-<td><p>Instead of storing passwords in this file, you can manually create a secret to store the server password. See <span>Creating a Secret</span>.</p></td>
+<td><p>Instead of storing passwords in this file, you can manually create a secret to store the server password. See <a href="#creating-a-secret">Creating a Secret</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -710,9 +710,9 @@ Use the following procedure to deploy the cluster of workers using Kubernetes:
     helm dependencies update scalableQueryEngine/helm
     ```
 
-5.  If you have not done so already, configure the Helm chart in values.yaml for the deployment of Redis, Ingress, and the workers as described in Configuring the Helm Chart. You can also set individual values by adding `--set <parameter_name>=<paramter_value>` to the Helm commands below.
+5.  If you have not done so already, configure the Helm chart in values.yaml for the deployment of Redis, Ingress, and the workers as described in [Configuring the Helm Chart](#configuring-the-helm-chart). You can also set individual values by adding `--set <parameter_name>=<paramter_value>` to the Helm commands below.
 
-6.  If you have not done so already, configure your JNDI data sources as described in Specifying a JNDI Data Source.
+6.  If you have not done so already, configure your JNDI data sources as described in [Specifying a JNDI Data Source](#specifying-a-jndi-data-source).
 
 7.  Now you can deploy the workers on Kubernetes with the following command:
 

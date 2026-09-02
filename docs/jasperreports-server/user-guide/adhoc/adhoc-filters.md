@@ -13,7 +13,7 @@ Filters can be defined at three levels:
 
 In this section, we discuss how to define filters in the Ad Hoc Editor. For information on defining filters in the Domain Designer, see JasperReports Server Data Management Using Domains. For information on defining filters in the Data Chooser, see [The Pre-filters Page](adhoc-data-chooser.md).
 
-In addition, you can control how and what filters are applied to a field or fields by using custom expressions. For more information, see Custom Filtering.
+In addition, you can control how and what filters are applied to a field or fields by using custom expressions. For more information, see [Custom Filtering](#custom-filtering).
 
 To create a filter in the Ad Hoc Editor
 
@@ -53,7 +53,7 @@ For example, if you want to look at all Sales for the prior week, your expressio
 
 To create a relative date filter
 
-1.  Following the instructions in Using Filters, create a filter based on a date field. The filter appears in the Filters panel.
+1.  Following the instructions in [Using Filters](#using-filters), create a filter based on a date field. The filter appears in the Filters panel.
 
 2.  In the filter’s first text entry box, enter an expression describing the relative date or date span you want to display.
 
@@ -119,7 +119,7 @@ In this section, we take you through these tasks:
 
 To create and apply a custom filter
 
-1.  Create two or more filters for your data, as described in Using Filters. These can be standard field-based filters, or **Keep Only** and **Exclude** filters.<br>
+1.  Create two or more filters for your data, as described in [Using Filters](#using-filters). These can be standard field-based filters, or **Keep Only** and **Exclude** filters.<br>
     Note that as you create the filters for use in a custom expression, you may find that the data in your view disappears, since most (if not all) of the data will not meet all of the filter criteria. When you create your custom expression and change some of the ANDs to ORs and NOTs, the data reappears in the panel.
 
 2.  At the bottom of the Filters panel, expand the **Custom Filter Expression** section.

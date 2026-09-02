@@ -99,4 +99,4 @@ This example adds a special menu item so that MyCompany employees can easily fin
 
 ![js Customization ViewAccounts](../assets/images/js-Customization-ViewAccounts.png)
 
-*Figure 1: Custom Menu Items and Corresponding Action*
+*Figure 1 Custom Menu Items and Corresponding Action*

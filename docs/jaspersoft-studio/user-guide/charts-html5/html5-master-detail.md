@@ -38,7 +38,7 @@ To create the chart
     |                                    |
     |------------------------------------|
     | ![Area](../assets/images/Area.png) |
-    | *Figure 1: Area Chart Type*        |
+    | *Figure 1 Area Chart Type*         |
 
 3.  Click the **Data Configuration** tab.
 
@@ -63,7 +63,7 @@ To create the chart
         |                                          |
         |------------------------------------------|
         | ![Measure](../assets/images/Measure.png) |
-        | *Figure 2: Defining the Measure*         |
+        | *Figure 2 Defining the Measure*          |
 
         1.  To define an additional measure, click **Add**. For this example, define a second measure using the following data.
 
@@ -94,7 +94,7 @@ Click **OK**.
     |                                                        |
     |--------------------------------------------------------|
     | ![Color palette](../assets/images/Color%20palette.png) |
-    | *Figure 3: Selecting Color for Measure*                |
+    | *Figure 3 Selecting Color for Measure*                 |
 
 2.  Click **OK** to close the HTML5 Chart Edit dialog.
 
@@ -107,7 +107,7 @@ Click **OK**.
 |  |
 |----|
 | ![master detail selected area](../assets/images/master_detail_selected_area.png) |
-| *Figure 4: Master-detail Chart* |
+| *Figure 4 Master-detail Chart* |
 
 !!! note
 

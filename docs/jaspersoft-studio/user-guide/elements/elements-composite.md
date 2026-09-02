@@ -49,7 +49,7 @@ To create a composite element
     |  |
     |----|
     | ![jss elements composite footer](../assets/images/jss-elements-composite-footer.png) |
-    | *Figure 1: Selected Elements For Composite Element Creation* |
+    | *Figure 1 Selected Elements For Composite Element Creation* |
 
 6.  Right-click and select **Save as Composite Element**.
 
@@ -58,7 +58,7 @@ To create a composite element
     |  |
     |----|
     | ![jss composite element settings](../assets/images/jss-composite-element-settings.png) |
-    | *Figure 2: Composite Element Settings Dialog Box* |
+    | *Figure 2 Composite Element Settings Dialog Box* |
 
 7.  Enter the following information:
 
@@ -76,7 +76,7 @@ The new composite element is saved as a .jrtool file in the same location as you
 |  |
 |----|
 | ![jss composite element palette](../assets/images/jss-composite-element-palette.png) |
-| *Figure 3: Composite Element in the Palette* |
+| *Figure 3 Composite Element in the Palette* |
 
 To edit the contents of a composite element
 
@@ -123,7 +123,7 @@ To export one or more composite elements
     |  |
     |----|
     | ![jss composite elements export](../assets/images/jss-composite-elements-export.png) |
-    | *Figure 4: Exporting Composite Elements* |
+    | *Figure 4 Exporting Composite Elements* |
 
 3.  Select the elements that you want to export in the Export Composite Elements dialog.
 
@@ -146,7 +146,7 @@ To import a composite element set
     |  |
     |----|
     | ![jss composite elements import](../assets/images/jss-composite-elements-import.png) |
-    | *Figure 5: Importing Composite Elements* |
+    | *Figure 5 Importing Composite Elements* |
 
 5.  If there are additional elements in the file, click **Next** and configure the next element as in the previous step.
 

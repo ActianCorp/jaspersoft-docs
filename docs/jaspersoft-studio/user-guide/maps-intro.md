@@ -31,15 +31,15 @@ To disable Google Maps in Jaspersoft Studio Professional
 
 This topic contains the following sections:
 
--   Working with Map Properties
+-   [Working with Map Properties](#working-with-map-properties)
 
--   Working with Authentication Properties
+-   [Working with Authentication Properties](#viewing-authentication-properties)
 
--   Working with Markers
+-   [Working with Markers](#working-with-markers)
 
--   Working with Paths
+-   [Working with Paths](#working-with-paths)
 
--   Properties for Markers and Paths
+-   [Properties for Markers and Paths](#properties-for-markers-and-paths)
 
 ## Working with Map Properties
 
@@ -50,7 +50,7 @@ The **Map** tab in the **Properties** view lets you set the basic properties for
 |  |
 |----|
 | ![Map tab in Map Properties](assets/images/Map%20tab%20in%20Map%20Properties.png) |
-| *Figure 1: Map tab in Map Properties* |
+| *Figure 1 Map tab in Map Properties* |
 
 You can set the following map properties using the **Map** tab:
 
@@ -59,7 +59,7 @@ You can set the following map properties using the **Map** tab:
     |                                                                     |
     |---------------------------------------------------------------------|
     | ![jss google maps center](assets/images/jss-google-maps-center.png) |
-    | *Figure 2: Setting a map location*                                  |
+    | *Figure 2 Setting a map location*                                   |
 
     Changes to this window are reflected in the map in your report. In addition, you can change the map's center in any of the following ways. When you close the preview, the map is automatically centered at the selected location:
 
@@ -94,7 +94,7 @@ If you want to use a Google Maps key or business client license, we recommend th
 |  |
 |----|
 | ![jss google maps properties authentication](assets/images/jss-google-maps-properties-authentication.png) |
-| *Figure 3: Authentication tab in the Properties view for a map component* |
+| *Figure 3 Authentication tab in the Properties view for a map component* |
 
 To configure your Google Maps license and/or version information
 
@@ -118,15 +118,15 @@ To configure your Google Maps license and/or version information
 
 A marker identifies a location on a map. You can create markers manually, either using a fixed location that is known when the report is created, or using an expression based on report data. You can also define markers based on a dataset. A single map can include both manual markers and markers from one or more datasets. This section describes:
 
--   Marker Properties
+-   [Marker Properties](#marker-properties)
 
--   Static Markers
+-   [Static Markers](#adding-markers-manually)
 
--   Adding Markers Using the Map
+-   [Adding Markers Using the Map](#adding-markers-using-the-map)
 
--   Dynamic Markers
+-   [Dynamic Markers](#adding-markers-using-a-dataset)
 
--   Modifying Markers
+-   [Modifying Markers](#modifying-markers)
 
 ### Marker Properties
 
@@ -162,7 +162,7 @@ To define a marker manually
     |  |
     |----|
     | ![jss google maps static marker](assets/images/jss-google-maps-static-marker.png) |
-    | *Figure 4: Defining a static marker* |
+    | *Figure 4 Defining a static marker* |
 
 5.  Specify a location for your marker. You can do this by entering latitude and longitude, entering an address, or defining markers on the map preview:
 
@@ -183,7 +183,7 @@ To define a marker manually
         |  |
         |----|
         | ![jss google maps static marker color](assets/images/jss-google-maps-static-marker-color.png) |
-        | *Figure 5: Setting color and label for a marker* |
+        | *Figure 5 Setting color and label for a marker* |
 
     -   To use a marker icon other than the default, click **Custom Icon** to specify a URL that points to the image to use. Currently, we do not support loading an image directly from the repository or as a resource local to the report. Instead, the JavaScript API loads the icon from the URL. Then set additional optional properties for your marker, such as icon height, width, origin, and anchor.
 
@@ -195,7 +195,7 @@ To define a marker manually
 |  |
 |----|
 | ![jss google map static marker](assets/images/jss-google-map-static-marker.png) |
-| *Figure 6: A map with a marker* |
+| *Figure 6 A map with a marker* |
 
 ### Adding Markers Using the Map
 
@@ -235,8 +235,9 @@ The steps above define a fixed number of markers. You can also dynamically defin
 
 In this example, we use a CSV file containing the following data for San Francisco landmarks. This file includes data used by markers and paths.
 
+**Sample CSV Data for Markers and Paths**
+
 <table>
-<caption><p>Sample CSV Data for Markers and Paths</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -269,7 +270,7 @@ Define the San Francisco data adapter
     |  |
     |----|
     | ![jss google maps dataadapter](assets/images/jss-google-maps-dataadapter.png) |
-    | *Figure 7: Creating a sample data adapter for markers and paths* |
+    | *Figure 7 Creating a sample data adapter for markers and paths* |
 
 5.  Name your adapter, for example, SF Landmarks Data Adapter.
 
@@ -300,7 +301,7 @@ Create a dataset in your report
 |  |
 |----|
 | ![jss google maps dataset properties default adapter](assets/images/jss-google-maps-dataset-properties-default-adapter.png) |
-| *Figure 8: Setting the default data adapter for a dataset* |
+| *Figure 8 Setting the default data adapter for a dataset* |
 
 #### Using the dataset to set markers
 
@@ -321,7 +322,7 @@ Create a dataset in your report
     |  |
     |----|
     | ![jss google maps markers expressions](assets/images/jss-google-maps-markers-expressions.png) |
-    | *Figure 9: Using expressions to set markers from a dataset* |
+    | *Figure 9 Using expressions to set markers from a dataset* |
 
 8.  For a dataset, you typically want to use expressions for your values. For each property you want to read from the dataset, click ![jss icon edit](assets/images/jss-icon-edit.png) on the entry bar, select **Use Expression** and enter the expression to use. For this example, use the following expressions:
 
@@ -339,21 +340,21 @@ Create a dataset in your report
     |  |
     |----|
     | ![jss google maps item data markers from dataset](assets/images/jss-google-maps-item-data-markers-from-dataset.png) |
-    | *Figure 10: Item data for markers created from a dataset* |
+    | *Figure 10 Item data for markers created from a dataset* |
 
 2.  Click **OK**. Your markers are displayed on the **Marker** tab of the **Properties** view, along with any other markers you have created.
 
     |  |
     |----|
     | [![jss google maps markers from dataset](assets/images/jss-google-maps-markers-from-dataset.png)](assets/files/jss-google-maps-markers-from-dataset.png) |
-    | *Figure 11: Properties view showing markers added manually and markers defined from a dataset* |
+    | *Figure 11 Properties view showing markers added manually and markers defined from a dataset* |
 
 3.  Preview your report in HTML. The example below shows the markers from the sample dataset along with a static marker.
 
 |  |
 |----|
 | ![jss google maps markers result](assets/images/jss-google-maps-markers-result.png) |
-| *Figure 12: San Francisco landmarks shown on a map* |
+| *Figure 12 San Francisco landmarks shown on a map* |
 
 ### Modifying Markers
 
@@ -498,8 +499,9 @@ A path style specifies the properties (for example, color and weight) of the lin
 
 #### Defining Path Styles Using a Dataset
 
+**Sample CSV Data for Path Styles**
+
 <table>
-<caption><p>Sample CSV Data for Path Styles</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -559,7 +561,7 @@ Define a style using a dataset
 |  |
 |----|
 | ![jss google maps properties path styles](assets/images/jss-google-maps-properties-path-styles.png) |
-| *Figure 13: Styles on the Path tab of the Properties view for a map* |
+| *Figure 13 Styles on the Path tab of the Properties view for a map* |
 
 ### Defining a Path Manually
 
@@ -610,8 +612,8 @@ To add points to a path using the map preview
 
 ### Defining a Path Using a Dataset
 
-1.  Create a CSV file, a data adapter that points to it, and a dataset that uses the data adapter. This example uses the same data as in Sample Data. Pay close attention when adding points to your data: they are connected on the map in the order that they appear in the data. If they are not in a sensible order in the data, the path does not make sense, either.
-2.  Define the styles that your paths use. This example uses the styles defined in Defining Path Styles Dynamically.
+1.  Create a CSV file, a data adapter that points to it, and a dataset that uses the data adapter. This example uses the same data as in [Sample Data](#sample-data). Pay close attention when adding points to your data: they are connected on the map in the order that they appear in the data. If they are not in a sensible order in the data, the path does not make sense, either.
+2.  Define the styles that your paths use. This example uses the styles defined in [Defining Path Styles Dynamically](#defining-path-styles-using-a-dataset).
 3.  Add a map component to the report, or select an existing map in the Design tab.
 4.  If you have not set the center or zoom, do so. For this example, click the **Map** tab in the **Properties** view, enter "San Francisco, CA" in the **Address** field, and enter 11 in the **Zoom** field.
 5.  Select the **Paths** tab in the **Properties** view.
@@ -633,7 +635,7 @@ To add points to a path using the map preview
 |  |
 |----|
 | ![jss google maps paths result](assets/images/jss-google-maps-paths-result.png) |
-| *Figure 14: Paths on a map* |
+| *Figure 14 Paths on a map* |
 
 ### Modifying Paths and Path Styles
 
@@ -653,8 +655,9 @@ To delete a path or path style
 
 The available properties are a subset of the properties available through the Google Maps APIs. See <https://developers.google.com/maps> for more information.
 
+**Marker and Path Properties**
+
 <table>
-<caption><p>Marker and Path Properties</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

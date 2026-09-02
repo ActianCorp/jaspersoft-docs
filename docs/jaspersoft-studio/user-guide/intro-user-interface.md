@@ -7,16 +7,16 @@ description: "Jaspersoft Studio is based on the Eclipse platform. If you have wo
 
 Jaspersoft Studio is based on the Eclipse platform. If you have worked with Eclipse, you are likely familiar with the user interface. Figure 1-1 shows a preview of the Jaspersoft Studio interface, with the main areas highlighted. Some views have additional menus and actions, accessed through icons in the upper right of the view.
 
-|                                              |
-|----------------------------------------------|
-| ![jssUI](assets/images/jssUI.png)            |
-| *Figure 1: Jaspersoft Studio User Interface* |
+|                                             |
+|---------------------------------------------|
+| ![jssUI](assets/images/jssUI.png)           |
+| *Figure 1 Jaspersoft Studio User Interface* |
 
 This chapter has the following sections:
 
--   Eclipse Interface
+-   [Eclipse Interface](#eclipse-interface)
 
--   User Interface Components
+-   [User Interface Components](#user-interface-components)
 
 -   [The Design Tab](design-tab.md)
 
@@ -76,6 +76,8 @@ Unlike many other views, you can open multiple instances of the **Properties** v
 
 This comparison table shows the differences in terminology between iReport and JasperReports Server.
 
+**Comparison of Features in iReport and Jaspersoft Studio**
+
 | iReport | Jaspersoft Studio |
 |----|----|
 | JasperReports Server Repository | Repository Explorer |
@@ -88,5 +90,3 @@ This comparison table shows the differences in terminology between iReport and J
 | Styles library | --- |
 | --- | Project Explorer |
 | iReport Output window | Report State summary |
-
-Comparison of Features in iReport and Jaspersoft Studio

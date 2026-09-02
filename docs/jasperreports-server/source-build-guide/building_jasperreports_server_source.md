@@ -312,6 +312,8 @@ To build JasperReports Server
 
 After running each Ant target in Commands for Building JasperReports Server, look for the message BUILD SUCCESSFUL.
 
+**Commands for Building JasperReports Server**
+
 | Commands | Description |
 |----|----|
 | `cd <js-src>/jasperserver/buildomatic` |  |
@@ -322,8 +324,6 @@ After running each Ant target in Commands for Building JasperReports Server, loo
 | `js-ant create-load-js-db-``pro`` ` | (Optional) Creates and loads the `jasperserver` database, imports core bootstrap data |
 | `js-ant deploy-webapp-``pro`` ` | (Optional) Deploys the `jasperserver` `-pro` war file to the application server |
 | `js-ant deploy-jrws` | (Optional) Deploys only JasperReports Web Studio apps in the configured app path in `default_master.properties`. |
-
-Commands for Building JasperReports Server
 
 !!! note
 
@@ -386,8 +386,9 @@ For more information on license configuration, please see [Configuring the Jaspe
 
 Copy `jaspersoft.jrs.license` to the appropriate folder listed in the table below.
 
+**License Locations**
+
 <table>
-<caption><p>License Locations</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

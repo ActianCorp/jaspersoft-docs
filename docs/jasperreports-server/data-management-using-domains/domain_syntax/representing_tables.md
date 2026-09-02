@@ -88,9 +88,9 @@ In the Domain Designer, you can select only entire tables, not individual column
 
 ### Child Elements
 
-| Element Name | Description                                                  |
-|--------------|--------------------------------------------------------------|
-| `<field>`    | (Required) A column from the table specified in `jdbcTable`. |
+| Element Name | Description |
+|----|----|
+| `<field>` | (Required) A column from the table specified in [`jdbcTable`](#jdbctable). |
 
 ## field
 

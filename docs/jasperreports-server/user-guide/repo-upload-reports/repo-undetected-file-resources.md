@@ -39,7 +39,7 @@ To upload the undetected file resources for the complex report example
 
     ![js ReportWizard FileResource scriptlet properties](../assets/images/js-ReportWizard-FileResource-scriptlet-properties.png)
 
-    *Figure 1: Scriptlet JAR Resource Properties*
+    *Figure 1 Scriptlet JAR Resource Properties*
 
 2.  Click **Next**.
 
@@ -79,7 +79,7 @@ To upload the undetected file resources for the complex report example
 
 ![js ReportWizard ResourcesList undetected](../assets/images/js-ReportWizard-ResourcesList-undetected.png)
 
-*Figure 2: List of Detected and Undetected File Resources*
+*Figure 2 List of Detected and Undetected File Resources*
 
 If you want to upload a different file for a named resource, click its resource ID in the **Resources** list and locate the new file or repository object. You can change the name and description of the resource, but not its resource ID. If there is a mistake in a resource ID:
 

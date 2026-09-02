@@ -11,9 +11,9 @@ Users, other than administrators, do not have access to the **Admin Console** pa
 
 This chapter contains the following sections:
 
--   Schedules
--   Alerts
--   Diagnostics
+-   [Schedules](#schedules-tab)
+-   [Alerts](#alerts-tab)
+-   [Diagnostics](#diagnostics-tab)
 
 ## Schedules Tab
 
@@ -25,7 +25,7 @@ All scheduled jobs that the user has defined appear in the Schedules tab of the 
 
 ![AdminConsole scheduleAlert](../assets/images/AdminConsole_scheduleAlert.png)
 
-*Figure 1: Schedules Page*
+*Figure 1 Schedules Page*
 
 Typical users can see only the jobs that they have defined. Administrators can view the jobs defined by all users.
 
@@ -121,7 +121,7 @@ The following figure shows all the diagnostics information that the user has def
 
 ![js diagnostic tab](../assets/images/js-diagnostic-tab.png)
 
-*Figure 2: Diagnostics Page*
+*Figure 2 Diagnostics Page*
 
 The **Diagnostics** page includes the following controls:
 

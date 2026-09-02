@@ -75,7 +75,7 @@ In this example, we'll create a cascading input control to allow users to report
 
 ![ir CascadingICs filteredreport](../assets/images/ir-CascadingICs-filteredreport.png)
 
-*Figure 1: Simple Report Filtered by City*
+*Figure 1 Simple Report Filtered by City*
 
 !!! note
 
@@ -103,7 +103,7 @@ Creating the Country input control
 
     ![ir CascadingICs country query](../assets/images/ir-CascadingICs-country-query.png)
 
-    *Figure 2: Query for the Country Input Control*
+    *Figure 2 Query for the Country Input Control*
 
 7.  Click **Next**. The Data Source window opens.
 
@@ -117,7 +117,7 @@ Creating the Country input control
 
 ![ir CascadingICs value column](../assets/images/ir-CascadingICs-value-column.png)
 
-*Figure 3: Country Control Value and Visible Columns*
+*Figure 3 Country Control Value and Visible Columns*
 
 Creating the City input control
 
@@ -129,7 +129,7 @@ Creating the City input control
 
     ![ir CascadingICs city query](../assets/images/ir-CascadingICs-city-query.png)
 
-    *Figure 4: Query Using Country to Select Cities*
+    *Figure 4 Query Using Country to Select Cities*
 
 3.  Click **Next**. The Data Source window opens.
 
@@ -143,11 +143,11 @@ Creating the City input control
 
     ![ir CascadingICs city value column](../assets/images/ir-CascadingICs-city-value-column.png)
 
-    *Figure 5: City Control Value and Visible Columns*
+    *Figure 5 City Control Value and Visible Columns*
 
 8.  Publish your report to JasperReports Server.<br>
     Now when you run your report in JasperReports Server, You'll see an input control for country and another for city. After you select the country, the values available for city are those within that country. Notice that the Country value is not passed to the report. It is used only to help the user select a city.
 
     ![ir CascadingICs cascadingcontrol](../assets/images/ir-CascadingICs-cascadingcontrol.png)
 
-    *Figure 6: A Report with a Cascading Input Control*
+    *Figure 6 A Report with a Cascading Input Control*

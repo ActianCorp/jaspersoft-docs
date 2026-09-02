@@ -7,8 +7,9 @@ description: "Reports that contain table components are enabled for user interac
 
 Reports that contain table components are enabled for user interactivity. Table components are defined in Jaspersoft Studio or from Ad Hoc Views. When a table is enabled for interactivity, the column formatting, filtering, and sorting are managed from a menu displayed by clicking the column you want to apply changes to. These menu icons are described in [Export File Types](reports-moving-columns.md).
 
+**Column Formatting Icons**
+
 <table>
-<caption><p>Column Formatting Icons</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />

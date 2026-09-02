@@ -11,17 +11,17 @@ To create an alert
 
     ![js alert navigate](../assets/images/js-alert-navigate.png)
 
-    *Figure 1: Enabling Alert mode*
+    *Figure 1 Enabling Alert mode*
 
     ![js data point for alert creation](../assets/images/js-data-point-for-alert-creation.png)
 
-    *Figure 2: Alert Mode Enabled*
+    *Figure 2 Alert Mode Enabled*
 
 2.  Click any data point to open the new **Create Alert** panel.
 
     ![js alert create save](../assets/images/js-alert-create-save.png)
 
-    *Figure 3: Create Alert Panel*
+    *Figure 3 Create Alert Panel*
 
     The **Create Alert** panel has Condition, Parameters, Schedule, Notifications, and Output tabs. For more information about the tabs, see [Alert Overview](alerts-introduction.md).
 

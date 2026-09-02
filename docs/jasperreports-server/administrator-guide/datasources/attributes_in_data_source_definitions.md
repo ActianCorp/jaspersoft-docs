@@ -26,7 +26,7 @@ The following figure is an example of the attributes used to define data source 
 
 ![js DataSource attributes](../assets/images/js-DataSource-attributes.png)
 
-*Figure 1: Using Attributes for Data Source Parameters*
+*Figure 1 Using Attributes for Data Source Parameters*
 
 In the example above, the following data source parameters are specified by attributes:
 

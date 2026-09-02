@@ -13,8 +13,9 @@ An XML document is typically organized as a tree, and does not match the table-l
 
 The XML file below is an address book in which people are grouped in categories, followed by a second list of favorite objects. In this case, you can define different node set types. First you need to decide how you want to organize the data in your report.
 
+**Example XML file**
+
 <table>
-<caption><p>Example XML file</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -59,8 +60,9 @@ To select only the people contained in the categories (that is, all the people i
 
 Four nodes are returned as shown in the following table.
 
+**Node set with expression /addressbook/category/person**
+
 <table>
-<caption><p>Node set with expression <code>/addressbook/category/person</code></p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -140,7 +142,7 @@ After you have created an expression to select a node set, you can create an XML
             |                                                            |
             |------------------------------------------------------------|
             | ![xml data adapter](../assets/images/xml-data-adapter.png) |
-            | *Figure 1: Configuring an XML Data Adapter*                |
+            | *Figure 1 Configuring an XML Data Adapter*                 |
 
         2.  Enter a name for your adapter.
 
@@ -151,7 +153,7 @@ After you have created an expression to select a node set, you can create an XML
         |  |
         |----|
         | ![jss data adapter connection options](../assets/images/jss-data-adapter-connection-options.png) |
-        | *Figure 2: HTTP Connection Options* |
+        | *Figure 2 HTTP Connection Options* |
 
         In this dialog you can enter the following options:
 
@@ -222,8 +224,9 @@ A node set allows you to identify a series of nodes that represent records from 
 
 Consider the XML in Complex XML example. This is a slightly modified version of Example XML file. For each person node, a hobbies node is added which contains a series of hobby nodes and one or more e-mail addresses.
 
+**Complex XML example**
+
 <table>
-<caption><p>Complex XML example</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>

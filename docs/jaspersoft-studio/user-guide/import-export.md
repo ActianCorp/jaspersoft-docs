@@ -38,7 +38,7 @@ To export configuration resources
     |  |
     |----|
     | ![Export Jaspersoft Studio Configuration Wizard](assets/images/Export%20Jaspersoft%20Studio%20Configuration%20Wizard.png) |
-    | *Figure 1: Export Jaspersoft Studio Configuration Wizard* |
+    | *Figure 1 Export Jaspersoft Studio Configuration Wizard* |
 
 3.  Select the categories that you want to export and click **Next**.
 
@@ -61,7 +61,7 @@ To import configuration resources
     |  |
     |----|
     | ![Selecting Categories to Import](assets/images/Selecting%20Categories%20to%20Import.png) |
-    | *Figure 2: Selecting Categories to Import* |
+    | *Figure 2 Selecting Categories to Import* |
 
 4.  Select the resource categories that you want to import and click **Finish**.
 

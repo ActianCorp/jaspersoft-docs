@@ -13,7 +13,7 @@ The following figure shows various attributes of spans in the Jaeger UI.
 
 ![Viewing spans on Jaeger](../assets/images/Viewing-spans-on-Jaeger.png)
 
-*Figure 1: Viewing Spans on Jaeger*
+*Figure 1 Viewing Spans on Jaeger*
 
 ### Example of Viewing traces of Report Scheduling
 
@@ -31,7 +31,7 @@ To search and read traces of the scheduled report in Jaeger UI, do the following
 
     ![Scheduler traces for scheduleJobAPI](../assets/images/Scheduler-traces-for-scheduleJobAPI.png)
 
-    *Figure 2: Viewing Traces of Report Scheduling*
+    *Figure 2 Viewing Traces of Report Scheduling*
 
 5.  Choose from any result items to view traces of `rest_v2/jobs`.
 
@@ -43,7 +43,7 @@ The following figure shows the traces of report job and scheduler. Choose any tr
 
 ![View Scheduler filtered traces in tags](../assets/images/View-Scheduler-filtered-traces-in-tags.png)
 
-*Figure 3: Filtering Traces of the Scheduler*
+*Figure 3 Filtering Traces of the Scheduler*
 
 ### Example of Viewing traces of Report Execution
 
@@ -61,7 +61,7 @@ To search and read traces of report execution in Jaeger UI, do the following:
 
 ![View scheduler traces execute traces](../assets/images/View-scheduler-traces-execute-traces.png)
 
-*Figure 4: Viewing Traces of Report Execution*
+*Figure 4 Viewing Traces of Report Execution*
 
 ## Suppressing Span
 

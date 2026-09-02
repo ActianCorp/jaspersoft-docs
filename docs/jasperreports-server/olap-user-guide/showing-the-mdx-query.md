@@ -11,7 +11,7 @@ The **MDX Query Editor** contains the MDX query that retrieves the contents of t
 
 ![ja ug analysisview tools MDXqueryed](assets/images/ja-ug-analysisview-tools-MDXqueryed.png)
 
-*Figure 1: MDX Query Editor*
+*Figure 1 MDX Query Editor*
 
 An MDX query consists of data sets, query scope, and filter specifications:
 

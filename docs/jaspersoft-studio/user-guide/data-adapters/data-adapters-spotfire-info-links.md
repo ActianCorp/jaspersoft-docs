@@ -30,7 +30,7 @@ To create a data adapter for a Spotfire Information Link
     |  |
     |----|
     | ![jss inspect sf info links](../assets/images/jss-inspect-sf-info-links.png) |
-    | *Figure 1: Spotfire Library displayed in Jaspersoft Studio* |
+    | *Figure 1 Spotfire Library displayed in Jaspersoft Studio* |
 
     You can also create reports against SBDFs ![jss icon spotfire sbdf](../assets/images/jss-icon-spotfire-sbdf.png); to do so, select one from your **Spotfire Library**.
 
@@ -54,7 +54,7 @@ To create your report
 2.  Select a template and enter a name for your report.
 3.  Click **Next**. The **Data Source** dialog is displayed.
 4.  Select the **Spotfire Information Link** data adapter that you created above.
-5.  If you have prompts, you need to configure parameters to work with them. See 1.1.1, “Working With Prompts,” on page 1 for more information.
+5.  If you have prompts, you need to configure parameters to work with them. See [1.1.1, “Working With Prompts,” on page 1](#working-with-prompts) for more information.
 6.  Click **Read Fields**.
 7.  Select the fields to include in your data set.
 8.  Click **Next**.
@@ -108,7 +108,7 @@ The **Dataset and Query** dialog shows the prompts for your **Spotfire Informati
 |  |
 |----|
 | ![jss spotfire prompts inital](../assets/images/jss-spotfire-prompts-inital.png) |
-| *Figure 2: Prompts in Dataset and Query dialog* |
+| *Figure 2 Prompts in Dataset and Query dialog* |
 
 ### List (corresponds to prompt type Values)
 
@@ -146,7 +146,7 @@ The parameters would look like this on the **Parameters** tab.
 |                                                                        |
 |------------------------------------------------------------------------|
 | ![jss spotfire range all](../assets/images/jss-spotfire-range-all.png) |
-| *Figure 3: Range parameters in Parameters tab*                         |
+| *Figure 3 Range parameters in Parameters tab*                          |
 
 ### Multiple selection
 
@@ -160,7 +160,7 @@ The parameters would look like this on the **Parameters** tab.
 
 ### Connecting Prompts from Spotfire to Parameters in Jaspersoft Studio
 
-1.  If you have not done so, create the parameters you need as described in Configuring Jaspersoft Studio Parameters for Use With Spotfire Prompts.
+1.  If you have not done so, create the parameters you need as described in [Configuring Jaspersoft Studio Parameters for Use With Spotfire Prompts](#configuring-jaspersoft-studio-parameters-for-use-with-spotfire-prompts).
 
 <!-- -->
 
@@ -179,7 +179,7 @@ The parameters would look like this on the **Parameters** tab.
         |  |
         |----|
         | ![jss spotfire prompts guids](../assets/images/jss-spotfire-prompts-guids.png) |
-        | *Figure 4: Prompts with GUIDs mapped to parameters* |
+        | *Figure 4 Prompts with GUIDs mapped to parameters* |
 
 4.  Repeat these steps for each prompt.
 

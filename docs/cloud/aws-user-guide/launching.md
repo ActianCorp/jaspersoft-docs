@@ -223,7 +223,7 @@ We do not recommend this method, because it does not provide the auto-connection
 
 ![no role error](assets/images/no-role-error.png)
 
-*Figure 1: Missing Role Error Message*
+*Figure 1 Missing Role Error Message*
 
 If you launch your instance with a role, JasperReports Server use that Role to generate temporary AWS security tokens for automatic discovery and management of security between your JasperReports Server instance and RDS\\Redshift instances.
 
@@ -253,7 +253,7 @@ If no role is defined in your JasperReports Server Instance, you have 2 options:
 
         ![instance type](assets/images/instance-type.png)
 
-        *Figure 4: Instance Type list*
+        *Figure 4 Instance Type list*
 
     7.  Click **Next: Configure Instance Details** at the bottom of the page, and configure the following details. Hover over the information icon ![icon info](assets/images/icon-info.png) for descriptions of each item.
 
@@ -321,7 +321,7 @@ To log into JasperReports Server the first time
 
     ![AWS GettingStartedPage](assets/images/AWS-GettingStartedPage.png)
 
-    *Figure 5: Welcome to Jaspersoft BI page*
+    *Figure 5 Welcome to Jaspersoft BI page*
 
 2.  Choose what you want from the following:
 
@@ -333,7 +333,7 @@ To log into JasperReports Server the first time
 
 ![JRS login page](assets/images/JRS-login-page.png)
 
-*Figure 6: Login Screen*
+*Figure 6 Login Screen*
 
 If you are using BYOL, you can start with a 60 days license. This page displays a reminder when your license is set to expire.
 
@@ -347,11 +347,11 @@ Before you click the Login button on this page
 
     ![Fig2 5](assets/images/Fig2-5.png)
 
-    *Figure 7: Finding the default password in the CloudFormation stack*
+    *Figure 7 Finding the default password in the CloudFormation stack*
 
     ![Fig2 6](assets/images/Fig2-6.png)
 
-    *Figure 8: Finding the default password in the EC2 console.*
+    *Figure 8 Finding the default password in the EC2 console.*
 
 3.  Click **Change password** and enter a new password.
 
@@ -359,7 +359,7 @@ Before you click the Login button on this page
 
 ![AWS HomePage](assets/images/AWS-HomePage.png)
 
-*Figure 9: Home Screen*
+*Figure 9 Home Screen*
 
 !!! warning
 

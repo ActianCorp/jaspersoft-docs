@@ -24,6 +24,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Jaspersoft ETL (Version 8.0.x)](jaspersoft-etl-version-8-0-1.md)
 - [ECCN Numbers](eccn-numbers.md)
 - [Language Support](language-support.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](applicationservers-community.md)

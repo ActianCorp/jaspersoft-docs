@@ -26,8 +26,8 @@ When you create a JDBC data source, the URL that gets generated automatically af
 
 This `applicationContext-settings.xml` file contains the following checks:
 
--   URL Space Check: The `forbidWhitespacesPattern` checks if a data source URL has whitespaces or not.
--   URL String Check: The `commonUrlPattern` checks if the URL matches the pattern.
+-   [URL Space Check](#url-space-check): The `forbidWhitespacesPattern` checks if a data source URL has whitespaces or not.
+-   [URL String Check](#url-string-check): The `commonUrlPattern` checks if the URL matches the pattern.
 
 !!! note
 

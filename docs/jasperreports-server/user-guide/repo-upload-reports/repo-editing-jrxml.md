@@ -40,4 +40,4 @@ To edit the complex report example
 
 ![js Report Example NewComplexReport modified](../assets/images/js-Report-Example-NewComplexReport-modified.png)
 
-*Figure 1: Output of the Modified Report*
+*Figure 1 Output of the Modified Report*

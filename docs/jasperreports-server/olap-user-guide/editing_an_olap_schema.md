@@ -23,7 +23,7 @@ To change an OLAP schema's naming and file source
 
     ![ja add view uploadfilefromyourlocalcomputer](assets/images/ja-add-view-uploadfilefromyourlocalcomputer.png)
 
-    *Figure 1: Upload a File From Your Local Computer - OLAP Schema*
+    *Figure 1 Upload a File From Your Local Computer - OLAP Schema*
 
 3.  To upload a new file, next to the **Path to File** field, click **Browse**, and navigate to and select the file you want to upload.
 

@@ -46,7 +46,7 @@ To create the chart using a simple configuration
     |  |
     |----|
     | ![Simple Configuration for Column Spline Chart](../assets/images/Simple%20Configuration%20for%20Column-Spline%20Chart.png) |
-    | *Figure 1: Simple Configuration for Column-Spline Chart* |
+    | *Figure 1 Simple Configuration for Column-Spline Chart* |
 
 4.  Enter the following to create your category:
 
@@ -76,7 +76,7 @@ To create the chart using a simple configuration
 |  |
 |----|
 | ![html5 charts columnspline simple result](../assets/images/html5-charts-columnspline-simple-result.png) |
-| *Figure 2: Column Spline Chart* |
+| *Figure 2 Column Spline Chart* |
 
 ## Using Advanced Configuration
 
@@ -93,7 +93,7 @@ A simple configuration lets you add a measure, but does not let you choose set w
     |  |
     |----|
     | ![html5 charts columnspline advanced coonfig](../assets/images/html5-charts-columnspline-advanced-coonfig.png) |
-    | *Figure 3: Advanced Configuration for a Chart* |
+    | *Figure 3 Advanced Configuration for a Chart* |
 
 3.  Select Measure1 and click **Modify**.
 
@@ -102,14 +102,14 @@ A simple configuration lets you add a measure, but does not let you choose set w
     |  |
     |----|
     | ![jss html5 charts columnspline avgfreight](../assets/images/jss-html5-charts-columnspline-avgfreight.png) |
-    | *Figure 4: Editing a Measure* |
+    | *Figure 4 Editing a Measure* |
 
 4.  Click the **Advanced Properties** tab.
 
     |  |
     |----|
     | ![html5 charts columnspline measure](../assets/images/html5-charts--columnspline-measure.png) |
-    | *Figure 5: Advanced Properties for a Measure in a Column-Spline Chart* |
+    | *Figure 5 Advanced Properties for a Measure in a Column-Spline Chart* |
 
 5.  Click **Add** to specify the series type:
 
@@ -124,7 +124,7 @@ A simple configuration lets you add a measure, but does not let you choose set w
         |  |
         |----|
         | ![jss html5 charts columnspline editproperty](../assets/images/jss-html5-charts-columnspline-editproperty.png) |
-        | *Figure 6: Adding a Series Property* |
+        | *Figure 6 Adding a Series Property* |
 
         !!! note
 
@@ -151,7 +151,7 @@ A simple configuration lets you add a measure, but does not let you choose set w
         |  |
         |----|
         | ![html5 charts columnspline seriestype result](../assets/images/html5-charts-columnspline-seriestype-result.png) |
-        | *Figure 7: Chart After Changing the Measure Types* |
+        | *Figure 7 Chart After Changing the Measure Types* |
 
         To add a series level
 
@@ -166,7 +166,7 @@ A simple configuration lets you add a measure, but does not let you choose set w
             |  |
             |----|
             | ![html5 charts columnspline seirieslevel](../assets/images/html5-charts-columnspline-seirieslevel.png) |
-            | *Figure 8: Adding a Series Level to a Column-Spline Chart* |
+            | *Figure 8 Adding a Series Level to a Column-Spline Chart* |
 
         5.  Create a series with the following:
 
@@ -185,4 +185,4 @@ Click **OK** twice to return to design view.
 |  |
 |----|
 | ![jss html5 charts columnspline series result](../assets/images/jss-html5-charts-columnspline-series-result.png) |
-| *Figure 9: Adding a Series Level to a Column-Spline Chart* |
+| *Figure 9 Adding a Series Level to a Column-Spline Chart* |

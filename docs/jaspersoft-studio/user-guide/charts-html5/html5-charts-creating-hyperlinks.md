@@ -58,7 +58,7 @@ Configure a simple hyperlink
     |  |
     |----|
     | ![jss html5 charts hyperlink simple](../assets/images/jss-html5-charts-hyperlink-simple.png) |
-    | *Figure 1: Editing the Number of Orders a Second Time* |
+    | *Figure 1 Editing the Number of Orders a Second Time* |
 
 2.  Click **Use Hyperlink** and enter the following information:
 
@@ -96,7 +96,7 @@ View the existing hyperlink
 |  |
 |----|
 | ![jss html5 hyperlinks bucket all](../assets/images/jss-html5-hyperlinks-bucket-all.png) |
-| *Figure 2: Defining Bucket Properties for HTML5 Chart Hyperlinking* |
+| *Figure 2 Defining Bucket Properties for HTML5 Chart Hyperlinking* |
 
 Add a series for Year
 
@@ -114,7 +114,7 @@ To make this example slightly more useful, and to see how you can use hyperlink 
         |                                                                          |
         |--------------------------------------------------------------------------|
         | ![html5 hyperlinks series](../assets/images/html5-hyperlinks-series.png) |
-        | *Figure 3: Adding a Series Level to Define Buckets*                      |
+        | *Figure 3 Adding a Series Level to Define Buckets*                       |
 
         1.  Click **OK** twice.
 
@@ -123,7 +123,7 @@ To make this example slightly more useful, and to see how you can use hyperlink 
         |  |
         |----|
         | ![jss hyperlink greenblue col countries](../assets/images/jss-hyperlink-greenblue-col-countries.png) |
-        | *Figure 4: Column Chart with Order Numbers Split by Year* |
+        | *Figure 4 Column Chart with Order Numbers Split by Year* |
 
         Create a measure to hold the series hyperlink
 
@@ -144,7 +144,7 @@ To make this example slightly more useful, and to see how you can use hyperlink 
     |  |
     |----|
     | ![jss hyperlink create URL Measure](../assets/images/jss-hyperlink-create-URL-Measure.png) |
-    | *Figure 5: Defining the URL to Open when the Measure is Clicked* |
+    | *Figure 5 Defining the URL to Open when the Measure is Clicked* |
 
     For this example, the most important things to note are:
 
@@ -169,7 +169,7 @@ To make this example slightly more useful, and to see how you can use hyperlink 
             |  |
             |----|
             | ![jss hyperlink user measure](../assets/images/jss-hyperlink-user-measure.png) |
-            | *Figure 6: Creating a Hyperlink for the Measure* |
+            | *Figure 6 Creating a Hyperlink for the Measure* |
 
         6.  Set the following values:
 

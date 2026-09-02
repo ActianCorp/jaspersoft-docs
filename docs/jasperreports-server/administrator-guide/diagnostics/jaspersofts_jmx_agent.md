@@ -118,7 +118,7 @@ You can change the existing role or add additional lines containing alternate `<
 
 ## Disabling Remote Connections to the JMX Agent
 
-By default, remote connections to the JMX Agent are enabled and configured as described in Connecting to the JMX Agent.
+By default, remote connections to the JMX Agent are enabled and configured as described in [Connecting to the JMX Agent](#connecting-to-the-jmx-agent).
 
 To disable remote connections, edit the `.../WEB-INF/applicationContext-diagnostic.xml` file and make the following changes:
 

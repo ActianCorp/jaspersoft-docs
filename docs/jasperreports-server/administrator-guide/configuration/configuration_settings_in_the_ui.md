@@ -17,7 +17,7 @@ To make persistent configuration changes through the JasperReports Server user i
 
     ![js Settings Logs](../assets/images/js-Settings-Logs.png)
 
-    *Figure 1: The User Interface for Configuration Settings*
+    *Figure 1 The User Interface for Configuration Settings*
 
 4.  Find the configuration setting you want to change and edit its value. In the case of log levels, the new value takes effect immediately. In the case of other settings, click **Change** beside the individual setting.<br>
     The settings and administrator actions are documented in their respective sections:
@@ -31,7 +31,7 @@ To make persistent configuration changes through the JasperReports Server user i
 | **OLAP Settings** | Jaspersoft OLAP User Guide |
 | **Cloud Settings** | [Configuring Cloud Services](configuring_cloud_services.md) |
 | **Server Attributes** | [Managing Attributes](../management/managing_attributes.md) |
-| **Restore Defaults** | Restoring Default Settings |
+| **Restore Defaults** | [Restoring Default Settings](#restoring-default-settings) |
 | **Import** | [Importing from the Settings](../importexport/through_the_web_ui.md) |
 | **Export** | [Exporting from the Settings](../importexport/through_the_web_ui.md) |
 
@@ -71,7 +71,7 @@ To restore a default setting
 
     ![js Settings RestoreDefaults](../assets/images/js-Settings-RestoreDefaults.png)
 
-    *Figure 2: The Restore Defaults Page Containing Persistent Configuration Settings*
+    *Figure 2 The Restore Defaults Page Containing Persistent Configuration Settings*
 
     The configuration values on the **Restore Defaults** page represent the settings that have been modified through the UI and are stored in persistent storage.
 

@@ -17,7 +17,7 @@ You can view a list of alerts on the **Manage &gt; Admin Console &gt; Alerts** t
 
 This chapter contains the following sections:
 
--   Alert Overview
+-   [Alert Overview](#alert-overview)
 -   [Creating an Alert](create-alert.md)
 -   [Viewing the List of Alerts](alerts-list.md)
 -   [Searching an Alert](alerts-list.md)

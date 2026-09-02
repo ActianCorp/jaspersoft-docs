@@ -25,7 +25,7 @@ To create a datatype:
 
     ![js AddDatatype Text](../assets/images/js-AddDatatype-Text.png)
 
-    *Figure 1: Add Datatype Page*
+    *Figure 1 Add Datatype Page*
 
 4.  Enter a name and optional description for the datatype. The resource ID is filled in automatically.
 

@@ -18,7 +18,7 @@ To create an AWS account, go to [the Amazon Web Services sign up page](http://aw
     If you have a personal Amazon.com account stored in your browser, AWS uses that account by default. You need to sign out of Amazon or, preferably, use a different browser to set up an AWS account separate from your personal account.
 
 -   A valid Amazon key pair in your account. If you do not have a valid key pair, follow the instructions on the AWS documentation site: <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html>
--   The Required Permissions for using our CloudFormation templates and connecting to a data source
+-   The [Required Permissions](#required-permissions) for using our CloudFormation templates and connecting to a data source
 -   If you plan to use Jaspersoft for AWS BYOL, you need an annual subscription license. To purchase licenses for BYOL contact Jaspersoft Sales
 
 !!! note

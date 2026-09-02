@@ -110,7 +110,7 @@ Your current version determines your upgrade path:
 |                                                         |
 |---------------------------------------------------------|
 | ![jrs upgrade path](assets/images/jrs-upgrade-path.png) |
-| *Figure 1: Paths for Upgrading to Version 10.1*         |
+| *Figure 1 Paths for Upgrading to Version 10.1*          |
 
 If you are upgrading from 10.0, use the instructions in [Upgrading from 10.0 to 10.1](upgrade-10.0-to-10.1.md).
 

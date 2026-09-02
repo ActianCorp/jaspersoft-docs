@@ -40,7 +40,7 @@ The following diagram summarizes which Ad Hoc views can be processed by the scal
 |  |
 |----|
 | ![js Scalable Query Engine filter](../assets/images/js-Scalable-Query-Engine-filter.png) |
-| *Figure 1: Ad Hoc Views Processed by the Scalable Query Engine* |
+| *Figure 1 Ad Hoc Views Processed by the Scalable Query Engine* |
 
 The scalable query engine is completely transparent: users are still logged into JasperReports Server through a browser or authenticated with Visualize.js. They view dashboards containing Ad Hoc views in their JasperReports Server sessions or Visualize.js clients as before. There is no user-visible change to the server when the scalable query engine is deployed, only a performance improvement under load.
 

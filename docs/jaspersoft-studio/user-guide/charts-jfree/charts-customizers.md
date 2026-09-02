@@ -24,7 +24,7 @@ To apply an existing customizer to a chart:
     |  |
     |----|
     | ![jss chart customizer select](../assets/images/jss-chart-customizer-select.png) |
-    | *Figure 1: Chart customizer selection dialog* |
+    | *Figure 1 Chart customizer selection dialog* |
 
 3.  Select a chart customizer from the list.
 
@@ -37,7 +37,7 @@ To apply an existing customizer to a chart:
     |  |
     |----|
     | ![jss chart customizer json ui](../assets/images/jss-chart-customizer-json-ui.png) |
-    | *Figure 2: User interface for a chart customizer* |
+    | *Figure 2 User interface for a chart customizer* |
 
 5.  Fill in the properties as prompted by the user interface. For example, the following values for **Legend Shape** change the legend to a circle:
 
@@ -54,11 +54,11 @@ The customizer selection dialog is closed and the customizer is applied to your 
 |  |
 |----|
 | ![jss chart customizers legend shape result](../assets/images/jss-chart-customizers-legend-shape-result.png) |
-| *Figure 3: Result of chart customizer* |
+| *Figure 3 Result of chart customizer* |
 
 ### Adding a Customizer to a Chart in Earlier Versions of Jaspersoft Studio
 
-You can add a customizer to a chart in an earlier version of Jaspersoft Studio using advanced properties. You cannot add more than one customizer and the customizer cannot be configurable. For more information about creating a customizer jar, see 1.1.3, “Creating a Chart Customizer,” on page 1:
+You can add a customizer to a chart in an earlier version of Jaspersoft Studio using advanced properties. You cannot add more than one customizer and the customizer cannot be configurable. For more information about creating a customizer jar, see [1.1.3, “Creating a Chart Customizer,” on page 1](#creating-a-chart-customizer):
 
 1.  Add the customizer jar to your classpath.
 
@@ -92,8 +92,9 @@ To create the example customizer class
 
 A customizer class takes two arguments, a JFreeChart and a JasperReports Chart object. The `RangeAxisCustomizerSample` customizer extends the `AbstractAxisCustomizer` class, which is an extension of `JRAbstractChartCustomizer` for working with axis properties. `AbstractAxisCustomizer` exposes three constants for a chart axis: the minimum and maximum values on the Y axis and the spacing of the ticks on the Y-axis display:
 
+**Constants in the AbstractAxisCustomizer class**
+
 <table>
-<caption><p>Constants in the AbstractAxisCustomizer class</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -108,8 +109,9 @@ A customizer class takes two arguments, a JFreeChart and a JasperReports Chart o
 
 A chart customizer defines a `customize` method that takes a JFreeChart object and a JRChart object. The customize method can access chart settings and change them. During report execution, JasperReports calls the `customize` method for the chart and applies the settings, along with the settings from the JSON file. `RangeAxisCustomizerSample` is as shown below.
 
+**RangeAxisCustomizerSample**
+
 <table>
-<caption><p>RangeAxisCustomizerSample</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -224,6 +226,8 @@ A JSON file for a chart customizer has the following members:
 
 -   `supportedPlot`: Array of chart types supported by the customizer. Chart types are designated by a numeric code, shown in the following table.
 
+    **Chart Codes for supportedPlot in JSON Files**
+
     | Chart Type              | Code in JasperReports |
     |-------------------------|-----------------------|
     | CHART_TYPE_AREA         | 1                     |
@@ -247,8 +251,6 @@ A JSON file for a chart customizer has the following members:
     | CHART_TYPE_MULTI_AXIS   | 19                    |
     | CHART_TYPE_STACKEDAREA  | 20                    |
     | CHART_TYPE_GANTT        | 21                    |
-
-    Chart Codes for supportedPlot in JSON Files
 
 -   `sections`: Property that controls the display of the user interface. Has the following attributes:
 

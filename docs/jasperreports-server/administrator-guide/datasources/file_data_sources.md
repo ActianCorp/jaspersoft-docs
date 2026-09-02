@@ -77,7 +77,7 @@ To create a file data source
 
     ![js DataSource File JSON](../assets/images/js-DataSource-File-JSON.png)
 
-    *Figure 1: File Data Source Page for a JSON Data Source*
+    *Figure 1 File Data Source Page for a JSON Data Source*
 
 4.  Enter the URI of the JSON file. You can specify a file in the repository with the `repo:` syntax, followed by the repository path of the file. Specify `ftp:`, `http:` or `https:` to use those Internet protocols. To specify a file on your server's file system, specify its path directly, starting from the root, for example `/tmp/MyDataFile.json`. The user running the server process must have permission to access the file.
 

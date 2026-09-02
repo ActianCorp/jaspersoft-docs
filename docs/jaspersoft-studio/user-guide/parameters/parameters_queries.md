@@ -261,14 +261,14 @@ The first step is to create a parameter in the report to host the title (that is
 |                                                                |
 |----------------------------------------------------------------|
 | ![report title param](../assets/images/report-title-param.png) |
-| *Figure 1: Definition of `REPORT_TITLE`*                       |
+| *Figure 1 Definition of `REPORT_TITLE`*                        |
 
 All the other properties can be left as they are. Drag the parameter into the Title band to create a text field to display the `REPORT_TITLE` parameter.
 
-|                                                                |
-|----------------------------------------------------------------|
-| ![title parameter](../assets/images/title-parameter.png)       |
-| *Figure 2: Design Panel with `REPORT_TITLE` in the Title Band* |
+|                                                               |
+|---------------------------------------------------------------|
+| ![title parameter](../assets/images/title-parameter.png)      |
+| *Figure 2 Design Panel with `REPORT_TITLE` in the Title Band* |
 
 To set the value of the `REPORT_TITLE` parameter in our application, modify the code of the previous source code example by adding:
 

@@ -43,7 +43,7 @@ Each attribute may only have one value, however that value may contain a comma-s
 </tbody>
 </table>
 
-Attributes with the same name may be defined on different entities. For example, a user has a specific value for an attribute, the organization he belongs to has a default value for the same attribute, and the server level has yet another value for it. In this example, three separate attributes are defined, but they have the same name because they occur on different entities. The mechanisms described in 1.1.4, “Referencing Attributes,” on page 1 can take advantage of this to implement default values.
+Attributes with the same name may be defined on different entities. For example, a user has a specific value for an attribute, the organization he belongs to has a default value for the same attribute, and the server level has yet another value for it. In this example, three separate attributes are defined, but they have the same name because they occur on different entities. The mechanisms described in [1.1.4, “Referencing Attributes,” on page 1](#114-referencing-attributes) can take advantage of this to implement default values.
 
 ## 1.1.1 Secure Attributes
 

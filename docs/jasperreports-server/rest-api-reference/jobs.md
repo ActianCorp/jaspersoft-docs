@@ -13,17 +13,17 @@ The jobs service also uses exclusion calendars that can be defined in [The jobs 
 
 This chapter includes the following sections:
 
--   Searching for Jobs
--   Viewing a Job Definition
--   The job Descriptor
--   Creating a Job
--   Viewing Job Status
--   Modifying a Job
--   Pausing Jobs
--   Resuming Jobs
--   Restarting Failed Jobs
--   Deleting Jobs
--   Storing Additional Job Properties
+-   [Searching for Jobs](#searching-for-jobs)
+-   [Viewing a Job Definition](#viewing-a-job-definition)
+-   [The job Descriptor](#the-job-descriptor)
+-   [Creating a Job](#creating-a-job)
+-   [Viewing Job Status](#viewing-job-status)
+-   [Modifying a Job](#modifying-a-job)
+-   [Pausing Jobs](#pausing-jobs)
+-   [Resuming Jobs](#resuming-jobs)
+-   [Restarting Failed Jobs](#restarting-failed-jobs)
+-   [Deleting Jobs](#deleting-jobs)
+-   [Storing Additional Job Properties](#storing-additional-job-properties)
 
 ## Searching for Jobs
 
@@ -208,7 +208,7 @@ After searching and finding the ID of a job that is still active, use the GET me
 </tbody>
 </table>
 
-The method returns a descriptor that fully describes all the aspects of a scheduled job, such as recurrence, parameters, output, email notifications, and alerts, if any. All properties are included, many of which may be null if not set for the chosen job. For more information, see The job Descriptor.
+The method returns a descriptor that fully describes all the aspects of a scheduled job, such as recurrence, parameters, output, email notifications, and alerts, if any. All properties are included, many of which may be null if not set for the chosen job. For more information, see [The job Descriptor](#the-job-descriptor).
 
 JSON:
 
@@ -382,21 +382,21 @@ The `job` descriptor is a complex data object with nested containers for the var
 
 The properties of the `job` descriptor are defined in the following sections:
 
--   General Properties of a Job, such as label and description, but also the output formats and base filename.
+-   [General Properties of a Job](#general-properties-of-a-job), such as label and description, but also the output formats and base filename.
 
--   Source and Input Controls includes the repository URL of the report, report option, or dashboard, and any input controls.
+-   [Source and Input Controls](#source-and-input-controls) includes the repository URL of the report, report option, or dashboard, and any input controls.
 
--   Simple Trigger defines interval-based repetition of the job for a given number of occurrences.
+-   [Simple Trigger](#simple-trigger) defines interval-based repetition of the job for a given number of occurrences.
 
--   Calendar Trigger runs at specific time on specific days of the week or days of the month.
+-   [Calendar Trigger](#calendar-trigger) runs at specific time on specific days of the week or days of the month.
 
--   Job Output Properties define the file name and locations where output files are written.
+-   [Job Output Properties](#job-output-properties) define the file name and locations where output files are written.
 
--   FTP Output defines whether the output files are written to a remote server.
+-   [FTP Output](#ftp-output) defines whether the output files are written to a remote server.
 
--   Job Output Email defines the recipients for successful output files.
+-   [Job Output Email](#job-output-email) defines the recipients for successful output files.
 
--   Job Status Email defines the recipients for success or error messages.
+-   [Job Status Email](#job-status-email) defines the recipients for success or error messages.
 
     When submitting a `job` descriptor to create or modify a job schedule, not all properties are needed. In the following tables, each property is one of the following:
 
@@ -483,32 +483,32 @@ A valid `job` descriptor contains the following properties:
 <tr>
 <td><p><code>baseOutput Filename</code><br />
 (required)</p></td>
-<td><p>The basename of the file for the generated report output. Each output format appends its corresponding file extension to this name. This name may also have a time stamp appended as specified in <span>Job Output Properties</span>. This final output name is then used in all locations where the file is saved: repository, file system, FTP, and email attachment.</p></td>
+<td><p>The basename of the file for the generated report output. Each output format appends its corresponding file extension to this name. This name may also have a time stamp appended as specified in <a href="#job-output-properties">Job Output Properties</a>. This final output name is then used in all locations where the file is saved: repository, file system, FTP, and email attachment.</p></td>
 </tr>
 <tr>
 <td><p><code>source</code><br />
 (required)</p></td>
-<td><p>A container for the properties that define the repository URI of the report, report option, or dashboard and its input controls. See <span>Source and Input Controls</span>.</p></td>
+<td><p>A container for the properties that define the repository URI of the report, report option, or dashboard and its input controls. See <a href="#source-and-input-controls">Source and Input Controls</a>.</p></td>
 </tr>
 <tr>
 <td><p><code>trigger</code><br />
 (required)</p></td>
-<td><p>A container for one of the triggers specified in <span>Simple Trigger</span> or <span>Calendar Trigger</span>. The trigger determines how often the job runs and the date and time at which it runs.</p></td>
+<td><p>A container for one of the triggers specified in <a href="#simple-trigger">Simple Trigger</a> or <a href="#calendar-trigger">Calendar Trigger</a>. The trigger determines how often the job runs and the date and time at which it runs.</p></td>
 </tr>
 <tr>
 <td><p><code>repository Destination</code><br />
 (optional)</p></td>
-<td><p>A container for properties that define the folders and filenames for the output files that are generated each time a scheduled job runs successfully. Its properties are defined in <span>Job Output Properties</span> and the optional <span>FTP Output</span>.</p></td>
+<td><p>A container for properties that define the folders and filenames for the output files that are generated each time a scheduled job runs successfully. Its properties are defined in <a href="#job-output-properties">Job Output Properties</a> and the optional <a href="#ftp-output">FTP Output</a>.</p></td>
 </tr>
 <tr>
 <td><p><code>mailNotification</code><br />
 (optional)</p></td>
-<td><p>A container for properties that define email recipients when a job runs successfully. You can customize the contents of the email and whether the report output files are sent as attachments or links. For more information, see <span>Job Output Email</span>.</p></td>
+<td><p>A container for properties that define email recipients when a job runs successfully. You can customize the contents of the email and whether the report output files are sent as attachments or links. For more information, see <a href="#job-output-email">Job Output Email</a>.</p></td>
 </tr>
 <tr>
 <td><p><code>alert</code><br />
 (optional)</p></td>
-<td><p>A container for properties that define email recipients for job success and errors. For more information, see <span>Job Status Email</span>.</p></td>
+<td><p>A container for properties that define email recipients for job success and errors. For more information, see <a href="#job-status-email">Job Status Email</a>.</p></td>
 </tr>
 <tr>
 <td>succeededJobsCount<br />
@@ -561,7 +561,7 @@ The source is the report, report option, or dashboard being scheduled by the job
 <tr>
 <td><p><code>parameters parameterValues</code><br />
 (conditional)</p></td>
-<td><p>A container for the input controls (filters) for this job. Every required input control in the report or dashboard must have an XML <code>entry</code> or JSON list item within <code>parameterValues</code>. If there are no input controls, this property can be omitted. See the examples in <span>Creating a Job</span> for the syntax of these properties in JSON and XML.</p></td>
+<td><p>A container for the input controls (filters) for this job. Every required input control in the report or dashboard must have an XML <code>entry</code> or JSON list item within <code>parameterValues</code>. If there are no input controls, this property can be omitted. See the examples in <a href="#creating-a-job">Creating a Job</a> for the syntax of these properties in JSON and XML.</p></td>
 </tr>
 </tbody>
 </table>
@@ -889,7 +889,7 @@ The output properties define the folders and filenames for the output files that
 <tr>
 <td><p><code>outputFTPInfo</code><br />
 (optional)</p></td>
-<td><p>Contains parameters for writing output files to a remote FTP location. For more information, see <span>FTP Output</span>.</p></td>
+<td><p>Contains parameters for writing output files to a remote FTP location. For more information, see <a href="#ftp-output">FTP Output</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1015,7 +1015,7 @@ The following example shows a simple use of `outputFTPInfo` in XML:
 
 ### Job Output Email
 
-When a job runs successfully, the properties in `mailNotification` specify email recipients for the report output files. You can specify subject and body content, and you can choose to send output as attachments or links. When a job fails, no report output is sent but you have the option to configure an error message in Job Status Email.
+When a job runs successfully, the properties in `mailNotification` specify email recipients for the report output files. You can specify subject and body content, and you can choose to send output as attachments or links. When a job fails, no report output is sent but you have the option to configure an error message in [Job Status Email](#job-status-email).
 
 <table>
 <colgroup>
@@ -1189,7 +1189,7 @@ The user who is authenticated when making this request become the owner of the j
 <tr>
 <td colspan="2"><p><span>application/job+xml</span></p>
 <p><span>application/job+json</span></p></td>
-<td colspan="2"><p>A well-formed XML or JSON <code>job</code> descriptor as described in <span>The job Descriptor</span>. You need to only specify the relevant properties in the job descriptor. Do not include any null properties.</p></td>
+<td colspan="2"><p>A well-formed XML or JSON <code>job</code> descriptor as described in <a href="#the-job-descriptor">The job Descriptor</a>. You need to only specify the relevant properties in the job descriptor. Do not include any null properties.</p></td>
 </tr>
 <tr>
 <td colspan="4"><p>Options</p></td>
@@ -1306,9 +1306,9 @@ The following example shows a basic job descriptor in XML. As of release 7.5, in
 </job>
 ```
 
-If needed, you can configure the server to accept the other parameters and keep them with the newly created job, but the default is to store only the required properties. For more information, see Storing Additional Job Properties.
+If needed, you can configure the server to accept the other parameters and keep them with the newly created job, but the default is to store only the required properties. For more information, see [Storing Additional Job Properties](#storing-additional-job-properties).
 
-The response of the PUT request is the descriptor of the newly created job, similar to the result of the GET request shown in Viewing a Job Definition. It includes all the properties of the job descriptor, including the server-assigned ID and all the null properties.
+The response of the PUT request is the descriptor of the newly created job, similar to the result of the GET request shown in [Viewing a Job Definition](#viewing-a-job-definition). It includes all the properties of the job descriptor, including the server-assigned ID and all the null properties.
 
 ## Viewing Job Status
 
@@ -1376,7 +1376,7 @@ The first method replaces the entire definition of a single job with a new descr
 <tr>
 <td colspan="2"><p><span>application/job+xml</span></p>
 <p><span>application/job+json</span></p></td>
-<td colspan="2"><p>A complete, well-formed XML or JSON <code>job</code> descriptor, as described in <span>The job Descriptor</span>. It may include null properties and other default values that are ignored when using the descriptor as input, as in the result of <span>Viewing a Job Definition</span>.</p></td>
+<td colspan="2"><p>A complete, well-formed XML or JSON <code>job</code> descriptor, as described in <a href="#the-job-descriptor">The job Descriptor</a>. It may include null properties and other default values that are ignored when using the descriptor as input, as in the result of <a href="#viewing-a-job-definition">Viewing a Job Definition</a>.</p></td>
 </tr>
 <tr>
 <td colspan="4"><p>Options</p></td>

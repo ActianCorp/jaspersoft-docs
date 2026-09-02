@@ -11,19 +11,19 @@ When opening Ad Hoc views or reprts that are based on Domains, data structures a
 
 This section covers the following ways to configure Ad Hoc:
 
--   Ad Hoc Settings
+-   [Ad Hoc Settings](#ad-hoc-settings)
 
--   Ad Hoc Data Policies
+-   [Ad Hoc Data Policies](#ad-hoc-data-policies)
 
--   Ad Hoc Data Policies for Big Data
+-   [Ad Hoc Data Policies for Big Data](#ad-hoc-data-policies-for-big-data)
 
--   Ad Hoc Templates and Report Generators
+-   [Ad Hoc Templates and Report Generators](#ad-hoc-templates-and-report-generators)
 
--   Ad Hoc Configuration File
+-   [Ad Hoc Configuration File](#ad-hoc-configuration-file)
 
--   Ad Hoc Cache Management
+-   [Ad Hoc Cache Management](#ad-hoc-cache-management)
 
--   Ad Hoc OLAP Filter Configuration
+-   [Ad Hoc OLAP Filter Configuration](#ad-hoc-olap-filter-configuration)
 
 ## Ad Hoc Settings
 
@@ -36,7 +36,7 @@ The Ad Hoc settings include the following:
 -   General Settings to modify the Ad Hoc Editor user interface:
 
     -   **Show Duplicate Table Rows**. It sets the default behavior for **Show duplicate rows** in the Ad Hoc Editor. Users with `ROLE_SUPERUSER` can edit the Ad Hoc settings. This setting is applied by default when the Ad Hoc view is created. If a user logs in and changes the default setting of **Show duplicate rows** in the **Ad Hoc Designer &gt; Format Visualization &gt; Appearance**, then the server setting gets overridden for a particular Ad Hoc view.
-    -   **Configure View Query**. Determines whether users can see a button in the Ad Hoc Editor to display the SQL or MDX query generated for the view. This can be useful for advanced users, but you should consider your data security before enabling this. System admins can always view queries in the Ad Hoc Cache (see Ad Hoc Cache Management).
+    -   **Configure View Query**. Determines whether users can see a button in the Ad Hoc Editor to display the SQL or MDX query generated for the view. This can be useful for advanced users, but you should consider your data security before enabling this. System admins can always view queries in the Ad Hoc Cache (see [Ad Hoc Cache Management](#ad-hoc-cache-management)).
     -   Use Old Layout Band. By default, the New Layout Band is displayed in the Ad Hoc editor. Select the Old Layout band checkbox to use the old layout, to build visualization in the Ad Hoc editor. For more information, see JasperReports® Server User Guide, The Layout Band topic.
     -   **Display Null as Zero**. Determines the appearance of null values in crosstabs and time-series charts. By default, this setting is disabled and null values are displayed as empty cells in crosstabs or missing points in time series charts (thus causing irregular intervals). When enabled, null values are displayed as zero in crosstabs and in time-series (creating regular intervals). Regardless of this setting, null values are always displayed as zero in all other chart types.
     -   **Always show input controls**. By default, this option is not enabled. When this option is selected, it displays the **Input Controls** dialog to prompt the user when the Ad Hoc report runs. **Input Controls** dialog appears only for the Ad Hoc reports created when the option is selected, while Ad Hoc reports created when the option was disabled, do not get affected. When this option is not selected, the **Input Controls** dialog still appears for Ad Hoc reports created when this option was enabled.
@@ -54,7 +54,7 @@ The Ad Hoc settings include the following:
 
     -   **Ad Hoc Query Timeout**. The number of seconds the server should wait before timing out an Ad Hoc view while running its query. Setting this to a lower number may prevent exceptions when users run Ad Hoc views. Setting this to a higher number may prevent complex calculations from timing out, but may use more database connections.
 
--   Data Policies that determine how JasperReports Server handles data loading and processing for certain kinds of Ad Hoc views. See Ad Hoc Data Policies in the next section.
+-   Data Policies that determine how JasperReports Server handles data loading and processing for certain kinds of Ad Hoc views. See [Ad Hoc Data Policies](#ad-hoc-data-policies) in the next section.
 
 To configure the Ad Hoc query settings
 
@@ -286,8 +286,9 @@ To add a custom report generator
 
 The following properties are among those that can be configured in the `WEB-INF/applicationContext-adhoc.xml` file:
 
+**Configurable Properties in WEB-INF/applicationContext-adhoc.xml**
+
 <table>
-<caption><p>Configurable Properties in <code>WEB-INF/applicationContext-adhoc.xml</code></p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -354,7 +355,7 @@ The following properties are among those that can be configured in the `WEB-INF/
 
 !!! note
 
-    The Ad Hoc cache applies to Ad Hoc views based on Topics or Domains, and any reports generated from those Ad Hoc views. Ad Hoc views based on OLAP connections use the OLAP cache. For a comparison of the two caches, see Comparison with Jaspersoft OLAP Cache. For instructions on setting the OLAP cache, see the Jaspersoft OLAP User Guide.
+    The Ad Hoc cache applies to Ad Hoc views based on Topics or Domains, and any reports generated from those Ad Hoc views. Ad Hoc views based on OLAP connections use the OLAP cache. For a comparison of the two caches, see [Comparison with Jaspersoft OLAP Cache](#comparison-with-jaspersoft-olap-cache). For instructions on setting the OLAP cache, see the Jaspersoft OLAP User Guide.
 
 JasperReports Server can temporarily cache Ad Hoc query result sets for re-use. The cache is populated by the data that results from queries when creating or running Ad Hoc views. The datasets are uniquely identified by a key that references the query itself, the data source URI, and parameters used when the query was issued.
 
@@ -448,7 +449,7 @@ To view queries and manually clear the Ad Hoc cache
 
     ![js Settings AdHocCache](../assets/images/js-Settings-AdHocCache.png)
 
-    *Figure 1: Ad Hoc Dataset Caching Administration Page*
+    *Figure 1 Ad Hoc Dataset Caching Administration Page*
 
     Each dataset is listed by its corresponding query and data source. Recall that Ad Hoc Topics have user-defined queries, so they tend to be short, whereas the query for Domains are generated from the design of the Domain and user selections in the **Data Chooser** dialog. The **Ad Hoc Cache** page displays only the first few lines of a query, as well as the data source.
 
@@ -462,14 +463,15 @@ To view queries and manually clear the Ad Hoc cache
 
 ![js Settings AdHocCache detail](../assets/images/js-Settings-AdHocCache-detail.png)
 
-*Figure 2: Typical Dataset in Ad Hoc Cache*
+*Figure 2 Typical Dataset in Ad Hoc Cache*
 
 ### Comparison with Jaspersoft OLAP Cache
 
 The following table contrasts the key features of the Ad Hoc cache in JasperReports Server and Jaspersoft OLAP.
 
+**Ad Hoc Caching in JasperReports Server and Jaspersoft OLAP**
+
 <table>
-<caption><p>Ad Hoc Caching in JasperReports Server and Jaspersoft OLAP</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -490,7 +492,7 @@ The following table contrasts the key features of the Ad Hoc cache in JasperRepo
 </tr>
 <tr>
 <td><p>Sharing</p></td>
-<td><p>Not by default, but can be enabled as described in <span>Setting the Cache Granularity</span>, above.</p></td>
+<td><p>Not by default, but can be enabled as described in <a href="#setting-the-cache-granularity">Setting the Cache Granularity</a>, above.</p></td>
 <td><p>There is only one cache; it is shared across all queries and users.</p></td>
 </tr>
 <tr>
@@ -508,17 +510,17 @@ The following table contrasts the key features of the Ad Hoc cache in JasperRepo
 </tr>
 <tr>
 <td><p>Automatic time-based cache policy</p></td>
-<td><p>Configurable, as described in <span>Configuring the Cache</span> above.</p></td>
+<td><p>Configurable, as described in <a href="#configuring-the-cache">Configuring the Cache</a> above.</p></td>
 <td><p>In low-memory situations, cached items are removed automatically by JVM garbage collection; the least-recently-used items are cleared first. There is no way to remove data based on how long it has been in memory.</p></td>
 </tr>
 <tr>
 <td><p>Clearing selected datasets manually</p></td>
-<td><p>Configurable, as described in <span>Manually Clearing the Cache</span> above.</p></td>
+<td><p>Configurable, as described in <a href="#manually-clearing-the-cache">Manually Clearing the Cache</a> above.</p></td>
 <td><p>Cache regions can be defined and cleared programmatically with APIs.</p></td>
 </tr>
 <tr>
 <td><p>Clearing all datasets manually</p></td>
-<td><p>Configurable, as described in <span>Manually Clearing the Cache</span> above.</p></td>
+<td><p>Configurable, as described in <a href="#manually-clearing-the-cache">Manually Clearing the Cache</a> above.</p></td>
 <td><p>In JasperReports Server, select <strong>Manage &gt; Server Settings</strong>, then select <strong>OLAP Settings</strong> and click <strong>Flush OLAP Cache</strong>. For additional methods, see the <span>Jaspersoft OLAP Ultimate Guide</span>.</p></td>
 </tr>
 </tbody>
@@ -536,7 +538,7 @@ There are two reasons to consider disabling the Ad Hoc cache:
 
 -   Your database manages real-time data, and you create Ad Hoc views that present up-to-the-minute information from this data source. In this case, you don't want to retrieve old data out of the cache.
 
-To disable the Ad Hoc cache for Topics and Domains, set the value of `maxBytesLocalHeap` to 1 (1 byte). For instructions, see Configuring the Cache. This effectively turns off the cache so that every query is retrieved directly from the data source.
+To disable the Ad Hoc cache for Topics and Domains, set the value of `maxBytesLocalHeap` to 1 (1 byte). For instructions, see [Configuring the Cache](#configuring-the-cache). This effectively turns off the cache so that every query is retrieved directly from the data source.
 
 To disable the OLAP cache for OLAP connections used in the Ad Hoc Editor, check the `mondrian.rolap.star.disable-Caching` setting on the **Manage &gt; Server Settings &gt; OLAP Settings** page. For more information, see the Jaspersoft OLAP User Guide.
 

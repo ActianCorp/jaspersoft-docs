@@ -70,7 +70,7 @@ To upload the main JRXML and suggested resource files for the complex report uni
 
     ![js AddJasperReport CandR](../assets/images/js-AddJasperReport-CandR.png)
 
-    *Figure 1: Suggested Resources for the Complex Report*
+    *Figure 1 Suggested Resources for the Complex Report*
 
 7.  On the Controls & Resources page, upload the sub-report:
 

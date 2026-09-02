@@ -9,9 +9,9 @@ The rest_v2/reports service has a simple API for obtaining report output, such a
 
 This chapter includes the following sections:
 
--   Running a Report
--   Finding Running Reports
--   Stopping a Running Report
+-   [Running a Report](#running-a-report)
+-   [Finding Running Reports](#finding-running-reports)
+-   [Stopping a Running Report](#stopping-a-running-report)
 
 ## Running a Report
 

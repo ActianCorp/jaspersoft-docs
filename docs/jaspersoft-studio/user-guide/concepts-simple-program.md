@@ -7,8 +7,9 @@ description: "In conclusion, the following is an example of a simple program tha
 
 In conclusion, the following is an example of a simple program that shows how to produce a PDF file from a Jasper file using a data source named `JREmptyDataSource`, a utility data source that provides zero or more records without fields. The file `test.jasper`, referenced in the example, is the compiled version of the code in [A simple JRMXL file example](jrxml_sources_and_jasper_files.md).
 
+**JasperTest.java**
+
 <table>
-<caption><p><span>JasperTest.java</span></p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>

@@ -72,7 +72,7 @@ For example, the `availableReportJobOutputFormats` bean might look like this:
 
 ![js Customization Scheduler Outputs](../assets/images/js-Customization-Scheduler-Outputs.png)
 
-*Figure 1: Modified List of Formats on Output Options Page*
+*Figure 1 Modified List of Formats on Output Options Page*
 
 ## Disabling output formats
 

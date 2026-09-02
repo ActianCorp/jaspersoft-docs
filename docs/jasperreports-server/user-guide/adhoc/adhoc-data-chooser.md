@@ -11,10 +11,10 @@ To design a Domain Topic or a view based on a domain, use the Data Chooser wizar
 
 2.  Click ![js Dashboard icon ViewTree](../assets/images/js-Dashboard-icon-ViewTree.png) and browse to a Domain, then click **Choose Data** to access the following pages of the Data Chooser:
 
-    -   The Select Fields Page – Choose the fields to make available in the Ad Hoc Editor.
-    -   The Pre-filters Page – Define a filter on any field, with the option of prompting for user input, or to compare fields.
-    -   The Display Page – Change the order and names of fields that appear in the Ad Hoc Editor.
-    -   The Save as Topic Page – Save the settings as a Domain Topic.
+    -   [The Select Fields Page](#the-select-fields-page) – Choose the fields to make available in the Ad Hoc Editor.
+    -   [The Pre-filters Page](#the-pre-filters-page) – Define a filter on any field, with the option of prompting for user input, or to compare fields.
+    -   [The Display Page](#the-display-page) – Change the order and names of fields that appear in the Ad Hoc Editor.
+    -   [The Save as Topic Page](#the-save-as-topic-page) – Save the settings as a Domain Topic.
 
 Start by selecting some fields on the Select Fields page, but the other three pages are optional and can be completed in any order. Click **Table, Chart,** or **Crosstab** at any time to begin designing a view based on the chosen data.
 
@@ -24,7 +24,7 @@ Use this page to choose fields and sets of fields to use in the view or make ava
 
 ![js AdHoc Fields Page](../assets/images/js-AdHoc-Fields-Page.png)
 
-*Figure 1: The Fields Page of the Data Chooser*
+*Figure 1 The Fields Page of the Data Chooser*
 
 -   The Source panel displays the sets of fields in the Domain. Use ![js AdHoc icon hide filter detail](../assets/images/js-AdHoc-icon-hide-filter-detail.png) and ![js AdHoc icon show filter detail](../assets/images/js-AdHoc-icon-show-filter-detail.png) to collapse or expand each set.
 
@@ -45,7 +45,7 @@ The Pre-filters page provides powerful functionality for designing views within 
 
 ![js ChooseData ConditionEditor](../assets/images/js-ChooseData-ConditionEditor.png)
 
-*Figure 2: Condition Editor in the Filters Panel on the Pre-filters Page*
+*Figure 2 Condition Editor in the Filters Panel on the Pre-filters Page*
 
 To define a filter
 

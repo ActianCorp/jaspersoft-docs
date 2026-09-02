@@ -23,11 +23,11 @@ To define a derived table
 
     ![js DomainDesigner DerivedTable](../assets/images/js-DomainDesigner-DerivedTable.png)
 
-    *Figure 1: New Derived Table dialog*
+    *Figure 1 New Derived Table dialog*
 
     ![js DomainDesigner DerivedTable trino](../assets/images/js-DomainDesigner-DerivedTable-trino.png)
 
-    *Figure 2: New Derived Table dialog for Trino-based data source*
+    *Figure 2 New Derived Table dialog for Trino-based data source*
 
 2.  Type a name for the table in the **Derived Table Name** field.
 

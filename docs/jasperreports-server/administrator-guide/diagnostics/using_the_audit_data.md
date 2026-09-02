@@ -9,7 +9,7 @@ JasperReports Server makes the audit data available to system admins through Dom
 
 ![js Repository AuditReports](../assets/images/js-Repository-AuditReports.png)
 
-*Figure 1: Audit Reports in the Repository*
+*Figure 1 Audit Reports in the Repository*
 
 There are two Domains and two sets of reports created for accessing audit data:
 
@@ -26,7 +26,7 @@ To create an Ad Hoc View based on the audit Domains:
 
 ![js audit DataChooser](../assets/images/js-audit-DataChooser.png)
 
-*Figure 2: Selecting an Audit Domain to Create an Ad Hoc View*
+*Figure 2 Selecting an Audit Domain to Create an Ad Hoc View*
 
 For instructions on using Domains in reports, see the Ad Hoc chapter in JasperReports Server User Guide. For documentation of Domains in general, see the Domains chapter in the same manual.
 

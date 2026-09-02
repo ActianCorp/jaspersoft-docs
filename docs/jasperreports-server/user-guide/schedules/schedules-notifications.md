@@ -71,4 +71,4 @@ Enter one or more email addresses to send notification of job success or failure
 
 ![js Schedule New Notifications](../assets/images/js-Schedule-New-Notifications.png)
 
-*Figure 1: Notifications Page for Scheduling a Report*
+*Figure 1 Notifications Page for Scheduling a Report*

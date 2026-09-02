@@ -14,14 +14,14 @@ To create a new report
     |  |
     |----|
     | ![jss new report wizard template](../assets/images/jss-new-report-wizard-template.png) |
-    | *Figure 1: New Report Wizard* |
+    | *Figure 1 New Report Wizard* |
 
 2.  Select the **Coffee** template and click **Next**. The **New Report Wizard** shows the **Report file** page.
 
     |  |
     |----|
     | ![jss new report wizard report file](../assets/images/jss-new-report-wizard-report-file.png) |
-    | *Figure 2: New Report Wizard &gt; Report file* |
+    | *Figure 2 New Report Wizard &gt; Report file* |
 
 3.  Navigate to the folder to which you want the save report and name the report. To create a folder, see [Creating a Project Folder](creating-project-folder.md).
 
@@ -42,7 +42,7 @@ The **New Report Wizard** displays the **Data Source** page. This is where you c
             |  |
             |----|
             | ![jss new report wizard datasource](../assets/images/jss-new-report-wizard-datasource.png) |
-            | *Figure 3: New Report Wizard &gt; Data Source* |
+            | *Figure 3 New Report Wizard &gt; Data Source* |
 
         2.  Enter the query `SELECT * FROM ORDERS` on the right. Note that you can view your query in three different ways: as text, as an outline, or as a diagram.
 
@@ -51,7 +51,7 @@ The **New Report Wizard** displays the **Data Source** page. This is where you c
             |                                                            |
             |------------------------------------------------------------|
             | ![newreport fields](../assets/images/newreport-fields.png) |
-            | *Figure 4: New Report Wizard &gt; Fields*                  |
+            | *Figure 4 New Report Wizard &gt; Fields*                   |
 
         4.  Select the following fields and click the right arrow to add them to your report.
 
@@ -73,4 +73,4 @@ Jaspersoft Studio now builds the report layout with the selected fields included
 |                                                            |
 |------------------------------------------------------------|
 | ![new fields added](../assets/images/new-fields-added.png) |
-| *Figure 5: New Report in the Design Tab*                   |
+| *Figure 5 New Report in the Design Tab*                    |

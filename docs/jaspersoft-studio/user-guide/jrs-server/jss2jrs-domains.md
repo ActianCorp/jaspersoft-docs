@@ -31,14 +31,14 @@ A data adapter for a domain identifies your instance of JasperReports Server and
     |  |
     |----|
     | ![jss RepositoryExplorer JaspersoftServer](../assets/images/jss-RepositoryExplorer-JaspersoftServer.png)      ![jss DataAdapterWizard JaspersoftServer](../assets/images/jss-DataAdapterWizard-JaspersoftServer.png) |
-    | *Figure 1: Creating a New Data Adapter* |
+    | *Figure 1 Creating a New Data Adapter* |
 
     Alternatively, you can edit the empty Jaspersoft Server Data Adapter that is created by default as a template. Double-click it in the Repository Explorer panel to open it for editing in the **Data Adapter Wizard**.
 
     |  |
     |----|
     | ![jss DataAdapterWizard supermartDomain](../assets/images/jss-DataAdapterWizard-supermartDomain.png) |
-    | *Figure 2: Entering Server and Domain Information* |
+    | *Figure 2 Entering Server and Domain Information* |
 
 2.  Enter a name for the data adapter, usually the name of the domain.
 
@@ -59,7 +59,7 @@ A data adapter for a domain identifies your instance of JasperReports Server and
     |  |
     |----|
     | ![jss FindResource RepositoryTree](../assets/images/jss-FindResource-RepositoryTree.png)      ![jss FindResource RepositorySearch](../assets/images/jss-FindResource-RepositorySearch.png) |
-    | *Figure 3: Creating a New Data Adapter* |
+    | *Figure 3 Creating a New Data Adapter* |
 
 7.  Click **Finish** to create the data adapter for your domain.
 
@@ -69,7 +69,7 @@ As of Jaspersoft Studio 7.8, the jasperQL query language is the default query la
 
 To create a report based on a domain.
 
-1.  Make sure you have defined a data adapter for accessing the domain on your instance of JasperReports Server. For more information, see “Creating a Domain Data Adapter” on page 1.
+1.  Make sure you have defined a data adapter for accessing the domain on your instance of JasperReports Server. For more information, see [“Creating a Domain Data Adapter” on page 1](#creating-a-domain-data-adapter).
 
 2.  Click ![jss icon new report](../assets/images/jss-icon-new-report.png) or select **File &gt; New  &gt; JasperReport** from the menu. The **New Report Wizard** is displayed.
 
@@ -84,27 +84,27 @@ To create a report based on a domain.
     |  |
     |----|
     | ![jss NewReportWizard jasperQLDesigner](../assets/images/jss-NewReportWizard-jasperQLDesigner.png) |
-    | *Figure 4: Fields of a Domain Available Through the Data Adapter* |
+    | *Figure 4 Fields of a Domain Available Through the Data Adapter* |
 
     The default query language is jasperQL. You can select a different domain on the server if needed, and the dialog updates the available fields. The domain being used is stored in the report itself, therefore it may be different from the one in the data adapter.
 
 6.  Select fields or folders in the Domain on the left of the dialog, and drag them to the Fields item on the right to create fields. For example, drag **Sales &gt; Stores**.
 
-    The items are added as a flat list, using the labels from the Domain. At this point, you can refine the query by adding fields to filters, group by, and order by headings. These actions are covered in detail in the next section Using the jasperQL Query Designer.
+    The items are added as a flat list, using the labels from the Domain. At this point, you can refine the query by adding fields to filters, group by, and order by headings. These actions are covered in detail in the next section [Using the jasperQL Query Designer](#using-the-jasperql-query-designer).
 
 7.  When done, click **Next** to select the dataset fields. These are the fields that appear in the report outline for use in creating the report. In this simple example, click ![jss icon select all fields](../assets/images/jss-icon-select-all-fields.png) to add all fields.
 
     |  |
     |----|
     | ![jss NewReportWizard DatasetFields](../assets/images/jss-NewReportWizard-DatasetFields.png) |
-    | *Figure 5: Fields of the Query Result Selected for the Report* |
+    | *Figure 5 Fields of the Query Result Selected for the Report* |
 
 8.  Click **Finish** and the report appears in a new tab with a blank canvas. The elements and fields of the report appear in the report outline. When you mouse over the fields, you see the field's label from the domain.
 
     |  |
     |----|
     | ![jss Outline DomainReport Fields](../assets/images/jss-Outline-DomainReport-Fields.png) |
-    | *Figure 6: Fields of a Domain in the Report Outline* |
+    | *Figure 6 Fields of a Domain in the Report Outline* |
 
 9.  Define your report as usual, using the **Palette** and **Outline** to add and organize components.
 
@@ -121,7 +121,7 @@ After a domain-based report has been created, you can always go back and change 
 |  |
 |----|
 | ![jss DataSetQuery jasperQLDesigner](../assets/images/jss-DataSetQuery-jasperQLDesigner.png) |
-| *Figure 7: Editing a jasperQL Query in the Dataset and Query Dialog* |
+| *Figure 7 Editing a jasperQL Query in the Dataset and Query Dialog* |
 
 The panel at the bottom of the Dataset and Query dialog displays the fields that are selected from the query results (the dataset) for use in the report. If you configure the jasperQL query fully, you reduce the results so they contain exactly the fields you need. In that case, click the **Read Fields** button to "read" all the query result fields into the report, and they replace any in the **Fields** tab at the bottom.
 
@@ -132,14 +132,14 @@ The query designer has a **Text** tab that displays the text of the current quer
 |  |
 |----|
 | ![jss jasperQLDesigner TextTab](../assets/images/jss-jasperQLDesigner-TextTab.png) |
-| *Figure 8: JSON Text View of a jasperQL Domain Query* |
+| *Figure 8 JSON Text View of a jasperQL Domain Query* |
 
 On the **Designer** tab, you can create a query of your domain by dragging and dropping fields, entering expressions, and clicking for certain actions. The elements of the query are structured like an SQL query. The result is a query that is easy to create and easy to interpret:
 
 |  |
 |----|
 | ![jss jasperQLDesigner DesignTab](../assets/images/jss-jasperQLDesigner-DesignTab.png) |
-| *Figure 9: Visual representation of a jasperQL domain Query* |
+| *Figure 9 Visual representation of a jasperQL domain Query* |
 
 Use the following interactive features of the jasperQL query designer to create your query:
 
@@ -152,7 +152,7 @@ You can mouse over a field name to see its name, ID, and type:
 |  |
 |----|
 | ![jss jasperQLDesigner mouseover](../assets/images/jss-jasperQLDesigner-mouseover.png) |
-| *Figure 10: Information About a Field from the Domain* |
+| *Figure 10 Information About a Field from the Domain* |
 
 To remove a field from the list under the **Fields** heading, or any other heading on the right side, right-click the field and select **Delete** from the context menu. You can also select the field and use the **Delete** key.
 
@@ -165,7 +165,7 @@ To create an alias for a field, double-click the field in the right-hand panel, 
 |  |
 |----|
 | ![jss jasperQLDesigner FieldAlias](../assets/images/jss-jasperQLDesigner-FieldAlias.png) |
-| *Figure 11: Creating an Alias for a Field* |
+| *Figure 11 Creating an Alias for a Field* |
 
 The alias is also useful for giving fields a simple name wherever they appear in Jaspersoft Studio. Otherwise, the fields are known by their ID, for example: `sales_fact_ALL.sales.store_features.store_sqft`.
 
@@ -176,7 +176,7 @@ To create an aggregate function on a field, right-click it on the left or right 
 |  |
 |----|
 | ![jss jasperQLDesigner aggregation](../assets/images/jss-jasperQLDesigner-aggregation.png) |
-| *Figure 12: Aggregate Function dialog* |
+| *Figure 12 Aggregate Function dialog* |
 
 ### Defining Calculated Fields
 
@@ -187,7 +187,7 @@ To create a calculated field, right-click on an item in the left-hand panel and 
 |  |
 |----|
 | ![jss jasperQLDesigner CalculatedField](../assets/images/jss-jasperQLDesigner-CalculatedField.png) |
-| *Figure 13: Defining a Calculated Field* |
+| *Figure 13 Defining a Calculated Field* |
 
 ### Filtering Results
 
@@ -196,14 +196,14 @@ Defining a filter in the query reduces the size of the results and means that yo
 |  |
 |----|
 | ![jss jasperQLDesigner Filter1](../assets/images/jss-jasperQLDesigner-Filter1.png) |
-| *Figure 14: Defining a Filter* |
+| *Figure 14 Defining a Filter* |
 
 Type the comparison value for the filter or click **...** to select from a list of available values. Jaspersoft Studio queries the data through the Domain to display the list. The results include rows of data for other fields chosen so far. Double-click any row to insert the bolded value as the comparison value in the filter.
 
 |  |
 |----|
 | ![jss jasperQLDesigner FilterValues](../assets/images/jss-jasperQLDesigner-FilterValues.png) |
-| *Figure 15: Choosing Filter Values* |
+| *Figure 15 Choosing Filter Values* |
 
 Alternatively, you can right-click the comparison value field and select **Parameter** or **Function** to use JasperReports parameters or functions that you have already defined. Each of those options brings up a dialog where you can specify the parameter or function. For example, parameters can be used to compare values against input controls that you have defined in the report. When using parameters in filters, be sure to define default values for the parameters to avoid unexpected errors.
 
@@ -214,7 +214,7 @@ Repeat these steps for each filter that you want. For the second filter and each
 |  |
 |----|
 | ![jss jasperQLDesigner Filter2](../assets/images/jss-jasperQLDesigner-Filter2.png) |
-| *Figure 16: Adding a Second Filter* |
+| *Figure 16 Adding a Second Filter* |
 
 To change the operator or value of a filter, double-click it on the right-hand panel. You can also drag filters to change the order of composition. Finally, you can double-click the Filters heading and select **Replace DomEL Filter**. This special filter allows you to write DomEL expressions on both sides of the operator and compare them.
 
@@ -225,7 +225,7 @@ To group by a field, drag the field from the left to the **Group By** heading on
 |  |
 |----|
 | ![jss jasperQLDesigner GroupBy](../assets/images/jss-jasperQLDesigner-GroupBy.png) |
-| *Figure 17: Defining a Group* |
+| *Figure 17 Defining a Group* |
 
 ### Ordering Rows
 
@@ -234,7 +234,7 @@ To order the results by the value of a field, drag the field to the **Order By**
 |  |
 |----|
 | ![jss jasperQLDesigner OrderBy](../assets/images/jss-jasperQLDesigner-OrderBy.png) |
-| *Figure 18: Defining a Descending Order* |
+| *Figure 18 Defining a Descending Order* |
 
 ### Limiting Rows
 
@@ -243,7 +243,7 @@ To limit the number of items shown in your report, double-click the **Limit** he
 |  |
 |----|
 | ![jss jasperQLDesigner Limit](../assets/images/jss-jasperQLDesigner-Limit.png) |
-| *Figure 19: Defining a Row Limit* |
+| *Figure 19 Defining a Row Limit* |
 
 ## Using the domain Query Language
 

@@ -42,7 +42,7 @@ To create the report book framework
         |  |
         |----|
         | ![jss report book framework](../assets/images/jss-report-book-framework.png) |
-        | *Figure 1: Report Book Framework* |
+        | *Figure 1 Report Book Framework* |
 
         In Jaspersoft Studio, open the Project Explorer and expand the My Reports folder. There, you can see the jrxml files you just created:
 

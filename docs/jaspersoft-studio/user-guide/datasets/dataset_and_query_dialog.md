@@ -12,7 +12,7 @@ When working with a subdataset, open the dialog by right-clicking the dataset na
 |  |
 |----|
 | ![dataset and query dropdown](../assets/images/dataset-and-query-dropdown.png) |
-| *Figure 1: Right-click menu* |
+| *Figure 1 Right-click menu* |
 
 Use the **Dataset and Query** dialog to configure your dataset as follows:
 
@@ -51,7 +51,7 @@ Use the tabs at the bottom to perform the following additional tasks:
 |  |
 |----|
 | ![jss dataset and query preview](../assets/images/jss-dataset-and-query-preview.png) |
-| *Figure 2: Data Preview tab* |
+| *Figure 2 Data Preview tab* |
 
 ## Configuring the Data Adapter and Query Language dropdowns
 
@@ -72,7 +72,7 @@ The **Data Adapter** tab is visible when the selected data adapter supports addi
 |  |
 |----|
 | ![jss dataset query data adapter tab](../assets/images/jss-dataset-query-data-adapter-tab.png) |
-| *Figure 3: Data Adapter tab* |
+| *Figure 3 Data Adapter tab* |
 
 This tab lets you configure the following information for the data adapter:
 

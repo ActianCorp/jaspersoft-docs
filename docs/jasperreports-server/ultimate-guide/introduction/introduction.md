@@ -43,7 +43,7 @@ JasperReports Server is a component of both a community project and commercial o
 
 This chapter contains the following sections:
 
--   Community and Commercial Editions
+-   [Community and Commercial Editions](#community-and-commercial-editions)
 
 -   [User Descriptions and Document Maps](user_descriptions_and_document_maps.md)
 

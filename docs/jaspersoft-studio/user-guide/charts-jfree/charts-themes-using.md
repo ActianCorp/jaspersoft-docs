@@ -21,7 +21,7 @@ In the **Outline** view, expand the **Chart Theme** list to view the subsections
 |                                                                  |
 |------------------------------------------------------------------|
 | ![chart theme outline](../assets/images/chart-theme-outline.png) |
-| *Figure 1: Chart Theme Designer Outline View*                    |
+| *Figure 1 Chart Theme Designer Outline View*                     |
 
 -   **Chart**: Set properties for borders, color, background, and padding.
 -   **Title**: Set properties for position, color, alignment, padding, and font.
@@ -48,7 +48,7 @@ To export the theme as a JAR
     |                                                        |
     |--------------------------------------------------------|
     | ![save theme jar](../assets/images/save-theme-jar.png) |
-    | *Figure 2: Save As JAR*                                |
+    | *Figure 2 Save As JAR*                                 |
 
 2.  Enter or select the parent folder, name the file, and name your theme. Click **OK**.
 

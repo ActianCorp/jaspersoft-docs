@@ -304,6 +304,8 @@ To define custom properties
 
 3.  Edit the following properties, adding any that are missing, then save the changes:
 
+    **Properties for DB2 JDBC Driver**
+
     | Property Name                | Value    |
     |------------------------------|----------|
     | currentSchema                | JSPRSRVR |
@@ -311,8 +313,6 @@ To define custom properties
     | fullyMaterializeInputStreams | true     |
     | progressiveStreaming         | 2        |
     | progressiveLocators          | 2        |
-
-    Properties for DB2 JDBC Driver
 
 4.  Go back to the list of JDBC data sources, select the checkbox for the **JSPRSRVR** data source, and click **Test Connection**.
 
@@ -364,6 +364,8 @@ To define custom properties
 
 3.  Edit the following properties, adding any that are missing, then save the changes:
 
+    **Properties for DB2 JDBC Driver**
+
     | Property Name                | Value    |
     |------------------------------|----------|
     | currentSchema                | JSPRSRVR |
@@ -371,8 +373,6 @@ To define custom properties
     | fullyMaterializeInputStreams | true     |
     | progressiveStreaming         | 2        |
     | progressiveLocators          | 2        |
-
-    Properties for DB2 JDBC Driver
 
 4.  Go back to the list of JDBC data sources, select the checkbox for the **jsSystemAnalytics** data source, and click **Test Connection**.
 
@@ -449,8 +449,9 @@ To define custom properties
 
 3.  Edit the following properties, adding any that are missing, then save the changes:
 
+    **Properties for DB2 JDBC Driver**
+
     <table>
-    <caption><p>Properties for DB2 JDBC Driver</p></caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />
@@ -561,8 +562,9 @@ To define custom properties
 
 3.  Edit the following properties, adding any that are missing, then save the changes:
 
+    **Properties for DB2 JDBC Driver**
+
     <table>
-    <caption><p>Properties for DB2 JDBC Driver</p></caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />
@@ -604,8 +606,9 @@ To create optional sugarcrm and foodmart data sources
 
 1.  If you plan to run the sample reports, use the following values to create the foodmart and sugarcrm JNDI data sources.
 
+    **Field Values for Optional Data Sources for DB2 Drivers with WebSphere**
+
     <table>
-    <caption><p>Field Values for Optional Data Sources for DB2 Drivers with WebSphere</p></caption>
     <thead>
     <tr>
     <th>Field Name</th>
@@ -651,8 +654,9 @@ To create optional sugarcrm and foodmart data sources
     </tbody>
     </table>
 
+    **Custom Properties for DB2 Driver with WebSphere**
+
     <table>
-    <caption><p>Custom Properties for DB2 Driver with WebSphere</p></caption>
     <thead>
     <tr>
     <th>Property Name</th>

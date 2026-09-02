@@ -42,7 +42,7 @@ The **HTML5 Chart Edit Dialog** is displayed.
     |  |
     |----|
     | ![HTML5 Charts Properties Chart Data](../assets/images/HTML5%20Charts%20Properties_Chart%20Data.png) |
-    | *Figure 1: HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
+    | *Figure 1 HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
 
 6.  Enter the required information on the Data subtab. For this example:
 
@@ -72,7 +72,7 @@ The **HTML5 Chart Edit Dialog** is displayed.
     |  |
     |----|
     | ![jss html5 pie chart dataset](../assets/images/jss-html5-pie-chart-dataset.png) |
-    | *Figure 2: HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
+    | *Figure 2 HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
 
 5.  Click **OK** to close the HTML5 Chart Edit dialog.
 
@@ -83,4 +83,4 @@ The **HTML5 Chart Edit Dialog** is displayed.
 |  |
 |----|
 | ![html5 chart pie preview tab](../assets/images/html5-chart-pie-preview-tab.png) |
-| *Figure 3: Pie Chart Example* |
+| *Figure 3 Pie Chart Example* |

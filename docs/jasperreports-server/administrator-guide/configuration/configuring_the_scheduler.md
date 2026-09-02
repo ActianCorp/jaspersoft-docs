@@ -7,19 +7,19 @@ description: "The scheduler runs reports in the background according to a user-d
 
 The scheduler runs reports in the background according to a user-defined schedule (also called a job). You can configure the following aspects of the scheduler:
 
--   Configuring the Scheduler Misfire Policy
+-   [Configuring the Scheduler Misfire Policy](#configuring-the-scheduler-misfire-policy)
 
--   Configuring Scheduler Failure Notifications
+-   [Configuring Scheduler Failure Notifications](#configuring-scheduler-failure-notifications)
 
--   Restricting File System Output
+-   [Restricting File System Output](#restricting-file-system-output)
 
--   Removing Report Scheduling Interval Options
+-   [Removing Report Scheduling Interval Options](#removing-report-scheduling-interval-options)
 
--   Adding a Holiday Exclusion Calendar
+-   [Adding a Holiday Exclusion Calendar](#adding-a-holiday-exclusion-calendar)
 
--   Changing the Default Output Folder
+-   [Changing the Default Output Folder](#changing-the-default-output-folder)
 
--   Configuring the Scheduler for Dashboards
+-   [Configuring the Scheduler for Dashboards](#configuring-the-scheduler-for-dashboards)
 
 -   [Configuring the Scheduler to Fetch Attributes](configuring_the_scheduler.md)
 
@@ -310,13 +310,13 @@ For example, using the [Poster plug-in for Firefox](https://addons.mozilla.org/E
 
 ![js Scheduler ConfiguringHolidayCalendar](../assets/images/js-Scheduler-ConfiguringHolidayCalendar.png)
 
-*Figure 2: Creating a Holiday Calendar with REST Web Services*
+*Figure 2 Creating a Holiday Calendar with REST Web Services*
 
 Then you should see your new calendar in the list of calendars in the Schedule tab.
 
 ![js Scheduler Schedule HolidayCalendar](../assets/images/js-Scheduler-Schedule-HolidayCalendar.png)
 
-*Figure 3: Selecting a Custom Holiday Calendar in the Scheduler*
+*Figure 3 Selecting a Custom Holiday Calendar in the Scheduler*
 
 The REST API supports other types of calendars, however, the user interface lists only calendars of type `holiday`. Using the REST API, you can create and manage any number of calendars and update any schedule to use them. For more information, see the JasperReports Server REST API Reference.
 

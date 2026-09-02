@@ -19,21 +19,21 @@ For further information, see:
 
     This chapter includes the following sections:
 
--   Searching the Repository
+-   [Searching the Repository](#searching-the-repository)
 
--   Paginating Search Results
+-   [Paginating Search Results](#paginating-search-results)
 
--   Viewing Resource Details
+-   [Viewing Resource Details](#viewing-resource-details)
 
--   Creating a Resource
+-   [Creating a Resource](#creating-a-resource)
 
--   Modifying a Resource
+-   [Modifying a Resource](#modifying-a-resource)
 
--   Copying a Resource
+-   [Copying a Resource](#copying-a-resource)
 
--   Moving a Resource
+-   [Moving a Resource](#moving-a-resource)
 
--   Deleting Resources
+-   [Deleting Resources](#deleting-resources)
 
 ## Searching the Repository
 
@@ -119,7 +119,7 @@ String</p></td>
 <span>offset</span><br />
 <span>forceFullPage</span><br />
 <span>forceTotalCount</span></p></td>
-<td><p>Pagination is enabled by default, and the default limit is 100 results. By default, permissions are applied after raw results, such that the search returns fewer than 100 items but there are more pages of results. If you work with large repositories, you must handle pagination issues. These parameters are described in <span>1.1, “Paginating Search Results,” on page 1</span>.</p></td>
+<td><p>Pagination is enabled by default, and the default limit is 100 results. By default, permissions are applied after raw results, such that the search returns fewer than 100 items but there are more pages of results. If you work with large repositories, you must handle pagination issues. These parameters are described in <a href="#paginating-search-results">1.1, “Paginating Search Results,” on page 1</a>.</p></td>
 </tr>
 <tr>
 <td colspan="3"><p>Options</p></td>
@@ -215,7 +215,7 @@ With the default pagination, every page of results returned by the server may co
 Default pagination has the best performance and, when configured with the right limit for the size of your repository, almost no delay in response for your users. Because results are filtered by permissions, the user credentials that you specify for the request determine how full each page is:
 
 -   The system admin (`superuser`) has access to every resource, and therefore the results are effectively unfiltered and each page is full. But the same can be true when you perform a search as jasperadmin within his organization, or even as a plain user within a folder where the user has full read permission. In these cases, the default pagination is very efficient and has no partially full pages.
--   If you are performing a sparse search, for example finding all reports that a given user has permission to access within an entire and large organization, then the results may have many partially full pages, all of differing lengths. In this case, you may prefer to use 1.1, “Full Page Pagination,” on page 1.
+-   If you are performing a sparse search, for example finding all reports that a given user has permission to access within an entire and large organization, then the results may have many partially full pages, all of differing lengths. In this case, you may prefer to use [1.1, “Full Page Pagination,” on page 1](#full-page-pagination).
 
 <table>
 <colgroup>

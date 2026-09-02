@@ -20,8 +20,8 @@ On the **Schedule** tab, you can change these settings:
 
 ![js alert create schedule](../assets/images/js-alert-create-schedule.png)
 
-*Figure 1: Schedule Tab*
+*Figure 1 Schedule Tab*
 
 ![js alert schedule spefic date time](../assets/images/js-alert-schedule-spefic-date-time.png)
 
-*Figure 2: Schedule Tab with Specific Date and Time enabled*
+*Figure 2 Schedule Tab with Specific Date and Time enabled*

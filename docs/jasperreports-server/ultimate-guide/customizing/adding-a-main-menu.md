@@ -96,7 +96,7 @@ This example creates a new menu named Accounts. It contains the internal search 
 
   ![js Customization GoogleResults](../assets/images/js-Customization-GoogleResults.png)
 
-*Figure 1: Creating a Custom Menu and an External Link*
+*Figure 1 Creating a Custom Menu and an External Link*
 
 !!! note
 

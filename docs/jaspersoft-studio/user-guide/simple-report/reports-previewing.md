@@ -10,7 +10,7 @@ Click the **Preview** tab at the bottom of the report. The preview compiles the 
 |                                                                    |
 |--------------------------------------------------------------------|
 | ![report basic preview](../assets/images/report-basic-preview.png) |
-| *Figure 1: Report Preview*                                         |
+| *Figure 1 Report Preview*                                          |
 
 !!! note
 

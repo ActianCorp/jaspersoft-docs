@@ -15,25 +15,25 @@ For further information, see:
 
     This chapter includes the following sections:
 
--   Resource URI
+-   [Resource URI](#resource-uri)
 
--   Custom Media Types
+-   [Custom Media Types](#custom-media-types)
 
--   Accept HTTP Headers
+-   [Accept HTTP Headers](#accept-http-headers)
 
--   Content-Type HTTP Headers
+-   [Content-Type HTTP Headers](#content-type-http-headers)
 
--   JSON Format
+-   [JSON Format](#json-format)
 
--   Nested Resources
+-   [Nested Resources](#nested-resources)
 
--   Referenced Resources
+-   [Referenced Resources](#referenced-resources)
 
--   Local Resources
+-   [Local Resources](#local-resources)
 
--   Optimistic Locking
+-   [Optimistic Locking](#optimistic-locking)
 
--   Update-only Passwords
+-   [Update-only Passwords](#update-only-passwords)
 
 ## Resource URI
 
@@ -152,7 +152,7 @@ Referenced resources are defined by special structures within the descriptors of
        },
 ```
 
-To create referenced resources, send requests to the server that contain the appropriate reference objects for the target resource. See 1.1, “Referenced Resources,” on page 1 for the specific reference objects available in each resource descriptor.
+To create referenced resources, send requests to the server that contain the appropriate reference objects for the target resource. See [1.1, “Referenced Resources,” on page 1](#referenced-resources) for the specific reference objects available in each resource descriptor.
 
 When reading resources with referenced resources, the `uri` attribute gives the repository URI of the reference. To simplify the parsing of referenced resources, the resources service GET method supports the expanded=true parameter. Instead of following references and requiring two or more GET requests, the expanded=true parameter returns all referenced resources fully expanded within the parent resource, as if it were a local resource.
 
@@ -299,7 +299,7 @@ Nested resources that are not referenced resources must be defined locally withi
 }
 ```
 
-Use nested descriptors such as the ones above to create resources that contain local resources. Descriptors can be nested to any level, as long as the syntax of each descriptor is valid. See 1.1, “Nested Resources,” on page 1 for the correct syntax of both the parent and the nested resource.
+Use nested descriptors such as the ones above to create resources that contain local resources. Descriptors can be nested to any level, as long as the syntax of each descriptor is valid. See [1.1, “Nested Resources,” on page 1](#nested-resources) for the correct syntax of both the parent and the nested resource.
 
 Internally, the resources service handles local resources as normal resources contained in a hidden folder. The hidden folder containing local resources has the following name:
 

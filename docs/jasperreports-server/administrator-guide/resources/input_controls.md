@@ -126,7 +126,7 @@ To create an input control:
 
     ![js AddInputControl Datatype](../assets/images/js-AddInputControl-Datatype.png)
 
-    *Figure 1: Locate a Datatype for an Input Control*
+    *Figure 1 Locate a Datatype for an Input Control*
 
 13. Click **Next**. The input control resource is created in the repository.
 

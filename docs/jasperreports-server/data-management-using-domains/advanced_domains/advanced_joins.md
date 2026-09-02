@@ -13,7 +13,7 @@ A group of tables that are all connected directly or indirectly through joins is
 
 Join trees appear as top-level nodes in the **Data Structure** panel on the **Joins**, **Pre-Filters** and **Data Presentation** tabs. Tables that are not joined appear as children of the data source node at the top of the **Data Structure** panel.
 
-The options on the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu in the join tree title bar help you prioritize which join paths are chosen when multiple options are possible in an Ad Hoc view. These options are primarily used to avoid circular joins. See Prioritizing Joins for more information.
+The options on the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu in the join tree title bar help you prioritize which join paths are chosen when multiple options are possible in an Ad Hoc view. These options are primarily used to avoid circular joins. See [Prioritizing Joins](#prioritizing-joins) for more information.
 
 ## Understanding Join Options
 
@@ -28,7 +28,7 @@ In some cases, you may need to duplicate a table in order to join it several tim
     -   NOT or OR operator between joins inside a composite join.
     -   Joins within the same table.
 
-    If you have a Domain design file in XML format that uses these features and you open it in the Domain Designer, these joins will be displayed as read-only joins. See Read-Only Joins for more information.
+    If you have a Domain design file in XML format that uses these features and you open it in the Domain Designer, these joins will be displayed as read-only joins. See [Read-Only Joins](#read-only-joins) for more information.
 
 ## Join Type
 
@@ -45,11 +45,11 @@ The Domain Designer supports the following comparison operators between fields. 
 
 =, ≠, &gt;, &lt;, &gt;=, &lt;= .
 
-Comparison operators other than = often generate a large amount of rows (similar to a Cartesian product) when used on their own. For best results, use them in a composite join in conjunction with an = join. See Composite Joins for more information.
+Comparison operators other than = often generate a large amount of rows (similar to a Cartesian product) when used on their own. For best results, use them in a composite join in conjunction with an = join. See [Composite Joins](#composite-joins) for more information.
 
 ![js DomainDesigner Join Inequality](../assets/images/js-DomainDesigner-Join-Inequality.png)
 
-*Figure 1: Example of a Join that Uses an Inequality*
+*Figure 1 Example of a Join that Uses an Inequality*
 
 ## Composite Joins
 
@@ -60,9 +60,9 @@ Composite joins implement multiple join conditions for the same pair of tables. 
 
 ![js DomainDesigner CompositeJoin Example](../assets/images/js-DomainDesigner-CompositeJoin-Example.png)
 
-*Figure 2: Example of Composite Join*
+*Figure 2 Example of Composite Join*
 
-The join options you select on the join title bar, such as join type and weight, apply to the entire composite join. In addition, when the Domain is used in an Ad Hoc view or report, the composite join is treated as a single join with multiple components. See Prioritizing Joins for more information. When the Domain is exported as XML, composite joins are represented as a single join expression with multiple components.
+The join options you select on the join title bar, such as join type and weight, apply to the entire composite join. In addition, when the Domain is used in an Ad Hoc view or report, the composite join is treated as a single join with multiple components. See [Prioritizing Joins](#prioritizing-joins) for more information. When the Domain is exported as XML, composite joins are represented as a single join expression with multiple components.
 
 ## Custom Joins
 
@@ -74,7 +74,7 @@ To add a custom join to an existing join
 
     ![js DomainDesigner CustomJoin New](../assets/images/js-DomainDesigner-CustomJoin-New.png)
 
-    *Figure 3: New Custom Join dialog*
+    *Figure 3 New Custom Join dialog*
 
 2.  Select a column from the Field list. You can select a column from either table in the join.
 
@@ -118,7 +118,7 @@ To add a custom join to an existing join
 
     ![js DomainDesigner CustomJoin Result](../assets/images/js-DomainDesigner-CustomJoin-Result.png)
 
-    *Figure 4: A custom join in the design panel*
+    *Figure 4 A custom join in the design panel*
 
 3.  To edit or delete a custom join:
 
@@ -137,7 +137,7 @@ If you have a Domain design file in XML that uses these features and you open it
 
 ![js DomainDesigner ReadOnlyJoin](../assets/images/js-DomainDesigner-ReadOnlyJoin.png)
 
-*Figure 5: Example of Read-Only Join*
+*Figure 5 Example of Read-Only Join*
 
 To create or modify joins outside of the Domain Designer, you must export the Domain in XML format and modify it in a text editor. See [Importing and Exporting Domain Design Files](importing_and_exporting.md) and [Representing Joins in XML](../domain_syntax/representing_joins.md) for more information.
 
@@ -147,13 +147,13 @@ The Domain Designer and Domain Design file do not impose any limits on the numbe
 
 ![js CircularJoins ShowTables](../assets/images/js-CircularJoins-ShowTables.png)
 
-*Figure 6: Circular Joins in a Domain*
+*Figure 6 Circular Joins in a Domain*
 
 ### Best Practices for Join Trees
 
 Wherever possible, follow these practices to avoid loops or to minimize their impact on Ad Hoc views:
 
--   For a join tree with N tables, use N-1 joins. A composite join is considered a single join. See Composite Joins for more information.
+-   For a join tree with N tables, use N-1 joins. A composite join is considered a single join. See [Composite Joins](#composite-joins) for more information.
 -   Create copies of tables you need to use more than once in the join tree. You can copy a table by right-clicking it in the **Data Structure** panel on the **Joins** tab and selecting **Copy Table** from the context menu.
 -   Enable **Minimum Path Joins** for each join tree. (This option is not the default.)
 -   For better join performance, prioritize joins that involve indexed columns. To do this, assign low join weights to the preferred joins and high join weights to less desirable joins.
@@ -185,7 +185,7 @@ In this situation, you can enable **Use minimum path joins**. This automatically
 
 ![js CircularJoins Simplified](../assets/images/js-CircularJoins-Simplified.png)
 
-*Figure 7: Circular Join with Default Weights*
+*Figure 7 Circular Join with Default Weights*
 
 Now, when you create an Ad Hoc view using table A and table B, the Ad Hoc Designer calculates the weight of the possible join paths from A to B by summing the weights of their subpaths. The direct path A–B has total weight=1, while the indirect path A–C–B has weight 1+1=2. The path with the smallest total weight is chosen, in this case, the direct path from A to B.
 
@@ -193,13 +193,13 @@ Note, however, that this does not cover all cases. For example, suppose you have
 
 ![js CircularJoins EqualWeight](../assets/images/js-CircularJoins-EqualWeight.png)
 
-*Figure 8: Circular Joins with Equal Weights Between A and B*
+*Figure 8 Circular Joins with Equal Weights Between A and B*
 
 To exert even more control over the joins used by your Ad Hoc view, you can add an optional weight to one or more of the joins in your join tree. Adding a weight increases the cost of a particular join, and lowers its priority. The higher you set a weight the more you dislike the join. For example, you can add a weight of 2 to the join between table B and table D. Then you can ensure that an Ad Hoc view with tables A and B will use the A–C–B join path, which only has a total weight of 2, and not the A–D–B join path, which now has a total weight of 3. Note that, in this situation, an Ad Hoc view with tables B and D will still use the direct path with weight 2, instead of the path B–C–A–D, which has a total weight of 3.
 
 ![js CircularJoins CustomWeight](../assets/images/js-CircularJoins-CustomWeight.png)
 
-*Figure 9: Circular Joins with Weights*
+*Figure 9 Circular Joins with Weights*
 
 ### Always Include Table
 

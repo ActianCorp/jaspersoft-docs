@@ -33,8 +33,9 @@ Usually a cast is required when you need to call a method on the object that bel
 
 If the `JRDataSource` supplied with JasperReports does not meet your requirements, you can write a new `JRDataSource`. This is not a complex operation. In fact, all you have to do is create a class that implements the `JRDataSource` interface that exposes two simple methods: `next` and `getFieldValue`.
 
+**The JRDataSource interface**
+
 <table>
-<caption><p>The JRDataSource interface</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -66,8 +67,9 @@ Once instantiated, the data source looks for the files and the directories prese
 
 The `next` method increases the index variable that you use to track the position reached in the array files, and returns true until you reach the end of the array.
 
+**Sample personalized data source**
+
 <table>
-<caption><p>Sample personalized data source</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -136,8 +138,9 @@ The next section shows how to use your personalized data source in Jaspersoft St
 
 Jaspersoft Studio provides a special connection for your personalized data sources. It is useful for employing whatever `JRDataSource` you want to use through some kind of factory class that provides an instance of that `JRDataSource` implementation. The factory is just a simple Java class useful for testing your data source and filling a report in Jaspersoft Studio. The idea is the same as what you have seen for the collection of JavaBeans data adapter — you need to write a Java class that creates the data source through a static method and returns it. For example, if you want to test the `JRFileSystemDataSource` in the previous section, you need to create a simple class like that shown in this code sample:
 
+**Class for testing a custom data source**
+
 <table>
-<caption><p>Class for testing a custom data source</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -163,7 +166,7 @@ Create a connection as you normally would (see [Creating and Using Database JDBC
 |                                                                  |
 |------------------------------------------------------------------|
 | ![custom data adapter](../assets/images/custom-data-adapter.png) |
-| *Figure 1: Configuring a Custom Data Adapter*                    |
+| *Figure 1 Configuring a Custom Data Adapter*                     |
 
 Next, specify the class and method to obtain an instance of your `JRFileSystemDataSource`, that is, `TestFileSystemDataSource` and `test`.
 

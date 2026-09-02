@@ -32,7 +32,7 @@ To change a field's local unit of measure select the field, double-click the uni
 |  |
 |----|
 | ![Updating a field's measure unit](assets/images/Updating%20a%20field%27s%20measure%20unit.png) |
-| *Figure 1: Updating a field's measure unit* |
+| *Figure 1 Updating a field's measure unit* |
 
 ## Alias and Auto-complete
 

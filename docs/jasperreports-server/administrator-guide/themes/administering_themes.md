@@ -25,19 +25,19 @@ This procedure assumes you have already created and uploaded your theme
 
 ![js Themes SetAsActive](../assets/images/js-Themes-SetAsActive.png)
 
-*Figure 1: Setting a System Theme*
+*Figure 1 Setting a System Theme*
 
 As soon as the screen is refreshed, you see the effect of the new theme. Notice how the **jasper_dark** theme changes the colors in the user interface with just the `overrides_custom.css` file and some image files.
 
 ![js Themes jasper dark](../assets/images/js-Themes-jasper_dark.png)
 
-*Figure 2: The Sample Theme jasper_dark*
+*Figure 2 The Sample Theme jasper_dark*
 
 Because the system theme is set at the root level, the new theme appears to all users in all organizations, unless the organization has its own theme. When an organization has its own theme, it may still see elements of the system theme through inheritance. Also, the system theme set at the root applies to the login page, as shown in the following figure.
 
 ![js Themes LoginPage](../assets/images/js-Themes-LoginPage.png)
 
-*Figure 3: The Login Page as Seen With a New System Theme*
+*Figure 3 The Login Page as Seen With a New System Theme*
 
 The following procedures assume that the system theme is still set to the default theme.
 
@@ -51,7 +51,7 @@ Professional edition users can give different themes to their organizations.
 
     ![js Themes OrgLevel](../assets/images/js-Themes-OrgLevel.png)
 
-    *Figure 4: Organization Themes Seen by Organization Admin*
+    *Figure 4 Organization Themes Seen by Organization Admin*
 
 3.  Right-click the new theme folder name and select **Set as Active Theme**.<br>
     As soon as the screen is refreshed, you see the effect of the new theme. The new theme applies to all organization users and is inherited by all suborganizations, if any.
@@ -80,7 +80,7 @@ System admins may want to restrict access to themes, so that all themes are cont
 
     ![js Themes permissions](../assets/images/js-Themes-permissions.png)
 
-    *Figure 5: Restricting jasperadmin Access to Organization Themes*
+    *Figure 5 Restricting jasperadmin Access to Organization Themes*
 
     By setting **Execute Only** access, the organization administrators cannot see the **Themes** folder in the repository, and thus cannot change themes or create a new theme.
 

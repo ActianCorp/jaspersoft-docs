@@ -25,5 +25,3 @@ Applies to Jaspersoft **10.1.0**.
 - [API Usage - Hyperlinks](hyperlinks.md)
 - [API Usage - Interactive Reports](interactive_reports.md)
 - [Visualize.js Tools](visualize_js_tools.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)

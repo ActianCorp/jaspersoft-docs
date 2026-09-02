@@ -38,7 +38,7 @@ Follow these steps to create a MongoDB data source with the native MongoDB drive
 
     ![js DataSource MongoDB](../assets/images/js-DataSource-MongoDB.png)
 
-    *Figure 1: MongoDB Data Source Page*
+    *Figure 1 MongoDB Data Source Page*
 
 4.  Fill in the required fields, along with any optional information.<br>
     The MongoDB URI has the form:
@@ -58,7 +58,7 @@ Follow these steps to create a MongoDB data source with the native MongoDB drive
 
     !!! note
 
-        Before you can enable x509 authentication, you need to set up the Java Secure Socket Extension (JSSE) in your application server. Before you can enable Kerberos authentication, you need to perform the steps in Using Kerberos Authentication with MongoDB Data Sources.
+        Before you can enable x509 authentication, you need to set up the Java Secure Socket Extension (JSSE) in your application server. Before you can enable Kerberos authentication, you need to perform the steps in [Using Kerberos Authentication with MongoDB Data Sources.](#using-kerberos-authentication-with-mongodb-data-sources)
 
 5.  Click **Test Connection** to validate the data source.
 

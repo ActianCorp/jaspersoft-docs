@@ -9,7 +9,7 @@ Launch JasperReports Server by entering `http://<hostname>:8080/jasperserver-pro
 
 ![js Login fullpage](../assets/images/js-Login-fullpage.png)
 
-*Figure 1: Jaspersoft Login Page*
+*Figure 1 Jaspersoft Login Page*
 
 !!! note
 

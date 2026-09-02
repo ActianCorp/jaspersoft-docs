@@ -22,4 +22,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Working with Jaspersoft Studio Professional](js-azure-user/jaspersoft-studio-professional.md)
 - [Microsoft Azure Terminology](js-azure-user/terminology.md)
 - [About This Guide](bookmatter/about-bookname.md)
-- [Additional Topics](release-notes/changes-in-functionality.md)

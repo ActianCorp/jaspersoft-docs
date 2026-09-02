@@ -11,7 +11,7 @@ The Ad Hoc Editor displays a more focused tool bar when your Ad Hoc view is base
 
 ![js AdHoc OLAP Crosstabs Example](../assets/images/js-AdHoc-OLAP-Crosstabs-Example.png)
 
-*Figure 1: Ad Hoc Editor’s OLAP Connection-based Crosstab View*
+*Figure 1 Ad Hoc Editor’s OLAP Connection-based Crosstab View*
 
 ## Dimensions and Measures
 

@@ -15,51 +15,51 @@ This chapter provides a reference by example for every type of resource descript
 
     This chapter includes the following sections:
 
--   Common Attributes
+-   [Common Attributes](#common-attributes)
 
--   Folder
+-   [Folder](#folder)
 
--   JNDI Data Source
+-   [JNDI Data Source](#jndi-data-source)
 
--   JDBC Data Source
+-   [JDBC Data Source](#jdbc-data-source)
 
--   AWS Data Source
+-   [AWS Data Source](#aws-data-source)
 
--   Virtual Data Source
+-   [Virtual Data Source](#virtual-data-source)
 
--   Custom Data Source
+-   [Custom Data Source](#custom-data-source)
 
--   Bean Data Source
+-   [Bean Data Source](#bean-data-source)
 
--   Datatypes
+-   [Datatypes](#datatypes)
 
--   List of Values
+-   [List of Values](#list-of-values)
 
--   Query
+-   [Query](#query)
 
--   Input Control
+-   [Input Control](#input-control)
 
--   File
+-   [File](#file)
 
--   Report Unit (JRXML Report)
+-   [Report Unit (JRXML Report)](#report-unit-jrxml-report)
 
--   Report Options
+-   [Report Options](#report-options)
 
--   Domain (semanticLayerDataSource)
+-   [Domain (semanticLayerDataSource)](#domain-semanticlayerdatasource)
 
--   Domain Topic
+-   [Domain Topic](#domain-topic)
 
--   XML/A Connection
+-   [XML/A Connection](#xmla-connection)
 
--   Mondrian Connection
+-   [Mondrian Connection](#mondrian-connection)
 
--   Secure Mondrian Connection
+-   [Secure Mondrian Connection](#secure-mondrian-connection)
 
--   OLAP Unit
+-   [OLAP Unit](#olap-unit)
 
--   Mondrian XML/A Definition
+-   [Mondrian XML/A Definition](#mondrian-xmla-definition)
 
--   Other Types
+-   [Other Types](#other-types)
 
 ## Common Attributes
 
@@ -955,7 +955,7 @@ When the `locale` property is left empty, the default locale bundle is used.
 
 ## Domain Topic
 
-A Domain Topic is a Topic created by selecting database fields from a Domain. It is structurally equivalent to a JRXML report, and thus it has the same type attributes (see Report Unit (JRXML Report)). The only difference is that the data source field will reference a Domain (semanticLayerDataSource).
+A Domain Topic is a Topic created by selecting database fields from a Domain. It is structurally equivalent to a JRXML report, and thus it has the same type attributes (see [Report Unit (JRXML Report)](#report-unit-jrxml-report)). The only difference is that the data source field will reference a Domain (semanticLayerDataSource).
 
 <table>
 <colgroup>
@@ -1188,7 +1188,7 @@ Secure Mondrian connections are available only in commercial releases of JasperR
 
 The following types are defined in commercial editions of the server and appear in the repository. However, they are meant only to describe the corresponding resources as read-only objects in the repository. The REST API does not support services for clients to create or modify these types.
 
-The types in the following table contain only the common attributes described in Common Attributes.
+The types in the following table contain only the common attributes described in [Common Attributes](#common-attributes).
 
 <table>
 <colgroup>

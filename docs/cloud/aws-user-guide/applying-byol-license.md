@@ -60,4 +60,4 @@ To verify that your license is uploaded, open JasperReports Server in a web brow
 
 ![AWS AboutDialog](assets/images/AWS-AboutDialog.png)
 
-*Figure 1: Valid License Information*
+*Figure 1 Valid License Information*

@@ -16,8 +16,9 @@ In order to introduce new features and keep backwards compatibility, JaspersoftÂ
 
 By default, the REST web services are available at the following URLs, where `<host>` is the name of the computer hosting JasperReports Server and `<port>` is the port you specified during installation. By default, the context name is `jasperserver` for the Community Project and `jasperserver-pro` for commercial editions. The context name may also be customized on your specific installation of JasperReportsÂ® Server.
 
+**REST v2 - Web Services and URLs**
+
 <table>
-<caption><p><em>Table 1-1 REST v2 - Web Services and URLs</em></p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -86,8 +87,9 @@ http://&lt;host&gt;:&lt;port&gt;/jasperserver\[-pro\]/rest_v2/application.wadl
 
 The original REST (now called v1) API is being deprecated. These services are still supported but no longer include the latest features of the server.
 
+**REST v1 - Deprecated Web Services and URLs**
+
 <table>
-<caption><p><em>Table 1-2 REST v1 - Deprecated Web Services and URLs</em></p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -142,8 +144,9 @@ The reference chapters in this book give the full description of the methods sup
 
 JasperReports Server REST services return standard HTTP status codes. In case of an error, a detailed message may be present in the body in form of plain text. Client error codes are of type 4xx, while server errors are of type 5xx. The following table lists all the standard HTTP codes.
 
+**REST - HTTP Return Codes**
+
 <table>
-<caption><p><em>Table 1-2 REST - HTTP Return Codes</em></p></caption>
 <thead>
 <tr>
 <th colspan="2"><p>Success Messages</p></th>

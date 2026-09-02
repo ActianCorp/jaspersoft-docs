@@ -24,7 +24,7 @@ Add the CAS server to your Jaspersoft Studio workspace
     |                                                                      |
     |----------------------------------------------------------------------|
     | ![jss preferences sso 1](../assets/images/jss-preferences-sso-1.png) |
-    | *Figure 1: Single Sign On Servers in Preferences Dialog*             |
+    | *Figure 1 Single Sign On Servers in Preferences Dialog*              |
 
 3.  In the **Single Sign On Servers** pane, click **Add**.
 
@@ -33,7 +33,7 @@ Add the CAS server to your Jaspersoft Studio workspace
     |                                                        |
     |--------------------------------------------------------|
     | ![jss sso server](../assets/images/jss-sso-server.png) |
-    | *Figure 2: SSO Server Settings Dialog*                 |
+    | *Figure 2 SSO Server Settings Dialog*                  |
 
 5.  Click **OK**.
 

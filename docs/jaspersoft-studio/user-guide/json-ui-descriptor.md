@@ -87,8 +87,8 @@ Jaspersoft Studio has a JSON descriptor format that allows you to register compo
 <td>Array of chart types supported by the customizer. Chart types are designated by a numeric code, shown in the following table.</td>
 </tr>
 <tr>
-<td colspan="3"><table>
-<caption><p><em>Table 1-1 Chart Codes for supportedPlot in JSON Files</em></p></caption>
+<td colspan="3"><p><strong>Chart Codes for supportedPlot in JSON Files</strong></p>
+<table>
 <thead>
 <tr>
 <th>Chart Type</th>

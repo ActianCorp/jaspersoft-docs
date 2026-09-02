@@ -25,7 +25,7 @@ To view the name and resource ID of a resource, right click the folder's name or
 
 ![js Repository Properties](../assets/images/js-Repository-Properties.png)
 
-*Figure 1: Resource Properties Dialog for a Writable Resource*
+*Figure 1 Resource Properties Dialog for a Writable Resource*
 
 If you have write or administer permission as shown in the figure, you can also edit the name and description of the resource. For some operations such as export, you need the path, also called repository URI, which you can copy from this dialog.
 
@@ -49,7 +49,7 @@ To create a folder
 
     ![js Repository AddFolder](../assets/images/js-Repository-AddFolder.png)
 
-    *Figure 2: Add Folder Dialog*
+    *Figure 2 Add Folder Dialog*
 
 4.  Enter the folder name and, optionally, a description, then click **Add**.<br>
     The folder is created in the repository. The name appears in the hierarchy of folders. The description is visible only when viewing the properties of the folder, as shown in Resource Properties Dialog for a Writable Resource.<br>
@@ -70,7 +70,7 @@ Most resources are created through the Add Resource menu item on the context men
 
 ![js Repository menu AddResourceFile](../assets/images/js-Repository-menu-AddResourceFile.png)
 
-*Figure 3: Add Resource Context Menu Expanded*
+*Figure 3 Add Resource Context Menu Expanded*
 
 For every resource you create, you must specify a name and resource ID for referencing the resource in the repository. Each wizard also has one or more pages for specifying the values and controls specific to the resource.
 
@@ -96,7 +96,7 @@ To rename a folder or resource
 
     ![js Repository Properties edit](../assets/images/js-Repository-Properties-edit.png)
 
-    *Figure 4: Properties Dialog for a Report Resource*
+    *Figure 4 Properties Dialog for a Report Resource*
 
     You can change the folder or resource's name and description, but not the ID. The ID is permanent once the resource is created.
 
@@ -131,8 +131,9 @@ To copy or moving folders and resources
 
 The procedure for editing a resource depends on the resource type. All of the dialogs are available by right-clicking on the resource in the repository and selecting the proper action from the context menu. In nearly all cases, the dialog for editing is the same one that was used to create the resource.
 
+**Editing Resources**
+
 <table>
-<caption><p>Editing Resources</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -204,7 +205,7 @@ The procedure for editing a resource depends on the resource type. All of the di
 When editing a resource, you have several limitations:
 
 -   You cannot change a resource's ID. If you need to change an ID, you have to create a new resource and delete the old one.
--   You cannot change the location of a resource. To change the location of the resource, see Copying and Moving.
+-   You cannot change the location of a resource. To change the location of the resource, see [Copying and Moving](#copying-and-moving).
 -   For file resources, you cannot see the name of the file that was uploaded, nor in most cases download and view the contents of the file. Your only option is to upload a new file to replace the old one.
 
 ## Deleting Folders and Resources

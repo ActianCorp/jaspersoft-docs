@@ -19,7 +19,7 @@ To change the naming, connection, or MDX query in an OLAP views
 
     ![ja add view nametheviewedit](assets/images/ja-add-view-nametheviewedit.png)
 
-    *Figure 1: Name the View Page*
+    *Figure 1 Name the View Page*
 
 3.  Make your changes to the fields as necessary and click **Next.**
 
@@ -27,7 +27,7 @@ To change the naming, connection, or MDX query in an OLAP views
 
     ![ja add view locatemondrianolapclientconnsource](assets/images/ja-add-view-locatemondrianolapclientconnsource.png)
 
-    *Figure 2: Locate Mondrian Client Connection Source Page*
+    *Figure 2 Locate Mondrian Client Connection Source Page*
 
 4.  Depending on the type of connection specified, enter values as necessary. Click each field that you want to change and enter new values. For details, refer to [Creating an OLAP View with a Mondrian Connection](creating_an_olap_view_with_a_mondria.md) and [Creating an OLAP View with an XML/A Connection](creating_an_olap_view_with_an_xml_a_.md).
 
@@ -37,7 +37,7 @@ To change the naming, connection, or MDX query in an OLAP views
 
     ![ja edit view MDX query](assets/images/ja-edit-view-MDX-query.png)
 
-    *Figure 3: Define the Query Page*
+    *Figure 3 Define the Query Page*
 
 6.  Change the query or enter a new one, if necessary.
 

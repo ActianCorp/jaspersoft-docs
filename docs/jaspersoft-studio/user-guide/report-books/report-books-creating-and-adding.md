@@ -7,7 +7,7 @@ description: "Now that your framework is established, you can create reports and
 
 Now that your framework is established, you can create reports and/or subreports to include in your book.
 
-You create a report or subreport as described here, and in [Creating a New Report](../simple-report/reports-creating.md). You can also include previously created reports. See Adding a Report to the Report Book.
+You create a report or subreport as described here, and in [Creating a New Report](../simple-report/reports-creating.md). You can also include previously created reports. See [Adding a Report to the Report Book](#adding-a-report-to-the-report-book).
 
 For our walkthrough, you create a report, then add it to your report book.
 

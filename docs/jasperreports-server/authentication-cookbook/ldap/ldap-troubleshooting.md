@@ -127,7 +127,7 @@ DEBUG SpringSecurityLdapTemplate,http-apr-8630-exec-8:211 - Searching for entry 
 
 !!! note
 
-    An invalid search filter is a filter that is malformed or cannot be loaded. You can also have a correctly formed search filter that returns incorrect results. See User Not Found By Valid Search Filter for more information.
+    An invalid search filter is a filter that is malformed or cannot be loaded. You can also have a correctly formed search filter that returns incorrect results. See [User Not Found By Valid Search Filter](#user-not-found-by-valid-search-filter) for more information.
 
 ##### Solution
 
@@ -248,7 +248,7 @@ JasperReports Server displays the j_spring_security_check page:
 
 ![js ldap spring security check](../assets/images/js-ldap-spring_security_check.png)
 
-*Figure 1: j_spring_security_check Page*
+*Figure 1 j_spring_security_check Page*
 
 In the jasperserver.log, look for `DefaultLdapAuthoritiesPopulator` and problems locating roles:
 

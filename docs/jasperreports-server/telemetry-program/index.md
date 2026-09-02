@@ -17,5 +17,3 @@ Applies to Jaspersoft **10.1.0**.
 - [How Telemetry Data is Reported to Jaspersoft?](telemetry-data-reported.md)
 - [Data Storage](data-storage.md)
 - [Data Retention, Disposal and Return](data-retention-disposal-return.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)

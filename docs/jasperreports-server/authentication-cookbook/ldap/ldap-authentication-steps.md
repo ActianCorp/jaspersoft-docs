@@ -11,7 +11,7 @@ The following diagram shows the general steps involved in external LDAP authenti
 
 ![js sso LdapSequence](../assets/images/js-sso-LdapSequence.png)
 
-*Figure 1: General Steps of External LDAP Authentication*
+*Figure 1 General Steps of External LDAP Authentication*
 
 The following process explains the interaction of the user’s browser, JasperReports Server, and the LDAP server:
 

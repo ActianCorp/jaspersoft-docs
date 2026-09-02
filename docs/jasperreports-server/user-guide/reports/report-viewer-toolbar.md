@@ -7,8 +7,9 @@ description: The Report Viewer tool bar contains a number of controls for workin
 
 The Report Viewer tool bar contains a number of controls for working with your report. These controls are described in Table 1-1.
 
+**Report Viewer Tool Bar Icons**
+
 <table>
-<caption><p>Report Viewer Tool Bar Icons</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />

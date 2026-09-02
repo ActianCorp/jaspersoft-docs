@@ -131,7 +131,7 @@ On each node, you must edit the following cache configuration files. Make sure t
 
 ## Additional Configurations for Partial Session Replication
 
-If you want to configure partial session replication/failover, first set up repository cache replication as described in Repository Cache Replication, then make the additional changes described in this section.
+If you want to configure partial session replication/failover, first set up repository cache replication as described in [Repository Cache Replication](#ehcache-replication), then make the additional changes described in this section.
 
 On each node, edit *all* of the following three files as described below for your chosen distribution mechanism. You should make the same additional changes in all of them. Make sure to uncomment only one of the options provided in each file:
 

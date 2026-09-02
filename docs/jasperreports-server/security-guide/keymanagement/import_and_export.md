@@ -88,7 +88,7 @@ The simplest way to import a catalog with a custom key is to use the Settings UI
 
     ![js Settings Import KeyValue](../assets/images/js-Settings-Import-KeyValue.png)
 
-    *Figure 1: Import UI with Key Value*
+    *Figure 1 Import UI with Key Value*
 
 4.  Choose the **Key Value** radio button and paste the entire key value in the designated field. The characters of the key value are hidden to keep them secret.
 
@@ -112,7 +112,7 @@ If you have multiple files to import, you can store the custom key in a secure f
 
 5.  In the **Add File** dialog, browse the file system to enter your text file with the key.![js Repository AddSecureFile](../assets/images/js-Repository-AddSecureFile.png)
 
-    *Figure 2: Add Secure File Dialog*
+    *Figure 2 Add Secure File Dialog*
 
 6.  Fill in the other fields and click **Submit**. The File appears in the repository.
 
@@ -122,7 +122,7 @@ If you have multiple files to import, you can store the custom key in a secure f
 
     ![js Settings Import StoredKey](../assets/images/js-Settings-Import-StoredKey.png)
 
-    *Figure 3: Import UI with Key File*
+    *Figure 3 Import UI with Key File*
 
 9.  Choose the **Stored Key** radio button and browse the repository to find your secure file.
 
@@ -237,7 +237,7 @@ If you have many catalogs to import from a server with a custom key, the `js-imp
 </tr>
 <tr>
 <td><p><code>--visible</code></p></td>
-<td><p>Specify this flag to make the imported key displayed in the list of Custom Keys as shown in <span>Specifying a Custom Key in the Import UI</span>. When omitted, the imported key is not available for UI import operations, only through command-line import operations (using <code>--keyalias</code>).</p></td>
+<td><p>Specify this flag to make the imported key displayed in the list of Custom Keys as shown in <a href="#specifying-a-custom-key-in-the-import-ui">Specifying a Custom Key in the Import UI</a>. When omitted, the imported key is not available for UI import operations, only through command-line import operations (using <code>--keyalias</code>).</p></td>
 </tr>
 <tr>
 <td><p><code>--keylabel</code></p></td>
@@ -273,7 +273,7 @@ After adding custom keys to the keystore from the command line using the `--visi
 
     ![js Settings Import CustomKey](../assets/images/js-Settings-Import-CustomKey.png)
 
-    *Figure 4: Import UI with Key Value*
+    *Figure 4 Import UI with Key Value*
 
 4.  When the server's keystore contains custom keys, the list of keys appears as the third bullet. Note that key files in the repository do not appear in this list, only custom keys in the keystore. Each key in the list is identified by its label if it was defined on import, otherwise by its alias. Choose this bullet and select your key from the drop-down list.
 
@@ -330,7 +330,7 @@ As with the export UI, you can specify custom keys when exporting from the comma
 </tr>
 <tr>
 <td><p><code>--genkey</code></p></td>
-<td><p>This option generates a random key using the same algorithm and key size as the server's default import-export key (AES-128), and uses it to encrypt passwords in the export catalog. If the export is successful, the js-export script prints the key's hexadecimal representation and a unique alias for it on the console where it is running. You need to specify the same key when importing the catalog, for example with the <code>js-import --input-key</code> option or as explained in <span>Entering a Key Value in the Import UI</span>.</p></td>
+<td><p>This option generates a random key using the same algorithm and key size as the server's default import-export key (AES-128), and uses it to encrypt passwords in the export catalog. If the export is successful, the js-export script prints the key's hexadecimal representation and a unique alias for it on the console where it is running. You need to specify the same key when importing the catalog, for example with the <code>js-import --input-key</code> option or as explained in <a href="#entering-a-key-value-in-the-import-ui">Entering a Key Value in the Import UI</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -351,7 +351,7 @@ The following example shows how to export a catalog with passwords encrypted by 
 
 ## Exporting a Key from the Command Line
 
-The js-export utility can also be used to export one of the keys from the server's keystore (`.jrsks`). In addition to exporting repository resources in an export catalog, the following options generate a Java keystore file containing the specified key. The keystore is a secure file protected by the given password that can be used with the keytool utility or with the keystore options of the js-import tool. For more information, see Importing a Key from the Command Line.
+The js-export utility can also be used to export one of the keys from the server's keystore (`.jrsks`). In addition to exporting repository resources in an export catalog, the following options generate a Java keystore file containing the specified key. The keystore is a secure file protected by the given password that can be used with the keytool utility or with the keystore options of the js-import tool. For more information, see [Importing a Key from the Command Line](#importing-a-key-from-the-command-line).
 
 <table>
 <thead>

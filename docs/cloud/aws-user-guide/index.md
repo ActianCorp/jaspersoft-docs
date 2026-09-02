@@ -19,6 +19,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Launching JasperReports Server on AWS Marketplace](connecting-to-your-data-with.md)
 - [Working With Jaspersoft Studio Professional](jaspersoft-studio-professional.md)
 - [Amazon Terminology](amazon-terminology.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](bookmatter/about-bookname.md)

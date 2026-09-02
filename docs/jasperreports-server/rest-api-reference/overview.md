@@ -15,10 +15,10 @@ Historically, the REST API is considered a web service, and JasperReports Server
 
 This chapter includes the following sections:
 
--   List of Services
--   Sending REST Requests from a Browser
--   HTTP Response Codes
--   Deprecated Web Services
+-   [List of Services](#list-of-services)
+-   [Sending REST Requests from a Browser](#sending-rest-requests-from-a-browser)
+-   [HTTP Response Codes](#http-response-codes)
+-   [Deprecated Web Services](#deprecated-web-services)
 
 ## List of Services
 
@@ -50,8 +50,9 @@ The REST API of JasperReports Server responds to HTTP requests from client appli
 
 The REST services are available at the following URLs:
 
+**REST API Services and URLs**
+
 <table>
-<caption><p>REST API Services and URLs</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -141,8 +142,9 @@ To allow testing of the REST API through a browser, configure your browser REST 
 
 JasperReports Server REST services return standard HTTP status codes. In case of an error, a detailed message may be present in the body as plain text. Client error codes are of type 4xx, while server errors are of type 5xx. The following table lists all the standard HTTP codes. Each service returns typical success and error messages that are given in the reference chapter for that service.
 
+**HTTP Response Codes**
+
 <table>
-<caption><p>HTTP Response Codes</p></caption>
 <thead>
 <tr>
 <th colspan="2"><p>Success Messages</p></th>
@@ -284,8 +286,9 @@ JasperReports Server REST services return standard HTTP status codes. In case of
 
 The server's first REST API (now called v1) is deprecated. These services are no longer supported, do not work with the latest features of the server, and are never guaranteed to succeed. Note that meanings of PUT and POST were reversed in the REST v1 API.
 
+**Deprecated REST v1 Services**
+
 <table>
-<caption><p>Deprecated REST v1 Services</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -342,8 +345,9 @@ The original SOAP web services at the following URLs are also deprecated and no 
 
 The SOAP web services often refer to the http://www.jasperforge.org/jasperserver/ws namespace. This namespace is only an identifier; it is not intended to be a valid URL.
 
+**Deprecated SOAP Web Services**
+
 <table>
-<caption><p>Deprecated SOAP Web Services</p></caption>
 <thead>
 <tr>
 <th><p>Edition</p></th>

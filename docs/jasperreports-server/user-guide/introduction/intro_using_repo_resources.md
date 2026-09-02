@@ -19,7 +19,7 @@ After finding a resource in the repository, naturally you want to do something w
 
 ![jrxml](../assets/images/jrxml.PNG)
 
-*Figure 1: JRXML Editor for JRXML File*
+*Figure 1 JRXML Editor for JRXML File*
 
 The following two icons may appear in the **Repository** panel:
 

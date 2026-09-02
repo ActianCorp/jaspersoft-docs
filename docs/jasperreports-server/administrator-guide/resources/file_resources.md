@@ -7,22 +7,22 @@ description: "You create file resources by uploading files so they can be refere
 
 You create file resources by uploading files so they can be referenced by Jasper Reports. JasperReports Server supports the following file types:
 
+**File Resource Types**
+
 | File Type | Description |
 |----|----|
 | Access Grant Schema | Please provide description for Access Grant Schema. |
 | CSS | Cascading Style Sheet file that helps define the user interface as part of a theme. |
-| Font | True Type font (.ttf) file to extend the set of fonts available in a report and allow embedding of fonts in the PDF output, if needed (see Fonts). |
+| Font | True Type font (.ttf) file to extend the set of fonts available in a report and allow embedding of fonts in the PDF output, if needed (see [Fonts](#fonts)). |
 | Image | Any image format supported by the JVM (Java Virtual Machine), such as JPEG, GIF, and PNG. Image files can be referenced in JasperReports, and also in CSS files. |
-| JAR | Libraries that provide functionality for your reports (see JAR Files). |
+| JAR | Libraries that provide functionality for your reports (see [JAR Files](#jar-files)). |
 | JRXML | The definition of a report in JasperReports' XML-based report definition language. A JRXML file can be uploaded separately for use in multiple JasperReports. |
-| Resource Bundle | A Java .properties file containing key-value pairs for localization of reports (see Resource Bundles). |
+| Resource Bundle | A Java .properties file containing key-value pairs for localization of reports (see [Resource Bundles](#resource-bundles)). |
 | Style Template | A JRTX file containing a style template that can be shared among JasperReports. |
 | XML | XML file used in Domains and analysis (XML/A) to define data-level security. Can also be used for XML and JSON data files (see [File Data Sources](../datasources/file_data_sources.md)). |
 | MongoDB JDBC Schema | JSON object that defines the structure and contents of your data. For more information, see [MongoDB Schemas](https://docs.mongodb.com/realm/schemas/). |
 | Azure Certificate | An `x.509` server certificate (`.cer`) or key exchange (`.pfx`) file used to authenticate JasperReports Server with Microsoft Azure (see [Uploading an Azure Certificate File to the Repository](../datasources/azure_data_sources.md)). |
-| Secure File | An SSH private key file for `SFTP` file transfers that require an SSH key (see Uploading an SSH Private Key File to the Repository). |
-
-File Resource Types
+| Secure File | An SSH private key file for `SFTP` file transfers that require an SSH key (see [Uploading an SSH Private Key File to the Repository](#uploading-an-ssh-private-key-file-to-the-repository)). |
 
 The way in which fonts, JAR files and resource bundles are associated with reports is further explained in the following sections.
 
@@ -63,7 +63,7 @@ To add a file resource
 
     ![js AddFile Font](../assets/images/js-AddFile-Font.png)
 
-    *Figure 1: Adding a File Resource*
+    *Figure 1 Adding a File Resource*
 
 4.  When done, click **Submit**. The new file resource appears in the selected folder in the Repository panel.
 
@@ -77,11 +77,11 @@ To edit a file resource
 
 2.  In the repository, browse or search for the resource.
 
-3.  Right-click the resource and select **Edit** from the context menu. In this example, we edit the font resource created in Creating a File Resource.
+3.  Right-click the resource and select **Edit** from the context menu. In this example, we edit the font resource created in [Creating a File Resource](#creating-a-file-resource).
 
     ![js EditFile Font](../assets/images/js-EditFile-Font.png)
 
-    *Figure 2: Editing a File Resource*
+    *Figure 2 Editing a File Resource*
 
 4.  Use the **Edit** dialog to view or modify the resource definition and its values. In the figure above, you can see how the Description field was changed. You can also change the contents of the file resource by specifying another file to upload. The **Path to File** field is not required unless you want to reload the file from disk.
 

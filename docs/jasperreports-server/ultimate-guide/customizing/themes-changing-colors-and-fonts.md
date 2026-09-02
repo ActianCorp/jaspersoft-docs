@@ -11,7 +11,7 @@ To provide an example of theme customizations, the sample data installed with Ja
 
 ![js Customization PodsSummerTheme](../assets/images/js-Customization-PodsSummerTheme.png)
 
-*Figure 1: Menu bar in the Sample Theme pods_summer*
+*Figure 1 Menu bar in the Sample Theme pods_summer*
 
 Like most small-scale customizations, the pods_summer theme uses a single `overrides_custom.css` file and several files for images and sprites. The image files have the same names as those in the default theme, so when the theme is activated, they automatically replace the default images.
 

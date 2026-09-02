@@ -20,6 +20,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Migration and Compatibility](migration_upgrade.md)
 - [Closed Issues](closed_issues.md)
 - [Known Issues](known_issues.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](bookmatter/about-jrs-relnotes.md)

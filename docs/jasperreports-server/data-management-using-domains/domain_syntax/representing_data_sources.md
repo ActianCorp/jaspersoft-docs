@@ -26,7 +26,7 @@ One of the following elements is required for `dataSources`. Only one of these c
 
 The `jdbcDataSource` element declares a data source for a Domain and is a container for the `schemaMap` elements used in the Domain. `jdbcDataSources` does not directly reference a data source in the repository; instead, the actual link to the repository data source is attached as metadata to the Domain design in the repository.
 
-For Topics, use jrQueryDataset. There can only be one `jrQueryDataset` or `jdbcDataSource` element in a Domain design file.
+For Topics, use [jrQueryDataset](#jrquerydataset). There can only be one `jrQueryDataset` or `jdbcDataSource` element in a Domain design file.
 
 ### jdbcDataSource Hierarchy
 
@@ -95,7 +95,7 @@ If `key` is set to `defaultSchema`, the `entry` element is used to define the de
 <td>String</td>
 <td><p>(Required) Unique identifier for the schema in the Domain design file or the reserved string "<code>defaultSchema</code>".</p>
 <p>For regular database schemas in the Domain, the <code>key</code> attribute is used by other elements in the presentation representation to identify the schema, via the <code>referenceId</code>.</p>
-<p>If <code>key</code> is set to <code>defaultSchema</code>, this <code>entry</code> element is used to define the default schema. See <span>Default Schema</span> for more information.</p>
+<p>If <code>key</code> is set to <code>defaultSchema</code>, this <code>entry</code> element is used to define the default schema. See <a href="#default-schema">Default Schema</a> for more information.</p>
 <p>The <code>key</code> XML attribute can contain alphanumeric characters along with any combination of the following: @#$^`_~? It cannot start with a digit.</p></td>
 </tr>
 </tbody>

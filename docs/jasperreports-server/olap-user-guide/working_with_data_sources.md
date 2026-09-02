@@ -21,7 +21,7 @@ To edit a data source
 
     ![ja add view setdatasources](assets/images/ja-add-view-setdatasources.png)
 
-    *Figure 1: Set Data Source Type and Properties*
+    *Figure 1 Set Data Source Type and Properties*
 
     !!! note
 

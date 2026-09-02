@@ -17,7 +17,7 @@ The following diagram shows the general steps involved in logging into JasperRep
 
 ![oauth diagram](../assets/images/oauth-diagram.png)
 
-*Figure 1: General Steps for OAuth Authentication*
+*Figure 1 General Steps for OAuth Authentication*
 
 The following steps explain the interaction between the user’s browser, JasperReports Server, and an OAuth provider:
 

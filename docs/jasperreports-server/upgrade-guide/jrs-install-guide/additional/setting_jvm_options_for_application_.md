@@ -93,7 +93,7 @@ The following tables present some typical settings of JVM options that affect Ja
 
     The java opts from the first line "Options for all app servers" should be added, and then an additional line is added for Java 17 and Java 21.
 
-You can set JVM options multiple ways. Sections Changing JVM Options for Tomcat as a Windows Service and Setting JVM Options for Application Servers present step-by-step instructions for performing this task. Alternatively, you can add your `JAVA_OPTS` settings to any of the following files.
+You can set JVM options multiple ways. Sections [Changing JVM Options for Tomcat as a Windows Service](#changing-jvm-options-for-tomcat-as-a-windows-service) and [Setting JVM Options for Application Servers](#setting-jvm-options-for-application-servers) present step-by-step instructions for performing this task. Alternatively, you can add your `JAVA_OPTS` settings to any of the following files.
 
 <table>
 <colgroup>

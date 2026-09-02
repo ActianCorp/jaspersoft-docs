@@ -31,7 +31,7 @@ On the **Notifications** tab, you can set up email notifications to the recipien
 
 ![js alert create notifications](../assets/images/js-alert-create-notifications.png)
 
-*Figure 1: Notifications Tab*
+*Figure 1 Notifications Tab*
 
 !!! note
 

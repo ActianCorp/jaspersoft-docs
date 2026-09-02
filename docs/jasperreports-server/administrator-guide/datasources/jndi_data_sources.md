@@ -32,7 +32,7 @@ To create a JNDI data source
 
     ![js DataSource JNDI](../assets/images/js-DataSource-JNDI.png)
 
-    *Figure 1: JNDI Data Source Page*
+    *Figure 1 JNDI Data Source Page*
 
 5.  If the date-time values stored in your database do not indicate a time zone, set the Time Zone field. When in doubt, leave the default Time Zone value (**Use database setting**).
 

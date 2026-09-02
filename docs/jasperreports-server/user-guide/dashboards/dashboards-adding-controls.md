@@ -56,7 +56,7 @@ To rename an input control or filter
 
 ![js Dashboard ParameterMapping](../assets/images/js-Dashboard-ParameterMapping.png)
 
-*Figure 1: Parameter Mapping for the Sales Dashboard*
+*Figure 1 Parameter Mapping for the Sales Dashboard*
 
 To add controls as a pop-up window
 

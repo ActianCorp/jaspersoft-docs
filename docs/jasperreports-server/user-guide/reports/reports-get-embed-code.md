@@ -15,7 +15,7 @@ To get a report embed code
 
     ![js Report GetEmbedCode](../assets/images/js-Report-GetEmbedCode.png)
 
-    *Figure 1: Report Embed Code Dialog*
+    *Figure 1 Report Embed Code Dialog*
 
     The dialog shows the Visualize.js code and a preview of the dashboard as it is currently saved.
 

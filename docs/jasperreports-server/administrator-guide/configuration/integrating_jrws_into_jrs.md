@@ -23,7 +23,7 @@ In a public network, the JasperReports Server and JasperReports Web Studio `jrio
 
 ![jrs jrws deployment public network](../assets/images/jrs-jrws-deployment-public-network.png)
 
-*Figure 1: Deployment on public network*
+*Figure 1 Deployment on public network*
 
 In a private network, the JasperReports Server and JasperReports Web Studio `jrio` and `repo` are deployed on remote application servers, connected using an internal proxy server. This is useful when deploying in a cluster where `jrio` and `repo` applications can be accessed only by JasperReports Server instance , and not users.
 
@@ -31,7 +31,7 @@ JasperReports Server can access `jrio` and `repo` via backend. Hence, the connec
 
 ![jrs jrws deployment private network](../assets/images/jrs-jrws-deployment-private-network.png)
 
-*Figure 2: Deployment on private network*
+*Figure 2 Deployment on private network*
 
 The following table describes the JasperReports Web Studio properties:
 

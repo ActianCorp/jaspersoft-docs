@@ -13,9 +13,9 @@ This chapter explains the limited interaction with domains that is available thr
 
 This chapter includes the following sections:
 
--   The metadata Service
--   Fetching a Domain Schema
--   Fetching Domain Bundles and Security Files
+-   [The metadata Service](#the-metadata-service)
+-   [Fetching a Domain Schema](#fetching-a-domain-schema)
+-   [Fetching Domain Bundles and Security Files](#fetching-domain-bundles-and-security-files)
 
 ## The metadata Service
 

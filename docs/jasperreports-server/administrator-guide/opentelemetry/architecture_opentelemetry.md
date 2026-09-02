@@ -33,4 +33,4 @@ The following illustration shows the architecture diagram of JasperReports Serve
 
 ![Otel Architecture](../assets/images/Otel_Architecture.png)
 
-*Figure 1: OpenTelemetry Framework in JasperReports Server*
+*Figure 1 OpenTelemetry Framework in JasperReports Server*

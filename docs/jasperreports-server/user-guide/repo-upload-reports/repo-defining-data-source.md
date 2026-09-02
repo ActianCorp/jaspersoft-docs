@@ -23,6 +23,6 @@ To define a data source for the simple report example
 
     ![js AddJasperReport DataSource](../assets/images/js-AddJasperReport-DataSource.png)
 
-    *Figure 1: Data Source Page*
+    *Figure 1 Data Source Page*
 
 4.  Click **Submit** to add the new report unit to the repository.

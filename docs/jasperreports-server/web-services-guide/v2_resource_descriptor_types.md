@@ -911,7 +911,7 @@ For more information about accessing the schema of a Domain, see [The v2/domains
 
 ## 1.0.1.18 Domain Topic
 
-A Domain Topic is a Topic created by selecting database fields from a Domain. It is structurally equivalent to a JRXML report, and thus it has the same type attributes (see Report Unit (JRXML Report)). The only difference is that the data source field will reference a Domain (semanticLayerDataSource).
+A Domain Topic is a Topic created by selecting database fields from a Domain. It is structurally equivalent to a JRXML report, and thus it has the same type attributes (see [Report Unit (JRXML Report)](#10115-report-unit-jrxml-report)). The only difference is that the data source field will reference a Domain (semanticLayerDataSource).
 
 <table>
 <colgroup>
@@ -1107,7 +1107,7 @@ Secure Mondrian Connections are available only in commercial releases of JasperR
 
 The following types are defined in commercial editions of the server and appear in the repository. However, they are meant only to describe the corresponding resources as read-only objects in the repository. The REST API does not support services for clients to create or modify these types.
 
-The types in the following table contain only the Common Attributes.
+The types in the following table contain only the [Common Attributes](#1011-common-attributes).
 
 <table>
 <colgroup>

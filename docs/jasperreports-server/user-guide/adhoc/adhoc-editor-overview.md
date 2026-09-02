@@ -16,7 +16,7 @@ To open the Ad Hoc Editor
 
 ![js AdHoc ChooseData](../assets/images/js-AdHoc-ChooseData.png)
 
-*Figure 1: List of Data Sources in the Select Data Dialog*
+*Figure 1 List of Data Sources in the Select Data Dialog*
 
 The Ad Hoc Editor contains the following panels, from left to right:
 
@@ -30,6 +30,6 @@ The Ad Hoc Editor contains the following panels, from left to right:
 
 ![js AdHoc Editor Example](../assets/images/js-AdHoc-Editor-Example.png)
 
-*Figure 2: User Interface of the Ad Hoc Editor*
+*Figure 2 User Interface of the Ad Hoc Editor*
 
 We’ll discuss how to use these panels to create an Ad Hoc view later in this section.

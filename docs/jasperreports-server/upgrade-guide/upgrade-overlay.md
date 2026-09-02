@@ -11,31 +11,31 @@ description: "While upgrading from version 10.0 to JasperReports Server 10.1, th
 
 This chapter describes the overlay process for upgrading to JasperReports Server 10.1.0 and contains the following sections:
 
--   Introduction to the Overlay Upgrade
+-   [Introduction to the Overlay Upgrade](#introduction-to-the-overlay-upgrade)
 
--   Upgrade Steps Overview
+-   [Upgrade Steps Overview](#upgrade-steps-overview)
 
--   Plan Your Upgrade
+-   [Plan Your Upgrade](#plan-your-upgrade)
 
--   Back Up Your JasperReports® Server Instance
+-   [Back Up Your JasperReports® Server Instance](#back-up-your-jasperreports-server-instance)
 
--   Unpack the Overlay Upgrade Package
+-   [Unpack the Overlay Upgrade Package](#unpack-the-overlay-upgrade-package)
 
--   Check for JDBC Driver (Oracle, SQL Server, DB2)
+-   [Check for JDBC Driver (Oracle, SQL Server, DB2)](#check-for-jdbc-driver-oracle-sql-server-db2)
 
--   Configure the Properties in the default_master.properties File
+-   [Configure the Properties in the default_master.properties File](#configure-the-properties-in-the-default_masterproperties-file)
 
--   Run the Overlay Upgrade
+-   [Run the Overlay Upgrade](#run-the-overlay-upgrade)
 
--   Rerun the Overlay Upgrade
+-   [Rerun the Overlay Upgrade](#rerun-the-overlay-upgrade)
 
--   Rollback Procedure
+-   [Rollback Procedure](#rollback-procedure)
 
--   Starting and Logging into JasperReports Server 10.1
+-   [Starting and Logging into JasperReports Server 10.1](#starting-and-logging-into-jasperreports-server-101)
 
--   Additional Tasks to Complete the Upgrade
+-   [Additional Tasks to Complete the Upgrade](#additional-tasks-to-complete-the-upgrade)
 
--   Running Overlay Upgrade a Second Time
+-   [Running Overlay Upgrade a Second Time](#running-overlay-upgrade-a-second-time)
 
 ## Introduction to the Overlay Upgrade
 

@@ -19,7 +19,7 @@ To create a TIBCO Data Virtualization data source
 
     ![js DataSource TIBCO Data Viz](../assets/images/js-DataSource-TIBCO_Data_Viz.png)
 
-    *Figure 1: TIBCO Data Virtualization Driver*
+    *Figure 1 TIBCO Data Virtualization Driver*
 
 4.  Enter the host machine and port number for the data source. The default hostname is localhost, and the default port is 9401.
 

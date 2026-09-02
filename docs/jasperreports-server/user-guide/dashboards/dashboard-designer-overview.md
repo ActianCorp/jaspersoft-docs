@@ -13,11 +13,11 @@ Your permissions to access the repository may limit the content you can add and 
 
 This section includes:
 
--   The Dashboard Designer Interface
+-   [The Dashboard Designer Interface](#the-dashboard-designer-interface)
 
--   Dashlets and Dashboard Elements
+-   [Dashlets and Dashboard Elements](#dashlets-and-dashboard-elements)
 
--   Previewing a Dashboard
+-   [Previewing a Dashboard](#previewing-a-dashboard)
 
 -   [Dashboard Properties](dashboard-properties.md)
 
@@ -31,7 +31,7 @@ The following figure shows the basic layout of the Dashboard Designer.
 
 ![DashboardDesignerUI](../assets/images/DashboardDesignerUI.png)
 
-*Figure 1: The Dashboard Designer UI*
+*Figure 1 The Dashboard Designer UI*
 
 The Dashboard Designer UI includes the following panels:
 

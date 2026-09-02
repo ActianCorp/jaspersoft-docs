@@ -13,11 +13,11 @@ Crosstabs have different data, layout, and format options than tables or charts.
 
 ![js AdHoc Crosstab Example](../assets/images/js-AdHoc-Crosstab-Example.png)
 
-*Figure 1: Ad Hoc Editor’s Standard Crosstab View for old layout band*
+*Figure 1 Ad Hoc Editor’s Standard Crosstab View for old layout band*
 
 ![Adhoc crosstab](../assets/images/Adhoc-crosstab.png)
 
-*Figure 2: Ad Hoc Editor’s Standard Crosstab View for new layout band*
+*Figure 2 Ad Hoc Editor’s Standard Crosstab View for new layout band*
 
 If you selected Crosstab when you created a view, as described in [Ad Hoc View Types](adhoc-view-types.md), the following sections explain tasks specific to your crosstab development.
 

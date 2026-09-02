@@ -11,7 +11,7 @@ The following figure shows the most important authentication-related beans in th
 
 ![js sso BeansConfigDefault](../assets/images/js-sso-BeansConfigDefault.png)
 
-*Figure 1: Beans for Internal Authentication in JasperReports Server*
+*Figure 1 Beans for Internal Authentication in JasperReports Server*
 
 1.  `authenticationProcessingFilter` — Responsible for authenticating the user and creating the principal object in memory. With default authentication, this filter redirects the user to the login page, then processes the organization ID, username, and password.
 2.  `authenticationManager` — Bean of Spring class `ProviderManager` that manages default authentication by invoking a list of providers. JasperReports Server relies on `${bean.daoAuthenticationProvider}` for internal authentication.

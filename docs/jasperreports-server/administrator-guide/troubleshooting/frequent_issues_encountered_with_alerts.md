@@ -7,12 +7,12 @@ description: This section includes the list of common troubleshooting scenarios 
 
 This section includes the list of common troubleshooting scenarios that might occur when an alert is set on the report but the user does not receive any email notification.
 
--   Alert fails to trigger when the data source is modified
--   Alert fails to trigger when measure is edited from the domain designer
--   Alert fails to trigger when the visualization type is changed
--   Alert fails to trigger when data mode is changed
--   Alert fails to trigger when the summary function is removed
--   Alert fails to trigger when a user is disabled
+-   [Alert fails to trigger when the data source is modified](#alert-fails-to-trigger-when-the-data-source-is-modified)
+-   [Alert fails to trigger when measure is edited from the domain designer](#alert-fails-to-trigger-when-the-measure-is-edited-from-the-domain-designer)
+-   [Alert fails to trigger when the visualization type is changed](#alert-fails-to-trigger-when-the-visualization-type-is-changed)
+-   [Alert fails to trigger when data mode is changed](#alert-fails-to-trigger-when-data-mode-is-changed)
+-   [Alert fails to trigger when the summary function is removed](#alert-fails-to-trigger-when-the-summary-function-is-removed)
+-   [Alert fails to trigger when a user is disabled](#alert-fails-to-trigger-when-a-user-is-disabled)
 
 ## Alert fails to trigger when the data source is modified
 

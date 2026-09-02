@@ -105,7 +105,7 @@ The `null` element is a container for constant fields. `null` is a child of the 
 
 | Element Name | Description |
 |----|----|
-| `<``fieldList``>` | (Required) A container for the `field` elements for constant fields. The `null` element can contain only one `fieldlist` element. |
+| `<`[`fieldList`](#fieldlist)`>` | (Required) A container for the `field` elements for constant fields. The `null` element can contain only one `fieldlist` element. |
 
 ## fieldList
 

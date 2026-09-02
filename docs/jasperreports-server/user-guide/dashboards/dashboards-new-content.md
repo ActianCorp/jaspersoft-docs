@@ -45,11 +45,11 @@ To add a new chart, crosstab, or table to your dashboard
 
     ![AdHoc Editor preview ](../assets/images/AdHoc-Editor-preview%20.png)
 
-    *Figure 1: Embedded Ad Hoc Editor (New Layout Band)*
+    *Figure 1 Embedded Ad Hoc Editor (New Layout Band)*
 
     ![js Dashboard EmbedAdHocEditor](../assets/images/js-Dashboard-EmbedAdHocEditor.png)
 
-    *Figure 2: Embedded Ad Hoc Editor (Old Layout Band)*
+    *Figure 2 Embedded Ad Hoc Editor (Old Layout Band)*
 
 5.  When you finish creating your view, click ![js AdHoc icon SaveReport](../assets/images/js-AdHoc-icon-SaveReport.png) to save.
 

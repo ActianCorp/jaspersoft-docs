@@ -14,7 +14,7 @@ To create a project folder
     |                                                      |
     |------------------------------------------------------|
     | ![select wizard](../assets/images/select-wizard.png) |
-    | *Figure 1: Select a Wizard*                          |
+    | *Figure 1 Select a Wizard*                           |
 
 2.  Enter **Jasper** in the Wizards bar to filter actions to those related to Jaspersoft Studio.
 
@@ -25,4 +25,4 @@ To create a project folder
 |                                                  |
 |--------------------------------------------------|
 | ![new project](../assets/images/new-project.png) |
-| *Figure 2: Project Explorer*                     |
+| *Figure 2 Project Explorer*                      |

@@ -16,7 +16,7 @@ To create a chart theme in Jaspersoft Studio
     |  |
     |----|
     | ![jss new chart theme dialog](../assets/images/jss-new-chart-theme-dialog.png) |
-    | *Figure 1: New Chart Theme in Jaspersoft Studio* |
+    | *Figure 1 New Chart Theme in Jaspersoft Studio* |
 
 3.  Specify a location, enter a name, and click **Finish**.
 
@@ -39,7 +39,7 @@ To create a chart theme in Jaspersoft Studio
     |                                                                          |
     |--------------------------------------------------------------------------|
     | ![jss chart theme preview](../assets/images/jss-chart-theme-preview.png) |
-    | *Figure 2: A Chart Theme Edited in Jaspersoft Studio*                    |
+    | *Figure 2 A Chart Theme Edited in Jaspersoft Studio*                     |
     |                                                                          |
 
 7.  To view the XML that defines the chart theme’s appearance, click the **Source** tab.
@@ -53,7 +53,7 @@ To export your theme as a JAR File
     |                                                                          |
     |--------------------------------------------------------------------------|
     | ![jss chart themes export](../assets/images/jss-chart-themes-export.png) |
-    | *Figure 3: Exporting a Chart Theme*                                      |
+    | *Figure 3 Exporting a Chart Theme*                                       |
 
 2.  Choose the location where you want to save your JAR. To upload to a JasperReports Server instance, select your server instance and then select the Templates directory. To create a jar on your current system, select a location on your hard drive.
 

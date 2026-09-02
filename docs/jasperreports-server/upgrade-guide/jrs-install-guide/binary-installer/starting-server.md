@@ -5,11 +5,11 @@ description: This section describes start and stop procedures that vary dependin
 
 # Starting and Stopping the Server
 
--   Start/Stop Menu — Windows
+-   [Start/Stop Menu — Windows](#startstop-menuwindows)
 
--   Start/Stop Scripts — Linux
+-   [Start/Stop Scripts — Linux](#startstop-scriptslinux)
 
--   Start/Stop Apps — Mac OSX
+-   [Start/Stop Apps — Mac OSX](#startstop-appsmac-osx)
 
 ## Start/Stop Menu—Windows
 

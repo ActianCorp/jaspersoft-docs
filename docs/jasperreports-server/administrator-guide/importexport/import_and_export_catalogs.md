@@ -7,7 +7,7 @@ description: "The output of the export command and the input to the import comma
 
 The output of the export command and the input to the import command is called a catalog. It's a set of folders and files that comprise the server's internal database, including organizations, users, roles, scheduled jobs, and repository resources such as reports and associated files. When you don't need the entire database, you can specify options to export only the contents you need, for example one role and its users.
 
-Within a catalog, user passwords are encrypted so that they are not visible outside the server. For more details, see The Import-Export Encryption Keys below.
+Within a catalog, user passwords are encrypted so that they are not visible outside the server. For more details, see [The Import-Export Encryption Keys](#the-import-export-encryption-keys) below.
 
 The catalog is usually exported as a single zip file (compressed archive) containing all the files and folders. However, the content of the catalog is not intended for external access. Objects in the database, such as users, roles, and folders are described in XML files, and repository resources are stored in various private formats consisting of data files and subfolders. The XML syntax of the catalog files is not publicly defined, and the data files aren't meant to be accessed.
 

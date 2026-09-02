@@ -7,11 +7,11 @@ description: "The components and versions listed in this section are required to
 
 The components and versions listed in this section are required to build and run JasperReports Server:
 
--   Check Your Java JDK
--   Check Your Maven Version
--   Check Your Application Server
--   Check Your Database Instance
--   Check Your Chrome/Chromium Installation
+-   [Check Your Java JDK](#check-your-java-jdk)
+-   [Check Your Maven Version](#check-your-maven-version)
+-   [Check Your Application Server](#check-your-application-server)
+-   [Check Your Database Instance](#check-your-database-instance)
+-   [Check Your Chrome/Chromium Installation](#check-your-chromechromium-installation)
 
 ## Check Your Java JDK
 

@@ -15,23 +15,23 @@ Attributes used to be called profile attributes because they were associated onl
 
 This chapter includes the following sections:
 
--   Attribute Descriptors
+-   [Attribute Descriptors](#attribute-descriptors)
 
--   Secure Attributes
+-   [Secure Attributes](#secure-attributes)
 
--   Entities with Attributes
+-   [Entities with Attributes](#entities-with-attributes)
 
--   Permissions for Accessing Attributes
+-   [Permissions for Accessing Attributes](#permissions-for-accessing-attributes_1)
 
--   Referencing Attributes
+-   [Referencing Attributes](#referencing-attributes_1)
 
--   Attribute Limitations
+-   [Attribute Limitations](#attribute-limitations_1)
 
--   Viewing Attributes
+-   [Viewing Attributes](#viewing-attributes)
 
--   Setting Attributes
+-   [Setting Attributes](#setting-attributes)
 
--   Deleting Attributes
+-   [Deleting Attributes](#deleting-attributes)
 
 ## Attribute Descriptors
 
@@ -53,7 +53,7 @@ Each attribute may only have one value, however that value may contain a comma-s
 }
 ```
 
-Attributes with the same name may be defined on different entities. For example, a user has a specific value for an attribute, the organization they belong to have a default value for the same attribute, and the server level has yet another value for it. In this example, three separate attributes are defined, but they have the same name because they occur on different entities. The mechanisms described in Referencing Attributes can take advantage of this to implement default values.
+Attributes with the same name may be defined on different entities. For example, a user has a specific value for an attribute, the organization they belong to have a default value for the same attribute, and the server level has yet another value for it. In this example, three separate attributes are defined, but they have the same name because they occur on different entities. The mechanisms described in [Referencing Attributes](#referencing-attributes_1) can take advantage of this to implement default values.
 
 ## Secure Attributes
 
@@ -165,7 +165,7 @@ All attribute operations apply to a single specific entity. There are no operati
 
 ## Viewing Attributes
 
-The GET method of the attributes service retrieves the list of attributes, if any, defined for the specified entity (a user, an organization, or the server-level). For possible values of &lt;entity&gt; in the URL, see Entities with Attributes.
+The GET method of the attributes service retrieves the list of attributes, if any, defined for the specified entity (a user, an organization, or the server-level). For possible values of &lt;entity&gt; in the URL, see [Entities with Attributes](#entities-with-attributes).
 
 There are two syntaxes. The following one is for reading multiple attributes or all attributes at once.
 
@@ -373,7 +373,7 @@ Attribute configured for user
 
 ## Setting Attributes
 
-The PUT method of the attributes service adds or replaces attributes on the specified entity (a user, an organization, or the server-level). For possible values of &lt;entity&gt; in the URL, see Entities with Attributes.
+The PUT method of the attributes service adds or replaces attributes on the specified entity (a user, an organization, or the server-level). For possible values of &lt;entity&gt; in the URL, see [Entities with Attributes](#entities-with-attributes).
 
 There are two syntaxes. The following one is for adding or replacing all attributes at once.
 
@@ -410,7 +410,7 @@ There are two syntaxes. The following one is for adding or replacing all attribu
 <td colspan="3"><p>201 Created - When the attributes were successfully created on the given entity.</p>
 <p>200 OK - When the attributes were successfully updated.</p></td>
 <td><p>404 Not Found - When the user ID or organization ID does not match any user or organization. The content includes an error message.</p>
-<p>400 Bad Request - When an attribute name or value is null, blank, or too long (see <span>Attribute Limitations</span>). If one attribute causes an error, the operation stops and returns an error, but the attributes that were already set remain.</p></td>
+<p>400 Bad Request - When an attribute name or value is null, blank, or too long (see <a href="#attribute-limitations_1">Attribute Limitations</a>). If one attribute causes an error, the operation stops and returns an error, but the attributes that were already set remain.</p></td>
 </tr>
 </tbody>
 </table>
@@ -492,7 +492,7 @@ joeuser/attributes/Attr2
 
 ## Deleting Attributes
 
-The DELETE method of the attributes service removes attributes from the specified entity (a user, an organization, or the server-level). When attributes are removed, both the name and the value of the attribute are removed, not only the value. For possible values of &lt;entity&gt; in the URL, see Entities with Attributes.
+The DELETE method of the attributes service removes attributes from the specified entity (a user, an organization, or the server-level). When attributes are removed, both the name and the value of the attribute are removed, not only the value. For possible values of &lt;entity&gt; in the URL, see [Entities with Attributes](#entities-with-attributes).
 
 There are two syntaxes. The following one is for deleting multiple attributes or all attributes at once.
 
@@ -530,7 +530,7 @@ String</p></td>
 <tr>
 <td colspan="3"><p>204 No Content - The attributes were successfully removed from the given entity.</p></td>
 <td><p>404 Not Found - When the user ID or organization ID does not match any user or organization. The content includes an error message.</p>
-<p>400 Bad Request - When an attribute name is null, blank, or too long (see <span>Attribute Limitations</span>). If one attribute causes an error, the operation stops and returns an error, but the attributes that were already deleted remain deleted.</p></td>
+<p>400 Bad Request - When an attribute name is null, blank, or too long (see <a href="#attribute-limitations_1">Attribute Limitations</a>). If one attribute causes an error, the operation stops and returns an error, but the attributes that were already deleted remain deleted.</p></td>
 </tr>
 </tbody>
 </table>
@@ -560,7 +560,7 @@ The second syntax deletes a single attribute named in the URL from the specified
 <tr>
 <td colspan="3"><p>204 No Content - The attribute was successfully removed from the given entity.</p></td>
 <td><p>404 Not Found - When the user ID, organization ID, or attribute name does not match any user, organization, or attribute. The content includes an error message.</p>
-<p>400 Bad Request - When an attribute name is null, blank, or too long (see <span>Attribute Limitations</span>).</p></td>
+<p>400 Bad Request - When an attribute name is null, blank, or too long (see <a href="#attribute-limitations_1">Attribute Limitations</a>).</p></td>
 </tr>
 </tbody>
 </table>

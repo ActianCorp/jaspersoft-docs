@@ -5,13 +5,13 @@ description: You can save your selected input control values to use at another t
 
 # Saving Input Control Values
 
-You can save your selected input control values to use at another time to have the original report and a copy of it. The JasperReports Server saves a version of the report with the selected values as a child of the original report. This new version of the report appears as a child of the original report in the repository, as shown in “Filtered Version of the 1. Geographic Results by Segment Report in Repository”. Click ![js AdHoc icon show filter detail](../assets/images/js-AdHoc-icon-show-filter-detail.png) next to the original report in the repository to see all versions of it.
+You can save your selected input control values to use at another time to have the original report and a copy of it. The JasperReports Server saves a version of the report with the selected values as a child of the original report. This new version of the report appears as a child of the original report in the repository, as shown in Figure 1. Click ![js AdHoc icon show filter detail](../assets/images/js-AdHoc-icon-show-filter-detail.png) next to the original report in the repository to see all versions of it.
 
 Your saved input control values also appear in a dropdown list when you open the input controls dialog.
 
 ![js Report Example FilteredOption](../assets/images/js-Report-Example-FilteredOption.png)
 
-*Figure 1: Filtered Version of Geographic Results Report in Repository*
+*Figure 1 Filtered Version of Geographic Results Report in Repository*
 
 To save the input control values
 
@@ -28,6 +28,6 @@ To save the input control values
 
     ![js Report Example SavedOption](../assets/images/js-Report-Example-SavedOption.png)
 
-    *Figure 2: Saved Input Controls Option*
+    *Figure 2 Saved Input Controls Option*
 
 6.  Select Interactive Sales Report for Onion Products from the list of options and click **OK**. The report shows data for onion-related products only.

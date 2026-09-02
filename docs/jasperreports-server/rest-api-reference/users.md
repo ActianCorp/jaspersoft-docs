@@ -13,11 +13,11 @@ Because the user ID and organization ID are used in the URL, this service can op
 
 This chapter includes the following sections:
 
--   Searching for Users
--   Viewing a User
--   Creating a User
--   Modifying User Properties
--   Deleting a User
+-   [Searching for Users](#searching-for-the-users)
+-   [Viewing a User](#viewing-a-user)
+-   [Creating a User](#creating-a-user)
+-   [Modifying User Properties](#modifying-user-properties)
+-   [Deleting a User](#deleting-a-user)
 
 ## Searching for the Users
 
@@ -242,7 +242,7 @@ To create a user account, put all required information in a user descriptor, and
 -   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
 -   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to create users in the root organization.
 
-To create a user, the user ID in the URL must be unique on the server or in the organization. If the user ID exists, that user account is modified, as described in 1.1, “Modifying User Properties,” on page 1.
+To create a user, the user ID in the URL must be unique on the server or in the organization. If the user ID exists, that user account is modified, as described in [1.1, “Modifying User Properties,” on page 1](#modifying-user-properties).
 
 <table>
 <colgroup>
@@ -316,7 +316,7 @@ To modify the properties of a user account, put all desired information in a use
 -   In the community edition of the server, or commercial editions without organizations, use the first form of the URL.
 -   In commercial editions with organizations, use the second URL to specify the user’s organization. When specifying the organization, use its unique ID, not its path. When logged in as the system admin (`superuser`), use the first URL to modify users of the root organization.
 
-To modify a user, the user ID in the URL must exist on the server or in the organization. If the user ID does not exist, a user account is created, as described in 1.1, “Creating a User,” on page 1.
+To modify a user, the user ID in the URL must exist on the server or in the organization. If the user ID does not exist, a user account is created, as described in [1.1, “Creating a User,” on page 1](#creating-a-user).
 
 <table>
 <colgroup>
@@ -342,7 +342,7 @@ To modify a user, the user ID in the URL must exist on the server or in the orga
 <tr>
 <td colspan="2"><p><span>application/xml</span></p>
 <p><span>application/json</span></p></td>
-<td colspan="2"><p>A user descriptor that includes the properties you want to change. The <code>username</code> and <code>tenantID</code> properties have no effect in the descriptor. Their values in the URL always take precedence. For other properties, see the table in <span>Creating a User</span>.</p></td>
+<td colspan="2"><p>A user descriptor that includes the properties you want to change. The <code>username</code> and <code>tenantID</code> properties have no effect in the descriptor. Their values in the URL always take precedence. For other properties, see the table in <a href="#creating-a-user">Creating a User</a>.</p></td>
 </tr>
 <tr>
 <td colspan="3"><p>Return Value on Success</p></td>

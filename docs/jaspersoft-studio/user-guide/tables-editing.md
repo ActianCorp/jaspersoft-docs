@@ -20,14 +20,14 @@ You can edit the look and feel of a table by choosing elements from the **Table 
 |                                                         |
 |---------------------------------------------------------|
 | ![table styles tab](assets/images/table-styles-tab.png) |
-| *Figure 1: Table Styles Tab*                            |
+| *Figure 1 Table Styles Tab*                             |
 
 To edit a style in the palette, double-click the style and edit it in the **Layout** window. You can save it either as a new style or with the same name. To edit the table layout in the **Design** tab, right-click the table and choose **Change Table Style**.
 
 |                                                                       |
 |-----------------------------------------------------------------------|
 | ![jss tables change style](assets/images/jss-tables-change-style.png) |
-| *Figure 2: Change Table Style*                                        |
+| *Figure 2 Change Table Style*                                         |
 
 You can also decide which table sections to create. If the dataset for the table contains groups, it can be convenient to select the **Add Group Headers** and **Add Group Footers** checkboxes.
 
@@ -42,21 +42,21 @@ You can edit the content, style, and size of each cell or group of cells in your
     |                                                           |
     |-----------------------------------------------------------|
     | ![table editing tab](assets/images/table-editing-tab.png) |
-    | *Figure 3: Table Editing Tab*                             |
+    | *Figure 3 Table Editing Tab*                              |
 
 -   To edit the content and style of a cell, click the cell. Switch to the **Properties** view where you can edit location, size, color, style, and print details for the cell.
 
     |  |
     |----|
     | ![jss crosstabs cell with properties](assets/images/jss-crosstabs-cell-with-properties.png) |
-    | *Figure 4: Cell with Properties View* |
+    | *Figure 4 Cell with Properties View* |
 
 -   To edit the size and position of a cell, or copy or delete it, right-click on the cell and select an action from the context menu.
 
     |  |
     |----|
     | ![jss crosstabs cell right click menu](assets/images/jss-crosstabs-cell-right-click-menu.png) |
-    | *Figure 5: Cell Right-Click Menu* |
+    | *Figure 5 Cell Right-Click Menu* |
 
 -   Use Shift-click to select all cells in a row.
 
@@ -67,7 +67,7 @@ The following figure is the table created in [Creating a Table](tables-creating.
 |                                                       |
 |-------------------------------------------------------|
 | ![table formatted](assets/images/table-formatted.png) |
-| *Figure 6: Formatted Table*                           |
+| *Figure 6 Formatted Table*                            |
 
 ## Editing Table Data
 
@@ -76,7 +76,7 @@ You can edit the dataset used for the table by right-clicking the table and sele
 |  |
 |----|
 | ![dataset and query tablechapter](assets/images/dataset-and-query-tablechapter.png) |
-| *Figure 7: Dataset and Query Dialog* |
+| *Figure 7 Dataset and Query Dialog* |
 
 Here you can set the dataset parameters to filter the data used in the table dynamically.
 

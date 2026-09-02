@@ -10,7 +10,7 @@ You can set some basic element properties for an HTML5 chart, such as position o
 |  |
 |----|
 | ![jss html5 charts advanced properties](../assets/images/jss-html5-charts-advanced-properties.png) |
-| *Figure 1: Advanced properties for formatting HTML5 charts* |
+| *Figure 1 Advanced properties for formatting HTML5 charts* |
 
 !!! note
 
@@ -29,7 +29,7 @@ Not all properties are displayed in the **Advanced** view. To set a property tha
     |  |
     |----|
     | ![jss html5 charts add user property](../assets/images/jss-html5-charts-add-user-property.png) |
-    | *Figure 2: Chart Property dialog* |
+    | *Figure 2 Chart Property dialog* |
 
 2.  Enter the following values:
 
@@ -77,7 +77,7 @@ The resulting chart has a gradient background.
 |  |
 |----|
 | ![jss html5 charts gradient](../assets/images/jss-html5-charts-gradient.png) |
-| *Figure 3: Chart with a gradient background, set via user-defined properties* |
+| *Figure 3 Chart with a gradient background, set via user-defined properties* |
 
 !!! note
 

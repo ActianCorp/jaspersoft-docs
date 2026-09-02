@@ -18,7 +18,7 @@ To set anchor, bookmark, or hyperlink properties, select an image, text field, o
 |                                                                    |
 |--------------------------------------------------------------------|
 | ![hyperlink properties](../assets/images/hyperlink-properties.png) |
-| *Figure 1: Anchor, Bookmark, and Hyperlink Properties*             |
+| *Figure 1 Anchor, Bookmark, and Hyperlink Properties*              |
 
 This window is divided in two sections:
 
@@ -107,14 +107,14 @@ The easiest way to configure a `ReportExecution` hyperlink in Jaspersoft Studio 
 |  |
 |----|
 | ![jss hyperlink drag RU to design](../assets/images/jss-hyperlink-drag-RU-to-design.png) |
-| *Figure 2: Dragging a report from the server into the Report Design* |
+| *Figure 2 Dragging a report from the server into the Report Design* |
 
 The auto-configured hyperlink automatically sets the type to ReportExecution and configures the \_report parameter. Moreover, if the JasperReports Server Report has input controls, they are added to the list of parameters, ready to be populated with a proper value expression, as shown below.
 
 |  |
 |----|
 | ![jss hyperlink define params](../assets/images/jss-hyperlink-define-params.png) |
-| *Figure 3: Configuring Hyperlink Parameters* |
+| *Figure 3 Configuring Hyperlink Parameters* |
 
 ## Hyperlink Types
 
@@ -188,7 +188,7 @@ To create a hyperlink
 
 1.  In the **Link Type** dropdown, choose whether the link type is None, Reference, LocalAnchor, LocalPage, RemoteAnchor, RemotePage, or ReportExecution.
 
-    See Hyperlink Types for an explanation of the different choices.
+    See [Hyperlink Types](#hyperlink-types) for an explanation of the different choices.
 
 2.  Click the ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) button next to **Hyperlink Tool Expression** to create a tooltip for your hyperlink.
 
@@ -208,7 +208,7 @@ To create a hyperlink for a Crosstab or Table report:
 
 3.  In the **Link Type** dropdown, select the **dashlet** option present in the dropdown.
 
-    (See Hyperlink Types for an explanation of the different choices.)
+    (See [Hyperlink Types](#hyperlink-types) for an explanation of the different choices.)
 
 4.  Click the **…** next to the Parameters to create **Dataset Parameters**.
 

@@ -41,7 +41,7 @@ In the New Layout Band:
 
     ![adhoc empty canvas](../assets/images/adhoc-empty-canvas.png)
 
-    *Figure 1: Ad Hoc Editor’s Empty Canvas Area View*
+    *Figure 1 Ad Hoc Editor’s Empty Canvas Area View*
 
 -   The fields or measures can be **swapped** only for the **Cross-tab** visualization type only, by clicking the **Switch** icon between the two drop ares.
 

@@ -16,7 +16,7 @@ You can specify one or more directories for your custom templates.
     |  |
     |----|
     | ![Template Location Preferences](assets/images/Template%20Location%20Preferences.png) |
-    | *Figure 1: Template Location Preferences* |
+    | *Figure 1 Template Location Preferences* |
 
 2.  Click the **New...** button and navigate to the directory in which you want to store your template.
 
@@ -33,7 +33,7 @@ Save your template for future use.
     |                                                       |
     |-------------------------------------------------------|
     | ![template export](assets/images/template-export.png) |
-    | *Figure 2: Template Export Dialog*                    |
+    | *Figure 2 Template Export Dialog*                     |
 
 2.  Click the **Browse** button and navigate to the directory where you want to save your template. Click **Next**.
 
@@ -42,7 +42,7 @@ Save your template for future use.
     |                                                                     |
     |---------------------------------------------------------------------|
     | ![define type categories](assets/images/define-type-categories.png) |
-    | *Figure 3: Define Type and Categories Dialog*                       |
+    | *Figure 3 Define Type and Categories Dialog*                        |
 
 3.  In the drop-down, choose whether the template type is a Standard Report or a Table-Based report.
 

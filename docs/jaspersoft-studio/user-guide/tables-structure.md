@@ -20,14 +20,14 @@ Each table is divided into sections similar to the main document bands:
 |                                                       |
 |-------------------------------------------------------|
 | ![table structure](assets/images/table_structure.png) |
-| *Figure 1: Table Structure*                           |
+| *Figure 1 Table Structure*                            |
 
 In the **Outline** view, table sections are shown as child nodes of the table element node.
 
 |                                                             |
 |-------------------------------------------------------------|
 | ![table outline view](assets/images/table-outline-view.png) |
-| *Figure 2: Table in Outline View*                           |
+| *Figure 2 Table in Outline View*                            |
 
 In the **Design** tab, each column has a cell for each section (for example, one cell for the table header section, another for the table footer). A cell can be undefined. If all the cells of a section are undefined, the section is not printed. If the height of all the cells of a section is zero, the section is printed but is not visible in the **Design** tab.
 

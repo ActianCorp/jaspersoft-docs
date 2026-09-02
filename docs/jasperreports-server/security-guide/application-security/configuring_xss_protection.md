@@ -38,11 +38,11 @@ The default configuration of JasperReports Server provides output escaping of bo
 </tr>
 <tr>
 <td><p><code>xss.soft.html.escape. tag.whitelist</code></p></td>
-<td><p>The whitelist is the list of HTML tags that will not be escaped when the server renders dynamic content to the UI. This property expands or replaces the default list in xssUtil.js. Specify comma-separated tag names without <code>&lt;&gt;</code> brackets. Use <code>+</code> as the first character to append to the default whitelist. If this property is not specified or the list is empty, the default whitelist applies. For details, refer to <span>Configuring the Tag Whitelist</span>.</p></td>
+<td><p>The whitelist is the list of HTML tags that will not be escaped when the server renders dynamic content to the UI. This property expands or replaces the default list in xssUtil.js. Specify comma-separated tag names without <code>&lt;&gt;</code> brackets. Use <code>+</code> as the first character to append to the default whitelist. If this property is not specified or the list is empty, the default whitelist applies. For details, refer to <a href="#configuring-the-tag-whitelist">Configuring the Tag Whitelist</a>.</p></td>
 </tr>
 <tr>
 <td><code>xss.soft.html.escape. attrib.map</code></td>
-<td><p>The attribute map determines which HTML attributes create vulnerabilities in dynamic content and how to replace them. This property defines a map of case-insensitive regular expressions (regex syntax) and replacements. When specified, it overrides the default map defined in <code>xssUtil.js</code>. If this property is absent or not set, the default map is used. For details, refer to <span>Configuring the Attribute Map</span>.</p></td>
+<td><p>The attribute map determines which HTML attributes create vulnerabilities in dynamic content and how to replace them. This property defines a map of case-insensitive regular expressions (regex syntax) and replacements. When specified, it overrides the default map defined in <code>xssUtil.js</code>. If this property is absent or not set, the default map is used. For details, refer to <a href="#configuring-the-attribute-map">Configuring the Attribute Map</a>.</p></td>
 </tr>
 </tbody>
 </table>

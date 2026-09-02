@@ -9,6 +9,8 @@ In our current implementation, we have changed the Scheduler method names for sc
 
 The below table includes the list of the changed span or method names of Scheduler. With the changed method names, you can now search traces of logs specific to report scheduling and execution in Jaeger UI.
 
+**Scheduler Method Names for Report Scheduling and Execution**
+
 | Original Method Names | Updated Method Names |
 |----|----|
 | `JobsJaxrsService.scheduleJobWithProcessedParameters` | `scheduleJob` |
@@ -22,16 +24,14 @@ The below table includes the list of the changed span or method names of Schedul
 | `InternalReportExecutor.executeReport` | `executeReportInternal` |
 | `EngineServiceImpl.java.runReport` | `runReport` |
 
-Scheduler Method Names for Report Scheduling and Execution
-
 The following figure shows the list of span names of Scheduler for report scheduling in Jaeger UI. You can search a span name by searching "schedule" in Operations to view span names specific to report scheduling in Jaeger UI.
 
 ![View Scheduler filtered traces in tags](../assets/images/View-Scheduler-filtered-traces-in-tags.png)
 
-*Figure 1: Scheduler Span Names for Report Scheduling*
+*Figure 1 Scheduler Span Names for Report Scheduling*
 
 The report execution happens when a job is scheduled for a report. The following figure shows the list of span names of Scheduler for report execution in Jaeger UI. You can search a span name by searching "execute" in Operations to view span names specific to report execution in the Jaeger UI.
 
 ![Scheduler execute method names](../assets/images/Scheduler-execute-method-names.png)
 
-*Figure 2: Scheduler Span Names for Report Execution*
+*Figure 2 Scheduler Span Names for Report Execution*

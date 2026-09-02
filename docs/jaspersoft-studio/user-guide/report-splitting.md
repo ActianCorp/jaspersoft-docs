@@ -58,7 +58,7 @@ You can reset these properties using the **Reset** button.
     |                                                           |
     |-----------------------------------------------------------|
     | ![split three parts](assets/images/split-three-parts.png) |
-    | *Figure 1: Tabs of different countries*                   |
+    | *Figure 1 Tabs of different countries*                    |
 
 2.  Run the report in the scheduler. To do this, right-click the report and select **Run in Background** from the context menu.
 

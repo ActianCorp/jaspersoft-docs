@@ -21,6 +21,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Token-based Authentication](token/tokenauth-introduction.md)
 - [OAuth Authentication](oauth/oauth-introduction.md)
 - [Advanced Topics](advanced-topics/advanced-topics.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](bookmatter/about-external-authentication-cookbook.md)

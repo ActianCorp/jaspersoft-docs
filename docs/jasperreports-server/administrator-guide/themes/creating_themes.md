@@ -7,9 +7,9 @@ description: "There are three ways to create the folders and files that make up 
 
 There are three ways to create the folders and files that make up a theme:
 
--   Creating Theme Folders and File Resources – Create them individually as resources in the repository.
--   Downloading and Uploading Theme ZIP Files – Copy and modify existing themes as ZIP (archive) files.
--   Placing Themes in the Folder Template – Initialize themes automatically in multi-organization deployments.
+-   [Creating Theme Folders and File Resources](#creating-theme-folders-and-file-resources) – Create them individually as resources in the repository.
+-   [Downloading and Uploading Theme ZIP Files](#downloading-and-uploading-theme-zip-files) – Copy and modify existing themes as ZIP (archive) files.
+-   [Placing Themes in the Folder Template](#placing-themes-in-the-folder-template) – Initialize themes automatically in multi-organization deployments.
 
 This section explains only how to store CSS files in the repository. For information about creating CSS file contents, see [Working With CSS Files](working_with_css_files.md).
 
@@ -79,7 +79,7 @@ To upload a ZIP file as a theme
 
     ![js Themes UploadATheme](../assets/images/js-Themes-UploadATheme.png)
 
-    *Figure 1: Uploading a Theme ZIP File in an Organization*
+    *Figure 1 Uploading a Theme ZIP File in an Organization*
 
 6.  In the dialog that appears, enter a name for your theme, and browse to find the ZIP file on your computer. Click **Upload**. The theme name becomes the name of the theme folder.
 
@@ -89,7 +89,7 @@ To upload a ZIP file as a theme
 
 7.  The server uploads your ZIP file and extracts it contents. Then it creates a folder for the new theme and creates file resources in the folder for each of the CSS and images in your ZIP file. If you had sub-folders in your theme, they are created as well. After uploading your theme ZIP file, you can make it active to see effect of your theme on the user interface.
 
-Creating a theme is an interactive process where you often need to make changes until you have the look and feel you want. To support this process, uploading ZIP files can be combined with the uploading of individual file resources that is described in Creating Theme Folders and File Resources. In fact, after an initial upload, it is much easier to update individual files in this way than to create the ZIP file and upload it again.
+Creating a theme is an interactive process where you often need to make changes until you have the look and feel you want. To support this process, uploading ZIP files can be combined with the uploading of individual file resources that is described in [Creating Theme Folders and File Resources](#creating-theme-folders-and-file-resources). In fact, after an initial upload, it is much easier to update individual files in this way than to create the ZIP file and upload it again.
 
 ## Placing Themes in the Folder Template
 

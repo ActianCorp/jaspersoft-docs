@@ -48,7 +48,7 @@ To view the trust store in the Jaspersoft Studio user interface:
 |                                                        |
 |--------------------------------------------------------|
 | ![jss truststore](../assets/images/jss-truststore.png) |
-| *Figure 1: Trust Store dialog*                         |
+| *Figure 1 Trust Store dialog*                          |
 
 You can also open the Trust Store dialog when you are creating a secure connection by clicking **Show Trust Store** in the Security Certificate dialog.
 

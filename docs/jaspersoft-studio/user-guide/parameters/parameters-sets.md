@@ -22,7 +22,7 @@ To add a parameter set to your report
     |  |
     |----|
     | ![jss parameters create set](../assets/images/jss-parameters-create-set.png) |
-    | *Figure 1: Adding a parameter set* |
+    | *Figure 1 Adding a parameter set* |
 
 2.  Select the parameter set you want to add to your report and click **Finish**.
 
@@ -31,7 +31,7 @@ The parameters in the set are added to your report.
 |  |
 |----|
 | ![jss parameters add set results](../assets/images/jss-parameters-add-set-results.png) |
-| *Figure 2: Result of adding a parameter set* |
+| *Figure 2 Result of adding a parameter set* |
 
 To create a new parameter set
 
@@ -42,7 +42,7 @@ To create a new parameter set
     |  |
     |----|
     | ![jss parameters set preferences](../assets/images/jss-parameters-set-preferences.png) |
-    | *Figure 3: Preferences &gt; Jaspersoft Studio &gt; Parameter Sets* |
+    | *Figure 3 Preferences &gt; Jaspersoft Studio &gt; Parameter Sets* |
 
 3.  To create a parameter set, click **Add**.
 
@@ -51,7 +51,7 @@ To create a new parameter set
     |  |
     |----|
     | ![jss parameter set preferences 1](../assets/images/jss-parameter-set-preferences-1.png) |
-    | *Figure 4: Parameter Set dialog* |
+    | *Figure 4 Parameter Set dialog* |
 
 4.  To create an individual parameter inside your set, click **Add** in the **Parameter Set** dialog.
 
@@ -60,7 +60,7 @@ To create a new parameter set
     |  |
     |----|
     | ![Configuring a parameter](../assets/images/Configuring%20a%20parameter.png) |
-    | *Figure 5: Configuring a parameter in a set* |
+    | *Figure 5 Configuring a parameter in a set* |
 
 5.  Add and configure the parameter. The following settings are available:
 

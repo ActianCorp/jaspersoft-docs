@@ -19,7 +19,7 @@ To create a JDBC data source
 
     ![js DataSource JDBC type](../assets/images/js-DataSource-JDBC-type.png)
 
-    *Figure 1: Setting the JDBC Data Source Type*
+    *Figure 1 Setting the JDBC Data Source Type*
 
 4.  Select the **JDBC Driver** for your database. If your driver is listed as **NOT INSTALLED**, a system administrator must first upload the driver as described in [Managing JDBC Drivers](managing_jdbc_drivers.md).
 
@@ -36,7 +36,7 @@ To create a JDBC data source
 
     ![js DataSource JDBC testConnection](../assets/images/js-DataSource-JDBC-testConnection.png)
 
-    *Figure 2: Entering the User Name and Password*
+    *Figure 2 Entering the User Name and Password*
 
     !!! note
 
@@ -51,7 +51,7 @@ To create a JDBC data source
 
     ![js DataSource JDBC save](../assets/images/js-DataSource-JDBC-save.png)
 
-    *Figure 3: Saving the JDBC Data Source*
+    *Figure 3 Saving the JDBC Data Source*
 
 10. Enter a name for the data source and an optional description. The **Resource ID** is generated from the name you enter. If you haven't already specified a location, expand the folder tree and select the location for your data source.
 

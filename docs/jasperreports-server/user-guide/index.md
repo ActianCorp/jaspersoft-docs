@@ -21,6 +21,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Working with the Ad Hoc Editor](adhoc/adhoc-intro.md)
 - [User Favorites](user-favorites/user-favorites.md)
 - [Adding Reports Directly to the Repository](repo-upload-reports/repo-reports-adding.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](bookmatter/about-jrs-user-guide.md)

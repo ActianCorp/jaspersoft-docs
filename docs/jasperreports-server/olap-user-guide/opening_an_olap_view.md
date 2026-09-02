@@ -19,7 +19,7 @@ To open an OLAP view,
 
     ![ja add view repository](assets/images/ja-add-view-repository.png)
 
-    *Figure 1: Search Results in the Repository*
+    *Figure 1 Search Results in the Repository*
 
 3.  To display an OLAP view, right-click it and select **Run**. For example, right-click the **Foodmart Sample Analysis View** and click **Run**.
 
@@ -27,6 +27,6 @@ To open an OLAP view,
 
     ![ja add view analysisview](assets/images/ja-add-view-analysisview.png)
 
-    *Figure 2: Foodmart Sample Analysis View*
+    *Figure 2 Foodmart Sample Analysis View*
 
 4.  Click the tool bar buttons and values in the navigation table to explore the data.

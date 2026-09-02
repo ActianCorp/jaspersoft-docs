@@ -26,4 +26,3 @@ Applies to Jaspersoft **10.1.0**.
 - [SOAP - Web Services for Administration](admin-ws.md)
 - [ResourceDescriptor API Constants](api-constants.md)
 - [About This Guide](bookmatter/about-jrs-web-services-guide.md)
-- [Additional Topics](character_encoding_and_fonts.md)

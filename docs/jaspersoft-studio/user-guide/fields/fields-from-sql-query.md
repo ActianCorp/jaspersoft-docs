@@ -14,7 +14,7 @@ To open the query dialog (Query Dialog with Data Preview) right-click the name o
 |                                                    |
 |----------------------------------------------------|
 | ![query dialog](../assets/images/query-dialog.png) |
-| *Figure 1: Query Dialog with Data Preview*         |
+| *Figure 1 Query Dialog with Data Preview*          |
 
 Jaspersoft Studio does not require a query to generate a report. It can obtain data from a data source that is not defined by a query execution. JasperReports supports multiple query languages including:
 

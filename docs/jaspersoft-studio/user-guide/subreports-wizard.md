@@ -23,7 +23,7 @@ The **Subreport** wizard provides three options:
 |                                                         |
 |---------------------------------------------------------|
 | ![subreport wizard](assets/images/subreport-wizard.png) |
-| *Figure 1: Subreport Wizard*                            |
+| *Figure 1 Subreport Wizard*                             |
 
 1.  Select **Create a new report** and click **Next**. The **New Report Wizard &gt; Report Templates** window is displayed.
 
@@ -34,7 +34,7 @@ The **Subreport** wizard provides three options:
     |                                                                 |
     |-----------------------------------------------------------------|
     | ![subreport datasource](assets/images/subreport-datasource.png) |
-    | *Figure 2: Data Source and Query*                               |
+    | *Figure 2 Data Source and Query*                                |
 
 4.  Choose to use the same data adapter as the main report, or a different data adapter.
 
@@ -51,7 +51,7 @@ The **Subreport** wizard provides three options:
     |                                                                 |
     |-----------------------------------------------------------------|
     | ![subreport connection](assets/images/subreport-connection.png) |
-    | *Figure 3: Subreport &gt; Connection window*                    |
+    | *Figure 3 Subreport &gt; Connection window*                     |
 
 8.  Choose to connect either to the same database as the main report or to a different database. For this example, click **Use same connection used to fill the master report**.
 
@@ -60,7 +60,7 @@ The **Subreport** wizard provides three options:
     |                                                                 |
     |-----------------------------------------------------------------|
     | ![subreport parameters](assets/images/subreport-parameters.png) |
-    | *Figure 4: Subreport parameters window*                         |
+    | *Figure 4 Subreport parameters window*                          |
 
 10. For this example, skip this window and click **Finish**. A new report opens containing all bands.
 

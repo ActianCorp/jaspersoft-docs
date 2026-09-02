@@ -72,8 +72,9 @@ To install the WAR file for WebLogic:
 
         When appServerType = skipAppServerCheck, buildomatic skips the application server type validation. Use this setting when installing JasperReports Server with WebLogic. Backslashes in appServerDir must be doubled, for example C:\\\\WL\\\\Application_Server. Make sure that there are no spaces in the appServerDir path.
 
+    **Sample Values for the default_master.properties File**
+
     <table>
-    <caption><p>Sample Values for the default_master.properties File</p></caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />
@@ -125,8 +126,9 @@ To install the WAR file for WebLogic:
 
     `Linux — ./js-ant <target-name>`
 
+    **Buildomatic Targets to Run**
+
     <table>
-    <caption>Buildomatic Targets to Run</caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />

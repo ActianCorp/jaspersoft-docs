@@ -15,7 +15,7 @@ The following diagram shows the architecture of a sample JasperReports Server cl
 
 ![js Cluster Architecture](../assets/images/js-Cluster-Architecture.png)
 
-*Figure 1: Architecture of a Sample JasperReports Server Cluster*
+*Figure 1 Architecture of a Sample JasperReports Server Cluster*
 
 The major components of the sample JasperReports Server cluster architecture are:
 

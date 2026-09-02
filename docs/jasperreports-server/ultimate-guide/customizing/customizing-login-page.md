@@ -43,7 +43,7 @@ To optionally see the effect of the changes up to this point, save the files you
 
 ![js Customization NewLoginLogo](../assets/images/js-Customization-NewLoginLogo.png)
 
-*Figure 1: Changing the Logo on the Login Page*
+*Figure 1 Changing the Logo on the Login Page*
 
 Remove the background image
 
@@ -77,7 +77,7 @@ These customizations give the login page a new appearance with all Jaspersoft br
 
 ![js Customization NewLoginFinal](../assets/images/js-Customization-NewLoginFinal.png)
 
-*Figure 3: Custom Layout and Rebranding of Login Page*
+*Figure 3 Custom Layout and Rebranding of Login Page*
 
 ## Creating a Login Page with Customized Text
 
@@ -139,7 +139,7 @@ To optionally see the effect of the changes up to this point, save the files you
 
 ![js Customization LoginWelcome](../assets/images/js-Customization-LoginWelcome.png)
 
-*Figure 4: Effect of Changes to Welcome Area on Login Page*
+*Figure 4 Effect of Changes to Welcome Area on Login Page*
 
 !!! note
 
@@ -183,7 +183,7 @@ To optionally see the effect of the changes up to this point, save the files you
 
 ![js Customization LoginLogo](../assets/images/js-Customization-LoginLogo.png)
 
-*Figure 5: Adding a Logo on the Login Page*
+*Figure 5 Adding a Logo on the Login Page*
 
 !!! note
 
@@ -234,4 +234,4 @@ These customizations give the login page a new appearance with all Jaspersoft br
 
 ![js Customization LoginFinal](../assets/images/js-Customization-LoginFinal.png)
 
-*Figure 6: Custom Layout and Rebranding of Login Page*
+*Figure 6 Custom Layout and Rebranding of Login Page*

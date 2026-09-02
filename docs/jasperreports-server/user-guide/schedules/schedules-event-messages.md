@@ -23,6 +23,6 @@ To open the Messages page
 
     ![js ViewMessages SelectRow](../assets/images/js-ViewMessages-SelectRow.png)
 
-    *Figure 1: Message Management Buttons*
+    *Figure 1 Message Management Buttons*
 
 4.  Use the buttons on the Messages page to manage the list of messages.

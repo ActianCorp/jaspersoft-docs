@@ -9,4 +9,4 @@ The **Hide Empty Rows/Columns** button ![ja toolbar hideemptyrows](assets/images
 
 ![ja toolbar showempty](assets/images/ja-toolbar-showempty.png)
 
-*Figure 1: Showing Empty Rows*
+*Figure 1 Showing Empty Rows*

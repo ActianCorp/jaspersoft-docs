@@ -35,7 +35,7 @@ Once you have made that determination, you are ready to create your theme. The m
 <td><ol>
 <li>Create your new CSS rules, CSS files, and image files.</li>
 </ol></td>
-<td><p><span>Firefox Web Developer Tools</span></p></td>
+<td><p><a href="#firefox-web-developer-tools">Firefox Web Developer Tools</a></p></td>
 </tr>
 <tr>
 <td><ol>
@@ -47,7 +47,7 @@ Once you have made that determination, you are ready to create your theme. The m
 <td><ol>
 <li>Verify your changes wherever they occur in the UI.</li>
 </ol></td>
-<td><p><span>Test Platform</span></p></td>
+<td><p><a href="#test-platform">Test Platform</a></p></td>
 </tr>
 <tr>
 <td><ol>

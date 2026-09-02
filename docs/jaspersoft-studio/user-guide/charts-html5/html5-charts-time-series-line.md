@@ -32,7 +32,7 @@ To create the chart
     |  |
     |----|
     | ![Simple data configuration view for time series charts](../assets/images/Simple%20data%20configuration%20view%20for%20time-series%20charts.png) |
-    | *Figure 1: Simple data configuration view for time-series charts* |
+    | *Figure 1 Simple data configuration view for time-series charts* |
 
 4.  Enter an expression for the date in the **Date Expression** field. You can click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to use the expression editor or enter the expression manually. For this example, enter:<br>
     `$F{ORDERDATE}`.
@@ -65,4 +65,4 @@ To create the chart
 |  |
 |----|
 | ![jss html5 charts time series result](../assets/images/jss-html5-charts-time-series-result.png) |
-| *Figure 2: Time series spline chart* |
+| *Figure 2 Time series spline chart* |

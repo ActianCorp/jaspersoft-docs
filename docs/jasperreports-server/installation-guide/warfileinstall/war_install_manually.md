@@ -19,8 +19,9 @@ To install the WAR file distribution using manual buildomatic steps
 
 4.  Open a Command Prompt as Administrator on Windows or open a terminal window on Linux or Mac. Run the following commands.
 
+    **Buildomatic Targets to Execute to Install the WAR File**
+
     <table>
-    <caption><p>Buildomatic Targets to Execute to Install the WAR File</p></caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />
@@ -94,8 +95,9 @@ To install the WAR file distribution using manual buildomatic steps
 
     If you have previously installed the databases, you can drop the old versions and then recreate the databases. To do this, run the following drop commands before running the commands in Buildomatic Targets to Execute to Delete Sample Databases.
 
+    **Buildomatic Targets to Execute to Delete Sample Databases**
+
     <table>
-    <caption><p>Buildomatic Targets to Execute to Delete Sample Databases</p></caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />

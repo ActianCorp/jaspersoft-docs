@@ -37,7 +37,7 @@ For example, imagine you have more than one condition applied to the same format
 </tr>
 </tbody><tfoot>
 <tr>
-<td colspan="3"><p><em>Figure 1: Condition Hierarchy Example</em></p></td>
+<td colspan="3"><p><em>Figure 1 Condition Hierarchy Example</em></p></td>
 </tr>
 </tfoot>
 &#10;</table>
@@ -56,13 +56,13 @@ By default, the buttons are in the “Unchanged” state. Clicking the buttons t
 
 See “Style Button States” for examples of the style button states.
 
+**Style Button States**
+
 |  | Unchanged | Set | Not Set |
 |----|----|----|----|
 | Bold | ![js icon StyleBoldUnchanged](../assets/images/js-icon-StyleBoldUnchanged.png) | ![js icon StyleBoldSet](../assets/images/js-icon-StyleBoldSet.png) | ![js icon StyleBoldNotSet](../assets/images/js-icon-StyleBoldNotSet.png) |
 | Italic | ![js icon StyleItalicUnchanged](../assets/images/js-icon-StyleItalicUnchanged.png) | ![js icon StyleItalicSet](../assets/images/js-icon-StyleItalicSet.png) | ![js icon StyleItalicNotSet](../assets/images/js-icon-StyleItalicNotSet.png) |
 | Underline | ![js icon StyleUnderlineUnchanged](../assets/images/js-icon-StyleUnderlineUnchanged.png) | ![js icon StyleUnderlineSet](../assets/images/js-icon-StyleUnderlineSet.png) | ![js icon StyleUnderlineNotSet](../assets/images/js-icon-StyleUnderlineNotSet.png) |
-
-Style Button States
 
 The background and font color pickers have buttons for similar states, but these states behave slightly different:
 
@@ -84,12 +84,12 @@ You control these states through the background color picker and the font color 
 
 See Table 3‑4, “Color Picker Button States,” for examples of the color picker button states.
 
+**Color Picker Button States**
+
 |  | Unchanged | Set | No Fill |
 |----|----|----|----|
 | Background Color | ![js icon StyleBGUnchanged](../assets/images/js-icon-StyleBGUnchanged.png) | ![js icon StyleBGSet](../assets/images/js-icon-StyleBGSet.png) | ![js icon StyleBGNoFill](../assets/images/js-icon-StyleBGNoFill.png) |
 | Text Color | ![js icon StyleFontUnchanged](../assets/images/js-icon-StyleFontUnchanged.png) | ![js icon StyleFontSet](../assets/images/js-icon-StyleFontSet.png) | N/A |
-
-Color Picker Button States
 
 ## Applying Conditional Formatting
 
@@ -107,7 +107,7 @@ To create a condition
 
     ![js dialog ConditionalFormatting](../assets/images/js-dialog-ConditionalFormatting.png)
 
-    *Figure 2: Conditional Formatting Tab*
+    *Figure 2 Conditional Formatting Tab*
 
 5.  In the **Apply to** box, select the part of the column you want to apply the formatting to.
 
@@ -117,7 +117,7 @@ To create a condition
 
     -   **Operator**: Use the dropdown menu to define how the condition is compared to the column data.
     -   **Condition**: Enter the condition criteria.
-    -   **Format**: Select the formatting applied to fields meeting the defined condition. Take care while setting the button states, as described in Condition Button States.
+    -   **Format**: Select the formatting applied to fields meeting the defined condition. Take care while setting the button states, as described in [Condition Button States](#condition-button-states).
 
 8.  Repeat if needed to add multiple conditions to a column.<br>
     If you have multiple conditions, you may want to reorder them, to ensure they do not conflict with each other. Use the ![js DomainDesigner icon Move Up](../assets/images/js-DomainDesigner-icon-Move-Up.png) and ![js DomainDesigner icon Move Down](../assets/images/js-DomainDesigner-icon-Move-Down.png) to move conditions in the hierarchy.

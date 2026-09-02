@@ -11,13 +11,13 @@ Before you add a chart, consider the best way to display your data. Available ch
 
 This example contains the following sections:
 
--   Creating an HTML5 Chart
+-   [Creating an HTML5 Chart](#creating-an-html5-chart)
 
--   Adding a Measure to a Bar Chart
+-   [Adding a Measure to a Bar Chart](#adding-a-measure-to-a-bar-chart)
 
--   Formatting a Chart
+-   [Formatting a Chart](#formatting-a-chart)
 
--   Creating a Hyperlink
+-   [Creating a Hyperlink](#creating-a-hyperlink)
 
 !!! note
 
@@ -42,16 +42,16 @@ To create the chart
     |                                                                          |
     |--------------------------------------------------------------------------|
     | ![html5 charts bar select](../assets/images/html5-charts-bar-select.png) |
-    | *Figure 1: Chart Types*                                                  |
+    | *Figure 1 Chart Types*                                                   |
 
 2.  Select a chart type based on the information that you want to display. See [HTML5 Chart Types](html5-charts-overview.md) for help. You can use the menu at the left to restrict the selection to a particular type of chart. For this example, choose **Bar**.
 
 3.  Click the **Data Configuration** tab. This tab includes options for configuring chart dataset, chart properties, and hyperlinks. The options on this tab reflect the type of chart that you selected.
 
-    |                                                                        |
-    |------------------------------------------------------------------------|
-    | ![html5 charts bar data](../assets/images/html5-charts-bar-data.png)   |
-    | *Figure 2: HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
+    |                                                                       |
+    |-----------------------------------------------------------------------|
+    | ![html5 charts bar data](../assets/images/html5-charts-bar-data.png)  |
+    | *Figure 2 HTML5 Charts Properties &gt; Chart Data &gt; Configuration* |
 
 4.  Enter the expression that you want to use for the categories. You can enter the expression directly, or click ![jss icon expression editor](../assets/images/jss-icon-expression-editor.png) to open the Expression Editor. For this example, enter the following:
 
@@ -71,7 +71,7 @@ To create the chart
     |  |
     |----|
     | ![html5 charts bar dialog preview](../assets/images/html5-charts-bar-dialog-preview.png) |
-    | *Figure 3: Preview in the HTML5 Chart Edit Dialog* |
+    | *Figure 3 Preview in the HTML5 Chart Edit Dialog* |
 
     Configure the dataset
 
@@ -96,7 +96,7 @@ To create the chart
 |  |
 |----|
 | ![jss html5 charts single bar result](../assets/images/jss-html5-charts-single-bar-result.png) |
-| *Figure 4: Bar Chart Example* |
+| *Figure 4 Bar Chart Example* |
 
 !!! warning
 
@@ -121,7 +121,7 @@ Start with the HTML5 bar chart from the previous example to complete the followi
 |  |
 |----|
 | ![jss html5 charts bar result](../assets/images/jss-html5-charts-bar-result.png) |
-| *Figure 5: Bar chart with multiple measures* |
+| *Figure 5 Bar chart with multiple measures* |
 
 ## Formatting a Chart
 
@@ -150,7 +150,7 @@ To add a title to an HTML5 chart
     |  |
     |----|
     | ![jss html5 charts formatting legend](../assets/images/jss-html5-charts-formatting-legend.png) |
-    | *Figure 6: Legend Properties* |
+    | *Figure 6 Legend Properties* |
 
     1.  Expand **Legend**, select **Legend &gt; Sizes and Position**, and set the location of the legend on the graph:
 
@@ -178,7 +178,7 @@ To set the chart's background color
 |  |
 |----|
 | ![jss html5 formatting chart result](../assets/images/jss-html5-formatting-chart-result.png) |
-| *Figure 7: Formatted report* |
+| *Figure 7 Formatted report* |
 
 ## Creating a Hyperlink
 
@@ -191,7 +191,7 @@ To set the chart's background color
     |  |
     |----|
     | ![jss html5 charts simple hyperlink](../assets/images/jss-html5-charts-simple-hyperlink.png) |
-    | *Figure 8: Editing a hyperlink* |
+    | *Figure 8 Editing a hyperlink* |
 
 4.  Set the following:
 

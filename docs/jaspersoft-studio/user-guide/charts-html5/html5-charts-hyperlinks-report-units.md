@@ -32,4 +32,4 @@ The report unit 06. Profit Detail Report (/public/Samples/Reports/ProfitDetailRe
 |  |
 |----|
 | ![pic from report unit topic](../assets/images/pic-from-report-unit-topic.png) |
-| *Figure 1: Measure Configuration for \# of Orders* |
+| *Figure 1 Measure Configuration for \# of Orders* |

@@ -547,6 +547,7 @@ def convert_topic(rel, plan, out_root, resolver, warn):
     f2.drop_empty_blocks(body)
     f2.unwrap_plain_divs(body)
     f2.fence_code_blocks(body)
+    f2.lift_table_captions(body)
     f2.normalize_tables(body)
     f2.note_tables_to_admonitions(body)
     f2.unwrap_figure_tables(body)
@@ -559,6 +560,7 @@ def convert_topic(rel, plan, out_root, resolver, warn):
     f2.absorb_orphan_sublists(body)
     f2.loosen_list_items(body)
     f2.semantic_inlines(body)
+    f2.fix_stale_number_xrefs(body)
     f2.handle_links(body)
     f2.collapse_nested_admonitions(body)
 
@@ -575,6 +577,11 @@ def convert_topic(rel, plan, out_root, resolver, warn):
     f2.copy_linked_files(body, topic.parent, out_root / "assets" / "files",
                          assets_rel + "/files", warn)
     f2.rewrite_tree_links(body, rel, resolver.for_topic(plan, rel), warn)
+    # Before extract_admonitions: a same-page link and its target heading can
+    # sit on opposite sides of that split (one inside a Note, one outside), and
+    # the note's HTML is snapshotted and rendered separately from here on, so a
+    # later pass on `body` alone would miss hrefs already moved into it.
+    f2.resolve_intra_page_anchors(body)
 
     # Admonitions must be pulled out before the remaining autonum labels are
     # flattened, otherwise "Note: " becomes bold body text instead of a block.
@@ -613,6 +620,18 @@ def convert_topic(rel, plan, out_root, resolver, warn):
 # --------------------------------------------------------------------------- #
 # Navigation
 # --------------------------------------------------------------------------- #
+NAV_SUPPRESS_TITLES = {
+    "jaspersoft documentation and support services",
+    "tibco documentation and support services",
+    "documentation and support services",
+    "legal and third-party notices",
+}
+
+
+def _norm_title(title: str) -> str:
+    return re.sub(r"\s+", " ", (title or "").strip()).lower()
+
+
 def nav_for_guide(toc, manifest, prefix, warn, hidden=frozenset()):
     """Flare TOC -> nav items, resolving titles from the converted topics.
 
@@ -644,6 +663,12 @@ def nav_for_guide(toc, manifest, prefix, warn, hidden=frozenset()):
                 items.extend(children)
                 continue
             title = node["title"] or title or "Untitled"
+            # Book-matter that repeats in every guide's nav (support contacts,
+            # legal notices). The pages stay published and reachable by URL;
+            # they are only dropped from the navigation, which the authors asked
+            # for because the same entries crowded the top of all 28 guides.
+            if _norm_title(title) in NAV_SUPPRESS_TITLES and not children:
+                continue
             if path and children:
                 items.append({title: [{title: path}] + children})
             elif path:
@@ -653,17 +678,12 @@ def nav_for_guide(toc, manifest, prefix, warn, hidden=frozenset()):
         return items
 
     items = dedup(build(toc), set())
-    # Anything converted but never referenced by the TOC still needs a home,
-    # or it would be published but unreachable from the navigation.
-    covered = set(iter_paths(items))
-    extra = [
-        {t: "%s/%s" % (prefix, p)}
-        for (rel, (p, t)) in sorted(manifest.items(), key=lambda x: x[1][1])
-        if "%s/%s" % (prefix, p) not in covered
-        and Path(rel).as_posix().lower() not in hidden
-    ]
-    if extra:
-        items.append({"Additional Topics": extra})
+    # Topics not referenced by the TOC (and the repeated book-matter above) are
+    # intentionally left out of the nav: the authors asked to keep the sidebar
+    # to the TOC. Those pages are still built and reachable by URL and by
+    # in-text links; they are simply not listed. `hidden` stays in the
+    # signature because prepare_guide passes it for the previous behaviour.
+    _ = hidden
     return items
 
 

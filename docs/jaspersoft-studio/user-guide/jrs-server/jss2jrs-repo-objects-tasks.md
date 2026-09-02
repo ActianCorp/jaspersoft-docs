@@ -22,7 +22,7 @@ You can add, modify, or delete repository resources from Jaspersoft Studio. In t
     |                                                                        |
     |------------------------------------------------------------------------|
     | ![jss azure certificate](../assets/images/jss-azure%20certificate.png) |
-    | *Figure 1: Selecting Azure Certificate*                                |
+    | *Figure 1 Selecting Azure Certificate*                                 |
 
 -   To change the location of a repository resource, drag it to a new location.
 
@@ -39,4 +39,4 @@ You can add, modify, or delete repository resources from Jaspersoft Studio. In t
 |                                                                        |
 |------------------------------------------------------------------------|
 | ![jss edit input control](../assets/images/jss-edit-input-control.png) |
-| *Figure 2: Properties of an Input Control Resource*                    |
+| *Figure 2 Properties of an Input Control Resource*                     |

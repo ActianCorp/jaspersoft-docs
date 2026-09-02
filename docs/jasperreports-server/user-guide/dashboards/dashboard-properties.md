@@ -13,7 +13,7 @@ In the Dashboard Designer, Dashboard Settings display in the settings panel.
 
 ![js Dashboard DashboardProperties(Print)](../assets/images/js-Dashboard-DashboardProperties%28Print%29.png)
 
-*Figure 1: Dashboard Settings*
+*Figure 1 Dashboard Settings*
 
 ### Canvas
 
@@ -57,7 +57,7 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 
 ![js Dashboard DashletProperties(Print)](../assets/images/js-Dashboard-DashletProperties%28Print%29.png)
 
-*Figure 2: General and Dashlet Appearance Settings for Reports and Ad Hoc View Dashlets*
+*Figure 2 General and Dashlet Appearance Settings for Reports and Ad Hoc View Dashlets*
 
 ### General Settings
 
@@ -89,7 +89,7 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 
 ![js Dashboard Dashlet HyperlinksTab](../assets/images/js-Dashboard-Dashlet-HyperlinksTab.png)
 
-*Figure 3: Hyperlinks Settings*
+*Figure 3 Hyperlinks Settings*
 
 !!! note
 
@@ -129,15 +129,15 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 
 ![js Dashboard NewParameters](../assets/images/js-Dashboard-NewParameters.png)
 
-*Figure 4: Adding a New Parameter to a Dashlet*
+*Figure 4 Adding a New Parameter to a Dashlet*
 
--   **Map Parameters**: If hyperlinks have been enabled, the **Map Parameters** button is active. Click **Map Parameters** to open the **Parameter Mapping** dialog box. See Parameter Mapping for more information.
+-   **Map Parameters**: If hyperlinks have been enabled, the **Map Parameters** button is active. Click **Map Parameters** to open the **Parameter Mapping** dialog box. See [Parameter Mapping](#parameter-mapping) for more information.
 
 ## General, Text Format, and Dashlet Appearance Settings for Text Dashlets
 
 ![js Dashboard Dashlet TextBasicTab](../assets/images/js-Dashboard-Dashlet-TextBasicTab.png)
 
-*Figure 5: General, Text Format, and Dashlet Appearance Settings for Text Dashlets*
+*Figure 5 General, Text Format, and Dashlet Appearance Settings for Text Dashlets*
 
 ### General Settings
 
@@ -177,7 +177,7 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 
 ![js Dashboard Dashlet WebBasicTab](../assets/images/js-Dashboard-Dashlet-WebBasicTab.png)
 
-*Figure 6: General and Dashlet Appearance Settings for Web Page Dashlets*
+*Figure 6 General and Dashlet Appearance Settings for Web Page Dashlets*
 
 ### General Settings
 
@@ -199,7 +199,7 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 
 ![js Dashboard Dashlet ImageBasicTab](../assets/images/js-Dashboard-Dashlet-ImageBasicTab.png)
 
-*Figure 7: General and Dashlet Appearance Settings for Image Dashlets*
+*Figure 7 General and Dashlet Appearance Settings for Image Dashlets*
 
 ### General Settings
 
@@ -221,7 +221,7 @@ Select the dashlet to show its settings in the settings panel. The **Hyperlinks*
 
 ![js Dashboard Filter Properties](../assets/images/js-Dashboard-Filter-Properties.png)
 
-*Figure 8: Filter Dashlet Settings*
+*Figure 8 Filter Dashlet Settings*
 
 ### General Settings
 
@@ -250,7 +250,7 @@ To open Parameter Mapping
 
 ![js Dashboard ParameterMapping](../assets/images/js-Dashboard-ParameterMapping.png)
 
-*Figure 9: Parameter Mapping for the Sales Dashboard*
+*Figure 9 Parameter Mapping for the Sales Dashboard*
 
 Parameter Mapping displays the filter-to-dashlet mapping, and includes the following columns and buttons:
 

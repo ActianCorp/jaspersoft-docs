@@ -77,8 +77,9 @@ The following example shows the structure of the `ReportExecutionRequest`:
 
 The following table describes the properties you can specify in the `ReportExecutionRequest`:
 
+**Report Execution Properties**
+
 <table>
-<caption><p>Report Execution Properties</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />

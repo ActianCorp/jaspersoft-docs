@@ -7,15 +7,15 @@ description: "If you cannot use the js-install scripts to create the JasperRepor
 
 If you cannot use the `js-install` scripts to create the JasperReports Server database and the sample databases, you can create them manually. Follow the instructions for your database to create the repository database and optional sample databases:
 
--   PostgreSQL
+-   [PostgreSQL](#postgresql)
 
--   MySQL
+-   [MySQL](#mysql)
 
--   Oracle
+-   [Oracle](#oracle)
 
--   DB2
+-   [DB2](#db2)
 
--   SQL Server
+-   [SQL Server](#sql-server)
 
 The commands in these sections have been tested at Jaspersoft, but the commands you need to use on your database instance may be different.
 

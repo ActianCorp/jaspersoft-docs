@@ -9,7 +9,7 @@ An XML/A connection describes how to connect to a remote XML/A provider, such as
 
 ![ja anatomy xmla conn](assets/images/ja-anatomy-xmla-conn.png)
 
-*Figure 1: Anatomy of an XML/A Connection*
+*Figure 1 Anatomy of an XML/A Connection*
 
 JasperReports Server can act as either an XML/A provider or as an XML/A client. In the former case, remote servers retrieve data from an OLAP data source exposed by an XML/A definition in the JasperReports Server repository. In the latter case, JasperReports Server connects to a remote XML/A provider to retrieve data that populate reports and views. Typically, the server accesses a remote instance of JasperReports Server to form a distributed environment ([Performance Tuning](performance_tuning.md)), but the server can also connect to other types of XML/A provider, such as Microsoft SQL Server Analytic Services (SSAS). Because JasperReports Server uses OLAP4J (<http://www.olap4j.org/>), it may also be able to connect to other types of XML/A provider, though such configurations are not currently certified. In this release, only JasperReports Server and Microsoft SQL Server Analytic Services are certified as XML/A providers.
 

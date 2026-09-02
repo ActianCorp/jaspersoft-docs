@@ -21,7 +21,7 @@ In Figure 1‑7, you can see the results of a search for the term “account”
 
 ![js Repository Search](../assets/images/js-Repository-Search.png)
 
-*Figure 1: Search Field and Search Results*
+*Figure 1 Search Field and Search Results*
 
 !!! note
 

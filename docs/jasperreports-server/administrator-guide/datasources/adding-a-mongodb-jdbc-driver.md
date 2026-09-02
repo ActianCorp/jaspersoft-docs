@@ -31,9 +31,9 @@ Procedure:
 
 6.  To specify a schema you have created, uncheck this box and:
 
-    1.  Use the **File Source** drop-down to select the schema file location, **Repository** or **Server File System**. For steps to create a schema using the schema tool, see Creating a Schema with the Schema Tool.
+    1.  Use the **File Source** drop-down to select the schema file location, **Repository** or **Server File System**. For steps to create a schema using the schema tool, see [Creating a Schema with the Schema Tool](#creating-a-schema-with-the-schema-tool).
 
-    2.  If your file is in the repository, click **Browse** and locate it in the repository. If your file is in the server file system, provide the path in the **Server File Location** field. For steps to upload a schema to the repository, see Uploading a Schema to the Repository.
+    2.  If your file is in the repository, click **Browse** and locate it in the repository. If your file is in the server file system, provide the path in the **Server File Location** field. For steps to upload a schema to the repository, see [Uploading a Schema to the Repository.](#uploading-a-schema-to-the-repository)
 
 7.  Click **Test Connection** to check if all inputs are correct.
 

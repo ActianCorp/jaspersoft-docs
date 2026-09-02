@@ -19,7 +19,7 @@ To begin create a basic view from a Domain
 
     ![js AdHoc SelectData SimpleDomain](../assets/images/js-AdHoc-SelectData-SimpleDomain.png)
 
-    *Figure 1: Simple Domain Selected in the Select Data Dialog*
+    *Figure 1 Simple Domain Selected in the Select Data Dialog*
 
 3.  Select the domain you want to use.
 

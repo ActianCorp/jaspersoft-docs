@@ -11,7 +11,7 @@ description: Organizations are a feature of JasperReports Server commercial edit
 
 In the sample-applicationContext-externalAuth-db-mt.xml file, the `tenantId` is returned within the field `usersByUsernameAndTenantNameQuery` in `externalUserTenantDetailsService`. This query provides the required information to the tenant processor, so no additional configuration is needed.
 
-Organizations created during external user login have an administrator with a default password. The admin username and password are configurable. See Setting Up Default Admins for Organizations. For security reasons, you should change the default password of any organization admin. See [Initialization of JasperReports Server for External Users](../authentication-in-jrs/initializing-external-users-in-jrs.md) for a process to initialize the server, including organization admins, before going into production with external authentication.
+Organizations created during external user login have an administrator with a default password. The admin username and password are configurable. See [Setting Up Default Admins for Organizations](#setting-up-default-admins-for-organizations). For security reasons, you should change the default password of any organization admin. See [Initialization of JasperReports Server for External Users](../authentication-in-jrs/initializing-external-users-in-jrs.md) for a process to initialize the server, including organization admins, before going into production with external authentication.
 
 ## Setting Up Default Admins for Organizations
 

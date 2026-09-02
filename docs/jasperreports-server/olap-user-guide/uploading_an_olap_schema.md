@@ -23,7 +23,7 @@ To upload a schema
 
     ![ja add view uploadfilefromyourlocalcomputer](assets/images/ja-add-view-uploadfilefromyourlocalcomputer.png)
 
-    *Figure 1: Upload a File From Your Local Computer - OLAP Schema*
+    *Figure 1 Upload a File From Your Local Computer - OLAP Schema*
 
 4.  Under **Path to File**, click **Choose File** and locate the OLAP schema you want to add.
 

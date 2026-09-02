@@ -37,7 +37,7 @@ To create a bean data source
 
     ![js DataSource Bean](../assets/images/js-DataSource-Bean.png)
 
-    *Figure 1: Bean Data Source Page*
+    *Figure 1 Bean Data Source Page*
 
 5.  Click **Test Connection** to validate the data source. If the validation fails, ensure that the values you entered are correct and that the bean is in the classpath.
 

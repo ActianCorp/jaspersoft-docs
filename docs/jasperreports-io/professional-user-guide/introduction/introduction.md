@@ -13,7 +13,7 @@ JasperReports IO is available as a downloadable standalone package and as an hou
 
 This chapter contains the following sections:
 
--   JasperReports IO Professional Edition License Usage and Restrictions
+-   [JasperReports IO Professional Edition License Usage and Restrictions](#jasperreports-io-professional-edition-license-usage-and-restrictions)
 -   [Installing JasperReports IO Using the Standalone Package](installation.md)
 -   [Installing JasperReports IO For AWS](aws_installation.md)
 

@@ -9,11 +9,11 @@ Ad Hoc charts are a flexible, interactive way to explore your data graphically. 
 
 ![js AdHoc Chart Example](../assets/images/js-AdHoc-Chart-Example.png)
 
-*Figure 1: Ad Hoc Editor’s Chart View for old layout band*
+*Figure 1 Ad Hoc Editor’s Chart View for old layout band*
 
 ![Adhoc chart](../assets/images/Adhoc-chart.png)
 
-*Figure 2: Ad Hoc Editor’s Chart View for new layout band*
+*Figure 2 Ad Hoc Editor’s Chart View for new layout band*
 
 The following sections explain how to populate, edit, and format an Ad Hoc chart. Many tasks related to working with charts are identical (or very similar) to those for tables and crosstabs. For any tasks not discussed in this section, see the information in [Working with Tables](adhoc-tables.md).
 
@@ -87,7 +87,7 @@ In Old Layout Band, the following figure shows the effect of the slider on a cha
 </tr>
 </tbody><tfoot>
 <tr>
-<td colspan="3"><p><em>Figure 3: Effect of the Slider on a Chart (Old Layout Band)</em></p></td>
+<td colspan="3"><p><em>Figure 3 Effect of the Slider on a Chart (Old Layout Band)</em></p></td>
 </tr>
 </tfoot>
 &#10;</table>
@@ -122,13 +122,14 @@ In New Layout Band, the following figure shows the effect of the slider on a cha
 </tr>
 </tbody><tfoot>
 <tr>
-<td colspan="3"><p><em>Figure 4: Effect of the Slider on a Chart (New Layout Band)</em></p></td>
+<td colspan="3"><p><em>Figure 4 Effect of the Slider on a Chart (New Layout Band)</em></p></td>
 </tr>
 </tfoot>
 &#10;</table>
 
+**Data Level Mappings for New Layout band**
+
 <table style="width:100%;">
-<caption><p>Data Level Mappings for New Layout band</p></caption>
 <colgroup>
 <col style="width: 16%" />
 <col style="width: 16%" />
@@ -634,7 +635,7 @@ To recreate this view
 
     -   The slider reflects the hierarchy of the row or column groups, as determined by the order in which fields are arranged in the Layout Band.
     -   Hovering over a setting on the slider shows the name of the field or dimension corresponding to that setting.
-    -   When you pivot a chart, slider settings are preserved and applied to the new target. For example, if you have the **Row** slider set to Month, the **Column** slider is set to Month when you pivot. See Pivoting a Chart for more information.
+    -   When you pivot a chart, slider settings are preserved and applied to the new target. For example, if you have the **Row** slider set to Month, the **Column** slider is set to Month when you pivot. See [Pivoting a Chart](#pivoting-a-chart) for more information.
     -   When you remove the currently selected level from a row or column, the slider is reset to the total; when you remove a field that is not selected, the level remains the same. When you add a field or dimension to a row or column, the number of levels of the slider changes to reflect your addition. When you change the order of the fields in a row or column, the level on the slider changes to reflect the new level of the field corresponding to the selection.
 
 ### Changing Date Grouping
@@ -705,7 +706,7 @@ You can pivot a chart in two ways:
 
 ![js AdHoc Charts Pivot](../assets/images/js-AdHoc-Charts-Pivot.png)
 
-*Figure 5: Effect of Pivoting a Chart*
+*Figure 5 Effect of Pivoting a Chart*
 
 !!! note
 

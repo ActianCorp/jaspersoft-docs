@@ -11,4 +11,4 @@ The following figure shows the `@WithSpan` annotation for the Scheduler method.
 
 ![Adding Annotations](../assets/images/Adding-Annotations.png)
 
-*Figure 1: Adding Annotations*
+*Figure 1 Adding Annotations*

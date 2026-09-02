@@ -43,7 +43,7 @@ Each data island in the Domain must be represented by an `itemGroup` child of th
 
 | Element Name | Description |
 |----|----|
-| `<``itemGroup``>` | (Required) As a child of `dataIslands`, each `itemGroup` represents a data island. |
+| `<`[`itemGroup`](#itemgroup)`>` | (Required) As a child of `dataIslands`, each `itemGroup` represents a data island. |
 
 ## itemGroup
 
@@ -51,7 +51,7 @@ As a child element of `dataIslands`, `itemGroup` represents a data island. Each 
 
 !!! note
 
-    `itemGroup` is also used to represent a set in the Domain presentation. See itemGroup for more information.
+    `itemGroup` is also used to represent a set in the Domain presentation. See [itemGroup](#itemgroup_1) for more information.
 
 ### XML Attributes
 
@@ -118,10 +118,10 @@ A recursive relationship between `itemGroups` and `itemGroup` is used to show se
 
 ### Child Elements
 
-| Element Name      | Description                      |
-|-------------------|----------------------------------|
-| `<``itemGroup``>` | A set in the data presentation.  |
-| `<``items``>`     | A container for `item` elements. |
+| Element Name                      | Description                      |
+|-----------------------------------|----------------------------------|
+| `<`[`itemGroup`](#itemgroup_1)`>` | A set in the data presentation.  |
+| `<`[`items`](#items)`>`           | A container for `item` elements. |
 
 ## itemGroup
 
@@ -131,7 +131,7 @@ A recursive relationship between `itemGroups` and `itemGroup` is used to show se
 
 !!! note
 
-    `itemGroup` is also used to represent a data island in `dataIslands`. See itemGroup for more information.
+    `itemGroup` is also used to represent a data island in `dataIslands`. See [itemGroup](#itemgroup) for more information.
 
 ### Child Elements
 
@@ -139,8 +139,8 @@ The hierarchy of `itemGroups` and `items` elements defines the hierarchy of sets
 
 | Element Name | Description |
 |----|----|
-| `<``itemGroups``>` | A container for `itemGroup` elements, which represent sets. |
-| `<``items``>` | A container for `item` elements, which represent items. |
+| `<`[`itemGroups`](#itemgroups)`>` | A container for `itemGroup` elements, which represent sets. |
+| `<`[`items`](#items)`>` | A container for `item` elements, which represent items. |
 
 ### XML Attributes
 
@@ -208,9 +208,9 @@ The `items` element is a container for `item` elements, which represent items on
 
 ### Child Elements
 
-| Element Name | Description                       |
-|--------------|-----------------------------------|
-| `<``item``>` | An item in the data presentation. |
+| Element Name          | Description                       |
+|-----------------------|-----------------------------------|
+| `<`[`item`](#item)`>` | An item in the data presentation. |
 
 ## item
 
@@ -297,8 +297,9 @@ The attributes of `item` specify the properties of the item. See [Properties](..
 
 Labels and descriptions may contain any characters, but the ID property value of both `itemGroup` and `item` elements must be alphanumeric.
 
+**Data Formats for Aggregation by Type**
+
 <table>
-<caption><p>Data Formats for Aggregation by Type</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -352,8 +353,9 @@ March 31, 2009<br />
 </tbody>
 </table>
 
+**Default Summary Functions By Type**
+
 <table>
-<caption><p>Default Summary Functions By Type</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -392,7 +394,7 @@ For example, suppose you have a join tree, JoinTree_1, with the following hierar
 
 ![js DomainSyntax JoinTree](../assets/images/js-DomainSyntax-JoinTree.png)
 
-*Figure 1: Example of a Join Tree Hierarchy*
+*Figure 1 Example of a Join Tree Hierarchy*
 
 The XML for this join tree might look like this:
 

@@ -30,7 +30,7 @@ When you create a data adapter in a project, it is saved as an jrdax file in tha
     |                                                                      |
     |----------------------------------------------------------------------|
     | ![Data Adapter Wizard](../assets/images/Data%20Adapter%20Wizard.png) |
-    | *Figure 1: Data Adapter Wizard*                                      |
+    | *Figure 1 Data Adapter Wizard*                                       |
 
 4.  Select the data adapter type that you want and click **Next**.
 
@@ -71,11 +71,11 @@ To export a global data adapter as an jrdax file
     |                                                                  |
     |------------------------------------------------------------------|
     | ![export data adapter](../assets/images/export-data-adapter.png) |
-    | *Figure 2: Export to File Dialog*                                |
+    | *Figure 2 Export to File Dialog*                                 |
 
 2.  Select a location in the same project as the report that is using this adapter, enter a name for the file, and click **OK**.
 
-A simple jrdax file is created in the location that you chose. The data adapter must be in the same project as your report. To use the same adapter in more than one project, see Copying a Data Adapter.
+A simple jrdax file is created in the location that you chose. The data adapter must be in the same project as your report. To use the same adapter in more than one project, see [Copying a Data Adapter](#copying-a-data-adapter).
 
 To promote a data adapter file to a global data adapter
 

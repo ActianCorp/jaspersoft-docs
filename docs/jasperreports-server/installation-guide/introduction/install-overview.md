@@ -7,10 +7,10 @@ description: "You can install JasperReports Server either by running an executab
 
 This section includes:
 
--   Installation
--   Evaluation Licenses
--   Login
--   Starting and Stopping
+-   [Installation](#installation)
+-   [Evaluation Licenses](#evaluation-licenses)
+-   [Login](#login)
+-   [Starting and Stopping](#starting-and-stopping)
 
 ## Installation
 

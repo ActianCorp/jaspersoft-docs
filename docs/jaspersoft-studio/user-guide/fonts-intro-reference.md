@@ -21,7 +21,7 @@ In addition, you can combine several font extensions into a font set. For exampl
 
 This chapter contains the following sections:
 
--   Font Extensions Reference
+-   [Font Extensions Reference](#font-extensions-reference)
 
 -   [Example of Using Font Extensions](fonts-using.md)
 
@@ -45,7 +45,7 @@ The **Fonts** page is displayed.
 |                                                                   |
 |-------------------------------------------------------------------|
 | ![jss font set expanded](assets/images/jss-font-set-expanded.png) |
-| *Figure 1: Fonts page*                                            |
+| *Figure 1 Fonts page*                                             |
 
 The **Fonts** page shows the following:
 
@@ -58,7 +58,7 @@ The **Fonts** page shows the following:
 -   **Down**: Move the selected font extension and/or font set down in the list of fonts.
 -   **Create Set**: Combine the selected font extensions into a font set.
 -   **Add to Set**: Add the selected font extensions to an existing font set. Clicking this displays a dialog where you can select the font set you want to add the extensions to.
--   **Edit**: Edit the selected font extension or set. For a font extension, displays The Font Family Dialog. For a font set, displays the Font Set dialog.
+-   **Edit**: Edit the selected font extension or set. For a font extension, displays [The Font Family Dialog](#the-font-family-dialog). For a font set, displays the Font Set dialog.
 -   **Export**: Export the selected font extension or set.
 
 ### The Font Family Dialog
@@ -76,7 +76,7 @@ The **Font Family** page lets you define the basic configuration of the font or 
 |                                                       |
 |-------------------------------------------------------|
 | ![jss font family](assets/images/jss-font-family.png) |
-| *Figure 2: Font Family dialog – Font Family*          |
+| *Figure 2 Font Family dialog – Font Family*           |
 
 The **Font Family** page shows the following:
 
@@ -105,7 +105,7 @@ Click **Next** on the **Font Family** page.
 |                                                                       |
 |-----------------------------------------------------------------------|
 | ![jss font family mapping](assets/images/jss-font-family-mapping.png) |
-| *Figure 3: Font Family dialog – Font Mapping*                         |
+| *Figure 3 Font Family dialog – Font Mapping*                          |
 
 !!! note
 
@@ -130,7 +130,7 @@ Click **Next** on the **Font Mapping** page.
 |                                                                     |
 |---------------------------------------------------------------------|
 | ![jss font family locale](assets/images/jss-font-family-locale.png) |
-| *Figure 4: Font Family dialog – Locale*                             |
+| *Figure 4 Font Family dialog – Locale*                              |
 
 The **Locales** page shows the following:
 
@@ -163,7 +163,7 @@ Accessing the font set dialog
 |                                               |
 |-----------------------------------------------|
 | ![jss fontset](assets/images/jss-fontset.png) |
-| *Figure 5: Font Set dialog*                   |
+| *Figure 5 Font Set dialog*                    |
 
 #### The Font Set Family Dialog
 
@@ -176,7 +176,7 @@ Expand a font set in the **Fonts** list, then double-click a font inside the set
 |  |
 |----|
 | ![jss font set family exclude](assets/images/jss-font-set-family-exclude.png) |
-| *Figure 6: Font Set Family dialog* |
+| *Figure 6 Font Set Family dialog* |
 
 The **Font Set Family** dialog shows the following:
 

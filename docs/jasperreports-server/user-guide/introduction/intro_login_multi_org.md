@@ -24,7 +24,7 @@ orgID=organization_1</p>
 <p><img src="../assets/images/js-Login-default.png" alt="js Login default" /></p></td>
 </tr>
 <tr>
-<td colspan="2"><p><em>Figure 1: Login Methods for Multiple Organizations</em></p></td>
+<td colspan="2"><p><em>Figure 1 Login Methods for Multiple Organizations</em></p></td>
 </tr>
 </tbody>
 </table>

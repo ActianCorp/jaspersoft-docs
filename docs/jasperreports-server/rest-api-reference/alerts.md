@@ -15,9 +15,9 @@ For example, consider that you are working in a warehouse. You have to restock t
 
 This chapter includes the following sections:
 
--   Searching for an Alert
--   Viewing an Alert Definition
--   The alert Descriptor
+-   [Searching for an Alert](#searching-for-an-alert)
+-   [Viewing an Alert Definition](#viewing-an-alert-definition)
+-   [The alert Descriptor](#the-alert-descriptor)
 
 ## Searching for an Alert
 
@@ -213,7 +213,7 @@ Use the GET method to retrieve details of an alert using its unique id. You can 
 </tbody>
 </table>
 
-The GET method returns a descriptor that includes the various parameters of a scheduled alert. All properties are included, many of which may be null, if not set for the chosen alert. For more information, see The alert Descriptor.
+The GET method returns a descriptor that includes the various parameters of a scheduled alert. All properties are included, many of which may be null, if not set for the chosen alert. For more information, see [The alert Descriptor](#the-alert-descriptor).
 
 ``` json
 {
@@ -313,19 +313,19 @@ The `alert` descriptor is a complex data object with nested containers for the v
 
 The properties of the `alert` descriptor are defined in the following sections:
 
--   General Properties of a Alert, such as label and description, but also the output format and base filename.
+-   [General Properties of a Alert](#general-properties-of-an-alert), such as label and description, but also the output format and base filename.
 
--   Source and Input Controls includes the repository URL of the report or report option and the parameter value of any input control if any of them are present and applied to the same report.
+-   [Source and Input Controls](#source-and-input-controls) includes the repository URL of the report or report option and the parameter value of any input control if any of them are present and applied to the same report.
 
--   Simple Trigger defines interval-based repetition of the alert for a given number of occurrences.
+-   [Simple Trigger](#simple-trigger) defines interval-based repetition of the alert for a given number of occurrences.
 
--   Calendar Trigger runs at specific times, specific days of the week or days of the month.
+-   [Calendar Trigger](#calendar-trigger) runs at specific times, specific days of the week or days of the month.
 
--   Alert Output Properties define the file name and locations where output files are written.
+-   [Alert Output Properties](#alert-output-properties) define the file name and locations where output files are written.
 
--   FTP Output defines whether the output files are written to a remote server.
+-   [FTP Output](#ftp-output) defines whether the output files are written to a remote server.
 
--   Alert Output Email defines the recipients for successful output files.
+-   [Alert Output Email](#alert-output-email) defines the recipients for successful output files.
 
 -   [Alert DataPoint](alerts.md) defines the numeric values for which an alert is created.
 
@@ -386,12 +386,12 @@ A valid `alert` descriptor contains the following properties:
 <tr>
 <td><p><code>trigger</code><br />
 (optional)</p></td>
-<td><p>A container for one of the triggers specified in <span>Simple Trigger</span> or <span>Calendar Trigger</span>. The trigger determines how often the alert runs and the date and time at which it runs.</p></td>
+<td><p>A container for one of the triggers specified in <a href="#simple-trigger">Simple Trigger</a> or <a href="#calendar-trigger">Calendar Trigger</a>. The trigger determines how often the alert runs and the date and time at which it runs.</p></td>
 </tr>
 <tr>
 <td><p><code>source</code><br />
 (required)</p></td>
-<td><p>A container for the properties that define the repository URI of the report to run parameters. For more information, see <span>Source and Input Controls</span>.</p></td>
+<td><p>A container for the properties that define the repository URI of the report to run parameters. For more information, see <a href="#source-and-input-controls">Source and Input Controls</a>.</p></td>
 </tr>
 <tr>
 <td><p><code>exportType</code><br />
@@ -426,17 +426,17 @@ A valid `alert` descriptor contains the following properties:
 <td><p><code>repository</code><br />
 <code>Destination</code><br />
 (required)</p></td>
-<td><p>A container for properties that define the folders and filenames for the output files that are generated each time a scheduled alert runs successfully. Its properties are defined in <span>Alert Output Properties</span> and the optional <span>FTP Output</span>.</p></td>
+<td><p>A container for properties that define the folders and filenames for the output files that are generated each time a scheduled alert runs successfully. Its properties are defined in <a href="#alert-output-properties">Alert Output Properties</a> and the optional <a href="#ftp-output">FTP Output</a>.</p></td>
 </tr>
 <tr>
 <td><p><code>mailNotification</code><br />
 (required)</p></td>
-<td><p>A container for properties that define email recipients when an alert runs successfully. You can customize the contents of the email and whether the report output files are sent as attachments or links. For more information, see <span>Alert Output Email</span>.</p></td>
+<td><p>A container for properties that define email recipients when an alert runs successfully. You can customize the contents of the email and whether the report output files are sent as attachments or links. For more information, see <a href="#alert-output-email">Alert Output Email</a>.</p></td>
 </tr>
 <tr>
 <td><p><code>systemNotification</code><br />
 (optional)</p></td>
-<td><p>A container for properties that define system status when an alert runs successfully. You can customize the contents of the email and whether the report output files are sent as attachments or links. For more information, see <span>Alert Output Email</span>.</p></td>
+<td><p>A container for properties that define system status when an alert runs successfully. You can customize the contents of the email and whether the report output files are sent as attachments or links. For more information, see <a href="#alert-output-email">Alert Output Email</a>.</p></td>
 </tr>
 <tr>
 <td><p><code>lastError</code><br />
@@ -782,7 +782,7 @@ The output properties define the folders and filenames for the output files that
 <tr>
 <td><p><code>outputFTPInfo</code><br />
 (optional)</p></td>
-<td><p>It contains parameters for writing alert output files to a remote FTP location. For more information, see <span>FTP Output</span>.</p></td>
+<td><p>It contains parameters for writing alert output files to a remote FTP location. For more information, see <a href="#ftp-output">FTP Output</a>.</p></td>
 </tr>
 </tbody>
 </table>

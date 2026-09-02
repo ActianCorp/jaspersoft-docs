@@ -29,7 +29,7 @@ To export a template in JasperReports Server
 
     ![js AdHoc Template Export](../assets/images/js-AdHoc-Template-Export.png)
 
-    *Figure 1: Export Dialog Box*
+    *Figure 1 Export Dialog Box*
 
 4.  If desired, change the default name of the zip file for the exported catalog. This dialog allows only the zip archive format.
 
@@ -53,7 +53,7 @@ To export a template in JasperReports Server
 
 ![js AdHoc Template ImageProperties](../assets/images/js-AdHoc-Template-ImageProperties.png)
 
-*Figure 2: Image Properties Box*
+*Figure 2 Image Properties Box*
 
 To edit a report template in Jaspersoft Studio
 
@@ -75,7 +75,7 @@ To edit a report template in Jaspersoft Studio
 
     ![js AdHoc Template Image](../assets/images/js-AdHoc-Template-Image.png)
 
-    *Figure 3: Create New Image Element Window*
+    *Figure 3 Create New Image Element Window*
 
 9.  Click and drag the image's margins to adjust its size.
 
@@ -85,7 +85,7 @@ To edit a report template in Jaspersoft Studio
 
     ![js AdHoc Template JSS](../assets/images/js-AdHoc-Template-JSS.png)
 
-    *Figure 4: Customized Report Template*
+    *Figure 4 Customized Report Template*
 
 12. Save the template with a new filename.
 
@@ -108,4 +108,4 @@ JasperReports Server displays the report.
 
 ![js AdHoc Template Final](../assets/images/js-AdHoc-Template-Final.png)
 
-*Figure 5: Report with New Template*
+*Figure 5 Report with New Template*

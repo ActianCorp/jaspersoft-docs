@@ -173,11 +173,11 @@ You can see that the **Input Controls** dialog has two tabs "By Shipping Locatio
 
 ![js input controls](../assets/images/js-input%20controls.png)
 
-*Figure 1: By Shipping Location Tab*
+*Figure 1 By Shipping Location Tab*
 
 ![js input controls 2](../assets/images/js-input%20controls%202.png)
 
-*Figure 2: By Shipping Date Tab*
+*Figure 2 By Shipping Date Tab*
 
 ## Customizing the Report Viewer
 
@@ -231,10 +231,10 @@ The following figure shows that the Save icon at the top left, under the report 
 
 ![js Customization ReportViewer Admin](../assets/images/js-Customization-ReportViewer-Admin.png)
 
-*Figure 3: Administrator's View of Modified Report Viewer*
+*Figure 3 Administrator's View of Modified Report Viewer*
 
 The following figure shows the view for an end user, with the Save icon removed.
 
 ![js Customization ReportViewer User](../assets/images/js-Customization-ReportViewer-User.png)
 
-*Figure 4: User's View of Modified Report Viewer*
+*Figure 4 User's View of Modified Report Viewer*

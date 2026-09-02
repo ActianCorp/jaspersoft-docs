@@ -38,7 +38,7 @@ The setting is displayed in the upper left-hand corner of the element in design 
 |                                                                   |
 |-------------------------------------------------------------------|
 | ![jss 508c heading full](assets/images/jss-508c-heading-full.png) |
-| *Figure 1: A static text element tagged as Full*                  |
+| *Figure 1 A static text element tagged as Full*                   |
 
 To tag multiple elements as a heading
 
@@ -50,7 +50,7 @@ In **Design** view, the start of a multi-element heading is shown in the upper l
 |  |
 |----|
 | ![jss 508c heading start end](assets/images/jss-508c-heading-start-end.png) |
-| *Figure 2: Text fields tagged as start and end* |
+| *Figure 2 Text fields tagged as start and end* |
 
 To remove a heading tag from an element
 
@@ -92,7 +92,7 @@ When the `net.sf.jasperreports.components.table.generate.pdf.tags` is set at the
 |                                                         |
 |---------------------------------------------------------|
 | ![jss 508c enabled](assets/images/jss-508c-enabled.png) |
-| *Figure 3: Table with tagging enabled*                  |
+| *Figure 3 Table with tagging enabled*                   |
 
 ### Manually Tagging Tables and Lists
 
@@ -139,7 +139,7 @@ Once you have inserted your 508C tags correctly, you must set the PDF export par
     |  |
     |----|
     | ![jss preview pdf export parameters common](assets/images/jss-preview-pdf-export-parameters-common.png) |
-    | *Figure 4: PDF Export Parameters tab in report preview* |
+    | *Figure 4 PDF Export Parameters tab in report preview* |
 
 6.  Select **Is Tagged**.
 
@@ -148,7 +148,7 @@ Once you have inserted your 508C tags correctly, you must set the PDF export par
     |  |
     |----|
     | ![jss preview pdf export parameters common 508c](assets/images/jss-preview-pdf-export-parameters-common-508c.png) |
-    | *Figure 5: 508C tags in the PDF Export Parameters tab* |
+    | *Figure 5 508C tags in the PDF Export Parameters tab* |
 
 8.  Select the correct data adapter and run your report.
 
@@ -228,7 +228,7 @@ To define JSON export object metadata in your report
     |  |
     |----|
     | ![jss JSON Metadata Preview](assets/images/jss-JSON-Metadata-Preview.png) |
-    | *Figure 6: Selecting the JSON Metadata Preview* |
+    | *Figure 6 Selecting the JSON Metadata Preview* |
 
 12. Review the structure of the data to ensure your application can interpret it.
 

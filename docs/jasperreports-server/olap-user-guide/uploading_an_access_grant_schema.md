@@ -19,7 +19,7 @@ To upload an access grant schema (AGXML)
 
     ![ja add access grant definition agxml](assets/images/ja-add-access-grant-definition-agxml.png)
 
-    *Figure 1: Upload a File From Your Local Computer - Access Grant Schema*
+    *Figure 1 Upload a File From Your Local Computer - Access Grant Schema*
 
 4.  Under **Path to File**, click **Choose File** and locate the access grant schema you want to add.
 

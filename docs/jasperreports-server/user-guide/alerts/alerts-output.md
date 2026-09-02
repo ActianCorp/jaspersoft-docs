@@ -13,4 +13,4 @@ On the **Output** tab, you can change these settings:
 
 ![js alert create output](../assets/images/js-alert-create-output.png)
 
-*Figure 1: Output Tab*
+*Figure 1 Output Tab*

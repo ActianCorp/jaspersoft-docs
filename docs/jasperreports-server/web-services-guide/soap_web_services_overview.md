@@ -11,8 +11,9 @@ description: "With the completion of the REST v2 API in JasperReports® Server 5
 
 For now, the SOAP web services are still available at the following URLs, where `<host>` is the name of the computer hosting JasperReports Server and `<port>` is the port you specified during installation:
 
+**SOAP - Deprecated Web Services and URLs**
+
 <table>
-<caption><p><em>Table 1-1 SOAP - Deprecated Web Services and URLs</em></p></caption>
 <thead>
 <tr>
 <th><p>Edition</p></th>

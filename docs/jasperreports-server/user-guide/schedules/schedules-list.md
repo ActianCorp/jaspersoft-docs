@@ -27,7 +27,7 @@ The Schedules page shows the following:
 
 ![schedule alerts](../assets/images/schedule_alerts.png)
 
-*Figure 1: The Schedules Page*
+*Figure 1 The Schedules Page*
 
 In the Schedules page, you can now do the following tasks:
 

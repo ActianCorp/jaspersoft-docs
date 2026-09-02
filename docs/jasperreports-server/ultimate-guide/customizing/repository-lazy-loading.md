@@ -13,8 +13,9 @@ Lazy loading speeds up the load time of the repository tree because JasperRepor
 
 To enable lazy loading for the JasperReports Wizard's repository trees, you will need to add a new property to the appropriate beans in the repository tree configuration files. The following table contains the configuration files and bean IDs for the JasperReports Wizard's repository trees.
 
+**Repository Tree Configuration Files**
+
 <table>
-<caption><p>Repository Tree Configuration Files</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />

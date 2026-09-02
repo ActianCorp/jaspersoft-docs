@@ -28,14 +28,14 @@ To create a template
     |  |
     |----|
     | ![jss Repository Templates](../assets/images/jss-Repository-Templates.png) |
-    | *Figure 1: Accessing the Templates directory from Jaspersoft Studio* |
+    | *Figure 1 Accessing the Templates directory from Jaspersoft Studio* |
 
 3.  Right-click **A4 Landscape** and choose **Open in Editor**.
 
     |  |
     |----|
     | ![jss templates a4landscape](../assets/images/jss-templates-a4landscape.png) |
-    | *Figure 2: Default A4 landscape template* |
+    | *Figure 2 Default A4 landscape template* |
 
     The document will look empty, but if you click the **Source** tab, you see that attributes are set at the JRXML level. Note the attributes for ChartTitle:
 
@@ -50,7 +50,7 @@ To create a template
     |  |
     |----|
     | ![jss templates styles properties](../assets/images/jss-templates-styles-properties.png) |
-    | *Figure 3: Style tab in Properties view* |
+    | *Figure 3 Style tab in Properties view* |
 
 6.  Make these changes:
 
@@ -73,7 +73,7 @@ To save and publish a template
     |  |
     |----|
     | ![jss templates publishwizard](../assets/images/jss-templates-publishwizard.png) |
-    | *Figure 4: Report Publishing wizard* |
+    | *Figure 4 Report Publishing wizard* |
 
 3.  Select a folder to store your template, and click **Next**.
 
@@ -86,4 +86,4 @@ The **Inheritance** tab in the **Properties** view shows you which styles are in
 |  |
 |----|
 | ![jss templates styles inheritance](../assets/images/jss-templates-styles-inheritance.png) |
-| *Figure 5: Inheritance tab* |
+| *Figure 5 Inheritance tab* |

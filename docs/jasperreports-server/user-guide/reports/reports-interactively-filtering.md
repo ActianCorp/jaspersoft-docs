@@ -7,6 +7,8 @@ description: "If the report output contains more information than you want, inte
 
 If the report output contains more information than you want, interactively filter it to display just what you need. You conditionally filter the report output by first selecting the column to use as a basis for filtering. Next, you enter a filter condition, then a value for comparison. The server compares each field of the column to the value that meets the condition. In Table 3‑5 you can see the conditions available for each type of column: numeric, date, and text.
 
+**Interactive Filtering Conditions**
+
 | Numeric                  | Date            | Text                |
 |--------------------------|-----------------|---------------------|
 | Equals                   | Equals          | Equals              |
@@ -17,8 +19,6 @@ If the report output contains more information than you want, interactively filt
 | Less than or equal to    | Is before       | Does not start with |
 | Is between               | Is on or after  | Ends with           |
 | Is not between           | Is after        | Does not end with   |
-
-Interactive Filtering Conditions
 
 To interactively filter report data
 
@@ -36,14 +36,14 @@ To interactively filter report data
 
     ![js Report IV Filter](../assets/images/js-Report-IV-Filter.png)
 
-    *Figure 1: Filter Column Dialog*
+    *Figure 1 Filter Column Dialog*
 
 6.  Click **OK**.<br>
     The view of the report changes to show the filtered output. For example, now the Accounts Report only shows accounts in the 408 area code.
 
     ![js filteredReport](../assets/images/js-filteredReport.png)
 
-    *Figure 2: Filtered Report Shows Only Accounts in Area Code 408*
+    *Figure 2 Filtered Report Shows Only Accounts in Area Code 408*
 
     A small star icon appears in the heading of the filtered column, to the right of the heading text.
 

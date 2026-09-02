@@ -9,12 +9,12 @@ This chapter demonstrates several ways for REST client applications to authentic
 
 This chapter includes the following sections:
 
--   Overview of REST Authentication
--   HTTP Basic Authentication
--   Argument-based Authentication
--   The login Service
--   Login Encryption (Deprecated)
--   Logout
+-   [Overview of REST Authentication](#overview-of-rest-authentication)
+-   [HTTP Basic Authentication](#http-basic-authentication)
+-   [Argument-based Authentication](#argument-based-authentication)
+-   [The login Service](#the-login-service)
+-   [Login Encryption (Deprecated)](#login-encryption-deprecated)
+-   [Logout](#logout)
 
 ## Overview of REST Authentication
 
@@ -26,19 +26,19 @@ When using the REST API, the client application must provide a valid user ID and
 
     Normally, RESTful implementations do not rely on the persistent user sessions, such as the login service and user sessions stored on the server. However, the JasperReports Server architecture automatically creates user sessions internally, and the login method takes advantage of this. There are several use cases for either type of authentication.
 
--   If your client makes sporadic requests, for example running a report every hour, it is easier to use basic authentication and send the credentials with each request. See 1.1, “HTTP Basic Authentication,” on page 1.
+-   If your client makes sporadic requests, for example running a report every hour, it is easier to use basic authentication and send the credentials with each request. See [1.1, “HTTP Basic Authentication,” on page 1](#http-basic-authentication).
 
--   If a username or password contains UTF-8 characters, it may be corrupted by basic authentication and the service will always return an error. In this case, you can send the username and password in URL arguments with each request. See 1.1, “Argument-based Authentication,” on page 1.
+-   If a username or password contains UTF-8 characters, it may be corrupted by basic authentication and the service will always return an error. In this case, you can send the username and password in URL arguments with each request. See [1.1, “Argument-based Authentication,” on page 1](#argument-based-authentication).
 
--   If your client applications perform many requests in a short time, you can avoid the overhead of stateless authentication by using the login service once and passing the session ID cookie instead with each request. For more information, see 1.1, “The login Service,” on page 1.
+-   If your client applications perform many requests in a short time, you can avoid the overhead of stateless authentication by using the login service once and passing the session ID cookie instead with each request. For more information, see [1.1, “The login Service,” on page 1](#the-login-service).
 
--   However, sessions are kept for 20 minutes by default, so if your client makes a request every 15 minutes with the same credentials, the corresponding session is kept in memory indefinitely. This can be a problem if you have many different clients running large reports, because some report output is stored in the user session, and they can fill up the available memory. In this case, you should use the log out call to make sure the memory is freed. For more information, see 1.1, “Logout,” on page 1.
+-   However, sessions are kept for 20 minutes by default, so if your client makes a request every 15 minutes with the same credentials, the corresponding session is kept in memory indefinitely. This can be a problem if you have many different clients running large reports, because some report output is stored in the user session, and they can fill up the available memory. In this case, you should use the log out call to make sure the memory is freed. For more information, see [1.1, “Logout,” on page 1](#logout).
 
     As with logging in from the web UI, you can send a user-specific locale and time zone during REST API authentication. To specify a locale and timezone, choose from the following possibilities:
 
--   Use locale and time zone arguments on any REST API to specify the language and time in the response, for example to localize a report. It is also possible for the same user to make several requests with different locales or time zones. Once you specify a locale or time zone for a given user, the server sets a cookie so that it applies to all requests. See 1.1, “Argument-based Authentication,” on page 1.
+-   Use locale and time zone arguments on any REST API to specify the language and time in the response, for example to localize a report. It is also possible for the same user to make several requests with different locales or time zones. Once you specify a locale or time zone for a given user, the server sets a cookie so that it applies to all requests. See [1.1, “Argument-based Authentication,” on page 1](#argument-based-authentication).
 
--   When doing many requests with the same locale and time zone, you can also specify the locale and time zone arguments with the login service. The language and time will be set with a cookie for all future requests. See 1.1, “The login Service,” on page 1.
+-   When doing many requests with the same locale and time zone, you can also specify the locale and time zone arguments with the login service. The language and time will be set with a cookie for all future requests. See [1.1, “The login Service,” on page 1](#the-login-service).
 
 -   If you never specify any locale or time zone arguments, the default locale and default time zone on the server will be used for all operations.
 
@@ -46,11 +46,11 @@ When using the REST API, the client application must provide a valid user ID and
 
 -   If your server is configured with an external authentication that requires a username and password, such as LDAP, then you can use any authentication method that submits those values: HTTP basic authentication, argument-based authentication, or the login service with credentials in arguments or the request body. However, repeatedly verifying external credentials might cause performance issue, in which case you should use the login service and the session cookie it returns.
 
--   If your server is configured with SSO (Single Sign-On), use the updated v2 login service to send the token. For more information, see 1.1, “The login Service,” on page 1.
+-   If your server is configured with SSO (Single Sign-On), use the updated v2 login service to send the token. For more information, see [1.1, “The login Service,” on page 1](#the-login-service).
 
--   If your server is configured with Pre-Authentication, specify the `pp` argument in every API request, as shown in 1.1, “Argument-based Authentication,” on page 1.
+-   If your server is configured with Pre-Authentication, specify the `pp` argument in every API request, as shown in [1.1, “Argument-based Authentication,” on page 1](#argument-based-authentication).
 
-None of these authentication methods provide privacy, meaning that passwords are sent in plain text or easily reversed encodings. Jaspersoft recommends that you configure your server and clients to use HTTPS to provide end-to-end privacy and security. Alternatively, JasperReports Server has a login encryption feature that hides passwords. If this feature is enabled on your server, you must encrypt your passwords before sending them in REST requests. For more information, see 1.1, “Login Encyrption,” on page 1.
+None of these authentication methods provide privacy, meaning that passwords are sent in plain text or easily reversed encodings. Jaspersoft recommends that you configure your server and clients to use HTTPS to provide end-to-end privacy and security. Alternatively, JasperReports Server has a login encryption feature that hides passwords. If this feature is enabled on your server, you must encrypt your passwords before sending them in REST requests. For more information, see [1.1, “Login Encyrption,” on page 1](#login-encryption-deprecated).
 
 ## HTTP Basic Authentication
 
@@ -65,7 +65,7 @@ The REST API services accept the same accounts and credentials as the JasperRepo
 
 When your server implements external authentication, such as using LDAP, you can submit the username and password with basic HTTP authentication as well.
 
-If log in encryption is enabled in your server, then you must encrypt the password before base64-encoding it with the username. For more information about encryption, see 1.1, “Login Encryption,” on page 1.
+If log in encryption is enabled in your server, then you must encrypt the password before base64-encoding it with the username. For more information about encryption, see [1.1, “Login Encryption,” on page 1](#login-encryption-deprecated).
 
 ## Argument-based Authentication
 
@@ -104,7 +104,7 @@ Use the following arguments as an alternate method to send user credentials in a
 <tr>
 <td><p><span>j_password</span></p></td>
 <td><p>Text</p></td>
-<td colspan="2"><p>The user’s password. The argument is optional but authentication fails without the password. If the server has login encryption enabled, the password must be encrypted as explained in <span>1.1, “Login Encryption,” on page 1</span>.</p></td>
+<td colspan="2"><p>The user’s password. The argument is optional but authentication fails without the password. If the server has login encryption enabled, the password must be encrypted as explained in <a href="#login-encryption-deprecated">1.1, “Login Encryption,” on page 1</a>.</p></td>
 </tr>
 <tr>
 <td><span>pp</span></td>
@@ -147,11 +147,11 @@ http[s]://<host>:<port>/jasperserver[-pro]/rest_v2/resources/Public?pp=u%3Djoeus
 %7Cr%3DUSER,SALES%7Co%3DHeadquarters%7Cpa1%3DUSA%7Cpa2%3DLosAngeles
 ```
 
-Even if you implement HTTPS, you should be aware that plain-text passwords in URLs may appear in your app server's logs, and you should protect such log files. To prevent this security issue, change your logging rules or implement login encryption as described in 1.1, “Login Encryption,” on page 1.
+Even if you implement HTTPS, you should be aware that plain-text passwords in URLs may appear in your app server's logs, and you should protect such log files. To prevent this security issue, change your logging rules or implement login encryption as described in [1.1, “Login Encryption,” on page 1](#login-encryption-deprecated).
 
 ## The login Service
 
-The login service allows your client to send user credentials to the server, verify the credentials, and receive a session cookie. By explicitly creating and maintaining a user session, your client can manage the user session and optimize the resources it uses. For more information, see 1.1, “Overview of REST Authentication,” on page 1.
+The login service allows your client to send user credentials to the server, verify the credentials, and receive a session cookie. By explicitly creating and maintaining a user session, your client can manage the user session and optimize the resources it uses. For more information, see [1.1, “Overview of REST Authentication,” on page 1](#overview-of-rest-authentication).
 
 As of JasperReports Server 8.2, reports executions and Input Controls are no longer session dependent. The new behavior is as follows:
 
@@ -173,7 +173,7 @@ The rest_v2/login service allows REST clients to submit authentication credentia
 
 When external authentication such as LDAP is configured in the server, clients are still required to submit the username and password in one of the first two methods above.
 
-Sending passwords in plain text is strongly discouraged, therefore Jaspersoft recommends that you configure your server and clients to use HTTPS, or that you use the login encryption feature. For more information, see 1.1, “Login Encyrption,” on page 1.
+Sending passwords in plain text is strongly discouraged, therefore Jaspersoft recommends that you configure your server and clients to use HTTPS, or that you use the login encryption feature. For more information, see [1.1, “Login Encyrption,” on page 1](#login-encryption-deprecated).
 
 <table>
 <colgroup>
@@ -208,7 +208,7 @@ Sending passwords in plain text is strongly discouraged, therefore Jaspersoft re
 <tr>
 <td><p><span>j_password</span></p></td>
 <td><p>Text</p></td>
-<td colspan="2"><p>The user’s password. The argument is optional but authentication fails without the password. If the server has login encryption enabled, the password must be encrypted as explained in <span>1.1, “Login Encryption,” on page 1</span>.</p></td>
+<td colspan="2"><p>The user’s password. The argument is optional but authentication fails without the password. If the server has login encryption enabled, the password must be encrypted as explained in <a href="#login-encryption-deprecated">1.1, “Login Encryption,” on page 1</a>.</p></td>
 </tr>
 <tr>
 <td><p><span>ticket</span></p></td>
@@ -287,7 +287,7 @@ Cookie: $Version=0; JSESSIONID=52E79BCEE51381DF32637EC69AD698AE; $Path=/jasperse
 
 By default, the session timeout on the server is 20 minutes of inactivity. Beyond that time, requests using the session cookie fails due to lack of authentication. Your client will need to authenticate again using any of the methods described in this chapter.
 
-Maintaining a session with cookies is not mandatory, and your application can use any combination of session cookie, stateless authentication, or both. However, if you use the session ID, it is good practice to close the session as described in 1.1, “Logout,” on page 1. Closing the session frees up any associated resources in memory.
+Maintaining a session with cookies is not mandatory, and your application can use any combination of session cookie, stateless authentication, or both. However, if you use the session ID, it is good practice to close the session as described in [1.1, “Logout,” on page 1](#logout). Closing the session frees up any associated resources in memory.
 
 ## Login Encryption (Deprecated)
 

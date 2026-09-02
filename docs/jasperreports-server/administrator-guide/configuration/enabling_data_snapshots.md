@@ -133,6 +133,6 @@ If you clear the **Data Snapshot Output Format** option, no copy of the report i
 
 ![js DataSnapshot scheduling](../assets/images/js-DataSnapshot-scheduling.png)
 
-*Figure 1: The Data Snapshot Output Option in the Scheduler*
+*Figure 1 The Data Snapshot Output Option in the Scheduler*
 
 Finally, when data snapshots are enabled, you can also update them through REST web services calls. When specifying the report to run with the `rest_v2/reportExecutions` service, you can add arguments to explicitly update or not update the associated data snapshot. For more information, see the JasperReports Server REST API Reference.

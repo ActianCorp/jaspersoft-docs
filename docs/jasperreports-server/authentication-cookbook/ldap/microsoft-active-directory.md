@@ -7,8 +7,8 @@ description: "Microsoft Active Directory can be used to authenticate users throu
 
 Microsoft Active Directory can be used to authenticate users through the `ldapAuthenticationProvider` provided by Spring Security. When setting up an LDAP provider for Active Directory, you should be aware of the following:
 
--   You must use configure user search to work with the `sAMAccountName` attribute containing the user’s login name. See Configuring User Search for Active Directory for more information.
--   You may need to set the Spring `referral` property in `LdapContextSource` to `follow`. See Configuring the Spring Referral Property for more information.
+-   You must use configure user search to work with the `sAMAccountName` attribute containing the user’s login name. See [Configuring User Search for Active Directory](#configuring-user-search-for-active-directory) for more information.
+-   You may need to set the Spring `referral` property in `LdapContextSource` to `follow`. See [Configuring the Spring Referral Property](#configuring-the-spring-referral-property) for more information.
 
 In addition, the structure of an Active Directory instance can become quite complex and this can be a challenge when setting up user search.
 

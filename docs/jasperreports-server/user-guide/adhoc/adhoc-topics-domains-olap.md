@@ -7,11 +7,11 @@ description: "The following repository objects provide a prepared connection to 
 
 The following repository objects provide a prepared connection to a data source for Ad Hoc view creation:
 
--   Topics , JRMXL files are created externally and uploaded to JasperReports Server as a basis for Ad Hoc views.
+-   [Topics](#topics) , JRMXL files are created externally and uploaded to JasperReports Server as a basis for Ad Hoc views.
 
--   Domains , virtual views of a data source that present the data in business terms, allow for localization, and provide data-level security.
+-   [Domains](#domains) , virtual views of a data source that present the data in business terms, allow for localization, and provide data-level security.
 
--   OLAP Connections , multi-dimensional views of data that allow users to analyze a large number of aggregate data levels.
+-   [OLAP Connections](#olap-connections) , multi-dimensional views of data that allow users to analyze a large number of aggregate data levels.
 
 You can also open and edit an existing Ad Hoc view to create a new Ad Hoc view. After editing the Ad Hoc view, if you close the Ad Hoc view without saving the changes, you are prompted to save or cancel the changes.
 

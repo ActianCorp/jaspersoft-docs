@@ -15,13 +15,13 @@ The system admin (`superuser`) can view all the organizations in the server, as 
 
 ![js ManageOrgs superuser](../assets/images/js-ManageOrgs-superuser.png)
 
-*Figure 1: System Admin View of Manage Organizations Page*
+*Figure 1 System Admin View of Manage Organizations Page*
 
 The following figure shows the same repository as seen by the admin of Organization (`jasperadmin`). It shows that this administrator's view is limited to his own organization and its suborganizations, and he can access and manage only those.
 
 ![js ManageOrgs jasperadmin](../assets/images/js-ManageOrgs-jasperadmin.png)
 
-*Figure 2: Organization Admin View of Manage Organizations Page*
+*Figure 2 Organization Admin View of Manage Organizations Page*
 
 ## Viewing Organization Properties
 
@@ -63,7 +63,7 @@ The following figure shows the same repository as seen by the admin of Organizat
 
     ![js ManageOrgs AddOrg investments](../assets/images/js-ManageOrgs-AddOrg-investments.png)
 
-    *Figure 3: Adding an Organization*
+    *Figure 3 Adding an Organization*
 
 5.  Enter the **Organization Name**. The server automatically fills in the ID and alias based on the name. You can change the ID and alias if needed before saving the organization. Once saved, the organization ID can no longer be modified. The **Description** is optional. The previous figure shows this dialog with sample values.
 
@@ -113,7 +113,7 @@ Finally, the **Folder Template** itself is copied into a new organization, so ea
 
     ![js ManageOrgs Edit Investments](../assets/images/js-ManageOrgs-Edit-Investments.png)
 
-    *Figure 4: Editing Properties of an Organization*
+    *Figure 4 Editing Properties of an Organization*
 
 5.  Edit the organization **Properties** as needed. Changing the **Organization Name** changes the name of the organization's folder, as well, but no other data. You can change the alias and description. The organization ID is defined when the organization was created and cannot be modified.
 

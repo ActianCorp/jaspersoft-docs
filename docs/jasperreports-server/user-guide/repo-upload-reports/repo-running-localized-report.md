@@ -43,6 +43,6 @@ The currency and dates in the report output header map to Romanian locale settin
 
 ![js AddJasperReport Romanian options](../assets/images/js-AddJasperReport-Romanian-options.png)
 
-*Figure 1: A Report Localized for the Romanian Locale*
+*Figure 1 A Report Localized for the Romanian Locale*
 
 By default, the web interface elements appear in US English when you choose an unsupported locale, such as the Romanian locale. If you choose a supported language, the web interface elements appear in that language. Supported languages are Chinese (Simplified), French, German, Japanese, and Spanish. You can customize the server to support additional languages. You can translate the web interface into a different language, server property names, and messages in another language. For some locales, you may also need to change the default locale and time zone. For more information about localizing the server, see the JasperReports Server Administrator Guide.

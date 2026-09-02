@@ -21,6 +21,3 @@ Applies to Jaspersoft **10.1.0**.
 - [Upgrade JasperReports Web Studio](upgrade-jrws.md)
 - [Planning Your Upgrade](plan-upgrade-intro.md)
 - [Working With JDBC Drivers](jdbc-driver.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](jrs-install-guide/warfileinstall/additional_steps_for_using_db2_and_j.md)

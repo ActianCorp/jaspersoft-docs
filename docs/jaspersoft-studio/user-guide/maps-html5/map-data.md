@@ -9,7 +9,7 @@ The HTML5 Maps are a kind of Highcharts that lets you explore geographic maps. J
 
 -   This chapter has the following sections:
 
--   Map Data Set
+-   [Map Data Set](#map-data-set)
 
 -   [Chart Data Set](chart-data.md)
 
@@ -27,11 +27,11 @@ The GeoJSON format contains some general information such as title and copyright
 
 This section describes:
 
--   Creating a Simple HTML5 Map Component
+-   [Creating a Simple HTML5 Map Component](#creating-a-simple-html5-map-component)
 
--   Customizing HTML5 Map Components
+-   [Customizing HTML5 Map Components](#customizing-html5-map-components)
 
--   Customizing the Map Copyright Information
+-   [Customizing the Map Copyright Information](#customizing-the-map-copyright-information)
 
 ### Creating a Simple HTML5 Map Component
 
@@ -53,7 +53,7 @@ To create the simple map component
 |                                                                          |
 |--------------------------------------------------------------------------|
 | ![jss html5 map component](../assets/images/jss-html5-map-component.png) |
-| *Figure 1: Simple HTML5 Map Component Example*                           |
+| *Figure 1 Simple HTML5 Map Component Example*                            |
 
 ### Customizing HTML5 Map Components
 
@@ -87,7 +87,7 @@ Adding background color and border to the map
         |                                                                      |
         |----------------------------------------------------------------------|
         | ![jss html5 map bgcolor](../assets/images/jss-html5-map-bgcolor.png) |
-        | *Figure 2: Background Color of the Map*                              |
+        | *Figure 2 Background Color of the Map*                               |
 
         To set the color of the entire map
 
@@ -102,14 +102,14 @@ Adding background color and border to the map
             |  |
             |----|
             | ![jss map custom color settings](../assets/images/jss-map-custom%20color-settings.png) |
-            | *Figure 3: Customizing Map Color* |
+            | *Figure 3 Customizing Map Color* |
 
         2.  Click ![jss icon html5 refresh preview](../assets/images/jss-icon-html5-refresh-preview.png) to refresh the preview.
 
         |                                                          |
         |----------------------------------------------------------|
         | ![jss map preview](../assets/images/jss-map-preview.png) |
-        | *Figure 4: Preview in the HTML5 Map Edit Dialog*         |
+        | *Figure 4 Preview in the HTML5 Map Edit Dialog*          |
 
         You can color each state or region with a different color. To do so, select the **Plot Options** section and set **Color by Point** to true. Color for each region is picked from the **Color Palette**. The process flows in a circular way. When the last color is picked up from the palette, the next color is the first color in the same palette.
 
@@ -125,7 +125,7 @@ Adding background color and border to the map
         |  |
         |----|
         | ![jss html5 map innerborder](../assets/images/jss-html5-map-innerborder.png) |
-        | *Figure 5: Simple Map with Inner Borders and Color by Point Property Enabled* |
+        | *Figure 5 Simple Map with Inner Borders and Color by Point Property Enabled* |
 
         To change the cursor type
 
@@ -136,7 +136,7 @@ Adding background color and border to the map
         |  |
         |----|
         | ![jss html5 map cursor type](../assets/images/jss-html5-map-cursor-type.png) |
-        | *Figure 6: Selecting Cursor Type* |
+        | *Figure 6 Selecting Cursor Type* |
 
         Using the Map Component
 
@@ -168,4 +168,4 @@ To customize the map copyright information
 |                                                                          |
 |--------------------------------------------------------------------------|
 | ![jss html5 map copyright](../assets/images/jss-html5-map-copyright.png) |
-| *Figure 7: Customizing Map Copyright Information*                        |
+| *Figure 7 Customizing Map Copyright Information*                         |

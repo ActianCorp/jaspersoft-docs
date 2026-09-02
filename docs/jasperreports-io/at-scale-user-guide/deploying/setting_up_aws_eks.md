@@ -92,7 +92,7 @@ Follow the instructions in the Amazon document to create your Amazon EKS cluster
 Use the following information during the procedure:
 
 -   Choose a name for your cluster, and be aware that it can't be changed later. The examples in this guide use the name `JRIOcluster`.
--   The cluster service role is the one created in “Creating a Cluster Role” on page 1, for example `eksClusterRole`.
+-   The cluster service role is the one created in [“Creating a Cluster Role” on page 1](#creating-a-cluster-role), for example `eksClusterRole`.
 -   No encryption is needed, click Next.
 -   Select the VPC ID that you recorded at the end of the previous section.
 -   Verify that all the subnet IDs from the previous section are included.

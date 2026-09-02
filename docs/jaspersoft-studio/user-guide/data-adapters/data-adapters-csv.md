@@ -14,7 +14,7 @@ To create a connection based on a CSV file
     |  |
     |----|
     | ![jss google maps dataadapter](../assets/images/jss-google-maps-dataadapter.png) |
-    | *Figure 1: CSV Data Adapter* |
+    | *Figure 1 CSV Data Adapter* |
 
 2.  Set a name for the connection.
 
@@ -25,7 +25,7 @@ To create a connection based on a CSV file
 |  |
 |----|
 | ![jss data adapter connection options](../assets/images/jss-data-adapter-connection-options.png) |
-| *Figure 2: HTTP Connection Options* |
+| *Figure 2 HTTP Connection Options* |
 
 In this dialog you can enter the following options:
 
@@ -56,7 +56,7 @@ JasperReports assumes that for each row all the columns have a value (even if th
     |                                                        |
     |--------------------------------------------------------|
     | ![csv separators](../assets/images/csv-separators.png) |
-    | *Figure 3: Separators Tab*                             |
+    | *Figure 3 Separators Tab*                              |
 
 2.  Click **Finish**.
 

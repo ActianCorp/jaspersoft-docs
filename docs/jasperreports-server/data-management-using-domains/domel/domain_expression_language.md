@@ -17,7 +17,7 @@ When processing a report based on a Domain, the server interprets DomEL expressi
 
 This chapter contains the following sections:
 
--   Datatypes
+-   [Datatypes](#datatypes)
 -   [Field References](field_references.md)
 -   [Operators and Functions](operators_and_functions.md)
 -   [SQL Functions](sql_functions.md)

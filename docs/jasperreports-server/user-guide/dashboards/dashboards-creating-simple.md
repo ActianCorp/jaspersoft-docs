@@ -21,7 +21,7 @@ To create a simple dashboard
 
     ![js Dashboard AddReport(Print)](../assets/images/js-Dashboard-AddReport%28Print%29.png)
 
-    *Figure 1: Dragging report onto Dashboard Canvas*
+    *Figure 1 Dragging report onto Dashboard Canvas*
 
 4.  In **Available Content**, find 04. Product Results by Store Type Report.
 
@@ -47,7 +47,7 @@ To create a simple dashboard
 
     ![js Dashboard Example ThreeReportCanvas(Print)](../assets/images/js-Dashboard-Example-ThreeReportCanvas%28Print%29.png)
 
-    *Figure 2: Simple Dashboard Canvas with three reports*
+    *Figure 2 Simple Dashboard Canvas with three reports*
 
 11. Click the **Editing** button and select **Viewing** to preview the dashboard.
 

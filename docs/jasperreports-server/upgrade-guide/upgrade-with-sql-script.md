@@ -13,25 +13,25 @@ This chapter describes the recommended procedure for upgrading to JasperReports 
 
 This chapter contains the following sections:
 
--   Upgrade Steps Overview
+-   [Upgrade Steps Overview](#upgrade-steps-overview)
 
--   Upgrading with Customizations
+-   [Upgrading with Customizations](#upgrading-with-customizations)
 
--   Back Up Your JasperReports Server Instance
+-   [Back Up Your JasperReports Server Instance](#back-up-your-jasperreports-server-instance)
 
--   Exporting Current Repository
+-   [Exporting Current Repository](#exporting-current-repository-data)
 
--   Preparing the JasperReports Server 10.1 WAR File Distribution
+-   [Preparing the JasperReports Server 10.1 WAR File Distribution](#preparing-the-jasperreports-server-101-war-file-distribution)
 
--   Configuring Buildomatic for Your Database and Application Server
+-   [Configuring Buildomatic for Your Database and Application Server](#configuring-buildomatic-for-your-database-and-application-server)
 
--   Upgrading to JasperReports Server 10.1
+-   [Upgrading to JasperReports Server 10.1](#upgrading-to-jasperreports-server-101)
 
--   Starting and Logging into JasperReports Server 10.1
+-   [Starting and Logging into JasperReports Server 10.1](#starting-and-logging-into-jasperreports-server-101)
 
--   Additional Tasks to Complete the Upgrade
+-   [Additional Tasks to Complete the Upgrade](#additional-tasks-to-complete-the-upgrade)
 
--   Old Manual Upgrade Steps
+-   [Old Manual Upgrade Steps](#old-manual-upgrade-steps)
 
 ## Upgrade Steps Overview
 
@@ -47,7 +47,7 @@ These are the general steps used in this section:
 
 5.  Copy `../webapps/jasperserver-pro` directory from Tomcat 9.0 to Tomcat 11.0.x folder.
 
-6.  Run the `js-upgrade` script as described in Upgrading to JasperReports Server 10.1.
+6.  Run the `js-upgrade` script as described in [Upgrading to JasperReports Server 10.1](#upgrading-to-jasperreports-server-101).
 
 If your current instance of JasperReports Server has modifications or extensions, monitor these and reintegrate them into your 10.1 instance after upgrading.
 

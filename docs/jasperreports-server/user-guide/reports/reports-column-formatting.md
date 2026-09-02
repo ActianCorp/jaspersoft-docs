@@ -9,7 +9,7 @@ You can customize the basic formatting of column headings and fields, using the 
 
 ![js dialog formatColumn](../assets/images/js-dialog-formatColumn.png)
 
-*Figure 1: Format Column Dialog*
+*Figure 1 Format Column Dialog*
 
 You can alter a column’s basic formatting or apply conditional formatting to a column.
 

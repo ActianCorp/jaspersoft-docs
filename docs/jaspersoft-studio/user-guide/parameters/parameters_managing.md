@@ -16,12 +16,12 @@ You can manage parameters using the **Outline** view or on the **Parameters** ta
 |                                                |
 |------------------------------------------------|
 | ![parameters](../assets/images/parameters.png) |
-| *Figure 1: Parameters in Outline View*         |
+| *Figure 1 Parameters in Outline View*          |
 
 |  |
 |----|
 | ![jss parameters dataset query](../assets/images/jss-parameters-dataset-query.png) |
-| *Figure 2: Parameters in Dataset and Query Dialog* |
+| *Figure 2 Parameters in Dataset and Query Dialog* |
 
 ### Managing Parameters Using Outline View
 
@@ -49,7 +49,7 @@ Also see [Using the Dataset and Query Dialog](../datasets/dataset_and_query_dial
 |  |
 |----|
 | ![jss parameters properties](../assets/images/jss-parameters-properties.png) |
-| *Figure 3: Parameters - Properties* |
+| *Figure 3 Parameters - Properties* |
 
 ### Basic Parameter Properties
 
@@ -79,11 +79,11 @@ On the **Advanced** tab, you can use the **Properties** field to specify pairs o
 |  |
 |----|
 | ![jss parameters properties advanced tab](../assets/images/jss-parameters-properties-advanced-tab.png) |
-| *Figure 4: Advanced properties for a parameter* |
+| *Figure 4 Advanced properties for a parameter* |
 
 Selecting **Properties**, and clicking **…** brings up the **Properties** dialog. For example, if you have a web services type data adapter, you see the following properties.
 
 |  |
 |----|
 | ![jss parameters advanced properties](../assets/images/jss-parameters-advanced-properties.png) |
-| *Figure 5: Advanced Properties for Parameters* |
+| *Figure 5 Advanced Properties for Parameters* |

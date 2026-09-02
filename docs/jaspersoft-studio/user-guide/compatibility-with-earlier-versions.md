@@ -24,7 +24,7 @@ To set the version of JasperReports Library to use for compiling reports
     |  |
     |----|
     | ![jss preferences compatibility](assets/images/jss-preferences-compatibility.png) |
-    | *Figure 1: Setting JasperReports Library Version* |
+    | *Figure 1 Setting JasperReports Library Version* |
 
 3.  To save your reports in an earlier version of JRXML, select the version you want from the **Version** menu in the **Source .jrxml Version** section of the dialog.
 

@@ -34,7 +34,7 @@ To replace the logo and/or favicon file with your own
 
 ![js Customization MyCompanyLogo](../assets/images/js-Customization-MyCompanyLogo.png)
 
-*Figure 1: MyCompany Logo on Home Page*
+*Figure 1 MyCompany Logo on Home Page*
 
 ## Modifying the CSS File
 

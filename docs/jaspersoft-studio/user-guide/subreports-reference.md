@@ -55,7 +55,7 @@ When a subreport element is selected in the master report, the following propert
 <tr>
 <td><p>Expression</p></td>
 <td><p>(Required) Expression that can be used to load the Jasper object to use when filling the subreport portion of the document. Evaluated at run time to retrieve the Jasper object for the subreport.</p>
-<p>See <span>1.1.2.1, “Expression,” on page 1</span> for more information.</p></td>
+<p>See <a href="#the-expression-property">1.1.2.1, “Expression,” on page 1</a> for more information.</p></td>
 </tr>
 <tr>
 <td><p>Using Cache</p></td>
@@ -141,7 +141,7 @@ One of the most common uses of subreport parameters is to pass the key of a reco
 |  |
 |----|
 | ![jss subreport dataset structure](assets/images/jss-subreport-dataset-structure.png) |
-| *Figure 1: Related datasets in master and subreport* |
+| *Figure 1 Related datasets in master and subreport* |
 
 To pass parameters from the master report to a subreport, you create a set of parameter `name/object` pairs that feed the parameters map of the subreport. To do this, click the `Edit Parameters` button on the Subreport tab of the `Properties` view to open the `Subreport Parameters` dialog.
 
@@ -152,7 +152,7 @@ To pass parameters from the master report to a subreport, you create a set of pa
 |                                                                         |
 |-------------------------------------------------------------------------|
 | ![jss subreport parameters](assets/images/jss-subreport-parameters.png) |
-| *Figure 2: Subreport Parameters dialog*                                 |
+| *Figure 2 Subreport Parameters dialog*                                  |
 
 To configure a parameter you want to pass to the subreport, click **Add** in the **Subreport Parameters** dialog to open the **Parameter Configuration** dialog, which lets you set the following:
 

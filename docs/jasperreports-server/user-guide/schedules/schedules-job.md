@@ -13,7 +13,7 @@ To create a schedule
 
     ![js Schedule EmptyListOfJobs](../assets/images/js-Schedule-EmptyListOfJobs.png)
 
-    *Figure 1: Scheduled Jobs Page*
+    *Figure 1 Scheduled Jobs Page*
 
 3.  Click **Create Schedule**.
 
@@ -25,7 +25,7 @@ To create a schedule
 
     ![js Schedule New Job](../assets/images/js-Schedule-New-Job.png)
 
-    *Figure 2: New Schedule Tab*
+    *Figure 2 New Schedule Tab*
 
 4.  Set a start date, choosing whether to run immediately or on a specific date. If a specific date is selected, click the calendar icon ![js Repository icon Calendar](../assets/images/js-Repository-icon-Calendar.png) to select a start date and time.
 
@@ -49,7 +49,7 @@ To create a schedule
 
     ![js Schedule New Parameters](../assets/images/js-Schedule-New-Parameters.png)
 
-    *Figure 3: Set the Parameter Values Page for Scheduling a Report*
+    *Figure 3 Set the Parameter Values Page for Scheduling a Report*
 
     Saved values, if there are any, appear in a dropdown list at the top of the page, as shown in Figure 3‑17. In the **Use saved values** dropdown, you can set the input controls defined for the report or dashboard you are scheduling. You can set the input values for the scheduled job, and click **Save Current Values** to save the input value as a named set of values.
 

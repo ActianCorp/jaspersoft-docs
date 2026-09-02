@@ -19,25 +19,25 @@ For more information about JasperReports Library configuration, see <http://jasp
 
 The following sections highlight a few of the available options:
 
--   Extending JasperReports Library
+-   [Extending JasperReports Library](#extending-jasperreports-library)
 
--   Changing the Crosstab Limit
+-   [Changing the Crosstab Limit](#changing-the-crosstab-limit)
 
--   Setting a Global Chart Theme
+-   [Setting a Global Chart Theme](#setting-a-global-chart-theme)
 
--   Disabling Interactivity in the Report Viewer
+-   [Disabling Interactivity in the Report Viewer](#disabling-interactivity-in-the-report-viewer)
 
--   Disabling Chart Types in Dashboards
+-   [Disabling Chart Types in Dashboards](#disabling-chart-types-in-dashboards)
 
--   Changing the Pro Charts Rendering Engine
+-   [Changing the Pro Charts Rendering Engine](#changing-the-pro-charts-rendering-engine)
 
--   Configuring a JavaScript Engine for Graphical Report Rendering
+-   [Configuring a JavaScript Engine for Graphical Report Rendering](#configuring-a-javascript-engine-for-graphical-report-rendering)
 
--   Static Export Properties for Highcharts
+-   [Static Export Properties for Highcharts](#static-export-properties-for-high-charts)
 
--   Enabling PDF Accessibility Features in Tables
+-   [Enabling PDF Accessibility Features in Tables](#enabling-pdf-accessibility-features-in-tables)
 
--   Enabling HTML in Tooltips
+-   [Enabling HTML in Tooltips](#enabling-html-in-tooltips)
 
 ## Extending JasperReports Library
 

@@ -43,9 +43,9 @@ You can use the following sources of information to learn about JasperReports Se
 
     This chapter contains the following sections:
 
--   Community and Commercial Editions
+-   [Community and Commercial Editions](#community-and-commercial-editions)
 
--   User Descriptions and Document Maps
+-   [User Descriptions and Document Maps](#user-descriptions-and-document-maps)
 
 ## Community and Commercial Editions
 

@@ -63,8 +63,9 @@ For example, if your database is PostgreSQL, copy `postgresql_master.properties`
 
 2.  Edit the `default_master.properties` file to add the settings for your database and application server. Sample Values for the default_master.properties File lists sample property values for each supported database.
 
+    **Sample Values for the default_master.properties File**
+
     <table>
-    <caption><p>Sample Values for the default_master.properties File</p></caption>
     <colgroup>
     <col style="width: 50%" />
     <col style="width: 50%" />

@@ -9,4 +9,4 @@ The **Zoom on Drill** button ![ja toolbar zoombutton](assets/images/ja-toolbar-z
 
 ![ja toolbar zoom](assets/images/ja-toolbar-zoom.png)
 
-*Figure 1: Zoom on Drill toggled on*
+*Figure 1 Zoom on Drill toggled on*

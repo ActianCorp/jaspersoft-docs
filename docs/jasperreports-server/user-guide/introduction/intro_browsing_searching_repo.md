@@ -11,7 +11,7 @@ To browse the repository, select **View &gt; Repository**. From the repository 
 
 ![js Repository Browse page](../assets/images/js-Repository-Browse-page.png)
 
-*Figure 1: Repository Folders Panel*
+*Figure 1 Repository Folders Panel*
 
 # Searching the Repository
 
@@ -25,7 +25,7 @@ On the search results page, use either the **Filters** panel or **Search** field
 
 ![js Repository icon SearchPage](../assets/images/js-Repository-icon-SearchPage.png)
 
-*Figure 2: Search Results Page*
+*Figure 2 Search Results Page*
 
 To search all resources in the repository
 

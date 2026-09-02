@@ -13,12 +13,12 @@ Because the role ID and organization ID are used in the URL, this service can op
 
 This chapter includes the following sections:
 
--   Searching for Roles
--   Viewing a Role
--   Creating a Role
--   Modifying a Role
--   Setting Role Membership
--   Deleting a Role
+-   [Searching for Roles](#searching-for-roles)
+-   [Viewing a Role](#viewing-a-role)
+-   [Creating a Role](#creating-a-role)
+-   [Modifying a Role](#modifying-a-role)
+-   [Setting Role Membership](#setting-role-membership)
+-   [Deleting a Role](#deleting-a-role)
 
 ## Searching for Roles
 

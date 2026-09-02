@@ -47,7 +47,7 @@ To upload the main JRXML for this example
 
     ![js AddJasperReport SetUp](../assets/images/js-AddJasperReport-SetUp.png)
 
-    *Figure 1: Required Set Up Values*
+    *Figure 1 Required Set Up Values*
 
 6.  Click **Controls & Resources**.
 
@@ -55,7 +55,7 @@ To upload the main JRXML for this example
 
     ![Suggested Resources in the Resources List](../assets/images/Suggested_Resources_in_the_Resources_List.png)
 
-    *Figure 2: Suggested Resources in the Resources List*
+    *Figure 2 Suggested Resources in the Resources List*
 
     A JRXML file does not embed resources, such as images. When the server uploads the JRXML, it tries to detect any missing resources. For example, the Suggested Resources in the Resources List shows that two image files are missing:
 

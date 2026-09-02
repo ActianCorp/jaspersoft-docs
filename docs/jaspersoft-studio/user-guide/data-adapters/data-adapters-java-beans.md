@@ -17,8 +17,9 @@ The collection of JavaBeans data adapter uses an external class (named `Factory`
 
 Suppose that you have a collection of JavaBeans, where the data is represented by a set of objects of type `PersonBean`. The following table shows the code for `PersonBean`, which contains two fields: `name` (the person’s name) and `age`:
 
+**PersonBean example**
+
 <table>
-<caption><p><code>PersonBean</code> example</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -50,8 +51,9 @@ Suppose that you have a collection of JavaBeans, where the data is represented b
 
 To use this collection of beans, you need to create an instance of the `Factory` class. Your class, named `TestFactory`, must contain the actual data that is used by the report. In this case, it is something similar to this:
 
+**PersonBean example - Class result**
+
 <table>
-<caption><p><code>PersonBean</code> example - Class result</p></caption>
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
@@ -98,7 +100,7 @@ The **Data Adapter Wizard** appears (see [Data Adapter Wizard](data-adapters-cre
     |  |
     |----|
     | ![jss data adapter collection of javabeans](../assets/images/jss-data-adapter-collection-of-javabeans.png) |
-    | *Figure 1: Collection of JavaBeans Data Adapter* |
+    | *Figure 1 Collection of JavaBeans Data Adapter* |
 
 2.  Create a name for your adapter.
 
@@ -123,7 +125,7 @@ Drag the fields into the **Detail** band and run the report. (Make sure that the
 |                                                            |
 |------------------------------------------------------------|
 | ![javabeans layout](../assets/images/javabeans-layout.png) |
-| *Figure 2: Layout of a Report Based on JavaBeans*          |
+| *Figure 2 Layout of a Report Based on JavaBeans*           |
 
 If you selected **Use field description** when you specified the properties of your data adapter, the mapping between JavaBean attribute and field value uses the field description instead of the field name.
 

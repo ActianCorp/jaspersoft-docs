@@ -21,13 +21,13 @@ To create a reusable query:
 
     ![js AddQuery NameTheQuery](../assets/images/js-AddQuery-NameTheQuery.png)
 
-    *Figure 1: Add Query - Name the Query Page*
+    *Figure 1 Add Query - Name the Query Page*
 
 4.  Enter a name for the query. Resource ID is filled in automatically, and the description is optional. Click **Next**. The **Link a Data Source** page appears.
 
     ![js AddQuery LinkADataSource](../assets/images/js-AddQuery-LinkADataSource.png)
 
-    *Figure 2: Add Query - Link a Data Source Page*
+    *Figure 2 Add Query - Link a Data Source Page*
 
 5.  Select the data source and click **Next**. Your options are:
 
@@ -37,7 +37,7 @@ To create a reusable query:
 
     ![js AddQuery DefineTheQuery](../assets/images/js-AddQuery-DefineTheQuery.png)
 
-    *Figure 3: Add Query - Define the Query Page*
+    *Figure 3 Add Query - Define the Query Page*
 
     Click **Next**. The **Define the Query** page appears.
 

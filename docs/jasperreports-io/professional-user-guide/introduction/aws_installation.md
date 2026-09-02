@@ -78,7 +78,7 @@ To create a JasperReports IO instance
 
 5.  In the **Stack Name** field, give your CloudFormation stack a unique name.
 
-6.  Select an **InstanceType** from the dropdown. See Supported Instance Types for more information.
+6.  Select an **InstanceType** from the dropdown. See [Supported Instance Types](#supported-instance-types) for more information.
 
 7.  In the **KeyName** field, enter an existing key pair name.
 
@@ -98,7 +98,7 @@ To create a JasperReports IO instance
 
     !!! note
 
-        If you enter an existing S3 bucket's name incorrectly, you experience errors when using JasperReports IO because the S3 bucket does not exist. See Correcting an Invalid S3 Bucket for instructions on fixing the issue.
+        If you enter an existing S3 bucket's name incorrectly, you experience errors when using JasperReports IO because the S3 bucket does not exist. See [Correcting an Invalid S3 Bucket](#correcting-an-invalid-s3-bucket) for instructions on fixing the issue.
 
 15. Click **Next**. The **Options** page appears.
 

@@ -11,11 +11,11 @@ To use a subdataset, you add an element that contains a dataset and define a dat
 
 This chapter has the following sections:
 
--   Understanding Datasets and Dataset Runs
+-   [Understanding Datasets and Dataset Runs](#understanding-datasets-and-dataset-runs)
 
--   Subdatasets
+-   [Subdatasets](#subdatasets)
 
--   Dataset Runs
+-   [Dataset Runs](#dataset-runs_1)
 
 -   [Creating an Example Subdataset](dataset-creating-tutorial.md)
 
@@ -63,7 +63,7 @@ You create a subdataset using the Dataset wizard. To open the Dataset wizard, ri
 |                                                          |
 |----------------------------------------------------------|
 | ![Dataset Wizard](../assets/images/Dataset%20Wizard.png) |
-| *Figure 1: Dataset Wizard*                               |
+| *Figure 1 Dataset Wizard*                                |
 
 The **Dataset** page of the Dataset wizard shows the following options:
 
@@ -84,7 +84,7 @@ The **Dataset** page of the Dataset wizard shows the following options:
     |  |
     |----|
     | ![Data Source page of the Dataset wizard](../assets/images/Data%20Source%20page%20of%20the%20Dataset%20wizard.png) |
-    | *Figure 2: Data Source page of the Dataset wizard* |
+    | *Figure 2 Data Source page of the Dataset wizard* |
 
     The **Data Source** page shows the following options:
 
@@ -107,7 +107,7 @@ When you create a subdataset, it appears as a node in the outline view for your 
 |  |
 |----|
 | ![jss datasets outline view](../assets/images/jss-datasets-outline-view.png) |
-| *Figure 3: Subdataset in report outline view* |
+| *Figure 3 Subdataset in report outline view* |
 
 You cannot use objects coming from the master report dataset directly in an element that uses a subdataset. Only subdataset objects can be used in these cases. To use objects from your main report, you must declare them as parameters in your subdataset. You configure the binding between the main dataset object with the subdataset parameter inside the dataset definition, and then set the values for the parameters inside the dataset run.
 
@@ -124,7 +124,7 @@ The **Properties** view for a dataset shows a number of advanced options, most o
     |                                                                  |
     |------------------------------------------------------------------|
     | ![Dataset properties](../assets/images/Dataset%20properties.png) |
-    | *Figure 4: Dataset properties*                                   |
+    | *Figure 4 Dataset properties*                                    |
 
     A dataset has the following properties:
 
@@ -171,7 +171,7 @@ You create a dataset run when you insert an element that contains a dataset into
 |                                                                      |
 |----------------------------------------------------------------------|
 | ![jss dataset run chart](../assets/images/jss-dataset-run-chart.png) |
-| *Figure 5: Dataset run definition for a chart*                       |
+| *Figure 5 Dataset run definition for a chart*                        |
 
 -   **Dataset** drop-down: Displays all available datasets.
 
@@ -182,7 +182,7 @@ The **Connection/Data Source Expression** menu lets you specify where to get the
 |                                                                      |
 |----------------------------------------------------------------------|
 | ![jss dataset run empty](../assets/images/jss-dataset-run-empty.png) |
-| *Figure 6: Specifying the Data for a Dataset Run*                    |
+| *Figure 6 Specifying the Data for a Dataset Run*                     |
 
 If the main report dataset uses a connection, such as a JDBC connection, you see the following options:
 
@@ -203,7 +203,7 @@ If the main report dataset uses a connection, such as a JDBC connection, you see
     |                                                                          |
     |--------------------------------------------------------------------------|
     | ![jss dataset run adapter](../assets/images/jss-dataset-run-adapter.png) |
-    | *Figure 7: Dataset Run For a Dataset with Metadata*                      |
+    | *Figure 7 Dataset Run For a Dataset with Metadata*                       |
 
 -   **Don't use connection or data source**: Select this if you do not want to specify any data for the dataset run.
 

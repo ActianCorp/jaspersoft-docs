@@ -21,7 +21,7 @@ To create an OLAP view with an XML/A connection:
 
     ![ja add view NameTheView](assets/images/ja-add-view-NameTheView.png)
 
-    *Figure 1: Name the View Page*
+    *Figure 1 Name the View Page*
 
 4.  Enter a name and a description of the view and click **Next**.
 
@@ -41,7 +41,7 @@ Click **Browse**, navigate to the location where you want to add the file, and c
 
     ![ja add view setconnectiontypeandpropertiesxmla](assets/images/ja-add-view-setconnectiontypeandpropertiesxmla.png)
 
-    *Figure 2: Set Connection Type and Properties - XML/A Page*
+    *Figure 2 Set Connection Type and Properties - XML/A Page*
 
     !!! note
 
@@ -53,7 +53,7 @@ Click **Browse**, navigate to the location where you want to add the file, and c
 
     ![ja add view MDXquery](assets/images/ja-add-view-MDXquery.png)
 
-    *Figure 3: Define the Query Page*
+    *Figure 3 Define the Query Page*
 
 3.  In the **Query String** field, enter the MDX query. For example, type:
 

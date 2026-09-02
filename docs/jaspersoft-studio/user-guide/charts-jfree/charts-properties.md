@@ -10,7 +10,7 @@ When you select a chart component in the **Design** tab, the **Properties** view
 |                                                                      |
 |----------------------------------------------------------------------|
 | ![chart properties view](../assets/images/chart-properties-view.jpg) |
-| *Figure 1: Properties View*                                          |
+| *Figure 1 Properties View*                                           |
 
 !!! note
 

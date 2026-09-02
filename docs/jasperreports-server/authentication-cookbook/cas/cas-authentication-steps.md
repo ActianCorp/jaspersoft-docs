@@ -11,7 +11,7 @@ The following figure shows the general protocol during external CAS authenticati
 
 ![js sso CasSequence](../assets/images/js-sso-CasSequence.png)
 
-*Figure 1: General Steps of External CAS Authentication*
+*Figure 1 General Steps of External CAS Authentication*
 
 The overview in this section explains the major steps involved in the protocol between the CAS server and JasperReports Server, as well as the Spring Security beans involved. This chapter does not explain CAS proxies, but it does cover the Spring Security beans used to configure JasperReports Server’s response to CAS proxies.
 

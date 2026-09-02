@@ -9,10 +9,10 @@ To submit a new report unit to the repository, click **Submit** on any page of t
 
 ![js ReportWizard Validation](../assets/images/js-ReportWizard-Validation.png)
 
-*Figure 1: New Report Added to the Repository*
+*Figure 1 New Report Added to the Repository*
 
 In the report viewer, click ![jrs icon report end](../assets/images/jrs-icon-report-end.png) to go to the end of the report, where the logo images that you added appear. The following figure shows the output.
 
 ![js AddJasperReport FinalPage](../assets/images/js-AddJasperReport-FinalPage.png)
 
-*Figure 2: Output of the New Simple Report*
+*Figure 2 Output of the New Simple Report*

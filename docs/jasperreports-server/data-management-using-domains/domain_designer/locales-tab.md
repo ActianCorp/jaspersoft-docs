@@ -11,6 +11,6 @@ You create a separate bundle for each language or locale you want to support. A 
 
 ![js DomainDesigner LocalesTab](../assets/images/js-DomainDesigner-LocalesTab.png)
 
-*Figure 1: Locales Tab with no Locale Bundles*
+*Figure 1 Locales Tab with no Locale Bundles*
 
 For further information about creating locale bundles and uploading them to the Domain, see [Localizing Domains](../localizing/localizing_domains.md).

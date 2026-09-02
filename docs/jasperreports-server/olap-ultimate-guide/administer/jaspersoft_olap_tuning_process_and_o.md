@@ -108,4 +108,4 @@ Figure 5‑13 depicts a load-balanced OLAP environment.
 
 ![ja load balanced arch](../assets/images/ja-load-balanced-arch.png)
 
-*Figure 1: Load-Balanced Jaspersoft OLAP Environment*
+*Figure 1 Load-Balanced Jaspersoft OLAP Environment*

@@ -13,7 +13,7 @@ Click ![ja pro change data cube](../assets/images/ja-pro-change-data-cube.png) t
 
 ![ja ug analysisview tools ChangeDataCube](../assets/images/ja-ug-analysisview-tools-ChangeDataCube.png)
 
-*Figure 1: Change Data Cube Tools*
+*Figure 1 Change Data Cube Tools*
 
 The Change Data Cube dialog configures the information that appears in the navigation table. In the table, the measures are organized as the columns on the right. The measures are aggregations (such as Store Sales) and each row is a summary of the measures in a different dimension, such as Store Sales by Store Country and Store State.
 
@@ -29,7 +29,7 @@ The Dimensions section of the dialog configures the table’s rows. Dimension ro
 
 ![ja ug analysisview foodmart mondrian westcoast topstores](../assets/images/ja-ug-analysisview-foodmart-mondrian-westcoast-topstores.png)
 
-*Figure 2: Measures and Dimensions*
+*Figure 2 Measures and Dimensions*
 
 Measures can be selected, deselected, moved to a different column position, or moved to rows (pivoted).
 
@@ -41,7 +41,7 @@ To configure a measure
 
     ![ja ug analysisview tools ChangeDataCubeMeasures](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures.png)
 
-    *Figure 3: Measures Dialog*
+    *Figure 3 Measures Dialog*
 
 2.  Click a checkbox to select its measure.
 
@@ -53,7 +53,7 @@ To move a measure within its section of the dialog
 
     ![ja ug analysisview tools ChangeDataCubeMeasures movesenabled](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-movesenabled.png)
 
-    *Figure 4: Measures Dialog with Moving Enabled*
+    *Figure 4 Measures Dialog with Moving Enabled*
 
 2.  Click any triangle. The measure selected in step 1, Store Sales, moves down one position in the list.
 
@@ -73,13 +73,13 @@ To move a dimension into the Columns or Rows section of the Change Data Cube dia
 
 ![ja ug analysisview tools ChangeDataCubeMeasures STOREdimension](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-STOREdimension.png)
 
-*Figure 5: STORE Dimension Collapsed*
+*Figure 5 STORE Dimension Collapsed*
 
 The root level of the STORE dimension contains a special member called ALL STORES. Clicking the checkbox next to the member selects all hierarchy levels of the STORE dimension. Clicking ![ja expand member cube config](../assets/images/ja-expand-member-cube-config.jpg) displays the members in the next level of the STORE hierarchy. Select a lower-level member to limit the view to that data.
 
 ![ja ug analysisview tools ChangeDataCubeMeasures STOREdimension expanded](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-STOREdimension-expanded.png)
 
-*Figure 6: STORE Dimension Expanded*
+*Figure 6 STORE Dimension Expanded*
 
 ### Filter
 
@@ -93,7 +93,7 @@ To use a dimension as a filter
 
     ![ja ug analysisview tools ChangeDataCubeMeasures timeasfilter](../assets/images/ja-ug-analysisview-tools-ChangeDataCubeMeasures-timeasfilter.png)
 
-    *Figure 7: TIME Dimension as a Filter*
+    *Figure 7 TIME Dimension as a Filter*
 
 2.  Click the dimension.
 
@@ -101,7 +101,7 @@ To use a dimension as a filter
 
     ![ja ug analysisview tools ChangeDataCube dimsasfilters](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-dimsasfilters.png)
 
-    *Figure 8: Selecting a Member from the TIME Dimension*
+    *Figure 8 Selecting a Member from the TIME Dimension*
 
 3.  Click **Group** to collapse the list of TIME measures into groups of 12 measures each.
 
@@ -117,7 +117,7 @@ The MDX Query Editor contains the MDX query that retrieves the contents of the n
 
 ![ja ug analysisview tools MDXqueryed](../assets/images/ja-ug-analysisview-tools-MDXqueryed.png)
 
-*Figure 9: MDX Query Editor*
+*Figure 9 MDX Query Editor*
 
 An MDX query consists of data sets, query scope, and filter specifications:
 
@@ -147,7 +147,7 @@ To use the sort options, first click ![ja pro editdisplayoptions](../assets/imag
 
 ![ja ug analysisview tools ChangeDataCube EditDisplay options](../assets/images/ja-ug-analysisview-tools-ChangeDataCube-EditDisplay-options.png)
 
-*Figure 10: Sort Options in Display Options Dialog*
+*Figure 10 Sort Options in Display Options Dialog*
 
 Then make your selections in the Sort Options section of the dialog and click **OK**.
 
@@ -177,7 +177,7 @@ You can use the **Sort across cube hierarchy** option to change the navigation t
 
 ![ja ug analysisview tools sortacrosshierarchy](../assets/images/ja-ug-analysisview-tools-sortacrosshierarchy.png)
 
-*Figure 11: Sorting Across the Cube Hierarchy*
+*Figure 11 Sorting Across the Cube Hierarchy*
 
 To do this, set up your analysis view to show the dimensions you want to display in rows, and the measures you want to display in columns. Click the **Sort** icon ![ja table sort](../assets/images/ja-table-sort.png) next to the measure that you want to sort on. Then open the Display Options dialog as described above, and click **Sort across the cube hierarchy**.
 

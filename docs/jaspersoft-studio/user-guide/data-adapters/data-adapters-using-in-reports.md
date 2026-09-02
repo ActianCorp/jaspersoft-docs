@@ -14,7 +14,7 @@ When you choose a data adapter during report creation, the drop-down lists all a
 |  |
 |----|
 | ![jss newreport datasource list](../assets/images/jss-newreport-datasource-list.png) |
-| *Figure 1: List of Data Adapters During Report Creation* |
+| *Figure 1 List of Data Adapters During Report Creation* |
 
 Data adapters are hierarchical. That is, if no adapter is directly defined for a subdataset, it looks for the adapter of its parent dataset, then its parent's parent, and so forth.
 
@@ -45,7 +45,7 @@ Setting the default data adapter
     |  |
     |----|
     | ![jss data adapter open data adapter](../assets/images/jss-data-adapter-open-data-adapter.png) |
-    | *Figure 2: Open Data Adapter Dialog* |
+    | *Figure 2 Open Data Adapter Dialog* |
 
 4.  Choose the format to use for specifying the data adapter location:
 
@@ -63,7 +63,7 @@ The default data adapter is set for the dataset. It is represented in the JRXML 
 |  |
 |----|
 | ![jss data adapters properties default data adapter](../assets/images/jss-data-adapters-properties-default-data-adapter.png) |
-| *Figure 3: Dataset with Default Data Adapter* |
+| *Figure 3 Dataset with Default Data Adapter* |
 
 ### The JasperReports Data Adapter in the UI
 
@@ -72,4 +72,4 @@ When the JasperReports data adapter is present, it is shown as the bottom adapte
 |  |
 |----|
 | ![jss data adapter jrdefault](../assets/images/jss-data-adapter-jrdefault.png) |
-| *Figure 4: List of Data Adapters Including Default Data Adapter* |
+| *Figure 4 List of Data Adapters Including Default Data Adapter* |

@@ -9,7 +9,7 @@ The **Data Presentation** tab is where you specify the columns and calculated fi
 
 ![js DomainDesigner data presentation](../assets/images/js-DomainDesigner-data-presentation.png)
 
-*Figure 1: The Data Presentation Tab*
+*Figure 1 The Data Presentation Tab*
 
 The **Data Presentation** tab contains the following:
 
@@ -109,11 +109,11 @@ The **Sets and Items** list shows the resources you want the user to see, organi
 
 ![js DomainDesigner presentation item properties](../assets/images/js-DomainDesigner-presentation-item-properties.png)
 
-*Figure 2: Item Properties on the Data Presentation Tab*
+*Figure 2 Item Properties on the Data Presentation Tab*
 
 ![js DomainDesigner presentation item properties trino](../assets/images/js-DomainDesigner-presentation-item-properties-trino.png)
 
-*Figure 3: Item Properties on the Data Presentation Tab for Trino-based data source*
+*Figure 3 Item Properties on the Data Presentation Tab for Trino-based data source*
 
 The **Properties** pane of the **Data Presentation** tab lets you refine the Domain's appearance by renaming and providing descriptions for data islands, sets, and items. The following table describes the properties that may appear.
 

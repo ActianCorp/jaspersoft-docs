@@ -9,7 +9,7 @@ From the Getting Started page, you can quickly access the most frequently used f
 
 ![js Home jasperadmin](../assets/images/js-Home-jasperadmin.png)
 
-*Figure 1: Getting Started Page*
+*Figure 1 Getting Started Page*
 
 ## Core Workflows
 

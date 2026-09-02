@@ -9,16 +9,16 @@ The initialization of the script sets the authentication method and credentials 
 
 This chapter contains the following sections:
 
--   Authentication Properties
--   Authentication Functions
--   Login With Plain Text Credentials
--   Login With SSO Token
--   Logging Out
--   Login With Hooks
--   UI for Login/Logout
--   UI for Login/Logout With SSO Token
--   Sharing Credentials Between Calls
--   Using Visualize.js Without Authentication
+-   [Authentication Properties](#authentication-properties)
+-   [Authentication Functions](#authentication-functions)
+-   [Login With Plain Text Credentials](#login-with-plain-text-credentials)
+-   [Login With SSO Token](#login-with-sso-token)
+-   [Logging Out](#logging-out)
+-   [Login With Hooks](#login-with-hooks)
+-   [UI for Login/Logout](#ui-for-loginlogout)
+-   [UI for Login/Logout With SSO Token](#ui-for-loginlogout-with-sso-token)
+-   [Sharing Credentials Between Calls](#sharing-credentials-among-calls)
+-   [Using Visualize.js Without Authentication](#using-visualizejs-without-authentication)
 
 ## Authentication Properties
 

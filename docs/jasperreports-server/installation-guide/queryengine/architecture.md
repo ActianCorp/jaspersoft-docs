@@ -10,7 +10,7 @@ When deployed, the scalable query engine has a container-based architecture wher
 |  |
 |----|
 | ![js Scalable Query Engine](../assets/images/js-Scalable-Query-Engine.png) |
-| *Figure 1: Architecture of the Scalable Query Engine* |
+| *Figure 1 Architecture of the Scalable Query Engine* |
 
 ## Filter
 

@@ -14,7 +14,7 @@ To create a new empty data source with more records
     |  |
     |----|
     | ![data adapter empty record](../assets/images/data-adapter-empty-record.png) |
-    | *Figure 1: Data Adapter Wizard &gt; Empty Record* |
+    | *Figure 1 Data Adapter Wizard &gt; Empty Record* |
 
 2.  Set the number of empty records that you need. Remember, whatever field you add to the report, its value is set to `null`. Since this data adapter does not care about field names or types, this is a perfect way to test any report (keeping in mind that the fields are always set to `null`).
 

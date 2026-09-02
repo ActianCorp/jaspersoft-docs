@@ -66,7 +66,7 @@ Create a report
         |  |
         |----|
         | ![jss spreadsheet fully enabled](assets/images/jss-spreadsheet-fully-enabled.png) |
-        | *Figure 1: Spreadsheet layout in Design view* |
+        | *Figure 1 Spreadsheet layout in Design view* |
 
         Remove a Column
 
@@ -101,7 +101,7 @@ Create a report
         |                                                                         |
         |-------------------------------------------------------------------------|
         | ![jss spreadsheet adjusted](assets/images/jss-spreadsheet-adjusted.png) |
-        | *Figure 2: Report output using spreadsheet layout*                      |
+        | *Figure 2 Report output using spreadsheet layout*                       |
 
         Add an element to a column
 

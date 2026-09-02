@@ -29,7 +29,7 @@ To upload a resource from the file system
 
     ![js AddJasperReport AddResource](../assets/images/js-AddJasperReport-AddResource.png)
 
-    *Figure 1: Properties of a Resource*
+    *Figure 1 Properties of a Resource*
 
     !!! note
 

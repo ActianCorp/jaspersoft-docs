@@ -24,13 +24,13 @@ To run a report
 
     ![js ViewReports](../assets/images/js-ViewReports.png)
 
-    *Figure 1: Search Results Listing*
+    *Figure 1 Search Results Listing*
 
 3.  To run a report, click the name of a report in the repository. For example, click **05. Accounts Report**. The report appears, as shown in Figure 3‑2.
 
 ![js Report Example Accounts](../assets/images/js-Report-Example-Accounts.png)
 
-*Figure 2: Output of the Accounts Report*
+*Figure 2 Output of the Accounts Report*
 
 !!! note
 
@@ -50,7 +50,7 @@ To create a report from the Home page
 
 1.  On the Home page, click **Create** in the **Reports** block. The Create Report wizard opens.
 2.  Select the Ad Hoc view that you want to use as the basis for your report.
-3.  Select a report template. To use a template other than the default, select Custom Report Template, click Browse, and select the desired template. See 1.1.3, “Report Templates,” on page 1 for more information.
+3.  Select a report template. To use a template other than the default, select Custom Report Template, click Browse, and select the desired template. See [1.1.3, “Report Templates,” on page 1](#report-templates) for more information.
 4.  Click **OK**. If asked, enter the input controls needed. See [Using Input Controls](../adhoc/adhoc-input-controls.md).
 
 You can now begin working with your report. If you close the report without saving the changes, you are prompted to save or cancel the changes made to the report.

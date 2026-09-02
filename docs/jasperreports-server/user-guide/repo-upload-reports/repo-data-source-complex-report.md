@@ -38,21 +38,21 @@ To select a data source and run the complex report
 
     ![js ReportOptions InputControls queryinput](../assets/images/js-ReportOptions-InputControls-queryinput.png)
 
-    *Figure 1: Input Controls Dialog for the New Complex Report*
+    *Figure 1 Input Controls Dialog for the New Complex Report*
 
 8.  Click **OK** or **Apply** to run the report with the selected input, including the incorrect non-numerical input for the Text Input Control.<br>
     The server enforces the proper format defined for each input control. You defined the Text Input Control as a numeric type, so it accepts only valid numbers, as indicated by the message to specify a valid float number, as shown in Figure 5‑23.
 
     ![js ReportOptions InputControls invalidinput](../assets/images/js-ReportOptions-InputControls-invalidinput.png)
 
-    *Figure 2: Invalid Input Message*
+    *Figure 2 Invalid Input Message*
 
 9.  In Text Input Control, enter `3` and click **OK** or **Apply**.<br>
     The sample report includes a header that displays the value of each parameter received from the input controls. Values and labels appear in the language specified by the active resource bundle, in this case English.
 
 ![js Report Example NewComplexReport](../assets/images/js-Report-Example-NewComplexReport.png)
 
-*Figure 3: Output Controlled by Input*
+*Figure 3 Output Controlled by Input*
 
 In the Report Viewer, you can open the Input Controls dialog at any time by clicking the **Options** button. Click **OK** to run the report using the chosen values and close the Input Controls dialog. Click **Apply** to run the report using the chosen values, but keep the Input Controls open for choosing other values and rerunning the report.
 

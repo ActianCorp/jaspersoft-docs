@@ -22,4 +22,4 @@ You can also write custom processors as described in [Creating a Custom Processo
 
 ![js sso BeanConfigExternal](../assets/images/js-sso-BeanConfigExternal.png)
 
-*Figure 1: Beans for JasperReports Server External Authentication API*
+*Figure 1 Beans for JasperReports Server External Authentication API*

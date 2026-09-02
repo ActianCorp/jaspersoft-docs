@@ -24,7 +24,7 @@ To create a JDBC connection
             |                                                          |
             |----------------------------------------------------------|
             | ![jdbc connection](../assets/images/jdbc-connection.png) |
-            | *Figure 1: Configuring a JDBC Connection*                |
+            | *Figure 1 Configuring a JDBC Connection*                 |
 
         2.  Name the connection (use a significant name like `Mysql – Test`). This is the name that appears on the list of available connections when you create a report.
 
@@ -33,9 +33,9 @@ To create a JDBC connection
             |                                                    |
             |----------------------------------------------------|
             | ![jdbc drivers](../assets/images/jdbc-drivers.png) |
-            | *Figure 2: JDBC Drivers List*                      |
+            | *Figure 2 JDBC Drivers List*                       |
 
-            For the list of supported drivers, see the Jaspersoft Platform Support Guide . If a driver is not listed, you might need to download it from the official website and add it to the classpath as described in the following sections. See Using a JDBC Connection.
+            For the list of supported drivers, see the Jaspersoft Platform Support Guide . If a driver is not listed, you might need to download it from the official website and add it to the classpath as described in the following sections. See [Using a JDBC Connection](#using-a-database-jdbc-connection).
 
             !!! note
 
@@ -74,7 +74,7 @@ For example, suppose you want to create a connection to an Oracle database. Jasp
 |                                                      |
 |------------------------------------------------------|
 | ![classnotfound](../assets/images/classnotfound.png) |
-| *Figure 3: `ClassNotFoundError` exception*           |
+| *Figure 3 `ClassNotFoundError` exception*            |
 
 To add a resource to the Jaspersoft Studio classpath
 
@@ -114,6 +114,8 @@ The use of JDBC or SQL connections is the simplest and easiest way to fill a rep
 
 To use SQL query fields in a report, you need to register them. You do not need to register all the selected fields—only those actually used in the report. For each field, specify a name and type. Table 10‑1 shows SQL types and the Java objects that they map to.
 
+**Conversion of SQL and JAVA types**
+
 | SQL Type    | Java Object             | SQL Type      | Java Object          |
 |-------------|-------------------------|---------------|----------------------|
 | CHAR        | `String`                | REAL          | `Float`              |
@@ -126,8 +128,6 @@ To use SQL query fields in a report, you need to register them. You do not need 
 | SMALLINT    | `Integer`               | TIME          | `java.sql.Time`      |
 | INTEGER     | `Integer`               | TIMESTAMP     | `java.sql.Timestamp` |
 | BIGINT      | `Long`                  |               |                      |
-
-Conversion of SQL and JAVA types
 
 The table does not include special types like BLOB, CLOB, ARRAY, STRUCT, and REF, because these types cannot be managed automatically by JasperReports. However, you can use them by declaring them generically as `Object` and managing them by writing supporting static methods. The BINARY, VARBINARY, and LONGBINARY types should be dealt with in a similar way. With many databases, BLOB and CLOB can be declared as `java.io.InputStream`.
 
@@ -142,14 +142,14 @@ The records in a report can be ordered and filtered. Set sort and filter options
 |                                                                      |
 |----------------------------------------------------------------------|
 | ![filter expression tab](../assets/images/filter-expression-tab.png) |
-| *Figure 4: Filter Expression Tab and Expression Editor*              |
+| *Figure 4 Filter Expression Tab and Expression Editor*               |
 
 Clicking the **Data Preview** tab shows a subset of your filtered data. The filter expression must return a Boolean object: true if a particular record can be kept, false otherwise.
 
 |                                                    |
 |----------------------------------------------------|
 | ![data preview](../assets/images/data-preview.png) |
-| *Figure 5: Data Preview*                           |
+| *Figure 5 Data Preview*                            |
 
 If no fields can be selected with the **Add field** button, check to see if the report contains fields. If not, close the query dialog, register the fields, and resume the sorting.
 

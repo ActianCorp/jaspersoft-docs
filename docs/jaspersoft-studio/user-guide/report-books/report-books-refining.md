@@ -45,7 +45,7 @@ To add a filter to a report in a report book
 
 ## Adding Section Introductory Pages
 
-You can insert pages in your report to introduce each section of data, as determined in Sorting on Additional Fields. These pages can include text, images, charts, or any number of other elements, pulled from a data source.
+You can insert pages in your report to introduce each section of data, as determined in [Sorting on Additional Fields](#sorting-on-additional-fields). These pages can include text, images, charts, or any number of other elements, pulled from a data source.
 
 We place an introductory page before each country section and include the country name and a chart representing the number of orders for each city in the country.
 

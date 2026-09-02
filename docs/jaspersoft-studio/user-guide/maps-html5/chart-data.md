@@ -11,21 +11,21 @@ The two sets of data, map data and chart data are generated independently of eac
 
 This section describes:
 
--   Retrieving Chart Data
+-   [Retrieving Chart Data](#retrieving-chart-data)
 
--   Joining Data Using the Default hc-key Field
+-   [Joining Data Using the Default hc-key Field](#joining-data-using-the-default-hc-key-field)
 
--   Configuring Chart Data of the Map
+-   [Configuring Chart Data of the Map](#configuring-chart-data-of-the-map)
 
--   Joining Data Using a Pair of Related Fields
+-   [Joining Data Using a Pair of Related Fields](#joining-data-using-a-pair-of-related-fields)
 
--   Rendering a Subregion of the Map
+-   [Rendering a Subregion of the Map](#rendering-a-subregion-of-the-map)
 
--   Creating a Hyperlink
+-   [Creating a Hyperlink](#creating-a-hyperlink)
 
--   Zooming in the Map
+-   [Zooming in the Map](#zooming-in-the-map)
 
--   Adding Map Navigation Control
+-   [Adding Map Navigation Control](#adding-map-navigation-control)
 
 ## Retrieving Chart Data
 
@@ -121,7 +121,7 @@ The three fields that contain common values with the GeoJSON map data are "hc-ke
             |  |
             |----|
             | ![html5 maps advanced config](../assets/images/html5-maps-advanced%20config.png) |
-            | *Figure 1: Advanced Configuration for Map* |
+            | *Figure 1 Advanced Configuration for Map* |
 
         2.  If there is no hc-key under Measures, click **Add** and follow step 4 to step 11 to add the hc-key value for each chart data point. Enter the following values:
 
@@ -140,7 +140,7 @@ The three fields that contain common values with the GeoJSON map data are "hc-ke
         |                                                              |
         |--------------------------------------------------------------|
         | ![html5 map measure](../assets/images/html5-map-measure.png) |
-        | *Figure 2: Adding Measure Values*                            |
+        | *Figure 2 Adding Measure Values*                             |
 
         1.  Click **OK**.
         2.  Under Measures, select Measure1 and click **Modify**.
@@ -156,7 +156,7 @@ The three fields that contain common values with the GeoJSON map data are "hc-ke
     |                                                                    |
     |--------------------------------------------------------------------|
     | ![jss html5 map hc key](../assets/images/jss-html5-map-hc-key.png) |
-    | *Figure 3: Selecting Use Measure Value*                            |
+    | *Figure 3 Selecting Use Measure Value*                             |
 
 2.  Click **OK**.
 
@@ -167,7 +167,7 @@ The three fields that contain common values with the GeoJSON map data are "hc-ke
 |  |
 |----|
 | ![jss html5 map data displayed](../assets/images/jss-html5-map-data-displayed.png) |
-| *Figure 4: Map with Chart Data* |
+| *Figure 4 Map with Chart Data* |
 
 You can see that the color of the map has been changed. This is because when you link the chart data to the map, the **Color Axis** property takes precedence over the **Color by Point** property.
 
@@ -243,7 +243,7 @@ You can configure chart data of the map using the **Map Formatting** tab in the 
 |  |
 |----|
 | ![jss html5 map properties](../assets/images/jss-html5-map-properties.png) |
-| *Figure 5: Map with Configured Chart Data* |
+| *Figure 5 Map with Configured Chart Data* |
 
 ## Joining Data Using a Pair of Related Fields
 
@@ -261,7 +261,7 @@ If chart data does not provide a hc-key field and has another field such as hc_a
 |                                                                |
 |----------------------------------------------------------------|
 | ![jss html5 map join](../assets/images/jss-html5-map-join.png) |
-| *Figure 6: Joining by hc-a2 and hc_a2 Fields*                  |
+| *Figure 6 Joining by hc-a2 and hc_a2 Fields*                   |
 
 ## Rendering a Subregion of the Map
 
@@ -278,14 +278,14 @@ You can render a subregion by providing the chart data for that specific subregi
 |  |
 |----|
 | ![jss html5 map western region](../assets/images/jss-html5-map-western%20region.png) |
-| *Figure 7: Displaying Data for the West Region of the United States* |
+| *Figure 7 Displaying Data for the West Region of the United States* |
 
 In case you provide null for the **Value Expression** and set the inner borders visible and the **Render All Areas** to false, the map looks like this:
 
 |  |
 |----|
 | ![jss html5 map transparent](../assets/images/jss-html5-map-transparent.png) |
-| *Figure 8: Setting Value Expression to Null* |
+| *Figure 8 Setting Value Expression to Null* |
 
 ## Creating a Hyperlink
 
@@ -328,7 +328,7 @@ To create a hyperlink
 |                                                                          |
 |--------------------------------------------------------------------------|
 | ![jss html5 map hyperlink](../assets/images/jss-html5-map-hyperlink.png) |
-| *Figure 9: Map with Hyperlinks*                                          |
+| *Figure 9 Map with Hyperlinks*                                           |
 
 ## Zooming in the Map
 
@@ -348,7 +348,7 @@ To Zoom in the map
 |                                                                      |
 |----------------------------------------------------------------------|
 | ![jss html5 map zoom in](../assets/images/jss-html5-map-zoom-in.png) |
-| *Figure 10: Zoomed Region of a Map*                                  |
+| *Figure 10 Zoomed Region of a Map*                                   |
 
 The zoomed region is magnified. You can also reset the map dimensions to their initial values by clicking the **Reset zoom** button in the upper-right corner of the **Preview** window.
 
@@ -364,6 +364,6 @@ You can add the map navigation control for zoom in and zoom out. To do so:
 |  |
 |----|
 | ![jss html5 map navigation](../assets/images/jss-html5-map-navigation.png) |
-| *Figure 11: Map Navigation Control for Zoom in or Zoom out* |
+| *Figure 11 Map Navigation Control for Zoom in or Zoom out* |
 
 The map navigation control button is added on the upper-left corner in the Preview window. You can click the "+" or "-" button to zoom in or zoom out the map.

@@ -57,7 +57,7 @@ The examples in this section uses the Ad Hoc view created in [section 1.0.0.1, â
 
 ![js AdHoc CalcFields Levels](../assets/images/js-AdHoc-CalcFields-Levels.png)
 
-*Figure 1: Base Example for Levels*
+*Figure 1 Base Example for Levels*
 
 RowGroup example
 
@@ -71,7 +71,7 @@ The crosstab appears as shown in the following figure.
 
 ![js AdHoc CalcFields RowGroup](../assets/images/js-AdHoc-CalcFields-RowGroup.png)
 
-*Figure 2: Example for RowGroup*
+*Figure 2 Example for RowGroup*
 
 Look at the Low Fat values for "false" in the Canada group. The only non-null value under Store Sales 2019 is in the first row, for Deluxe Supermarket. This value, 102.17, is 100% of the row group total of 102.17 on the third line of the crosstab. This percentage is shown in the "false" subcolumn of the Percent of Row Group column.
 

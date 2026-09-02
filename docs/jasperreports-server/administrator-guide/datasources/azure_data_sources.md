@@ -35,9 +35,9 @@ To create an Azure SQL data source
 
     ![js DataSource Azure UserSettings](../assets/images/js-DataSource-Azure-UserSettings.png)
 
-    *Figure 1: Entering Azure User Information*
+    *Figure 1 Entering Azure User Information*
 
-4.  Under **Azure Settings**, enter your **Azure Subscription ID, user certificate (.pfx) file**, and **Azure User Certificate**. Click **Browse** to select the certificate file from your repository. See Uploading an Azure Certificate File to the Repository for instructions on uploading the certificate file.
+4.  Under **Azure Settings**, enter your **Azure Subscription ID, user certificate (.pfx) file**, and **Azure User Certificate**. Click **Browse** to select the certificate file from your repository. See [Uploading an Azure Certificate File to the Repository](#uploading-an-azure-certificate-file-to-the-repository) for instructions on uploading the certificate file.
 
 5.  Under **Select an Azure Database**, specify the connection details of the Azure database that you want to connect to:
 
@@ -50,7 +50,7 @@ To create an Azure SQL data source
 
     ![js DataSource Azure DBSettings](../assets/images/js-DataSource-Azure-DBSettings.png)
 
-    *Figure 2: Selecting an Azure SQL Data Source*
+    *Figure 2 Selecting an Azure SQL Data Source*
 
 6.  When you've entered all the information, click **Test Connection**.<br>
     If your connection is successful, a message appears to the right of the button. Sometimes the process takes a few minutes. In that case you'll see an alert. Try the test again after one or two minutes. The test performs the following actions:

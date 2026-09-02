@@ -18,7 +18,7 @@ Use the **Outline** and **Diagram** tabs to build the query visually. The curren
 |                                                       |
 |-------------------------------------------------------|
 | ![query 4 warning](assets/images/query_4_warning.png) |
-| *Figure 1: Query Overwrite Warning*                   |
+| *Figure 1 Query Overwrite Warning*                    |
 
 ## Query Outline View and Diagram View
 
@@ -27,7 +27,7 @@ The purpose of SQL is to select data from the tables of the database. SQL allows
 |                                                       |
 |-------------------------------------------------------|
 | ![query 5 outline](assets/images/query_5_outline.png) |
-| *Figure 2: Outline View*                              |
+| *Figure 2 Outline View*                               |
 
 The **Outline** view is a good tool for people with a basic understanding of SQL. It works with the **Diagram** view, which represents the simplest way to design a query. In the outline view, the query is split in its main parts introduced by the relative keyword. Those parts include:
 
@@ -118,7 +118,7 @@ The `Diagram` view shows the tables in the query with the relative join connecti
 |                                                       |
 |-------------------------------------------------------|
 | ![query 6 diagram](assets/images/query_6_diagram.png) |
-| *Figure 3: Diagram View*                              |
+| *Figure 3 Diagram View*                               |
 
 ## Selecting Columns
 
@@ -133,7 +133,7 @@ When a column is added to the query as part of the `SELECT` section, you can set
 |                                                   |
 |---------------------------------------------------|
 | ![query 7 alias](assets/images/query_7_alias.png) |
-| *Figure 4: Setting an Alias*                      |
+| *Figure 4 Setting an Alias*                       |
 
 Aliases are useful when you have several fields with the same name coming from two different tables.
 
@@ -144,14 +144,14 @@ You can join tables you have added by selecting shared fields. You can create th
 |                                                   |
 |---------------------------------------------------|
 | ![query 8 joins](assets/images/query_8_joins.png) |
-| *Figure 5: Column Dialog*                         |
+| *Figure 5 Column Dialog*                          |
 
 You can also edit joins in the outline view by right-clicking a table name and selecting **Add or Edit Table Join**.
 
 |                                                               |
 |---------------------------------------------------------------|
 | ![query 9 join table2](assets/images/query_9_join_table2.png) |
-| *Figure 6: Join Table*                                        |
+| *Figure 6 Join Table*                                         |
 
 ## Data Selection Criteria (WHERE Conditions)
 
@@ -162,7 +162,7 @@ If you know in advance which column should be involved in the condition, you can
 |  |
 |----|
 | ![query 11 condition dialog](assets/images/query_11_condition_dialog.png) |
-| *Figure 7: Add Condition* |
+| *Figure 7 Add Condition* |
 
 You can organize conditions by creating condition groups, and then combining them with `or` and operators. At least one condition must be true for an `OR` group. All conditions must be true for the `AND` operator. You can double-click to change the value of either of these group operators.
 
@@ -183,4 +183,4 @@ Use the **Data Preview** tab to generate a ghost report that maps the fields to 
 |                                                                   |
 |-------------------------------------------------------------------|
 | ![query 12 data preview](assets/images/query_12_data_preview.png) |
-| *Figure 8: Data Preview Tab*                                      |
+| *Figure 8 Data Preview Tab*                                       |

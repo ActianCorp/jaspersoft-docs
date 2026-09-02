@@ -15,7 +15,7 @@ The JasperReports Server deployment includes a sample file for custom authentica
 
 ![js sso CustomSequence](../assets/images/js-sso-CustomSequence.png)
 
-*Figure 1: Sequence Diagram for Authentication Based on the Request*
+*Figure 1 Sequence Diagram for Authentication Based on the Request*
 
 To set up authentication based on the request:
 

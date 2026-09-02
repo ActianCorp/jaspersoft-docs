@@ -26,4 +26,4 @@ To add View List buttons to workflow blocks
 
 ![js Customization ViewListButton](../assets/images/js-Customization-ViewListButton.png)
 
-*Figure 1: The Getting Started page with View List buttons in the workflow blocks*
+*Figure 1 The Getting Started page with View List buttons in the workflow blocks*

@@ -61,4 +61,4 @@ If you embed JasperReports Server in your application, you may want to remove al
 
 ![js Customization Embed](../assets/images/js-Customization-Embed.png)
 
-*Figure 1: Basic Theme for Embedding*
+*Figure 1 Basic Theme for Embedding*

@@ -19,15 +19,15 @@ The reportExecutions service includes only a simple mechanism for setting input 
 
     This chapter includes the following sections:
 
--   Listing Input Controls
+-   [Listing Input Controls](#listing-input-controls)
 
--   Input Control Structure
+-   [Input Control Structure](#input-control-structure)
 
--   Listing Input Control Values
+-   [Listing Input Control Values](#listing-input-control-values)
 
--   Changing the Order of Input Controls
+-   [Changing the Order of Input Controls](#changing-the-order-of-input-controls)
 
--   Setting Input Control Values
+-   [Setting Input Control Values](#setting-input-control-values)
 
 ## Listing Input Controls
 
@@ -64,7 +64,7 @@ The inputControls service uses either XML or JSON data structures. If no `Accept
 <tr>
 <td><p><span>exclude</span></p></td>
 <td><p>state</p></td>
-<td colspan="2"><p>When specifed as <code>exclude=state</code>, the input control objects in the response contain only the structure elements and none of the state elements. Use this argument if your input controls have large lists of values and may affect performance. You can fetch these values in a separate call, usually after displaying the empty input control UI. See <span>Listing Input Control Values</span>.</p></td>
+<td colspan="2"><p>When specifed as <code>exclude=state</code>, the input control objects in the response contain only the structure elements and none of the state elements. Use this argument if your input controls have large lists of values and may affect performance. You can fetch these values in a separate call, usually after displaying the empty input control UI. See <a href="#listing-input-control-values">Listing Input Control Values</a>.</p></td>
 </tr>
 <tr>
 <td colspan="4"><p>Options</p></td>

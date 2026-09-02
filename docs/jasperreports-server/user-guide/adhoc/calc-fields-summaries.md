@@ -19,6 +19,8 @@ Summary calculations are aggregate functions used for sub-totals and totals. Sum
 
 In general, you can change the summary calculation of any measure. By default, JasperReports Server summarizes fields of each datatype as shown in the following table.
 
+**Default Summary Functions in Calculated Fields**
+
 | Datatype | Default Summary Calculation | Description |
 |----|----|----|
 | Numeric | Sum | Displays the sum of all values in the set. |
@@ -27,8 +29,6 @@ In general, you can change the summary calculation of any measure. By default, J
 | Boolean | CountAll | Displays the number of values in the set. |
 | Aggregate | Aggregate Formula | For a calculated field that uses an aggregate function, uses the same aggregate formula as the summary. |
 | Combined | None | For a calculated field that combines an aggregate function with a non-aggregate function, the summary calculation is null. |
-
-Default Summary Functions in Calculated Fields
 
 Select from the following options to set a measure’s summary function in any type of view.
 

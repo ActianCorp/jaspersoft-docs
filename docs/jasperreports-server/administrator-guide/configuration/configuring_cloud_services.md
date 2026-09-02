@@ -28,7 +28,7 @@ To change cloud services settings
 
     ![js Settings Cloud](../assets/images/js-Settings-Cloud.png)
 
-    *Figure 1: Cloud Settings Page*
+    *Figure 1 Cloud Settings Page*
 
     !!! note
 

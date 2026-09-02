@@ -54,7 +54,7 @@ To install the samples in your JasperReports Server web application
 
 1.  At the command line, change directories to the custom data source sample directory (`<js‑install>/samples/customDataSource`).
 2.  Edit `build.xml` and set the `webAppDir` property to the root of your JasperReports Server web application.
-3.  Run the Ant command (as described in Prerequisites) with no arguments. This executes the default target, which is named `deploy`. The `deploy` target initiates these actions:
+3.  Run the Ant command (as described in [Prerequisites](#prerequisites)) with no arguments. This executes the default target, which is named `deploy`. The `deploy` target initiates these actions:
 
 -   Compiles the Java source files under the src directory.
 
@@ -67,7 +67,7 @@ To install the samples in your JasperReports Server web application
     See [Table 1-1, “Files Used by a Custom Data Source Implementation,” on page 1](custom-data-source-creation.md) for the final locations of the files in JasperReports Server
 
 1.  Repeat this procedure for the sample in `<js‑install>/samples/customDataSource-pro`.
-2.  For the webscraper report example, you must register its query executer factory as described in Webscraper Custom Data Source.
+2.  For the webscraper report example, you must register its query executer factory as described in [Webscraper Custom Data Source](#webscraper-custom-data-source).
 3.  Restart the application server.
 
 The example custom data source types are now available from the New Data Source page in JasperReports Server.
@@ -130,7 +130,7 @@ The data source takes two parameters: the URL of the web page and the XPath that
 
 In order to use the webscraper data source, you must first register the webscraper query executer factory. One way to do this is as follows:
 
-1.  Install the samples using ant as described in Installing the Custom Data Source Examples.
+1.  Install the samples using ant as described in [Installing the Custom Data Source Examples](#installing-the-custom-data-source-examples).
 
 2.  Open the file `.../WEB-INF/classes/jasperreports.properties` for editing.
 
@@ -167,7 +167,7 @@ The sample Hibernate test report contains an HQL query on the JasperReports Serv
 
 To run the Hibernate data source example
 
-1.  Install the samples using ant as described in Installing the Custom Data Source Examples.
+1.  Install the samples using ant as described in [Installing the Custom Data Source Examples](#installing-the-custom-data-source-examples).
 
 2.  Create a new Hibernate data source:
 

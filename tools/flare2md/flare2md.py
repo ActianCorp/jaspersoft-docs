@@ -954,6 +954,42 @@ def _icon_kind(cell):
     return None
 
 
+def lift_table_captions(elem) -> None:
+    """Move a table's <caption> to a bold paragraph above the table.
+
+    Flare tables carry the table name in a `<caption>` with `caption-side: top`,
+    so it reads as a title above the grid. The output tables are pipe tables and
+    Python-Markdown's table extension has no caption, so pandoc emitted the
+    caption text as a plain paragraph *after* the table — the reviewers saw the
+    JasperReports IO directory tables labelled underneath. Lifting it to a bold
+    paragraph before the table puts the title back where the source shows it.
+
+    A `caption-side: bottom` caption (rare in these sources) is left after the
+    table instead, matching how it was authored.
+    """
+    for table in list(elem.iter("table")):
+        caption = table.find("caption")
+        if caption is None:
+            continue
+        text = re.sub(r"\s+", " ", "".join(caption.itertext())).strip()
+        table.remove(caption)
+        if not text:
+            continue
+        parent = table.getparent()
+        if parent is None:
+            continue
+        para = etree.Element("p")
+        strong = etree.SubElement(para, "strong")
+        strong.text = text
+        bottom = "caption-side: bottom" in (table.get("style") or "")
+        if bottom:
+            para.tail = table.tail
+            table.tail = "\n"
+            parent.insert(list(parent).index(table) + 1, para)
+        else:
+            parent.insert(list(parent).index(table), para)
+
+
 def normalize_tables(elem) -> None:
     """Split Flare's multi-section tables into one table per section.
 
@@ -1142,17 +1178,33 @@ def unwrap_figure_tables(elem) -> None:
         parent.remove(table)
 
 
+def _autonum_prefix(node) -> str | None:
+    """The label handle_autonum will prepend to `node`'s text, or None.
+
+    Shared with resolve_intra_page_anchors, which must predict a heading's
+    final text (autonum included) before handle_autonum actually runs on it —
+    see that function's docstring for why the prediction has to happen early.
+    """
+    raw = node.get("%sautonum" % MC)
+    if raw is None:
+        return None
+    label = _autonum_label(raw)
+    if node.tag in ("ol", "ul") or not label:
+        return None
+    if label.lower().startswith(("procedure", "chapter")) or label in (":", "•"):
+        return None
+    return label
+
+
 def handle_autonum(elem) -> None:
     """Flatten remaining autonum labels (Figure N:, Table N:) into bold text."""
     for node in list(elem.iter()):
         raw = node.get("%sautonum" % MC)
         if raw is None:
             continue
-        label = _autonum_label(raw)
+        label = _autonum_prefix(node)
         node.attrib.pop("%sautonum" % MC, None)
-        if node.tag in ("ol", "ul") or not label:
-            continue
-        if label.lower().startswith(("procedure", "chapter")) or label in (":", "•"):
+        if label is None:
             continue
         if label.lower().startswith(("figure", "table")):
             # Italicise the whole caption, not just the "Figure 1:" label.
@@ -1168,6 +1220,56 @@ def handle_autonum(elem) -> None:
             strong.tail = node.text
             node.text = None
             node.insert(0, strong)
+
+
+AUTONUM_LABEL_RE = re.compile(r"\s*(<i>\s*)?(Figure|Table)\b", re.I)
+STALE_NUM_RE = re.compile(r"\b\d+\.\s")
+
+
+def _autonum_label(value: str) -> str:
+    """The visible label from a MadCap:autonum, e.g. '<i>Figure 1: </i>' -> 'Figure 1'."""
+    text = re.sub(r"<[^>]+>", "", value or "").replace("\xa0", " ")
+    return re.sub(r"[:\s]+$", "", text).strip()
+
+
+def fix_stale_number_xrefs(elem) -> None:
+    """Repair a figure/table number reference whose cached text went stale.
+
+    A `Figure_Number` cross-reference shows the figure's number ("Figure 1"),
+    which Flare regenerates from the target at build time; the source only caches
+    a preview. One reference on the Saving Input Control Values page had an old
+    figure autonumber frozen into that preview — "as shown in "Filtered Version
+    of the 1. Geographic Results by Segment Report in Repository"" — which the
+    reviewers flagged. Only a number reference whose cached text still carries
+    that stray "N." artifact is rewritten, to the label the target figure's own
+    autonumber gives; the ~30 references that already read "Figure N" are left
+    untouched.
+    """
+    labels = {}
+    for node in elem.iter():
+        if not isinstance(node.tag, str):
+            continue
+        au = node.get("%sautonum" % MC)
+        if au and AUTONUM_LABEL_RE.match(au):
+            label = _autonum_label(au)
+            for a in node.iter("a"):
+                if a.get("name"):
+                    labels[a.get("name")] = label
+    for x in elem.iter("%sxref" % MC):
+        if "Number" not in (x.get("class") or ""):
+            continue
+        href = x.get("href") or ""
+        if not href.startswith("#"):
+            continue
+        cached = re.sub(r"\s+", " ", "".join(x.itertext())).strip().strip("\u201c\u201d\"")
+        if re.match(r"(Figure|Table)\b", cached) or not STALE_NUM_RE.search(cached):
+            continue
+        label = labels.get(href[1:])
+        if not label:
+            continue
+        for child in list(x):
+            x.remove(child)
+        x.text = label
 
 
 def handle_links(elem) -> None:
@@ -1313,6 +1415,93 @@ def slug_relpath(relpath: str) -> str:
     return "/".join(out)
 
 
+import unicodedata as _unicodedata
+
+TOC_SLUG_STRIP_RE = re.compile(r"[^\w\s-]")
+TOC_SLUG_SEP_RE = re.compile(r"[-\s]+")
+TOC_IDCOUNT_RE = re.compile(r"^(.*)_([0-9]+)$")
+HEADING_TAGS = ("h1", "h2", "h3", "h4", "h5", "h6")
+
+
+def toc_slug(text: str) -> str:
+    """Heading id the way Python-Markdown's toc extension makes it.
+
+    Zensical parses with that extension, so a same-page link must point at the
+    slug it will generate: accents stripped, punctuation removed, lowercased,
+    runs of whitespace and dashes collapsed to a single hyphen.
+    """
+    value = _unicodedata.normalize("NFKD", text)
+    value = value.encode("ascii", "ignore").decode("ascii")
+    value = TOC_SLUG_STRIP_RE.sub("", value).strip().lower()
+    return TOC_SLUG_SEP_RE.sub("-", value)
+
+
+def _unique_slug(slug: str, seen: set) -> str:
+    """toc's duplicate-id rule: foo, then foo_1, foo_2, ..."""
+    while slug in seen or not slug:
+        m = TOC_IDCOUNT_RE.match(slug)
+        slug = "%s_%d" % (m.group(1), int(m.group(2)) + 1) if m else "%s_1" % slug
+    seen.add(slug)
+    return slug
+
+
+def resolve_intra_page_anchors(elem) -> None:
+    """Point a same-page link at the heading slug Zensical will generate.
+
+    A Flare "This chapter contains the following sections" list cross-links to
+    headings on the same page through bookmarks: `<a href="#Standal2">` resolves
+    to `<a name="Standal2">` sitting inside an `<h2>`. The bookmark id is not the
+    id the site gives that heading, so the link is rewritten to the heading's
+    slug. Left alone, the whole first bullet lost its link — these section lists
+    lead with the one section that lives on the same page, and the reviewers saw
+    it on the JasperReports IO introduction and managing pages.
+
+    Runs before extract_admonitions, not after handle_autonum — a link and its
+    target heading can sit on opposite sides of that split (the JasperReports
+    Server Domains guide cross-links from inside a Note to a heading outside
+    it), and extract_admonitions snapshots the note's HTML and renders it
+    through a separate pandoc call, so a pass on the main body afterward never
+    sees hrefs already moved into that snapshot. Rewriting here, while
+    admonition content and page content are still one tree, fixes both sides
+    in a single pass.
+
+    Because this runs before handle_autonum, a heading's slug has to be
+    predicted from what handle_autonum will make of it — `_autonum_prefix`
+    (shared with that function) supplies the same label, so a heading like
+    "1.0.1.1 Common Attributes" slugifies the way it will once autonum is
+    actually flattened. `rewrite_tree_links` has already run and left `#`
+    links untouched for this pass to resolve. A fragment that resolves to no
+    heading has its href dropped, text kept, as an unreachable in-page link
+    did before.
+    """
+    anchor_to_slug, seen = {}, set()
+    for node in elem.iter():
+        if not isinstance(node.tag, str) or node.tag not in HEADING_TAGS:
+            continue
+        text = re.sub(r"\s+", " ", "".join(node.itertext())).strip()
+        prefix = _autonum_prefix(node)
+        if prefix and not prefix.lower().startswith(("figure", "table")):
+            text = (prefix.rstrip() + " " + text).strip()
+        slug = _unique_slug(toc_slug(text), seen)
+        bookmarks = list(node.iter("a"))
+        prev = node.getprevious()
+        if prev is not None and prev.tag == "a" and not (prev.text or "").strip():
+            bookmarks.append(prev)
+        for a in bookmarks:
+            for key in (a.get("name"), a.get("id")):
+                if key:
+                    anchor_to_slug[key] = slug
+    for a in elem.iter("a"):
+        href = (a.get("href") or "").strip()
+        if not href.startswith("#"):
+            continue
+        target = anchor_to_slug.get(href[1:])
+        if target:
+            a.set("href", "#" + target)
+        else:
+            a.attrib.pop("href", None)
+
+
 def rewrite_tree_links(elem, topic_rel: Path, resolver, warn) -> None:
     """Point every topic link at its converted page, via `resolver`.
 
@@ -1327,10 +1516,9 @@ def rewrite_tree_links(elem, topic_rel: Path, resolver, warn) -> None:
         a.set("href", href)
         if href.startswith(("http://", "https://", "mailto:", "ftp://")):
             continue
-        # Flare bookmarks were removed with the empty anchors, so in-page
-        # fragments no longer resolve; keep the text, drop the dead link.
+        # In-page anchors were already resolved to heading slugs (or dropped)
+        # by resolve_intra_page_anchors; leave what survived intact.
         if href.startswith("#"):
-            a.attrib.pop("href", None)
             continue
         path = unquote(href.split("#", 1)[0])
         if not path:

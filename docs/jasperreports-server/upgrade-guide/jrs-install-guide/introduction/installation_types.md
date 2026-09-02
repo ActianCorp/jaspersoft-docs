@@ -34,8 +34,9 @@ For example: To uncomment `# installType=split`, change it to `installType=split
 
 The following table lists the settings you need to uncomment with sample values for each supported database.
 
+**Sample Values for the default_master.properties File for Split Installation**
+
 <table>
-<caption><p>Sample Values for the default_master.properties File for Split Installation</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

@@ -9,13 +9,13 @@ The rest_v2/permissions service reads and sets permissions on resources in the r
 
 This chapter includes the following sections:
 
--   Permission Constants
--   Viewing Multiple Permissions
--   Viewing a Single Permission
--   Setting Multiple Permissions
--   Setting a Single Permission
--   Deleting Multiple Permissions
--   Deleting a Single Permission
+-   [Permission Constants](#permission-constants)
+-   [Viewing Multiple Permissions](#viewing-multiple-permissions)
+-   [Viewing a Single Permission](#viewing-a-single-permission)
+-   [Setting Multiple Permissions](#setting-multiple-permissions)
+-   [Setting a Single Permission](#setting-a-single-permission)
+-   [Deleting Multiple Permissions](#deleting-multiple-permissions)
+-   [Deleting a Single Permission](#deleting-a-single-permission)
 
 ## Permission Constants
 

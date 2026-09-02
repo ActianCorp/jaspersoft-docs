@@ -19,14 +19,14 @@ JasperReports IO comes with a repository full of sample reports and resources in
 
 The JasperReports IO repository is structured as follows:
 
+**Repository Directories for Sample Reports**
+
 | Directory | Description |
 |----|----|
 | data | Contains the data source adapters and data source files for your reports. |
 | images | Contains image files used in reports. |
 | JR-INF | Contains the configuration files for report execution. |
 | reports | Contains report templates. |
-
-Repository Directories for Sample Reports
 
 ## Data Sources and Data Adapters
 
@@ -87,7 +87,7 @@ If you want to use an absolute file path to the repository directory, change the
 
 Use a slash (`/`) at the beginning of the URI for the root directory.
 
-If you are using an AWS S3 bucket for the repository, refer to the AWS S3 Bucket Repository for instructions on configuring the web application server to use the bucket.
+If you are using an AWS S3 bucket for the repository, refer to the [AWS S3 Bucket Repository](#aws-s3-bucket-repository) for instructions on configuring the web application server to use the bucket.
 
 ### Configuring the Web Application Server to Use Multiple Repositories
 

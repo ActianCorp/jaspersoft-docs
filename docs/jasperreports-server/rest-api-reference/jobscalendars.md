@@ -13,12 +13,12 @@ The scheduler also allows you to modify an exclusion calendar and update all the
 
 This chapter includes the following sections:
 
--   Creating an Exclusion Calendar
--   Listing All Calendar Names
--   Viewing an Exclusion Calendar
--   Updating an Exclusion Calendar
--   Deleting an Exclusion Calendar
--   Error Messages
+-   [Creating an Exclusion Calendar](#creating-an-exclusion-calendar)
+-   [Listing All Calendar Names](#listing-all-calendar-names)
+-   [Viewing an Exclusion Calendar](#viewing-an-exclusion-calendar)
+-   [Updating an Exclusion Calendar](#updating-an-exclusion-calendar)
+-   [Deleting an Exclusion Calendar](#deleting-an-exclusion-calendar)
+-   [Error Messages](#error-messages)
 
 ## Creating an Exclusion Calendar
 
@@ -506,7 +506,7 @@ Triggers?</span></p></td>
 <tr>
 <td colspan="2"><p><span>application/xml<br />
 application/json</span></p></td>
-<td colspan="2"><p>A well-formed XML or JSON calendar descriptor. See <span>“Creating an Exclusion Calendar” on page 1</span> for examples of each type of calendar. You can specify any type of exclusion calendar such as weekly, monthly, or cron, regardless of the current type.</p></td>
+<td colspan="2"><p>A well-formed XML or JSON calendar descriptor. See <a href="#creating-an-exclusion-calendar">“Creating an Exclusion Calendar” on page 1</a> for examples of each type of calendar. You can specify any type of exclusion calendar such as weekly, monthly, or cron, regardless of the current type.</p></td>
 </tr>
 <tr>
 <td colspan="3"><p>Return Value on Success</p></td>

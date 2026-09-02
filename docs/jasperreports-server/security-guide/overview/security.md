@@ -27,9 +27,9 @@ Administrators must keep security in mind at all times when managing organizatio
 
 This chapter contains the following sections:
 
--   Authentication
+-   [Authentication](#authentication)
 
--   Authorization Overview
+-   [Authorization Overview](#authorization-overview)
 
 ## Authentication
 

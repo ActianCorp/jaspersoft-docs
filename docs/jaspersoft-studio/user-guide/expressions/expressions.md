@@ -56,6 +56,8 @@ JavaScript and Groovy are not formal about types because they are not typed lang
 
 Operators in Java, Groovy, and JavaScript are similar because these languages have the same basic syntax. Operators can be applied to a single operand (unary operators) or on two operands (binary operators). The following table shows a number of operators, but it is not a complete list. For example, there is a unary operator to add 1 to a variable (++), but it is easier to use x + 1.
 
+**Expression operators**
+
 | Operator | Description | Example |
 |----|----|----|
 | `+` | Sum (it can be used to sum two numbers or to concatenate two strings) | `A + B` |
@@ -68,8 +70,6 @@ Operators in Java, Groovy, and JavaScript are similar because these languages ha
 | `!=` | Not equals | `A != B` |
 | `!` | Boolean operator NOT | `!A` |
 
-Expression operators
-
 !!! note
 
     -   Regarding the Equals operator: in Java, the `==` operator can only be used to compare two primitive values. With objects, you need to use the special method “`equals`”; for example, you cannot write an expression like `"test" == "test"`, you need to write `"test".equals("test")`.
@@ -78,8 +78,9 @@ Expression operators
 
 Within an expression, you can use the syntax summarized in Syntax for referring to report objects to refer to the parameters, variables, and fields defined in the report.
 
+**Syntax for referring to report objects**
+
 <table>
-<caption><p>Syntax for referring to report objects</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

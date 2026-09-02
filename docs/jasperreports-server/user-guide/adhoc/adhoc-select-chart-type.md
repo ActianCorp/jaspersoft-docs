@@ -45,11 +45,11 @@ To select a new visualization type
 
     ![js AdHoc Charts SelectChartType](../assets/images/js-AdHoc-Charts-SelectChartType.png)
 
-    *Figure 1: Select Visualization Type Window, for Old Layout Band*
+    *Figure 1 Select Visualization Type Window, for Old Layout Band*
 
     ![js AdHoc Charts SelectChartType(newLB)](../assets/images/js-AdHoc-Charts-SelectChartType%28newLB%29.png)
 
-    *Figure 2: Select Visualization Type Window, for New Layout Band*
+    *Figure 2 Select Visualization Type Window, for New Layout Band*
 
 2.  Click the type of visualization that you want to apply to your report. The selected visualization type is outlined in blue. The Visualization Selector displays a description of the selected visualization and the number of fields and measures that it uses.
 
@@ -57,8 +57,9 @@ To select a new visualization type
 
 The following table describes the available visualization types, and the rules (if any) affecting their use:
 
+**HTML5 Visualization Types**
+
 <table>
-<caption><p>HTML5 Visualization Types</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />

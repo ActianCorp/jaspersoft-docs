@@ -15,21 +15,21 @@ This upgrade process uses the JasperReports Server commercial WAR File Distribut
 
 This chapter contains the following sections:
 
--   General Procedure
+-   [General Procedure](#general-procedure)
 
--   Backing Up Your JasperReports Server CP Instance
+-   [Backing Up Your JasperReports Server CP Instance](#backing-up-your-jasperreports-server-cp-instance)
 
--   Exporting Your CP Repository Data
+-   [Exporting Your CP Repository Data](#exporting-your-cp-repository-data)
 
--   Preparing the JasperReports Server 5.5 WAR File Distribution
+-   [Preparing the JasperReports Server 5.5 WAR File Distribution](#preparing-the-jasperreports-server-101-war-file-distribution)
 
--   Configuring Buildomatic for Your Database and Application Server
+-   [Configuring Buildomatic for Your Database and Application Server](#configuring-buildomatic-for-your-database-and-application-server)
 
--   Upgrading to the Commercial Version of JasperReports Server 5.5
+-   [Upgrading to the Commercial Version of JasperReports Server 5.5](#upgrading-to-the-commercial-version-of-jasperreports-server-101)
 
--   Starting and Logging into JasperReports Server 5.5
+-   [Starting and Logging into JasperReports Server 5.5](#starting-and-logging-into-jasperreports-server-101)
 
--   Re-Configuring XML/A Connections (Optional)
+-   [Re-Configuring XML/A Connections (Optional)](#re-configuring-xmla-connections-optional)
 
 ## General Procedure
 
@@ -102,7 +102,7 @@ Before exporting your CP repository data, check to see if you have the `default_
 
 `<js-install-cp>/buildomatic/default_master.properties`
 
-This file holds settings specific to your JasperReports Server instance, such as your application server location and your database type and location. If you do not have this file, see 8.5.1, “Example Buildomatic Configuration,” on page 59.
+This file holds settings specific to your JasperReports Server instance, such as your application server location and your database type and location. If you do not have this file, see [8.5.1, “Example Buildomatic Configuration,” on page 59](#example-buildomatic-configuration).
 
 To export your CP repository data
 
@@ -352,7 +352,7 @@ Before starting the server:
 
 5.  (Optional) Move any existing `<tomcat-install>\logs` files into a backup directory to clean up old CP log data.
 
-For instructions on clearing directories, see 1.9, “Additional Tasks to Complete the Upgrade,” on page 1.
+For instructions on clearing directories, see [1.9, “Additional Tasks to Complete the Upgrade,” on page 1](#additional-tasks-to-complete-the-upgrade).
 
 Now start your Tomcat or JBoss application server. Your database should already be running.
 

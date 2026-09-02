@@ -29,7 +29,7 @@ To edit individual columns, double-click your table. The table opens in a separa
     |                                                             |
     |-------------------------------------------------------------|
     | ![column right click](assets/images/column-right-click.png) |
-    | *Figure 1: Column Context Menu*                             |
+    | *Figure 1 Column Context Menu*                              |
 
 -   Table cells are containers that can include other elements. To set a layout for the cell contents, click in the column header or footer and select Arrange in Container from the action menu, then select a layout option. See [Positioning Elements in Containers.](elements/elements-inserting-selecting-postioning.md)
 
@@ -42,7 +42,7 @@ A column is composed of a set of cells. If you create a column group, a column h
 |                                                   |
 |---------------------------------------------------|
 | ![table columns](assets/images/table_columns.png) |
-| *Figure 2: Simple Column vs. Column Group*        |
+| *Figure 2 Simple Column vs. Column Group*         |
 
 A column group acts as a single unit when you drag it. If you drag the last column out of a column group, the column becomes a simple column and the remaining group cells are deleted.
 
@@ -51,4 +51,4 @@ When you create a column group, every column section gets a group heading, as sh
 |                                                       |
 |-------------------------------------------------------|
 | ![table columns 3](assets/images/table_columns_3.png) |
-| *Figure 3: Group headings*                            |
+| *Figure 3 Group headings*                             |

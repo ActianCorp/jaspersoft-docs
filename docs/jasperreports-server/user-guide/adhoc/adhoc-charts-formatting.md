@@ -30,7 +30,7 @@ To remove data points from the chart, click the **Show data points** switch to t
 
 ![js AdHoc Charts ChartFormat](../assets/images/js-AdHoc-Charts-ChartFormat.png)
 
-*Figure 1: Format Visualization Panel*
+*Figure 1 Format Visualization Panel*
 
 ## Displaying the Measure Name/Label on the Value Axis
 
@@ -86,7 +86,7 @@ To choose the chart's colors
 
     ![js AdHoc AppearanceTab](../assets/images/js-AdHoc-AppearanceTab.png)
 
-    *Figure 2: Appearance Settings*
+    *Figure 2 Appearance Settings*
 
 2.  Under **Series Colors**, click **+ Add color** to add the first color.
 
@@ -106,7 +106,7 @@ To choose the chart's colors
 
     ![js AdHoc AppearanceTab Colors](../assets/images/js-AdHoc-AppearanceTab-Colors.png)
 
-    *Figure 3: Appearance Settings with Multiple Colors in Series*
+    *Figure 3 Appearance Settings with Multiple Colors in Series*
 
 7.  You can change the colors of the chart background and plot using the color picker buttons under **Background Colors**.
 
@@ -126,7 +126,7 @@ To edit a gauge's display settings
 
     ![js AdHoc AppearanceTab Gauges](../assets/images/js-AdHoc-AppearanceTab-Gauges.png)
 
-    *Figure 4: Appearance Settings*
+    *Figure 4 Appearance Settings*
 
 2.  From the **Layout** dropdown menu, select the layout for displaying the gauges. By default, the layout is **Best Fit**, which displays all the gauges on the canvas in one or more rows. The gauges can also be displayed in a single vertical column or a single horizontal row.
 
@@ -158,7 +158,7 @@ To create a pie using Old Layout Band
 
     ![AdhocView piechart](../assets/images/AdhocView-piechart.png)
 
-    *Figure 5: Select Pie*
+    *Figure 5 Select Pie*
 
 2.  View the following sections on the page:
 
@@ -183,7 +183,7 @@ To create a pie using Old Layout Band
 
     ![AdhocView piechart columns rows](../assets/images/AdhocView-piechart-columns-rows.png)
 
-    *Figure 6: Select Columns and Rows*
+    *Figure 6 Select Columns and Rows*
 
     !!! note
 
@@ -195,7 +195,7 @@ To create a pie using Old Layout Band
 
     ![AdhocView piechart rows slider](../assets/images/AdhocView-piechart-rows-slider.png)
 
-    *Figure 7: Row Data Level Slider*
+    *Figure 7 Row Data Level Slider*
 
     !!! note
 
@@ -205,13 +205,13 @@ To create a pie using Old Layout Band
 
     ![AdhocView piechart drilldown level1](../assets/images/AdhocView-piechart-drilldown-level1.png)
 
-    *Figure 8: Tool-tip*
+    *Figure 8 Tool-tip*
 
 6.  In the **Format Visualization** panel, provide the information, and enable or disable the toggles in the **Title** and **Labels** sections.
 
     ![AdhocView piechart format visualization](../assets/images/AdhocView-piechart-format-visualization.png)
 
-    *Figure 9: Format Visualization*
+    *Figure 9 Format Visualization*
 
 7.  In the **Legend** section, use the **Position** dropdown menu and select the position of the legend display. By default, the position is **Bottom,** which displays the legend below the pie. The legend can also be displayed at the top, left, and right. You may also choose not to display the legend.
 
@@ -219,7 +219,7 @@ To create a pie using Old Layout Band
 
 ![AdhocView piechart format visualization appearance](../assets/images/AdhocView-piechart-format-visualization-appearance.png)
 
-*Figure 10: Appearance Settings*
+*Figure 10 Appearance Settings*
 
 To create a pie using New Layout Band
 
@@ -227,7 +227,7 @@ To create a pie using New Layout Band
 
     ![Adhocview piechart newLB](../assets/images/Adhocview-piechart-newLB.png)
 
-    *Figure 11: Select Pie*
+    *Figure 11 Select Pie*
 
 2.  View the following sections on the page:
 
@@ -252,7 +252,7 @@ To create a pie using New Layout Band
 
     ![Adhocview piechart slices multiples](../assets/images/Adhocview-piechart-slices-multiples.png)
 
-    *Figure 12: Select Multiples and Slices*
+    *Figure 12 Select Multiples and Slices*
 
     !!! note
 
@@ -264,7 +264,7 @@ To create a pie using New Layout Band
 
     ![Adhocview piechart row slider](../assets/images/Adhocview-piechart-row-slider.png)
 
-    *Figure 13: Row Data Level Slider*
+    *Figure 13 Row Data Level Slider*
 
     !!! note
 
@@ -274,13 +274,13 @@ To create a pie using New Layout Band
 
     ![Adhocview piechart drilldown newLB](../assets/images/Adhocview-piechart-drilldown-newLB.png)
 
-    *Figure 14: Tool-tip*
+    *Figure 14 Tool-tip*
 
 6.  In the **Format Visualization** panel, provide the information, and enable or disable the toggles in the **Title** and **Labels** sections.
 
     ![AdhocView piechart format visualization](../assets/images/AdhocView-piechart-format-visualization.png)
 
-    *Figure 15: Format Visualization*
+    *Figure 15 Format Visualization*
 
 7.  In the **Legend** section, use the **Position** dropdown menu and select the position of the legend display. By default, the position is **Bottom,** which displays the legend below the pie. The legend can also be displayed at the top, left, and right. You may also choose not to display the legend.
 
@@ -288,7 +288,7 @@ To create a pie using New Layout Band
 
     ![AdhocView piechart format visualization appearance](../assets/images/AdhocView-piechart-format-visualization-appearance.png)
 
-    *Figure 16: Appearance Settings*
+    *Figure 16 Appearance Settings*
 
 ## Changing the Chart's Appearance Using Advanced Formatting
 

@@ -7,10 +7,10 @@ description: "Without a means of supplying content from a dynamic data source, e
 
 Without a means of supplying content from a dynamic data source, even the most sophisticated and appealing report would be useless. JasperReports gives you two ways to specify fill data for the output report: parameters and data sources. Both kinds of data are presented by means of a generic interface named `JRDataSource`.
 
-|                                                                 |
-|-----------------------------------------------------------------|
-| ![jss jr schema xlsx](assets/images/jss-jr-schema-xlsx.png)     |
-| *Figure 1: Data Source and Parameter Flows for Report Creation* |
+|                                                                |
+|----------------------------------------------------------------|
+| ![jss jr schema xlsx](assets/images/jss-jr-schema-xlsx.png)    |
+| *Figure 1 Data Source and Parameter Flows for Report Creation* |
 
 `JRDataSource` allows a set of records organized in tables (rows and columns) to be read. It enables JasperReports to fill a report with data from an explicit data source, using a JDBC connection (already instanced and opened) to whichever relational database you want to run an SQL query on (which is specified in the report).
 

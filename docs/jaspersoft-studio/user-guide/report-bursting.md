@@ -11,7 +11,7 @@ Report splitting works with a single report that can be run in the JasperReports
 
 This chapter contains the following sections:
 
--   Report Bursting
+-   [Report Bursting](#report-bursting)
 
 -   [Report Splitting](report-splitting.md)
 
@@ -44,14 +44,14 @@ To burst a report
     |                                                           |
     |-----------------------------------------------------------|
     | ![create scriptlet](assets/images/create%20scriptlet.PNG) |
-    | *Figure 1: Creating a Scriptlet*                          |
+    | *Figure 1 Creating a Scriptlet*                           |
 
 4.  To edit the properties of the bursting scriptlet, right-click the bursting scriptlet and select **Edit Bursting Properties**. Bursting scriptlet edit dialog appears.
 
     |                                                       |
     |-------------------------------------------------------|
     | ![edit scriptlet](assets/images/edit%20scriptlet.PNG) |
-    | *Figure 2: Editing a Scriptlet*                       |
+    | *Figure 2 Editing a Scriptlet*                        |
 
 5.  On the **Parameters** tab, click **Add** to add the parameter. Report Bursting Parameter dialog appears. Enter the Parameter name and Parameter value that you want to pass to the burst reports. For example:<br>
     **Parameter name**: ShipCountry_1<br>
@@ -60,7 +60,7 @@ To burst a report
     |                                                               |
     |---------------------------------------------------------------|
     | ![bursting parameter](assets/images/bursting%20parameter.PNG) |
-    | *Figure 3: Parameter and its Value*                           |
+    | *Figure 3 Parameter and its Value*                            |
 
 6.  On the **Options Configuration** tab, select the **Essential Options** from the left panel and set the following fields:<br>
     **Server profile**: select the server connection from the dropdown for the bursting report. For example, JasperReports Server Pro.<br>
@@ -79,7 +79,7 @@ To burst a report
     |  |
     |----|
     | ![bursting essential opts](assets/images/bursting%20essential%20opts.png) |
-    | *Figure 4: Adding Essential Options* |
+    | *Figure 4 Adding Essential Options* |
 
 7.  Select Output File Options and set the following options:<br>
     **File name**: “Sales-” + $F{Country}<br>
@@ -90,7 +90,7 @@ To burst a report
     |                                                                     |
     |---------------------------------------------------------------------|
     | ![bursting output opts](assets/images/bursting%20output%20opts.PNG) |
-    | *Figure 5: Adding Output File Options*                              |
+    | *Figure 5 Adding Output File Options*                               |
 
 8.  Select **Job Run Notifications** and enter the following information:
 
@@ -103,14 +103,14 @@ To burst a report
             |                                                 |
             |-------------------------------------------------|
             | ![burst email](assets/images/burst%20email.PNG) |
-            | *Figure 6: Edit Property Value Dialog*          |
+            | *Figure 6 Edit Property Value Dialog*           |
 
         3.  Select **Email Field String**.
 
             |                                                               |
             |---------------------------------------------------------------|
             | ![burst email field](assets/images/burst%20email%20field.PNG) |
-            | *Figure 7: Expression Editor*                                 |
+            | *Figure 7 Expression Editor*                                  |
 
         4.  Click **Finish**.
 

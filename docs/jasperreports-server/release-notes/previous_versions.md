@@ -205,7 +205,7 @@ This release also includes enhancements and fixes requested by our customers. Fo
 
 !!! note
 
-    The configuration of the `ResourceForwardingServlet` servlet has changed since Release 6. For more information, refer to the New Configuration in Version 7.1.0, below.
+    The configuration of the `ResourceForwardingServlet` servlet has changed since Release 6. For more information, refer to the New Configuration in [Version 7.1.0](#version-710), below.
 
 ## Version 7.1.1
 

@@ -21,6 +21,6 @@ As shown in the following figure, Carbonated Beverages are among the items makin
 
 ![ja ug analysisview foodmart mondrian drillthrough](assets/images/ja-ug-analysisview-foodmart-mondrian-drillthrough.png)
 
-*Figure 1: Drill-through Table Showing High-value Items*
+*Figure 1 Drill-through Table Showing High-value Items*
 
 Note that you can export the current set of source data to an Excel spreadsheet by clicking at the top of the drill-through table. You can change the columns that are displayed and their sort order by clicking ![ja table export to Excel](assets/images/ja-table-export-to-Excel.png). Navigate through the paged data and control the number of rows per page using the controls at the bottom of the drill-through table.

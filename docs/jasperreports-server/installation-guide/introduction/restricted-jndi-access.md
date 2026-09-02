@@ -9,15 +9,15 @@ Enabling JNDI security or restricted access provides access-control to data sou
 
 This chapter includes the following sections:
 
--   Additional Buildomatic Configuration for JNDI Security Installation Upgrade
+-   [Additional Buildomatic Configuration for JNDI Security Installation Upgrade](#additional-buildomatic-configuration-for-jndi-security-installation-upgrade)
 
--   Create Read-only Users
+-   [Create Read-only Users](#create-read-only-users)
 
--   Websphere Installation for Enabling JNDI Security
+-   [Websphere Installation for Enabling JNDI Security](#websphere-installation-for-enabling-jndi-security)
 
--   Weblogic Installation for JNDI Security
+-   [Weblogic Installation for JNDI Security](#weblogic-installation-for-jndi-security)
 
--   Enabling JNDI Security post Installing JasperReports Server
+-   [Enabling JNDI Security post Installing JasperReports Server](#enabling-jndi-security-post-installing-jasperreports-server)
 
 ## Additional Buildomatic Configuration for JNDI Security Installation Upgrade
 
@@ -33,8 +33,9 @@ For example: To uncomment ` #jndi.restrictedAccess=true`, change it to `jndi.res
 
 Sample Values for the default_master.properties File for JNDI Restricted Access Installation lists the settings that you need to uncomment with sample values for each supported database.
 
+**Sample Values for the default_master.properties File for JNDI Restricted Access Installation**
+
 <table>
-<caption><p>Sample Values for the default_master.properties File for JNDI Restricted Access Installation</p></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -88,7 +89,7 @@ Sample Values for the default_master.properties File for JNDI Restricted Access 
 <p>**Note** The password for SQL Server must be a combination of a special character, a number, an uppercase, and a lower case character.</p></td>
 </tr>
 <tr>
-<td colspan="2"><p>**Note** Once the database is created, you must create read-only users. For details, refer to Create Read-only Users</p></td>
+<td colspan="2"><p>**Note** Once the database is created, you must create read-only users. For details, refer to [Create Read-only Users](#create-read-only-users)</p></td>
 </tr>
 </tbody>
 </table>
@@ -102,7 +103,6 @@ You can enable JNDI restricted access while deploying JasperReports Server on T
 The following table lists the database and the steps to create read-only users:
 
 <table>
-<caption> </caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -185,7 +185,7 @@ Assign read-only permissions:
     |  |
     |----|
     | ![websphere jndi add resources](../assets/images/websphere-jndi-add-resources.png) |
-    | *Figure 1: Add New JNDI Data Sources* |
+    | *Figure 1 Add New JNDI Data Sources* |
 
 4.  Restart the Websphere server.
 
@@ -194,7 +194,7 @@ Assign read-only permissions:
     |  |
     |----|
     | ![websphere restart server](../assets/images/websphere-restart-server.png) |
-    | *Figure 2: Restart Websphere Server* |
+    | *Figure 2 Restart Websphere Server* |
 
 6.  Log in to JasperReports Server and check the connection to all JNDI data sources.
 
@@ -229,7 +229,7 @@ Assign read-only permissions:
     |  |
     |----|
     | ![weblogic jndi add resources](../assets/images/weblogic-jndi-add-resources.png) |
-    | *Figure 3: Add New JNDI Data Sources* |
+    | *Figure 3 Add New JNDI Data Sources* |
 
 5.  Redeploy WAR file.
 
@@ -240,7 +240,7 @@ Assign read-only permissions:
     |                                                                          |
     |--------------------------------------------------------------------------|
     | ![weblogic restart server](../assets/images/weblogic-restart-server.png) |
-    | *Figure 4: Redeploy WAR file*                                            |
+    | *Figure 4 Redeploy WAR file*                                             |
 
 8.  Log in to JasperReports Server and check the connection to all JNDI data sources.
 
@@ -254,7 +254,7 @@ Assign read-only permissions:
 
 ## Enabling JNDI Security post Installing JasperReports Server
 
-1.  Follow the steps in Create Read-only Users to create read-only users.
+1.  Follow the steps in [Create Read-only Users](#create-read-only-users) to create read-only users.
 
 2.  Update the `jasperreports server>/WEB-INF/hibernate.properties` file and set `metadata.hibernate.jndi.restrictedAccess.enabled=true`.
 

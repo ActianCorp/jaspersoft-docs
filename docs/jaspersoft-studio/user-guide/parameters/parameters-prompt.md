@@ -17,7 +17,7 @@ Create a simple report with the template **Blank A4**, name **ParameterExample**
 |                                                      |
 |------------------------------------------------------|
 | ![message param](../assets/images/message-param.png) |
-| *Figure 1: Parameter in Title Band*                  |
+| *Figure 1 Parameter in Title Band*                   |
 
 To compile and preview the report
 
@@ -32,6 +32,6 @@ To compile and preview the report
 |                                                                          |
 |--------------------------------------------------------------------------|
 | ![input parameter example](../assets/images/input-parameter-example.png) |
-| *Figure 2: Preview Tab with Parameter Value*                             |
+| *Figure 2 Preview Tab with Parameter Value*                              |
 
 Jaspersoft Studio provides input dialogs for parameters of type String, Date, Time, Number, and Collection.

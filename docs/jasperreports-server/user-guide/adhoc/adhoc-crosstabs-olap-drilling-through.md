@@ -46,6 +46,6 @@ The Ad Hoc Editor allows you to view data from Microsoft SQL Server Analytical S
 
 ![js ad hoc AdventureWorks chart](../assets/images/js-ad-hoc-AdventureWorks-chart.png)
 
-*Figure 1: Search Results Listing*
+*Figure 1 Search Results Listing*
 
 For details, refer to the Jaspersoft OLAP User Guide.

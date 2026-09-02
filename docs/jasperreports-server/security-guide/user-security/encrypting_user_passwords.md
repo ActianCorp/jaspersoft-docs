@@ -48,8 +48,9 @@ To Configure User Password Encryption:
 
 4.  Edit the properties in the following table to configure different ciphers. Both the server and the import-export scripts access the user profiles and must be configured identically. Make the same changes in both files:
 
+    **User Password Encryption Configuration**
+
     <table>
-    <caption><p>User Password Encryption Configuration</p></caption>
     <colgroup>
     <col style="width: 33%" />
     <col style="width: 33%" />
@@ -107,10 +108,10 @@ To Configure User Password Encryption:
 
 5.  Next, drop your existing `jasperserver` database, where the passwords had the old encoding, and recreate an empty `jasperserver` database. Follow the instructions for your database server:
 
-    -   Dropping and Recreating the Database in PostgreSQL
-    -   Dropping and Recreating the Database in MySQL
-    -   Dropping and Recreating the Database in Oracle
-    -   Dropping and Recreating in the Database in Microsoft SQL Server
+    -   [Dropping and Recreating the Database in PostgreSQL](#dropping-and-recreating-the-database-in-postgresql)
+    -   [Dropping and Recreating the Database in MySQL](#dropping-and-recreating-the-database-in-mysql)
+    -   [Dropping and Recreating the Database in Oracle](#dropping-and-recreating-the-database-in-oracle)
+    -   [Dropping and Recreating in the Database in Microsoft SQL Server](#dropping-and-recreating-in-the-database-in-microsoft-sql-server)
 
 6.  Import your exported repository contents with the following commands. The import operation restores the contents of JasperReports Server's private database, including user profiles. As the user profiles are imported, the passwords are encrypted using the new cipher settings.
 

@@ -10,7 +10,7 @@ Formatting tools help organize the elements in the report. Right-click the eleme
 |                                                              |
 |--------------------------------------------------------------|
 | ![format tools menu](../assets/images/format-tools-menu.png) |
-| *Figure 1: Formatting Tools Menu*                            |
+| *Figure 1 Formatting Tools Menu*                             |
 
 The tools in the context menu are specific to the selected items. The following tables explain the tools.
 
@@ -18,8 +18,9 @@ The tools in the context menu are specific to the selected items. The following 
 
     A container is the band, frame, or cell that contains the element.
 
+**Formatting Tools**
+
 <table>
-<caption><p>Formatting Tools</p></caption>
 <thead>
 <tr>
 <th><p>Icon</p></th>

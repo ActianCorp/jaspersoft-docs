@@ -24,13 +24,13 @@ To create and start a log collector
 
     ![js LogCollectors view](../assets/images/js-LogCollectors-view.png)
 
-    *Figure 1: Viewing Log Collectors*
+    *Figure 1 Viewing Log Collectors*
 
 4.  Click `Create Log Collector`.
 
     ![js LogCollectors new](../assets/images/js-LogCollectors-new.png)
 
-    *Figure 2: Creating a New Log Collector*
+    *Figure 2 Creating a New Log Collector*
 
 5.  On the `New Log Collector` page, enter a name for the collector and the following optional information:
 

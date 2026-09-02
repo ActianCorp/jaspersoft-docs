@@ -19,7 +19,7 @@ To view the Supermart dashboard
 
     ![js Dashboard Example SuperMart Gauges](../assets/images/js-Dashboard-Example-SuperMart-Gauges.png)
 
-    *Figure 1: Supermart Dashboard Example*
+    *Figure 1 Supermart Dashboard Example*
 
 2.  Click one of the **USA** gauges.
 

@@ -15,6 +15,8 @@ Some built-in parameters are specific to a query language. For example, if you a
 
 The built-in parameters are:
 
+**JasperReports Default Parameters**
+
 | Parameter | Description |
 |----|----|
 | `REPORT_CONTEXT` |  |
@@ -36,5 +38,3 @@ The built-in parameters are:
 | `FILTER` | A `DatasetFilter` is used in addition to `JRDataset.getFilterExpression()` for filtering dataset rows. |
 | `REPORT_VIRTUALIZER` | This defines the class for the report filler that implements the `JRVirtualizer` interface for filling the report. |
 | `IS_IGNORE_PAGINATION` | You can switch the pagination system on and off with this parameter (it must be a Boolean object). By default, pagination is used except when exporting to HTML and Excel formats. |
-
-JasperReports Default Parameters

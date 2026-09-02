@@ -11,14 +11,14 @@ As of JasperReports Server 7.0, Visualize.js can render interactive Ad Hoc views
 
 This chapter contains the following sections:
 
--   Ad Hoc View Properties
--   Ad Hoc View Functions
--   Ad Hoc View Data Structure
--   Rendering an Ad Hoc View
--   Getting the Embed Code of an Ad Hoc View
--   Setting the Visualization Type
--   Setting Ad Hoc View Filters
--   Accessing Ad Hoc View Hyperlinks
+-   [Ad Hoc View Properties](#ad-hoc-view-properties)
+-   [Ad Hoc View Functions](#ad-hoc-view-functions)
+-   [Ad Hoc View Data Structure](#ad-hoc-view-data-structure)
+-   [Rendering an Ad Hoc View](#rendering-an-ad-hoc-view)
+-   [Getting the Embed Code of an Ad Hoc View](#getting-the-embed-code-of-an-ad-hoc-view)
+-   [Setting the Visualization Type](#setting-the-visualization-type)
+-   [Setting Ad Hoc View Filters](#setting-ad-hoc-view-filters)
+-   [Accessing Ad Hoc View Hyperlinks](#accessing-ad-hoc-view-hyperlinks)
 
 ## Ad Hoc View Properties
 
@@ -351,7 +351,7 @@ To copy the embed code of an Ad Hoc view:
     |                                                                      |
     |----------------------------------------------------------------------|
     | ![js AdHoc GetEmbedCode](../assets/images/js-AdHoc-GetEmbedCode.png) |
-    | *Figure 1: The Embed Code of an Ad Hoc View*                         |
+    | *Figure 1 The Embed Code of an Ad Hoc View*                          |
 
     The code sample includes comments where you can enter credentials for authentication. You should also change the name of the container to match the one in your application.
 
@@ -443,7 +443,7 @@ ahv.params(); // returns { Country: ["USA", "Mexico", "Canada"] }
 ahv.params({ Country: ["Canada"] }).run();
 ```
 
-You can use the `metadata.inputParameters` property of the `data` object to obtain the name and type of each current filter. The structure of the `metadata.inputParameters` is shown in Ad Hoc View Data Structure.
+You can use the `metadata.inputParameters` property of the `data` object to obtain the name and type of each current filter. The structure of the `metadata.inputParameters` is shown in [Ad Hoc View Data Structure](#ad-hoc-view-data-structure).
 
 In the next example, the code requests the current filter values, processes them, and then uses the information about the current filters and values to set different values, in this case a different selection:
 
@@ -469,7 +469,7 @@ ahv.params({ State: ["Oregon"] }).run();
 
 Hyperlinks, or simply links, are elements of the Ad Hoc view that your code can interact with. These are generally the contents of cells in a table, for example a field name in a column header or the value in a cell. As the user interacts with the Ad Hoc View, you can capture events on these elements such as clicks and then take action using the values of the element.
 
-The elements that you can access are called `outputParameters`, and their structure is defined in the Ad Hoc View Data Structure. You can use the `metadata.outputParameters` property of the `data` object to obtain the name and type of each hyperlink.
+The elements that you can access are called `outputParameters`, and their structure is defined in the [Ad Hoc View Data Structure](#ad-hoc-view-data-structure). You can use the `metadata.outputParameters` property of the `data` object to obtain the name and type of each hyperlink.
 
 ``` javascript
 var ahv = v.adhocView({

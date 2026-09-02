@@ -19,7 +19,7 @@ In this first example, we create a query-based input control that returns a list
 
     ![js AddInputControl Create](../assets/images/js-AddInputControl-Create.png)
 
-    *Figure 1: Adding an Input Control - Naming*
+    *Figure 1 Adding an Input Control - Naming*
 
 4.  Select the type of query-based input control from the type drop-down list. This determines how the input control appears to users, either as a drop-down list, a set of radio buttons, a multi-select list, or a set of check boxes. In this example, we choose a single-select query-based input control type.
 
@@ -29,7 +29,7 @@ In this first example, we create a query-based input control that returns a list
 
     ![js AddInputControl AddQuery Locate](../assets/images/js-AddInputControl-AddQuery-Locate.png)
 
-    *Figure 2: Adding an Input Control - Locating the Query*
+    *Figure 2 Adding an Input Control - Locating the Query*
 
     If you have a suitable query defined in the repository, you can select it here as an external reference. In this example, we'll define a query locally inside the input control.
 
@@ -37,7 +37,7 @@ In this first example, we create a query-based input control that returns a list
 
     ![js AddInputControl AddQuery Name](../assets/images/js-AddInputControl-AddQuery-Name.png)
 
-    *Figure 3: Adding an Input Control - Naming the Query*
+    *Figure 3 Adding an Input Control - Naming the Query*
 
     Although the query resource is not visible in the repository, it may still have a name, ID and optional description within the query resource. However, the values for these fields are not important.
 
@@ -45,7 +45,7 @@ In this first example, we create a query-based input control that returns a list
 
     ![js AddInputControl AddQuery Link](../assets/images/js-AddInputControl-AddQuery-Link.png)
 
-    *Figure 4: Adding an Input Control - Linking to a Data Source*
+    *Figure 4 Adding an Input Control - Linking to a Data Source*
 
     Like all queries, the query inside the input control may optionally link to a data source, either in the repository or its own internally defined one. If no data source is linked, the query in the input control uses the same data source as the report. In this example, we use the default of not linking to a data source.
 
@@ -53,16 +53,16 @@ In this first example, we create a query-based input control that returns a list
 
     ![js AddInputControl AddQuery Define](../assets/images/js-AddInputControl-AddQuery-Define.png)
 
-    *Figure 5: Adding an Input Control - Defining the Query*
+    *Figure 5 Adding an Input Control - Defining the Query*
 
 10. Select the query language, in this example SQL, and enter a query string. The `SELECT` statement should contain the names of all fields used in the display, value, or filter for the input control. In this example, the query returns three fields, country, state, and city. Country limits the values to a single country. The `ORDER BY` clause ensures that the values from the query are sorted alphabetically when they appear in the input control.<br>
-    For an example in a different query language, see Domain-based Queries.
+    For an example in a different query language, see [Domain-based Queries](#domain-based-queries).
 
 11. Click **Save** to complete the query definition. The **Set Parameter Values** page appears:<br>
 
     ![js AddInputControl SetParameterValues](../assets/images/js-AddInputControl-SetParameterValues.png)
 
-    *Figure 5: Adding an Input Control - Setting Parameter Values*
+    *Figure 5 Adding an Input Control - Setting Parameter Values*
 
     On the parameter values page, you specify which fields in the query result are displayed, and which field contains values that become the parameter value. When chosen.
 
@@ -84,8 +84,9 @@ In this first example, we create a query-based input control that returns a list
 
 The `LoggedInUser` and `LoggedInUsername` parameters are always available for query input controls. They are always available to reports even if an input control isn't defined for them. The standard parameters are also provided for reports if they're defined as parameters in the JRXML.
 
+**Built-in Parameters for Query-based Input Controls**
+
 <table>
-<caption><p>Built-in Parameters for Query-based Input Controls</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -147,8 +148,9 @@ The `LoggedInUser` and `LoggedInUsername` parameters are always available for qu
 
 Attributes defined on users, organizations, or at the server-level can also be used in reports and query-based input controls. For more information, see [Managing Attributes](../management/managing_attributes.md).
 
+**Attribute-based Parameters for Queries and Reports**
+
 <table>
-<caption><p>Attribute-based Parameters for Queries and Reports</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -316,7 +318,7 @@ The **JasperQL** is a JSON-based Query Language for defining a query to access d
 
 ![JasperQL1](../assets/images/JasperQL1.png)
 
-*Figure 6: Setting Query Language to JasperQL*
+*Figure 6 Setting Query Language to JasperQL*
 
 !!! note
 

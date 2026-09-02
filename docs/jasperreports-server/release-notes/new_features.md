@@ -11,9 +11,9 @@ To view the Release Notes of version 10.0.0, see [JasperReports® Server Release
 
 To view the new features added to the various products of Jaspersoft BI Suite, refer to the following list:
 
--   JasperReports® Server 10.1.0
--   Jaspersoft® Studio 10.1.0
--   JasperReports® Web Studio 10.1.0
+-   [JasperReports® Server 10.1.0](#jasperreports-server-1010)
+-   [Jaspersoft® Studio 10.1.0](#jaspersoft-studio-1010)
+-   [JasperReports® Web Studio 10.1.0](#jasperreports-web-studio-1010)
 
 ## JasperReports® Server 10.1.0
 

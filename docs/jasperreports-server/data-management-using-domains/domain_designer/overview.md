@@ -9,13 +9,13 @@ The Domain Designer is a tool for defining the components of a Domain. Tabs let 
 
 ![js DomainDesigner supermart data management](../assets/images/js-DomainDesigner-supermart-data-management.png)
 
-*Figure 1: User Interface of the Domain Designer*
+*Figure 1 User Interface of the Domain Designer*
 
 The following image shows the UI of the Domains Designer when you select a Trino-based data source.
 
 ![js DomainDesigner ui trino](../assets/images/js-DomainDesigner-ui-trino.png)
 
-*Figure 2: User Interface of the Domain Designer for a Trino-based data source*
+*Figure 2 User Interface of the Domain Designer for a Trino-based data source*
 
 ## Domain Designer Tabs
 
@@ -37,8 +37,9 @@ All tabs except the Security and Locales have at least two panels, from left to 
 
 Use the icons on the tool bar to create derived tables and calculated fields, change the data source, save the Domain, and import and export Domain design files.
 
+**Domain Designer Tool Bar Icons**
+
 <table>
-<caption><p>Domain Designer Tool Bar Icons</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -109,13 +110,13 @@ The **Data Structure** panel contains a hierarchical view of the available schem
 
 ![js DomainDesigner data structure manage](../assets/images/js-DomainDesigner-data-structure-manage.png)             ![js DomainDesigner data structure joins](../assets/images/js-DomainDesigner-data-structure-joins.png)
 
-*Figure 3: Examples of Data Structure panel on Data Management and Joins tabs*
+*Figure 3 Examples of Data Structure panel on Data Management and Joins tabs*
 
 The following image shows the UI of the Domains Designer when you select a Trino-based data source to create the domain.
 
              ![js DomainDesigner data structure joins manage trino](../assets/images/js-DomainDesigner-data-structure-joins-manage-trino.png)
 
-*Figure 4: Examples of Data Structure panel on Data Management and Joins tabs for a Trino-based data source*
+*Figure 4 Examples of Data Structure panel on Data Management and Joins tabs for a Trino-based data source*
 
 The following icons to indicate element type can appear on the **Data Structure** panel or elsewhere in the Domain Designer:
 

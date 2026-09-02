@@ -11,10 +11,10 @@ You must be authenticated as the system admin (`superuser`) for the export servi
 
 This chapter includes the following sections:
 
--   Requesting an Export
--   Polling the Export Status
--   Fetching the Export Output
--   Canceling an Export Operation
+-   [Requesting an Export](#requesting-an-export)
+-   [Polling the Export Status](#polling-the-export-status)
+-   [Fetching the Export Output](#fetching-the-export-output)
+-   [Canceling an Export Operation](#canceling-an-export-operation)
 
 ## Requesting an Export
 

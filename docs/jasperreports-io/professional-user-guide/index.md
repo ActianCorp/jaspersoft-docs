@@ -23,6 +23,3 @@ Applies to Jaspersoft **10.1.0**.
 - [JavaScript API Usage - Report Events](jasperreports-server-visualize.js-guide/report_events.md)
 - [JavaScript API Usage - Hyperlinks](jasperreports-server-visualize.js-guide/hyperlinks.md)
 - [JavaScript API Usage - Interactive Reports](jasperreports-server-visualize.js-guide/interactive_reports.md)
-- [Jaspersoft Documentation and Support Services](_templates/tibco-documentation-and-support-services.md)
-- [Legal and Third-Party Notices](_templates/legal-and-third-party-notices.md)
-- [Additional Topics](jasperreports-server-visualize.js-guide/ad_hoc_views.md)

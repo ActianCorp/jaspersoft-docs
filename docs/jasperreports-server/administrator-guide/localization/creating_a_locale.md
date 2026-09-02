@@ -9,11 +9,11 @@ When you want to create other locales for JasperReports Server, translation is o
 
 -   Translating labels and messages
 
--   Creating a Resource Bundle
+-   [Creating a Resource Bundle](#creating-a-resource-bundle)
 
--   Setting Date and Datetime Formats
+-   [Setting Date and Datetime Formats](#setting-date-and-datetime-formats)
 
--   Setting Data Format Masks
+-   [Setting Data Format Masks](#setting-data-format-masks)
 
 The tasks in this section require you to edit these files:
 
@@ -289,7 +289,7 @@ To create a new JasperReports Server resource bundle
 
 1.  Copy each of the properties files (keeping them in the same directory as the originals) and rename them according to your locale.
 2.  Translate each `*.properties` file's labels and messages into the new language.<br>
-    Some of the strings in the properties files are date formats and format masks that may need to be edited for the new locale. For more information, refer to Setting Date and Datetime Formats.
+    Some of the strings in the properties files are date formats and format masks that may need to be edited for the new locale. For more information, refer to [Setting Date and Datetime Formats](#setting-date-and-datetime-formats).
 3.  Save the files.
 4.  If the new locale requires specific character encoding or fonts, ensure that JasperReports Server and the third party software it relies on are configured to support them. For more information, refer to [Configuring JasperReports Server for Multibyte Fonts](multi-byte_fonts.md).
 

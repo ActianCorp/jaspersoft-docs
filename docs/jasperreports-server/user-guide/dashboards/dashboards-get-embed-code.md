@@ -19,7 +19,7 @@ To get a dashboard embed code
 
     ![js Dashboard GetEmbedCode](../assets/images/js-Dashboard-GetEmbedCode.png)
 
-    *Figure 1: Dashboard Embed Code Dialog*
+    *Figure 1 Dashboard Embed Code Dialog*
 
     The dialog shows the Visualize.js code and a preview of the dashboard as it is currently saved.
 

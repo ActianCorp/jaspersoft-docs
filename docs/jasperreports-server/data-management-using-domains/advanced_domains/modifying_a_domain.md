@@ -21,7 +21,7 @@ To edit a Domain
 
 3.  If you want to change the data source, select **Replace Data…** from the ![js DomainDesigner icon kebab](../assets/images/js-DomainDesigner-icon-kebab.png) menu, select the data source you want in the **Choose Data** dialog, and click **OK**.
 
-    If you change to a data source with a different database, the definitions in the Domain design may become invalid and you can't save the Domain. See Changing the Data Source for more information.
+    If you change to a data source with a different database, the definitions in the Domain design may become invalid and you can't save the Domain. See [Changing the Data Source](#changing-the-data-source) for more information.
 
     !!! warning
 
@@ -39,7 +39,7 @@ If a schema or table is used in a join tree, the individual joins that reference
 
 ![js DomainDesigner DeleteTable](../assets/images/js-DomainDesigner-DeleteTable.png)
 
-*Figure 1: Deleted Table Warning*
+*Figure 1 Deleted Table Warning*
 
 ## Changing the Data Source
 
@@ -75,7 +75,7 @@ To select a new data source:
 
     ![js DomainDesigner MapSchemas](../assets/images/js-DomainDesigner-MapSchemas.png)
 
-    *Figure 2: Selecting schemas to map*
+    *Figure 2 Selecting schemas to map*
 
     !!! note
 
@@ -104,7 +104,7 @@ To select a new data source:
 
 ![js DomainDesigner ReplaceDataSource Warning](../assets/images/js-DomainDesigner-ReplaceDataSource-Warning.png)
 
-*Figure 3: Warning dialog for changing data source*
+*Figure 3 Warning dialog for changing data source*
 
 If you click **Delete Items**, JasperReports Server deletes all the displayed items. There may still be some errors you need to resolve before the Domain is valid.
 
@@ -112,7 +112,7 @@ If you click **Delete Items**, JasperReports Server deletes all the displayed it
 
 If you use attributes to define a database schema, a calculated field, or another Domain element, you may see the following when you log in as a different user:
 
--   If a schema is missing, the **Select Schemas to Map** dialog appears. See Selecting a New Data Source for more information. This can happen because the attribute is no longer defined or because the attribute is defined but resolves to a non-existent schema.
+-   If a schema is missing, the **Select Schemas to Map** dialog appears. See [Selecting a New Data Source](#selecting-a-new-data-source) for more information. This can happen because the attribute is no longer defined or because the attribute is defined but resolves to a non-existent schema.
 -   If you use an attribute for the schema name and you later select a different schema in the **Select Schemas to Map** dialog, the design will always use that schema. The schema will no longer be attribute-based.
 -   If any tables or fields are missing in the new data source or schema, JasperReports Server displays a warning dialog. Clicking **Delete Items** deletes the missing tables and columns and any Domain design elements that depend on them.
 -   If an attribute is not defined or does not resolve to a usable value, JasperReports Server displays a warning dialog. Clicking **Delete Items** deletes any Domain design elements that depend on the undefined or invalid attribute(s).

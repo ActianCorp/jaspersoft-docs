@@ -7,6 +7,8 @@ description: "The wsType attribute defines the nature of the resource. The possi
 
 The `wsType` attribute defines the nature of the resource. The possible values for this attribute are:
 
+**Values for wsType**
+
 | wsType Value | Description |
 |----|----|
 | aws | Amazon Web Services data source |
@@ -32,7 +34,5 @@ The `wsType` attribute defines the nature of the resource. The possible values f
 | reportUnit | A complete report that can be run in JasperReports Server |
 | virtual | Virtual data source – This type has a child ResourceDescriptor for each data source contained in the virtual data source. |
 | xmlaConnection | XML/A Connection |
-
-Values for wsType
 
 For all the other resource types found in the repository, the repository web service sets the attribute `wsType` to `UNKNOWN`.

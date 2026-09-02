@@ -39,8 +39,9 @@ By default, the editor displays only a smaller, sample set of the data in the vi
 
 The tool bar at the top of the panel provides access to many functions of the Ad Hoc Editor. The toolbar is described in Ad Hoc Editor Tool Bar Icons.
 
+**Ad Hoc Editor Tool Bar Icons**
+
 <table>
-<caption><p>Ad Hoc Editor Tool Bar Icons</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -120,7 +121,7 @@ The tool bar at the top of the panel provides access to many functions of the Ad
 <tr>
 <td><p><img src="../assets/images/js-AdHoc-icon-viewSQL.png" alt="js AdHoc icon viewSQL" /></p></td>
 <td><p>View SQL/MDX Query</p></td>
-<td><p>For more information on viewing SQL queries, see <span>Viewing the SQL Query</span>.</p>
+<td><p>For more information on viewing SQL queries, see <a href="#viewing-the-sql-query">Viewing the SQL Query</a>.</p>
 <p>For more information on viewing MDX queries, see <a href="adhoc-crosstabs-olap-drilling-through.md">Viewing the MDX Query</a>.</p></td>
 </tr>
 <tr>

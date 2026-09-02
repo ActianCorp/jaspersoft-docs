@@ -57,7 +57,7 @@ The following figure shows the main steps in creating a `JRDataSource` from a cu
 
 ![js CustomDataSource Architecture](../assets/images/js-CustomDataSource-Architecture.png)
 
-*Figure 1: JRDataSource Creation from Custom Data Source Instance*
+*Figure 1 JRDataSource Creation from Custom Data Source Instance*
 
 ## Query Executers
 

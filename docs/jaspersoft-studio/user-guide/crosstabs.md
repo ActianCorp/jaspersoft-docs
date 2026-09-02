@@ -14,26 +14,26 @@ The cells in a crosstab show summary data for the corresponding row and column, 
 |                                                                 |
 |-----------------------------------------------------------------|
 | ![jss crosstab example](assets/images/jss-crosstab-example.png) |
-| *Figure 1: Example of a simple crosstab*                        |
+| *Figure 1 Example of a simple crosstab*                         |
 
 You can increase the complexity of a crosstab by adding more row or column groups, or by using another summary function, such as sum, average, or percent. For example, the following crosstab shows the sum of the monthly cost of food for each pet (measure) by gender (column) and group and species (rows). Note that when there are multiple row or column groups in a crosstab, they are displayed hierarchically.
 
 |  |
 |----|
 | ![jss crosstab example complex](assets/images/jss-crosstab-example-complex.png) |
-| *Figure 2: Example of a crosstab with multiple row groups and a sum* |
+| *Figure 2 Example of a crosstab with multiple row groups and a sum* |
 
 Crosstabs in JasperReports support row and column groups, totals and subtotals, and individual cell formatting. Data to fill the crosstab can come from the main report dataset or from a subdataset.
 
 This chapter has the following sections:
 
--   Example of Creating a Crosstab
+-   [Example of Creating a Crosstab](#example-of-creating-a-crosstab)
 
--   Working with Crosstab Properties
+-   [Working with Crosstab Properties](#working-with-crosstab-properties)
 
--   Using the Crosstab Editor
+-   [Using the Crosstab Editor](#using-the-crosstab-editor)
 
--   Working with Crosstab Parameters
+-   [Working with Crosstab Parameters](#working-with-crosstab-parameters)
 
 ## Example of Creating a Crosstab
 
@@ -53,7 +53,7 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
     |  |
     |----|
     | ![jss crosstab wizard dataset](assets/images/jss-crosstab-wizard-dataset.png) |
-    | *Figure 3: Dataset page of the Crosstab wizard* |
+    | *Figure 3 Dataset page of the Crosstab wizard* |
 
 4.  For this example, make sure that **Create a Crosstab using an existing dataset** is selected, and select **\[Main Dataset\]** from the drop-down menu.
 
@@ -64,7 +64,7 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
     |  |
     |----|
     | ![jss crosstab wizard columns](assets/images/jss-crosstab-wizard-columns.png) |
-    | *Figure 4: Defining column groups* |
+    | *Figure 4 Defining column groups* |
 
 7.  Select the `ORDERDATE` field. Then click the Unique value in the **Calculation** column and select **Year** from the drop-down menu. This aggregates the orders by year.
 
@@ -91,7 +91,7 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
     |                                                                         |
     |-------------------------------------------------------------------------|
     | ![jss crosstab wizard rows](assets/images/jss-crosstab-wizard-rows.png) |
-    | *Figure 5: Defining row groups*                                         |
+    | *Figure 5 Defining row groups*                                          |
 
 10. Make sure that the fields appear in the order you want them in the crosstab. For this example, ensure that **SHIPCOUNTRY** appears first in the list by selecting it and clicking **Up**.
 
@@ -106,7 +106,7 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
     |  |
     |----|
     | ![jss crosstab wizard measures](assets/images/jss-crosstab-wizard-measures.png) |
-    | *Figure 6: Defining measures* |
+    | *Figure 6 Defining measures* |
 
 13. Click **Next**. The **Layout** page is displayed.
 
@@ -117,7 +117,7 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
     |  |
     |----|
     | ![jss crosstab wizard layout](assets/images/jss-crosstab-wizard-layout.png) |
-    | *Figure 7: Choosing layout options* |
+    | *Figure 7 Choosing layout options* |
 
 15. Click **Finish**.
 
@@ -126,7 +126,7 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
     |  |
     |----|
     | ![jss crosstab in report design](assets/images/jss-crosstab-in-report-design.png) |
-    | *Figure 8: Crosstab in Design view* |
+    | *Figure 8 Crosstab in Design view* |
 
 16. Select the crosstab to display a border with handles. Drag the right-hand handle of the crosstab to the right margin of the report.
 
@@ -135,7 +135,7 @@ When you add a Crosstab element to a report, Jaspersoft Studio displays the Cros
 |                                                                 |
 |-----------------------------------------------------------------|
 | ![jss crosstab preview](assets/images/jss-crosstab-preview.png) |
-| *Figure 9: Preview of the crosstab*                             |
+| *Figure 9 Preview of the crosstab*                              |
 
 You can set the dynamic page width for the crosstab reports by adding the following property to the JRXML file.
 
@@ -156,7 +156,7 @@ You can edit the following crosstab-specific properties on the Crosstab tab in t
 |                                                               |
 |---------------------------------------------------------------|
 | ![jss crosstabs break](assets/images/jss-crosstabs-break.png) |
-| *Figure 10: Column break offset*                              |
+| *Figure 10 Column break offset*                               |
 
 You can export a report with crosstab in the Microsoft Excel - Metadata(.xlsx) format from the JasperReports Server. To do so, in Jaspersoft Studio, select the **Ignore Pagination** on the **Report** tab in the **Properties** view. As a result, you can get tabular data on a single page.
 
@@ -195,7 +195,7 @@ Manually resizing a row or column
     |                                                                         |
     |-------------------------------------------------------------------------|
     | ![jss crosstabs row column](assets/images/jss-crosstabs-row-column.png) |
-    | *Figure 11: Row and column selected in crosstab editor*                 |
+    | *Figure 11 Row and column selected in crosstab editor*                  |
 
 3.  Drag an outline to resize the row or column. Make sure that the cells are large enough to contain their content completely when you run the report.
 
@@ -231,7 +231,7 @@ The following example shows how to edit the sample crosstab to group by the firs
     |  |
     |----|
     | ![jss crosstab editor outline view](assets/images/jss-crosstab-editor-outline-view.png) |
-    | *Figure 12: Outline tree view – crosstab details in the crosstab editor* |
+    | *Figure 12 Outline tree view – crosstab details in the crosstab editor* |
 
 3.  In the **Properties** view, select the **Cell** tab.
 
@@ -240,14 +240,14 @@ The following example shows how to edit the sample crosstab to group by the firs
 |  |
 |----|
 | ![jss crosstab shippostalcode expression](assets/images/jss-crosstab-shippostalcode-expression.png) |
-| *Figure 13: Properties for SHIPPOSTALCODE1* |
+| *Figure 13 Properties for SHIPPOSTALCODE1* |
 
 When you preview the crosstab, the second row group is now bucketed by the first character of the postal code.
 
 |  |
 |----|
 | ![jss crosstabs edit expression](assets/images/jss-crosstabs-edit-expression.png) |
-| *Figure 14: Crosstab after expression has been edited* |
+| *Figure 14 Crosstab after expression has been edited* |
 
 ### Adding and Deleting Row and Column Groups
 
@@ -266,7 +266,7 @@ Example of adding a row group
     |  |
     |----|
     | ![jss crosstabs create row group](assets/images/jss-crosstabs-create-row-group.png) |
-    | *Figure 15: Adding a row group* |
+    | *Figure 15 Adding a row group* |
 
     The **Group Band** dialog is displayed.
 
@@ -283,7 +283,7 @@ Example of adding a row group
         |  |
         |----|
         | ![jss crosstabs add group band](assets/images/jss-crosstabs-add-group-band.png) |
-        | *Figure 16: Group Band dialog* |
+        | *Figure 16 Group Band dialog* |
 
 5.  To set the value class of the group, select the top-level node of the new SHIPREGION group in the outline view of the crosstab editor. Then, in the Cell tab of the properties view, enter the following value:
 
@@ -292,7 +292,7 @@ Example of adding a row group
 |  |
 |----|
 | ![jss crosstab row group properties](assets/images/jss-crosstab-row-group-properties.png) |
-| *Figure 17: Setting Value Class Name of a row group* |
+| *Figure 17 Setting Value Class Name of a row group* |
 
 1.  Change the order of the groups by selecting the top-level node of `SHIPREGION` in the outline view and dragging it above `SHIPPOSTALCODE`.
 2.  Preview the report.
@@ -308,7 +308,7 @@ Deleting a row or column group
 
 A measure in a crosstab is an object, similar to a variable that appears in an individual cell. It is the result of a calculation performed on the values for each row and column group that intersect in a cell.
 
-A crosstab can have multiple measures. If you add multiple measures when you first create a crosstab, each measure shows up under the Measure node in the outline view of the crosstab editor. You can also add measures after the crosstab has been created by dragging a text field into a measure cell in your crosstab and setting an expression. In this case, the measure is only visible in the detail node of the outline view. For an example of adding a measure and setting its expression, see 1.3.4.2, “Adding a Measure,” on page 1.
+A crosstab can have multiple measures. If you add multiple measures when you first create a crosstab, each measure shows up under the Measure node in the outline view of the crosstab editor. You can also add measures after the crosstab has been created by dragging a text field into a measure cell in your crosstab and setting an expression. In this case, the measure is only visible in the detail node of the outline view. For an example of adding a measure and setting its expression, see [1.3.4.2, “Adding a Measure,” on page 1](#adding-a-measure-as-a-text-field).
 
 !!! note
 
@@ -346,7 +346,7 @@ You can also select these variables from the expression editor for the **Express
 |  |
 |----|
 | ![jss crosstab total variables expression editor](assets/images/jss-crosstab-total-variables-expression-editor.png) |
-| *Figure 18: Total variables in the expression editor* |
+| *Figure 18 Total variables in the expression editor* |
 
 #### Adding a Measure as a Text Field
 
@@ -381,7 +381,7 @@ Adding a measure
     |  |
     |----|
     | ![jss crosstab measure add textfield](assets/images/jss-crosstab-measure-add-textfield.png) |
-    | *Figure 19: Adding a text field to an existing measure* |
+    | *Figure 19 Adding a text field to an existing measure* |
 
     Setting the measure expression
 
@@ -392,7 +392,7 @@ Adding a measure
     |  |
     |----|
     | ![jss crosstab measure textfield properties](assets/images/jss-crosstab-measure-textfield-properties.png) |
-    | *Figure 20: Text field properties after setting the expression* |
+    | *Figure 20 Text field properties after setting the expression* |
 
 9.  Click ![jss icon expression editor](assets/images/jss-icon-expression-editor.png) to the right of the **Expression** field to open the expression editor.
 
@@ -429,7 +429,7 @@ Adding a measure
 |  |
 |----|
 | ![jss crosstab percentage report](assets/images/jss-crosstab-percentage-report.png) |
-| *Figure 21: The final report with percentages included* |
+| *Figure 21 The final report with percentages included* |
 
 ## Working with Crosstab Parameters
 

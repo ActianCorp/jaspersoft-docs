@@ -29,7 +29,7 @@ To edit an XML/A connection’s naming and properties
 
     ![ja edit xmla sugar conn](assets/images/ja-edit-xmla-sugar-conn.png)
 
-    *Figure 1: Set Connection Type and Properties*
+    *Figure 1 Set Connection Type and Properties*
 
 3.  Make changes as necessary.
 

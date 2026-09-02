@@ -67,6 +67,8 @@ As an example of a reference to another bean, please refer to the `factory` prop
 
 The following table contains the APIs described in the rest of this section, along with their corresponding bean IDs and descriptions of their functions.
 
+**JasperReports Server Public Java API**
+
 | API | Bean ID | Function |
 |----|----|----|
 | RepositoryService | `repositoryService` | Search, retrieve, and modify persistent objects in the repository. |
@@ -77,5 +79,3 @@ The following table contains the APIs described in the rest of this section, alo
 | OlapConnectionService | `olapConnectionService` | Manage OLAP-specific repository and model runtime. |
 | OlapManagementService | `olapManagementService` | Manage OLAP server run time. |
 | ObjectPermissionService | `objectPermissionService` | Search, retrieve, and modify metadata repository object permissions. |
-
-JasperReports Server Public Java API

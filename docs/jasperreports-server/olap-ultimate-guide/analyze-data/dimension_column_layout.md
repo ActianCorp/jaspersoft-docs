@@ -25,7 +25,7 @@ The **Show all parent columns** checkbox displays a header for every dimension c
 
 ![ja ug analysistools parentcolumns](../assets/images/ja-ug-analysistools-parentcolumns.png)
 
-*Figure 1: Comparing Layout: All Parent Columns and No Parent Columns*
+*Figure 1 Comparing Layout: All Parent Columns and No Parent Columns*
 
 ## Show individual parent cells
 
@@ -33,7 +33,7 @@ The **Show individual parent cells** checkbox determines whether redundant dimen
 
 ![ja ug analysisview tools parentcells](../assets/images/ja-ug-analysisview-tools-parentcells.png)
 
-*Figure 2: Showing Individual Parent Cells*
+*Figure 2 Showing Individual Parent Cells*
 
 ## Hide Empty Rows/Columns
 
@@ -47,4 +47,4 @@ Suppose that a table contains five dimensioning rows and two measure columns. Cl
 
 ![ja ug analysisview tools swappingaxesexample](../assets/images/ja-ug-analysisview-tools-swappingaxesexample.png)
 
-*Figure 3: Swapping Axes*
+*Figure 3 Swapping Axes*

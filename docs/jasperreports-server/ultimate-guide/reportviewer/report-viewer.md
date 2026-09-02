@@ -23,7 +23,7 @@ To create the Ad Hoc table for use in the example
 
     ![js AdHoc ConditionalView](../assets/images/js-AdHoc-ConditionalView.png)
 
-    *Figure 1: Ad Hoc View for Conditional Text*
+    *Figure 1 Ad Hoc View for Conditional Text*
 
 7.  Hover over ![js AdHoc SaveReport](../assets/images/js-AdHoc-SaveReport.png) and select **Save Ad Hoc View and Create Report**. The **Save Ad Hoc View** dialog opens.
 
@@ -73,12 +73,12 @@ To create “stop light” conditional formatting on a numeric column
 
         ![js ReportViewer ConditionalNumeric](../assets/images/js-ReportViewer-ConditionalNumeric.png)
 
-        *Figure 2: Conditional Formatting for Numeric Values*
+        *Figure 2 Conditional Formatting for Numeric Values*
 
 7.  Click **OK**. The dialog box closes and your choices are applied. The report appears as shown in the following figure:
 
 ![js ReportViewer ConditionalReport](../assets/images/js-ReportViewer-ConditionalReport.png)
 
-*Figure 3: Report with Conditional Formatting*
+*Figure 3 Report with Conditional Formatting*
 
 Notice that numbers greater than 8 satisfy the first two conditions; the first condition they satisfy is the one that is applied.

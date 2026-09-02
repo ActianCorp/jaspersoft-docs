@@ -13,8 +13,8 @@ In implementation that supports multiple organizations, all users and roles exce
 
 If your JasperReports Server supports multiple organizations, you have two ways to set the user organization for external users:
 
--   Create a mapping from RDNs in your LDAP server to organizations in JasperReports Server, as described in Mapping to Multiple Organizations.
--   If you want all users to be in just one of your organizations, use the `externalTenantSetupProcessor` bean to specify the organization, as described in Mapping to a Single Organization.
+-   Create a mapping from RDNs in your LDAP server to organizations in JasperReports Server, as described in [Mapping to Multiple Organizations](#mapping-to-multiple-organizations).
+-   If you want all users to be in just one of your organizations, use the `externalTenantSetupProcessor` bean to specify the organization, as described in [Mapping to a Single Organization](#mapping-to-a-single-organization).
 
 If your JasperReports Server deployment supports only a single organization (all community deployments and some professional editions), you do not need to set organization information.
 
@@ -24,7 +24,7 @@ LDAP is well suited to mapping users into organizations, because LDAP itself has
 
 In order to ensure consistency, the server must create the organization of any external user if the organization does not already exist. The server also creates any organization that does not exist in the hierarchy of organizations mapped from the user RDN. To avoid “stray” organizations outside of your intended hierarchy, test your mapping against all potential user DNs in your LDAP directory.
 
-Organizations created during external user login have an administrator with a default password. The admin username and password is configurable. See Setting Up Default Admins for Organizations for more information. For security reasons, you should change the default password of any organization admin created. See [Initialization of JasperReports Server for External Users](../authentication-in-jrs/initializing-external-users-in-jrs.md) for a process to initialize the server, including organization admins, before going into production with external authentication.
+Organizations created during external user login have an administrator with a default password. The admin username and password is configurable. See [Setting Up Default Admins for Organizations](#setting-up-default-admins-for-organizations) for more information. For security reasons, you should change the default password of any organization admin created. See [Initialization of JasperReports Server for External Users](../authentication-in-jrs/initializing-external-users-in-jrs.md) for a process to initialize the server, including organization admins, before going into production with external authentication.
 
 ### Setting Up Organization Mapping
 

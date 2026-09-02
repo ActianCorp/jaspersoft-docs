@@ -9,11 +9,11 @@ The **Joins** tab is where you create associations between tables so that you ca
 
 ![js DomainDesigner joins tab](../assets/images/js-DomainDesigner-joins-tab.png)
 
-*Figure 1: Layout of the Joins Tab*
+*Figure 1 Layout of the Joins Tab*
 
 ![js DomainDesigner joins tab trino](../assets/images/js-DomainDesigner-joins-tab-trino.png)
 
-*Figure 2: Layout of the Joins Tab for Trino-based data source*
+*Figure 2 Layout of the Joins Tab for Trino-based data source*
 
 Joins in the Domain Designer are grouped in join trees. A join tree is a group of tables that are all connected directly or indirectly through joins. Different join trees have no connections between them. The **Joins** tab shows tables organized by join tree in the **Data Structure** panel, and joins organized by join tree in the **Design** panel. You create joins by dragging fields from the **Data Structure** panel to the **Design** panel.
 
@@ -63,7 +63,7 @@ In the **Joins** panel, the join trees in your Domain appear as containers with 
 
 ![js DomainDesigner join tree](../assets/images/js-DomainDesigner-join-tree.png)
 
-*Figure 3: A join tree with multiple joins*
+*Figure 3 A join tree with multiple joins*
 
 The join tree title bar at the top of each join tree lets you perform the following actions:
 
@@ -89,13 +89,13 @@ Individual joins appear in their join tree container. A join includes a title ba
 
 ![js DomainDesigner join simple](../assets/images/js-DomainDesigner-join-simple.png)
 
-*Figure 4: A Single Join Between Two Tables*
+*Figure 4 A Single Join Between Two Tables*
 
 If you create multiple joins between the same two tables, the new join component is added to the existing join. See [Composite Joins](../advanced_domains/advanced_joins.md) for more information.
 
 ![js DomainDesigner CompositeJoin Example](../assets/images/js-DomainDesigner-CompositeJoin-Example.png)
 
-*Figure 5: Multiple Joins For the Same Two Tables*
+*Figure 5 Multiple Joins For the Same Two Tables*
 
 The join title bar at the top of each join includes the following:
 
@@ -148,7 +148,7 @@ A join is added to the **Design** panel. The column you dragged is added on the 
 
 ![js DomainDesigner create join left](../assets/images/js-DomainDesigner-create-join-left.png)
 
-*Figure 6: Creating a New Join*
+*Figure 6 Creating a New Join*
 
 1.  Select the join type (**Inner**, **Left Outer**, **Right Outer**, **Full Outer**) you want from the **Type** menu. This can be changed later. See [Join Type](../advanced_domains/advanced_joins.md) for more information.
 
@@ -156,7 +156,7 @@ A join is added to the **Design** panel. The column you dragged is added on the 
 
     ![js DomainDesigner create join right](../assets/images/js-DomainDesigner-create-join-right.png)
 
-    *Figure 7: Adding the Right Table to a Join*
+    *Figure 7 Adding the Right Table to a Join*
 
 3.  If you want to change the comparison operator for the join, select a different operator from the list. The list of available operators depends on the column type.
 

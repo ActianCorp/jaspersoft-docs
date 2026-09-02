@@ -11,7 +11,7 @@ The following figure shows the general steps for external database authenticatio
 
 ![js sso ExternalDBSequence](../assets/images/js-sso-ExternalDBSequence.png)
 
-*Figure 1: General Steps of External Database Authentication*
+*Figure 1 General Steps of External Database Authentication*
 
 The interaction between the user’s browser, JasperReports Server, and the external database includes these steps:
 

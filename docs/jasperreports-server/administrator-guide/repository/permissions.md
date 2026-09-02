@@ -151,7 +151,7 @@ To set permissions on a folder or resource in the repository
 
     ![js Permissions byRole](../assets/images/js-Permissions-byRole.png)
 
-    *Figure 1: Permissions Dialog Showing Permissions by Role*
+    *Figure 1 Permissions Dialog Showing Permissions by Role*
 
     In systems with multiple organizations, the users and roles displayed include only those within the scope of the user. For example, in the default single organization, the organization admin (`jasperadmin`) can't see the permission for the system admin (`superuser`) or for ROLE_SUPERUSER.
 
@@ -164,7 +164,7 @@ To set permissions on a folder or resource in the repository
 
     ![js Permissions byUser](../assets/images/js-Permissions-byUser.png)
 
-    *Figure 2: Permissions Dialog Showing Permissions by User*
+    *Figure 2 Permissions Dialog Showing Permissions by User*
 
 6.  Click **Apply** to apply your changes. If you toggle between user and role permissions, first apply any changes you made.
 

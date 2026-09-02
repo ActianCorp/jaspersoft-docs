@@ -11,8 +11,9 @@ In a deployment without organizations, you should still be familiar with the str
 
 The default installation of JasperReports Server includes the following users:
 
+**Default Users after Installation**
+
 <table>
-<caption><p>Default Users after Installation</p></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 33%" />
@@ -73,7 +74,7 @@ The default installation of JasperReports Server includes the following users:
 
     ![js ManageUsers overview](../assets/images/js-ManageUsers-overview.png)
 
-    *Figure 1: Manage Users Page*
+    *Figure 1 Manage Users Page*
 
     The columns in the Users panel list the user ID, the username, and the organization of each user. The list of users includes everyone in the chosen organization and its suborganizations. The same user ID may appear more than once, indicating that users with the same ID were created in different organizations.
 
@@ -102,7 +103,7 @@ The default installation of JasperReports Server includes the following users:
 
     ![js ManageUsers AddUser](../assets/images/js-ManageUsers-AddUser.png)
 
-    *Figure 2: Adding a User*
+    *Figure 2 Adding a User*
 
 4.  Enter the following information:
 
@@ -134,7 +135,7 @@ To edit a user's properties:
 
     ![js ManageUsers EditUser](../assets/images/js-ManageUsers-EditUser.png)
 
-    *Figure 3: Editing the Properties of a User*
+    *Figure 3 Editing the Properties of a User*
 
 6.  Edit the user's properties as needed. You can't edit the user ID. It always has the value defined when the user was created originally.
 

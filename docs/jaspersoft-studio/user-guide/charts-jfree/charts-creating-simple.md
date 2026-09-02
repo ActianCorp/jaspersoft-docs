@@ -20,21 +20,21 @@ To add a chart to a report
     |  |
     |----|
     | ![initial report design 3DPie](../assets/images/initial-report-design-3DPie.png) |
-    | *Figure 1: Initial Report Design* |
+    | *Figure 1 Initial Report Design* |
 
 4.  Expand the **Summary** band to 378 pixels.
 
     |                                                                          |
     |--------------------------------------------------------------------------|
     | ![summary band properties](../assets/images/summary-band-properties.png) |
-    | *Figure 2: Summary Band Properties*                                      |
+    | *Figure 2 Summary Band Properties*                                       |
 
 5.  Drag the Chart tool from the Palette into the Summary band. The **Chart Wizard** opens.
 
     |                                                    |
     |----------------------------------------------------|
     | ![chart wizard](../assets/images/chart-wizard.png) |
-    | *Figure 3: Chart Wizard*                           |
+    | *Figure 3 Chart Wizard*                            |
 
 6.  Select the **Pie 3D Chart** and click **Next**.
 
@@ -45,7 +45,7 @@ To add a chart to a report
 |                                                                |
 |----------------------------------------------------------------|
 | ![chart summary band](../assets/images/chart-summary-band.png) |
-| *Figure 4: Chart in Summary Band*                              |
+| *Figure 4 Chart in Summary Band*                               |
 
 !!! note
 
@@ -58,7 +58,7 @@ To configure a chart
     |                                                              |
     |--------------------------------------------------------------|
     | ![chart data config](../assets/images/chart-data-config.png) |
-    | *Figure 5: **Chart Wizard - Chart Data Configuration***      |
+    | *Figure 5 **Chart Wizard - Chart Data Configuration***       |
 
 2.  Select the data to use in your chart.
 
@@ -77,7 +77,7 @@ To configure a chart
     |                                                              |
     |--------------------------------------------------------------|
     | ![chart dataset tab](../assets/images/chart-dataset-tab.png) |
-    | *Figure 6: Dataset Tab*                                      |
+    | *Figure 6 Dataset Tab*                                       |
 
 5.  Also in the **Chart Data Configuration** dialog, enter an expression to associate with each value in the data source. For a Pie 3D chart, three expressions can be entered: `key`, `value`, and `label`.
 
@@ -100,6 +100,6 @@ Next to each field, click the![dotdotdot button](../assets/images/dotdotdot-butt
 |                                                    |
 |----------------------------------------------------|
 | ![3D Pie final](../assets/images/3D-Pie-final.png) |
-| *Figure 7: Final Chart*                            |
+| *Figure 7 Final Chart*                             |
 
 In this chart, each slice represents a country and the shipping total for that country.

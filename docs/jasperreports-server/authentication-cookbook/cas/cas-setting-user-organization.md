@@ -11,8 +11,8 @@ description: Organizations are a feature of JasperReports Server commercial edit
 
 Spring’s default CAS configuration supports only user authentication. However, you can extend this to set organizations in one of two ways:
 
--   Extract organization data with an additional technology, such as LDAP or a JDBC database. See Mapping to Multiple Organizations.
--   Use the `defaultOrganization` property of the `externalTenantSetupProcessor` bean to set a single organization assigned to all external users. See Mapping to a Single Organization.
+-   Extract organization data with an additional technology, such as LDAP or a JDBC database. See [Mapping to Multiple Organizations](#mapping-to-multiple-organizations).
+-   Use the `defaultOrganization` property of the `externalTenantSetupProcessor` bean to set a single organization assigned to all external users. See [Mapping to a Single Organization](#mapping-to-a-single-organization).
 
 ## Mapping to Multiple Organizations
 

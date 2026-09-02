@@ -21,7 +21,7 @@ You can hide the contents of this folder from ROLE_USER by setting repository pe
 
     ![js Permissions ExecuteOnly](../assets/images/js-Permissions-ExecuteOnly.png)
 
-    *Figure 1: Setting Permissions to Execute Only*
+    *Figure 1 Setting Permissions to Execute Only*
 
 6.  Click **OK**.
 

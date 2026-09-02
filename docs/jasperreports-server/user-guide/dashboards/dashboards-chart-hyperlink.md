@@ -22,7 +22,7 @@ Create an Ad Hoc view hyperlink
 
     ![js DashletProperties Hyperlinks](../assets/images/js-DashletProperties-Hyperlinks.png)
 
-    *Figure 1: Hyperlinks settings in Dashlet Settings*
+    *Figure 1 Hyperlinks settings in Dashlet Settings*
 
 3.  Click the **Enable hyperlinks** switch to turn it on.
 
@@ -70,7 +70,7 @@ Add a parameter
 
     ![js Dashboard ParameterMapping Hyperlinks](../assets/images/js-Dashboard-ParameterMapping-Hyperlinks.png)
 
-    *Figure 2: Parameter Mapping*
+    *Figure 2 Parameter Mapping*
 
 4.  In the **Store Country** filter group, click ![js Dashboard FilterManager icon Add](../assets/images/js-Dashboard-FilterManager-icon-Add.png).<br>
     A new row with affected dashlet and filter/parameter dropdown menus appears.

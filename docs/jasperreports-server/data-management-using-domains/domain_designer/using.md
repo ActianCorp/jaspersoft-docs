@@ -20,7 +20,7 @@ To open the Domain Designer and create a new Domain
 
         ![js DomainDesigner ChooseData](../assets/images/js-DomainDesigner-ChooseData.png)
 
-        *Figure 1: The Choose a Data Source dialog*
+        *Figure 1 The Choose a Data Source dialog*
 
         1.  Select a data source in the **Choose Data** dialog and click **OK**.
 

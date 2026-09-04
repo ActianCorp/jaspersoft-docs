@@ -1,9 +1,9 @@
 ---
-title: Configuring HTTPS Access for AWS ELB and JasperReports Server
+title: Configuring HTTPS Access for AWS ELB
 description: Follow these instructions if you want to use Elastic Load Balancer (ELB) as an HTTPS termination point with JasperReports Server behind it.
 ---
 
-# Configuring HTTPS Access for AWS ELB and JasperReports Server
+# Configuring HTTPS Access for AWS ELB
 
 Follow these instructions if you want to use Elastic Load Balancer (ELB) as an HTTPS termination point with JasperReports Server behind it.
 

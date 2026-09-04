@@ -1,9 +1,9 @@
 ---
-title: Exporting Reports with Jaspersoft Studio
+title: Exporting Reports
 description: "In addition to generating and viewing reports, Jaspersoft Studio allows you to export reports into many formats, including PDF, XLSX, HTML, and others."
 ---
 
-# Exporting Reports with Jaspersoft Studio
+# Exporting Reports
 
 In addition to generating and viewing reports, Jaspersoft Studio allows you to export reports into many formats, including PDF, XLSX, HTML, and others.
 

@@ -1,9 +1,9 @@
 ---
-title: Installing Jaspersoft Studio
+title: Installing
 description: "Jaspersoft Studio is available as an Eclipse Rich Client Package (RCP), downloadable from here."
 ---
 
-# Installing Jaspersoft Studio
+# Installing
 
 Jaspersoft Studio is available as an Eclipse Rich Client Package (RCP), downloadable from [here](https://community.jaspersoft.com/download-jaspersoft/).
 

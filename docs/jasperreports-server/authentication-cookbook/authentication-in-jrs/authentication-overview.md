@@ -1,9 +1,9 @@
 ---
-title: Authentication in JasperReports Server
+title: Authentication
 description: "This cookbook describes how to configure JasperReports Server to use external authentication in place of the built‑in user authentication. The benefits of external authentication include:"
 ---
 
-# Authentication in JasperReports Server
+# Authentication
 
 This cookbook describes how to configure JasperReports Server to use external authentication in place of the built‑in user authentication. The benefits of external authentication include:
 

@@ -1,9 +1,9 @@
 ---
-title: Using Single Sign-on with JasperReports Server
+title: Using Single Sign-on
 description: You can use Single Sign-On (SSO) to connect to a JasperReports Server instance that has been configured to work with the Central Authentication Service (CAS) protocol. For information about...
 ---
 
-# Using Single Sign-on with JasperReports Server
+# Using Single Sign-on
 
 You can use Single Sign-On (SSO) to connect to a JasperReports Server instance that has been configured to work with the Central Authentication Service (CAS) protocol. For information about configuring CAS for JasperReports Server, see the JasperReports Server External Authentication Cookbook.
 

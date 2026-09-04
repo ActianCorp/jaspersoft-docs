@@ -1,9 +1,9 @@
 ---
-title: Setting Compatibility with Earlier Versions of JasperReports Library
+title: Setting Compatibility with Earlier Versions
 description: "If you are using your reports with an application you have built using JasperReports Library, you can set the version to use for compiling your reports. Normally, when you compile a report,..."
 ---
 
-# Setting Compatibility with Earlier Versions of JasperReports Library
+# Setting Compatibility with Earlier Versions
 
 If you are using your reports with an application you have built using JasperReports Library, you can set the version to use for compiling your reports. Normally, when you compile a report, Jaspersoft Studio uses the corresponding version of JasperReports Library. For example, if you compile a report from Jaspersoft Studio 10.1, it uses JasperReports Library 10.1. For backwards compatibility with your applications, you can configure Jaspersoft Studio to use an earlier version of JasperReports Library to compile your reports. If you do this, any features in your reports that rely on a later version of JasperReports Library are not available.
 

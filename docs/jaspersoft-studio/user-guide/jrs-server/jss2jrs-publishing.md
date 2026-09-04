@@ -1,9 +1,9 @@
 ---
-title: Publishing a Report to JasperReports Server
+title: Publishing a Report
 description: "You can easily publish your reports from Jaspersoft Studio to any JasperReports Server connection. Publishing to the server uploads the JRXML for the report, along with any resources that the report..."
 ---
 
-# Publishing a Report to JasperReports Server
+# Publishing a Report
 
 You can easily publish your reports from Jaspersoft Studio to any JasperReports Server connection. Publishing to the server uploads the JRXML for the report, along with any resources that the report needs such as images and query resources. You must also configure the data source for the report on the server.
 

@@ -1,9 +1,9 @@
 ---
-title: Adding Templates to Jaspersoft Studio
+title: Adding Templates
 description: "Once you have created a custom template, you need to add it to Jaspersoft Studio to use it."
 ---
 
-# Adding Templates to Jaspersoft Studio
+# Adding Templates
 
 Once you have created a custom template, you need to add it to Jaspersoft Studio to use it.
 

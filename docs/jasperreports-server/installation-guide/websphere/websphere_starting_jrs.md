@@ -1,9 +1,9 @@
 ---
-title: Starting and Restarting JasperReports Server
+title: Starting and Restarting
 description: To start the jasperserver-pro application
 ---
 
-# Starting and Restarting JasperReports Server
+# Starting and Restarting
 
 To start the jasperserver-pro application
 

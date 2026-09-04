@@ -4,7 +4,7 @@
     { "User Guide" = [
       { "User Guide" = "jasperreports-server/user-guide/index.md" },
       { "Introduction to JasperReports Server" = [
-        { "Introduction to JasperReports Server" = "jasperreports-server/user-guide/introduction/introduction.md" },
+        { "Introduction" = "jasperreports-server/user-guide/introduction/introduction.md" },
         { "Logging In" = [
           { "Logging In" = "jasperreports-server/user-guide/introduction/intro_login.md" },
           { "Logging into a Server with Multiple Organizations" = "jasperreports-server/user-guide/introduction/intro_login_multi_org.md" },
@@ -176,7 +176,7 @@
           { "Localizing Reports" = "jasperreports-server/user-guide/repo-upload-reports/repo-localizing-reports.md" },
           { "Running a Localized Report" = "jasperreports-server/user-guide/repo-upload-reports/repo-running-localized-report.md" },
           { "Reusing Domain Localization Files" = "jasperreports-server/user-guide/repo-upload-reports/repo-reusing-resource-bundles.md" },
-          { "Using Default Fonts in JasperReports Server" = "jasperreports-server/user-guide/repo-upload-reports/repo-using-default-fonts.md" },
+          { "Using Default Fonts" = "jasperreports-server/user-guide/repo-upload-reports/repo-using-default-fonts.md" },
         ] },
       ] },
     ] },
@@ -398,7 +398,7 @@
         { "Installation" = "jasperreports-server/installation-guide/binary-installer/installation.md" },
         { "Post-Installation Tasks" = "jasperreports-server/installation-guide/binary-installer/post_installation_steps.md" },
         { "Starting and Stopping the Server" = "jasperreports-server/installation-guide/binary-installer/starting-server.md" },
-        { "Logging into JasperReports Server" = "jasperreports-server/installation-guide/binary-installer/logging_into_jasperreports_server.md" },
+        { "Logging In" = "jasperreports-server/installation-guide/binary-installer/logging_into_jasperreports_server.md" },
         { "Uninstalling the Server" = "jasperreports-server/installation-guide/binary-installer/uninstalling.md" },
       ] },
       { "Installing the WAR File for Production" = [
@@ -427,7 +427,7 @@
         { "Installing the WAR File for WebSphere" = "jasperreports-server/installation-guide/websphere/websphere_intro.md" },
         { "Procedure for Installing and Deploying the WAR File in WebSphere" = "jasperreports-server/installation-guide/websphere/websphere_install_procedure.md" },
         { "Configuring Other Database Connections" = "jasperreports-server/installation-guide/websphere/websphere_other_dbs.md" },
-        { "Starting and Restarting JasperReports Server" = "jasperreports-server/installation-guide/websphere/websphere_starting_jrs.md" },
+        { "Starting and Restarting" = "jasperreports-server/installation-guide/websphere/websphere_starting_jrs.md" },
         { "Logging into the Server" = "jasperreports-server/installation-guide/websphere/websphere_logging_in.md" },
         { "Configuring Report Scheduling" = "jasperreports-server/installation-guide/websphere/websphere_report_scheduling.md" },
         { "Updating XML/A Connection Definitions (Optional)" = "jasperreports-server/installation-guide/websphere/websphere_xmla_connection.md" },
@@ -564,13 +564,13 @@
         { "Terminology" = "jasperreports-server/authentication-cookbook/introduction/terminology.md" },
       ] },
       { "Authentication in JasperReports Server" = [
-        { "Authentication in JasperReports Server" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/authentication-overview.md" },
+        { "Authentication" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/authentication-overview.md" },
         { "Locating and Working With Sample Files" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/sample-files.md" },
         { "Configuring Logging for Debugging" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/logging.md" },
         { "Default Internal Authentication" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/internal-authentication-steps.md" },
         { "Organizations and Users in JasperReports Server" = [
-          { "Organizations and Users in JasperReports Server" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/organizations-users-roles.md" },
-          { "Multiple Organizations in JasperReports Server" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/organizations.md" },
+          { "Organizations and Users" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/organizations-users-roles.md" },
+          { "Multiple Organizations" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/organizations.md" },
           { "Synchronization of External Users" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/synchronization-users.md" },
           { "Synchronization of Roles" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/synchronization-roles.md" },
           { "Initialization of JasperReports Server for External Users" = "jasperreports-server/authentication-cookbook/authentication-in-jrs/initializing-external-users-in-jrs.md" },
@@ -605,7 +605,7 @@
         { "Authentication with Microsoft Active Directory" = "jasperreports-server/authentication-cookbook/ldap/microsoft-active-directory.md" },
         { "Troubleshooting LDAP Configurations" = "jasperreports-server/authentication-cookbook/ldap/ldap-troubleshooting.md" },
         { "Adding a Custom Processor" = "jasperreports-server/authentication-cookbook/ldap/ldap-custom.md" },
-        { "Restarting JasperReports Server" = "jasperreports-server/authentication-cookbook/ldap/ldap-jrs-restart.md" },
+        { "Restarting" = "jasperreports-server/authentication-cookbook/ldap/ldap-jrs-restart.md" },
       ] },
       { "CAS Authentication" = [
         { "CAS Authentication" = "jasperreports-server/authentication-cookbook/cas/cas-introduction.md" },
@@ -628,7 +628,7 @@
         { "Setting the User Organization" = "jasperreports-server/authentication-cookbook/cas/cas-setting-user-organization.md" },
         { "Adding a Custom Processor" = "jasperreports-server/authentication-cookbook/cas/cas-custom.md" },
         { "Customizing the JasperReports Server Interface for CAS" = "jasperreports-server/authentication-cookbook/cas/cas-customizing-jrs-interface.md" },
-        { "Restarting JasperReports Server" = "jasperreports-server/authentication-cookbook/cas/cas-jrs-restart.md" },
+        { "Restarting" = "jasperreports-server/authentication-cookbook/cas/cas-jrs-restart.md" },
       ] },
       { "External Database Authentication" = [
         { "External Database Authentication" = "jasperreports-server/authentication-cookbook/external-db/external-db-introduction.md" },
@@ -642,7 +642,7 @@
         { "Setting the User Organization" = "jasperreports-server/authentication-cookbook/external-db/external-db-setting-user-organization.md" },
         { "Adding a Custom Processor" = "jasperreports-server/authentication-cookbook/external-db/external-db-custom.md" },
         { "Configuring the Login Page for a Single-Organization Deployment" = "jasperreports-server/authentication-cookbook/external-db/external-db-single-org-login.md" },
-        { "Restarting JasperReports Server" = "jasperreports-server/authentication-cookbook/external-db/external-db-jrs-restart.md" },
+        { "Restarting" = "jasperreports-server/authentication-cookbook/external-db/external-db-jrs-restart.md" },
       ] },
       { "Token-based Authentication" = "jasperreports-server/authentication-cookbook/token/tokenauth-introduction.md" },
       { "OAuth Authentication" = "jasperreports-server/authentication-cookbook/oauth/oauth-introduction.md" },
@@ -660,7 +660,7 @@
     ] },
     { "Data Management Using Domains" = [
       { "Data Management Using Domains" = "jasperreports-server/data-management-using-domains/index.md" },
-      { "Introduction to JasperReports Server" = "jasperreports-server/data-management-using-domains/introduction/introduction.md" },
+      { "Introduction" = "jasperreports-server/data-management-using-domains/introduction/introduction.md" },
       { "Understanding Domains" = [
         { "Understanding Domains" = "jasperreports-server/data-management-using-domains/understanding_domains/introduction.md" },
         { "Data Security" = "jasperreports-server/data-management-using-domains/understanding_domains/data_security.md" },
@@ -1345,7 +1345,7 @@
         { "Creating a Jaspersoft OLAP Environment" = [
           { "Creating a Jaspersoft OLAP Environment" = "jasperreports-server/olap-ultimate-guide/get-started/creating_a_jaspersoft_olap_environme.md" },
           { "Creating the Database" = "jasperreports-server/olap-ultimate-guide/get-started/creating_the_database.md" },
-          { "Defining a Data Source in JasperReports Server" = "jasperreports-server/olap-ultimate-guide/get-started/defining_a_data_source_in_jasperrepo.md" },
+          { "Defining a Data Source" = "jasperreports-server/olap-ultimate-guide/get-started/defining_a_data_source_in_jasperrepo.md" },
           { "Creating and Uploading an OLAP Schema" = "jasperreports-server/olap-ultimate-guide/get-started/creating_and_uploading_an_olap_schem.md" },
           { "Creating a Mondrian Connection" = "jasperreports-server/olap-ultimate-guide/get-started/creating_a_mondrian_connection.md" },
           { "Defining an MDX Query" = "jasperreports-server/olap-ultimate-guide/get-started/defining_an_mdx_query.md" },
@@ -1420,10 +1420,10 @@
     { "Jaspersoft Studio User Guide" = [
       { "Jaspersoft Studio User Guide" = "jaspersoft-studio/user-guide/index.md" },
       { "Getting Started with Jaspersoft Studio" = [
-        { "Getting Started with Jaspersoft Studio" = "jaspersoft-studio/user-guide/getting-started.md" },
+        { "Getting Started" = "jaspersoft-studio/user-guide/getting-started.md" },
         { "Introduction" = "jaspersoft-studio/user-guide/intro.md" },
         { "Installing Jaspersoft Studio" = [
-          { "Installing Jaspersoft Studio" = "jaspersoft-studio/user-guide/intro-installation.md" },
+          { "Installing" = "jaspersoft-studio/user-guide/intro-installation.md" },
           { "Updating Your Workspace" = "jaspersoft-studio/user-guide/intro-upgrade-workspace.md" },
           { "Compatibility Between Versions" = "jaspersoft-studio/user-guide/intro-version-compatibility.md" },
           { "Accessing the Source Code" = "jaspersoft-studio/user-guide/intro_installing_source_code.md" },
@@ -1444,7 +1444,7 @@
         { "User Interface and Design View" = "jaspersoft-studio/user-guide/intro-user-interface.md" },
         { "The Design Tab" = "jaspersoft-studio/user-guide/design-tab.md" },
         { "The Preview Tab" = "jaspersoft-studio/user-guide/preview-tab.md" },
-        { "Exporting Reports with Jaspersoft Studio" = "jaspersoft-studio/user-guide/simple-report/reports-exporting.md" },
+        { "Exporting Reports" = "jaspersoft-studio/user-guide/simple-report/reports-exporting.md" },
       ] },
       { "Report Elements" = [
         { "Report Elements" = "jaspersoft-studio/user-guide/elements/elements-intro.md" },
@@ -1520,17 +1520,17 @@
       { "Accessing JasperReports Server from Jaspersoft Studio" = [
         { "Accessing JasperReports Server from Jaspersoft Studio" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs.md" },
         { "Connecting to JasperReports Server" = [
-          { "Connecting to JasperReports Server" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-connecting.md" },
+          { "Connecting" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-connecting.md" },
           { "Advanced Connection Settings" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-advanced-connection-settings.md" },
           { "Connecting to JasperReports Server Over SSL" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-trust.md" },
-          { "Using Single Sign-on with JasperReports Server" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-sso.md" },
+          { "Using Single Sign-on" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-sso.md" },
         ] },
-        { "Configuring a Project for JasperReports Server" = "jaspersoft-studio/user-guide/jrs-server/jrs-context.md" },
-        { "Publishing a Report to JasperReports Server" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-publishing.md" },
+        { "Configuring a Project" = "jaspersoft-studio/user-guide/jrs-server/jrs-context.md" },
+        { "Publishing a Report" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-publishing.md" },
         { "Working with JasperReports Server Templates" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-report-template.md" },
         { "Creating and Uploading a Topic for Ad Hoc Views" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-topic-for-ad-hoc.md" },
         { "Managing Repository Objects through Jaspersoft Studio" = [
-          { "Managing Repository Objects through Jaspersoft Studio" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-manage-repo-objects.md" },
+          { "Managing Repository Objects" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-manage-repo-objects.md" },
           { "Adding, Modifying, and Deleting Resources" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-repo-objects-tasks.md" },
           { "Running a Report" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-run-report-on-server.md" },
           { "Editing a Report" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-edit-report-in-repo.md" },
@@ -1538,7 +1538,7 @@
         ] },
         { "Working with Domains" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-domains.md" },
         { "Understanding the repo: Syntax" = "jaspersoft-studio/user-guide/jrs-server/jss2jrs-repo-syntax.md" },
-        { "Adding a Date/Time Stamp to Scheduled Output in JasperReports Server" = "jaspersoft-studio/user-guide/parameters/parameters-date-timestamp.md" },
+        { "Adding a Date/Time Stamp to Scheduled Output" = "jaspersoft-studio/user-guide/parameters/parameters-date-timestamp.md" },
       ] },
       { "Datasets and Subdatasets" = [
         { "Datasets and Subdatasets" = "jaspersoft-studio/user-guide/datasets/datasets.md" },
@@ -1598,7 +1598,7 @@
         { "Template Structure" = "jaspersoft-studio/user-guide/templates-structure.md" },
         { "Creating and Customizing Templates" = "jaspersoft-studio/user-guide/templates-creating.md" },
         { "Saving Templates" = "jaspersoft-studio/user-guide/templates-saving.md" },
-        { "Adding Templates to Jaspersoft Studio" = "jaspersoft-studio/user-guide/templates-adding-as-template.md" },
+        { "Adding Templates" = "jaspersoft-studio/user-guide/templates-adding-as-template.md" },
       ] },
       { "Report Books" = [
         { "Report Books" = "jaspersoft-studio/user-guide/report-books/report-books.md" },
@@ -1611,12 +1611,12 @@
       ] },
       { "Preferences and Configuration" = [
         { "Preferences and Configuration" = "jaspersoft-studio/user-guide/configuration.md" },
-        { "Units of Measure in Jaspersoft Studio" = "jaspersoft-studio/user-guide/measure_units_in_jaspersoft_studio.md" },
+        { "Units of Measure" = "jaspersoft-studio/user-guide/measure_units_in_jaspersoft_studio.md" },
         { "Revised Logging System" = "jaspersoft-studio/user-guide/revised-logging-system.md" },
         { "Cleaning Cached Data" = "jaspersoft-studio/user-guide/config-clean.md" },
         { "Disabling Usage Statistics" = "jaspersoft-studio/user-guide/config-usage-stats.md" },
         { "Export and Import" = "jaspersoft-studio/user-guide/import-export.md" },
-        { "Setting Compatibility with Earlier Versions of JasperReports Library" = "jaspersoft-studio/user-guide/compatibility-with-earlier-versions.md" },
+        { "Setting Compatibility with Earlier Versions" = "jaspersoft-studio/user-guide/compatibility-with-earlier-versions.md" },
         { "Working with Java in Eclipse" = "jaspersoft-studio/user-guide/java-perspective-in-eclipse.md" },
         { "Using Data Snapshots" = "jaspersoft-studio/user-guide/data-snapshot.md" },
       ] },
@@ -1625,7 +1625,7 @@
         { "JRXML Sources and Jasper Files" = "jaspersoft-studio/user-guide/jrxml_sources_and_jasper_files.md" },
         { "Data Sources and Print Formats" = "jaspersoft-studio/user-guide/data-sources-print-formats.md" },
         { "Project Folder Types and Report Execution Contexts" = "jaspersoft-studio/user-guide/intro-contexts.md" },
-        { "Using JasperReports Extensions in Jaspersoft Studio" = "jaspersoft-studio/user-guide/using_jasperreports_extensions_in_ja.md" },
+        { "Using JasperReports Extensions" = "jaspersoft-studio/user-guide/using_jasperreports_extensions_in_ja.md" },
         { "A Simple Program" = "jaspersoft-studio/user-guide/concepts-simple-program.md" },
       ] },
       { "Changes in 10.0.0 That May Affect Your Upgrade" = "jaspersoft-studio/user-guide/best-practices.md" },
@@ -1732,7 +1732,7 @@
         { "Subscribing From AWS Marketplace" = "cloud/aws-user-guide/acceptingtou.md" },
         { "Launching Instances" = "cloud/aws-user-guide/launching.md" },
         { "Using Customized Configuration Files for Server Instances" = "cloud/aws-user-guide/s3_customizations.md" },
-        { "Configuring HTTPS Access for AWS ELB and JasperReports Server" = "cloud/aws-user-guide/https-access-elb.md" },
+        { "Configuring HTTPS Access for AWS ELB" = "cloud/aws-user-guide/https-access-elb.md" },
         { "Chrome AWS" = "cloud/aws-user-guide/installing-phantomjs.md" },
       ] },
       { "Managing Your Installation" = [
@@ -1751,7 +1751,7 @@
       { "Getting Started with Jaspersoft for AWS" = "cloud/aws-getting-started/index.md" },
       { "Introduction" = "cloud/aws-getting-started/introduction.md" },
       { "Options for Working with Your Data" = "cloud/aws-getting-started/options-for-working-with-your.md" },
-      { "Connecting to Your Data with JasperReports Server" = "cloud/aws-getting-started/connecting-to-your-data-with.md" },
+      { "Connecting to Your Data" = "cloud/aws-getting-started/connecting-to-your-data-with.md" },
       { "Jaspersoft Studio Professional" = "cloud/aws-getting-started/jaspersoft-studio-professional.md" },
       { "About This Guide" = "cloud/aws-getting-started/contact-us.md" },
     ] },
@@ -1775,7 +1775,7 @@
         { "Upgrading Your Azure Instance or Jaspersoft Version" = "cloud/azure-user-guide/upgrade-azure-instance.md" },
       ] },
       { "Connecting to Azure Data Using JasperReports Server" = [
-        { "Connecting to Azure Data Using JasperReports Server" = "cloud/azure-user-guide/azure-datasource.md" },
+        { "Connecting to Azure Data" = "cloud/azure-user-guide/azure-datasource.md" },
         { "Connecting to Azure SQL Database" = "cloud/azure-user-guide/connect-azure-database.md" },
         { "JDBC or JNDI Connections" = "cloud/azure-user-guide/jdbc-jndi-connections.md" },
       ] },

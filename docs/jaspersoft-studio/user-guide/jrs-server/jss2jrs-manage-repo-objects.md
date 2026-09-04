@@ -1,9 +1,9 @@
 ---
-title: Managing Repository Objects through Jaspersoft Studio
+title: Managing Repository Objects
 description: "The Repository Explorer lets you create, view, modify, and delete reports units and the resources they reply on."
 ---
 
-# Managing Repository Objects through Jaspersoft Studio
+# Managing Repository Objects
 
 The Repository Explorer lets you create, view, modify, and delete reports units and the resources they reply on.
 

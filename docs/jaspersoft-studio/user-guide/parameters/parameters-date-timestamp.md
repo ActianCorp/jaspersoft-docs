@@ -1,9 +1,9 @@
 ---
-title: Adding a Date/Time Stamp to Scheduled Output in JasperReports Server
+title: Adding a Date/Time Stamp to Scheduled Output
 description: "When you add a parameter named ScheduledTime to a JRXML report design in Jaspersoft Studio, and then schedule the report to run in JasperReports Server, the output includes a date/time stamp showing..."
 ---
 
-# Adding a Date/Time Stamp to Scheduled Output in JasperReports Server
+# Adding a Date/Time Stamp to Scheduled Output
 
 When you add a parameter named `_ScheduledTime` to a JRXML report design in Jaspersoft Studio, and then schedule the report to run in JasperReports Server, the output includes a date/time stamp showing when the report ran. The following procedure describes how to set up and use this parameter:
 

@@ -5,7 +5,7 @@ description: Follow the instructions in the chapter to connect JasperReports Ser
 
 #
 
-# Connecting to Your Data with JasperReports Server
+# Connecting to Your Data
 
 Follow the instructions in the chapter to connect JasperReports Server to Amazon RDS or Redshift. For Amazon Elastic MapReduce (EMR) see [Connect to Amazon EMR](#connect-to-amazon-emr). For connecting JasperReports Server to non-Amazon data sources, see [Additional Connection Types](#additional-connection-types).
 

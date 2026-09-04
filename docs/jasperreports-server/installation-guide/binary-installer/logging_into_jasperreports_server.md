@@ -1,9 +1,9 @@
 ---
-title: Logging into JasperReports Server
+title: Logging In
 description: To log into JasperReports Server on any operating system
 ---
 
-# Logging into JasperReports Server
+# Logging In
 
 To log into JasperReports Server on any operating system
 

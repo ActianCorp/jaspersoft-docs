@@ -1,9 +1,9 @@
 ---
-title: Connecting to JasperReports Server
+title: Connecting
 description: To connect Jaspersoft Studio to the server
 ---
 
-# Connecting to JasperReports Server
+# Connecting
 
 To connect Jaspersoft Studio to the server
 

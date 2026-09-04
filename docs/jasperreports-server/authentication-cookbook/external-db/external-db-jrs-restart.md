@@ -1,9 +1,9 @@
 ---
-title: Restarting JasperReports Server
+title: Restarting
 description: "When you've configured all the beans in the appropriate files, restart JasperReports Server to make the changes take effect."
 ---
 
-# Restarting JasperReports Server
+# Restarting
 
 When you've configured all the beans in the appropriate files, restart JasperReports Server to make the changes take effect.
 

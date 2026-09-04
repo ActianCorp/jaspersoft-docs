@@ -1,9 +1,9 @@
 ---
-title: Units of Measure in Jaspersoft Studio
+title: Units of Measure
 description: "Jaspersoft Studio can handle many units of measure, including pixels, centimeters, millimeters, and inches. To accomplish this, we included a measure component in Jaspersoft Studio. This component..."
 ---
 
-# Units of Measure in Jaspersoft Studio
+# Units of Measure
 
 Jaspersoft Studio can handle many units of measure, including pixels, centimeters, millimeters, and inches. To accomplish this, we included a measure component in Jaspersoft Studio. This component looks like a standard text box with a place to enter a measure unit to the right of the value.
 

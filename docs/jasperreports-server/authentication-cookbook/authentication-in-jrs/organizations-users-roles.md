@@ -1,9 +1,9 @@
 ---
-title: Organizations and Users in JasperReports Server
+title: Organizations and Users
 description: "When performing external authentication, JasperReports Server obtains all the information about a user from the external authority. In order to create and enforce permissions, JasperReports Server..."
 ---
 
-# Organizations and Users in JasperReports Server
+# Organizations and Users
 
 When performing external authentication, JasperReports Server obtains all the information about a user from the external authority. In order to create and enforce permissions, JasperReports Server must store the information about users, roles, and organizations in the internal database. So for each externally-defined user, role, and organization, the server creates a local user account, role definitions, and organization folders. This process is called synchronization.
 

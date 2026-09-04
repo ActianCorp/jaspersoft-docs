@@ -1,9 +1,9 @@
 ---
-title: Configuring a Project for JasperReports Server
+title: Configuring a Project
 description: "When you are developing reports that you plan to publish to JasperReports Server, correctly setting up the project helps you create reports that can be easily published. To do this, you want to..."
 ---
 
-# Configuring a Project for JasperReports Server
+# Configuring a Project
 
 When you are developing reports that you plan to publish to JasperReports Server, correctly setting up the project helps you create reports that can be easily published. To do this, you want to associate a project with the server and set the report execution context to JasperReports Server. See [Project Folder Types and Report Execution Contexts](../intro-contexts.md) for more information.
 

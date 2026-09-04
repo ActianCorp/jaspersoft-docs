@@ -1,9 +1,9 @@
 ---
-title: Defining a Data Source in JasperReports Server
+title: Defining a Data Source
 description: "With your data populated, you can now create a data source in JasperReports Server that points to that data."
 ---
 
-# Defining a Data Source in JasperReports Server
+# Defining a Data Source
 
 With your data populated, you can now create a data source in JasperReports Server that points to that data.
 

@@ -1,9 +1,9 @@
 ---
-title: Authenticating to JasperReports Server
+title: Authenticating
 description: "If you are implementing client-side authentication, Jaspersoft Studio provides a mechanism for importing a client certificate into a keystore."
 ---
 
-# Authenticating to JasperReports Server
+# Authenticating
 
 If you are implementing client-side authentication, Jaspersoft Studio provides a mechanism for importing a client certificate into a keystore.
 

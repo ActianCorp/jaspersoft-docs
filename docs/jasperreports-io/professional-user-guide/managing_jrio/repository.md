@@ -105,7 +105,7 @@ If you use multiple repository directories to store your report templates and re
 </bean>
 ```
 
-# Managing Amazon Web Services for JasperReports IO
+# Managing Amazon Web Services
 
 This section describes how to use an AWS S3 bucket for a repository for JasperReports IO, referring to reports stored in an S3 bucket, and customizations for JasperReports IO for AWS.
 
@@ -224,7 +224,7 @@ sudo service jrio start
 
 When the JasperReports IO instance restarts, the changes based on the configuration file is in place.
 
-# Cloud Repositories for JasperReports IO
+# Cloud Repositories
 
 This section describes how JasperReports IO can use reports and resources stored in the cloud repositories (Google Drive, GitHub, and Dropbox) using OAuth 2.0 standard protocol for authorization.
 

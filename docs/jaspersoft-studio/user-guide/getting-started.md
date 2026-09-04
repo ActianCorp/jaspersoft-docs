@@ -1,9 +1,9 @@
 ---
-title: Getting Started with Jaspersoft Studio
+title: Getting Started
 description: "Jaspersoft Studio is the latest incarnation of the well-known iReport Editor. Because it is built on the Eclipse platform, Jaspersoft Studio is a complete solution that allows users to extend its..."
 ---
 
-# Getting Started with Jaspersoft Studio
+# Getting Started
 
 Jaspersoft Studio is the latest incarnation of the well-known iReport Editor. Because it is built on the Eclipse platform, Jaspersoft Studio is a complete solution that allows users to extend its capabilities and functionality.
 

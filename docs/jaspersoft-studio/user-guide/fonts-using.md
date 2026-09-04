@@ -182,7 +182,7 @@ Create a report with multi-lingual text
 | ![jss font set preview](assets/images/jss-font-set-preview.png) |
 | *Figure 12 Font set in preview*                                 |
 
-# Deploying Font Extensions to JasperReports Server
+# Deploying Font Extensions
 
 When you use font extensions in a report, the font extensions are not automatically available on the server. You need to export your font extensions as a jar and upload them to the server. For reports in HTML, add the jar to the server classpath and enable font support in `jasperreports.properties`. For reports in PDF, add the jar to the report as a resource.
 

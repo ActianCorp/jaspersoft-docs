@@ -1,9 +1,9 @@
 ---
-title: Using Default Fonts in JasperReports Server
+title: Using Default Fonts
 description: "By default, the server uses three fonts for reports:"
 ---
 
-# Using Default Fonts in JasperReports Server
+# Using Default Fonts
 
 By default, the server uses three fonts for reports:
 

@@ -1,9 +1,9 @@
 ---
-title: Multiple Organizations in JasperReports Server
+title: Multiple Organizations
 description: "This section describes functionality that can be restricted by the software license for JasperReports Server. If you don’t see some of the options described in this section, your license may prohibit..."
 ---
 
-# Multiple Organizations in JasperReports Server
+# Multiple Organizations
 
 !!! note
 

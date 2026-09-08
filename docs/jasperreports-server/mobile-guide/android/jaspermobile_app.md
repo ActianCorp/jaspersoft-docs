@@ -7,7 +7,7 @@ description: Jaspersoft publishes the JasperMobile app for Android that was deve
 
 Jaspersoft publishes the JasperMobile app for Android that was developed with the Mobile SDK. The app is a client that lets you access one or more JasperReports Server instances and run reports and dashboards to display on your Android device.
 
-You can install the app from the Google Play:
+You can install the app from the Google Play website:
 
 [https://play.google.com/store/apps/details?id=com.jaspersoft.android.jaspermobile](https://play.google.com/store/apps/details?id=com.jaspersoft.android.jaspermobile)
 

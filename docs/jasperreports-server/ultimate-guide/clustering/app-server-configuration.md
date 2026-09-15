@@ -5,7 +5,7 @@ description: "The app server usually manages the user session for a web applicat
 
 # Sample Configurations
 
-The app server usually manages the user session for a web application and is responsible for the policies that allow the session to be replicated in a cluster environment. However, you must also configure parts of JasperReports Server for repository and session replication, including the Ehcache component.
+The app server usually manages the user session for a web application and is responsible for the policies that allow the session to be replicated in a cluster environment. However, you must also configure parts of JasperReports Server for repository and session replication, including the Infinispan component.
 
 !!! note
 
@@ -13,15 +13,15 @@ The app server usually manages the user session for a web application and is res
 
 This section describes two levels of replication for JasperReports Server:
 
--   Ehcache replication only: The repository cache handles the folder structure and saved reports, and speeds up repository access in a given instance of JasperReports Server. Changes to permissions and folders are cached on the server where they occur, but they can take one to two minutes to be written to the repository database. To maintain performance and avoid collisions, you should configure Ehcache replication whenever you have multiple JasperReports Server instances that share a single repository. Ehchache replication can be configured independently of session replication.
+-   Infinispan replication only: The repository cache handles the folder structure and saved reports, and speeds up repository access in a given instance of JasperReports Server. Changes to permissions and folders are cached on the server where they occur, but they can take one to two minutes to be written to the repository database. To maintain performance and avoid collisions, you should configure Infinispan replication whenever you have multiple JasperReports Server instances that share a single repository. Infinispan replication can be configured independently of session replication.
 
--   Partial session replication for failover: Partial session replication shares, based on Ehcache replication, shares additional information about the logged-in users and allows for failover without requiring re-authentication. If you configure this, you must first configure Ehcache replication.
+-   Partial session replication for failover: Partial session replication shares, based on Infinispan replication, shares additional information about the logged-in users and allows for failover without requiring re-authentication. If you configure this, you must first configure Infinispan replication.
 
-## EhCache Replication
+## Infinispan Replication
 
-The repository cache in JasperReports Server is implemented internally via the Ehcache component. Edit the Ehcache configuration files as described below to replicate the repository cache among all instances that share a single repository. You do not have to configure a cluster for cache replication.
+The repository cache in JasperReports Server is implemented internally via Infinispan. Infinispan uses JGroups as its cluster transport layer to replicate the repository cache among all instances that share a single repository. You do not have to configure a separate broker or message server for cache replication.
 
-There are several replication mechanisms available:
+### To configure JasperReports Server nodes for repository cache replication
 
 -   Remote Method Invocation (RMI): The simplest and fastest cache distribution mechanism. Use RMI distribution if your cluster runs on your own real or virtual computers, as long as their addresses will not change. You cannot use RMI distribution if your cluster is hosted in a cloud, such as with Amazon Redshift, because the IP addresses of the nodes may change. RMI distribution relies on IP multicast, which you must set up.
 
@@ -131,9 +131,9 @@ On each node, you must edit the following cache configuration files. Make sure t
 
 ## Additional Configurations for Partial Session Replication
 
-If you want to configure partial session replication/failover, first set up repository cache replication as described in [Repository Cache Replication](#ehcache-replication), then make the additional changes described in this section.
+If you want to configure partial session replication/failover, first set up repository cache replication as described in [Repository Cache Replication](#infinispan-replication), then make the additional changes described in this section.
 
-On each node, edit *all* of the following three files as described below for your chosen distribution mechanism. You should make the same additional changes in all of them. Make sure to uncomment only one of the options provided in each file:
+On each node, edit _all_ of the following three files as described below for your chosen distribution mechanism. You should make the same additional changes in all of them. Make sure to uncomment only one of the options provided in each file:
 
 -   `<web-app>/WEB-INF/ehcache_hibernate.xml`
 -   `<web-app>/WEB-INF/classes/ehcache_hibernate.xml`

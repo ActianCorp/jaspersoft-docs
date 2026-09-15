@@ -1676,6 +1676,7 @@ nav = [
     { "JasperReports Web Studio User Guide" = [
       { "JasperReports Web Studio User Guide" = "jasperreports-web-studio/user-guide/index.md" },
       { "Overview" = "jasperreports-web-studio/user-guide/overview-ug.md" },
+      { "Installation" = "jasperreports-web-studio/user-guide/intro.md" },
       { "Getting Started" = "jasperreports-web-studio/user-guide/getting-started.md" },
       { "Configuration" = "jasperreports-web-studio/user-guide/configuration.md" },
       { "White Labeling" = "jasperreports-web-studio/user-guide/white_labelling.md" },

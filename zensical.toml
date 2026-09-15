@@ -16,10 +16,10 @@ site_name = "Jaspersoft Documentation"
 site_description = "Product documentation for JasperReports Server, Jaspersoft Studio, JasperReports IO and Jaspersoft in the cloud."
 site_author = "Actian"
 
-# Published by .github/workflows/deploy.yml in ActianCorp/jaspersoft-docs.
-# Enables canonical URLs and a populated sitemap; change it if the site moves
-# to a custom domain.
-site_url = "https://actiancorp.github.io/jaspersoft-docs/"
+# Deployed to docs.actian.com/jaspersoft/ by the Jenkins
+# data-intelligence-style pipeline (Jenkinsfile), not the GitHub Pages
+# workflow. Enables canonical URLs and a populated sitemap.
+site_url = "https://docs.actian.com/jaspersoft/"
 
 # Actian acquired the Jaspersoft business; the entity named here and in the
 # converted pages was "Cloud Software Group, Inc.". Have the legal owner

@@ -29,8 +29,9 @@ This recommended path is used for a fresh JasperReports Server installation on e
 1. Edit the `default_master.properties` file.
   
    a. Open `<js-install>/buildomatic/default_master.properties`.
+
    b. Set Enable clustered Infinispan cache:
-    ``` text
+    ``` xml
     appCacheType=infinispan-embedded
     networkType=tcp
     ```

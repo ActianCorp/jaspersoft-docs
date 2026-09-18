@@ -26,7 +26,7 @@ The repository cache in JasperReports Server is implemented internally via Infin
 #### Scenario A
 This recommended path is used for a fresh JasperReports Server installation on each cluster node. The buildomatic tool automatically places all required Infinispan and JGroups files.
 
-1 - Edit the `default_master.properties` file.
+1. Edit the `default_master.properties` file.
   
    a. Open `<js-install>/buildomatic/default_master.properties`.
    b. Set Enable clustered Infinispan cache:
@@ -34,7 +34,7 @@ This recommended path is used for a fresh JasperReports Server installation on e
     appCacheType=infinispan-embedded
     networkType=tcp
     ```
-2 - Run `gen-config`.
+2. Run `gen-config`.
 
 From the buildomatic directory, run `./js-ant.sh clean-config gen-config`.
 
@@ -44,7 +44,7 @@ This command reads `default_master.properties` and generates all configuration f
   - Placing JGroups XML files into `WEB-INF/classes/`.
   - Resolving the `${infinispan.application.main.network.cfg.path}` and related placeholders in the Infinispan config files to point to the correct JGroups stack file `(jgroups-tcp.xml)` based on the `networkType` value.
   
-3 - Configure JGroups
+3. Configure JGroups
 
 After `gen-config`, open each JGroups configuration file in `<webapp>/WEB-INF/classes/`. The files are:
 
@@ -66,7 +66,7 @@ In each file, locate the JS_JDBC_PING element and verify the `datasource_jndi_na
 If your JNDI name differs, update it in all four files.
 JasperReports Server uses a custom `JS_JDBC_PING` protocol (an extended version of JGroups standard JDBC_PING). Each node writes its address into the shared database on startup and reads the addresses of other nodes from the same table. This enables automatic node discovery without multicast or static IP lists.
 
-4 - Configure bind address and port (if needed).
+4. Configure bind address and port (if needed).
 
 By default, JGroups auto-detects the bind address by checking network interfaces in order: `eth1, eth0, en0,` and finally any `SITE_LOCAL` address.
 
@@ -74,11 +74,11 @@ The default bind ports in Jgroup files are 7800, 7810, 7820 and 7830.
 
 Ensure port 7800, 7810, 7820, and 7830 (or your chosen ports) is open in firewall rules between all cluster nodes.
 
-5 -  Repeat on each node.
+5.  Repeat on each node.
 
 Perform steps 1 through 4 on each cluster node. The `dbHost` and `appCacheType` must be identical on all nodes.
 
-6 - Start the cluster.
+6. Start the cluster.
 
 Start Tomcat on each node sequentially. 
 On startup, each node registers itself in the
@@ -88,7 +88,7 @@ shared database via `JS_JDBC_PING` and joins the Infinispan cluster.
 Use this path when JasperReports Server is already deployed and running. Run the `cleanconfig` 
 and `gen-config` commands to overwrite your existing WEB-INF configuration. To avoid this, manually copy only the Infinispan and JGroups files.
 
-1 - Copy Infinispan config files to `<webapp>/WEB-INF/`.
+1. Copy Infinispan config files to `<webapp>/WEB-INF/`.
 Copy the following files from the buildomatic source to `<webapp>/WEB-INF/`:
 
 Source: `<js-install>/buildomatic/conf_source/cache/infinispanembedded/`
@@ -104,7 +104,7 @@ main-infinispan-configs.xml
 Destination: `<webapp>/WEB-INF/`
     
 
-2 - Copy JGroups and Infinispan files to `<webapp>/WEB-INF/classes/`.
+2. Copy JGroups and Infinispan files to `<webapp>/WEB-INF/classes/`.
 
 Copy the following files from the buildomatic source to `<webapp>/WEB-INF/classes/`:
 
@@ -124,7 +124,7 @@ profiling-hibernate-infinispan-configs.xml
 ```
 Destination: `<webapp>/WEB-INF/classes/`   
 
-3 - Resolve JGroups stack-file paths in Infinispan config files.
+3. Resolve JGroups stack-file paths in Infinispan config files.
 
 When `gen-config` is NOT run, the placeholder variables in the Infinispan config files are NOT resolved automatically. You must replace them manually with the literal JGroups filename.
 
@@ -189,7 +189,7 @@ The resulting JGroups sections appears as follows:
     </jgroups>
     ```
 
-4 - Configure datasource_jndi_name in all JGroups files.
+4. Configure datasource_jndi_name in all JGroups files.
 
 In each of the four JGroups XML files in `WEB-INF/classes/`, verify that `<datasource_jndi_name>` matches your JNDI datasource name:
 ```
@@ -206,7 +206,7 @@ Each file contains:
 ```
 If your JNDI datasource name is different, update it in all four files.
 
-5 - Configure bind address and port.
+5. Configure bind address and port.
 
 Follow the steps in Scenario A, step 4, Configure bind address and port [Scenario A](#scenario-a) (if needed).
 Repeat on each node.
@@ -214,7 +214,7 @@ Repeat on each node.
 Perform steps 1 through 5 on every cluster node. All nodes must have identical
 Infinispan and JGroups configuration files.
 
-6 - Start the cluster.
+6. Start the cluster.
 
 #####JGroups Configuration
 All JGroups configuration files follow the same structure. Following are the key configurable elements:

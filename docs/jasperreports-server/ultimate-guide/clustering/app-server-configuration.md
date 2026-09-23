@@ -36,6 +36,7 @@ This recommended path is used for a fresh JasperReports Server installation on e
         appCacheType=infinispan-embedded
         networkType=tcp
         ```
+
 2. Run `gen-config`.
 
     From the buildomatic directory, run `./js-ant.sh clean-config gen-config`.

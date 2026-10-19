@@ -1,0 +1,31 @@
+# The guide's menu for the documentation site: what Zensical reads (awesome-nav, `.nav.yml` in
+# each directory). The chapters of README.md, in its order and under its three parts; a chapter
+# takes its title in the menu from its own first heading, so renaming it in the file renames it
+# here too. README.md is the guide's table of contents for the PDF and is not published, and the
+# pages not listed here (README.md, samples/, dist/, pdf-assets/) stay out of the navigation.
+# The same list, under the name a MkDocs build with awesome-pages reads, is .pages.
+nav:
+    - Overview: index.md
+    - Getting started:
+        - requirements.md
+        - installation.md
+        - activation-and-licensing.md
+        - coming-from-studio.md
+    - Learning:
+        - workspaces.md
+        - first-report.md
+        - concepts.md
+        - tutorial-totals.md
+        - tutorial-parameters.md
+        - tutorial-chart-table.md
+        - tutorial-subreport.md
+        - tutorial-ai.md
+    - Reference:
+        - data-adapters.md
+        - sample-database.md
+        - workspace-settings.md
+        - jasperreports-server.md
+        - ai-assistant.md
+        - fonts-and-pdf.md
+        - custom-visualization-components.md
+        - troubleshooting.md

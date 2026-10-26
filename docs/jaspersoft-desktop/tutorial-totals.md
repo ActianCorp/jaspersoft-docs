@@ -1,3 +1,8 @@
+---
+title: "Tutorial: totals and grouping"
+description: "You work in the Samples workspace, which comes with Jaspersoft Desktop. On the home screen, click Samples and tutorials. The first time, Jaspersoft Desktop copies the samples into your Documents..."
+---
+
 # Tutorial: totals and grouping
 
 **What you build:** the sales report grouped by country gets a total for each country and a grand
@@ -26,7 +31,7 @@ If some of the words below are new to you (bands, fields, variables, groups), re
 A grand total is printed once, at the end of the report: its place is the **Summary** band.
 
 1. In the **Outline**, on the left, **Summary** is grey: the report has no summary band yet. Point
-   at it and click the **+** (**Create Band**) at the end of its row. The band appears on the page.
+    at it and click the **+** (**Create Band**) at the end of its row. The band appears on the page.
 2. Open the **Dataset** tab, at the right of **Properties**, and expand **Fields**.
 3. Drag the field **amount** onto the **Summary** band, on the page.
 
@@ -47,32 +52,32 @@ country** band.
 
 1. In the **Outline**, point at **Group Footer country** (grey) and click its **+**.
 
-Now the total. You could drag **amount** onto the group footer as before, but a variable made by
-the wizard adds up **from the beginning of the report** (its **Reset On** is **Report**): in the
-footer of the second country it would show the total of the first two. A total for each country
-must start again at each country. So this time you create the variable yourself:
+    Now the total. You could drag **amount** onto the group footer as before, but a variable made by
+    the wizard adds up **from the beginning of the report** (its **Reset On** is **Report**): in the
+    footer of the second country it would show the total of the first two. A total for each country
+    must start again at each country. So this time you create the variable yourself:
 
 2. In the **Dataset** tab, expand **Variables** and click its **+**. A variable named `Variable`
-   is added.
+    is added.
 3. Right-click it and choose **Edit**. In the editor that opens, set:
 
-   | Property | Value | Why |
-   | --- | --- | --- |
-   | **Name** | `country_total` | The name you will use in the report. |
-   | **Class** | `java.math.BigDecimal` | The kind of value: the amounts are decimal numbers. |
-   | **Calculation** | **Sum** | Add up… |
-   | **Expression** | `$F{amount}` | …the amount of each record. |
-   | **Reset On** | **Group - country** | Start again from zero at each country. |
+    | Property | Value | Why |
+    | --- | --- | --- |
+    | **Name** | `country_total` | The name you will use in the report. |
+    | **Class** | `java.math.BigDecimal` | The kind of value: the amounts are decimal numbers. |
+    | **Calculation** | **Sum** | Add up… |
+    | **Expression** | `$F{amount}` | …the amount of each record. |
+    | **Reset On** | **Group - country** | Start again from zero at each country. |
 
-   ![The variable country_total, a sum reset at each country](images/tut-totals-variable.png)
+    ![The variable country_total, a sum reset at each country](images/tut-totals-variable.png)
 
-   Changes apply as you make them: close the editor with its **×**.
+    Changes apply as you make them: close the editor with its **×**.
 
 4. From the **Palette**, drag a **Text Field** onto the **Group Footer country** band.
 5. With the new text field selected, open **Properties**, then its **Text Field** tab. In
-   **Expression**, replace `"Text Field"` with `$V{country_total}`.
+    **Expression**, replace `"Text Field"` with `$V{country_total}`.
 
-   ![The text field of the group footer, its expression the new variable](images/tut-totals-expression.png)
+    ![The text field of the group footer, its expression the new variable](images/tut-totals-expression.png)
 
 ## 3. Put the totals in their place
 
@@ -80,11 +85,11 @@ The two totals should sit under the **Amount** column, formatted as the amounts 
 them (select it on the page, or in the **Outline**):
 
 1. On the **Appearance** tab of **Properties**: **Position X** `400`, **Position Y** `0`, **Width**
-   `155`, **Height** `20`: the place and the size of the **Amount** column.
+    `155`, **Height** `20`: the place and the size of the **Amount** column.
 2. On the **Text Field** tab:
-   - **Pattern** `#,##0.00`, the format of the amounts above;
-   - under **Text Arrangement**, **Horizontal Text Alignment**: right;
-   - under **Font**, **Bold**.
+    - **Pattern** `#,##0.00`, the format of the amounts above;
+    - under **Text Arrangement**, **Horizontal Text Alignment**: right;
+    - under **Font**, **Bold**.
 
 An element must fit inside its band. If one reaches below the bottom of its band (dropped too low,
 or too tall), the preview refuses the report with "Element bottom reaches outside band area":
@@ -104,7 +109,7 @@ of the toolbar.
 - A band that is grey in the **Outline** is not in the report yet: **+** creates it.
 - Dropping a field outside the detail band asks what to compute, and creates a **variable**.
 - A variable's **Reset On** decides where its count starts again: **Report** for a grand total,
-  a **group** for a subtotal.
+    a **group** for a subtotal.
 - **Properties** places an element exactly, and formats what it shows.
 
 ## Starting again from the samples

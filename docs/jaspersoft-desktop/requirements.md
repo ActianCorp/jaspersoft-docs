@@ -1,3 +1,8 @@
+---
+title: "Requirements"
+description: "What a computer needs to run Jaspersoft Desktop."
+---
+
 # Requirements
 
 What a computer needs to run Jaspersoft Desktop.
@@ -32,20 +37,20 @@ and the properties around it, and the AI assistant's column beside them.
 Jaspersoft Desktop includes everything it needs:
 
 - **Java**: its own Java runtime, used by nothing else. A Java already installed on the computer
-  is neither needed nor used, nor changed.
+    is neither needed nor used, nor changed.
 - **JasperReports**: the engine the reports are designed for, in its latest version.
 - **JDBC drivers** for PostgreSQL, MariaDB (and MySQL) and HSQLDB. Others are added to a
-  workspace when it needs them (see [Workspace settings](workspace-settings.md)).
+    workspace when it needs them (see [Workspace settings](workspace-settings.md)).
 - **A sample database**, with the samples and the tutorials of this guide (see
-  [The sample database](sample-database.md)).
+    [The sample database](sample-database.md)).
 
 ## Network
 
 Jaspersoft Desktop works without a network once it is activated. It connects to the internet:
 
 - to **activate** it and to renew its license: once, and then from time to time. An activation
-  without an internet connection is possible too (see
-  [Activating Jaspersoft Desktop](activation-and-licensing.md));
+    without an internet connection is possible too (see
+    [Activating Jaspersoft Desktop](activation-and-licensing.md));
 - for its **updates**;
 - to reach the **AI model service** you configure, if you use the AI assistant;
 - to reach your **databases** and **JasperReports Server**, wherever they are.
@@ -60,4 +65,4 @@ The report engine of Jaspersoft Desktop runs on your computer and answers only o
 - A **Jaspersoft Community account**, to activate Jaspersoft Desktop (community.jaspersoft.com).
 - For JasperReports Server: an account on the server.
 - For the AI assistant: an account, and a key, with an AI model service; or Ollama, on your own
-  computer (see [Designing reports with AI](ai-assistant.md)).
+    computer (see [Designing reports with AI](ai-assistant.md)).

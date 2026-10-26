@@ -1,3 +1,8 @@
+---
+title: "Coming from Jaspersoft Studio"
+description: "Jaspersoft Desktop designs the same reports as Jaspersoft Studio: the same JRXML, the same JasperReports engine, the same elements, data adapters and JasperReports Server. Your reports open as they..."
+---
+
 # Coming from Jaspersoft Studio
 
 Jaspersoft Desktop designs the same reports as Jaspersoft Studio: the same JRXML, the same
@@ -40,9 +45,9 @@ the report's **Properties** (click an empty area of the page, so that nothing is
 which, and changes it:
 
 - **off**: the report is saved as JRXML 6, which Jaspersoft Studio 6 and applications on
-  JasperReports 6 read;
+    JasperReports 6 read;
 - **on**: the report is saved as JRXML 7. JasperReports 6 and Jaspersoft Studio 6 cannot read it
-  any more.
+    any more.
 
 New reports are made in the JasperReports 7 format. Keep a report in format 6 for as long as an
 application or a colleague on JasperReports 6 uses it.
@@ -64,14 +69,14 @@ The **Palette** has the elements of JasperReports, which every application using
 run:
 
 - **Text Field**, **Static Text**, **Image**, **Rectangle**, **Ellipse**, **Line**, **Frame**,
-  **Break**, **Generic**;
+    **Break**, **Generic**;
 - **Table**, **List**, **Crosstab**, **Subreport**, **Chart** (the JFreeChart charts);
 - the barcodes, and the **Composite** elements: page numbers, dates, percentages.
 
 It also has the **Pro** components:
 
 - **Highcharts** (the HTML5 charts), **HTML** (the HTML component), **CVC** (the custom
-  visualization component), **Map**;
+    visualization component), **Map**;
 - the Fusion components: **Fusion Chart**, **Fusion Map**, **Fusion Widgets**;
 - **AdHoc**, the Ad Hoc component.
 
@@ -86,23 +91,23 @@ Server runs them in its commercial editions.
   Jaspersoft Studio by a jar, is not among them yet: a report using one opens, but its data cannot
   be read here.
 - **A wizard for font extensions.** Make them by hand: see
-  [Fonts and PDF](fonts-and-pdf.md#making-a-font-extension).
+    [Fonts and PDF](fonts-and-pdf.md#making-a-font-extension).
 - **A visual tool to tag elements for accessible PDF** (PDF tags, a JasperReports Pro feature).
-  The tags can still be set by hand, as properties of the elements.
+    The tags can still be set by hand, as properties of the elements.
 - **Compiling for older versions of JasperReports**, see above.
 - **A wizard to publish to JasperReports Server**: work on the server's repository directly.
 
 ## New here
 
 - **The AI assistant**, beside the report, which reads and changes it with you; and an MCP server
-  for Claude, ChatGPT and the other assistants. See [Designing reports with AI](ai-assistant.md)
-  and [Working with the AI assistant](tutorial-ai.md).
+    for Claude, ChatGPT and the other assistants. See [Designing reports with AI](ai-assistant.md)
+    and [Working with the AI assistant](tutorial-ai.md).
 - **A local history** of every report: the versions you saved and those you did not, restored with
-  a click. Jaspersoft Desktop never saves for you, and keeps your work as you go.
+    a click. Jaspersoft Desktop never saves for you, and keeps your work as you go.
 - **The Samples workspace** and its **sample database**, ready on the first start, with the
-  tutorials of this guide. See [The sample database](sample-database.md).
+    tutorials of this guide. See [The sample database](sample-database.md).
 - **Custom visualization components** that the assistant writes and builds. See
-  [Custom visualization components](custom-visualization-components.md).
+    [Custom visualization components](custom-visualization-components.md).
 
 ## Keys
 

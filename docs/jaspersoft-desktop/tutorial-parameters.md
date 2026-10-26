@@ -1,3 +1,8 @@
+---
+title: "Tutorial: a filter with parameters"
+description: "Open Tutorials/Sales by Country.jrxml in the Samples workspace, as in Totals and grouping: as you left it after that tutorial, or as it was (see Starting again from the samples)."
+---
+
 # Tutorial: a filter with parameters
 
 **What you build:** the sales report asks for a country when it runs, and shows only that country's
@@ -21,16 +26,16 @@ application embedding the report passes it, JasperReports Server asks it with an
 2. Expand **Parameters** and click its **+**. A parameter named `Parameter` is added.
 3. Right-click it and choose **Edit**. Set:
 
-   | Property | Value |
-   | --- | --- |
-   | **Name** | `Country` |
-   | **Description** | `The country to show; empty for all of them`. The preview shows it as the tip of the field. |
-   | **Class** | `java.lang.String`, as it is: a text. |
-   | **Is For Prompting** | On, as it is: the preview asks for it. |
+    | Property | Value |
+    | --- | --- |
+    | **Name** | `Country` |
+    | **Description** | `The country to show; empty for all of them`. The preview shows it as the tip of the field. |
+    | **Class** | `java.lang.String`, as it is: a text. |
+    | **Is For Prompting** | On, as it is: the preview asks for it. |
 
-   ![The parameter Country](images/tut-params-parameter.png)
+    ![The parameter Country](images/tut-params-parameter.png)
 
-   Close the editor with its **×**.
+    Close the editor with its **×**.
 
 ## 2. The filter
 
@@ -59,7 +64,7 @@ A report with a query can filter in the query instead, which is faster on a larg
 ## 3. Run it
 
 1. Click **Preview**. The **Parameters** panel on the left lists **Country**, empty: the report
-   shows every country.
+    shows every country.
 2. Type `Germany` in **Country** and click **Run**, the first button of the toolbar (▶).
 
 Only Germany is left. Clear the field and run again to see every country.
@@ -70,18 +75,18 @@ Changes to the design are taken into account when you go back to **Design** and 
 ## Going further
 
 - **A default value.** The **Default Value Expression** of a parameter is used when no value is
-  given, for example `"Italy"`.
+    given, for example `"Italy"`.
 - **A title that says what was chosen.** Replace the static title with a **Text Field** whose
-  expression is
-  `$P{Country} == null || $P{Country}.isEmpty() ? "Sales by Country" : "Sales in " + $P{Country}`.
+    expression is
+    `$P{Country} == null || $P{Country}.isEmpty() ? "Sales by Country" : "Sales in " + $P{Country}`.
 - **Other kinds of values.** A parameter of class `java.util.Date` gets a date picker in the
-  preview, `java.lang.Boolean` a checkbox, `java.lang.Integer` a number field.
+    preview, `java.lang.Boolean` a checkbox, `java.lang.Integer` a number field.
 - **On JasperReports Server**, each parameter for prompting becomes an **input control** of the
-  report unit, which can offer a list of values to choose from.
+    report unit, which can offer a list of values to choose from.
 
 ## What you learned
 
 - **Parameters** bring values into the report when it runs; **Is For Prompting** makes the preview
-  ask for them.
+    ask for them.
 - The **Filter Expression** keeps only the records for which it is true.
 - Expressions are Java: `$P{…}` for parameters, `$F{…}` for fields, `.equals` to compare texts.

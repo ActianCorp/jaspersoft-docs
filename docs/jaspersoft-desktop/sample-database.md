@@ -1,3 +1,8 @@
+---
+title: "The sample database"
+description: "Jaspersoft Desktop includes a small database to try reports on: the sales of Brightwater Trading, an invented wholesaler of goods for the home and the garden. It sells to shops in fifteen countries..."
+---
+
 # The sample database
 
 Jaspersoft Desktop includes a small database to try reports on: the sales of **Brightwater
@@ -76,10 +81,10 @@ ORDER BY SALES DESC
 The data is made so that reports have something to show:
 
 - the business grows by about a fifth each year, and every year sells most in November and
-  December;
+    December;
 - a few customers buy a lot and many buy a little, for rankings;
 - prices rise by 4% a year: `ORDER_LINES.UNIT_PRICE` is the price of the day, `PRODUCTS.UNIT_PRICE`
-  today's;
+    today's;
 - two products were discontinued in 2024;
 - the last orders of 2025 are still `Pending`, and about one order in fifty is `Cancelled`.
 

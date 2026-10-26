@@ -1,3 +1,8 @@
+---
+title: "When something goes wrong"
+description: "What to do with the errors you are most likely to meet, and how to find out more about the others."
+---
+
 # When something goes wrong
 
 What to do with the errors you are most likely to meet, and how to find out more about the others.
@@ -29,25 +34,25 @@ passwords and keys of the addresses it records masked.
 ## The report is empty, or has fewer records than expected
 
 - **Test the data adapter**: open it and click **Test** (see
-  [Working with data adapters](data-adapters.md)).
+    [Working with data adapters](data-adapters.md)).
 - **Look at the data**: in the **Dataset** tab, turn on **Show Query Editor** and click **Preview
-  Data**: the records the report gets.
+    Data**: the records the report gets.
 - **A filter** may keep none: the **Filter Expression** of the dataset, at the bottom of the
-  **Dataset** tab.
+    **Dataset** tab.
 - **A parameter** may have a value that matches nothing: the **Parameters** panel of the preview
-  shows what the report ran with; **Reset** gives them their default values.
+    shows what the report ran with; **Reset** gives them their default values.
 - **When No Data Show**, in the report's **Properties**, decides what an empty report prints: by
-  default, nothing at all.
+    default, nothing at all.
 
 ## A database does not connect
 
 - **The driver is missing**: Jaspersoft Desktop includes the drivers of PostgreSQL, MariaDB (and
-  MySQL) and HSQLDB. For another database, add its JDBC driver (`.jar`) in **Settings ›
-  Libraries**.
+    MySQL) and HSQLDB. For another database, add its JDBC driver (`.jar`) in **Settings ›
+    Libraries**.
 - **The URL**: each driver has its own syntax; the driver list of the data adapter fills in an
-  example to complete.
+    example to complete.
 - **The network**: the database must be reachable from this computer, through its VPN or proxy if
-  there is one. Jaspersoft Desktop uses the proxy settings of the system.
+    there is one. Jaspersoft Desktop uses the proxy settings of the system.
 
 ## Texts look different in the PDF, or print as squares
 
@@ -63,11 +68,11 @@ History** lists the versions of the report on show, saved or not, and restores a
 ## The AI assistant does not answer
 
 - **"The assistant of this window is not set up"**: the assistant inside Jaspersoft Desktop needs a
-  model service: **AI assistant…** on the home screen. The MCP server, for Claude, ChatGPT and the
-  others, does not make it answer: those you chat with in their own application. See
-  [Designing reports with AI](ai-assistant.md).
+    model service: **AI assistant…** on the home screen. The MCP server, for Claude, ChatGPT and the
+    others, does not make it answer: those you chat with in their own application. See
+    [Designing reports with AI](ai-assistant.md).
 - **An error from the model service**: an invalid key, no credit left, a model name the service
-  does not know. **Test connection**, in the AI settings, says which.
+    does not know. **Test connection**, in the AI settings, says which.
 
 ## Jaspersoft Desktop does not start
 

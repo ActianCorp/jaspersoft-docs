@@ -13,11 +13,11 @@ Technical business analysts know their business, data, and processes. They are p
 
 If you're a technical business analyst, refer to the following:
 
--   [Changing the UI With Themes](../customizing/customizing-ui-with-themes.md)
+- [Changing the UI With Themes](../customizing/customizing-ui-with-themes.md)
 
--   [Customizing Menus](../customizing/customizing-menus.md)
+- [Customizing Menus](../customizing/customizing-menus.md)
 
--   [Working With Custom Java Classes](../customizing/customizing-java-classes.md)
+- [Working With Custom Java Classes](../customizing/customizing-java-classes.md)
 
 ## Report Developer
 
@@ -31,9 +31,9 @@ System developers leverage JasperReports Server functionality in their own produ
 
 If you're a system developer, refer to the following:
 
--   [“JasperReports Server APIs” on page 1](../api/api.md)
+- [“JasperReports Server APIs” on page 1](../api/api.md)
 
--   [“Customizing the User Interface” on page 1](../customizing/customizing-the-user-interface.md)
+- [“Customizing the User Interface” on page 1](../customizing/customizing-the-user-interface.md)
 
 ## System Administrator and Database Administrator
 
@@ -43,10 +43,10 @@ Database administrators (DBAs) administer database management systems (DBMS) and
 
 If you're a system or database administrator, refer to the following:
 
--   [“Custom Data Sources” on page 1](../custom_data_sources/custom-datasources.md)
+- [“Custom Data Sources” on page 1](../custom_data_sources/custom-datasources.md)
 
--   [“Restricting Access by Role” on page 1](../customizing/restricting-access-by-role.md)
+- [“Restricting Access by Role” on page 1](../customizing/restricting-access-by-role.md)
 
--   [“Working With Custom Java Classes” on page 1](../customizing/customizing-java-classes.md)
+- [“Working With Custom Java Classes” on page 1](../customizing/customizing-java-classes.md)
 
--   [“Designing a Cluster” on page 1](../clustering/clustering.md)
+- [“Designing a Cluster” on page 1](../clustering/clustering.md)

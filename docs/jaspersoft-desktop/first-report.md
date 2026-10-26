@@ -1,3 +1,8 @@
+---
+title: "Creating your first report"
+description: "This chapter takes you from a folder with a CSV file in it to a finished report: a list of sales grouped by country, with its preview and its exports. It takes about five minutes."
+---
+
 # Creating your first report
 
 This chapter takes you from a folder with a CSV file in it to a finished report: a list of sales
@@ -26,18 +31,18 @@ that says where the data is and how to read it. The same data adapter can serve 
    explorer's **+** menu. A new data adapter opens in a tab.
 2. In the list on the left, choose **CSV**.
 3. Fill in the form:
-   - **Name**: a name for you, for example `Sales`.
-   - **CSV File Path or URL**: the path of the file in the workspace, starting with `/`, for
-     example `/sales.csv`. The search button next to the field lets you pick it.
-   - **Use First Line As Header**: tick it when the first line of the file holds the names of the
-     columns, as in the example. These names become the fields of your report.
+    - **Name**: a name for you, for example `Sales`.
+    - **CSV File Path or URL**: the path of the file in the workspace, starting with `/`, for
+        example `/sales.csv`. The search button next to the field lets you pick it.
+    - **Use First Line As Header**: tick it when the first line of the file holds the names of the
+        columns, as in the example. These names become the fields of your report.
 
-   ![The CSV data adapter filled in](images/da-csv.png)
+    ![The CSV data adapter filled in](images/da-csv.png)
 
 4. Click **Test**, in the toolbar of the data adapter. "Data Source successfully validated" means
-   the file can be read.
+    the file can be read.
 5. Save the data adapter (the save button of the toolbar, or **⌘S** / **Ctrl+S**), with a name
-   ending in `.jrdax`, for example `Sales.jrdax`.
+    ending in `.jrdax`, for example `Sales.jrdax`.
 
 [Working with data adapters](data-adapters.md) explains the other options and the other kinds of
 data.
@@ -118,5 +123,5 @@ Click **Design** to go back to the designer.
 
 - Change the look: select an element and change its font, colors and borders in **Properties**.
 - Add a total: drag a **Text Field** to the summary band, or ask the AI assistant to do it (see
-  [Designing reports with AI](ai-assistant.md)).
+    [Designing reports with AI](ai-assistant.md)).
 - Use another kind of data, a database for example: see [Working with data adapters](data-adapters.md).

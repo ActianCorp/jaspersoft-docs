@@ -1,3 +1,8 @@
+---
+title: "Working with workspaces"
+description: "In Jaspersoft Desktop you always work in a workspace: a folder of your computer, with your reports, data files and data adapters in it, or the repository of a JasperReports Server. This chapter is..."
+---
+
 # Working with workspaces
 
 In Jaspersoft Desktop you always work in a **workspace**: a folder of your computer, with your
@@ -131,9 +136,9 @@ Desktop keeps copies of your unsaved work in the **local history** of each docum
 workspace folder:
 
 - a copy of a report once you stop changing it for a couple of seconds, at most one every minute
-  and a half;
+    and a half;
 - a copy before anything replaces the document on show, such as closing it or reloading it after
-  a change made elsewhere;
+    a change made elsewhere;
 - up to 60 versions of each document, none older than 30 days.
 
 To go back to one, open the document and choose **File › Local History…**. Pick a version on the

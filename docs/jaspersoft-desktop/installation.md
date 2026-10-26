@@ -1,3 +1,8 @@
+---
+title: "Installation"
+description: "Jaspersoft Desktop comes as one package per system. Check the requirements first, then follow the section of your system."
+---
+
 # Installation
 
 Jaspersoft Desktop comes as one package per system. Check the [requirements](requirements.md)
@@ -31,7 +36,7 @@ application in **Applications** and choose **Open**. macOS asks this once.
 1. Run `jaspersoft-desktop-<version>-win-x64.exe` (`win-arm64.exe` on an ARM computer).
 2. Accept the license agreement.
 3. Choose where to install: by default, in your user folder. No administrator rights are needed,
-   and the installation is yours only: another user of the computer installs their own.
+    and the installation is yours only: another user of the computer installs their own.
 4. Click **Install**, then **Finish** to start Jaspersoft Desktop.
 
 The installer adds Jaspersoft Desktop to the **Start** menu and to the desktop.
@@ -41,31 +46,31 @@ If Windows SmartScreen stops the installer, click **More info**, then **Run anyw
 ## Linux
 
 1. Unpack `jaspersoft-desktop-<version>-linux-x64.tar.gz` (or `-linux-arm64.tar.gz`, for a
-   computer with an ARM processor) where you keep applications: `tar xzf
-   jaspersoft-desktop-<version>-linux-x64.tar.gz` in `~/Applications`, for example, or a double
-   click in your file manager. What it unpacks is a folder named after the download.
+    computer with an ARM processor) where you keep applications: `tar xzf
+    jaspersoft-desktop-<version>-linux-x64.tar.gz` in `~/Applications`, for example, or a double
+    click in your file manager. What it unpacks is a folder named after the download.
 2. Give the sandbox helper of that folder the permissions it needs, once, with your user's
-   `sudo` rights. The window of Jaspersoft Desktop is Chrome's engine. Chrome starts each of its
-   processes in a sandbox, and it uses a small program, `chrome-sandbox`, to set the sandbox up.
-   That program must belong to the root account and carry the set-user-ID bit, so that it can
-   protect your account from the processes it starts. Only an administrator can give these
-   permissions, and an archive cannot carry them. Use the path of the folder you unpacked:
+    `sudo` rights. The window of Jaspersoft Desktop is Chrome's engine. Chrome starts each of its
+    processes in a sandbox, and it uses a small program, `chrome-sandbox`, to set the sandbox up.
+    That program must belong to the root account and carry the set-user-ID bit, so that it can
+    protect your account from the processes it starts. Only an administrator can give these
+    permissions, and an archive cannot carry them. Use the path of the folder you unpacked:
 
-   ```bash
-   sudo chown root:root ~/Applications/jaspersoft-desktop-<version>-linux-x64/chrome-sandbox
-   sudo chmod 4755 ~/Applications/jaspersoft-desktop-<version>-linux-x64/chrome-sandbox
-   ```
+    ```bash
+    sudo chown root:root ~/Applications/jaspersoft-desktop-<version>-linux-x64/chrome-sandbox
+    sudo chmod 4755 ~/Applications/jaspersoft-desktop-<version>-linux-x64/chrome-sandbox
+    ```
 
-   Replace `<version>` and `x64` as in the name of the folder of step 1 (`arm64` for an ARM
-   computer).
+    Replace `<version>` and `x64` as in the name of the folder of step 1 (`arm64` for an ARM
+    computer).
 
    Without them Jaspersoft Desktop does not start: the terminal says `The SUID sandbox helper
    binary was found, but is not configured correctly`, and no window opens. Do this again for
    each new version, in its new folder.
 3. Start `jaspersoft-desktop` in that folder: from a terminal, or with a double click in your
-   file manager. Rename the folder if you like — `~/Applications/Jaspersoft Desktop` reads
-   better than the name of a download. A later version comes as a folder of its own, to unpack
-   and put in its place.
+    file manager. Rename the folder if you like — `~/Applications/Jaspersoft Desktop` reads
+    better than the name of a download. A later version comes as a folder of its own, to unpack
+    and put in its place.
 
 To find it in your desktop's menu, add a launcher for it, as your desktop allows.
 
@@ -75,11 +80,11 @@ The first start takes a little longer: Jaspersoft Desktop prepares its report en
 screen says **Getting Jaspersoft Desktop ready…** meanwhile; what you open shows as soon as it is.
 
 1. On macOS and Linux, Jaspersoft Desktop shows its **license agreement** (on Windows the installer
-   did): read it and accept it.
+    did): read it and accept it.
 2. **Activate** it with your Jaspersoft Community account: see
-   [Activating Jaspersoft Desktop](activation-and-licensing.md).
+    [Activating Jaspersoft Desktop](activation-and-licensing.md).
 3. The home screen opens. The **Samples** workspace is already among the recent folders, with the
-   files of the tutorials of this guide.
+    files of the tutorials of this guide.
 
 Where to go from there: [Working with workspaces](workspaces.md), then
 [Creating your first report](first-report.md).

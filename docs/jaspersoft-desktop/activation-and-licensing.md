@@ -1,3 +1,8 @@
+---
+title: "Activating Jaspersoft Desktop"
+description: "This guide explains how to activate Jaspersoft Desktop, keep your license up to date, and see your licenses and computers in the License portal."
+---
+
 # Activating Jaspersoft Desktop
 
 This guide explains how to activate Jaspersoft Desktop, keep your license up to date, and see
@@ -28,7 +33,7 @@ A few terms used in this guide:
 2. Click **Sign in to activate**. Your web browser opens.
 3. Sign in with your community account. If you are already signed in, you will not see the sign-in page.
 4. The browser shows **Jaspersoft Desktop is activated**. Jaspersoft Desktop goes on by itself; you
-   can close the browser window, or click **Open Jaspersoft Desktop** to switch back to the app.
+    can close the browser window, or click **Open Jaspersoft Desktop** to switch back to the app.
 
 While Jaspersoft Desktop waits for the browser, you can click **Open the page again** (if you closed
 the browser tab) or **Cancel**.
@@ -56,7 +61,7 @@ always allow it).
 If you received a license key:
 
 1. Below the **Sign in to activate** button, next to **Do you have a license key?**, click **Use a
-   license key**.
+    license key**.
 2. Type or paste the key in **License key**.
 3. Click **Activate with this key**, then sign in in the browser as above.
 
@@ -95,18 +100,18 @@ community account.
 ![The steps of an activation without internet connection](images/activation-offline.png)
 
 1. In Jaspersoft Desktop, below **Sign in to activate**, next to **No internet connection?**, click
-   **Activate offline**. (Jaspersoft Desktop also offers it when it cannot reach the license
-   server.) If you have a license key, enter it.
+    **Activate offline**. (Jaspersoft Desktop also offers it when it cannot reach the license
+    server.) If you have a license key, enter it.
 2. Click **Save activation request…** and save the **request file** (`.jslreq`). Copy it to a device
-   with internet access, for example with a USB stick or by email. Jaspersoft Desktop shows the
-   address of the License portal's page to open there.
+    with internet access, for example with a USB stick or by email. Jaspersoft Desktop shows the
+    address of the License portal's page to open there.
 3. On that device, open the License portal and sign in with your community account.
 4. Go to **Computer without internet**, open the request file (or paste its content), and click
-   **Get license file**.
+    **Get license file**.
 5. The portal shows **Your license file is ready**. Click **Download license file**. You get
-   `jaspersoft-desktop.jslic`.
+    `jaspersoft-desktop.jslic`.
 6. Copy the license file back to the offline computer. In Jaspersoft Desktop, choose
-   **Import license file** and select it.
+    **Import license file** and select it.
 
 ![The License portal's Computer without internet page, with the request pasted and its license file ready](images/portal-offline-activation.png)
 
@@ -125,10 +130,10 @@ When it is online, Jaspersoft Desktop checks your license once a day, in the bac
 it receives, **without any action from you**:
 
 - **renewals and extensions**: when your license is renewed or your trial is extended, the new
-  end date reaches Jaspersoft Desktop within a day. This works even after the license has expired:
-  just start Jaspersoft Desktop again.
+    end date reaches Jaspersoft Desktop within a day. This works even after the license has expired:
+    just start Jaspersoft Desktop again.
 - **removed computers**: a computer removed in the License portal stops using the license at its
-  next check.
+    next check.
 
 From 30 days before your license ends, the home screen shows how many days are left ("Your trial
 ends in 12 days"). If the license ends, or can no longer be used on this computer, Jaspersoft Desktop
@@ -155,7 +160,7 @@ workspace brings you back to the home screen, which asks for an activation.
 When you receive a license key during a trial:
 
 1. Open the [About dialog](#the-about-dialog) and click **Deactivate this computer…**, then
-   **Deactivate**. This ends the trial on this computer and brings back the activation screen.
+    **Deactivate**. This ends the trial on this computer and brings back the activation screen.
 2. Click **Use a license key**, enter the key, click **Activate with this key** and sign in.
 
 If the license was issued to the email address of your community account (see
@@ -177,11 +182,11 @@ date (and after it), Jaspersoft Desktop offers **Renew offline**: in the **About
 **License problem** dialog once the license has ended.
 
 1. Choose **Renew offline**, click **Save renewal request…** and save the renewal request file
-   (`.jslren`).
+    (`.jslren`).
 2. On a device with internet access, open it in the License portal under **Computer without
-   internet** and click **Get license file**.
+    internet** and click **Get license file**.
 3. Download the new `jaspersoft-desktop.jslic` and import it in Jaspersoft Desktop with
-   **Import license file**.
+    **Import license file**.
 
 Only the person who activated the computer can renew it.
 
@@ -219,23 +224,23 @@ are listed at the bottom, under **Licenses that have ended**.
 A card tells you, from top to bottom:
 
 - **What it is**: **Free trial**, **Extended trial**, or the name of the license you bought and, for
-  a company license, the company name.
+    a company license, the company name.
 - **Whether it works**, in the colored label at the top right:
 
-  | Label | What it means |
-  | --- | --- |
-  | **Ready to use** | The license works. |
-  | **Not started yet** | The license starts on a later date, shown on the card. |
-  | **Paused** | The license is suspended. Contact your license manager or Jaspersoft support. |
-  | **Ended** | The end date has passed. |
-  | **Cancelled** | The license was revoked. |
+    | Label | What it means |
+    | --- | --- |
+    | **Ready to use** | The license works. |
+    | **Not started yet** | The license starts on a later date, shown on the card. |
+    | **Paused** | The license is suspended. Contact your license manager or Jaspersoft support. |
+    | **Ended** | The end date has passed. |
+    | **Cancelled** | The license was revoked. |
 
 - **How long it lasts**: how many days are left (for example **23 days left**) and the date it
-  works until. The bar below empties as time goes by, and turns amber in the last 7 days.
+    works until. The bar below empties as time goes by, and turns amber in the last 7 days.
 - **Who can use it**: **Single user license** (only you), or **Team license** (see
-  [Team licenses](#team-licenses)).
+    [Team licenses](#team-licenses)).
 - **Your computers**: on how many computers you can use it, how many more you can add, and the
-  list of computers that use it (see below).
+    list of computers that use it (see below).
 - At the bottom, the last characters of the license key, if the license has one.
 
 If you have no license yet, the page explains how to start your free trial: open Jaspersoft
@@ -278,12 +283,12 @@ sees and removes only their own computers.
 many people are using it and how many seats are free. Click **See who** to open the license page:
 
 - the details of the license: validity dates, seats used, computers per seat, who it was
-  issued to, and its features;
+    issued to, and its features;
 - **Seats**: who holds a seat and since when. **Release seat** frees the seat for someone else and
-  deactivates all the computers of that person. Use it when someone leaves the team or no longer
-  needs Jaspersoft Desktop.
+    deactivates all the computers of that person. Use it when someone leaves the team or no longer
+    needs Jaspersoft Desktop.
 - **Computers**: every computer that uses the license, and whose it is. **Deactivate** frees that
-  computer, while its owner keeps their seat.
+    computer, while its owner keeps their seat.
 
 ![The license page of a team license: seats and computers](images/portal-license-details.png)
 

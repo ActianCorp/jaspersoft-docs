@@ -1,3 +1,8 @@
+---
+title: "Fonts and PDF"
+description: "A report names its fonts; the engine has to find them wherever the report runs: in the preview, when an application fills it, on JasperReports Server. A font that is only installed on your computer..."
+---
+
 # Fonts and PDF
 
 A report names its fonts; the engine has to find them wherever the report runs: in the preview,
@@ -10,8 +15,8 @@ everywhere, and above all in PDF.
 The **Name** of a text's font, on the **Text Field** or **Static Text** tab of **Properties**, lists:
 
 - the fonts of the **font extensions** the report can use: the fonts JasperReports includes
-  (**DejaVu Sans**, **DejaVu Serif**, **DejaVu Sans Mono**) and those in the libraries of the
-  workspace (see [Workspace settings](workspace-settings.md));
+    (**DejaVu Sans**, **DejaVu Serif**, **DejaVu Sans Mono**) and those in the libraries of the
+    workspace (see [Workspace settings](workspace-settings.md));
 - the fonts installed on this computer.
 
 The designer and the preview draw the text with the font the engine uses, so what you see is what
@@ -22,11 +27,11 @@ the PDF has, line breaks included.
 A font extension is a `.jar` (or `.zip`) holding font files and a description of them. With it:
 
 - the font travels with the report: an application, a server, a colleague's computer get it from
-  the extension, not from the fonts their system happens to have;
+    the extension, not from the fonts their system happens to have;
 - the PDF **embeds** it, so the document looks the same on any reader, and characters of any
-  language print;
+    language print;
 - the engine measures the text with the same font on every machine, so a text that fits here fits
-  there.
+    there.
 
 A font of the computer has none of this: the PDF names it without embedding it, a reader that does
 not have it shows another, and a server without it refuses the report, with an error such as
@@ -87,8 +92,8 @@ not all.
 
 - **An application** puts the `.jar` or `.zip` on its class path, with JasperReports.
 - **JasperReports Server** needs it too: its administrator adds it to the server (in the
-  `WEB-INF/lib` of the web application), and restarts it. Until then, a report that names the font
-  fails there, or prints with another font.
+    `WEB-INF/lib` of the web application), and restarts it. Until then, a report that names the font
+    fails there, or prints with another font.
 
 ## The PDF properties of a text
 

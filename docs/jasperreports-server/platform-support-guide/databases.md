@@ -15,250 +15,317 @@ The following table lists databases that are supported for:
 
 -   JasperReports® Web Studio Pro 10.1.0
 
-Database
-
-Version
-
-Type
-
-Commercial
-
-Bean
-
-Certified
-
-JNDI
-
-Certified
-
-Jaspersoft (Mondrian) Connection
-
-Certified
-
-XML/A Connection
-
-Certified
-
-Custom (e.g. Hibernate, XML, etc.)
-
-Certified
-
-MySQL
-
--   8.4
-
-<!-- -->
-
--   Data Source
--   Repository
-
-Certified
-
-
-
-Oracle RDBMS
-
--   19c
--   23ai
--   26ai
-
-<!-- -->
-
--   Data Source
--   Repository
-
-Certified
-
-
-
-PostgreSQL
-
--   14
--   15
--   16
--   17
-
-<!-- -->
-
--   Data Source
--   Repository
-
-Certified
-
-
-
-IBM DB2
-
--   11.5
-
-<!-- -->
-
--   Data Source
--   Repository
-
-Certified
-
-
-
-Microsoft SQL Server
-
--   2016
--   2017
--   2019
--   2022
-
-<!-- -->
-
--   Data Source
--   Repository
-
-Certified
-
-
-
-Microsoft SQL Azure
-
--   Latest
-
-Data Source
-
-Certified
-
-Snowflake
-
-Data Source
-
-Compatible
-
-Sybase ASE
-
--   15.7
-
-Data Source
-
-Compatible
-
-Sybase SQL Anywhere
-
--   17
-
-Data Source
-
-Compatible
-
-
-
-ElasticSearch<span class="jsd-footnote-ref">^1^</span> <span class="jsd-footnote">Refer to the JasperReports® Server Release Notes for limitations with ElasticSearch.</span>
-
--   8.12.1
-
-Data Source
-
-Certified
-
-Neo4j
-
--   4.0.4
-
-Data Source
-
-Certified
-
-Google BigQuery
-
-Data Source
-
-Certified
-
-TIBCO Data Virtualization
-
--   8.8.x
-
-Data Source
-
-Certified
-
-AWS Athena<span class="jsd-footnote-ref">^2^</span>
-
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th><p>Database</p></th>
+<th><p>Version</p></th>
+<th><p>Type</p></th>
+<th><p>Commercial</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Bean</p></td>
+<td></td>
+<td></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>JNDI</p></td>
+<td></td>
+<td></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Jaspersoft (Mondrian) Connection</p></td>
+<td></td>
+<td></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>XML/A Connection</p></td>
+<td></td>
+<td></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Custom (e.g. Hibernate, XML, etc.)</p></td>
+<td></td>
+<td></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>MySQL</p></td>
+<td><ul>
+<li>8.4</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+<li>Repository</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Oracle RDBMS</p></td>
+<td><ul>
+<li>19c</li>
+<li>23ai</li>
+<li>26ai</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+<li>Repository</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>PostgreSQL</p></td>
+<td><ul>
+<li>14</li>
+<li>15</li>
+<li>16</li>
+<li>17</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+<li>Repository</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>IBM DB2</p></td>
+<td><ul>
+<li>11.5</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+<li>Repository</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Microsoft SQL Server</p></td>
+<td><ul>
+<li>2016</li>
+<li>2017</li>
+<li>2019</li>
+<li>2022</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+<li>Repository</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Microsoft SQL Azure</p></td>
+<td><ul>
+<li>Latest</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Snowflake</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible</p></td>
+</tr>
+<tr>
+<td><p>Sybase ASE</p></td>
+<td><ul>
+<li>15.7</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible</p></td>
+</tr>
+<tr>
+<td><p>Sybase SQL Anywhere</p></td>
+<td><ul>
+<li>17</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible</p></td>
+</tr>
+<tr>
+<td><p>ElasticSearch<span class="jsd-footnote-ref">^1^</span> <span class="jsd-footnote">Refer to the JasperReports® Server Release Notes for limitations with ElasticSearch.</span></p></td>
+<td><ul>
+<li>8.12.1</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Neo4j</p></td>
+<td><ul>
+<li>4.0.4</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Google BigQuery</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>TIBCO Data Virtualization</p></td>
+<td><ul>
+<li>8.8.x</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>AWS Athena<span class="jsd-footnote-ref">^2^</span></p>
 <div class="jsd-footnote">
-
-Only databases under the default catalog (AwsDataCatalog) will be displayed.
-
-</div>
-
--   2
--   3
-
-Data Source
-
-Certified
-
-AWS Redshift
-
-Data Source
-
-Certified
-
-AWS RDS - PostgreSQL
-
--   12
--   13
--   14
--   15
-
-Data Source
-
-Certified
-
-REST API<span class="jsd-footnote-ref">^3^</span>
-
+<p>Only databases under the default catalog (AwsDataCatalog) will be displayed.</p>
+</div></td>
+<td><ul>
+<li>2</li>
+<li>3</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>AWS Redshift</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>AWS RDS - PostgreSQL</p></td>
+<td><ul>
+<li>12</li>
+<li>13</li>
+<li>14</li>
+<li>15</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Actian Ingres</p></td>
+<td><ul>
+<li>12.1</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>Actian Zen</p></td>
+<td><ul>
+<li>v17.0</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>HCL Informix</p></td>
+<td><ul>
+<li>15.0</li>
+</ul></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Certified</p></td>
+</tr>
+<tr>
+<td><p>REST API<span class="jsd-footnote-ref">^3^</span></p>
 <div class="jsd-footnote">
-
-It is Compatible and tested only for Progress driver.
-
-</div>
-
-Data Source
-
-Compatible
-
-Infobright
-
-
-
-Data Source
-
-Compatible only if the database complies to JDBC 2.1 and later standard.
-
-Vertica
-
-Data Source
-
-Compatible only if the database complies to JDBC 2.1 and later standard.
-
-Greenplum Database
-
-Data Source
-
-Compatible only if the database complies to JDBC 2.1 and later standard.
-
-Ingres Vectorwise
-
-Data Source
-
-Compatible only if the database complies to JDBC 2.1 and later standard.
-
-Netezza
-
-Data Source
-
-Compatible only if the database complies to JDBC 2.1 and later standard.
-
-Teradata
-
-Data Source
-
-Compatible only if the database complies to JDBC 2.1 and later standard.
+<p>It is Compatible and tested only for Progress driver.</p>
+</div></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible</p></td>
+</tr>
+<tr>
+<td><p>Infobright</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible only if the database complies to JDBC 2.1 and later standard.</p></td>
+</tr>
+<tr>
+<td><p>Vertica</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible only if the database complies to JDBC 2.1 and later standard.</p></td>
+</tr>
+<tr>
+<td><p>Greenplum Database</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible only if the database complies to JDBC 2.1 and later standard.</p></td>
+</tr>
+<tr>
+<td><p>Ingres Vectorwise</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible only if the database complies to JDBC 2.1 and later standard.</p></td>
+</tr>
+<tr>
+<td><p>Netezza</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible only if the database complies to JDBC 2.1 and later standard.</p></td>
+</tr>
+<tr>
+<td><p>Teradata</p></td>
+<td></td>
+<td><ul>
+<li>Data Source</li>
+</ul></td>
+<td><p>Compatible only if the database complies to JDBC 2.1 and later standard.</p></td>
+</tr>
+</tbody>
+</table>
 
 ## Big Data Certified Support (JDBC Drivers)
 
@@ -361,7 +428,7 @@ The following data sources are tested for Progress Driver replacement:
 
 -   Google BigQuery
 
--   Autonomous REST JDBC
+-   Autonomous REST JDBC
 
 For details, see the JasperReports Server Administrator Guide.
 

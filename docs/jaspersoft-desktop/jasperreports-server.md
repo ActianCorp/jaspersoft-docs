@@ -1,3 +1,8 @@
+---
+title: "Working with JasperReports Server"
+description: "Jaspersoft Desktop works on the repository of a JasperReports Server as it works on a folder: the server's folders and report units are in the explorer, a report opens in the designer, and saving..."
+---
+
 # Working with JasperReports Server
 
 Jaspersoft Desktop works on the repository of a JasperReports Server as it works on a folder: the
@@ -81,7 +86,7 @@ with the pencil. Choose its **Data Source**, and where its **Main Report** comes
 - **An empty report**, to design it from the start;
 - **An existing JRXML of the repository**;
 - **A JRXML file of this computer**: the way to bring to the server a report made in a folder, such
-  as one of the [tutorials](tutorial-totals.md).
+    as one of the [tutorials](tutorial-totals.md).
 
 Click **Create**: the unit is made, and its main JRXML opens in the designer.
 

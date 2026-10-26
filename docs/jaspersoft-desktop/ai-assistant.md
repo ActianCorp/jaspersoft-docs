@@ -1,3 +1,8 @@
+---
+title: "Designing reports with AI"
+description: "Jaspersoft Desktop can design reports with AI in two ways. This chapter explains the difference, how to set up each one, and how to connect the AI tools you may already use (Claude, ChatGPT, Codex,..."
+---
+
 # Designing reports with AI
 
 Jaspersoft Desktop can design reports with AI in two ways. This chapter explains the difference,
@@ -50,13 +55,13 @@ not want a second bill, use that application through MCP instead (see
 
 1. On the home screen, click **AI assistant…**.
 2. On the **Chat inside Jaspersoft Desktop** tab, turn on **Use the assistant built into this
-   application**.
+    application**.
 3. Choose the **Provider**.
 4. Paste your **API key**.
 5. Leave **Model** empty to use the provider's default model, or type the name of another model of
-   that provider. The field suggests a few.
+    that provider. The field suggests a few.
 6. Click **Test connection**. Jaspersoft Desktop asks the provider a short question with these
-   settings, and shows the answer, or what went wrong.
+    settings, and shows the answer, or what went wrong.
 7. Click **Save**. The change applies at once; nothing needs restarting.
 
 ![The "Chat inside Jaspersoft Desktop" tab with Anthropic set up and a successful connection test](images/ai-settings-provider.png)
@@ -89,46 +94,46 @@ What you need:
 
 - **Ollama**, installed from ollama.com.
 - **A model that can use tools**: the assistant changes reports by calling tools, and a model that
-  cannot gives answers but changes nothing. On ollama.com, such models carry the **tools** label;
-  `gpt-oss:20b` and `qwen3` are good starting points.
+    cannot gives answers but changes nothing. On ollama.com, such models carry the **tools** label;
+    `gpt-oss:20b` and `qwen3` are good starting points.
 - **Enough memory**: about 16 GB of RAM (or of video memory) for a model of 20 billion parameters,
-  more for larger ones.
+    more for larger ones.
 
 Use a model that runs on your computer. Models whose name ends in `-cloud` run on Ollama's servers,
 and are not private.
 
 1. Download the model. In a terminal:
 
-   ```
-   ollama pull gpt-oss:20b
-   ```
+    ```
+    ollama pull gpt-oss:20b
+    ```
 
 2. **Give the model a longer context.** The assistant sends long instructions and the list of its
-   tools with every question, and they do not fit in Ollama's default context of 4,096 tokens (the
-   default on computers with less than 24 GB of video memory). In the Ollama app, open
-   **Settings** and set **Context length** to at least 32k. If you start Ollama from a terminal
-   instead, start it with:
+    tools with every question, and they do not fit in Ollama's default context of 4,096 tokens (the
+    default on computers with less than 24 GB of video memory). In the Ollama app, open
+    **Settings** and set **Context length** to at least 32k. If you start Ollama from a terminal
+    instead, start it with:
 
-   ```
-   OLLAMA_CONTEXT_LENGTH=32768 ollama serve
-   ```
+    ```
+    OLLAMA_CONTEXT_LENGTH=32768 ollama serve
+    ```
 
 3. In Jaspersoft Desktop, open the AI assistant settings and, on the **Chat inside Jaspersoft
-   Desktop** tab, set:
+    Desktop** tab, set:
 
-   | Setting | Value |
-   | --- | --- |
-   | **Provider** | OpenAI (Ollama speaks the same API) |
-   | **API key** | Any text, for example `ollama`. Ollama does not check it, but a provider without a key counts as not set up. |
-   | **Model** | The model's name as `ollama list` shows it, for example `gpt-oss:20b` |
-   | **Reasoning effort** | **None**, unless you know the model takes the setting |
-   | **Advanced options › API URL** | `http://localhost:11434/v1` |
-   | **Advanced options › API** | Chat Completions |
-   | **Advanced options › Request timeout** | 600 seconds: the first answer waits for the model to load |
-   | **Advanced options › Attachments** | Turn off images, unless the model can read them |
+    | Setting | Value |
+    | --- | --- |
+    | **Provider** | OpenAI (Ollama speaks the same API) |
+    | **API key** | Any text, for example `ollama`. Ollama does not check it, but a provider without a key counts as not set up. |
+    | **Model** | The model's name as `ollama list` shows it, for example `gpt-oss:20b` |
+    | **Reasoning effort** | **None**, unless you know the model takes the setting |
+    | **Advanced options › API URL** | `http://localhost:11434/v1` |
+    | **Advanced options › API** | Chat Completions |
+    | **Advanced options › Request timeout** | 600 seconds: the first answer waits for the model to load |
+    | **Advanced options › Attachments** | Turn off images, unless the model can read them |
 
 4. Click **Test connection**, then **Save**. The test result says "OpenAI answered…": that is the
-   API it used; the answer came from your model.
+    API it used; the answer came from your model.
 
 Ollama must be running while you use the assistant. If the assistant answers but never changes the
 report, the model cannot use tools or its context is too short: try another model, or a longer
@@ -153,7 +158,7 @@ Before it changes a report, the assistant shows what it is about to do and waits
 
 - In **Manual** mode (the default), each change waits for **Apply** or **Reject**.
 - In **Edit automatically** mode, changes to the report on show are made without asking. Each change
-  is a single undo step, so **Edit › Undo** takes it back.
+    is a single undo step, so **Edit › Undo** takes it back.
 
 Writing or replacing a file of the workspace always asks first, in both modes.
 
@@ -208,7 +213,7 @@ say that none is open.
 ### Claude Desktop
 
 1. On the **Chat in another app (MCP)** tab, under **Claude Desktop**, click **Install in Claude
-   Desktop…**.
+    Desktop…**.
 2. Claude Desktop opens and asks whether to install the **Jaspersoft Desktop** extension. Install it.
 
 Claude Desktop starts the extension itself when it needs it. Install it again after Jaspersoft
@@ -221,12 +226,12 @@ address on the internet. So Jaspersoft Desktop serves the MCP server over HTTP, 
 it reachable.
 
 1. On the **ChatGPT** tab, turn on **Serve over HTTP** and click **Save**. Open the dialog again to
-   see the address of the endpoint, `http://127.0.0.1:18089/mcp/…`.
+    see the address of the endpoint, `http://127.0.0.1:18089/mcp/…`.
 2. Start a tunnel to that port, for example `ngrok http 18089`, and note the public address it gives
-   you.
+    you.
 3. In ChatGPT, open **Settings**, turn on **Developer mode**, and add a connector. Its URL is the
-   public address of the tunnel followed by the path of the endpoint, from `/mcp/` to the end. No
-   authentication.
+    public address of the tunnel followed by the path of the endpoint, from `/mcp/` to the end. No
+    authentication.
 4. Start a chat with the connector enabled.
 
 **The address contains a secret, and it is the only thing that protects the tunnel:** whoever has it
@@ -238,10 +243,10 @@ when you are done.
 Every other application below starts the MCP server itself, on your computer. You need two things:
 
 - **The path of the server**: on the **Other MCP clients** tab, copy it from the command shown there,
-  `node "…/mcp/server/index.mjs"`. On macOS it is usually
-  `/Applications/Jaspersoft Desktop.app/Contents/Resources/mcp/server/index.mjs`.
+    `node "…/mcp/server/index.mjs"`. On macOS it is usually
+    `/Applications/Jaspersoft Desktop.app/Contents/Resources/mcp/server/index.mjs`.
 - **Node.js 20 or later**, installed on your computer (nodejs.org): the server runs with it. Check
-  with `node --version` in a terminal.
+    with `node --version` in a terminal.
 
 ![The "Other MCP clients" tab with the command and the JSON configuration of the server](images/ai-mcp-other-clients.png)
 
@@ -295,7 +300,7 @@ url = "http://127.0.0.1:18089/mcp/<secret>"
 #### Antigravity
 
 1. In the agent panel, click **…** at the top, then **MCP Servers**, **Manage MCP Servers** and
-   **View raw config**. This opens `mcp_config.json` (`~/.gemini/config/mcp_config.json`).
+    **View raw config**. This opens `mcp_config.json` (`~/.gemini/config/mcp_config.json`).
 2. Add the server under `mcpServers`:
 
 ```json
@@ -314,7 +319,7 @@ Over HTTP, use `"serverUrl": "http://127.0.0.1:18089/mcp/<secret>"` in place of 
 #### VS Code (GitHub Copilot)
 
 1. In the Command Palette (**Ctrl+Shift+P**, on macOS **⌘⇧P**), run **MCP: Open User
-   Configuration**.
+    Configuration**.
 2. Add the server under `servers` (VS Code's key is `servers`, not `mcpServers`):
 
 ```json

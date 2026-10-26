@@ -2,7 +2,7 @@
 title: Jaspersoft Desktop User Guide
 description: Design, run and publish JRXML reports from a folder on your own computer.
 hide:
-  - footer
+- footer
 ---
 
 # Jaspersoft Desktop User Guide

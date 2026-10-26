@@ -1,3 +1,8 @@
+---
+title: "Workspace settings"
+description: "The settings of a workspace say how its reports are run: the libraries they need (JDBC drivers, scriptlets, fonts, extensions of JasperReports) and the properties of the report engine. They apply to..."
+---
+
 # Workspace settings
 
 The settings of a workspace say how its reports are run: the libraries they need (JDBC drivers,
@@ -18,7 +23,7 @@ administrator installed on it.
 **Libraries** are the `.jar` and `.zip` files the reports need when they run, for example:
 
 - a **JDBC driver**, for a data adapter connecting to a database (see
-  [Working with data adapters](data-adapters.md));
+    [Working with data adapters](data-adapters.md));
 - **custom code** used by the reports: scriptlets, functions, data sources;
 - **fonts** packaged as a JasperReports font extension;
 - other **extensions** of JasperReports, such as custom components.

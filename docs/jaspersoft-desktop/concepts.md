@@ -1,3 +1,8 @@
+---
+title: "How a report works"
+description: "A few ideas explain almost everything you see in the report designer. This page is the short version; the tutorials then put them to work, and the JasperReports documentation has every detail."
+---
+
 # How a report works
 
 A few ideas explain almost everything you see in the report designer. This page is the short
@@ -15,9 +20,9 @@ reports can use the same one.
 The **dataset** is what the report does with that data. It has:
 
 - a **query**, for data that needs one: SQL for a database, an expression for JSON or XML. A CSV
-  or Excel file needs none: every row is a record;
+    or Excel file needs none: every row is a record;
 - a **filter expression**, which keeps only some of the records (see
-  [A filter with parameters](tutorial-parameters.md));
+    [A filter with parameters](tutorial-parameters.md));
 - the **fields**, one per column of the data: the values of the record being printed;
 - the **variables**, values the report computes as it goes: a total, a count, an average;
 - the **parameters**, values given from outside when the report runs.
@@ -36,7 +41,7 @@ does not depend on it. The JasperReports engine fills a report from one of two t
 
 - a **data source** (a `JRDataSource`), an object that hands the records over one by one;
 - a **JDBC connection** (a `java.sql.Connection`), when the report has an SQL query: the engine
-  runs the query on it and reads the records from the result.
+    runs the query on it and reads the records from the result.
 
 A data adapter does exactly this behind the scenes. From the settings you gave it, it opens the
 connection or creates the data source, and gives it to the engine.
@@ -158,10 +163,10 @@ subdataset is simpler: one file, nothing to pass.
 The `.jrxml` file you edit is the report's **design**. A document comes out of it in three steps:
 
 1. **Compile.** The engine checks the design and turns its expressions into code. The result is
-   the compiled report, saved as a `.jasper` file. The `.jrxml` is the source; the `.jasper` is
-   what runs.
+    the compiled report, saved as a `.jasper` file. The `.jrxml` is the source; the `.jasper` is
+    what runs.
 2. **Fill.** The engine fills the compiled report with the data and the parameters. The result is
-   the finished document, still in no particular format.
+    the finished document, still in no particular format.
 3. **Export.** The document is written out as PDF, Excel, Word, HTML…
 
 The **Preview** does all three for you, each time you look at the report, without leaving any
@@ -188,16 +193,16 @@ the same folder as the `.jrxml`, with the same name: `Sales by Country.jrxml` gi
 Some things to know:
 
 - **It compiles what you see.** The design in the designer is compiled, unsaved changes included.
-  Save the report as well, so the `.jrxml` and the `.jasper` agree.
+    Save the report as well, so the `.jrxml` and the `.jasper` agree.
 - **Compile again after each change.** The `.jasper` does not follow the `.jrxml` by itself.
 - **Each report is compiled on its own.** A master and its subreports are separate reports: compile
-  each of them.
+    each of them.
 - **A `.jasper` belongs to a version of JasperReports.** It is compiled by the JasperReports 7 that
-  Jaspersoft Desktop includes, and an application should run it with the same version. An
-  application with another version can compile the `.jrxml` itself, when it starts:
-  `JasperCompileManager.compileReport("Sales by Country.jrxml")`.
+    Jaspersoft Desktop includes, and an application should run it with the same version. An
+    application with another version can compile the `.jrxml` itself, when it starts:
+    `JasperCompileManager.compileReport("Sales by Country.jrxml")`.
 - The button is there in local folders. On JasperReports Server, the server compiles the reports
-  it runs: you publish the `.jrxml`.
+    it runs: you publish the `.jrxml`.
 
 ## Going further
 

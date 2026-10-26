@@ -1,3 +1,8 @@
+---
+title: "Tutorial: working with the AI assistant"
+description: "The assistant reads the report you have on show, and the workspace around it: you do not need to explain which report, or paste anything."
+---
+
 # Tutorial: working with the AI assistant
 
 **What you do:** ask the assistant for two changes to a report, check them, take one back, and ask
@@ -9,14 +14,14 @@ read a proposal before applying it, and how to undo what it did. **Time:** about
 ## Before you start
 
 - The assistant inside Jaspersoft Desktop must be set up with your model service (Anthropic,
-  OpenAI, Google, Ollama…): see [Designing reports with AI](ai-assistant.md). An assistant in
-  another application, through MCP, works on the same report the same way, but you chat with it
-  there.
+    OpenAI, Google, Ollama…): see [Designing reports with AI](ai-assistant.md). An assistant in
+    another application, through MCP, works on the same report the same way, but you chat with it
+    there.
 - Open `Tutorials/Sales by Country.jrxml` in the **Samples** workspace (see
-  [Totals and grouping](tutorial-totals.md#before-you-start)).
+    [Totals and grouping](tutorial-totals.md#before-you-start)).
 - Show the assistant's column: **Show AI Assistant**, the button with the stars at the right of the
-  title bar. To give the page more room, hide the explorer: **Hide Explorer**, the first button of
-  the title bar.
+    title bar. To give the page more room, hide the explorer: **Hide Explorer**, the first button of
+    the title bar.
 
 The assistant reads the report you have on show, and the workspace around it: you do not need to
 explain which report, or paste anything.
@@ -78,12 +83,12 @@ Save the report to keep the two changes.
 ## Asking well
 
 - **Name what you see.** "The amounts in the detail band", "the title", "the second column of the
-  table": the assistant reads the same report you see.
+    table": the assistant reads the same report you see.
 - **One thing at a time** is easier to check than five in one request.
 - **Ask it to check.** "Does this report compile?", "Why does the preview fail?": it can run the
-  report's check and read the error.
+    report's check and read the error.
 - **It knows the data.** It can read the fields of a data adapter, write a query, add fields,
-  parameters and variables, make a chart or a table.
+    parameters and variables, make a chart or a table.
 
 ## Manual or automatic
 

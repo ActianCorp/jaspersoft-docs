@@ -1822,6 +1822,35 @@ nav = [
       { "About This Guide" = "cloud/azure-user-guide/bookmatter/about-bookname.md" },
     ] },
   ] },
+  { "Jaspersoft Desktop" = [
+    { "Jaspersoft Desktop User Guide" = "jaspersoft-desktop/index.md" },
+    { "Getting started" = [
+      { "Requirements" = "jaspersoft-desktop/requirements.md" },
+      { "Installation" = "jaspersoft-desktop/installation.md" },
+      { "Activating Jaspersoft Desktop" = "jaspersoft-desktop/activation-and-licensing.md" },
+      { "Coming from Jaspersoft Studio" = "jaspersoft-desktop/coming-from-studio.md" },
+    ] },
+    { "Learning" = [
+      { "Working with workspaces" = "jaspersoft-desktop/workspaces.md" },
+      { "Creating your first report" = "jaspersoft-desktop/first-report.md" },
+      { "How a report works" = "jaspersoft-desktop/concepts.md" },
+      { "Tutorial: totals and grouping" = "jaspersoft-desktop/tutorial-totals.md" },
+      { "Tutorial: a filter with parameters" = "jaspersoft-desktop/tutorial-parameters.md" },
+      { "Tutorial: a chart and a table" = "jaspersoft-desktop/tutorial-chart-table.md" },
+      { "Tutorial: orders and their lines, with a subreport" = "jaspersoft-desktop/tutorial-subreport.md" },
+      { "Tutorial: working with the AI assistant" = "jaspersoft-desktop/tutorial-ai.md" },
+    ] },
+    { "Reference" = [
+      { "Working with data adapters" = "jaspersoft-desktop/data-adapters.md" },
+      { "The sample database" = "jaspersoft-desktop/sample-database.md" },
+      { "Workspace settings" = "jaspersoft-desktop/workspace-settings.md" },
+      { "Working with JasperReports Server" = "jaspersoft-desktop/jasperreports-server.md" },
+      { "Designing reports with AI" = "jaspersoft-desktop/ai-assistant.md" },
+      { "Fonts and PDF" = "jaspersoft-desktop/fonts-and-pdf.md" },
+      { "Custom visualization components" = "jaspersoft-desktop/custom-visualization-components.md" },
+      { "When something goes wrong" = "jaspersoft-desktop/troubleshooting.md" },
+    ] },
+  ] },
 # END GENERATED NAV
 ]
 

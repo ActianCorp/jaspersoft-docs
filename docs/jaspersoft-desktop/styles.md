@@ -1,3 +1,8 @@
+---
+title: "Working with style templates"
+description: "A style template is a file of named styles that reports apply by name: the styles of JasperReports. A style holds what several fields should look alike in — the font, the colours, the borders, the ..."
+---
+
 # Working with style templates
 
 A **style template** is a file of named styles that reports apply by name: the styles of

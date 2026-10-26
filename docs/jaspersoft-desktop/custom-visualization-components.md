@@ -1,3 +1,8 @@
+---
+title: "Custom visualization components"
+description: "A custom visualization component draws what no element of the palette draws: a chart of a kind of its own, a diagram, a map, anything a web page can show. It is a small JavaScript program; the report..."
+---
+
 # Custom visualization components
 
 A **custom visualization component** draws what no element of the palette draws: a chart of a kind
@@ -20,9 +25,9 @@ The assistant:
 
 1. writes the component, in a folder of the workspace, `/components/<name>`;
 2. installs the libraries it needs (for example D3 or ECharts): this one it **asks** you first,
-   since they are downloaded from the internet onto your computer;
+    since they are downloaded from the internet onto your computer;
 3. **builds** it, and **draws** it once with sample data to see the result, correcting what does
-   not look right;
+    not look right;
 4. **proposes** to add it to the report, with the data it reads from the report's dataset.
 
 When you apply the proposal, the component is on the page as a **CVC** element. Run the preview to
@@ -64,7 +69,7 @@ workspace: build them there, then put their built files (`dist/`) on the server.
 ## When it does not draw
 
 - **Build it again**: right-click the folder, **Build Component**. The assistant's build tells what
-  failed.
+    failed.
 - **Ask the assistant to test it**: it draws the component and sees what you see.
 - **The data**: a component draws nothing when its data set is empty; check the dataset it reads,
-  in the element's **Properties**.
+    in the element's **Properties**.

@@ -1,3 +1,8 @@
+---
+title: "Working with data adapters"
+description: "A data adapter tells a report where its data comes from and how to read it: a CSV or Excel file, a JSON or XML document, a database, a JasperReports Server. It is a small file of the workspace,..."
+---
+
 # Working with data adapters
 
 A **data adapter** tells a report where its data comes from and how to read it: a CSV or Excel
@@ -102,7 +107,7 @@ in it.
 
 - **Empty Data** and **Random Data**: only the **Number Of Records** (10 unless you change it).
 - **JasperReports Server**: the **Server** address, **Organization**, **Username**, **Password**,
-  and the **Datasource Path** of a data source in the server's repository.
+    and the **Datasource Path** of a data source in the server's repository.
 - **Mondrian**: the **Catalog URI** of the schema, and the database it reads, as for JDBC.
 
 ## Using a data adapter in a report

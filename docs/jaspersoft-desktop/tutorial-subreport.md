@@ -85,7 +85,8 @@ it. This one needs only the lines.
     | `UNIT_PRICE` | `335` | `95` |
     | `AMOUNT` | `435` | `100` |
 
-   each with **Position Y** `0` and **Height** `20`.
+    each with **Position Y** `0` and **Height** `20`.
+
 4. Select **Detail 1** in the **Outline** and set its **Height** to `20`: one line per order line.
 
 ![The subreport: four fields in the Detail band, nothing else](images/tut-sub-lines.png)
@@ -95,7 +96,7 @@ Save it as `Order Lines.jrxml`, at the top of the workspace.
 ## 4. The master: the orders
 
 1. Choose **Report** in the **+** menu again, with the template **Simple Blue**, the data adapter
-   `/Sample Database.jrdax` and the query:
+    `/Sample Database.jrdax` and the query:
 
     ```sql
     SELECT O.ORDER_ID, O.ORDER_DATE, O.STATUS
@@ -105,7 +106,8 @@ Save it as `Order Lines.jrxml`, at the top of the workspace.
     ORDER BY O.ORDER_DATE
     ```
 
-   Choose the three fields, then **Finish**.
+    Choose the three fields, then **Finish**.
+
 2. Set the template's two texts: **TITLE** to `Orders` and **Add a description here** to
     `Linden Design Store` (click each, then **Text** on the **Static Text** tab of **Properties**).
 3. Select `$F{ORDER_DATE}` and, on its **Text Field** tab, set **Pattern** to `d MMM yyyy`: the date

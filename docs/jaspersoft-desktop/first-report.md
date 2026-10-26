@@ -28,7 +28,7 @@ A report does not read a CSV file directly: it reads it through a **data adapter
 that says where the data is and how to read it. The same data adapter can serve many reports.
 
 1. Click **New Data Adapter** on the empty page of the workspace, or choose **Data Adapter** in the
-   explorer's **+** menu. A new data adapter opens in a tab.
+    explorer's **+** menu. A new data adapter opens in a tab.
 2. In the list on the left, choose **CSV**.
 3. Fill in the form:
     - **Name**: a name for you, for example `Sales`.

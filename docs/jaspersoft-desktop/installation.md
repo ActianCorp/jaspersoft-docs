@@ -64,9 +64,10 @@ If Windows SmartScreen stops the installer, click **More info**, then **Run anyw
     Replace `<version>` and `x64` as in the name of the folder of step 1 (`arm64` for an ARM
     computer).
 
-   Without them Jaspersoft Desktop does not start: the terminal says `The SUID sandbox helper
-   binary was found, but is not configured correctly`, and no window opens. Do this again for
-   each new version, in its new folder.
+    Without them Jaspersoft Desktop does not start: the terminal says `The SUID sandbox helper
+    binary was found, but is not configured correctly`, and no window opens. Do this again for
+    each new version, in its new folder.
+
 3. Start `jaspersoft-desktop` in that folder: from a terminal, or with a double click in your
     file manager. Rename the folder if you like — `~/Applications/Jaspersoft Desktop` reads
     better than the name of a download. A later version comes as a folder of its own, to unpack

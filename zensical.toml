@@ -1846,6 +1846,7 @@ nav = [
       { "Workspace settings" = "jaspersoft-desktop/workspace-settings.md" },
       { "Working with JasperReports Server" = "jaspersoft-desktop/jasperreports-server.md" },
       { "Designing reports with AI" = "jaspersoft-desktop/ai-assistant.md" },
+      { "Working with style templates" = "jaspersoft-desktop/styles.md" },
       { "Fonts and PDF" = "jaspersoft-desktop/fonts-and-pdf.md" },
       { "Custom visualization components" = "jaspersoft-desktop/custom-visualization-components.md" },
       { "When something goes wrong" = "jaspersoft-desktop/troubleshooting.md" },

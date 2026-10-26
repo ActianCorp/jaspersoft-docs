@@ -19,7 +19,7 @@ You work in the **Samples** workspace, on the sample database (see
 
 ## 1. The subreport: the lines of an order
 
-1. Click **New Report**, in the explorer's **+** menu. Choose **Blank A4**, then **Next**.
+1. Choose **Report** in the explorer's **+** menu. Choose **Blank A4**, then **Next**.
 2. In **Data Source**, type `/Sample Database.jrdax`, and the query of the lines of one order,
    12441, to try it:
 
@@ -89,7 +89,7 @@ Save it as `Order Lines.jrxml`, at the top of the workspace.
 
 ## 4. The master: the orders
 
-1. Click **New Report** again, with the template **Simple Blue**, the data adapter
+1. Choose **Report** in the **+** menu again, with the template **Simple Blue**, the data adapter
    `/Sample Database.jrdax` and the query:
 
    ```sql

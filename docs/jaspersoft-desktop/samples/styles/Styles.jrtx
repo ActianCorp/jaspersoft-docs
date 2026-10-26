@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperTemplate>
+	<style name="Base" default="true" fontName="DejaVu Sans" fontSize="10.0" forecolor="#333333">
+		<paragraph lineSpacing="Single"/>
+	</style>
+	<style name="Title" style="Base" fontSize="22.0" bold="true" forecolor="#062E79">
+		<box bottomPadding="12"/>
+	</style>
+	<style name="Column Header" style="Base" mode="Opaque" backcolor="#062E79" forecolor="#FFFFFF" bold="true" vTextAlign="Middle">
+		<box topPadding="4" bottomPadding="4" leftPadding="6" rightPadding="6"/>
+	</style>
+	<style name="Cell" style="Base">
+		<box topPadding="4" bottomPadding="4" leftPadding="6" rightPadding="6">
+			<bottomPen lineWidth="0.5" lineColor="#D8D8D8"/>
+		</box>
+	</style>
+	<style name="Amount" style="Cell" hTextAlign="Right" pattern="#,##0.00"/>
+	<style name="Total" style="Base" bold="true" fontSize="11.0" forecolor="#062E79">
+		<box topPadding="8">
+			<topPen lineWidth="1.0" lineColor="#062E79"/>
+		</box>
+	</style>
+</jasperTemplate>

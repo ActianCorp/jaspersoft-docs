@@ -71,7 +71,7 @@ Click **Save** to write the unit to the server, **Close** to leave it as it is.
 
 ## A new report unit
 
-Right-click the folder the unit goes in and choose **New › New Report Unit…**.
+Right-click the folder the unit goes in and choose **New › Report Unit…**.
 
 ![A new report unit in the folder Reports](images/jrs-new-unit.png)
 

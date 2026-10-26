@@ -47,6 +47,7 @@ Applies to Jaspersoft Desktop **10.1.1**.
 - [Workspace settings](workspace-settings.md)
 - [Working with JasperReports Server](jasperreports-server.md)
 - [Designing reports with AI](ai-assistant.md)
+- [Working with style templates](styles.md)
 - [Fonts and PDF](fonts-and-pdf.md)
 - [Custom visualization components](custom-visualization-components.md)
 - [When something goes wrong](troubleshooting.md)

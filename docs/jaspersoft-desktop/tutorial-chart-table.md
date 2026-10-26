@@ -20,7 +20,7 @@ explains them in a few lines.
 
 ## 1. A report on an SQL query
 
-1. Click **New Report**, in the explorer's **+** menu.
+1. Choose **Report** in the explorer's **+** menu.
 2. Choose the template **Simple Blue**, then **Next**.
 3. In **Data Source**, type `/Sample Database.jrdax` (or pick it with the search button). The
    editor of the query opens below it. Type:

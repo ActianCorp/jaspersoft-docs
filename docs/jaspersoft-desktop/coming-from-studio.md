@@ -85,10 +85,6 @@ Server runs them in its commercial editions.
   [Working with data adapters](data-adapters.md). A data source type of your own, added to
   Jaspersoft Studio by a jar, is not among them yet: a report using one opens, but its data cannot
   be read here.
-- **A designer for style templates (`.jrtx`).** A style template can be used by a report as it is,
-  and edited by hand: it opens in the text editor, and the styles it holds are applied in the
-  designer and in the preview. There is no page yet to design them visually: see
-  [The file types of the workspace](workspaces.md#file-types).
 - **A wizard for font extensions.** Make them by hand: see
   [Fonts and PDF](fonts-and-pdf.md#making-a-font-extension).
 - **A visual tool to tag elements for accessible PDF** (PDF tags, a JasperReports Pro feature).

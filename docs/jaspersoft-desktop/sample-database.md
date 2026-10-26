@@ -5,14 +5,18 @@ Trading**, an invented wholesaler of goods for the home and the garden. It sells
 countries from six offices, and holds three years of orders, 2023 to 2025. Every name in it is made
 up.
 
-It is there as soon as Jaspersoft Desktop starts: there is nothing to install, no server to run, no
-file to look for. It can only be read: a report cannot change it.
+It comes with the **Samples** workspace: there is nothing to install and no server to run. It can
+only be read: a report cannot change it.
 
 ## Connecting to it
 
 The **Samples** workspace (home screen, **Samples and tutorials**) has its data adapter ready,
-`Sample Database.jrdax`. To use the database in another workspace, create a **JDBC** data adapter
-(see [Working with data adapters](data-adapters.md)) with:
+`Sample Database.jrdax`. The database and its driver are two libraries of that workspace, in its
+`JR-INF/lib` folder: `hsqldb-<version>.jar` and `sample-database.jar`.
+
+To use the database in another workspace, add those two files to it in **Settings › Libraries**
+(see [Workspace settings](workspace-settings.md)), then create a **JDBC** data adapter (see
+[Working with data adapters](data-adapters.md)) with:
 
 | Setting | Value |
 | --- | --- |
@@ -21,8 +25,8 @@ The **Samples** workspace (home screen, **Samples and tutorials**) has its data 
 | **Username** | `SA` |
 | **Password** | empty |
 
-The database works only inside Jaspersoft Desktop: the URL names a resource of the application,
-not a file or a server another program could reach.
+The URL names a resource inside `sample-database.jar`, not a file or a server: the database is
+reached only by the reports of a workspace that has that library.
 
 ## Its tables
 

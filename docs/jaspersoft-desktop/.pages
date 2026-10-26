@@ -26,6 +26,7 @@ nav:
         - workspace-settings.md
         - jasperreports-server.md
         - ai-assistant.md
+        - styles.md
         - fonts-and-pdf.md
         - custom-visualization-components.md
         - troubleshooting.md

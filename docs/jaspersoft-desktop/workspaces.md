@@ -64,6 +64,7 @@ Right-click a file or a folder for more:
 | --- | --- |
 | **New ›** | A new report, book or data adapter in that folder (on a folder). |
 | **New Folder**, **Import File**, **Import Folder** | As in the **+** menu, in that folder. |
+| **Cut**, **Copy**, **Paste** | Moves or copies files and folders into another folder: cut or copy them, then paste on the folder (or on a file in it). |
 | **Duplicate** | A copy next to the original. |
 | **Reveal in Finder** (macOS), **Reveal in File Explorer** (Windows), **Open Containing Folder** (Linux) | Shows the file in the file manager of your system. |
 | **Copy Path**, **Copy Relative Path** | The path of the file on your computer, or within the workspace (`/data/sales.csv`). |
@@ -71,12 +72,30 @@ Right-click a file or a folder for more:
 | **Delete** | Deletes the file or the folder, everything in it included, after asking. It does not go to the trash. |
 | **Refresh** | Reads the folder again (on a folder). |
 
-To **move** files, drag them onto another folder. To work on several at once, select them with
-**⌘** or **Ctrl**+click and **Shift**+click: you can then copy their paths, delete them, or drag
-them together.
+To **move** files, drag them onto another folder, or cut and paste them. To work on several at
+once, select them with **⌘** or **Ctrl**+click and **Shift**+click: you can then cut or copy them,
+copy their paths, delete them, or drag them together.
 
-New documents created with **New Report** or **New Data Adapter** open at once in a tab named
-`My Report.jrxml` or `My Data Adapter.jrdax`. Nothing is written to the folder until you save
+Files and folders copied in Finder or File Explorer can be pasted into the explorer too: click the
+folder and press **⌘V** (macOS) or **Ctrl+V** (Windows, Linux).
+
+When something with the same name is already in the folder, you are asked what to do: **Replace**
+it, **Keep Both** (the copy gets a number, `sales 1.jrxml`) or **Skip** it. Tick the box to give
+the same answer for the other files of that paste. A folder is never replaced this way.
+
+The menu shows the keyboard shortcut of each command. They work when the explorer has the focus
+(click in it first):
+
+| Command | macOS | Windows, Linux |
+| --- | --- | --- |
+| **Cut**, **Copy**, **Paste** | ⌘X, ⌘C, ⌘V | Ctrl+X, Ctrl+C, Ctrl+V |
+| **Copy Path** | ⌥⌘C | Shift+Alt+C |
+| **Reveal in Finder**, **Reveal in File Explorer**, **Open Containing Folder** | ⌥⌘R | Shift+Alt+R |
+| **Rename** | Return | F2 |
+| **Delete** | ⌘Delete | Delete |
+
+New documents, a **Report** or a **Data Adapter** made from the **+** menu, open at once in a tab
+named `My Report.jrxml` or `My Data Adapter.jrdax`. Nothing is written to the folder until you save
 them; then you can rename them in the explorer.
 
 ## Finding a file
@@ -153,7 +172,8 @@ something goes wrong.
 | --- | --- |
 | `.jrxml` reports and `.jrtpl` templates | The report designer |
 | `.jrdax` data adapters | The data adapter editor (see [Working with data adapters](data-adapters.md)) |
-| `.jrtx` style templates, CSV, JSON, XML, HTML, CSS, JavaScript, properties, text | A text editor |
+| `.jrtx` style templates | The style template editor (see [Working with style templates](styles.md)) |
+| CSV, JSON, XML, HTML, CSS, JavaScript, properties, text | A text editor |
 | PNG, JPEG, GIF, SVG, BMP, WebP images | An image viewer |
 | `.jasper` compiled reports | Only their information: they are produced by the engine, not edited |
 

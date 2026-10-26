@@ -6,8 +6,8 @@ workspace, ending in `.jrdax`, that any number of reports can use.
 
 ## Creating a data adapter
 
-Click **New Data Adapter**: on the empty page of the workspace, in the explorer's **+** menu, or
-in the **New** menu of a folder (right-click it). A new data adapter opens in a tab, named
+Click **New Data Adapter** on the empty page of the workspace, or choose **Data Adapter** in the
+explorer's **+** menu or in the **New** menu of a folder (right-click it). A new data adapter opens in a tab, named
 `My Data Adapter.jrdax` until you save it.
 
 Choose the kind of data in the list on the left, and fill in the form on the right.
@@ -85,9 +85,10 @@ The **Properties** tab sets **Auto Commit**, **Read Only**, **Transaction Isolat
 property of the driver.
 
 **The JDBC driver.** Jaspersoft Desktop includes the drivers of PostgreSQL and MariaDB (which also
-connects to MySQL), and of HSQLDB, for the sample database. For another database, download its JDBC
-driver (a `.jar` file) from its vendor and add it to the workspace in **Settings › Libraries** (see
-[Workspace settings](workspace-settings.md)); the reports of the workspace then find it.
+connects to MySQL); the Samples workspace has the one of HSQLDB, for the sample database. For
+another database, download its JDBC driver (a `.jar` file) from its vendor and add it to the
+workspace in **Settings › Libraries** (see [Workspace settings](workspace-settings.md)); the reports
+of the workspace then find it.
 
 **No database at hand?** Jaspersoft Desktop includes one to try SQL on, with a data adapter ready
 in the Samples workspace: see [The sample database](sample-database.md).

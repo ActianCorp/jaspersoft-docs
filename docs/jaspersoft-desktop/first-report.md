@@ -22,8 +22,8 @@ menu.
 A report does not read a CSV file directly: it reads it through a **data adapter**, a small file
 that says where the data is and how to read it. The same data adapter can serve many reports.
 
-1. Click **New Data Adapter** (on the empty page of the workspace, or in the explorer's **+**
-   menu). A new data adapter opens in a tab.
+1. Click **New Data Adapter** on the empty page of the workspace, or choose **Data Adapter** in the
+   explorer's **+** menu. A new data adapter opens in a tab.
 2. In the list on the left, choose **CSV**.
 3. Fill in the form:
    - **Name**: a name for you, for example `Sales`.
@@ -44,8 +44,8 @@ data.
 
 ## 2. Create the report with the Report Wizard
 
-Click **New Report** (in the explorer's **+** menu, or on the empty page of the workspace). A new
-report opens, and the **Report Wizard** starts.
+Choose **Report** in the explorer's **+** menu (or click **New Report** on the empty page of the
+workspace). A new report opens, and the **Report Wizard** starts.
 
 **Choose a template.** Templates give the report its look: pick one, for example **Simple Blue**.
 **Print Ready Reports** are laid out for printing and PDF, **Web Interactive Reports** are built

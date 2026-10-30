@@ -26,7 +26,7 @@ Desktop, you need a model service and an API key (see
 [Chatting inside Jaspersoft Desktop](#chatting-inside-jaspersoft-desktop)).
 
 You can use either way, or both. Both are set up in the **AI assistant** settings: on the home
-screen, click **AI assistant…**.
+screen, click **Set up AI Assistant…**.
 
 ![The AI assistant settings, with the tabs "Chat inside Jaspersoft Desktop" and "Chat in another app (MCP)"](images/ai-settings-overview.png)
 
@@ -53,7 +53,7 @@ not want a second bill, use that application through MCP instead (see
 
 ### Setting it up
 
-1. On the home screen, click **AI assistant…**.
+1. On the home screen, click **Set up AI Assistant…**.
 2. On the **Chat inside Jaspersoft Desktop** tab, turn on **Use the assistant built into this
     application**.
 3. Choose the **Provider**.
@@ -196,7 +196,7 @@ you see the changes as they happen. While it works, the title bar says so:
 
 ### Turning the MCP server on
 
-1. On the home screen, click **AI assistant…**.
+1. On the home screen, click **Set up AI Assistant…**.
 2. Open the **Chat in another app (MCP)** tab.
 3. Turn on **Let MCP clients work in this application**.
 4. Click **Save**.

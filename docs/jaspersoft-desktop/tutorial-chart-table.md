@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: a chart and a table"
-description: "You work in the Samples workspace: on the home screen, click Samples and tutorials (see Totals and grouping). The data comes from the sample database that Jaspersoft Desktop includes, through the..."
+description: "You work in the Samples workspace: on the home screen, click View samples and tutorials (see Totals and grouping). The data comes from the sample database that Jaspersoft Desktop includes, through the..."
 ---
 
 # Tutorial: a chart and a table
@@ -14,7 +14,7 @@ report on an SQL query, a chart, a second dataset (a **subdataset**) and a table
 
 ## Before you start
 
-You work in the **Samples** workspace: on the home screen, click **Samples and tutorials** (see
+You work in the **Samples** workspace: on the home screen, click **View samples and tutorials** (see
 [Totals and grouping](tutorial-totals.md#before-you-start)). The data comes from the sample
 database that Jaspersoft Desktop includes, through the data adapter `Sample Database.jrdax` at the
 top of the workspace. [The sample database](sample-database.md) describes its tables; this tutorial

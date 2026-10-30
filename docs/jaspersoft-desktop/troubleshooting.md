@@ -68,7 +68,7 @@ History** lists the versions of the report on show, saved or not, and restores a
 ## The AI assistant does not answer
 
 - **"The assistant of this window is not set up"**: the assistant inside Jaspersoft Desktop needs a
-    model service: **AI assistant…** on the home screen. The MCP server, for Claude, ChatGPT and the
+    model service: **Set up AI Assistant…** on the home screen. The MCP server, for Claude, ChatGPT and the
     others, does not make it answer: those you chat with in their own application. See
     [Designing reports with AI](ai-assistant.md).
 - **An error from the model service**: an invalid key, no credit left, a model name the service

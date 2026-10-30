@@ -15,7 +15,7 @@ only be read: a report cannot change it.
 
 ## Connecting to it
 
-The **Samples** workspace (home screen, **Samples and tutorials**) has its data adapter ready,
+The **Samples** workspace (home screen, **View samples and tutorials**) has its data adapter ready,
 `Sample Database.jrdax`. The database and its driver are two libraries of that workspace, in its
 `JR-INF/lib` folder: `hsqldb-<version>.jar` and `sample-database.jar`.
 

@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: totals and grouping"
-description: "You work in the Samples workspace, which comes with Jaspersoft Desktop. On the home screen, click Samples and tutorials. The first time, Jaspersoft Desktop copies the samples into your Documents..."
+description: "You work in the Samples workspace, which comes with Jaspersoft Desktop. On the home screen, click View samples and tutorials. The first time, Jaspersoft Desktop copies the samples into your Documents..."
 ---
 
 # Tutorial: totals and grouping
@@ -14,7 +14,7 @@ starts again at each group, and placing an element precisely. **Time:** about 15
 ## Before you start
 
 You work in the **Samples** workspace, which comes with Jaspersoft Desktop. On the home screen,
-click **Samples and tutorials**. The first time, Jaspersoft Desktop copies the samples into your
+click **View samples and tutorials**. The first time, Jaspersoft Desktop copies the samples into your
 Documents folder, `Documents/Jaspersoft Desktop/Samples`, and opens them; the copy is yours to
 change. In the explorer, open the **Tutorials** folder, then `Sales by Country.jrxml`: the report,
 grouped by country. It reads `sales.csv` through its data adapter, `Sales.jrdax`, both in the same
@@ -116,6 +116,6 @@ of the toolbar.
 
 Jaspersoft Desktop never overwrites your copy of the samples. To get the original files back,
 close the workspace, then delete or rename the `Samples` folder in `Documents/Jaspersoft Desktop`;
-the next click on **Samples and tutorials** copies them again.
+the next click on **View samples and tutorials** copies them again.
 
 Next: [A filter with parameters](tutorial-parameters.md).

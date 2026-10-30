@@ -30,7 +30,6 @@ Choose the kind of data in the list on the left, and fill in the form on the rig
 | **XML** | An XML document |
 | **JasperReports Server** | A data source of a JasperReports Server |
 | **Query Executor** | Data read by the query of the report itself |
-| **Mondrian** | An OLAP cube of a Mondrian server |
 
 Give the data adapter a **Name**, the name shown to you.
 
@@ -108,7 +107,6 @@ in it.
 - **Empty Data** and **Random Data**: only the **Number Of Records** (10 unless you change it).
 - **JasperReports Server**: the **Server** address, **Organization**, **Username**, **Password**,
     and the **Datasource Path** of a data source in the server's repository.
-- **Mondrian**: the **Catalog URI** of the schema, and the database it reads, as for JDBC.
 
 ## Using a data adapter in a report
 

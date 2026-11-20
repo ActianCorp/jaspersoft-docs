@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>The tables of the sample database</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#062e79"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="600" fill="#ffffff"/>
+
+  <!-- the links, behind the tables: from the column that names another table to that table -->
+  <g stroke="#062e79" stroke-width="1.6" fill="none">
+    <path d="M 280 95 L 222 95" marker-end="url(#arrow)"/>
+    <path d="M 120 320 L 120 290 L 330 290 L 330 196" marker-end="url(#arrow)"/>
+    <path d="M 280 360 L 222 360" marker-end="url(#arrow)"/>
+    <path d="M 390 320 L 390 196" marker-end="url(#arrow)"/>
+    <path d="M 450 320 L 450 250 L 640 250 L 640 132" marker-end="url(#arrow)"/>
+    <path d="M 540 360 L 482 360" marker-end="url(#arrow)"/>
+    <path d="M 740 360 L 798 360" marker-end="url(#arrow)"/>
+    <path d="M 890 320 L 890 132" marker-end="url(#arrow)"/>
+    <path d="M 890 470 L 890 492" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- OFFICES -->
+  <rect x="20" y="40" width="200" height="110" rx="6" fill="#eef3fa" stroke="#9fb4d6"/>
+  <text x="120" y="62" text-anchor="middle" font-weight="bold" fill="#062e79">OFFICES</text>
+  <g fill="#3b4453"><text x="34" y="86">OFFICE_ID</text><text x="34" y="104">CITY, COUNTRY</text><text x="34" y="122">REGION</text></g>
+
+  <!-- EMPLOYEES -->
+  <rect x="280" y="40" width="200" height="154" rx="6" fill="#eef3fa" stroke="#9fb4d6"/>
+  <text x="380" y="62" text-anchor="middle" font-weight="bold" fill="#062e79">EMPLOYEES</text>
+  <g fill="#3b4453"><text x="294" y="86">EMPLOYEE_ID</text><text x="294" y="104">FIRST_NAME, LAST_NAME</text><text x="294" y="122">TITLE</text><text x="294" y="140">OFFICE_ID</text><text x="294" y="158">REPORTS_TO</text><text x="294" y="176">HIRE_DATE</text></g>
+
+  <!-- SHIPPERS -->
+  <rect x="540" y="40" width="200" height="90" rx="6" fill="#eef3fa" stroke="#9fb4d6"/>
+  <text x="640" y="62" text-anchor="middle" font-weight="bold" fill="#062e79">SHIPPERS</text>
+  <g fill="#3b4453"><text x="554" y="86">SHIPPER_ID</text><text x="554" y="104">COMPANY_NAME</text></g>
+
+  <!-- CATEGORIES -->
+  <rect x="800" y="40" width="180" height="90" rx="6" fill="#f4f8f1" stroke="#a9c79a"/>
+  <text x="890" y="62" text-anchor="middle" font-weight="bold" fill="#2e5b1e">CATEGORIES</text>
+  <g fill="#3b4453"><text x="814" y="86">CATEGORY_ID</text><text x="814" y="104">NAME</text></g>
+
+  <!-- CUSTOMERS -->
+  <rect x="20" y="320" width="200" height="140" rx="6" fill="#fbf4ea" stroke="#d8b98a"/>
+  <text x="120" y="342" text-anchor="middle" font-weight="bold" fill="#7a4e12">CUSTOMERS</text>
+  <g fill="#3b4453"><text x="34" y="366">CUSTOMER_ID</text><text x="34" y="384">COMPANY_NAME</text><text x="34" y="402">CITY, COUNTRY</text><text x="34" y="420">REGION</text><text x="34" y="438">SALES_REP_ID</text></g>
+
+  <!-- ORDERS -->
+  <rect x="280" y="320" width="200" height="176" rx="6" fill="#fbf4ea" stroke="#d8b98a"/>
+  <text x="380" y="342" text-anchor="middle" font-weight="bold" fill="#7a4e12">ORDERS</text>
+  <g fill="#3b4453"><text x="294" y="366">ORDER_ID</text><text x="294" y="384">CUSTOMER_ID</text><text x="294" y="402">EMPLOYEE_ID</text><text x="294" y="420">ORDER_DATE</text><text x="294" y="438">SHIPPED_DATE</text><text x="294" y="456">SHIPPER_ID, FREIGHT</text><text x="294" y="474">STATUS</text></g>
+
+  <!-- ORDER_LINES -->
+  <rect x="540" y="320" width="200" height="140" rx="6" fill="#fbf4ea" stroke="#d8b98a"/>
+  <text x="640" y="342" text-anchor="middle" font-weight="bold" fill="#7a4e12">ORDER_LINES</text>
+  <g fill="#3b4453"><text x="554" y="366">ORDER_ID, LINE_NUMBER</text><text x="554" y="384">PRODUCT_ID</text><text x="554" y="402">QUANTITY</text><text x="554" y="420">UNIT_PRICE</text><text x="554" y="438">DISCOUNT</text></g>
+
+  <!-- PRODUCTS -->
+  <rect x="800" y="320" width="180" height="150" rx="6" fill="#f4f8f1" stroke="#a9c79a"/>
+  <text x="890" y="342" text-anchor="middle" font-weight="bold" fill="#2e5b1e">PRODUCTS</text>
+  <g fill="#3b4453"><text x="814" y="366">PRODUCT_ID</text><text x="814" y="384">NAME</text><text x="814" y="402">CATEGORY_ID</text><text x="814" y="420">SUPPLIER_ID</text><text x="814" y="438">UNIT_PRICE</text><text x="814" y="456">DISCONTINUED</text></g>
+
+  <!-- SUPPLIERS -->
+  <rect x="800" y="494" width="180" height="96" rx="6" fill="#f4f8f1" stroke="#a9c79a"/>
+  <text x="890" y="516" text-anchor="middle" font-weight="bold" fill="#2e5b1e">SUPPLIERS</text>
+  <g fill="#3b4453"><text x="814" y="540">SUPPLIER_ID</text><text x="814" y="558">COMPANY_NAME</text><text x="814" y="576">COUNTRY</text></g>
+
+  <!-- the view -->
+  <rect x="20" y="510" width="760" height="80" rx="6" fill="#ffffff" stroke="#062e79" stroke-dasharray="5 4"/>
+  <text x="34" y="534" font-weight="bold" fill="#062e79">SALES (a view)</text>
+  <text x="34" y="556" fill="#3b4453" font-size="12">one row per line of an order not cancelled: ORDER_ID, ORDER_DATE, ORDER_YEAR, ORDER_MONTH, STATUS,</text>
+  <text x="34" y="574" fill="#3b4453" font-size="12">CUSTOMER, COUNTRY, REGION, SALES_REP, CATEGORY, PRODUCT, QUANTITY, UNIT_PRICE, DISCOUNT, AMOUNT</text>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="Customers" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6c1f5a9f-3d2e-4b74-8a54-3b2a7e1d8b22">
+	<field name="country" class="java.lang.String"/>
+	<field name="customer" class="java.lang.String"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<title height="60"/>
+	<columnHeader height="24">
+		<element kind="staticText" uuid="8d3f2a40-6b1e-4c0a-9a55-0e7f1c3b2d01" x="0" y="0" width="185" height="24" bold="true" vTextAlign="Middle">
+			<text><![CDATA[Country]]></text>
+		</element>
+		<element kind="staticText" uuid="8d3f2a40-6b1e-4c0a-9a55-0e7f1c3b2d02" x="185" y="0" width="225" height="24" bold="true" vTextAlign="Middle">
+			<text><![CDATA[Customer]]></text>
+		</element>
+		<element kind="staticText" uuid="8d3f2a40-6b1e-4c0a-9a55-0e7f1c3b2d03" x="410" y="0" width="145" height="24" bold="true" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[Amount]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<element kind="textField" uuid="8d3f2a40-6b1e-4c0a-9a55-0e7f1c3b2d11" x="0" y="0" width="185" height="20" vTextAlign="Middle">
+				<expression><![CDATA[$F{country}]]></expression>
+			</element>
+			<element kind="textField" uuid="8d3f2a40-6b1e-4c0a-9a55-0e7f1c3b2d12" x="185" y="0" width="225" height="20" vTextAlign="Middle">
+				<expression><![CDATA[$F{customer}]]></expression>
+			</element>
+			<element kind="textField" uuid="8d3f2a40-6b1e-4c0a-9a55-0e7f1c3b2d13" x="410" y="0" width="145" height="20" pattern="#,##0.00" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA[$F{amount}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

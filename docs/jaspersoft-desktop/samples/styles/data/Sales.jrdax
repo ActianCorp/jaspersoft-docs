@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csvDataAdapter class="net.sf.jasperreports.data.csv.CsvDataAdapterImpl">
+  <name>Sales</name>
+  <dataFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="repositoryDataLocation">
+    <location>/data/sales.csv</location>
+  </dataFile>
+  <fieldDelimiter>,</fieldDelimiter>
+  <useFirstRowAsHeader>true</useFirstRowAsHeader>
+</csvDataAdapter>

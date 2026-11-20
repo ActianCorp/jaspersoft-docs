@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="Styles Report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a01">
+	<property name="net.sf.jasperreports.data.adapter" value="data/Sales.jrdax"/>
+	<template><![CDATA["Styles.jrtx"]]></template>
+	<field name="country" class="java.lang.String"/>
+	<field name="customer" class="java.lang.String"/>
+	<field name="amount" class="java.math.BigDecimal"/>
+	<variable name="Total" class="java.math.BigDecimal" calculation="Sum">
+		<expression><![CDATA[$F{amount}]]></expression>
+	</variable>
+	<title height="64">
+		<element kind="staticText" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a11" x="0" y="0" width="555" height="40" style="Title">
+			<text><![CDATA[Brightwater Trading]]></text>
+		</element>
+		<element kind="staticText" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a12" x="0" y="40" width="555" height="18" fontSize="9.0" forecolor="#7A7A7A">
+			<text><![CDATA[Sales by customer]]></text>
+		</element>
+	</title>
+	<columnHeader height="26">
+		<element kind="staticText" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a21" x="0" y="0" width="185" height="26" style="Column Header">
+			<text><![CDATA[Country]]></text>
+		</element>
+		<element kind="staticText" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a22" x="185" y="0" width="225" height="26" style="Column Header">
+			<text><![CDATA[Customer]]></text>
+		</element>
+		<element kind="staticText" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a23" x="410" y="0" width="145" height="26" style="Column Header" hTextAlign="Right">
+			<text><![CDATA[Amount]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="24">
+			<element kind="textField" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a31" x="0" y="0" width="185" height="24" style="Cell">
+				<expression><![CDATA[$F{country}]]></expression>
+			</element>
+			<element kind="textField" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a32" x="185" y="0" width="225" height="24" style="Cell">
+				<expression><![CDATA[$F{customer}]]></expression>
+			</element>
+			<element kind="textField" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a33" x="410" y="0" width="145" height="24" style="Amount">
+				<expression><![CDATA[$F{amount}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<summary height="30">
+		<element kind="staticText" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a41" x="0" y="0" width="410" height="30" style="Total">
+			<text><![CDATA[Total]]></text>
+		</element>
+		<element kind="textField" uuid="2d9b0f5e-71c3-4a8e-9d61-3b4c7e2f8a42" x="410" y="0" width="145" height="30" style="Total" hTextAlign="Right" pattern="#,##0.00">
+			<expression><![CDATA[$V{Total}]]></expression>
+		</element>
+	</summary>
+</jasperReport>

@@ -100,9 +100,9 @@ The following table lists the target configurations that can be built from the s
 </tbody>
 </table>
 
-## JasperReports Server Source Code Archives and Current Files
+<!-- ## JasperReports Server Source Code Archives and Current Files -->
 
-The following table lists the source code archive files and current files for JasperReports Server:
+<!-- The following table lists the source code archive files and current files for JasperReports Server:
 
 <table>
 <colgroup>
@@ -132,4 +132,4 @@ _repo.zip</td>
 <td><a href="building_jasperreports_server_source.md">Building JasperReports Server Source Code</a></td>
 </tr>
 </tbody>
-</table>
+</table> -->

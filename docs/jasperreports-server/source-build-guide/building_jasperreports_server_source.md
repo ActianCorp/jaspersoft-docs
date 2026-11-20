@@ -1,4 +1,4 @@
----
+<!-- ---
 title: Building JasperReports Server Source Code
 description: This document describes how to build from a command-line shell in Linux or Windows. It does not address the process of building within an IDE (Integrated Development Environment) such as Eclipse or...
 ---
@@ -454,4 +454,4 @@ The JasperReports Server runtime log is here:
 
 The `log4j.properties` file is here:
 
-`<tomcat>/webapps//WEB-INF/log4j.properties`
+`<tomcat>/webapps//WEB-INF/log4j.properties` -->

@@ -5,7 +5,7 @@ description: "The procedure for Building JasperReports Server Source Code loads 
 
 # Create and Load Sample Data
 
-The procedure for [Building JasperReports Server Source Code](building_jasperreports_server_source.md) loads core data required to start the application, but it doesn't create sample data, such as sample reports to run and sample databases. Follow the steps below to create and load sample data.
+To start the application, you need to create sample data, such as sample reports to run and sample databases. Follow the steps below to create and load sample data.
 
 ## Load Sample Data
 

@@ -25,10 +25,6 @@ hide:
     <p>Plan and perform an upgrade from an earlier release, including repository migration.</p>
   </div>
   <div class="card">
-    <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.78 15.3 6 6 2.11-2.16-6-6zm3.72-5.2c-.39 0-.81-.05-1.14-.19L4.97 21.25l-2.11-2.11 7.41-7.4L8.5 9.96l-.72.7-1.45-1.41v2.86l-.7.7-3.52-3.56.7-.7h2.81l-1.4-1.41 3.56-3.56a2.976 2.976 0 0 1 4.22 0L9.89 5.74l1.41 1.4-.71.71 1.79 1.78 1.82-1.88c-.14-.33-.2-.75-.2-1.12a3.49 3.49 0 0 1 3.5-3.52c.59 0 1.11.14 1.58.42L16.41 6.2l1.5 1.5 2.67-2.67c.28.47.42.97.42 1.6 0 1.92-1.55 3.47-3.5 3.47"/></svg></span> <strong><a href="source-build-guide/">Source Build Guide</a></strong></p>
-    <p>Build JasperReports Server from source, including the build environment and targets.</p>
-  </div>
-  <div class="card">
     <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3"/></svg></span> <strong><a href="security-guide/">Security Guide</a></strong></p>
     <p>Harden a deployment: encryption, authentication, session security and known concerns.</p>
   </div>

@@ -155,7 +155,7 @@ Commercial editions of JasperReports Server require a license file. The source c
 
 ### Configuring the License for All Application Servers
 
-The main source build section describes placing a license in the home folder of the user running the application server. See [Put jaspersoft.jrs.license in Place](building_jasperreports_server_source.md).
+The main source build section describes placing a license in the home folder of the user running the application server. See Put jaspersoft.jrs.license in Place.
 
 ### Configure the License in the Tomcat Scripts
 

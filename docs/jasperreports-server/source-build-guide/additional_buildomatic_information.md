@@ -187,7 +187,7 @@ Later, when you run the buildomatic target `deploy-webapp-``pro`` `, the followi
 
 ## Details on Database Load Build Targets
 
-The buildomatic targets shown below are used in [Building JasperReports Server Source Code](building_jasperreports_server_source.md) to create and populate the databases used with JasperReports Server. These targets consolidate and simplify the handling of the `jasperserver` database and the optional sample databases:
+The buildomatic targets shown below are used to create and populate the databases used with JasperReports Server. These targets consolidate and simplify the handling of the `jasperserver` database and the optional sample databases:
 
 -   `create-load-js-db-``pro`` `
 -   `create-load-all-dbs-``pro`` `

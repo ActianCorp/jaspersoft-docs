@@ -23,7 +23,7 @@ External developers (customers) who download the
 
 `js-jrs``_10.1.0`
 
-\_src.zip package from jaspersoft.com should set all the properties described in [Configuring the Buildomatic Properties](building_jasperreports_server_source.md) before building JasperReports Server.
+\_src.zip package from jaspersoft.com should set all the properties before building JasperReports Server.
 
 Additional buildomatic property settings are available for advanced external developers. If you are an external developer working within an enterprise or on a project that has an internal Maven repository server, you can use the `mirror` value. The following property settings and values enable a local Maven repository:
 
